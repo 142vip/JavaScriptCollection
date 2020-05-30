@@ -50,7 +50,7 @@
 
 #### 日常推荐
 
-<img src="https://csdnimg.cn/release/phoenix/template/new_img/original.png" width="36" height="26" align="left" /> [云服务器推荐](server-introduce.md)
+- <img src="https://csdnimg.cn/release/phoenix/template/new_img/original.png" width="36" height="26" align="left" /> [云服务器推荐](server-introduce.md)
 
 #### 前端
 
