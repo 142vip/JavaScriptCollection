@@ -109,11 +109,10 @@
 
 人生漫漫，却又白驹过隙；若系列文章对你有帮助，不如请作者喝一杯奶茶...
 
-<img src="img/weChatDonate.jpg" width="300" height="300" align="left" />
+<img src="img/weChatDonate.jpg" width="300" height="300" align="center" />
 
 
 
 
-
-**若你有跟作者相同的困惑、感悟，欢迎关注[B站_Rong姐姐好可爱](https://space.bilibili.com/350937042) 交流学习.**
+**若你有跟作者相同的困惑、感悟，欢迎关注[B站--Rong姐姐好可爱](https://space.bilibili.com/350937042) 交流学习.**
 
