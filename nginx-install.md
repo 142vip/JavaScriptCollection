@@ -23,7 +23,7 @@
 >
 > 浏览器先访问vpn地址，vpn地址转发请求，并最后将请求结果原路返回来。
 
-![image-20200605211150150](C:\Users\Taylor\Desktop\github\article-notes\img\image-20200605211150150.png)
+![image-20200605211150150](img/image-20200605211150150.png)
 
 > 有正向代理，就有反向代理。(哈哈，因为起名字的人也会考虑，为什么不叫代理，而是取名"正向"代理)。
 >
@@ -31,7 +31,7 @@
 >
 > 大型网站都有DNS(域名解析服务器)，load balance(负载均衡器)等。
 
-![image-20200605211203512](C:\Users\Taylor\Desktop\github\article-notes\img\image-20200605211203512.png)
+![image-20200605211203512](img/image-20200605211203512.png)
 
 好的，基础就先到这里，我们来进行Nginx的安装；
 
@@ -44,11 +44,11 @@ Nginx的安装方法有多种，针对不同的平台有不一样的安装方式
 1. 下载软件
    进入[nginx下载官网](http://nginx.org/en/download.html)，下载对应的window版本的nginx，推荐下载stable稳定版
 
-![image-20200605211754928](C:\Users\Taylor\Desktop\github\article-notes\img\image-20200605211754928.png)
+![image-20200605211754928](img/image-20200605211754928.png)
 
 下载完成后，进行解压：
 
-![image-20200605212034767](C:\Users\Taylor\Desktop\github\article-notes\img\image-20200605212034767.png)
+![image-20200605212034767](img/image-20200605212034767.png)
 
 
 2. 启动nginx
@@ -63,7 +63,7 @@ Nginx的安装方法有多种，针对不同的平台有不一样的安装方式
 
   直接在浏览器地址栏输入网址 http://localhost:80，回车，出现以下页面说明启动成功
 
-  ![image-20200605212243866](C:\Users\Taylor\Desktop\github\article-notes\img\image-20200605212243866.png)
+  ![image-20200605212243866](img/image-20200605212243866.png)
 
 ### linux环境下
 
