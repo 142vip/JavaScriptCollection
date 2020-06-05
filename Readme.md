@@ -3,9 +3,18 @@
 
 内容来源于 [个人博客]([http://blog.142vip.cn/) ，也会不定时同步到 [码云](https://gitee.com/mmdapl)
 
+
+
 ![image-20200605224832237](img/image-20200605224832237.png)
 
-![https://space.bilibili.com/350937042](https://img.shields.io/badge/Bilibili-哔哩哔哩-green.svg)![https://142vip.cn](https://img.shields.io/badge/142vip-个人网站-orange.svg)![http://yapi.142vip.cn](https://img.shields.io/badge/yapi-接口系统-8fe.svg)![http://oauth2.142vip.cn](https://img.shields.io/badge/Oauth2-授权中心-orange.svg)![https://blog.142vip.cn](https://img.shields.io/badge/blog-我的博客-blue.svg)![https://github.com/mmdapl](https://img.shields.io/badge/github-Github-9ac.svg)![https://gitee.com/mmdapl](https://img.shields.io/badge/gitee-码云-4ed.svg)![https://blog.csdn.net/Mmdapl](https://img.shields.io/badge/csdn-CSDN-8ea.svg)
+<p align="center">
+[![https://space.bilibili.com/350937042](https://img.shields.io/badge/Bilibili-哔哩哔哩-green.svg)](https://space.bilibili.com/350937042)[![https://142vip.cn](https://img.shields.io/badge/142vip-个人网站-orange.svg)](https://142vip.cn)[![http://yapi.142vip.cn](https://img.shields.io/badge/yapi-接口系统-8fe.svg)](http://yapi.142vip.cn)[![http://oauth2.142vip.cn](https://img.shields.io/badge/Oauth2-授权中心-orange.svg)](http://oauth2.142vip.cn)[![https://blog.142vip.cn](https://img.shields.io/badge/blog-我的博客-blue.svg)](https://blog.142vip.cn)[![https://github.com/mmdapl](https://img.shields.io/badge/github-Github-9ac.svg)](https://github.com/mmdapl)[![https://gitee.com/mmdapl](https://img.shields.io/badge/gitee-码云-4ed.svg)](https://gitee.com/mmdapl)[![https://blog.csdn.net/Mmdapl](https://img.shields.io/badge/csdn-CSDN-8ea.svg)](https://blog.csdn.net/Mmdapl)
+</p>
+
+
+
+
+
 
 
 欢迎访问[个人网站](http://www.142vip.cn/) 
