@@ -57,45 +57,73 @@
 
 #### 前端
 
-- JQuery
-- Vue
-- React
-- 前端UI框架
+##### JQuery
+
+##### Vue
+
+##### React
+
+##### 前端UI框架
 
 #### 后端【Node】
 
-- express
-- koa
-- eggjs
-- nestjs
+##### express
+
+##### koa
+
+##### eggjs
+
+##### nestjs
 
 #### 数据库
 
-- MySQL
-- Redis
-- Mongo
+##### MySQL
+
+##### Redis
+
+##### Mongo
 
 #### 服务部署
 
-- nginx
-- docker
+##### nginx
+
+- [nginx安装，普通安装Or Docker搞定？](nginx-install.md)
+- 手把手nginx基础入门
+- 反向代理、负载均衡真有那么难吗？
+
+##### docker
+
+- 我与docker的第一次硬碰硬
+- docker操作入门真有那么难吗？
+- 这些基础操作指令，你会吗？
+- 那些年，我常用的指令操作汇总
+
+##### docker-compose
+
+- 听说你装了N次都没搞定？
+- 
 
 #### 服务网关
 
--  kong
-- konga
+##### kong
+
+##### konga
 
 #### Elk日志管理平台
 
--  ElasticSearch
-- Logstash
-- Kibana
+##### ElasticSearch
+
+##### Logstash
+
+##### Kibana
 
 #### 监控平台
 
-- Prometheus+Grafana
-- Zabbix
-- lepus(天兔)
+##### Prometheus+Grafana
+
+##### Zabbix
+
+##### lepus(天兔)
 
 #### 高可用架构
 
@@ -104,9 +132,11 @@
 
 ### 闲谈随笔
 
-- 生活
-- 职业
-- 随笔
+##### 生活
+
+##### 职业
+
+##### 随笔
 
 ### 赞赏支持
 
