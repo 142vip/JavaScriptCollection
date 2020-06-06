@@ -104,9 +104,10 @@
 
 ##### nginx
 
-- [nginx安装，普通安装Or Docker搞定？](https://blog.142vip.cn/2018/03/多环境下nginx的安装部署方法汇总)
+- [nginx安装，普通安装 Or Docker搞定？](https://blog.142vip.cn/2018/03/多环境下nginx的安装部署方法汇总)
 - 手把手nginx基础入门
 - 反向代理、负载均衡真有那么难吗？
+- [Nginx SSL证书，从此踏上Https之路](https://blog.142vip.cn/2018/04/nginx%E4%B8%8Bssl%E7%9A%84%E9%85%8D%E7%BD%AE)
 
 ##### docker
 
@@ -163,10 +164,10 @@
 
 ### 赞赏支持
 
-人生漫漫，却又白驹过隙；若系列文章对你有帮助，不如请作者喝一杯奶茶...赏了一定要加我微信跟我说呀~
+人生漫漫，却又白驹过隙；若系列文章对你有帮助，不如请作者喝一杯奶茶...赞赏过得一定要扫下方右侧微信跟我说呀！！！！！！
 <a name="wechat"></a>
 <p align="center">
-<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="320" height="320" align="center" style="margin-right:20px;" /><img src="https://cdn.142vip.cn/blog/weChatCode01_1590286834168.jpg" width="320" height="320" align="center" />
+<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="320" height="320" align="center" style="margin-right:20px;" /><img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="320" height="320" align="center" />
 
 
 
