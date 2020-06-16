@@ -74,6 +74,26 @@
 
 #### 前端
 
+##### JavaScript
+
+**本级目录下的JavaScript内容没有发表到[博客](http://blog.142vip.cn)上,建议对照[脑图]()在[JavaScript主目录](javascript)下学习**
+
+依赖官方文档及自身对JavaScript语言的初步了解，进行的关于JavaScript知识整理，主要目的是复习基础概念、了解新特性、熟练ES6/7操作；整体相对来说由易到难，方便后续查阅学习~
+
+- 快速入门
+  - [简单介绍](javascript/快速入门/javascript简单介绍.md)
+  - [快速了解](javascript/快速入门/javascript快速入门.md)
+- 基础教程
+  - [语法与数据结构](javascript/基础教程/javascript语法与数据结构.md)
+  - [循环与迭代](javascript/基础教程/javascript循环与迭代.md)
+  - [流程控制与错误处理](javascript/基础教程/javascript流程控制与错误处理.md)
+  - [表达式和运算符](javascript/基础教程/javascript表达式和运算符.md)
+  - [函数和方法](javascript/基础教程/javascript函数.md)
+- 中级教程
+- 高级教程
+- 常用函数方法整理
+- ES2020新特性
+
 ##### JQuery
 
 ##### Vue
@@ -120,7 +140,11 @@
 
 - 听说你装了N次都没搞定？
 
-##### shell编程
+##### linux下shell编程
+
+- 入门
+- 操作数据库
+- 其他
 
 #### 服务网关
 
