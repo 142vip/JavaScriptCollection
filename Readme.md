@@ -89,6 +89,10 @@
   - [流程控制与错误处理](javascript/基础教程/javascript流程控制与错误处理.md)
   - [表达式和运算符](javascript/基础教程/javascript表达式和运算符.md)
   - [函数和方法](javascript/基础教程/javascript函数.md)
+  - [数字和日期](javascript/基础教程/javascript数字和日期.md)
+  - [对象的使用](javascript/基础教程/javascript对象的使用.md)
+  - [正则表达式](javascript/基础教程/javascript正则表达式.md)
+  - [promise对象的使用](javascript/基础教程/promise对象的使用.md)
 - 中级教程
 - 高级教程
 - 常用函数方法整理
@@ -185,6 +189,9 @@
 ##### 生活
 
 ##### 职业
+
+- [《后浪》--致程序员](to-coder.md)
+- 
 
 ##### 随笔
 

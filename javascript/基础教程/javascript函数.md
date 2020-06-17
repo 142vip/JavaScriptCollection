@@ -344,7 +344,8 @@ outside()(10); // returns 20 instead of 10
 此外，由于内部函数可以访问外部函数的作用域，因此当内部函数生存周期大于外部函数时，外部函数中定义的变量和函数的生存周期将比内部函数执行时间长。当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。
 
 ```js
-var pet = function(name) {          //外部函数定义了一个变量"name"
+//外部函数定义了一个变量"name"
+var pet = function(name) {          
   var getName = function() {            
     //内部函数可以访问 外部函数定义的"name"
     return name; 
@@ -375,7 +376,7 @@ arguments[i]
 function myConcat(separator) {
    var result = ''; // 把值初始化成一个字符串，这样就可以用来保存字符串了！！
    var i;
-   // iterate through arguments
+   // 通过参数循环
    for (i = 1; i < arguments.length; i++) {
        // 拼接
       result += arguments[i] + separator;
@@ -432,7 +433,7 @@ multiply(5); // 5
 
 #### 剩余参数
 
-[剩余参数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)语法允许将不确定数量的参数表示为数组。下面的例子中，**使用剩余参数收集从第二个到最后参数。然后，我们将这个数组的每一个数与第一个参数相乘。**
+允许将不确定数量的参数表示为数组。下面的例子中，**使用剩余参数收集从第二个到最后参数。然后，我们将这个数组的每一个数与第一个参数相乘。**
 
 ```js
 function multiply(multiplier, ...theArgs) {
@@ -446,7 +447,7 @@ console.log(arr); // [2, 4, 6]
 
 ### 箭头函数
 
-[箭头函数表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)（也称胖箭头函数）相比函数表达式具有较短的语法并以词法的方式绑定 `this`。**箭头函数总是匿名的。**
+箭头函数表达式（也称胖箭头函数）相比函数表达式具有较短的语法并以词法的方式绑定 `this`。**箭头函数总是匿名的。**
 
 有两个因素会影响引入箭头函数：更简洁的函数和 `this`。
 
@@ -472,7 +473,7 @@ var a3 = a.map( s => s.length );
 console.log(a3); // logs [ 8, 6, 7, 9 ]
 ```
 
-#### `this` 的词法
+#### this的词法
 
 在箭头函数出现之前，每一个新函数都重新定义了自己的 [this](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值（**在构造函数中是一个新的对象**；在严格模式下是未定义的；在作为“对象方法”调用的函数中指向这个对象；等等）
 
@@ -526,51 +527,51 @@ var p = new Person();
 
 JavaScript语言有很多顶级的内建函数：
 
-- [`eval()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- eval()
 
   会对一串字符串形式的JavaScript代码字符求值。
 
-- [`uneval()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval) 
+- uneval()
 
-  创建的一个[`Object`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)的源代码的字符串表示。
+  创建的一个Object的源代码的字符串表示。
 
-- [`isFinite()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite)
+- isFinite()
 
   判断传入的值是否是有限的数值。 如果需要的话，其参数首先被转换为一个数值。
 
-- [`isNaN()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN)
+- isNaN()
 
-  判断一个值是否是[`NaN`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)。注意：`isNaN`函数内部的`强制转换规则`十分有趣； 另一个可供选择的是ECMAScript 6 中定义[`Number.isNaN()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN) , 或者使用 `typeof`来判断数值类型。
+  判断一个值是否是NaN。注意：`isNaN`函数内部的`强制转换规则`十分有趣； 另一个可供选择的是ECMAScript 6 中定义Number.isNaN() , 或者使用 `typeof`来判断数值类型。
 
-- [`parseFloat()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
+- parseFloat()
 
   函数解析字符串参数，并返回一个浮点数。
 
-- [`parseInt()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+- parseInt()
 
   函数解析字符串参数，并返回指定的基数（基础数学中的数制）的整数。
 
-- [`decodeURI()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/decodeURI)
+- decodeURI()
 
-  函数对先前经过[`encodeURI`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)函数或者其他类似方法编码过的字符串进行解码。
+  函数对先前经过encodeURI函数或者其他类似方法编码过的字符串进行解码。
 
-- [`decodeURIComponent()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent)
+- decodeURIComponent()
 
-  对先前经过[`encodeURIComponent`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)函数或者其他类似方法编码过的字符串进行解码。
+  对先前经过encodeURIComponent函数或者其他类似方法编码过的字符串进行解码。
 
-- [`encodeURI()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
+- encodeURI()
 
   通过用以一个，两个，三个或四个转义序列表示字符的UTF-8编码替换统一资源标识符（URI）的某些字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
 
-- [`encodeURIComponent()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+- encodeURIComponent()
 
   通过用以一个，两个，三个或四个转义序列表示字符的UTF-8编码替换统一资源标识符（URI）的每个字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
 
-- [`escape()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/escape) 
+- escape()
 
-  计算生成一个新的字符串，其中的某些字符已被替换为十六进制转义序列。使用 [`encodeURI`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)或者[`encodeURIComponent`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)替代本方法。
+  计算生成一个新的字符串，其中的某些字符已被替换为十六进制转义序列。使用 encodeURI或者encodeURIComponent替代本方法。
 
-- [`unescape()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/unescape) 
+- unescape()
 
-  计算生成一个新的字符串，其中的十六进制转义序列将被其表示的字符替换。上述的转义序列就像[`escape`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/escape)里介绍的一样。因为 `unescape` 已经废弃，建议使用[`decodeURI()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/decodeURI)或者[`decodeURIComponent`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent) 替代本方法。
+  计算生成一个新的字符串，其中的十六进制转义序列将被其表示的字符替换。上述的转义序列就像`escape`里介绍的一样。因为 `unescape` 已经废弃，建议使用`decodeURI()`或者`decodeURIComponent`) 替代本方法。
 

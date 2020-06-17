@@ -44,7 +44,7 @@ alert(x); // 输出的结果为 2
 
 条件判断语句指的是根据指定的条件所返回的结果（真或假或其它预定义的），来执行特定的语句。JavaScript 支持两种条件判断语句：`if...else`和`switch`。
 
-- `if...else` 语句
+- if...else 语句
 
 当一个逻辑条件为真，用if语句执行一个语句。当这个条件为假，使用可选择的 else 从句来执行这个语句。if 语句如下所示：
 
@@ -111,7 +111,7 @@ if ((x = y)) {
 
 当传递给条件语句所有其他的值，包括所有对象会被计算为真 。
 
-请不要混淆原始的布尔值`true`和`false` 与 [`Boolean`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Boolean)对象的真和假。例如：
+请不要混淆原始的布尔值`true`和`false` 与 `Boolean`对象的真和假。例如：
 
 ```js
 var b = new Boolean(false);
@@ -133,7 +133,7 @@ function checkData() {
 }
 ```
 
-- `switch` 语句
+- switch语句
 
 `switch` 语句允许一个程序求一个表达式的值并且尝试去匹配表达式的值到一个 `case` 标签。如果匹配成功，这个程序执行相关的语句。`switch` 语句如下所示：
 
@@ -182,14 +182,14 @@ switch (fruittype) {
 document.write("Is there anything else you'd like?<br>");
 ```
 
-## 异常处理语句
+### 异常处理语句
 
 你可以用 `throw` 语句抛出一个异常并且用 `try...catch` 语句捕获处理它。
 
-- [`throw` ](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling$edit#throw_statement)语句
-- [`try...catch` ](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling$edit#try...catch_statement)语句
+- `throw` 语句
+- `try...catch` 语句
 
-### `throw` 语句
+#### throw语句
 
 使用`throw`语句抛出一个异常。当你抛出异常，你规定一个含有值的表达式要被抛出。
 
@@ -225,7 +225,7 @@ UserException.prototype.toString = function (){
 throw new UserException("Value too high");
 ```
 
-### `try...catch` 语句
+#### try...catch语句
 
 `try...catch` 语句标记一块待尝试的语句，并规定一个以上的响应应该有一个异常被抛出。如果我们抛出一个异常，`try...catch`语句就捕获它。
 
@@ -254,7 +254,7 @@ catch (e) {
 }
 ```
 
-#### `catch` 块
+##### catch块
 
 可以使用`catch`块来处理所有可能在`try`块中产生的异常。
 
@@ -277,7 +277,7 @@ catch (e) {
 }
 ```
 
-#### `finally`块
+##### finally块
 
 `finally`块包含了在try和catch块完成后、下面接着try...catch的语句之前执行的语句。`finally`块无论是否抛出异常都会执行。如果抛出了一个异常，就算没有异常处理，`finally`块里的语句也会执行。
 
@@ -348,9 +348,9 @@ try {
 
 #### 嵌套 try...catch 语句
 
-你可以嵌套一个或多个`try ... catch`语句。如果一个内部`try ... catch`语句没有`catch`块，它需要有一个`finally`块，并且封闭的`try ... catch`语句的`catch`块被检查匹配。有关更多信息，请参阅[try... catch](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)参考页上的[嵌套try-blocks](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)。
+你可以嵌套一个或多个`try ... catch`语句。如果一个内部`try ... catch`语句没有`catch`块，它需要有一个`finally`块，并且封闭的`try ... catch`语句的`catch`块被检查匹配。有关更多信息，请参阅[try... catch](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)参考页上的`嵌套try-blocks`。
 
-### 使用`Error`对象
+#### 使用`Error`对象
 
 根据错误类型，你也许可以用'name'和'message'获取更精炼的信息。'name'提供了常规的错误类（如 'DOMException' 或 'Error'），而'message'通常提供了一条从错误对象转换成字符串的简明信息。
 
@@ -374,9 +374,9 @@ catch (e) {
 }
 ```
 
-## Promises
+### Promise对象
 
-从 ECMAScript 6 开始，JavaScript 增加了对 [`Promise`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 对象的支持，它允许你对延时和异步操作流进行控制。
+从 ECMAScript 6 开始，JavaScript 增加了对 `Promise` 对象的支持，它允许你对延时和异步操作流进行控制。
 
 `Promise` 对象有以下几种状态：
 

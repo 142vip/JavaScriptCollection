@@ -10,7 +10,7 @@ JavaScript中提供了这些循环语句：
 - for...in 语句
 - for...of 语句
 
-## `for` 语句
+## for 语句
 
 一个 `for`循环会一直重复执行，直到指定的循环条件为 false。 JavaScript 的 for 循环，和 Java、C 的 for 循环，是很相似的。一个 for 语句是这个样子的：
 
@@ -65,7 +65,7 @@ btn.addEventListener("click", function(){
 </script>
 ```
 
-## `do...while` 语句
+## do...while 语句
 
 `do...while`]语句一直重复直到指定的条件求值得到假值（false）。 一个 do...while 语句看起来像这样：
 
@@ -86,7 +86,7 @@ do {
 } while (i < 5);
 ```
 
-## `while` 语句
+## while 语句
 
 一个 while语句只要指定的条件求值为真（true）就会一直执行它的语句块。一个 `while` 语句看起来像这样：
 
@@ -127,7 +127,7 @@ while (true) {
 }
 ```
 
-## `label` 语句
+## label语句
 
 一个 label提供了一个让你在程序中其他位置引用它的标识符。例如，你可以用 label 标识一个循环， 然后使用 `break` 或者 `continue` 来指出程序是否该停止循环还是继续循环。
 
@@ -203,7 +203,7 @@ alert(num);  // 95
 
 从alert(num)的值可以看出，continue outPoint; 语句的作用是跳出当前循环，并跳转到outPoint（标签）下的 for 循环继续执行。
 
-## `break` 语句
+## break 语句
 
 使用 `break` 语句来终止循环，`switch`， 或者是链接到 label 语句。
 
@@ -246,7 +246,7 @@ labelCancelLoops: while (true) {
 }
 ```
 
-## `continue` 语句
+## continue语句
 
 `continue`语句可以用来继续执行（跳过代码块的剩余部分并进入下一循环）一个 `while`、`do-while`、`for`，或者 `label` 语句。
 
@@ -317,7 +317,7 @@ checkiandj:
   }
 ```
 
-## `for...in` 语句
+## for...in 语句
 
 `for...in` 语句循环一个指定的变量来循环一个对象所有可枚举的属性。JavaScript 会为每一个不同的属性执行指定的语句。
 
@@ -355,7 +355,7 @@ for (variable of object) {
 }
 ```
 
-下面的这个例子展示了 `for...of` 和 [`for...in`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/statements/for...in) 两种循环语句之间的区别。 `for...in` 循环遍历的结果是数组元素的下标，而 `for...of` 遍历的结果是元素的值：
+下面的这个例子展示了 `for...of` 和 `for...in` 两种循环语句之间的区别。 `for...in` 循环遍历的结果是数组元素的下标，而 `for...of` 遍历的结果是元素的值：
 
 ```js
 let arr = [3, 5, 7];
