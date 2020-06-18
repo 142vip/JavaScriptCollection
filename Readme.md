@@ -1,15 +1,8 @@
 
-日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千、福利推荐、心理疗养；
-
-若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容来源于**个人博客** ，也会不定时同步到 **码云**
-
-
 
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
 </p>
-
-
 <p align="center">
 <a href="#wechat" target="_blank"><img src="https://img.shields.io/badge/WeChat-微信-yellow.svg"></a> 
 <a href="https://space.bilibili.com/350937042" target="_blank"><img src="https://img.shields.io/badge/Bilibili-哔哩哔哩-green.svg"></a> 
@@ -22,23 +15,28 @@
 </p>
 
 
+> 写在最前面！这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千、福利推荐、心理疗养；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容来源于**个人博客** ，也会不定时同步到 **码云**
 
-欢迎访问[个人网站](http://www.142vip.cn/) 
+#### 日常推荐
+
+- <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" /> [云服务器推荐](server-introduce.md)
+
+### 更新优先级
+
+  [Github](https://github.com/mmdapl)>= [个人博客]([http://blog.142vip.cn](http://blog.142vip.cn/)) >= [码云](https://gitee.com/mmdapl),
 
 - <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" />[项目整理](http://blog.142vip.cn/s/projects)
 - 关于我
 
-### 更新优先级
-
-[个人博客]([http://blog.142vip.cn](http://blog.142vip.cn/)) >= [Github](https://github.com/mmdapl) >= [码云](https://gitee.com/mmdapl),
-
-### 文章笔记
+## 文章笔记
 
 **注：无高亮有效访问链接的待完成/同步**
 
 #### CSDN博客
 
-大部分为大学时有事没事写的，属于远古时期的内容了...
+> 大部分为大学时有事没事写的，属于远古时期的内容了!
+>
+> 我会对个人博客网站上的新内容，不定期更新到CSDN上去哒哒哒~
 
 - <img src="https://cdn.142vip.cn/article-notes/img/reprint.png" width="36" height="26" align="left" />[FIddler抓包、爬取数据](https://blog.csdn.net/Mmdapl/article/details/79133779)
 - <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" /> [基于Java模拟登录爬取教务系统学生等信息开发接口](https://blog.csdn.net/Mmdapl/article/details/83514722)
@@ -63,139 +61,247 @@
 - <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" />[HTML5笔记02--新增标签](https://blog.csdn.net/Mmdapl/article/details/79589695)
 - <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" /> [CSS基础笔记03--选择器、标签、属性](https://blog.csdn.net/Mmdapl/article/details/79598302)
 
----------
-
-我会对个人博客网站上的新内容，不定期更新到CSDN上去哒哒哒~
 
 
-#### 日常推荐
+## 前端
 
-- <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" /> [云服务器推荐](server-introduce.md)
+> 前端技术百花齐放、层出不穷，个人认为要注重广度，学会看官方文档熟练操作即可；
 
-#### 前端
-
-##### JavaScript
+#### JavaScript
 
 **本级目录下的JavaScript内容没有发表到[博客](http://blog.142vip.cn)上,建议对照[脑图]()在[JavaScript主目录](javascript)下学习**
 
 依赖官方文档及自身对JavaScript语言的初步了解，进行的关于JavaScript知识整理，主要目的是复习基础概念、了解新特性、熟练ES6/7操作；整体相对来说由易到难，方便后续查阅学习~
 
-- 快速入门
-  - [简单介绍](javascript/快速入门/javascript简单介绍.md)
-  - [快速了解](javascript/快速入门/javascript快速入门.md)
-- 基础教程
-  - [语法与数据结构](javascript/基础教程/javascript语法与数据结构.md)
-  - [循环与迭代](javascript/基础教程/javascript循环与迭代.md)
-  - [流程控制与错误处理](javascript/基础教程/javascript流程控制与错误处理.md)
-  - [表达式和运算符](javascript/基础教程/javascript表达式和运算符.md)
-  - [函数和方法](javascript/基础教程/javascript函数.md)
-  - [数字和日期](javascript/基础教程/javascript数字和日期.md)
-  - [对象的使用](javascript/基础教程/javascript对象的使用.md)
-  - [正则表达式](javascript/基础教程/javascript正则表达式.md)
-  - [promise对象的使用](javascript/基础教程/promise对象的使用.md)
-- 中级教程
-- 高级教程
+##### 快速入门
+
+- [简单介绍](javascript/快速入门/javascript简单介绍.md)
+- [快速了解](javascript/快速入门/javascript快速入门.md)
+
+##### 基础教程
+
+- [语法与数据结构](javascript/基础教程/javascript语法与数据结构.md)
+- [循环与迭代](javascript/基础教程/javascript循环与迭代.md)
+- [流程控制与错误处理](javascript/基础教程/javascript流程控制与错误处理.md)
+- [表达式和运算符](javascript/基础教程/javascript表达式和运算符.md)
+- [函数和方法](javascript/基础教程/javascript函数.md)
+- [数字和日期](javascript/基础教程/javascript数字和日期.md)
+- [对象的使用](javascript/基础教程/javascript对象的使用.md)
+- [正则表达式](javascript/基础教程/javascript正则表达式.md)
+- [promise对象的使用](javascript/基础教程/promise对象的使用.md)
+
+##### 中级教程
+
+##### 高级教程
+
+##### 其他整理
+
 - 常用函数方法整理
+
 - ES2020新特性
 
-##### JQuery
+#### JQuery
 
-##### Vue
+##### 基本属性
 
-##### React
+##### Css样式
 
-##### 前端UI框架
+##### 选择器
 
-#### 后端【Node】
+##### 文档处理
 
-##### express
+##### 筛选
 
-##### koa
+##### 事件
 
-##### eggjs
+##### 效果
 
-##### nestjs
+##### 事件对象
 
-#### 数据库
+##### 延迟对象
 
-##### MySQL
+##### 回调函数
 
-##### Redis
+##### 其他整理
 
-##### Mongo
+#### Vue
 
-#### 服务部署
 
-##### nginx
+
+#### React
+
+
+
+#### 前端UI框架
+
+> 市面上前端框架层出不穷，不同的技术栈依赖的UI框架也不尽相同，这里将会依据笔者使用的UI框架，以线上项目展示的方式，介绍用过的框架；
+
+
+
+## 后端【Node】
+
+> 相比前端，作为偏后端的开发者， 后端技术的学习则需要稳扎稳打、不断积累整理，在会用、能用、熟练的基础上，更应该学习其中的原理；所以若你为后端开发者，不论Java、Nodejs、Go等技术栈，对待下面将提及的微服务架构、容器技术、服务治理、高可用等都需要努力学习，抓住重点；
+>
+> 在面试面前，能力是不会说谎的，打铁还需自身硬，加油~
+
+#### Express框架
+
+#### Koa框架
+
+#### Eggjs框架
+
+#### Nestjs框架
+
+## 数据库
+
+> 主讲数据库基础知识，结合node的简单使用，相关的部署方案参照下方的文档
+
+#### MySQL
+
+#### Redis
+
+#### Mongo
+
+## 服务部署
+
+#### nginx
 
 - [nginx安装，普通安装 Or Docker搞定？](https://blog.142vip.cn/2018/03/多环境下nginx的安装部署方法汇总)
 - 手把手nginx基础入门
 - 反向代理、负载均衡真有那么难吗？
 - [Nginx SSL证书，从此踏上Https之路](https://blog.142vip.cn/2018/04/nginx%E4%B8%8Bssl%E7%9A%84%E9%85%8D%E7%BD%AE)
 
-##### docker
+#### docker
 
 - 我与docker的第一次硬碰硬
 - docker操作入门真有那么难吗？
 - 这些基础操作指令，你会吗？
 - 那些年，我常用的指令操作汇总
 
-##### docker-compose
+#### docker-compose
 
 - 听说你装了N次都没搞定？
 
-##### linux下shell编程
+#### linux下shell编程
 
 - 入门
 - 操作数据库
 - 其他
 
-#### 服务网关
+## 服务网关
 
-##### kong
+#### kong
 
-##### konga
+#### konga
 
-#### Elk日志管理平台
+## 服务注册
 
-##### ElasticSearch
+#### Apollo
 
-##### Logstash
+#### Consul
 
-##### Kibana
+#### Nacos
 
-#### 监控平台
+## 消息中间件
 
-##### Prometheus+Grafana
+> 消息队列已经逐渐成为企业IT系统内部通信的核心手段。具有低耦合、可靠投递、广播、流量控制、最终一致性等一系列功能，成为异步RPC的主要手段之一。当今市面上有很多主流的消息中间件，如老牌的ActiveMQ、RabbitMQ，炙手可热的Kafka，阿里巴巴自主开发RocketMQ等。
+>
+> 目前个人了解的有：RabbitMQ、Kafka、RocketMQ
 
-##### Zabbix
+#### RabbitMQ
 
-##### lepus(天兔)
+#### kafka
 
-#### 高可用架构
+#### RocketMQ
 
-- MySQL
-- Redis
+## Elk日志管理平台
 
-#### 网站搭建
+> 全链路日志
+
+#### ElasticSearch
+
+#### Logstash
+
+#### Kibana
+
+## 监控工具
+
+> 参考笔者线上平台:http://view.142vip.cn/grafana  账号/密码：test/123456 基于docker部署，由于是个人学生服务器，站点访问延迟较高
+>
+> 常用工具：promethus 、grafana、zabbix、lepus等
+
+#### Prometheus
+
+#### Grafana
+
+#### Zabbix
+
+#### lepus(天兔)
+
+## 高可用架构
+
+#### MySQL集群
+
+##### 主从同步
+
+> 实现功能：主从服务器数据一致，低延迟、高并发
+
+- Binlog主从复制
+- GTID主从复制
+- 主主复制
+
+##### 代理中间件
+
+> 实现功能：读写分离、分库分表、负载均衡、故障切换
+
+- Mycat
+- 360Atlas
+
+#### 集群监控
+
+> 实现功能：实时监控、可视化数据显示、故障报警
+
+- Prometheus
+- Grafana
+- alter-manager
+  - 推送到邮箱
+  - 推送到钉钉、微信机器人
+  - 推送到自定义消息接口（webhook钩子）
+
+#### 压力测试
+
+
+
+#### Redis集群
+
+> 在学，入门中..
+
+## 网站搭建
+
+> 笔者个人网站：http://www.142vip.cn  目前在重构中
 
 - 最初的梦想
 - 舍弃Java，我的重构之路
 - 网站正规化，Nginx配置SSL证书
 - 小小网站却耗费三台学生服务器？
 
-### 闲谈随笔
+## 闲谈随笔
 
-##### 生活
+#### 生活
 
-##### 职业
+- 异地恋
+- 怎么样才能让自己充实
+
+#### 职业
 
 - [《后浪》--致程序员](to-coder.md)
-- 
 
-##### 随笔
+#### 随笔
 
-### 赞赏支持
+- 毕业一年，究竟快乐吗？
+- github项目如何获取搞star
+
+## 赞赏支持
 
 人生漫漫，却又白驹过隙；若系列文章对你有帮助，不如请作者喝一杯奶茶...赞赏过得一定要扫下方右侧微信跟我说呀！！！！！！
 <a name="wechat"></a>
@@ -212,11 +318,11 @@
 
 **若你有跟作者相同的困惑、感悟，欢迎关注[B站--Rong姐姐好可爱](https://space.bilibili.com/350937042) 交流学习.**
 
-### 鸣谢
+## 鸣谢
 
 以下排名不分先后!
 
-### 赞助列表
+## 赞助列表
 
 以下排名不分先后!
 
