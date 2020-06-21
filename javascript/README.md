@@ -6,7 +6,7 @@
 >
 > 欢迎大家相互交流，不要恶意传播~~
 
-![](images/Javascript笔记【自用】.png)
+![](images/Javascript.png)
 
 
 
@@ -40,7 +40,7 @@
 
 - [ES6、ES7、ES8、ES9、ES10的新特性](最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
 - [ES2020新特性](最后稻草/ES2020新特性.md)
-- [JavaScript 工具函数大全](最后稻草/JavaScript 工具函数大全.md)
+- [JavaScript 工具函数大全](最后稻草/JavaScript工具函数大全.md)
 - [常用函数方法整理](最后稻草/常用函数方法整理.md)
 
 ## 参考
