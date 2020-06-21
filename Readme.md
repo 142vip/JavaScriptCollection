@@ -15,7 +15,7 @@
 </p>
 
 
-> 写在最前面！这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千、福利推荐、心理疗养；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容来源于**个人博客** ，也会不定时同步到 **码云**
+> 写在最前面！这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千、福利推荐、心理疗养；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容会选择性的发表于**个人博客** ，也会不定时同步到 **码云**
 
 #### 日常推荐
 
@@ -25,7 +25,7 @@
 
   [Github](https://github.com/mmdapl)>= [个人博客]([http://blog.142vip.cn](http://blog.142vip.cn/)) >= [码云](https://gitee.com/mmdapl),
 
-- <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" />[项目整理](http://blog.142vip.cn/s/projects)
+- <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" />[个人项目整理](http://blog.142vip.cn/s/projects)
 - 关于我
 
 ## 文章笔记
@@ -296,10 +296,16 @@
 
 - [《后浪》--致程序员](to-coder.md)
 
+- 工作中第一次被喷，我做是如何应付的
+
+- 五年了，我终于换了人生中的第一台MacBookPro
+
+  
+
 #### 随笔
 
 - 毕业一年，究竟快乐吗？
-- github项目如何获取搞star
+- github项目如何收获高star
 
 ## 赞赏支持
 
