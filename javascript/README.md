@@ -27,6 +27,11 @@
 - [流程控制与错误处理](https://github.com/mmdapl/article-notes/blob/master/javascript/基础教程/javascript流程控制与错误处理.md)
 - [表达式和运算符](https://github.com/mmdapl/article-notes/blob/master/javascript/基础教程/javascript表达式和运算符.md)
 - [函数和方法](https://github.com/mmdapl/article-notes/blob/master/javascript/基础教程/javascript函数.md)
+- [数字和对象](基础教程/javascript数字和日期.md)
+- [正则表达式](基础教程/javascript正则表达式.md)
+- [对象的使用](基础教程/javascript对象的使用.md)
+- [Promise对象](基础教程/promise对象的使用.md)
+- [modules模块](基础教程/modules模块.md)
 
 ### 中级教程
 

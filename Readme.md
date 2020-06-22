@@ -89,16 +89,26 @@
 - [对象的使用](javascript/基础教程/javascript对象的使用.md)
 - [正则表达式](javascript/基础教程/javascript正则表达式.md)
 - [promise对象的使用](javascript/基础教程/promise对象的使用.md)
+- [modules模块](javascript/基础教程/modules模块.md)
 
 ##### 中级教程
 
+
+
 ##### 高级教程
+
+
 
 ##### 其他整理
 
-- 常用函数方法整理
+- [ES6、ES7、ES8、ES9、ES10的新特性](javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
+- [ES2020新特性](javascript/最后稻草/ES2020新特性.md)
+- [JavaScript 工具函数大全](javascript/最后稻草/JavaScript工具函数大全.md)
+- [常用函数方法整理](javascript/最后稻草/常用函数方法整理.md)
 
-- ES2020新特性
+
+
+----
 
 #### JQuery
 
@@ -123,6 +133,12 @@
 ##### 回调函数
 
 ##### 其他整理
+
+
+
+-----
+
+
 
 #### Vue
 
@@ -290,6 +306,7 @@
 #### 生活
 
 - 异地恋
+- 尤克里里指弹曲谱
 - 怎么样才能让自己充实
 
 #### 职业
