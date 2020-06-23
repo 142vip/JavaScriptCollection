@@ -15,18 +15,35 @@
 </p>
 
 
-> 写在最前面！这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千、福利推荐、心理疗养；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容会选择性的发表于**个人博客** ，也会不定时同步到 **码云**
+> 写在最前面！这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千、福利推荐、心理疗养；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容会选择性的发表于**个人博客** ，也会不定时同步到 **码云** 。更新优先级：  [Github ](https://github.com/mmdapl) >=  [个人博客]([http://blog.142vip.cn](http://blog.142vip.cn/)) >= [码云](https://gitee.com/mmdapl)
+>
+> **以下内容没有链接的代表尚未完成，大家善用Ctrl+F**
+>
+> 创建时间：2020年2月14日
 
-#### 日常推荐
 
-- <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" /> [云服务器推荐](server-introduce.md)
 
-### 更新优先级
-
-  [Github](https://github.com/mmdapl)>= [个人博客]([http://blog.142vip.cn](http://blog.142vip.cn/)) >= [码云](https://gitee.com/mmdapl),
+## 关于作者
 
 - <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" />[个人项目整理](http://blog.142vip.cn/s/projects)
-- 关于我
+- 自我介绍
+
+
+
+## 思维导图
+
+> 内容同步与文档，可以结合思维导图对文档进行有效学习.相关目录的xmind文件为思维导图原文件
+
+![](img/summary.png)
+
+
+
+## 日常推荐
+
+- <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" /> [云服务器](server-introduce.md)
+
+- 开发工具
+- 技术文章
 
 ## 文章笔记
 
@@ -329,8 +346,12 @@
 
 ## 赞赏支持
 
-人生漫漫，却又白驹过隙；若系列文章对你有帮助，不如请作者喝一杯奶茶...赞赏过得一定要扫下方右侧微信跟我说呀！！！！！！
+> 人生漫漫，却又白驹过隙；若系列文章对你有帮助，不如请作者喝一杯奶茶...
+>
+> **已赞赏过的一定要扫下方右侧微信跟我说呀！！！！！！**
+
 <a name="wechat"></a>
+
 <p align="center">
 <img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="320" height="320" align="center" style="margin-right:20px;" /><img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="320" height="320" align="center" />
 
@@ -339,10 +360,6 @@
 </p>
 
 
-
-
-
-**若你有跟作者相同的困惑、感悟，欢迎关注[B站--Rong姐姐好可爱](https://space.bilibili.com/350937042) 交流学习.**
 
 ## 鸣谢
 
