@@ -1,8 +1,16 @@
-![](summry.png)
+## 思维导图
 
-## 快速入门
+>  内容同步与文档，可以结合思维导图对文档进行有效学习
+>
+> 创建时间：2020年5月14日
 
-### 简单介绍
+![](summary.png)
+
+
+
+## 目录内容
+
+### [JavaScript简单介绍](javascript简单介绍.md)
 
   - Javascript历史
   - ECMAScript简介
@@ -10,7 +18,7 @@
   - Javascript组成部分
   - Javascript基本特点
 
-### 快速了解
+### [JavaScript快速了解](javascript快速入门.md)
 
 - 基本语法
   - 语法
