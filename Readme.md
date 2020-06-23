@@ -34,7 +34,7 @@
 
 > 内容同步与文档，可以结合思维导图对文档进行有效学习.相关目录的xmind文件为思维导图原文件
 
-![](img/summary.png)
+![](https://cdn.142vip.cn/JavaScriptCollection/summary.png)
 
 
 
