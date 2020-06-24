@@ -1,5 +1,3 @@
-
-
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
 </p>
@@ -34,7 +32,11 @@
 
 > 内容同步与文档，可以结合思维导图对文档进行有效学习.相关目录的xmind文件为思维导图原文件
 
-![](https://cdn.142vip.cn/JavaScriptCollection/summary.png)
+
+
+<img src="https://cdn.142vip.cn/JavaScriptCollection/summary.png"/>
+
+
 
 
 
@@ -110,13 +112,15 @@
 
 ##### 中级教程
 
-
+- [Promise对象](javascript/中级教程/promise对象.md)
+- [async函数](javascript/中级教程/async函数.md)
+- [class类](javascript/中级教程/class类.md)
 
 ##### 高级教程
 
 
 
-##### 其他整理
+##### 最后稻草
 
 - [ES6、ES7、ES8、ES9、ES10的新特性](javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
 - [ES2020新特性](javascript/最后稻草/ES2020新特性.md)

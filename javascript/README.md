@@ -35,7 +35,9 @@
 
 ### 中级教程
 
-
+- [Promise对象](中级教程/promise对象.md)
+- [async函数](中级教程/async函数.md)
+- [class类](中级教程/class类.md)
 
 ### 高级教程
 
@@ -51,8 +53,8 @@
 ## 参考
 
 - [廖雪峰JavaScript教程](https://www.liaoxuefeng.com/category/895882450960192)
-
-- [JavaScript官方文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration#while_%E8%AF%AD%E5%8F%A5)
+- [官方文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration#while_%E8%AF%AD%E5%8F%A5)
+- [掘金门户](https://juejin.im/)
 
 ## Todo
 
@@ -62,4 +64,4 @@
 
 >  能够有时间、有心情、有收获的对已有的js进行整理，真的是对自己的慵懒、浮躁的心态要求很高很高，很感谢自己能够在24岁即将到来的时候，把自己一年多时间来的认知、收获静下心来整理，虽然目前不知道会有什么用，但雷军说总有一天会用上的，**我笃信！**
 >
-> 其次，我很感激您能不厌其烦、包容地看到这里，即便你停留在这里一秒，我想也能说明这篇文档的作用，由于自身认知、能力等方面有限，非常感谢大家的包容；对目录中提及的内容有任何疑问、建议都欢迎搭建issues交流   晚安！（2020年5月28日）
+> 其次，我很感激您能不厌其烦、包容地看到这里，即便你停留在这里一秒，我想也能说明这篇文档的作用，由于自身认知、能力等方面有限，非常感谢大家的包容；对目录中提及的内容有任何疑问、建议都欢迎大家issues交流   晚安！（2020年5月28日）
