@@ -1,5 +1,9 @@
 ## CSS基础教程
 
+> 后端开发Coder，为更好的学习、熟悉前端CSS结合W3CSchool文档进行总结和整理，方便后续查阅及扎实基础
+>
+> 参考资料：https://www.w3cschool.cn/css/
+
 ### CSS简介
 
 - CSS 指层叠样式表 (**C**ascading **S**tyle **S**heets)
@@ -273,7 +277,7 @@ font-size:20pt;
 - Always 要优化考虑使用样式规则的优先级来解决问题而不是 !important
 - Only 只在需要覆盖全站或外部 css（例如引用的 ExtJs 或者 YUI ）的特定页面中使用 !important
 - Never 永远不要在全站范围的 css 上使用 !important
-- Never 永远不要在你的插件中使用 !important
+- **Never 永远不要在你的插件中使用 !important**
 
 ![1593434925431](images/1593434925431.png)
 
@@ -286,3 +290,434 @@ font-size:20pt;
 -  C 创作者的规则高于浏览者：即网页编写者设置的CSS 样式的优先权高于浏览器所设置的样式；
 -  D 继承的CSS 样式不如后来指定的CSS 样式；
 -  E 在同一组属性设置中标有"!important"规则的优先级最大；
+
+### CSS 背景
+
+CSS 背景属性用于定义HTML元素的背景。
+
+CSS 属性定义背景效果：
+
+- background-color
+- background-image
+- background-repeat
+- background-attachment
+- background-position
+
+#### 背景颜色
+
+background-color 属性定义了元素的背景颜色。CSS中，颜色值通常定义:
+
+- 十六进制 - 如："#ff0000"
+- RGB - 如："rgb(255,0,0)"
+- 颜色名称 - 如："red"
+
+```css
+h1 {
+    background-color:#6495ed;
+}
+p {
+    background-color:#e0ffff;
+}
+div {
+    background-color:#b0c4de;
+}
+```
+
+可以为所有元素设置背景色，包括 body 一直到 em 和 a 等行内元素;
+
+**background-color 不能继承，其默认值是 transparent。如果一个元素没有指定背景色，那么背景就是透明的，这样其父元素的背景才可见。**
+
+#### 背景图像
+
+background-image 属性描述了元素的背景图像.默认情况下，背景图像进行平铺重复显示，以覆盖整个元素实体.
+
+```css
+body {
+    background-image:url('paper.gif');
+}
+```
+
+如果需要在HTML页面上对背景图像进行平铺，可以使用 [background-repeat](https://www.w3cschool.cn/cssref/pr-background-repeat.html) 属性。
+
+默认情况下 background-image 属性会在页面的水平或者垂直方向平铺。
+
+如果不想让图像平铺，你可以使用 background-repeat 属性:
+
+```css
+body{
+    background-image:url('img_tree.png');
+    background-repeat:no-repeat;
+}
+```
+
+为 background-position 属性提供值有很多方法。可以使用一些关键字：top、bottom、left、right 和 center；其次，可以使用长度值，如 100px 或 5cm；最后也可以使用百分数值。不同类型的值对于背景图像的放置稍有差异。
+
+**关键字**
+
+图像放置关键字最容易理解的作用就像其名字的意义。例如，top left 使图像放置在元素内边距区的左上角。
+
+只要保证不超过两个关键字：一个对应水平方向，另一个对应垂直方向，那么你可以设置位置关键字以任何顺序出现。
+
+如果只有一个关键字，则会默认另一个关键字为 center。
+
+![1593511142603](images/1593511142603.png)
+
+**背景- 简写属性**
+
+在以上实例中我们可以看到页面的背景颜色通过了很多的属性来控制。
+
+为了简化这些属性的代码，我们可以将这些属性合并在同一个属性中.背景颜色的简写属性为`background`:
+
+```css
+body {
+    background:#ffffff url('img_tree.png') no-repeat right top;
+}
+```
+
+当使用简写属性时，属性值的顺序为：:
+
+- background-color
+- background-image
+- background-repeat
+- background-attachment
+- background-position
+
+![1593511352049](images/1593511352049.png)
+
+### CSS Text文本格式
+
+通过CSS的Text属性，你可以改变页面中文本的颜色、字符间距、对齐文本、装饰文本、对文本进行缩进等等.
+
+#### Text Color
+
+颜色属性被用来设置文字的颜色。颜色是通过CSS最经常的指定：
+
+- 十六进制值 - 如"＃FF0000"
+- 一个RGB值 - "RGB（255,0,0）"
+- 颜色的名称 - 如"红"
+
+```css
+body {
+    color:blue;
+}
+h1 {
+    color:#00ff00;
+}
+h2 {
+    color:rgb(255,0,0);
+}
+```
+
+**如果定义了颜色属性，你还必须定义背景色属性**
+
+#### 对齐方式
+
+文本排列属性是用来设置文本的水平对齐方式。**文本可居中或对齐到左或右,两端对齐**.当text-align设置为"justify"，每一行被展开为宽度相等，左，右外边距是对齐（如杂志和报纸）
+
+```css
+h1 {
+    text-align:center;
+}
+p.date {
+    text-align:right;
+}
+p.main {
+    text-align:justify;
+}
+```
+
+**如果想把一个行内元素的第一行“缩进”，可以用左内边距或外边距创造这种效果**
+
+#### 文本修饰
+
+text-decoration 属性用来设置或删除文本的装饰。
+
+从设计的角度看 text-decoration属性主要是用来删除链接的下划线
+
+```css
+/* 无删除线*/
+a {
+    text-decoration:none;
+}
+/*顶部删除线*/
+h1 {
+    text-decoration:overline;
+}
+/*删除线中间穿过*/
+h2 {
+    text-decoration:line-through;
+}
+/*下划线*/
+h3 {
+    text-decoration:underline;
+}
+```
+
+#### 文本缩进
+
+文本缩进属性是用来指定文本的第一行的缩进。CSS 提供了 text-indent 属性，该属性可以方便地实现文本缩进。
+
+**通过使用 text-indent 属性，所有元素的第一行都可以缩进一个给定的长度**。
+
+```css
+/* 首行缩进*/
+p {
+    text-indent:50px;
+}
+```
+
+#### 文本间隔
+
+word-spacing 属性可以改变字（单词）之间的标准间隔。其默认值 normal 与设置值为 0 是一样的。
+
+```css
+/* 指定段字之间的空间，30像素：*/
+p{
+    word-spacing:30px;
+}
+```
+
+#### 所有CSS文本属性。
+
+| 文本属性        | 意义描述                 |
+| --------------- | ------------------------ |
+| color           | 设置文本颜色             |
+| direction       | 设置文本方向。           |
+| letter-spacing  | 设置字符间距             |
+| line-height     | 设置行高                 |
+| text-align      | 对齐元素中的文本         |
+| text-decoration | 向文本添加修饰           |
+| text-indent     | 缩进元素中文本的首行     |
+| text-shadow     | 设置文本阴影             |
+| text-transform  | 控制元素中的字母         |
+| unicode-bidi    | 设置或返回文本是否被重写 |
+| vertical-align  | 设置元素的垂直对齐       |
+| white-space     | 设置元素中空白的处理方式 |
+| word-spacing    | 设置字间距               |
+
+### CSS 字体
+
+CSS字体属性定义字体，加粗，大小，文字样式。
+
+#### CSS字型
+
+在CSS中，有两种类型的字体系列名称：
+
+- **通用字体系列** - 拥有相似外观的字体系统组合（如 "Serif" 或 "Monospace"）
+- **特定字体系列** - 一个特定的字体系列（如 "Times" 或 "Courier"）
+
+除了各种特定的字体系列外，CSS 定义了 5 种通用字体系列：
+
+- Serif 字体
+- Sans-serif 字体
+- Monospace 字体
+- Cursive 字体
+- Fantasy 字体
+
+#### 字体系列
+
+font-family 属性设置文本的字体系列。
+
+font-family 属性应该设置几个字体名称作为一种"后备"机制，如果浏览器不支持第一种字体，他将尝试下一种字体。
+
+**如果字体系列的名称超过一个字，它必须用引号，如Font Family："宋体"。**多个字体系列是用一个逗号分隔指明：
+
+```css
+p{
+    font-family:"Times New Roman", Times, serif;
+}
+```
+
+#### 字体样式
+
+主要是用于指定斜体文字的字体样式属性。
+
+这个属性有三个值：
+
+- 正常 - 正常显示文本
+- 斜体 - 以斜体字显示的文字
+- 倾斜的文字 - 文字向一边倾斜（和斜体非常类似，但不太支持）
+
+```css
+p.normal {
+    font-style:normal;
+}
+p.italic {
+    font-style:italic;
+}
+p.oblique {
+    font-style:oblique;
+}
+```
+
+**italic 和 oblique 的区别**
+
+- 斜体（italic）是一种简单的字体风格，对每个字母的结构有一些小改动，来反映变化的外观。
+- 倾斜（oblique）文本是正常竖直文本的一个倾斜版本。
+
+**通常情况下，italic 和 oblique 文本在 web 浏览器中看上去完全一样**。
+
+#### 字体大小
+
+font-size 属性设置文本的大小。
+
+能否管理文字的大小，在网页设计中是非常重要的。但是，你不能通过调整字体大小使段落看上去像标题，或者使标题看上去像段落。
+
+请务必使用正确的HTML标签，就`<h1> `- `<h6>`表示标题和`<p>`表示段落：
+
+字体大小的值可以是绝对或相对的大小。
+
+绝对大小：
+
+- 设置一个指定大小的文本
+- 不允许用户在所有浏览器中改变文本大小
+- 确定了输出的物理尺寸时绝对大小很有用
+
+相对大小：
+
+- 相对于周围的元素来设置大小
+- 允许用户在浏览器中改变文字大小
+
+**如果不指定一个字体的大小，默认大小和普通文本段落一样，是16像素（16px=1em）**
+
+#### 设置字体大小像素
+
+设置文字的大小与像素，完全控制文字大小
+
+```css
+h1 {
+    font-size:40px;
+}
+h2 {
+    font-size:30px;
+}
+p {
+    font-size:14px;
+}
+```
+
+**用em来设置字体大小**
+
+为了避免Internet Explorer 中无法调整文本的问题，许多开发者使用 em 单位代替像素。
+
+em的尺寸单位由W3C建议。
+
+1em和当前字体大小相等。在浏览器中默认的文字大小是16px。
+
+因此，1em的默认大小是16px。可以通过下面这个公式将像素转换为em：px/16=em
+
+**使用百分比和EM组合**
+
+在所有浏览器的解决方案中，设置 <body>元素的默认字体大小的是百分比
+
+```css
+body {
+    font-size:100%;
+}
+h1 {
+    font-size:2.5em;
+}
+h2 {
+    font-size:1.875em;
+}
+p {
+    font-size:0.875em;
+}
+```
+
+**在所有浏览器中，可以显示相同的文本大小，并允许所有浏览器缩放文本的大小。**
+
+#### 所有CSS字体属性
+
+| 字体属性     | 描述                                 |
+| :----------- | :----------------------------------- |
+| font         | 在一个声明中设置所有的字体属性       |
+| font-family  | 指定文本的字体系列                   |
+| font-size    | 指定文本的字体大小                   |
+| font-style   | 指定文本的字体样式                   |
+| font-variant | 以小型大写字体或者正常字体显示文本。 |
+| font-weight  | 指定字体的粗细。                     |
+
+### CSS 链接
+
+不同的链接可以有不同的样式链接样式
+
+链接的样式，可以用任何CSS属性（如颜色，字体，背景等）。
+
+特别的链接，可以有不同的样式，这取决于他们是什么状态。
+
+这四个链接状态是：
+
+- a:link - 正常，未访问过的链接
+- a:visited - 用户已访问过的链接
+- a:hover - 当用户鼠标放在链接上时
+- a:active - 链接被点击的那一刻
+
+```css
+ /* 未访问链接*/
+a:link {
+    color:#FF0000;
+}  
+/* visited link */
+a:visited {
+    color:#00FF00;
+}
+/* mouse over link */
+a:hover {
+    color:#FF00FF;
+} 
+/* selected link */
+a:active {
+    color:#0000FF;
+}  
+```
+
+当设置为若干链路状态的样式，也有一些顺序规则：
+
+- a:hover 必须跟在 a:link 和 a:visited后面
+- a:active 必须跟在 a:hover后面
+
+#### 链接样式
+
+根据上述链接的颜色变化的例子，看它是在什么状态。
+
+让我们通过一些其他常见的方式转到链接样式：
+
+#### 文本修饰
+
+text-decoration 属性主要用于删除链接中的下划线：
+
+```css
+a:link {
+    text-decoration:none;
+}
+a:visited {
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+a:active {
+    text-decoration:underline;
+}
+```
+
+#### 背景颜色
+
+背景颜色属性指定链接背景色：
+
+```css
+a:link {
+    background-color:#B2FF99;
+}
+a:visited {
+    background-color:#FFFF85;
+}
+a:hover {
+    background-color:#FF704D;
+}
+a:active {
+    background-color:#FF704D;
+}
+```
+
