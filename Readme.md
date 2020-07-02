@@ -24,21 +24,15 @@
 ## 关于作者
 
 - <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" />[个人项目整理](http://blog.142vip.cn/s/projects)
-- 自我介绍
+- <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" />[自我介绍]()
 
 
 
 ## 思维导图
 
 > 内容同步与文档，可以结合思维导图对文档进行有效学习.相关目录的xmind文件为思维导图原文件
-
-
-
-<img src="https://cdn.142vip.cn/JavaScriptCollection/summary.png"/>
-
-
-
-
+>
+> 链接：https://cdn.142vip.cn/JavaScriptCollection/summary.png
 
 ## 日常推荐
 
@@ -136,9 +130,7 @@
 - [JavaScript 工具函数大全](javascript/最后稻草/JavaScript工具函数大全.md)
 - [常用函数方法整理](javascript/最后稻草/常用函数方法整理.md)
 
-
-
-----
+##
 
 #### JQuery
 
@@ -211,7 +203,7 @@
 - [第二部分：数据库概述](eggjs/mysql-README.md)
 
     - [2.1 下载和安装](eggjs/mysql-download.md)
-    - [2.2 连接数据库]eggjs/(git-connect.md)
+    - [2.2 连接数据库](eggjs/git-connect.md)
     - [2.3 CURD操作](eggjs/mysql-curd.md)
     - [2.4 Redis缓存](eggjs/mysql-redis.md)
     - [2.4.1 redis安装](eggjs/mysql-redis-install.md)
