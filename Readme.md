@@ -86,7 +86,7 @@
 
 ##### 基础教程
 
-----
+##
 
 #### JavaScript
 
@@ -158,7 +158,7 @@
 
 
 
------
+##
 
 
 
@@ -269,7 +269,15 @@
 
 #### MySQL
 
+- [MySQL优化之Explain参数说明](mysql/MySQL优化之Explain参数说明.md)
+- [基于GTID主从复制的原理和基础配置](mysql/基于GTID主从复制的原理和基础配置.md)
+
 #### Redis
+
+> 将围绕redis基础概念、使用场景、使用方式、简单部署等方面 展开介绍，[主目录](redis)下有自己觉得还不错PDF文档~
+
+- [redis基础介绍](redis/redis基础介绍.md)
+- [redis集群部署-docker方式](redis/redis集群部署.md)
 
 #### Mongo
 
