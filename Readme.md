@@ -196,6 +196,79 @@
 
 #### Eggjs框架
 
+##### 基础篇
+
+- [第一部分：Git概述](eggjs/git-README.md)
+* [1.1 下载和安装](eggjs/git-download.md)
+    * [1.2 基本配置](eggjs/git-config.md)
+    * [1.3 常用命令](eggjs/git-dns.md)
+    * [1.4 GitHub简单使用](eggjs/git-github.md)
+    * [1.5 GitBook简单使用](eggjs/git-gitbook.md)
+        * [1.5.1 Typora简介](eggjs/git-typora.md)
+        * [1.5.2 MarkDown语法](eggjs/git-markdown.md)
+    * [1.6 码云和GitHub的选择](eggjs/git-choice.md)
+    
+- [第二部分：数据库概述](eggjs/mysql-README.md)
+
+    - [2.1 下载和安装](eggjs/mysql-download.md)
+    - [2.2 连接数据库]eggjs/(git-connect.md)
+    - [2.3 CURD操作](eggjs/mysql-curd.md)
+    - [2.4 Redis缓存](eggjs/mysql-redis.md)
+    - [2.4.1 redis安装](eggjs/mysql-redis-install.md)
+    - [2.4.2 redis常用指令](eggjs/mysql-redis-dns.md)
+    - [2.5 可视化管理](eggjs/mysql-redis-view.md)
+
+##### 入门篇
+
+- [第一部分：Egg框架快速入门](eggjs/egg-README.md)
+
+- [1.1 基础功能](eggjs/egg-base.md)
+  - [1.1.1 接口参数获取](eggjs/egg-request-params.md)
+  - [1.1.2 Egg内置对象 ](eggjs/egg-object.md)
+  - [1.1.3 Config配置](eggjs/egg-config.md)
+  - [1.1.4 Egg生命周期](eggjs/egg-life.md)
+  - [1.1.5 中间件理解](eggjs/egg-middleware.md)
+  - [1.1.6 Router路由分发](eggjs/egg-router.md)
+  - [1.1.7 Controller控制器](eggjs/egg-controller.md)
+  - [1.1.8 Service服务](eggjs/egg-service.md)
+  - [1.1.9 常用插件](eggjs/egg-plugin.md)
+- [1.2 核心功能](eggjs/egg-core.md)
+  - [1.2.1 日志输出](eggjs/egg-logger.md)
+  - [1.2.2 定时任务](eggjs/egg-schedule.md)
+  - [1.2.2 HttpClient网络请求](eggjs/egg-httpclient.md)
+  - [1.2.3 Cookie的基本使用](eggjs/egg-cookies.md)
+  - [1.2.4 Session的基本使用](eggjs/egg-session.md)
+  - [1.2.5 统一异常-错误处理](eggjs/egg-try-catch.md)
+  - [1.2.6 CSRF防范和XSS攻击](eggjs/egg-csrf-xss.md)
+  - [1.2.7 RESTful API接口风格](eggjs/egg-restful.md)
+
+- [第二部分：插件开发](eggjs/plugin-README.md)
+
+    - [2.1 egg-validate参数校验](eggjs/plugin-egg-validate.md)
+    - [2.2 egg-view-ejs页面渲染](eggjs/plugin-egg-view.ejs.md)
+    - [2.3 egg-redis缓存](eggjs/plugin-egg-redis.md)
+    - [2.4 egg-mysql](eggjs/plugin-egg-mysql.md)
+    - [2.5 egg-sequelize](eggjs/plugin-egg-sequelize.md)
+    - [2.6 egg-socket.io即时通讯](eggjs/plugin-egg-socket.io.md)
+
+##### 代码实战篇
+
+- [第一部分：常用代码](eggjs/project-README-CODE.md)
+
+    - [1.1 图片前端在线剪辑](eggjs/project-images-cropper.md)
+    - [1.2 文件上传后台处理](eggjs/project-upload.md)
+    - [1.3 MD5加密-解密算法](eggjs/project-md5.md)
+    - [1.4 Egg Jwt加密和校验](eggjs/project-token.md)
+- [第二部分：项目简介](eggjs/project-README-INTRODUCE.md)
+
+    - [2.1 基于OAuth2的统一认证中心系统](eggjs/project-ssoCenterSystem.md)
+    - [2.2 常用前后端分页比较与实现](eggjs/project-pagenation.md)
+    - [2.3基于Spring Boot实现的个人博客](eggjs/project-spring-boot-blog.md)
+    - [2.4 基于Yapi搭建的接口管理系统](eggjs/project-webapi.md)
+    - [2.5 GitBook开源笔记总结站点搭建](eggjs/project-gitbook.md)
+    - [2.6 个人网站及接口服务搭建搭建](eggjs/project-142vip.cn.md)
+- [第三部分：手把手搭建基础Egg开发框架](eggjs/egg-egg-example.md)
+
 #### Nestjs框架
 
 ## 数据库
