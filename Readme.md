@@ -263,6 +263,13 @@
 
 #### Nestjs框架
 
+> Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此在学习Nestjs框架之前，请务必先熟悉express框架相关操作并进行typescript入门；在一定程度上typescript和面向对象语言Java、Net等很相似，如果你之前有JavaScript和Java的基础，那么应该恭喜你，你的学习速度将会倍速提高
+
+- [核心基础概念](nestjs/nestjs核心基础概念.md)
+- [项目创建初始化入门](nestjs/nestjs项目创建初始化入门.md)
+- [整合swagger快速生成api文档](nestjs/nestjs整合swagger快速生成api文档.md)
+- [接口路由请求传参](nestjs/nestjs接口路由请求传参.md)
+
 ## 数据库
 
 > 主讲数据库基础知识，结合node的简单使用，相关的部署方案参照下方的文档
@@ -300,6 +307,8 @@
 #### docker-compose
 
 - 听说你装了N次都没搞定？
+- 集群启动失败，yaml规范不清楚？
+- 
 
 #### linux下shell编程
 
