@@ -292,10 +292,10 @@
 
 #### nginx
 
-- [nginx安装，普通安装 Or Docker搞定？](https://blog.142vip.cn/2018/03/多环境下nginx的安装部署方法汇总)
+- [nginx安装，普通安装 Or Docker搞定？](nginx/nginx基础部署.md)
 - 手把手nginx基础入门
 - 反向代理、负载均衡真有那么难吗？
-- [Nginx SSL证书，从此踏上Https之路](https://blog.142vip.cn/2018/04/nginx%E4%B8%8Bssl%E7%9A%84%E9%85%8D%E7%BD%AE)
+- [Nginx SSL证书，从此踏上Https之路](nginx/nginx服务器ssl证书配置.md)
 
 #### docker
 
@@ -397,7 +397,7 @@
 
 #### 压力测试
 
-
+- jmeter
 
 #### Redis集群
 
@@ -453,7 +453,7 @@
 <a name="wechat"></a>
 
 <p align="center">
-<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="320" height="320" align="center" style="margin-right:20px;" /><img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="320" height="320" align="center" />
+<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="320" height="320" align="center" style="margin-right:40px;" /><img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="320" height="320" align="center" />
 
 
 
