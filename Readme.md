@@ -418,6 +418,7 @@
 - [异地恋合集](long-distance-love)
 - [尤克里里指弹曲谱](ukulele)
 - [城市日记](city-diary)
+- [音乐推荐](music-list)
 
 #### 职业
 
