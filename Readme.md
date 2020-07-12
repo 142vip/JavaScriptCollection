@@ -316,7 +316,22 @@
 
 #### kong
 
+- kong的的基本介绍
+- docker下kong的部署
+- docker-compose搭建kong集群
+- 可视化管理界面介绍
+
 #### konga
+
+- 基本介绍与docker部署
+- 简单使用
+- 路由管理
+
+#### kong-dashboard
+
+- docker简单部署
+- 路由管理
+- 插件介绍
 
 ## 服务注册
 
@@ -433,7 +448,7 @@
 - [室友搬家，一个人的上下班又将是怎么样的风景](article-records/工作/室友搬家，一个人的上下班又将是怎样的风景.md)
 
 
-  
+
 
 #### [随笔](article-records/随笔)
 
