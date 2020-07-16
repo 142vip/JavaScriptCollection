@@ -321,8 +321,8 @@
 
 #### kong
 
-- kong的的基本介绍
-- docker下kong的部署
+- [kong的的基本介绍](/api-gateway/kong/kong的基本介绍.md)
+- [docker下kong的部署](/api-gateway/kong/基于docker部署kong网关服务.md)
 - docker-compose搭建kong集群
 - 可视化管理界面介绍
 
