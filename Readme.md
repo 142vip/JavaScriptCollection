@@ -446,7 +446,7 @@
 
 - [工作中第一次被喷，我到底是如何应对的](./article-records/工作/工作中第一次被喷，我到底是如何应对的.md)
 
-- 五年了，我终于换了人生中的第一台MacBookPro
+- [五年了，我终于换了人生中的第一台MacBookPro](https://juejin.im/post/5f12a1716fb9a07e8472552d)
 
 - [突如其来的聊天，打破了一年的规划](./article-records/工作/突如其来的聊天，打破了一年的规划.md)
 
