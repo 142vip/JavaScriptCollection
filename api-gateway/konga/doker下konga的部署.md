@@ -18,7 +18,7 @@
 ## 若数据库与konga容器不在同一个docker桥接网络下，可以采用地址连接
 docker run --rm pantsel/konga:latest -c prepare -a postgres -u postgresql://kong:kong@172.18.0.1:5432/konga
 ## 在一个网络下，可以直接用容器名称,注意写清楚network配置
-docker run --rm --network=kong-net pantsel/konga:latest -c prepare -a postgres -u postgresql://kong:kong@kong-database:5432/konga
+docker run --rm --network=kong-tencent-net pantsel/konga:latest -c prepare -a postgres -u postgresql://kong:kong@kong-database:5432/konga
 ```
 
 实际效果：
