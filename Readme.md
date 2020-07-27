@@ -475,7 +475,15 @@
 
   
 
-  
+
+### 公众号
+
+<div align="center">
+  <img src="http://youpai.142vip.cn/article/images/gongzhonghao.png">
+</div>
+
+- [公微信众号，我来了](https://mp.weixin.qq.com/s/O7JkdQgF1AOxe2tDJzoaYQ)
+- [介绍一下，我在B站](https://mp.weixin.qq.com/s/WP5K1hk4aab3JhQx5u_0sQ)
 
 
 ## 赞赏支持
