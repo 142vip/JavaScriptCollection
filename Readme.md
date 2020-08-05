@@ -4,7 +4,7 @@
  * @Autor: 【B站】Rong姐姐好可爱
  * @Date: 2020-07-10 23:21:54
  * @LastEditors: 【B站】Rong姐姐好可爱
- * @LastEditTime: 2020-08-05 23:03:26
+ * @LastEditTime: 2020-08-05 23:08:22
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -55,7 +55,7 @@
 
 - [CSDN](docs/platform/csdn.md.md)
 - [掘金]()
-- [公众号]
+- [公众号]()
 - [B站]()
 
 
@@ -419,7 +419,7 @@
 
 #### [生活](article-records/生活)
 
-- [异地恋合集](long-distance-love)
+- [异地恋](long-distance-love)
 - [尤克里里指弹曲谱](ukulele)
 - [城市日记](city-diary)
 - [音乐推荐](music-list)
