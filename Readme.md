@@ -1,11 +1,3 @@
-<!--
- * @Description: 
- * @Version: Beata1.0
- * @Autor: 【B站】Rong姐姐好可爱
- * @Date: 2020-07-10 23:21:54
- * @LastEditors: 【B站】Rong姐姐好可爱
- * @LastEditTime: 2020-08-05 23:08:22
--->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
 </p>
@@ -484,6 +476,8 @@
 <div>
   <a href="https://github.com/ChiefPing" target="_blank">
   	<img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px"/>
+  </a>  <a href="https://github.com/xiaoliuxin" target="_blank">
+  	<img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4" width="50px"/>
   </a>
 </div>
 
