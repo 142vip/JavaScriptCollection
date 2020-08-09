@@ -45,10 +45,11 @@
 
 **注：无高亮有效访问链接的待完成/同步**
 
-- [CSDN](docs/platform/csdn.md.md)
-- [掘金]()
-- [公众号]()
-- [B站]()
+- **「Bilibili 」** https://space.bilibili.com/350937042
+- **「Github」** https://github.com/mmdapl
+- **「CSDN 」** https://blog.csdn.net/Mmdapl
+- **「掘       金」** https://juejin.im/user/448256476724807
+- **「公众号 」** Rong姐姐好可爱
 
 
 
@@ -151,7 +152,11 @@
 
 > 市面上前端框架层出不穷，不同的技术栈依赖的UI框架也不尽相同，这里将会依据笔者使用的UI框架，以线上项目展示的方式，介绍用过的框架；
 
-
+- Bootstrap 
+- LayerUI
+- Ant-design-vue
+- iView-UI
+- Element-UI
 
 ## 后端【Node】
 
@@ -450,8 +455,6 @@
 > 主要是跟计算机无关的一些书，在看完之后，会选择性的进行思维导图、经典词句整理，也可能添加个人思考
 
 - [你好孤独 - 陈果](./article-records/读书笔记/好的孤独-陈果/Readme.md)
-
-- [遗世独立张爱玲]()
 
   
 
