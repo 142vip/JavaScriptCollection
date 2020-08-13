@@ -299,6 +299,7 @@
 - redis安装部署
 - [redis集群部署-docker方式](redis/redis集群部署.md)
 - 数据类型
+- [memCache与Redis比较](redis/memCache与Redis.md)
 
 #### Mongo
 - 基本介绍

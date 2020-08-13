@@ -1,3 +1,5 @@
+> 本文档总结选择性发表于个人公众号【Rong姐姐好可爱】，[查看公众号](https://mp.weixin.qq.com/s/1Z-HjTPXVld0SXiqaaDKSw)
+
 #### **什么是MemCache**
 
 > memcached 是以LiveJournal旗下Danga Interactive 公司的Brad Fitzpatric 为首开发的一款软件。现在已成为mixi、hatena、Facebook、Vox、LiveJournal 等众多服务中提高Web应用扩展性的重要因素。许多Web 应用都将数据保存到RDBMS（关系型数据库管理系统）中，应用服务器从中读取数据并在浏览器中显示。但随着数据量的增大、访问的集中，就会出现RDBMS 的负担加重、数据库响应恶化、网站显示延迟等重大影响。memcached 是高性能的分布式内存缓存服务器。一般的使用目的是，通过缓存数据库查询结果，减少数据库访问次数，以提高动态Web 应用的速度、提高可扩展性。
