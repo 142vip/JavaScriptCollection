@@ -1,52 +1,61 @@
-## Docker-Compose简介及常用命令
-#### 1、Docker-Compose简介
+## Docker-Compose
+#### Docker-Compose简介
 
 Docker-Compose项目是Docker官方的开源项目，负责实现对Docker容器集群的快速编排。
-Docker-Compose将所管理的容器分为三层，分别是工程（project），服务（service）以及容器（container）。Docker-Compose运行目录下的所有文件（docker-compose.yml，extends文件或环境变量文件等）组成一个工程，若无特殊指定工程名即为当前目录名。一个工程当中可包含多个服务，每个服务中定义了容器运行的镜像，参数，依赖。一个服务当中可包括多个容器实例，Docker-Compose并没有解决负载均衡的问题，因此需要借助其它工具实现服务发现及负载均衡。
-Docker-Compose的工程配置文件默认为docker-compose.yml，可通过环境变量COMPOSE_FILE或-f参数自定义配置文件，其定义了多个有依赖关系的服务及每个服务运行的容器。
+**Docker-Compose将所管理的容器分为三层，分别是工程（project），服务（service）以及容器（container）。**
+
+Docker-Compose运行目录下的所有文件（docker-compose.yml，extends文件或环境变量文件等）组成一个工程，若无特殊指定工程名即为当前目录名。一个工程当中可包含多个服务，每个服务中定义了容器运行的镜像，参数，依赖。一个服务当中可包括多个容器实例，Docker-Compose并没有解决负载均衡的问题，因此需要借助其它工具实现服务发现及负载均衡。
+**Docker-Compose的工程配置文件默认为docker-compose.yml，可通过环境变量COMPOSE_FILE或-f参数自定义配置文件，**其定义了多个有依赖关系的服务及每个服务运行的容器。
 使用一个Dockerfile模板文件，可以让用户很方便的定义一个单独的应用容器。在工作中，经常会碰到需要多个容器相互配合来完成某项任务的情况。例如要实现一个Web项目，除了Web服务容器本身，往往还需要再加上后端的数据库服务容器，甚至还包括负载均衡容器等。
 Compose允许用户通过一个单独的docker-compose.yml模板文件（YAML 格式）来定义一组相关联的应用容器为一个项目（project）。
 Docker-Compose项目由Python编写，调用Docker服务提供的API来对容器进行管理。因此，只要所操作的平台支持Docker API，就可以在其上利用Compose来进行编排管理。
 
-#### 2、Docker-Compose安装
+#### Docker-Compose安装
 
 - 安装方法一：
-  下载Docker-Compose：
+  
+```bash
+## 下载Docker-Compose：
 
 sudo curl -L https://github.com/docker/compose/releases/download/1.23.0-rc3/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-安装Docker-Compose：
+## 安装Docker-Compose：
 sudo chmod +x /usr/local/bin/docker-compose
-查看版本 :
+## 查看版本 
 docker-compose version
-
+```
 - 安装方法二：
 
-  安装pip
-
+```bash
+## 安装pip
 yum -y install epel-release
 yum -y install python-pip
-确认版本
+## 确认版本
 pip --version
-更新pip
+## 更新pip
 pip install --upgrade pip
-安装docker-compose
+## 安装docker-compose
 pip install docker-compose
-查看版本
+## 查看版本
 docker-compose version
-安装补全工具：
+## 安装补全工具：
 为了方便输入命令，也可以安装Docker的补全提示工具帮忙快速输入命令：
-安装
+## 安装
 yum install bash-completion
-下载docker-compose脚本
-
+## 下载docker-compose脚本
 curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose
-3、Docker-Compose卸载
-如果是二进制包方式安装的，删除二进制文件即可：
-sudo rm /usr/local/bin/docker-compose
-如果通过Python pip工具安装的，则执行如下命令删除：
-sudo pip uninstall docker-compose
+```
 
-二、Docker-Compose常用命令
+#### Docker-Compose卸载
+
+```bash
+## 如果是二进制包方式安装的，删除二进制文件即可
+sudo rm /usr/local/bin/docker-compose
+## 如果通过Python pip工具安装的，则执行如下命令删除
+sudo pip uninstall docker-compose
+```
+
+#### Docker-Compose常用命令
+
 1、Docker-Compose命令格式
 docker-compose [-f <arg>...] [options] [COMMAND] [ARGS...]
 命令选项如下：
@@ -437,7 +446,7 @@ expose:
 23、extends
 基于其它模板文件进行扩展。例如，对于webapp服务定义了一个基础模板文件为common.yml：
 
-# common.yml
+## common.yml
 webapp:
     build: ./webapp
     environment:
@@ -445,7 +454,7 @@ webapp:
         - SEND_EMAILS=false
 再编写一个新的development.yml文件，使用common.yml中的webapp服务进行扩展：
 
-# development.yml
+## development.yml
 web:
     extends:
         file: common.yml
