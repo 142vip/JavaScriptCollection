@@ -375,6 +375,15 @@
 
 #### RocketMQ
 
+## RPC框架
+#### gRPC
+> gRPC 一开始由 google 开发，是一款语言中立、平台中立、开源的远程过程调用(RPC)系统，tensorflow分布式与tensorflow serving底层通信都是是用的grpc。我自己基于JavaScript技术栈上较多的接触到gRPC，传送门:[基于js下各框架grpc的使用]()
+#### Dubbo
+> Alibaba开发的一个RPC框架，远程接口基于Java Interface, 依托于Spring框架(**Java技术栈重点研究**)
+#### Thrift
+> Apache的一个项目(http://thrift.apache.org)，前身是Facebook开发的一个RPC框架，采用thrift作为IDL (Interface description language)。
+
+
 ## Elk日志管理平台
 
 > 全链路日志
