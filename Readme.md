@@ -328,6 +328,7 @@
 
 - 听说你装了N次都没搞定？
 - 集群启动失败，yaml规范不清楚？
+- [我了解的docker-compose都在这里了](https://mp.weixin.qq.com/s/nC4nF51xn61TZlenuUxDog)
 
 #### linux下shell编程
 
