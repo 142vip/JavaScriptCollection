@@ -363,9 +363,15 @@
 
 #### Apollo
 
+> 携程开发的配置中心经典项目，可集成多语言客户端，实现灰度部署，在分布式微服务的场景下抽离出服务配置，方便统一管理、发布
+
 #### Consul
 
+> 服务注册、发现，key-value键值对管理
+
 #### Nacos
+
+> 背靠国内一线互联网大厂——阿里巴巴，也是可适用于微服务下的配置管理，支持Java、Nodejs等主流语言，目前生态良好，技术支持表现一般，属于Apollo替代产品
 
 ## 消息中间件
 
@@ -382,6 +388,18 @@
 ## RPC框架
 #### gRPC
 > gRPC 一开始由 google 开发，是一款语言中立、平台中立、开源的远程过程调用(RPC)系统，tensorflow分布式与tensorflow serving底层通信都是是用的grpc。我自己基于JavaScript技术栈上较多的接触到gRPC，传送门:[基于js下各框架grpc的使用]()
+- nodejs下grpc的简单实用
+
+- grpc集成express框架
+
+- grpc集成koa框架
+
+- eggjs框架下grpc的线上部署
+
+- grpc插件开发示例
+
+  
+
 #### Dubbo
 > Alibaba开发的一个RPC框架，远程接口基于Java Interface, 依托于Spring框架(**Java技术栈重点研究**)
 #### Thrift
@@ -394,9 +412,15 @@
 
 #### ElasticSearch
 
+> 数据存储
+
 #### Logstash
 
+> 数据收集
+
 #### Kibana
+
+> 数据展示
 
 ## 监控工具
 
@@ -435,12 +459,24 @@
 
 > 实现功能：实时监控、可视化数据显示、故障报警
 
-- Prometheus
-- Grafana
-- alter-manager
-  - 推送到邮箱
-  - 推送到钉钉、微信机器人
-  - 推送到自定义消息接口（webhook钩子）
+##### Prometheus
+
+- 监控MySQL集群
+- 监控Mongo数据库
+- 监控Node服务
+- 监控linux服务器
+- 监控redis集群
+
+##### Grafana
+
+- 可视化数据图形显示界面
+- 
+
+##### alter-manager
+
+- 推送到邮箱
+- 推送到钉钉、微信机器人
+- 推送到自定义消息接口（webhook钩子）
 
 #### 压力测试
 
