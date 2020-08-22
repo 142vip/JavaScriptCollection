@@ -1,0 +1,18 @@
+syntax = "proto3";
+   
+package login;
+
+service login{
+    rpc login(pingRequest) returns (pingReply) {};
+    rpc signUp(pingRequest) returns (pingReply) {}
+}
+
+message pingRequest {
+    string userName = 1;
+    string password = 2;
+}
+
+message pingReply {
+    int32 code = 1;
+    string msg = 2;
+}
