@@ -45,8 +45,8 @@
 
 **注：无高亮有效访问链接的待完成/同步**
 
-- **「BILIBILI 」** https://space.bilibili.com/350937042
-- **「GITHUB」** https://github.com/mmdapl
+- **「Bilibili 」** https://space.bilibili.com/350937042
+- **「Github」** https://github.com/mmdapl
 - **「CSDN」** https://blog.csdn.net/Mmdapl
 - **「JUEJIN」** https://juejin.im/user/448256476724807
 - **「公众号 」** Rong姐姐好可爱
