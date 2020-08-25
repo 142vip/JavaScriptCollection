@@ -45,10 +45,10 @@
 
 **注：无高亮有效访问链接的待完成/同步**
 
-- **「Bilibili 」** https://space.bilibili.com/350937042
-- **「Github」** https://github.com/mmdapl
-- **「CSDN 」** https://blog.csdn.net/Mmdapl
-- **「掘       金」** https://juejin.im/user/448256476724807
+- **「BILIBILI 」** https://space.bilibili.com/350937042
+- **「GITHUB」** https://github.com/mmdapl
+- **「CSDN」** https://blog.csdn.net/Mmdapl
+- **「JUEJIN」** https://juejin.im/user/448256476724807
 - **「公众号 」** Rong姐姐好可爱
 
 
@@ -61,20 +61,21 @@
 
 > 依赖W3CSchool文档和日常整理，主要是对CSS常用操作和基础属性进行整理总结。不会过多深入
 
+- [CSS开发规范](css/CSS开发规范.md)
+
 ##### [基础教程](css/基础教程)
 
 ##
 
 #### JavaScript
 
-**本级目录下的JavaScript内容没有发表到[博客](http://blog.142vip.cn)上,建议对照[脑图]()在[JavaScript主目录](javascript)下学习**
-
-依赖官方文档及自身对JavaScript语言的初步了解，进行的关于JavaScript知识整理，主要目的是复习基础概念、了解新特性、熟练ES6/7操作；整体相对来说由易到难，方便后续查阅学习~
+> **本级目录下的JavaScript内容没有发表到[博客](http://blog.142vip.cn)上,建议对照[脑图]()在[JavaScript主目录](javascript)下学习**,依赖官方文档及自身对JavaScript语言的初步了解，进行的关于JavaScript知识整理，主要目的是复习基础概念、了解新特性、熟练ES6/7操作；整体相对来说由易到难，方便后续查阅学习~
 
 ##### 快速入门
 
 - [简单介绍](javascript/快速入门/javascript简单介绍.md)
 - [快速了解](javascript/快速入门/javascript快速入门.md)
+- [JavasScript开发规范](javascript/JavaScript开发规范.md)
 
 ##### 基础教程
 
