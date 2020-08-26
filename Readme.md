@@ -38,8 +38,8 @@
 
 - <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" /> [云服务器](server-introduce.md)
 
-- 开发工具
-- 技术文章
+- [开发工具汇总]()
+- [技术文章]()
 
 ## 文章笔记
 
