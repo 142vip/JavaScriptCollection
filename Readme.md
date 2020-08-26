@@ -316,7 +316,7 @@
 #### nginx
 
 - [nginx安装，普通安装 Or Docker搞定？](nginx/nginx基础部署.md)
-- 手把手nginx基础入门
+- [手把手nginx基础入门]()
 - 反向代理、负载均衡真有那么难吗？
 - [Nginx SSL证书，从此踏上Https之路](nginx/nginx服务器ssl证书配置.md)
 
@@ -513,7 +513,8 @@
 #### [生活](article-records/生活)
 
 - [异地恋](long-distance-love)
-- [尤克里里指弹曲谱](ukulele)
+- [积灰的尤克里里，收藏的指弹曲谱，分享一波](https://mp.weixin.qq.com/s/wYRRSk9JPAX6j7oDHiiOtQ)
+- [你那里有女孩子吗？](https://mp.weixin.qq.com/s/KABr5vYJrVfNJ0hf0VwvwQ)
 - [城市日记](city-diary)
 - [音乐推荐](music-list)
 
@@ -534,14 +535,11 @@
 #### [随笔](article-records/随笔)
 
 - 朋友是”无用“的
-
 - 毕业一年，真的快乐吗？
-
 - 自己到底适合做技术吗？
-
 - 为什么有时候会觉得很累，却又好像没做什么
-
 - 怎么样才能让自己充实？
+- 机械键盘+拓展坞比Mac自带的键盘香吗？
 
 #### [读书笔记](article-records/读书笔记)
 
