@@ -13,7 +13,7 @@
 </p>
 
 
-> 写在最前面！这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千、福利推荐、心理疗养；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容会选择性的发表于**个人博客、掘金、CSDN** ，也会不定时同步到 **码云** 。更新优先级：  [Github ](https://github.com/mmdapl) >=  [博客](http://blog.142vip.cn/) >= [码云](https://gitee.com/mmdapl)
+> 写在最前面！这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千，水一些无关技术的文章；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容会选择性的发表于**微信公众号、个人博客、掘金、CSDN** ，也会不定时同步到 **码云** 。
 >
 > **以下内容没有链接的代表尚未完成，大家善用Ctrl+F**
 >
@@ -32,11 +32,10 @@
 
 > 内容同步与文档，可以结合思维导图对文档进行有效学习.相关目录的xmind文件为思维导图原文件
 >
-> 链接：https://cdn.142vip.cn/JavaScriptCollection/summary.png
 
 ## 日常推荐
 
-- <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" /> [云服务器](server-introduce.md)
+-  [云服务器推荐](server-introduce.md)
 
 - [开发工具汇总]()
 - [技术文章]()
@@ -45,11 +44,12 @@
 
 **注：无高亮有效访问链接的待完成/同步**
 
-- **「Bilibili 」** https://space.bilibili.com/350937042
-- **「Github」** https://github.com/mmdapl
-- **「CSDN」** https://blog.csdn.net/Mmdapl
-- **「JUEJIN」** https://juejin.im/user/448256476724807
-- **「公众号 」** Rong姐姐好可爱
+- **博     客** http://blog.142vip.cn/
+- **Bilibili** https://space.bilibili.com/350937042
+- **Github** https://github.com/mmdapl
+- **CSDN** https://blog.csdn.net/Mmdapl
+- **JUEJIN** https://juejin.im/user/448256476724807
+- **公众号搜** Rong姐姐好可爱
 
 
 
@@ -136,7 +136,7 @@
 
 
 
-#### Vue
+#### Vuejs
 
 > 介绍基础、常用的vue功能，不会很深入的涉及到vue源码及原理
 
@@ -148,7 +148,7 @@
 
 > Nuxtjs是在vue框架上进行封装的，主要是用来解决单体页面的服务端渲染问题，提供网站进行SEO优化的可能
 
-[cookie-universal-nuxt-操作cookie]()
+[前端读写cookie]()
 
 
 
@@ -160,6 +160,7 @@
 - LayerUI
 - Ant-design-vue
 - iView-UI
+- VantUI
 - Element-UI
 
 ## 后端【Node】
