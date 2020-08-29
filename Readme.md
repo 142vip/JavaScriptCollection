@@ -563,8 +563,7 @@
 <a name="wechat"></a>
 
 <p align="center">
-<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="300" height="300" align="left" " />
-
+<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="300" height="300" align="left" style="border-radius:10px;" />
 </p>
 
 
@@ -584,7 +583,7 @@
 > 对仓库有任何问题或建议，欢迎微信“骚扰”，商务合作请备注！
 
 <p align="center">
-<img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="300" height="300" align="left" />
+<img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="300" height="300"  style="border-radius:10px;" align="left" />
 </p>
 
 
@@ -606,9 +605,9 @@
 
 <div>
   <a href="https://github.com/ChiefPing" target="_blank">
-  	<img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px"/>
+  	<img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
   </a>  <a href="https://github.com/xiaoliuxin" target="_blank">
-  	<img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4" width="50px"/>
+  	<img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
   </a>
 </div>
 
@@ -627,7 +626,8 @@
 <a name="gzh"></a>
 
 <p>
-  <img src="http://youpai.142vip.cn/article/images/gongzhonghao.png" width="auto" height="200" align="left"
+  <img src="http://youpai.142vip.cn/article/images/gzh.png"  style="border-radius:10px;">
 </p>
+
 
 
