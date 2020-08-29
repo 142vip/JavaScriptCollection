@@ -532,7 +532,7 @@
 
 - [突如其来的聊天，打破了一年的规划](./article-records/工作/突如其来的聊天，打破了一年的规划.md)
 
-- [室友搬家，一个人的上下班又将是怎么样的风景](article-records/工作/室友搬家，一个人的上下班又将是怎样的风景.md)
+- [室友搬家，一个人的上下班](article-records/工作/室友搬家，一个人的上下班又将是怎样的风景.md)
 
 
 
@@ -563,8 +563,8 @@
 <a name="wechat"></a>
 
 <p align="center">
-<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="300" height="300" align="left" style="border-radius:10px;" />
-</p>
+<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="300" height="300" align="left" style="border-radius:10px;" /></p>
+
 
 
 
