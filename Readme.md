@@ -2,17 +2,16 @@
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
 </p>
 <p align="center">
+  <a href="#gzh" target="_blank"><img src="https://img.shields.io/badge/WeChat-公众号-5wd.svg"></a> 
 <a href="#wechat" target="_blank"><img src="https://img.shields.io/badge/WeChat-微信-yellow.svg"></a> 
 <a href="https://space.bilibili.com/350937042" target="_blank"><img src="https://img.shields.io/badge/Bilibili-哔哩哔哩-green.svg"></a> 
-<a href="https://142vip.cn" target="_blank"><img src="https://img.shields.io/badge/142vip-个人网站-orange.svg"></a>
-<a href="http://yapi.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/yapi-接口系统-8fe.svg"></a>
-<a href="https://blog.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/blog-我的博客-blue.svg"></a>
+<a href="https://142vip.cn" target="_blank"><img src="https://img.shields.io/badge/142vip-网站-orange.svg"></a>
+<a href="https://blog.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/blog-博客-blue.svg"></a>
 <a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/github-Github-9ac.svg"></a>
 <a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/gitee-码云-4ed.svg"></a>
 <a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
+<a href="http://yapi.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/juejin-掘金-8fe.svg"></a>
 </p>
-
-
 > 写在最前面！这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千，水一些无关技术的文章；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容会选择性的发表于**微信公众号、个人博客、掘金、CSDN** ，也会不定时同步到 **码云** 。
 >
 > **以下内容没有链接的代表尚未完成，大家善用Ctrl+F**
@@ -564,11 +563,37 @@
 <a name="wechat"></a>
 
 <p align="center">
-<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="320" height="320" align="center" style="margin-right:40px;" /><img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="320" height="320" align="center" />
-
-
+<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="300" height="300" align="left" " />
 
 </p>
+
+
+
+
+
+
+
+
+
+
+
+## 联系我
+
+> 对仓库有任何问题或建议，欢迎微信“骚扰”，商务合作请备注！
+
+<p align="center">
+<img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="300" height="300" align="left" />
+</p>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -589,5 +614,15 @@
 ## 赞助列表
 
 以下排名不分先后!
+
+## 公众号
+
+如果大家想要实时关注我更新的文章以及我的日常的话，可以关注我的公众号，基本每天都会更新技术和各种吹水文章，就当做是记录心情、成长的地方吧
+
+<a name="gzh"></a>
+
+<p>
+  <img src="http://youpai.142vip.cn/article/images/gongzhonghao.png" width="auto" height="200" align="left"
+</p>
 
 
