@@ -10,7 +10,7 @@
 <a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/github-Github-9ac.svg"></a>
 <a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/gitee-码云-4ed.svg"></a>
 <a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
-<a href="http://yapi.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/juejin-掘金-8fe.svg"></a>
+<a href="https://juejin.im/user/448256476724807" target="_blank"><img src="https://img.shields.io/badge/JueJin-掘金-5wt.svg"></a>
 </p>
 
 
@@ -738,13 +738,10 @@
 
 
 > 相逢不用忙归去，明日黄花蝶也愁；若系列文章对你有帮助，不如请作者喝一杯伏见桃山...
->
+> 
 > **赞赏过的一定要扫下方右侧微信跟我说呀！！！！！！**
 
-
 <a name="wechat"></a>
-
-
 <div align="left">
 <img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="300" height="300" style="border-radius:10px;" />
 
@@ -793,7 +790,6 @@
 
 <a name="gzh"></a>
 
-
-<p>
+<div>
   <img src="http://youpai.142vip.cn/article/images/gzh.png"  style="border-radius:10px;">
-</p>
+</div>
