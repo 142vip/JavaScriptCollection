@@ -241,7 +241,7 @@
   * [1.2 基本配置](eggjs/git-config.md)
   * [1.3 常用命令](eggjs/git-dns.md)
   * [1.4 GitHub简单使用](eggjs/git-github.md)
-  * [1.5 GitBook简单使用](eggjs/git-gitbook.md)
+  * [1.5 GitBook简单使用](https://mp.weixin.qq.com/s/Wn_IZ6K4eqh1PtomRtqdqg)
     * [1.5.1 Typora简介](eggjs/git-typora.md)
     * [1.5.2 MarkDown语法](eggjs/git-markdown.md)
   * [1.6 码云和GitHub的选择](eggjs/git-choice.md)
@@ -372,6 +372,7 @@
 #### MySQL
 
 
+- [【服务器版】MySQL的安装部署](https://mp.weixin.qq.com/s/U1OUZYHEChFDx03FvgbMHA)
 - [MySQL优化之Explain参数说明](mysql/MySQL优化之Explain参数说明.md)
 - [基于GTID主从复制的原理和基础配置](mysql/基于GTID主从复制的原理和基础配置.md)
 
@@ -691,6 +692,7 @@
 - [你那里有女孩子吗？](https://mp.weixin.qq.com/s/KABr5vYJrVfNJ0hf0VwvwQ)
 - [城市日记](city-diary)
 - [音乐推荐](music-list)
+- [不管在哪里，其实月亮是一样圆的~](https://mp.weixin.qq.com/s/MHQqZCcokglcPtCw4CIMrg)
 
 
 #### [工作](article-records/工作)
