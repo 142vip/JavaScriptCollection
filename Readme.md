@@ -388,9 +388,9 @@
 
 
 - [redis基础介绍](redis/redis基础介绍.md)
-- redis安装部署
-- [redis集群部署-docker方式](redis/redis集群部署.md)
+- [redis的简单安装和部署](https://mp.weixin.qq.com/s/Xe-ZDf2kgUWfYSkuULAdlw)
 - 数据类型
+- [redis简单主从集群部署-docker方式](docs/redis/redis集群部署.md)
 - [memCache与Redis比较](redis/memCache与Redis.md)
 
 
@@ -792,7 +792,6 @@
 
 
 如果大家想要实时关注我更新的文章以及我的日常的话，可以关注我的公众号，基本每天都会更新技术和各种吹水文章，就当做是记录心情、成长的地方吧
-
 
 <a name="gzh"></a>
 
