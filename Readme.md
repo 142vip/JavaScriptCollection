@@ -389,6 +389,7 @@
 
 - [redis基础介绍](redis/redis基础介绍.md)
 - [redis的简单安装和部署](https://mp.weixin.qq.com/s/Xe-ZDf2kgUWfYSkuULAdlw)
+- [官方默认配置模板](code/redis/redis-default.conf)
 - 数据类型
 - [redis简单主从集群部署-docker方式](docs/redis/redis集群部署.md)
 - [memCache与Redis比较](redis/memCache与Redis.md)
