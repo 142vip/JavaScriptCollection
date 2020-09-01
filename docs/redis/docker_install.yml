@@ -1,0 +1,11 @@
+version: "3"
+services:
+  redis_master:
+  images: redis
+  container_name: redis_master
+  restart: always
+  ports: 
+    6380:6379
+  volumes:
+    - /web-project/redis/conf/redis.conf:/etc/redis/redis.conf
+    - /web-project/redis/data:/data
