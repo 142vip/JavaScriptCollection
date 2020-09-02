@@ -80,6 +80,14 @@
 
 - [CSS开发规范](css/CSS开发规范.md)
 
+- 样式属性
+
+- 页面布局
+
+- 移动端适配
+
+  
+
 
 ##### [基础教程](css/基础教程)
 
@@ -439,10 +447,10 @@
 
 #### linux下shell编程
 
-
 - [shell基础整理](shell/shell基础整理.md)
 - [操作mysql数据库](shell/shell连接mysql.md)
 - shell操作docker
+- 环境变量env
 
 
 ## 服务网关
