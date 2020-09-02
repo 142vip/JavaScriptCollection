@@ -10,18 +10,23 @@
 <a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/github-Github-9ac.svg"></a>
 <a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/gitee-码云-4ed.svg"></a>
 <a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
-<a href="https://juejin.im/user/448256476724807" target="_blank"><img src="https://img.shields.io/badge/JueJin-掘金-5wt.svg"></a>
+<a href="https://juejin.im/user/448256476724807" target="_blank"><img src="https://img.shields.io/badge/JueJin-掘金-75c.svg"></a>
 </p>
 
 
-**【微信版，采用微信公众号推文链接，方便快速访问】**
+## 写最前面
 
->
-> 写在最前面！这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千，水一些无关技术的文章；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容会选择性的发表于**微信公众号、个人博客、掘金、CSDN** ，也会不定时同步到 **码云** 。
->
+> 这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千，水一些无关技术的文章；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容会选择性的发表于**微信公众号、个人博客、掘金、CSDN** ，也会不定时同步到 **码云** 。
 > **以下内容没有链接的代表尚未完成，大家善用Ctrl+F**
 >
 > 创建时间：2020年2月14日
+
+##
+
+<div align="center">
+  <a href="https://gitee.com/mmdapl/JavaScriptCollection" target="_blank">码云版</a> || 
+  <a href="readme-wechat.md" target="_blank">微信版</a>
+</div>
 
 
 ## 关于作者
@@ -387,9 +392,10 @@
 
 
 - [redis基础介绍](redis/redis基础介绍.md)
-- redis安装部署
-- [redis集群部署-docker方式](redis/redis集群部署.md)
+- [redis的简单安装和部署](https://mp.weixin.qq.com/s/Xe-ZDf2kgUWfYSkuULAdlw)
+- [官方默认配置模板](code/redis/redis-default.conf)
 - 数据类型
+- [redis简单主从集群部署-docker方式](docs/redis/redis集群部署.md)
 - [memCache与Redis比较](redis/memCache与Redis.md)
 
 
@@ -720,7 +726,7 @@
 
 
 - 朋友是”无用“的
-- 毕业一年，真的快乐吗？
+- 毕业一年有感
 - 自己到底适合做技术吗？
 - 为什么有时候会觉得很累，却又好像没做什么
 - 怎么样才能让自己充实？
@@ -792,9 +798,8 @@
 
 如果大家想要实时关注我更新的文章以及我的日常的话，可以关注我的公众号，基本每天都会更新技术和各种吹水文章，就当做是记录心情、成长的地方吧
 
-
 <a name="gzh"></a>
 
 <div>
-  <img src="http://youpai.142vip.cn/article/images/gzh.png"  style="border-radius:10px;">
+  <img src="https://cdn.142vip.cn/gzh.png"  style="border-radius:10px;">
 </div>
