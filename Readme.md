@@ -45,7 +45,7 @@
 ## 日常推荐
 
 
--  [云服务器推荐](server-introduce.md)
+-  [云服务器推荐](https://mp.weixin.qq.com/s/UuxB4Q8SJrVnVd6P-o36nA)
 
 
 -  [开发工具汇总]()
@@ -447,7 +447,7 @@
 
 #### linux下shell编程
 
-- [shell基础整理](shell/shell基础整理.md)
+- [shell基础整理](https://mp.weixin.qq.com/s/gctrWdB1JEK59_a9tJQSkg)
 - [操作mysql数据库](shell/shell连接mysql.md)
 - shell操作docker
 - 环境变量env
