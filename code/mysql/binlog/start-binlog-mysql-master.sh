@@ -1,5 +1,5 @@
 ###
- # @Description: 
+ # @Description: binlog方式搭建一主一从mysql，主库初始化脚本
  # @Version: Beata1.0
  # @Autor: 【B站&公众号】Rong姐姐好可爱
  # @Date: 2020-09-03 22:35:07
