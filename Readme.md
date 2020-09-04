@@ -390,6 +390,8 @@
 
 - [【服务器版】MySQL的安装部署](https://mp.weixin.qq.com/s/U1OUZYHEChFDx03FvgbMHA)
 - [MySQL优化之Explain参数说明](mysql/MySQL优化之Explain参数说明.md)
+- 索引
+- sql优化
 - [基于GTID主从复制的原理和基础配置](mysql/基于GTID主从复制的原理和基础配置.md)
 
 
@@ -752,7 +754,7 @@
 #### 面试复盘
 
   - 摸不著头脑的外包面试，历时一小时
-  - 毫无准备，战术面试，问的心态炸裂，哭撑40分钟
+  - [毫无准备，战术面试，问的心态炸裂，哭撑40分钟](https://mp.weixin.qq.com/s/E-rE1zf38QZssubUI6Lhbw)
 
 
 
