@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Version: Beata1.0
+ * @Autor: 【B站&公众号】Rong姐姐好可爱
+ * @Date: 2020-08-30 12:23:02
+ * @LastEditors: 【B站&公众号】Rong姐姐好可爱
+ * @LastEditTime: 2020-09-05 22:48:04
+-->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
 </p>
@@ -47,9 +55,7 @@
 ## 日常推荐
 
 
--  [云服务器推荐](https://mp.weixin.qq.com/s/UuxB4Q8SJrVnVd6P-o36nA)
-
-
+-  [云服务器推荐](docs/recommend/云服务器推荐.md)
 -  [学习网站、使用工具]()
 -  [值得细读的技术文章推荐]()
 
