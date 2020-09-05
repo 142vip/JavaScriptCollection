@@ -14,6 +14,14 @@
 </p>
 
 
+##
+<div align="center" style="font-size:20px">
+  <a href="https://gitee.com/mmdapl/JavaScriptCollection" target="_blank">码云版</a> || 
+  <a href="readme-wechat.md" target="_blank">微信版</a>
+</div>
+
+##
+
 ## 写最前面
 
 > 这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千，水一些无关技术的文章；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容会选择性的发表于**微信公众号、个人博客、掘金、CSDN** ，也会不定时同步到 **码云** 。
@@ -21,12 +29,6 @@
 >
 > 创建时间：2020年2月14日
 
-##
-
-<div align="center">
-  <a href="https://gitee.com/mmdapl/JavaScriptCollection" target="_blank">码云版</a> || 
-  <a href="readme-wechat.md" target="_blank">微信版</a>
-</div>
 
 
 ## 关于作者
