@@ -60,14 +60,6 @@
 **注：无高亮有效访问链接的待完成/同步**
 
 
-- **博     客** http://blog.142vip.cn/
-- **Bilibili** https://space.bilibili.com/350937042
-- **Github** https://github.com/mmdapl
-- **CSDN** https://blog.csdn.net/Mmdapl
-- **JUEJIN** https://juejin.im/user/448256476724807
-- **公众号搜** Rong姐姐好可爱
-
-
 ## 前端
 
 
@@ -106,55 +98,55 @@
 ##### 快速入门
 
 
-- [简单介绍](javascript/快速入门/javascript简单介绍.md)
-- [快速了解](javascript/快速入门/javascript快速入门.md)
-- [JavasScript开发规范](javascript/JavaScript开发规范.md)
+- [简单介绍](docs/javascript/快速入门/javascript简单介绍.md)
+- [快速了解](docs/javascript/快速入门/javascript快速入门.md)
+- [JavasScript开发规范](docs/javascript/JavaScript开发规范.md)
 
 
 ##### 基础教程
 
 
-- [语法与数据结构](javascript/基础教程/javascript语法与数据结构.md)
-- [循环与迭代](javascript/基础教程/javascript循环与迭代.md)
-- [流程控制与错误处理](javascript/基础教程/javascript流程控制与错误处理.md)
-- [表达式和运算符](javascript/基础教程/javascript表达式和运算符.md)
-- [函数和方法](javascript/基础教程/javascript函数.md)
-- [数字和日期](javascript/基础教程/javascript数字和日期.md)
-- [对象的使用](javascript/基础教程/javascript对象的使用.md)
-- [正则表达式](javascript/基础教程/javascript正则表达式.md)
-- [promise对象的使用](javascript/基础教程/promise对象的使用.md)
-- [modules模块](javascript/基础教程/modules模块.md)
+- [语法与数据结构](docs/javascript/基础教程/javascript语法与数据结构.md)
+- [循环与迭代](docs/javascript/基础教程/javascript循环与迭代.md)
+- [流程控制与错误处理](docs/javascript/基础教程/javascript流程控制与错误处理.md)
+- [表达式和运算符](docs/javascript/基础教程/javascript表达式和运算符.md)
+- [函数和方法](docs/javascript/基础教程/javascript函数.md)
+- [数字和日期](docs/javascript/基础教程/javascript数字和日期.md)
+- [对象的使用](docs/javascript/基础教程/javascript对象的使用.md)
+- [正则表达式](docs/javascript/基础教程/javascript正则表达式.md)
+- [promise对象的使用](docs/javascript/基础教程/promise对象的使用.md)
+- [modules模块](docs/javascript/基础教程/modules模块.md)
 
 
 ##### 中级教程
 
 
-- [Promise对象](javascript/中级教程/promise对象.md)
-- [async函数](javascript/中级教程/async函数.md)
-- [class类](javascript/中级教程/class类.md)
+- [Promise对象](docs/javascript/中级教程/promise对象.md)
+- [async函数](docs/javascript/中级教程/async函数.md)
+- [class类](docs/javascript/中级教程/class类.md)
 
 
 ##### 高级教程
 
 
-- [不一样的ajax](javascript/高级教程/不一样的ajax.md)
-- [什么是事件循环](javascript/高级教程/什么是事件循环.md)
+- [不一样的ajax](docs/javascript/高级教程/不一样的ajax.md)
+- [什么是事件循环](docs/javascript/高级教程/什么是事件循环.md)
 
 
 ##### 最后稻草
 
 
-- [ES6、ES7、ES8、ES9、ES10的新特性](javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
-- [ES2020新特性](javascript/最后稻草/ES2020新特性.md)
-- [JavaScript 工具函数大全](javascript/最后稻草/JavaScript工具函数大全.md)
-- [常用函数方法整理](javascript/最后稻草/常用函数方法整理.md)
+- [ES6、ES7、ES8、ES9、ES10的新特性](docs/javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
+- [ES2020新特性](docs/javascript/最后稻草/ES2020新特性.md)
+- [JavaScript 工具函数大全](docs/javascript/最后稻草/JavaScript工具函数大全.md)
+- [常用函数方法整理](docs/javascript/最后稻草/常用函数方法整理.md)
 
 
 #### JQuery
 
 
-- [安装使用](/jquery/安装使用.md)
-- [基本属性](/jquery/基本属性.md)
+- [安装使用](docs/jquery/安装使用.md)
+- [基本属性](docs/jquery/基本属性.md)
 
 
 - Css样式
@@ -252,89 +244,89 @@
 ##### 基础篇
 
 
-- [第一部分：Git概述](eggjs/git-README.md)
+- [第一部分：Git概述](docs/eggjs/git-README.md)
 
 
-* [1.1 下载和安装](eggjs/git-download.md)
-  * [1.2 基本配置](eggjs/git-config.md)
-  * [1.3 常用命令](eggjs/git-dns.md)
-  * [1.4 GitHub简单使用](eggjs/git-github.md)
+* [1.1 下载和安装](docs/eggjs/git-download.md)
+  * [1.2 基本配置](docs/eggjs/git-config.md)
+  * [1.3 常用命令](docs/eggjs/git-dns.md)
+  * [1.4 GitHub简单使用](docs/eggjs/git-github.md)
   * [1.5 GitBook简单使用](https://mp.weixin.qq.com/s/Wn_IZ6K4eqh1PtomRtqdqg)
-    * [1.5.1 Typora简介](eggjs/git-typora.md)
-    * [1.5.2 MarkDown语法](eggjs/git-markdown.md)
-  * [1.6 码云和GitHub的选择](eggjs/git-choice.md)
+    * [1.5.1 Typora简介](docs/eggjs/git-typora.md)
+    * [1.5.2 MarkDown语法](docs/eggjs/git-markdown.md)
+  * [1.6 码云和GitHub的选择](docs/eggjs/git-choice.md)
 
 
-- [第二部分：数据库概述](eggjs/mysql-README.md)
+- [第二部分：数据库概述](docs/eggjs/mysql-README.md)
 
 
-  - [2.1 下载和安装](eggjs/mysql-download.md)
-  - [2.2 连接数据库](eggjs/git-connect.md)
-  - [2.3 CURD操作](eggjs/mysql-curd.md)
-  - [2.4 Redis缓存](eggjs/mysql-redis.md)
-  - [2.4.1 redis安装](eggjs/mysql-redis-install.md)
-  - [2.4.2 redis常用指令](eggjs/mysql-redis-dns.md)
-  - [2.5 可视化管理](eggjs/mysql-redis-view.md)
+  - [2.1 下载和安装](docs/eggjs/mysql-download.md)
+  - [2.2 连接数据库](docs/eggjs/git-connect.md)
+  - [2.3 CURD操作](docs/eggjs/mysql-curd.md)
+  - [2.4 Redis缓存](docs/eggjs/mysql-redis.md)
+  - [2.4.1 redis安装](docs/eggjs/mysql-redis-install.md)
+  - [2.4.2 redis常用指令](docs/eggjs/mysql-redis-dns.md)
+  - [2.5 可视化管理](docs/eggjs/mysql-redis-view.md)
 
 
 ##### 入门篇
 
 
-- [第一部分：Egg框架快速入门](eggjs/egg-README.md)
+- [第一部分：Egg框架快速入门](docs/eggjs/egg-README.md)
 
 
-- [1.1 基础功能](eggjs/egg-base.md)
-  - [1.1.1 接口参数获取](eggjs/egg-request-params.md)
-  - [1.1.2 Egg内置对象 ](eggjs/egg-object.md)
-  - [1.1.3 Config配置](eggjs/egg-config.md)
-  - [1.1.4 Egg生命周期](eggjs/egg-life.md)
-  - [1.1.5 中间件理解](eggjs/egg-middleware.md)
-  - [1.1.6 Router路由分发](eggjs/egg-router.md)
-  - [1.1.7 Controller控制器](eggjs/egg-controller.md)
-  - [1.1.8 Service服务](eggjs/egg-service.md)
-  - [1.1.9 常用插件](eggjs/egg-plugin.md)
-- [1.2 核心功能](eggjs/egg-core.md)
-  - [1.2.1 日志输出](eggjs/egg-logger.md)
-  - [1.2.2 定时任务](eggjs/egg-schedule.md)
-  - [1.2.2 HttpClient网络请求](eggjs/egg-httpclient.md)
-  - [1.2.3 Cookie的基本使用](eggjs/egg-cookies.md)
-  - [1.2.4 Session的基本使用](eggjs/egg-session.md)
-  - [1.2.5 统一异常-错误处理](eggjs/egg-try-catch.md)
-  - [1.2.6 CSRF防范和XSS攻击](eggjs/egg-csrf-xss.md)
-  - [1.2.7 RESTful API接口风格](eggjs/egg-restful.md)
+- [1.1 基础功能](docs/eggjs/egg-base.md)
+  - [1.1.1 接口参数获取](docs/eggjs/egg-request-params.md)
+  - [1.1.2 Egg内置对象 ](docs/eggjs/egg-object.md)
+  - [1.1.3 Config配置](docs/eggjs/egg-config.md)
+  - [1.1.4 Egg生命周期](docs/eggjs/egg-life.md)
+  - [1.1.5 中间件理解](docs/eggjs/egg-middleware.md)
+  - [1.1.6 Router路由分发](docs/eggjs/egg-router.md)
+  - [1.1.7 Controller控制器](docs/eggjs/egg-controller.md)
+  - [1.1.8 Service服务](docs/eggjs/egg-service.md)
+  - [1.1.9 常用插件](docs/eggjs/egg-plugin.md)
+- [1.2 核心功能](docs/eggjs/egg-core.md)
+  - [1.2.1 日志输出](docs/eggjs/egg-logger.md)
+  - [1.2.2 定时任务](docs/eggjs/egg-schedule.md)
+  - [1.2.2 HttpClient网络请求](docs/eggjs/egg-httpclient.md)
+  - [1.2.3 Cookie的基本使用](docs/eggjs/egg-cookies.md)
+  - [1.2.4 Session的基本使用](docs/eggjs/egg-session.md)
+  - [1.2.5 统一异常-错误处理](docs/eggjs/egg-try-catch.md)
+  - [1.2.6 CSRF防范和XSS攻击](docs/eggjs/egg-csrf-xss.md)
+  - [1.2.7 RESTful API接口风格](docs/eggjs/egg-restful.md)
 
 
-- [第二部分：插件开发](eggjs/plugin-README.md)
+- [第二部分：插件开发](docs/eggjs/plugin-README.md)
 
 
-  - [2.1 egg-validate参数校验](eggjs/plugin-egg-validate.md)
-  - [2.2 egg-view-ejs页面渲染](eggjs/plugin-egg-view.ejs.md)
-  - [2.3 egg-redis缓存](eggjs/plugin-egg-redis.md)
-  - [2.4 egg-mysql](eggjs/plugin-egg-mysql.md)
-  - [2.5 egg-sequelize](eggjs/plugin-egg-sequelize.md)
-  - [2.6 egg-socket.io即时通讯](eggjs/plugin-egg-socket.io.md)
+  - [2.1 egg-validate参数校验](docs/eggjs/plugin-egg-validate.md)
+  - [2.2 egg-view-ejs页面渲染](docs/eggjs/plugin-egg-view.ejs.md)
+  - [2.3 egg-redis缓存](docs/eggjs/plugin-egg-redis.md)
+  - [2.4 egg-mysql](docs/eggjs/plugin-egg-mysql.md)
+  - [2.5 egg-sequelize](docs/eggjs/plugin-egg-sequelize.md)
+  - [2.6 egg-socket.io即时通讯](docs/eggjs/plugin-egg-socket.io.md)
 
 
 ##### 代码实战篇
 
 
-- [第一部分：常用代码](eggjs/project-README-CODE.md)
+- [第一部分：常用代码](docs/eggjs/project-README-CODE.md)
 
 
-  - [1.1 图片前端在线剪辑](eggjs/project-images-cropper.md)
-  - [1.2 文件上传后台处理](eggjs/project-upload.md)
-  - [1.3 MD5加密-解密算法](eggjs/project-md5.md)
-  - [1.4 Egg Jwt加密和校验](eggjs/project-token.md)
-- [第二部分：项目简介](eggjs/project-README-INTRODUCE.md)
+  - [1.1 图片前端在线剪辑](docs/eggjs/project-images-cropper.md)
+  - [1.2 文件上传后台处理](docs/eggjs/project-upload.md)
+  - [1.3 MD5加密-解密算法](docs/eggjs/project-md5.md)
+  - [1.4 Egg Jwt加密和校验](docs/eggjs/project-token.md)
+- [第二部分：项目简介](docs/eggjs/project-README-INTRODUCE.md)
 
 
-  - [2.1 基于OAuth2的统一认证中心系统](eggjs/project-ssoCenterSystem.md)
-  - [2.2 常用前后端分页比较与实现](eggjs/project-pagenation.md)
-  - [2.3基于Spring Boot实现的个人博客](eggjs/project-spring-boot-blog.md)
-  - [2.4 基于Yapi搭建的接口管理系统](eggjs/project-webapi.md)
-  - [2.5 GitBook开源笔记总结站点搭建](eggjs/project-gitbook.md)
-  - [2.6 个人网站及接口服务搭建搭建](eggjs/project-142vip.cn.md)
-- [第三部分：手把手搭建基础Egg开发框架](eggjs/egg-egg-example.md)
+  - [2.1 基于OAuth2的统一认证中心系统](docs/eggjs/project-ssoCenterSystem.md)
+  - [2.2 常用前后端分页比较与实现](docs/eggjs/project-pagenation.md)
+  - [2.3基于Spring Boot实现的个人博客](docs/eggjs/project-spring-boot-blog.md)
+  - [2.4 基于Yapi搭建的接口管理系统](docs/eggjs/project-webapi.md)
+  - [2.5 GitBook开源笔记总结站点搭建](docs/eggjs/project-gitbook.md)
+  - [2.6 个人网站及接口服务搭建搭建](docs/eggjs/project-142vip.cn.md)
+- [第三部分：手把手搭建基础Egg开发框架](docs/eggjs/egg-egg-example.md)
 
 
 #### Nestjs框架
@@ -391,10 +383,10 @@
 
 
 - [【服务器版】MySQL的安装部署](https://mp.weixin.qq.com/s/U1OUZYHEChFDx03FvgbMHA)
-- [MySQL优化之Explain参数说明](mysql/MySQL优化之Explain参数说明.md)
+- [MySQL优化之Explain参数说明](docs/mysql/MySQL优化之Explain参数说明.md)
 - 索引
 - sql优化
-- [基于GTID主从复制的原理和基础配置](mysql/基于GTID主从复制的原理和基础配置.md)
+- [基于GTID主从复制的原理和基础配置](docs/mysql/基于GTID主从复制的原理和基础配置.md)
 
 
 #### Redis
@@ -403,12 +395,12 @@
 > 将围绕redis基础概念、使用场景、使用方式、简单部署等方面 展开介绍，[主目录](redis)下有自己觉得还不错PDF文档~
 
 
-- [redis基础介绍](redis/redis基础介绍.md)
+- [redis基础介绍](docs/redis/redis基础介绍.md)
 - [redis的简单安装和部署](https://mp.weixin.qq.com/s/Xe-ZDf2kgUWfYSkuULAdlw)
-- [官方默认配置模板](code/redis/redis-default.conf)
+- [官方默认配置模板](code/docs/redis/redis-default.conf)
 - 数据类型
-- [redis简单主从集群部署-docker方式](docs/redis/redis集群部署.md)
-- [memCache与Redis比较](redis/memCache与Redis.md)
+- [redis简单主从集群部署-docker方式](docs/docs/redis/redis集群部署.md)
+- [memCache与Redis比较](docs/redis/memCache与Redis.md)
 
 
 #### Mongo
@@ -426,10 +418,10 @@
 #### nginx
 
 
-- [nginx安装，普通安装 Or Docker搞定？](nginx/nginx基础部署.md)
+- [nginx安装，普通安装 Or Docker搞定？](docs/nginx/nginx基础部署.md)
 - [手把手nginx基础入门]()
 - 反向代理、负载均衡真有那么难吗？
-- [Nginx SSL证书，从此踏上Https之路](nginx/nginx服务器ssl证书配置.md)
+- [Nginx SSL证书，从此踏上Https之路](docs/nginx/nginx服务器ssl证书配置.md)
 
 
 #### docker
@@ -728,10 +720,10 @@
 - [五年了，我终于换了人生中的第一台MacBookPro](https://juejin.im/post/5f12a1716fb9a07e8472552d)
 
 
-- [突如其来的聊天，打破了一年的规划](./article-records/工作/突如其来的聊天，打破了一年的规划.md)
+- [突如其来的聊天，打破了一年的规划](docs/article-records/工作/突如其来的聊天，打破了一年的规划.md)
 
 
-- [室友搬家，一个人的上下班](article-records/工作/室友搬家，一个人的上下班又将是怎样的风景.md)
+- [室友搬家，一个人的上下班](docs/article-records/工作/室友搬家，一个人的上下班又将是怎样的风景.md)
 
 
 #### [随笔](article-records/随笔)
@@ -751,12 +743,12 @@
 > 主要是跟计算机无关的一些书，在看完之后，会选择性的进行思维导图、经典词句整理，也可能添加个人思考
 
 
-- [你好孤独 - 陈果](./article-records/读书笔记/好的孤独-陈果/Readme.md)
+- [你好孤独 - 陈果](docs/article-records/读书笔记/好的孤独-陈果/Readme.md)
 
 #### 面试复盘
 
   - 摸不著头脑的外包面试，历时一小时
-  - [毫无准备，战术面试，问的心态炸裂，哭撑40分钟](https://mp.weixin.qq.com/s/E-rE1zf38QZssubUI6Lhbw)
+  - [毫无准备，战术面试，问的心态炸裂，哭撑40分钟](docs/interview/北京某科技面试复盘（9.4）.md)
 
 
 
