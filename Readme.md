@@ -4,7 +4,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-06 11:08:45
+ * @LastEditTime: 2020-09-06 23:34:58
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -735,8 +735,8 @@
 #### [随笔](article-records/随笔)
 
 
-- 朋友是”无用“的
-- 毕业一年有感
+- [朋友是”无用“的](docs/article-records/随笔/朋友是“无用”的.md)
+- [毕业一年有感]
 - 自己到底适合做技术吗？
 - 为什么有时候会觉得很累，却又好像没做什么
 - 怎么样才能让自己充实？
