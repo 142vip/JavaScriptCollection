@@ -4,7 +4,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-05 22:48:04
+ * @LastEditTime: 2020-09-06 11:08:45
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -56,7 +56,7 @@
 
 
 -  [云服务器推荐](docs/recommend/云服务器推荐.md)
--  [学习网站、使用工具]()
+-  [学习网站、使用工具](docs/recommend/学习网站、效率工具.md)
 -  [值得细读的技术文章推荐]()
 
 
@@ -78,7 +78,7 @@
 > 依赖W3CSchool文档和日常整理，主要是对CSS常用操作和基础属性进行整理总结。不会过多深入
 
 
-- [CSS开发规范](css/CSS开发规范.md)
+- [CSS开发规范](docs/css/CSS开发规范.md)
 
 - 样式属性
 
@@ -89,7 +89,7 @@
   
 
 
-##### [基础教程](css/基础教程)
+##### [基础教程](docs/css/基础教程)
 
 
 ##
@@ -98,7 +98,7 @@
 #### JavaScript
 
 
-> **本级目录下的JavaScript内容没有发表到[博客](http://blog.142vip.cn)上,建议对照[脑图]()在[JavaScript主目录](javascript)下学习**,依赖官方文档及自身对JavaScript语言的初步了解，进行的关于JavaScript知识整理，主要目的是复习基础概念、了解新特性、熟练ES6/7操作；整体相对来说由易到难，方便后续查阅学习~
+> **本级目录下的JavaScript内容没有发表到[博客](http://blog.142vip.cn)上,建议对照[脑图](docs/javascript/README.md)在[JavaScript主目录](javascript)下学习**,依赖官方文档及自身对JavaScript语言的初步了解，进行的关于JavaScript知识整理，主要目的是复习基础概念、了解新特性、熟练ES6/7操作；整体相对来说由易到难，方便后续查阅学习~
 
 
 ##### 快速入门

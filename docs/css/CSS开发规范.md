@@ -1,10 +1,7 @@
-原文：https://github.com/csswizardry/CSS-Guidelines 和 https://github.com/chadluo/CSS-Guidelines/blob/master/README.md
-
-注：我根据自己的开发习惯修改和删除了部分规范
 
 # CSS编码规范
 
-> 参考开源项目：https://github.com/csswizardry/CSS-Guidelines 和 https://github.com/chadluo/CSS-Guidelines/blob/master/README.md，并且根据个人的开发习惯进行整理，收录于[JavaScriptCollection]()中.欢迎关注Github&公众号：Rong姐姐好可爱
+> 参考开源项目：https://github.com/csswizardry/CSS-Guidelines 和 https://github.com/chadluo/CSS-Guidelines/blob/master/README.md，并且根据个人的开发习惯进行整理；本文已发表于个人公众号：**Rong姐姐好可爱**，若仓库访问速度受限，可以直接访问公众号
 
 在参与规模庞大、历时漫长且参与人数众多的项目时，所有开发者遵守如下规则极为重要：
 
