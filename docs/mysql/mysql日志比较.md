@@ -1,11 +1,5 @@
-<!--
- * @Description: mysql日志比较
- * @Version: Beata1.0
- * @Autor: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2020-09-07 22:13:30
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-07 22:56:17
--->
+
+> 本文已发表于个人公众号：**Rong姐姐好可爱**，若仓库访问速度受限，可以直接访问公众号文章：https://mp.weixin.qq.com/s/m5SFgzgfd2seluBr1raSIg
 
 上周五面试，看过我当天的文章应该知道，非常的惨，遇见了很多原理性的问题回答的都勉勉强强，有些甚至当场死亡；那天问到一个关于mysql的问题，面试官不屑的问：
 

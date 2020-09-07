@@ -4,7 +4,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-07 07:41:10
+ * @LastEditTime: 2020-09-07 23:26:58
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -393,6 +393,7 @@
 - 索引
 - sql优化
 - [基于GTID主从复制的原理和基础配置](docs/mysql/基于GTID主从复制的原理和基础配置.md)
+- [MySQL日志类型把我难哭了，你学废了吗？](docs/mysql/mysql日志比较.md)
 
 
 #### Redis
