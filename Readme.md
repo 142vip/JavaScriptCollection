@@ -1,10 +1,10 @@
 <!--
- * @Description: 
+ * @Description: JavaScriptCollection仓库的阅读大纲
  * @Version: Beata1.0
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-07 23:26:58
+ * @LastEditTime: 2020-09-07 23:40:28
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -427,7 +427,7 @@
 
 - [nginx安装，普通安装 Or Docker搞定？](docs/nginx/nginx基础部署.md)
 - [手把手nginx基础入门]()
-- 反向代理、负载均衡真有那么难吗？
+- [反向代理、负载均衡真有那么难吗？]()
 - [Nginx SSL证书，从此踏上Https之路](docs/nginx/nginx服务器ssl证书配置.md)
 
 
