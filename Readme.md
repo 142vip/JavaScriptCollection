@@ -4,7 +4,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-07 23:40:28
+ * @LastEditTime: 2020-09-08 23:35:54
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -711,7 +711,7 @@
 - [积灰的尤克里里，收藏的指弹曲谱，分享一波](https://mp.weixin.qq.com/s/wYRRSk9JPAX6j7oDHiiOtQ)
 - [你那里有女孩子吗？](https://mp.weixin.qq.com/s/KABr5vYJrVfNJ0hf0VwvwQ)
 - [城市日记](city-diary)
-- [音乐推荐](music-list)
+- [常听音乐推荐](music-list)
 - [不管在哪里，其实月亮是一样圆的~](https://mp.weixin.qq.com/s/MHQqZCcokglcPtCw4CIMrg)
 
 
