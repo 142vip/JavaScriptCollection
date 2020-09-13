@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-13 20:36:13
+ * @LastEditTime: 2020-09-13 21:49:06
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -238,7 +238,7 @@
 - 统一错误处理
 - 数据库集成
 - MVC分层
-- [pm2进程管理]()
+- [pm2进程管理](docs/express/pm2进程管理.md)
 - 分环境部署上线
 
 
