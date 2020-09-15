@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-14 23:37:14
+ * @LastEditTime: 2020-09-15 23:24:28
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -448,7 +448,7 @@
 - 我与docker的第一次硬碰硬
 - docker操作入门真有那么难吗？
 - 这些基础操作指令，你会吗？
-- 那些年，我常用的指令操作汇总
+- 那些年，我常用的docker指令操作汇总
 
 
 #### docker-compose
@@ -734,7 +734,7 @@
 - [工作中第一次被喷，我到底是如何应对的](docs/article-records/工作/工作中第一次被喷，我到底是如何应对的.md)
 
 
-- [五年了，我终于换了人生中的第一台MacBookPro](https://juejin.im/post/5f12a1716fb9a07e8472552d)
+- [五年了，我终于换了人生中的第一台MacBookPro](hhttps://blog.csdn.net/Mmdapl/article/details/107430516)
 
 
 - [突如其来的聊天，打破了一年的规划](docs/article-records/工作/突如其来的聊天，打破了一年的规划.md)
