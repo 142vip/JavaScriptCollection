@@ -1,6 +1,7 @@
 ##bin/bash
-## git 脚本更新
-
+## @desc： git 脚本更新
+## @author:【B站&Github&公众号】 Rong姐姐好可爱
+## @example: bash git_update.sh '测试shell脚本'
 message=${1}
 ## 获取当前时间
 time=$(date "+%Y-%m-%d %H:%M:%S")
