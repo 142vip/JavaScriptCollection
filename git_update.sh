@@ -3,5 +3,6 @@
 
 message=${1}
 
+echo '------start shell to  check-----'
 git status
 
