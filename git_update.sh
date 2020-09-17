@@ -22,6 +22,8 @@ echo -e '\n\033[36m --'${time}' : 【command line:push 】push all to git reposi
 git push origin master
 
 
+echo -e '\n\033[32m --'${time}' : 【command line:end 】 all sources pushed to git repository ending -- \033[0m'
+
 #下面是字体输出颜色及终端格式控制
 #字体色范围：30-37
 echo -e "\033[30m 黑色字 \033[0m"
