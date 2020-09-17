@@ -5,16 +5,20 @@
 message=${1}
 ## 获取当前时间
 time=$(date "+%Y-%m-%d %H:%M:%S")
-echo  '--'${time}' : 【command line:status】start shell to  check  JavaScriptCollection repository update --'
+
+echo -e '\033[32m --'${time}' : 【command line:status 】start shell to  check  JavaScriptCollection repository update -- \033[0m\n'
+git pull
+
+echo -e '\n\033[36m --'${time}' : 【command line:status 】start shell to  check  JavaScriptCollection repository update -- \033[0m\n'
 git status
 
-echo  '--'${time}' : 【command line:add】 add changes  to the local --'
+echo -e '\n\033[36m --'${time}' : 【command line:add 】 add changes  to the local -- \033[0m'
 git add .
 
-echo  '--'${time}' : 【command line:commit】  commit changes to the local -- '
+echo -e  '\n\033[36m --'${time}' : 【command line:commit 】  commit changes to the local -- \033[0m'
 git commit -m ${message}
 
-echo  '--'${time}' : 【command line:push】push all to git repository online --'
+echo -e '\n\033[36m --'${time}' : 【command line:push 】push all to git repository online -- \033[0m'
 git push origin master
 
 
