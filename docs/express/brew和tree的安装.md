@@ -1,5 +1,8 @@
 
 
+> 本文已发表于个人公众号：**Rong姐姐好可爱**，若仓库访问速度受限，可以直接访问公众号文章：https://mp.weixin.qq.com/s/OobxjLR934c_Ecg2LFnzpA
+
+
 在写项目的Readme文档的时候，常常会使用项目结构，我一般是用`tree`命令；但是当我在项目更目录执行tree命令的时候，却出现：
 
 ```bash
