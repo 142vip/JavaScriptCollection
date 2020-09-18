@@ -1,6 +1,6 @@
 mysql -hhostname -Pport -uusername -ppassword -e 相关mysql的sql语句，不用在mysql的提示符下运行mysql，即可以在shell中操作mysql的方法。
 
-\#!/bin/bash
+#!/bin/bash
 
 HOSTNAME="192.168.111.84"  #数据库信息
 
