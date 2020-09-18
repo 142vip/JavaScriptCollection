@@ -12,17 +12,17 @@ git pull
 echo -e '\n\033[36m --'${time}' : 【command line:status 】start shell to  check  JavaScriptCollection repository update -- \033[0m\n'
 git status
 
-echo -e '\n\033[36m --'${time}' : 【command line:add 】 add changes  to the local -- \033[0m'
+echo -e '\n\033[36m --'${time}' : 【command line:add 】 add changes  to the local -- \033[0m\n'
 git add .
 
-echo -e  '\n\033[36m --'${time}' : 【command line:commit 】  commit changes to the local -- \033[0m'
+echo -e  '\n\033[36m --'${time}' : 【command line:commit 】  commit changes to the local -- \033[0m\n'
 git commit -m ${message}
 
-echo -e '\n\033[36m --'${time}' : 【command line:push 】push all to git repository online -- \033[0m'
+echo -e '\n\033[36m --'${time}' : 【command line:push 】push all to git repository online -- \033[0m\n'
 git push origin master
 
 
-echo -e '\n\033[32m --'${time}' : 【command line:end 】 all sources pushed to git repository ending -- \033[0m'
+echo -e '\n\033[32m --'${time}' : 【command line:end 】 all sources pushed to git repository ending -- \033[0m\n'
 
 #下面是字体输出颜色及终端格式控制
 #字体色范围：30-37
