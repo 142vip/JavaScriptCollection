@@ -4,7 +4,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-09-19 23:51:48
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-20 23:14:27
+ * @LastEditTime: 2020-09-20 23:27:01
 -->
 
 
@@ -73,6 +73,56 @@ app.use((req,res,next)=>{
 
 
 #### app.mountpath
+
+谈到这个属性，我就不得不用我的四六级英语翻译这么一段话了；
+
+ > A sub-app is an instance of express that may be used for handling the request to a route.
+
+ 翻译：sub-app是express的一个实例，可以用来处理路由请求
+
+ 了解sub-app的定义后，就来介绍下app.mountpath了，app.mountpath包含一个或者多个可以被装载的sub-app；
+
+ ```javascript
+
+ // express moudle
+const express = require('express')
+
+// main app
+const app = express() // the main app
+
+// sub app
+const admin = express() // the sub app
+
+admin.get('/', function (req, res) {
+  console.log(admin.mountpath) // admin
+  res.send('Admin Homepage')
+})
+
+
+// 装载sub app
+app.use('/admin', admin) 
+ ```
+
+ 从上面的代码可以发现：这和req对象中的baseUrl属性相似；除了req.baseUrl返回的是匹配的path路径，而不是匹配到的pattern模式；
+
+
+ ```javascript
+ var admin = express()
+
+admin.get('/', function (req, res) {
+  console.dir(admin.mountpath) // [ '/adm*n', '/manager' ]
+  res.send('Admin Homepage')
+})
+
+var secret = express()
+secret.get('/', function (req, res) {
+  console.log(secret.mountpath) // /secr*t
+  res.send('Admin Secret')
+})
+
+admin.use('/secr*t', secret) // load the 'secret' router on '/secr*t', on the 'admin' sub app
+app.use(['/adm*n', '/manager'], admin) // load the 'admin' router on '/adm*n' and '/manager', on the parent app
+ ```
 
 ### 事件(events)
 
