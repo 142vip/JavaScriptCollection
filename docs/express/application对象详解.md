@@ -107,14 +107,14 @@ app.use('/admin', admin)
 
 
  ```javascript
- var admin = express()
+ const admin = express()
 
 admin.get('/', function (req, res) {
   console.dir(admin.mountpath) // [ '/adm*n', '/manager' ]
   res.send('Admin Homepage')
 })
 
-var secret = express()
+const secret = express()
 secret.get('/', function (req, res) {
   console.log(secret.mountpath) // /secr*t
   res.send('Admin Secret')
