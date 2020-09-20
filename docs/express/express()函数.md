@@ -4,9 +4,9 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-09-16 23:17:41
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-19 23:46:18
+ * @LastEditTime: 2020-09-20 22:47:00
 -->
-> 本文已发表于个人公众号：**Rong姐姐好可爱**，若仓库访问速度受限，可以直接访问公众号文章：（未发表）
+> 本文已发表于个人公众号：**Rong姐姐好可爱**，若仓库访问速度受限，可以直接访问公众号文章：https://mp.weixin.qq.com/s/uo0xb60lZ_quxj8aPRPbKQ
 
 
 ## express()函数
@@ -133,4 +133,110 @@ const router =express.Router(options)
 
 ### express.static(root, [options])
 
+> 最好的方式：通过使用反向代理缓存来提供服务端静态资源的访问；
+
+
+express框架内置中间件函数，基于`serve-static`模块在服务端提供静态资源；
+在express.static(root,options)中，第一个单数root是静态资源根目录地址。而函数本身则提供了通过url地址来访问服务端静态资源的方式（绑定），当文件不存在或者找不到时，将会返回404状态码，**并不是调用next()函数在下一个中间件中处理** 允许对目录进行渲染；
+
+简单实例方式：
+
+```javascript
+
+// 引入express 
+const express=require('express')
+// 创建应用入口
+const app=express();
+// 定义属性
+const options = {
+  // 决定文件或者目录是否从.(当前路径，相对地址)开始处理，默认类型：string，默认值：ignore
+  dotfiles: 'ignore',
+  // 是否产生实体标签（etag），默认值false，默认类型：Boolean
+  etag: false,
+  // 设置文件后缀，如果没有找到则搜索指定的后缀文件，默认false，默认类型Mixed
+  extensions: ['htm', 'html'],
+  // 
+  index: false,
+  maxAge: '1d',
+  // 当路劲名是目录时，是否重定向到`/`目录中，默认值：true，默认类型：Boolean
+  redirect: false,
+  // 设置请求头
+  setHeaders: function (res, path, stat) {
+    res.set('x-timestamp', Date.now())
+  }
+}
+
+// 简单使用
+app.use(express.static('public', options))
+
+```
+
+注意，`express.static(root,options)`,实质是一个中间件
+
+
+### express.text([options])
+
+express框架内置中间件，借助`body-parser`将接口请求参数解析为字符串，并且返回中间件；当请求的请求头`Content-Type`满足匹配时，把body中所有参数解析成字符串，支持gzip压缩；
+
 ### express.urlencoded([options])
+
+这是`Express`中内置的中间件功能。它使用`urlencoded`有效负载分析传入请求，并基于`body-parser`。
+返回仅分析`urlencoded`主体的中间件，并仅查看`Content-Type`标题与`type`选项匹配的请求。该解析器只接受身体的UTF-8编码，并支持自动膨胀gzip和deflate编码。
+
+body包含解析数据的新对象request在中间件（ie req.body）之后被填充到对象上，或者{}如果没有要解析的主体，`Content-Type`则不匹配或发生错误，则会填充空对象（）。该对象将包含键-值对，其中该值可以是一个字符串或阵列（时extended是false），或任何类型的（当extended是true）。
+
+- extended
+
+此选项允许选择使用查询字符串库（如果为false）或qs库（如果为true）解析URL编码数据。“扩展”语法允许将丰富的对象和数组编码为URL编码格式，从而允许使用URL编码的类似JSON的体验。有关更多信息，请参阅qs资料库。
+
+默认类型：Boolean
+
+默认值：true
+
+- inflate
+
+启用或禁用处理放气（压缩）的物体; 当禁用时，放气的身体被拒绝。
+
+默认类型：Boolean
+
+默认值：true
+
+- limit
+
+控制最大请求主体大小。如果这是一个数字，那么该值指定字节数; 如果它是一个字符串，则将该值传递给字节库以供解析。
+
+默认类型：Mixed
+
+默认值：“100kb”
+
+- parameterLimit
+
+该选项控制URL编码数据中允许的最大参数数量。如果请求包含的参数多于此值，则会引发错误。
+
+默认类型：Number
+
+默认值：1000
+
+- type
+
+这用于确定中间件将解析的媒体类型。该选项可以是字符串，字符串数组或函数。如果不是函数，则type选项将直接传递到type-is库，这可以是扩展名（如urlencoded），MIME类型（如application / x-www-form-urlencoded）或带MIME类型的MIME类型通配符（如* / x-www-form-urlencoded）。如果一个函数，类型选项被称为fn（req），并且如果它返回一个真值，则请求被解析。
+
+默认类型：Mixed
+
+默认值： "application/x-www-form-urlencoded" 
+
+- verify
+
+如果提供此选项，则称为verify（req，res，buf，encoding），其中buf是原始请求主体的缓冲区，编码是请求的编码。解析可以通过抛出错误来中止。
+
+类型类型：Function
+
+默认值：undefined
+
+至此，express框架中，通过引入`express`模块，使用express()函数和中间件方法，可以局部或者全局处理路由请求，在开发中针对不同的需求合理的选择中间件，并配置好`options`对象参数；
+
+### 参考资料
+
+- [express官网](https://www.expressjs.com.cn/4x/api.html#express.static)
+- [腾讯云资料](https://cloud.tencent.com/developer/section/1489347#stage-100050793)
+- [express中文资料](https://cloud.tencent.com/developer/section/1489347#stage-100050793)
