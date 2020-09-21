@@ -4,7 +4,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-09-19 23:51:48
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-20 23:27:01
+ * @LastEditTime: 2020-09-21 22:47:08
 -->
 
 
@@ -123,7 +123,35 @@ secret.get('/', function (req, res) {
 admin.use('/secr*t', secret) // load the 'secret' router on '/secr*t', on the 'admin' sub app
 app.use(['/adm*n', '/manager'], admin) // load the 'admin' router on '/adm*n' and '/manager', on the parent app
  ```
+ 从上面可以看到，app.mountpath打印的值其实就是app.use(array,object)中的array数组；
 
 ### 事件(events)
+
+#### app.on('mount', callback(parent))
+
+这个`mount`事件在`sub-app`上被激活（触发），当它装载在到父级应用对象时，父级应用对象通过回调函数进行传递；
+
+- 当application settings存在默认值时，sub-app将不会继承默认值，可以在sub-app中进行设置；
+- 当application settings不存在默认值时，sub-app会继承默认值；
+
+例如：
+
+```javascript
+// 定义application对象
+const  admin = express()
+
+// mount事件监听，从回调中获取parent
+admin.on('mount', function (parent) {
+  console.log('Admin Mounted')
+  console.log(parent) // refers to the parent app
+})
+
+admin.get('/', function (req, res) {
+  res.send('Admin Homepage')
+})
+
+// 使用中间件
+app.use('/admin', admin)
+```
 
 ### 方法(methods)
