@@ -4,7 +4,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-09-19 23:51:48
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-21 22:47:08
+ * @LastEditTime: 2020-09-21 22:56:12
 -->
 
 
@@ -155,3 +155,45 @@ app.use('/admin', admin)
 ```
 
 ### 方法(methods)
+
+#### app.all(path, callback [, callback ...])
+
+其实谈到这个方法，就有必要和`app.METHOD(path, callback [, callback ...])`进行对比学习；因为将后者理解为前者的子集；
+
+#### app.METHOD(path, callback [, callback ...])
+
+#### app.delete(path, callback [, callback ...])
+
+#### app.disable(name)
+
+#### app.disabled(name)
+
+#### app.enable(name)
+
+#### app.enabled(name)
+
+#### app.engine(ext, callback)
+
+#### app.get(name)
+
+#### app.get(path, callback [, callback ...])
+
+#### app.listen([port[, host[, backlog]]][, callback])
+
+#### app.METHOD(path, callback [, callback ...])
+
+#### app.param([name], callback)
+
+#### app.path()
+
+#### app.post(path, callback [, callback ...])
+
+#### app.put(path, callback [, callback ...])
+
+#### app.render(view, [locals], callback)
+
+#### app.route(path)
+
+#### app.set(name, value)
+
+#### app.use([path,] callback [, callback...])
