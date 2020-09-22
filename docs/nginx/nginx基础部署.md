@@ -1,9 +1,6 @@
-## Nginx安装
 
-> 本文已被收录在
->
-> - 个人博客：https://blog.142vip.cn/2018/03/%E5%A4%9A%E7%8E%AF%E5%A2%83%E4%B8%8Bnginx%E7%9A%84%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB](https://blog.142vip.cn/2018/03/多环境下nginx的安装部署方法汇总)
-> - 
+> 本文已发表于个人公众号：**Rong姐姐好可爱**，若仓库访问速度受限，可以直接访问公众号文章：https://mp.weixin.qq.com/s/Wbpwowcy7Lxq-45bmD7s4Q
+## Nginx安装
 
 在日常的各种web项目中，我们会采用形形色色的web服务器来构建网站，例如常见的Tomcat、IIS，当然也一定听说过 Nginx；若没听说过它，那么一定听过它的"同行"Apache 吧，如果这都没听说过，那那那那那那那...（王总）
 
