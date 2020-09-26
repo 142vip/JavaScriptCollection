@@ -732,6 +732,8 @@
 - [你那里有女孩子吗？](https://mp.weixin.qq.com/s/KABr5vYJrVfNJ0hf0VwvwQ)
 - [城市日记](city-diary)
 - [不管在哪里，其实月亮是一样圆的~](https://mp.weixin.qq.com/s/MHQqZCcokglcPtCw4CIMrg)
+- [【9.22】被攻击的一天](https://mp.weixin.qq.com/s/FkMy0d24JMYvFcBIkaRNzQ)
+- [跟年迈父亲视频的一个半小时]()
 
 
 #### [工作](article-records/工作)
