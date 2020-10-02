@@ -1,3 +1,0 @@
-[mysqld]
-log-bin=binlog-mysql-slave-bin
-server-id=3302
