@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-11-09 08:25:29
+ * @LastEditTime: 2020-11-09 08:27:56
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -799,7 +799,12 @@
 - [【2020-07-31】CSDN关注100了，就这？？？？](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247483778&idx=1&sn=3d9f623c58d595f75d7092783a6c5abe&chksm=fcdfb80ecba83118e76de1ed88a5be51229e4145182aee6e0bcc13e4697707cf9f4609d8799d&token=1304241434&lang=zh_CN#rd)
 
 
-- [【2020-08-01】旧友相见，甚是怀念](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484815&idx=1&sn=10d26a600112ec4f95b3b3f470955744&chksm=fcdfbc03cba83515b07f0ae6cee791d1fb5fd619364cff3a17a4deab91333f0a6277b09a66a9&token=639111151&lang=zh_CN#rd)
+- [【2020-08-01】旧友相见，甚是怀念](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247483790&idx=1&sn=76e13ac79ad498309542c9f41878bb1c&chksm=fcdfb802cba8311456ea9ff3309c4354055022cd0056b13c11fac44252231550e17a03f26f29&token=639111151&lang=zh_CN#rd)
+
+- [【2020-08-03】JavaScript基础介绍和快速入门](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247483805&idx=1&sn=4da4e0d3a2912aee146248c1d8f7f96f&chksm=fcdfb811cba83107fd8f08d3e35af7c72bf7d908d577ad83e45d80b0e9d1bbdbf16b1f169d64&token=639111151&lang=zh_CN#rd)
+
+- [【2020-09-11】【周报】向各位汇报这周状态，再也不敢鸽了](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484783&idx=1&sn=b9e82a2c2b04b7050d0659085af537ef&chksm=fcdfbce3cba835f5e692f5ffbb16505dbf3b5ccc9bb0bdf4b3f467629b293d0e0ce3086ec8dc&token=639111151&lang=zh_CN#rd)
+
 
 - [【2020-09-11】【周报】向各位汇报这周状态，再也不敢鸽了](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484783&idx=1&sn=b9e82a2c2b04b7050d0659085af537ef&chksm=fcdfbce3cba835f5e692f5ffbb16505dbf3b5ccc9bb0bdf4b3f467629b293d0e0ce3086ec8dc&token=639111151&lang=zh_CN#rd)
 
