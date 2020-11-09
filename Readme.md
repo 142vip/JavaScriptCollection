@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-11-09 22:27:02
+ * @LastEditTime: 2020-11-09 22:30:30
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -811,7 +811,7 @@
 
 #### 9月
 
-- [【2020-09-01】【容器部署】Redis的简单安装和部署 ](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484600&idx=1&sn=489aa1bd12487b0bf8f2a7694f4ca1aa&chksm=fcdfbd34cba83422f0afee027747d9e95773e093fa3a24225c2729029c4392bf42043964782f&token=1613702159&lang=zh_CN#rd)
+- [【2020-09-01】Redis的简单安装和部署 ](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484600&idx=1&sn=489aa1bd12487b0bf8f2a7694f4ca1aa&chksm=fcdfbd34cba83422f0afee027747d9e95773e093fa3a24225c2729029c4392bf42043964782f&token=1613702159&lang=zh_CN#rd)
 
 - [【2020-09-01】就很像？？ ](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484600&idx=2&sn=a9962c6ca3a5eddd085bcd15617f64d9&chksm=fcdfbd34cba83422b987020a858b7cf31bfde6033642d697d5a00ad9ed618f3cf14deb207d67&token=1613702159&lang=zh_CN#rd)
 
@@ -819,7 +819,7 @@
 
 - [【2020-09-03】大学四年建站用过的云服务器都在这里了 ](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484702&idx=2&sn=c7589eecbe58ff8939f72c0ff0bf567d&chksm=fcdfbc92cba83584b03dfeea7290606ce8249b0c3105b0b3b95a9087c77e3b1c7f863d8e30f9&token=1613702159&lang=zh_CN#rd)
 
-- [【2020-09-04】【没过】面试复盘和思考 ](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484711&idx=1&sn=bf362439ccfad04da53ce65c824a988d&chksm=fcdfbcabcba835bddc43c40fd3a454793adf7849a5d5bb356825d481b82ae3e58a749859502c&token=1613702159&lang=zh_CN#rd)
+- [【2020-09-04】面试复盘和思考 ](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484711&idx=1&sn=bf362439ccfad04da53ce65c824a988d&chksm=fcdfbcabcba835bddc43c40fd3a454793adf7849a5d5bb356825d481b82ae3e58a749859502c&token=1613702159&lang=zh_CN#rd)
 
 - [【2020-09-06】朋友是“无用”的，不是你瞧不起我，就是我瞧不起你 ](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484759&idx=1&sn=e0f8a7a70ddede75d94b202ddc6106d6&chksm=fcdfbcdbcba835cd2138658d750f7e09a820b34daf4624f253a21a11b5de56635d35e4c0df19&token=1613702159&lang=zh_CN#rd)
 
@@ -827,12 +827,12 @@
 
 - [【2020-09-07】MySQL日志类型把我难哭了，你学废了吗？](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484771&idx=1&sn=6ae4c6e8d333b0e1aa5cd1aee161d9b8&chksm=fcdfbcefcba835f94e3c0abc189477f241f675f38a63eb03bd320447e89da39cb08b72038ba3&token=1613702159&lang=zh_CN#rd)
 
-- [【2020-09-11】【周报】向各位汇报这周状态，再也不敢鸽了](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484783&idx=1&sn=b9e82a2c2b04b7050d0659085af537ef&chksm=fcdfbce3cba835f5e692f5ffbb16505dbf3b5ccc9bb0bdf4b3f467629b293d0e0ce3086ec8dc&token=639111151&lang=zh_CN#rd)
+- [【2020-09-11】向各位汇报这周状态，再也不敢鸽了](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484783&idx=1&sn=b9e82a2c2b04b7050d0659085af537ef&chksm=fcdfbce3cba835f5e692f5ffbb16505dbf3b5ccc9bb0bdf4b3f467629b293d0e0ce3086ec8dc&token=639111151&lang=zh_CN#rd)
 
 
-- [【2020-09-11】【周报】向各位汇报这周状态，再也不敢鸽了](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484783&idx=1&sn=b9e82a2c2b04b7050d0659085af537ef&chksm=fcdfbce3cba835f5e692f5ffbb16505dbf3b5ccc9bb0bdf4b3f467629b293d0e0ce3086ec8dc&token=639111151&lang=zh_CN#rd)
+- [【2020-09-11】向各位汇报这周状态，再也不敢鸽了](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484783&idx=1&sn=b9e82a2c2b04b7050d0659085af537ef&chksm=fcdfbce3cba835f5e692f5ffbb16505dbf3b5ccc9bb0bdf4b3f467629b293d0e0ce3086ec8dc&token=639111151&lang=zh_CN#rd)
 
-- [【2020-09-12】【周报】向各位汇报，再也不敢鸽了，人生处处有惊喜](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484784&idx=1&sn=ae73f1f4e53b622039a75ec41cabe378&chksm=fcdfbcfccba835eafefe304913e4078cf8dfac22f62fd9d686b307bbdf46d147016f5e876e05&token=639111151&lang=zh_CN#rd)
+- [【2020-09-12】向各位汇报，再也不敢鸽了，人生处处有惊喜](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484784&idx=1&sn=ae73f1f4e53b622039a75ec41cabe378&chksm=fcdfbcfccba835eafefe304913e4078cf8dfac22f62fd9d686b307bbdf46d147016f5e876e05&token=639111151&lang=zh_CN#rd)
 
 
 - [【2020-09-13】来来来，无厘头技术(水)文，各种尬。简简单单评价一下](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484815&idx=1&sn=10d26a600112ec4f95b3b3f470955744&chksm=fcdfbc03cba83515b07f0ae6cee791d1fb5fd619364cff3a17a4deab91333f0a6277b09a66a9&token=639111151&lang=zh_CN#rd)
@@ -858,9 +858,9 @@
 - [【2020-09-22】入秋了，安好](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484865&idx=1&sn=e39e3547da49f40e1b64deadf9a9cfef&chksm=fcdfbc4dcba8355bfa9c8b9531a463fc652b764064528dd6c243f47a157b20e017bad3f410f4&token=368257571&lang=zh_CN#rd)
 
 
-- [【2020-09-22】【Docker】Nginx安装详解，我服务器上也是这样的](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484897&idx=1&sn=b1073522cfd3ce6ebbe85e85ad4e35e0&chksm=fcdfbc6dcba8357bdb212c9db1378a045d0dcfd95b79ed05688180f05d2b391f9b724d0d752f&token=368257571&lang=zh_CN#rd)
+- [【2020-09-22】Nginx安装详解，我服务器上也是这样的](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484897&idx=1&sn=b1073522cfd3ce6ebbe85e85ad4e35e0&chksm=fcdfbc6dcba8357bdb212c9db1378a045d0dcfd95b79ed05688180f05d2b391f9b724d0d752f&token=368257571&lang=zh_CN#rd)
 
-- [【2020-09-22】【9.22】被攻击的一天](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484897&idx=2&sn=34c61ed01c6522d2861be3342ec12ad5&chksm=fcdfbc6dcba8357b76eb0fe6c502d932def6cd232297b010f9b2f9a1fca35c38df77dacce7f2&token=368257571&lang=zh_CN#rd)
+- [【2020-09-22】被攻击的一天](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484897&idx=2&sn=34c61ed01c6522d2861be3342ec12ad5&chksm=fcdfbc6dcba8357b76eb0fe6c502d932def6cd232297b010f9b2f9a1fca35c38df77dacce7f2&token=368257571&lang=zh_CN#rd)
 
 
 - [【2020-09-26】跟父亲视频的一个半小时，聊到了我，也聊到了Ta](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484929&idx=1&sn=394783dd2bfd65da24ae6dcb89d69ec6&chksm=fcdfbf8dcba8369b926b7083bbe3515aa5857f7589acc3f9d6d4987c67539a76dbd6e3cb70a1&token=368257571&lang=zh_CN#rd)
