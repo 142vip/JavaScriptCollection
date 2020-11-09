@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-11-01 23:22:23
+ * @LastEditTime: 2020-11-09 08:25:29
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -799,12 +799,18 @@
 - [【2020-07-31】CSDN关注100了，就这？？？？](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247483778&idx=1&sn=3d9f623c58d595f75d7092783a6c5abe&chksm=fcdfb80ecba83118e76de1ed88a5be51229e4145182aee6e0bcc13e4697707cf9f4609d8799d&token=1304241434&lang=zh_CN#rd)
 
 
-- [【2020-08-01】旧友相见，甚是怀念](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247483790&idx=1&sn=76e13ac79ad498309542c9f41878bb1c&chksm=fcdfb802cba8311456ea9ff3309c4354055022cd0056b13c11fac44252231550e17a03f26f29&token=1304241434&lang=zh_CN#rd)
+- [【2020-08-01】旧友相见，甚是怀念](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484815&idx=1&sn=10d26a600112ec4f95b3b3f470955744&chksm=fcdfbc03cba83515b07f0ae6cee791d1fb5fd619364cff3a17a4deab91333f0a6277b09a66a9&token=639111151&lang=zh_CN#rd)
+
+- [【2020-09-11】【周报】向各位汇报这周状态，再也不敢鸽了](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484783&idx=1&sn=b9e82a2c2b04b7050d0659085af537ef&chksm=fcdfbce3cba835f5e692f5ffbb16505dbf3b5ccc9bb0bdf4b3f467629b293d0e0ce3086ec8dc&token=639111151&lang=zh_CN#rd)
+
+- [【2020-09-12】【周报】向各位汇报，再也不敢鸽了，人生处处有惊喜](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484784&idx=1&sn=ae73f1f4e53b622039a75ec41cabe378&chksm=fcdfbcfccba835eafefe304913e4078cf8dfac22f62fd9d686b307bbdf46d147016f5e876e05&token=639111151&lang=zh_CN#rd)
 
 
-- [【2020-09-22】入秋了，安好](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484865&idx=1&sn=e39e3547da49f40e1b64deadf9a9cfef&chksm=fcdfbc4dcba8355bfa9c8b9531a463fc652b764064528dd6c243f47a157b20e017bad3f410f4&token=368257571&lang=zh_CN#rd)
+- [【2020-09-13】来来来，无厘头技术(水)文，各种尬。简简单单评价一下](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484815&idx=1&sn=10d26a600112ec4f95b3b3f470955744&chksm=fcdfbc03cba83515b07f0ae6cee791d1fb5fd619364cff3a17a4deab91333f0a6277b09a66a9&token=639111151&lang=zh_CN#rd)
 
-- [【2020-09-22】入秋了，安好](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484865&idx=1&sn=e39e3547da49f40e1b64deadf9a9cfef&chksm=fcdfbc4dcba8355bfa9c8b9531a463fc652b764064528dd6c243f47a157b20e017bad3f410f4&token=368257571&lang=zh_CN#rd)
+- [【2020-09-13】基础Brew和Tree的安装实录](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484815&idx=2&sn=94a6455ed6b17fa5b27e96358e935803&chksm=fcdfbc03cba83515d13dcfc2dea2445085a34ff4360e0a367fd914bb04bc6ba18a780a0cd2d2&token=639111151&lang=zh_CN#rd)
+
+- [【2020-09-13】PM2进程管理，给我学！](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484815&idx=3&sn=38a289efffda9510b5ff04c5bed0663e&chksm=fcdfbc03cba835154c888b9d7f86eac85c250eefb9d053687173274373f2f8d7b19fc307e76a&token=639111151&lang=zh_CN#rd)
 
 - [【2020-09-14】数据结构，一定要学废了](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484823&idx=1&sn=d41bb8da02585cf9ea8d0b3ef27e3dbb&chksm=fcdfbc1bcba8350d84ba2f01eaf187cbaa2d4cf5a9078beb1f2fafe94edb0126c82595ed8191&token=368257571&lang=zh_CN#rd)
 
