@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-11-09 22:24:45
+ * @LastEditTime: 2020-11-09 22:27:02
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -810,6 +810,12 @@
 
 
 #### 9月
+
+- [【2020-09-01】【容器部署】Redis的简单安装和部署 ](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484600&idx=1&sn=489aa1bd12487b0bf8f2a7694f4ca1aa&chksm=fcdfbd34cba83422f0afee027747d9e95773e093fa3a24225c2729029c4392bf42043964782f&token=1613702159&lang=zh_CN#rd)
+
+- [【2020-09-01】就很像？？ ](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484600&idx=2&sn=a9962c6ca3a5eddd085bcd15617f64d9&chksm=fcdfbd34cba83422b987020a858b7cf31bfde6033642d697d5a00ad9ed618f3cf14deb207d67&token=1613702159&lang=zh_CN#rd)
+
+- [【2020-09-03】shell编程基础整理 ](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484702&idx=1&sn=6e3e862153755d9e61f5f4ebf220381d&chksm=fcdfbc92cba835844e8b6fd37d86a34ccf83342895f448c88ba5b62db974eb536a8e74a121aa&token=1613702159&lang=zh_CN#rd)
 
 - [【2020-09-03】大学四年建站用过的云服务器都在这里了 ](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247484702&idx=2&sn=c7589eecbe58ff8939f72c0ff0bf567d&chksm=fcdfbc92cba83584b03dfeea7290606ce8249b0c3105b0b3b95a9087c77e3b1c7f863d8e30f9&token=1613702159&lang=zh_CN#rd)
 
