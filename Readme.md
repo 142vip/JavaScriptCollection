@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-11-10 23:59:18
+ * @LastEditTime: 2020-11-15 22:28:48
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -718,63 +718,22 @@
 - 小小网站却耗费三台学生服务器？
 
 
-## 日常水文
 
 
-> 集中生活、工作、随笔、读书笔记内容，算是对每一天、每一年、每一段过往的整理与回忆吧~
 
 
-#### [生活](article-records/生活)
+## 书籍整理
+
+#### 技术类
+> 待整理
 
 
-- [跟年迈父亲视频的一个半小时](https://mp.weixin.qq.com/s/gm7tultGV245qwhrdVfogg)
-
-
-#### [工作](article-records/工作)
-
-
-- [《后浪》--致程序员](docs/article-records/工作/《后浪》-%20致程序员.md)
-
-
-- [工作中第一次被喷，我到底是如何应对的](docs/article-records/工作/工作中第一次被喷，我到底是如何应对的.md)
-
-
-- [五年了，我终于换了人生中的第一台MacBookPro](hhttps://blog.csdn.net/Mmdapl/article/details/107430516)
-
-
-- [突如其来的聊天，打破了一年的规划](docs/article-records/工作/突如其来的聊天，打破了一年的规划.md)
-
-
-- [室友搬家，一个人的上下班](docs/article-records/工作/室友搬家，一个人的上下班又将是怎样的风景.md)
-
-- [上下班耳机里都在放什么？我摊牌了](music-list)
-
-
-#### [随笔](article-records/随笔)
-
-
-- [朋友是”无用“的](docs/article-records/随笔/朋友是“无用”的.md)
-- [毕业一年有感]
-- [【周报】向各位汇报，再也不敢鸽了，人生处处有惊喜](docs/article-records/随笔/周报】向各位汇报，再也不敢鸽了，人生处处有惊喜.md)
-- 自己到底适合做技术吗？
-- 为什么有时候会觉得很累，却又好像没做什么
-- 怎么样才能让自己充实？
-- 机械键盘+拓展坞比Mac自带的键盘香吗？
-
-
-#### [读书笔记](article-records/读书笔记)
-
+#### 非技术类
 
 > 主要是跟计算机无关的一些书，在看完之后，会选择性的进行思维导图、经典词句整理，也可能添加个人思考
 
 
 - [你好孤独 - 陈果](docs/article-records/读书笔记/好的孤独-陈果/Readme.md)
-
-#### 面试复盘
-
-  - 摸不著头脑的外包面试，历时一小时
-  - [毫无准备，战术面试，问的心态炸裂，哭撑40分钟](docs/interview/北京某科技面试复盘（9.4）.md)
-
 
 ## 公众号汇总
 
@@ -873,6 +832,8 @@
 #### 11月
 
 - [【2020-11-01】11月，你好](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247485002&idx=1&sn=3760eba58f7ded433b71bec48b89a681&chksm=fcdfbfc6cba836d0b7db1f2aa5a4a884f68f8ce20a59aa44b4ac46c59eb4dd1c233079241a4a&token=368257571&lang=zh_CN#rd)
+
+- [【2020-11-01】她来了她来了，她带着剪了三遍的视频来了](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247485042&idx=1&sn=181ae5062c31ee7931390607b6f10358&chksm=fcdfbffecba836e8275c849007470db6964f7cd675af59fe73c94369334d17d4840e8c0413d5&token=898438314&lang=zh_CN#rd)
 
 
 
