@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-11-30 23:41:24
+ * @LastEditTime: 2020-11-30 23:45:42
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -25,8 +25,9 @@
 
 ##
 <div align="center" style="font-size:20px">
-  <a href="https://gitee.com/mmdapl/JavaScriptCollection" target="_blank">码云版</a> || 
-  <a href="readme-wechat.md" target="_blank">微信版</a>
+  <a href="https://gitee.com/mmdapl/JavaScriptCollection" target="_blank">码云版</a> 
+  <!-- || 
+  <a href="readme-wechat.md" target="_blank">微信版</a> -->
 </div>
 
 ##
@@ -727,7 +728,7 @@
 #### 技术类
 > 待整理
 
-- [狼书—了不起的Node.js](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/Readme.md)
+- [狼书 - 了不起的Node.js](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/Readme.md)
 
 
 #### 非技术类
