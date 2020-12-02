@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-11-30 23:48:03
+ * @LastEditTime: 2020-12-02 23:28:18
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -421,6 +421,7 @@
 > 将围绕redis基础概念、使用场景、使用方式、简单部署等方面 展开介绍，[主目录](redis)下有自己觉得还不错PDF文档~
 
 
+- [key命名规范与建议]()
 - [redis基础介绍](docs/redis/redis基础介绍.md)
 - [redis的简单安装和部署](https://mp.weixin.qq.com/s/Xe-ZDf2kgUWfYSkuULAdlw)
 - [官方默认配置模板](code/docs/redis/redis-default.conf)
