@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-12-02 23:28:18
+ * @LastEditTime: 2020-12-02 23:33:03
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -421,7 +421,7 @@
 > 将围绕redis基础概念、使用场景、使用方式、简单部署等方面 展开介绍，[主目录](redis)下有自己觉得还不错PDF文档~
 
 
-- [key命名规范与建议]()
+- [key命名规范与建议](docs/redis/key命名规范与建议.md)
 - [redis基础介绍](docs/redis/redis基础介绍.md)
 - [redis的简单安装和部署](https://mp.weixin.qq.com/s/Xe-ZDf2kgUWfYSkuULAdlw)
 - [官方默认配置模板](code/docs/redis/redis-default.conf)
@@ -726,13 +726,23 @@
 
 ## 书籍整理
 
-#### 技术类
+### 技术类
 > 待整理
 
-- [狼书 - 了不起的Node.js](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/Readme.md)
+#### [狼书 - 了不起的Node.js](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/Readme.md)
+
+- [第一章 Node.js初识](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第一章%20Node.js初识.md)
+- [第二章 Nodejs安装与入门](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第二章%20Nodejs安装与入门.md)
+- [第三章 更了不起的Node.js](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第三章%20更了不起的Node.js.md)
+- [第四章 更好的Node.js](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第四章%20更好的Node.js.md)
+- [第五章 Node.js是如何执行的](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第五章%20Node.js是如何执行的.md)
+- [第六章 模块与核心](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第六章%20模块与核心.md)
+- [第七章 异步写法与流程控制](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第七章%20异步写法与流程控制.md)
+
+- [全部笔记](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/全部笔记.md)
 
 
-#### 非技术类
+### 非技术类
 
 > 主要是跟计算机无关的一些书，在看完之后，会选择性的进行思维导图、经典词句整理，也可能添加个人思考
 
