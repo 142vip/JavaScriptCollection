@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-12-02 23:33:03
+ * @LastEditTime: 2020-12-02 23:34:23
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -747,7 +747,7 @@
 > 主要是跟计算机无关的一些书，在看完之后，会选择性的进行思维导图、经典词句整理，也可能添加个人思考
 
 
-- [你好孤独 - 陈果](docs/article-records/读书笔记/好的孤独-陈果/Readme.md)
+#### [你好孤独 - 陈果](docs/article-records/读书笔记/好的孤独-陈果/Readme.md)
 
 ## 公众号汇总
 
