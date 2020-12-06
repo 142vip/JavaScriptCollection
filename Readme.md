@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-12-06 21:43:19
+ * @LastEditTime: 2020-12-06 21:45:47
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -422,6 +422,7 @@
 
 
 - [key命名规范与建议](docs/redis/key命名规范与建议.md)
+- [redis开发使用规范](docs/redis/redis开发使用规范.md)
 - [redis基础介绍](docs/redis/redis基础介绍.md)
 - [redis的简单安装和部署](https://mp.weixin.qq.com/s/Xe-ZDf2kgUWfYSkuULAdlw)
 - [官方默认配置模板](code/docs/redis/redis-default.conf)
