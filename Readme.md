@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-12-02 23:34:23
+ * @LastEditTime: 2020-12-06 21:43:19
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -854,6 +854,9 @@
 
 - [【2020-11-30】11月的尾巴，12月你好](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247485066&idx=1&sn=1d357917f548a6d977af96c6582db527&chksm=fcdfbf06cba836103152f7a3fdfbf97c1be2472a84f824cbddd532c15aefe14c71b3b076233f&token=831506871&lang=zh_CN#rd)
 
+#### 12月
+
+- [【2020-12-06】周末小记——忆旧友、吃火锅，也会感慨](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247485080&idx=2&sn=bdc551f2e9bf54dc01881979339af8ad&chksm=fcdfbf14cba836022a05854547cbca03b5a08b912a0e0f195d4856d6b53ecd78aee2f167b515&token=1581389686&lang=zh_CN#rd)
 
 ## 赞赏支持
 
