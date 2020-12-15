@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-12-13 14:06:38
+ * @LastEditTime: 2020-12-15 22:21:00
 -->
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
@@ -743,6 +743,13 @@
 - [全部笔记](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/全部笔记.md)
 
 
+#### [ES6标准入门——阮一峰]()
+
+> 本书内容较多，很多基础细节都有说明，难度中等、适合入门，书中很多例子我也摘抄了很多，主要是我认为重要的，笔记按照自己学习逻辑整理的，请君慢用
+- [1.ECMAScript 6 简介](./docs/article-records/读书笔记/ES6标准入门/1.ECMAScript%206%20简介.md)
+- [2.let和const命令](./docs/article-records/读书笔记/ES6标准入门/2.let和const的命令.md)
+- [3.变量的解构赋值](./docs/article-records/读书笔记/ES6标准入门/3.变量的解构赋值.md)
+- [4.字符串详解]()
 ### 非技术类
 
 > 主要是跟计算机无关的一些书，在看完之后，会选择性的进行思维导图、经典词句整理，也可能添加个人思考
