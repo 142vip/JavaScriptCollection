@@ -5,8 +5,9 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-02-13 21:17:10
+ * @LastEditTime: 2021-03-13 22:45:54
 -->
+
 <p align="center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
 </p>
@@ -16,8 +17,8 @@
 <a href="https://space.bilibili.com/350937042" target="_blank"><img src="https://img.shields.io/badge/Bilibili-哔哩哔哩-green.svg"></a> 
 <a href="https://142vip.cn" target="_blank"><img src="https://img.shields.io/badge/142vip-网站-orange.svg"></a>
 <a href="https://blog.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/blog-博客-blue.svg"></a>
-<a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/github-Github-9ac.svg"></a>
-<a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/gitee-码云-4ed.svg"></a>
+<a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Github-Github-9ac.svg"></a>
+<a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Gitee-码云-4ed.svg"></a>
 <a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
 <a href="https://juejin.im/user/448256476724807" target="_blank"><img src="https://img.shields.io/badge/JueJin-掘金-75c.svg"></a>
 </p>
@@ -44,8 +45,10 @@
 ## 关于作者
 
 
-- <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" />[个人项目整理](http://blog.142vip.cn/s/projects)
-- <img src="https://cdn.142vip.cn/article-notes/img/original.png" width="36" height="26" align="left" />[自我介绍]()
+- [个人项目整理](http://blog.142vip.cn/s/projects)
+
+
+- [自我介绍]()
 
 
 ## 思维导图
@@ -64,7 +67,6 @@
 
 ## 文章笔记
 
-
 **注：无高亮有效访问链接的待完成/同步**
 
 
@@ -74,7 +76,7 @@
 > 前端技术百花齐放、层出不穷，个人认为要注重广度，学会看官方文档熟练操作即可；
 
 
-#### CSS
+### CSS
 
 
 > 依赖W3CSchool文档和日常整理，主要是对CSS常用操作和基础属性进行整理总结。不会过多深入
@@ -97,13 +99,13 @@
 ##
 
 
-#### JavaScript
+### JavaScript
 
 
 > **本级目录下的JavaScript内容没有发表到[博客](http://blog.142vip.cn)上,建议对照[脑图](docs/javascript/README.md)在[JavaScript主目录](javascript)下学习**,依赖官方文档及自身对JavaScript语言的初步了解，进行的关于JavaScript知识整理，主要目的是复习基础概念、了解新特性、熟练ES6/7操作；整体相对来说由易到难，方便后续查阅学习~
 
 
-##### 快速入门
+#### 快速入门
 
 
 - [简单介绍](docs/javascript/快速入门/javascript简单介绍.md)
@@ -111,7 +113,7 @@
 - [JavasScript开发规范](docs/javascript/JavaScript开发规范.md)
 
 
-##### 基础教程
+#### 基础教程
 
 
 - [语法与数据结构](docs/javascript/基础教程/javascript语法与数据结构.md)
@@ -126,7 +128,7 @@
 - [modules模块](docs/javascript/基础教程/modules模块.md)
 
 
-##### 中级教程
+#### 中级教程
 
 
 - [Promise对象](docs/javascript/中级教程/promise对象.md)
@@ -134,7 +136,7 @@
 - [class类](docs/javascript/中级教程/class类.md)
 
 
-##### 高级教程
+#### 高级教程
 
 
 - [不一样的ajax](docs/javascript/高级教程/不一样的ajax.md)
@@ -143,7 +145,7 @@
 - [JSON.stringify()的三个参数]()
 
 
-##### 最后稻草
+#### 最后稻草
 
 
 - [ES6、ES7、ES8、ES9、ES10的新特性](docs/javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
@@ -152,7 +154,7 @@
 - [常用函数方法整理](docs/javascript/最后稻草/常用函数方法整理.md)
 
 
-#### JQuery
+### JQuery
 
 
 - [安装使用](docs/jquery/安装使用.md)
@@ -189,16 +191,16 @@
 - 其他整理
 
 
-#### Vuejs
+### Vue.js
 
 
 > 介绍基础、常用的vue功能，不会很深入的涉及到vue源码及原理
 
 
-#### React
+### React
 
 
-#### Nuxtjs
+### Nuxtjs
 
 
 > Nuxtjs是在vue框架上进行封装的，主要是用来解决单体页面的服务端渲染问题，提供网站进行SEO优化的可能
@@ -207,7 +209,7 @@
 [前端读写cookie]()
 
 
-#### UI框架
+### UI框架
 
 
 > 市面上前端框架层出不穷，不同的技术栈依赖的UI框架也不尽相同，这里将会依据笔者使用的UI框架，以线上项目展示的方式，介绍用过的框架；
@@ -229,7 +231,7 @@
 > 在面试面前，能力是不会说谎的，打铁还需自身硬，加油~
 
 
-#### Express框架
+### Express框架
 
 
 - [框架概念简介](docs/express/框架介绍.md)
@@ -251,7 +253,7 @@
 - 分环境部署上线
 
 
-#### Koa框架
+### Koa框架
 
 
 - koa介绍
@@ -263,10 +265,10 @@
 - 响应(Response)
 
 
-#### Eggjs框架
+### Eggjs框架
 
 
-##### 基础篇
+#### 基础篇
 
 
 - [第一部分：Git概述](docs/eggjs/git-README.md)
@@ -294,7 +296,7 @@
   - [2.5 可视化管理](docs/eggjs/mysql-redis-view.md)
 
 
-##### 入门篇
+#### 入门篇
 
 
 - [第一部分：Egg框架快速入门](docs/eggjs/egg-README.md)
@@ -332,7 +334,7 @@
   - [2.6 egg-socket.io即时通讯](docs/eggjs/plugin-egg-socket.io.md)
 
 
-##### 代码实战篇
+#### 代码实战篇
 
 
 - [第一部分：常用代码](docs/eggjs/project-README-CODE.md)
@@ -354,7 +356,7 @@
 - [第三部分：手把手搭建基础Egg开发框架](docs/eggjs/egg-egg-example.md)
 
 
-#### Nestjs框架
+### Nestjs框架
 
 
 > Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此在学习Nestjs框架之前，请务必先熟悉express框架相关操作并进行typescript入门；在一定程度上typescript和面向对象语言Java、Net等很相似，如果你之前有JavaScript和Java的基础，那么应该恭喜你，你的学习速度将会倍速提高
