@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-03-13 22:45:54
+ * @LastEditTime: 2021-03-13 22:53:20
 -->
 
 <p align="center">
@@ -374,7 +374,7 @@
 - 算法分析
 
 
-#### 查找
+### 查找
 
 
 - 顺序查找
@@ -385,7 +385,7 @@
 - 字符串模式匹配(KPM)
 
 
-#### 排序
+### 排序
 
 
 - 插入排序
@@ -397,7 +397,7 @@
 - 外部排序比较
 
 
-#### LeetCode刷题
+### LeetCode刷题
 
 
 ## 数据库
@@ -406,7 +406,7 @@
 > 主讲数据库基础知识，结合node的简单使用，相关的部署方案参照下方的文档
 
 
-#### MySQL
+### MySQL
 
 
 - [【服务器版】MySQL的安装部署](https://mp.weixin.qq.com/s/U1OUZYHEChFDx03FvgbMHA)
@@ -417,7 +417,7 @@
 - [MySQL日志类型把我难哭了，你学废了吗？](docs/mysql/mysql日志比较.md)
 
 
-#### Redis
+### Redis
 
 
 > 将围绕redis基础概念、使用场景、使用方式、简单部署等方面 展开介绍，[主目录](redis)下有自己觉得还不错PDF文档~
@@ -433,7 +433,7 @@
 - [memCache与Redis比较](docs/redis/memCache与Redis.md)
 
 
-#### Mongo
+### Mongo
 
 
 - 基本介绍
@@ -445,7 +445,7 @@
 ## 服务部署
 
 
-#### nginx
+### nginx
 
 
 - [nginx安装，普通安装 Or Docker搞定？](docs/nginx/nginx基础部署.md)
@@ -454,7 +454,7 @@
 - [Nginx SSL证书，从此踏上Https之路](docs/nginx/nginx服务器ssl证书配置.md)
 
 
-#### docker
+### docker
 
 
 - 我与docker的第一次硬碰硬
@@ -463,7 +463,7 @@
 - 那些年，我常用的docker指令操作汇总
 
 
-#### docker-compose
+### docker-compose
 
 
 - 听说你装了N次都没搞定？
@@ -471,7 +471,7 @@
 - [我了解的docker-compose都在这里了](https://mp.weixin.qq.com/s/nC4nF51xn61TZlenuUxDog)
 
 
-#### linux下shell编程
+### linux下shell编程
 
 - [shell基础整理](https://mp.weixin.qq.com/s/gctrWdB1JEK59_a9tJQSkg)
 - [操作mysql数据库](shell/shell连接mysql.md)
@@ -482,7 +482,7 @@
 ## 服务网关
 
 
-#### kong
+### kong
 
 
 - [kong的的基本介绍](/api-gateway/kong/kong的基本介绍.md)
@@ -491,7 +491,7 @@
 - 可视化管理界面介绍
 
 
-#### konga
+### konga
 
 
 - 基本介绍与docker部署
@@ -499,7 +499,7 @@
 - 路由管理
 
 
-#### kong-dashboard
+### kong-dashboard
 
 
 - docker简单部署
@@ -510,19 +510,19 @@
 ## 服务注册
 
 
-#### Apollo
+### Apollo
 
 
 > 携程开发的配置中心经典项目，可集成多语言客户端，实现灰度部署，在分布式微服务的场景下抽离出服务配置，方便统一管理、发布
 
 
-#### Consul
+### Consul
 
 
 > 服务注册、发现，key-value键值对管理
 
 
-#### Nacos
+### Nacos
 
 
 > 背靠国内一线互联网大厂——阿里巴巴，也是可适用于微服务下的配置管理，支持Java、Nodejs等主流语言，目前生态良好，技术支持表现一般，属于Apollo替代产品
@@ -536,19 +536,19 @@
 > 目前个人了解的有：RabbitMQ、Kafka、RocketMQ
 
 
-#### RabbitMQ
+### RabbitMQ
 
 
-#### kafka
+### kafka
 
 
-#### RocketMQ
+### RocketMQ
 
 
 ## RPC框架
 
 
-#### gRPC
+### gRPC
 
 
 > gRPC 一开始由 google 开发，是一款语言中立、平台中立、开源的远程过程调用(RPC)系统，tensorflow分布式与tensorflow serving底层通信都是是用的grpc。我自己基于JavaScript技术栈上较多的接触到gRPC，传送门:[基于js下各框架grpc的使用]()
@@ -572,13 +572,13 @@
 
 
 
-#### Dubbo
+### Dubbo
 
 
 > Alibaba开发的一个RPC框架，远程接口基于Java Interface, 依托于Spring框架(**Java技术栈重点研究**)
 
 
-#### Thrift
+### Thrift
 
 
 > Apache的一个项目(http://thrift.apache.org)，前身是Facebook开发的一个RPC框架，采用thrift作为IDL (Interface description language)。
@@ -592,19 +592,19 @@
 - [ELK基础概念与常用架构整理](docs/elk/基础概念与常用架构整理.md)
 
 
-#### ElasticSearch
+### ElasticSearch
 
 
 > 数据存储
 
 
-#### Logstash
+### Logstash
 
 
 > 数据收集
 
 
-#### Kibana
+### Kibana
 
 
 > 数据展示
@@ -618,25 +618,25 @@
 > 常用工具：promethus 、grafana、zabbix、lepus等
 
 
-#### Prometheus
+### Prometheus
 
 
-#### Grafana
+### Grafana
 
 
-#### Zabbix
+### Zabbix
 
 
-#### lepus(天兔)
+### lepus(天兔)
 
 
 ## 高可用架构
 
 
-#### MySQL集群
+### MySQL集群
 
 
-##### 主从同步
+#### 主从同步
 
 
 > 实现功能：主从服务器数据一致，低延迟、高并发
@@ -647,7 +647,7 @@
 - 主主复制
 
 
-##### 代理中间件
+#### 代理中间件
 
 
 > 实现功能：读写分离、分库分表、负载均衡、故障切换
@@ -696,19 +696,19 @@
 - jmeter
 
 
-#### Redis集群
+## Redis集群
 
 
 > 持续整理中...
 
 
-##### 简单主从模式
+### 简单主从模式
 
 
-#### 哨兵模式
+### 哨兵模式
 
 
-##### cluster模式
+### cluster模式
 
 
 ## 网站搭建
@@ -915,25 +915,29 @@
 ## 赞赏支持
 
 
-> 相逢不用忙归去，明日黄花蝶也愁；若系列文章对你有帮助，不如请作者喝一杯伏见桃山...
-> 
-> **赞赏过的一定要扫下方右侧微信跟我说呀！！！！！！**
+**赞赏过的一定要微信跟我说呀！！！！！！**
+
 
 <a name="wechat"></a>
+
+
 <div align="left">
-<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="300" height="300" style="border-radius:10px;" />
+<img src="https://s3.ax1x.com/2021/03/13/6wdNy4.jpg" width="300" height="300" style="border-radius:5px;" />
 
 
 </div>
+
 
 
 ## 联系我
 
 
-> 对仓库有任何问题或建议，欢迎微信“骚扰”，商务合作请备注！
+有任何问题或建议，欢迎微信“骚扰”，商务合作请备注！
+
 <div align="left">
-<img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="300" height="300"  style="border-radius:10px;"/>
+<img src="https://s3.ax1x.com/2021/03/13/6wdDFx.jpg" width="300" height="300"  style="border-radius:5px;"/>
 </div>
+
 
 
 ## 鸣谢
@@ -963,10 +967,16 @@
 ## 公众号
 
 
-如果大家想要实时关注我更新的文章以及我的日常的话，可以关注我的公众号，基本每天都会更新技术和各种吹水文章，就当做是记录心情、成长的地方吧
+- 相逢不用忙归去，明日黄花蝶也愁....
+
+- 若系列文章对你有所帮助，不如来公众号交个朋友吧.
+
 
 <a name="gzh"></a>
 
-<div>
-  <img src="https://cdn.142vip.cn/gzh.png"  style="border-radius:10px;">
-</div>
+
+<p>
+  <img src="https://www.142vip.cn/assets/gzh.png"  style="border-radius:10px;">
+</p>
+
+
