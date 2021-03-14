@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-03-13 22:53:20
+ * @LastEditTime: 2021-03-14 10:30:34
 -->
 
 <p align="center">
@@ -26,7 +26,7 @@
 
 ##
 <div align="center" style="font-size:20px">
-  <a href="https://gitee.com/mmdapl/JavaScriptCollection" target="_blank">码云版</a> 
+  <a href="https://gitee.com/mmdapl/JavaScriptCollection" target="_blank">国内访问</a> 
   <!-- || 
   <a href="readme-wechat.md" target="_blank">微信版</a> -->
 </div>
