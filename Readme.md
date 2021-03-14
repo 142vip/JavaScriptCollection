@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-03-14 10:30:34
+ * @LastEditTime: 2021-03-14 22:57:54
 -->
 
 <p align="center">
@@ -105,53 +105,52 @@
 > **本级目录下的JavaScript内容没有发表到[博客](http://blog.142vip.cn)上,建议对照[脑图](docs/javascript/README.md)在[JavaScript主目录](javascript)下学习**,依赖官方文档及自身对JavaScript语言的初步了解，进行的关于JavaScript知识整理，主要目的是复习基础概念、了解新特性、熟练ES6/7操作；整体相对来说由易到难，方便后续查阅学习~
 
 
-#### 快速入门
+<!-- #### 快速入门 -->
 
 
-- [简单介绍](docs/javascript/快速入门/javascript简单介绍.md)
-- [快速了解](docs/javascript/快速入门/javascript快速入门.md)
-- [JavasScript开发规范](docs/javascript/JavaScript开发规范.md)
+- [【快速入门】简单介绍](docs/javascript/快速入门/javascript简单介绍.md)
+- [【快速入门】快速了解](docs/javascript/快速入门/javascript快速入门.md)
+- [【快速入门】JavasScript开发规范](docs/javascript/JavaScript开发规范.md)
 
 
-#### 基础教程
+<!-- #### 基础教程 -->
 
 
-- [语法与数据结构](docs/javascript/基础教程/javascript语法与数据结构.md)
-- [循环与迭代](docs/javascript/基础教程/javascript循环与迭代.md)
-- [流程控制与错误处理](docs/javascript/基础教程/javascript流程控制与错误处理.md)
-- [表达式和运算符](docs/javascript/基础教程/javascript表达式和运算符.md)
-- [函数和方法](docs/javascript/基础教程/javascript函数.md)
-- [数字和日期](docs/javascript/基础教程/javascript数字和日期.md)
-- [对象的使用](docs/javascript/基础教程/javascript对象的使用.md)
-- [正则表达式](docs/javascript/基础教程/javascript正则表达式.md)
-- [promise对象的使用](docs/javascript/基础教程/promise对象的使用.md)
-- [modules模块](docs/javascript/基础教程/modules模块.md)
+- [【基础教程】语法与数据结构](docs/javascript/基础教程/javascript语法与数据结构.md)
+- [【基础教程】循环与迭代](docs/javascript/基础教程/javascript循环与迭代.md)
+- [【基础教程】流程控制与错误处理](docs/javascript/基础教程/javascript流程控制与错误处理.md)
+- [【基础教程】表达式和运算符](docs/javascript/基础教程/javascript表达式和运算符.md)
+- [【基础教程】函数和方法](docs/javascript/基础教程/javascript函数.md)
+- [【基础教程】数字和日期](docs/javascript/基础教程/javascript数字和日期.md)
+- [【基础教程】对象的使用](docs/javascript/基础教程/javascript对象的使用.md)
+- [【基础教程】正则表达式](docs/javascript/基础教程/javascript正则表达式.md)
+- [【基础教程】promise对象的使用](docs/javascript/基础教程/promise对象的使用.md)
+- [【基础教程】modules模块](docs/javascript/基础教程/modules模块.md)
 
 
-#### 中级教程
+<!-- #### 中级教程 -->
 
 
-- [Promise对象](docs/javascript/中级教程/promise对象.md)
-- [async函数](docs/javascript/中级教程/async函数.md)
-- [class类](docs/javascript/中级教程/class类.md)
+- [【中级教程】Promise对象](docs/javascript/中级教程/promise对象.md)
+- [【中级教程】async函数](docs/javascript/中级教程/async函数.md)
+- [【中级教程】class类](docs/javascript/中级教程/class类.md)
 
 
-#### 高级教程
+<!-- #### 高级教程 -->
 
 
-- [不一样的ajax](docs/javascript/高级教程/不一样的ajax.md)
-- [什么是事件循环](docs/javascript/高级教程/什么是事件循环.md)
-
-- [JSON.stringify()的三个参数]()
-
-
-#### 最后稻草
+- [【高级教程】不一样的ajax](docs/javascript/高级教程/不一样的ajax.md)
+- [【高级教程】什么是事件循环](docs/javascript/高级教程/什么是事件循环.md)
+- [【高级教程】JSON.stringify()的三个参数]()
 
 
-- [ES6、ES7、ES8、ES9、ES10的新特性](docs/javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
-- [ES2020新特性](docs/javascript/最后稻草/ES2020新特性.md)
-- [JavaScript 工具函数大全](docs/javascript/最后稻草/JavaScript工具函数大全.md)
-- [常用函数方法整理](docs/javascript/最后稻草/常用函数方法整理.md)
+<!-- #### 最后稻草 -->
+
+
+- [【最后稻草】ES6、ES7、ES8、ES9、ES10的新特性](docs/javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
+- [【最后稻草】ES2020新特性](docs/javascript/最后稻草/ES2020新特性.md)
+- [【最后稻草】JavaScript 工具函数大全](docs/javascript/最后稻草/JavaScript工具函数大全.md)
+- [【最后稻草】常用函数方法整理](docs/javascript/最后稻草/常用函数方法整理.md)
 
 
 ### JQuery
