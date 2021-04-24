@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-24 21:20:50
+ * @LastEditTime: 2021-04-25 07:39:07
 -->
 
 <p align="center">
@@ -770,11 +770,8 @@
 
 
 <div align="left">
-<img src="https://s3.ax1x.com/2021/03/13/6wdNy4.jpg" width="300" height="300" style="border-radius:5px;" />
-
-
+<img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/wechat_donate.png" width="300" height="300" style="border-radius:5px;" />
 </div>
-
 
 
 ## 联系我
@@ -783,9 +780,8 @@
 有任何问题或建议，欢迎微信“骚扰”，商务合作请备注！
 
 <div align="left">
-<img src="https://s3.ax1x.com/2021/03/13/6wdDFx.jpg" width="300" height="300"  style="border-radius:5px;"/>
+<img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/wechat_code.jpg" width="300" height="300"  style="border-radius:5px;"/>
 </div>
-
 
 
 ## 鸣谢
@@ -824,7 +820,9 @@
 
 
 <p>
-  <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/gongzhonghao.jpg"  style="border-radius:10px;">
+  <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/gongzhonghao.jpg"  style="border-radius:10px;">
 </p>
+
+
 
 
