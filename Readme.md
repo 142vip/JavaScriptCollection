@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-13 07:34:39
+ * @LastEditTime: 2021-04-24 21:19:00
 -->
 
 <p align="center">
@@ -26,7 +26,7 @@
 
 ##
 <div align="center" style="font-size:20px">
-  <a href="https://gitee.com/mmdapl/JavaScriptCollection" target="_blank">国内访问</a> 
+  <!-- <a href="https://gitee.com/mmdapl/JavaScriptCollection" target="_blank">国内访问</a>  -->
   <!-- || 
   <a href="readme-wechat.md" target="_blank">微信版</a> -->
 </div>
@@ -42,13 +42,13 @@
 
 
 
-## 关于作者
+<!-- ## 关于作者
 
 
 - [个人项目整理](http://blog.142vip.cn/s/projects)
 
 
-- [自我介绍]()
+- [自我介绍]() -->
 
 
 ## 思维导图
@@ -824,7 +824,7 @@
 
 
 <p>
-  <img src="https://www.142vip.cn/assets/gzh.png"  style="border-radius:10px;">
+  <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/gongzhonghao.jpg"  style="border-radius:10px;">
 </p>
 
 
