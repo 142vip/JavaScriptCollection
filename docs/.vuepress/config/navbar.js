@@ -1,0 +1,18 @@
+/*
+ * @Description: 
+ * @Version: Beta1.0
+ * @Author: 【B站&公众号】Rong姐姐好可爱
+ * @Date: 2022-04-09 23:17:29
+ * @LastEditors: 【B站&公众号】Rong姐姐好可爱
+ * @LastEditTime: 2022-04-10 00:51:10
+ */
+module.exports = [
+  {
+    text: "Home",
+    link: "/"
+  },
+  {
+    text: "读书",
+    link: "/read_books/"
+  },
+];
