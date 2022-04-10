@@ -1,7 +1,7 @@
 export const siteData = {
   "base": "/",
   "lang": "en-US",
-  "title": "JavaScriptCollection",
+  "title": "凡是过往、皆为序章",
   "description": "一本有趣的JavaScript合集",
   "head": [
     [

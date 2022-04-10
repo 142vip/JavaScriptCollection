@@ -1,5 +1,6 @@
 export const themeData = {
   "logo": "./favicon.ico",
+  "darkMode": false,
   "navbar": [
     {
       "text": "前端",
@@ -106,15 +107,15 @@ export const themeData = {
           "children": [
             {
               "text": "Redis",
-              "link": "/"
+              "link": "/database/redis"
             },
             {
               "text": "MySQL",
-              "link": "/"
+              "link": "/database/mysql"
             },
             {
               "text": "Mongo",
-              "link": "/"
+              "link": "/database/mongo"
             }
           ]
         },
@@ -123,7 +124,7 @@ export const themeData = {
           "children": [
             {
               "text": "RabbitMQ",
-              "link": "/"
+              "link": "/mq"
             }
           ]
         },
@@ -164,7 +165,7 @@ export const themeData = {
       "children": [
         {
           "text": "刷题整理",
-          "link": "/"
+          "link": "/solo_algorithm"
         },
         {
           "text": "刷题平台",
@@ -190,22 +191,22 @@ export const themeData = {
       "children": [
         {
           "text": "常见面试题",
-          "link": "/"
+          "link": "/battle_interview/interview_problems"
         },
         {
           "text": "面经分享",
-          "link": "/"
+          "link": "/battle_interview/introduce_share"
         },
         {
           "text": "工作机会",
           "children": [
             {
               "text": "校招",
-              "link": "/school"
+              "link": "/battle_interview/school_recruit"
             },
             {
               "text": "社招",
-              "link": "/"
+              "link": "/battle_interview/social_recruit"
             }
           ]
         },
@@ -269,6 +270,10 @@ export const themeData = {
         {
           "text": "日常学习",
           "link": "/"
+        },
+        {
+          "text": "历史版本",
+          "link": "ddd"
         }
       ]
     },
@@ -277,7 +282,7 @@ export const themeData = {
       "children": [
         {
           "text": "链接汇总",
-          "link": "/"
+          "link": "/sum_links"
         },
         {
           "text": "技术文档",
@@ -292,34 +297,32 @@ export const themeData = {
     }
   ],
   "sidebar": {
-    "/read_books/": [
+    "/read_books": [
       {
-        "title": "Group 1",
-        "path": "/foo/",
-        "collapsable": false,
-        "sidebarDepth": 1,
+        "text": "Foo",
+        "link": "/foo/",
         "children": [
-          "/"
+          {
+            "text": "github",
+            "link": "https://github.com",
+            "children": []
+          },
+          "/foo/bar.md"
         ]
       },
-      {
-        "title": "Group 2",
-        "children": [],
-        "initialOpenGroupIndex": -1
-      }
+      "/bar/README.md"
     ]
   },
   "smoothScroll": true,
   "lastUpdated": true,
   "lastUpdatedText": "最近更新",
-  "contributorsText": "鸣谢",
+  "contributorsText": "感谢",
   "notFound": [
     "not exist"
   ],
   "backToHome": "返回首页",
   "repo": "https://github.com/mmdapl/JavaScriptCollection",
-  "editLinks": true,
-  "editLinkText": "帮助我们改善此页面！",
+  "editLink": false,
   "displayAllHeaders": true,
   "search": true,
   "searchMaxSuggestions": 10,
@@ -328,11 +331,10 @@ export const themeData = {
       "selectLanguageName": "English"
     }
   },
-  "darkMode": true,
   "selectLanguageText": "Languages",
   "selectLanguageAriaLabel": "Select language",
   "sidebarDepth": 2,
-  "editLink": true,
+  "editLinkText": "Edit this page",
   "contributors": true,
   "openInNewWindow": "open in new window",
   "toggleDarkMode": "toggle dark mode",

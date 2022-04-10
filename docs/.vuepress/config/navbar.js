@@ -4,7 +4,7 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2022-04-09 23:17:29
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-10 11:02:07
+ * @LastEditTime: 2022-04-10 22:42:52
  */
 module.exports = [
   {
@@ -88,19 +88,19 @@ module.exports = [
     {
       text: '数据库',
       children: [{
-        text: 'Redis', link: '/',
+        text: 'Redis', link: '/database/redis',
       },
       {
-        text: 'MySQL', link: '/'
+        text: 'MySQL', link: '/database/mysql'
       },
       {
-        text: 'Mongo', link: '/'
+        text: 'Mongo', link: '/database/mongo'
       }]
     },
     {
       text: '消息中间件',
       children: [{
-        text: 'RabbitMQ', link: '/',
+        text: 'RabbitMQ', link: '/mq',
       },
         // {
         //   text: 'Kafka', link: '/'
@@ -136,7 +136,7 @@ module.exports = [
   {
     text: "Solo算法",
     children: [{
-      text: '刷题整理', link: '/'
+      text: '刷题整理', link: '/solo_algorithm'
     }, {
       text: '刷题平台',
       // C语言网(https://www.dotcpp.com)
@@ -168,17 +168,17 @@ module.exports = [
     text: "Battle面试官",
     children: [{
       text: '常见面试题',
-      link: '/'
+      link: '/battle_interview/interview_problems'
     }, {
       text: '面经分享',
-      link: '/'
+      link: '/battle_interview/introduce_share'
     }, {
       text: '工作机会',
       children: [{
-        text: '校招', link: '/school',
+        text: '校招', link: '/battle_interview/school_recruit',
       },
       {
-        text: '社招', link: '/'
+        text: '社招', link: '/battle_interview/social_recruit'
       }]
     },
     {
@@ -224,12 +224,16 @@ module.exports = [
     },
     {
       text: '日常学习', link: '/'
-    }]
+    },
+    {
+      text:'历史版本',link:'ddd'
+    }
+  ]
   },
   {
     text: '纸飞机',
     children: [{
-      text: '链接汇总', link: '/'
+      text: '链接汇总', link: '/sum_links'
     }, {
       text: '技术文档',
       children: [{
