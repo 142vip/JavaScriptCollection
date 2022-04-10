@@ -467,8 +467,14 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1649524205000,
+    "contributors": [
+      {
+        "name": "mmdapl",
+        "email": "2237221210@qq.com",
+        "commits": 1
+      }
+    ]
   },
   "filePathRelative": "read_books/Readme.md"
 }

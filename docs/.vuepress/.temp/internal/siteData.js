@@ -2,13 +2,13 @@ export const siteData = {
   "base": "/",
   "lang": "en-US",
   "title": "JavaScriptCollection",
-  "description": "A lightweight creator for VuePress project.",
+  "description": "一本有趣的JavaScript合集",
   "head": [
     [
       "link",
       {
         "rel": "icon",
-        "href": "/assets/logo.png"
+        "href": "./favicon.ico"
       }
     ]
   ],
