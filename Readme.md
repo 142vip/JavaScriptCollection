@@ -5,7 +5,7 @@
  * @Autor: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-06-04 22:07:53
+ * @LastEditTime: 2022-04-10 22:53:43
 -->
 
 <p align="center">
@@ -935,10 +935,18 @@
 </div>
 
 
-## 鸣谢
 
 
-以下排名不分先后!([详细统计]())
+
+
+
+
+
+
+### 赞赏列表
+
+
+以下排名不分先后! [详细统计]()
 
 
 <div>
@@ -950,21 +958,22 @@
 </div>
 
 
-## 赞助列表
 
-以下排名不分先后!
+### 赞助商
 
-
-
+以下排名不分先后!  哈哈哈，还木有收到赞助，先留坑
 
 
 
-## 公众号
 
+---
+### 联系作者
 
-- 相逢不用忙归去，明日黄花蝶也愁....
+若系列文章对你有所帮助，欢迎订阅公众号，获取更多内容。也可微信”骚扰“，商务合作请备注来意
 
-- 若系列文章对你有所帮助，不如来公众号交个朋友吧.
+<!-- <div align="left">
+<img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/wechat_code.jpg" width="300" height="300"  style="border-radius:5px;"/>
+</div> -->
 
 
 <a name="gzh"></a>
@@ -974,6 +983,8 @@
   <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/gongzhonghao.jpg"  style="border-radius:10px;">
 </p>
 
+
+当然：**聊天 /提问 /建议 /提需求** 可以在本公众号直接**私信**，后台可以看到，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。
 
 
 
