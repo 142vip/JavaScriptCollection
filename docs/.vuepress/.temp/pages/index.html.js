@@ -55,6 +55,12 @@ export const data = {
     },
     {
       "level": 3,
+      "title": "提交记录",
+      "slug": "提交记录",
+      "children": []
+    },
+    {
+      "level": 3,
       "title": "赞赏列表",
       "slug": "赞赏列表",
       "children": []
@@ -73,12 +79,12 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1649578466000,
+    "updatedTime": 1649602218000,
     "contributors": [
       {
         "name": "mmdapl",
         "email": "2237221210@qq.com",
-        "commits": 2
+        "commits": 3
       }
     ]
   },

@@ -55,6 +55,7 @@
 </code></pre></div></CodeGroupItem>
 </CodeGroup>
 <p>查看项目启动日志并访问：<a href="http://localhost:4000" target="_blank" rel="noopener noreferrer">http://127.0.0.1:4000</a>，开启学习之旅吧~</p>
+<h3 id="提交记录" tabindex="-1"><a class="header-anchor" href="#提交记录" aria-hidden="true">#</a> 提交记录</h3>
 <hr>
 <h3 id="赞赏列表" tabindex="-1"><a class="header-anchor" href="#赞赏列表" aria-hidden="true">#</a> 赞赏列表</h3>
 <p>以下排名不分先后! <a href="">详细统计</a></p>

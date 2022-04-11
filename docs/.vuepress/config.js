@@ -4,7 +4,7 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-01-19 08:04:19
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-10 22:21:47
+ * @LastEditTime: 2022-04-11 09:05:07
  */
 module.exports = {
   title: "凡是过往、皆为序章",
@@ -12,7 +12,7 @@ module.exports = {
   base: "/",
   port: 4000,
   head: [
-    ["link", { rel: "icon", href: "./favicon.ico" }]
+    ["link", { rel: "icon", href: "./fight_favicon.ico" }]
   ],
   themeConfig: {
     logo: "./favicon.ico",
