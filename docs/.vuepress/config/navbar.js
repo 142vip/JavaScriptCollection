@@ -4,21 +4,21 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2022-04-09 23:17:29
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-10 22:42:52
+ * @LastEditTime: 2022-04-13 08:52:00
  */
 module.exports = [
   {
-    text: "前端",
+    text: "前端【Web】",
     children: [{
       text: '基础入门',
       children: [{
-        text: 'html',
+        text: 'html相关',
         link: '/html'
       }, {
-        text: 'js',
+        text: 'js相关',
         link: '/js'
       }, {
-        text: 'css',
+        text: 'css相关',
         link: '/css'
       }]
     }, {
@@ -55,6 +55,15 @@ module.exports = [
       }, {
         text: 'Ant-design-vue',
         link: '/css'
+      }]
+    }, {
+      text: '常见部署',
+      children: [{
+        text: '静态资源',
+        link: '/test'
+      }, {
+        text: '前后端分离',
+        link: '/fix'
       }]
     }
     ]
@@ -152,16 +161,16 @@ module.exports = [
         }
       ]
     },
-    // {
-    //   text: '刷题平台',
-    //   children: [
-    //     {
-    //       text: '牛客网', link: 'https://www.nowcoder.com/'
-    //     }, {
-    //       text: 'LeetCode', link: 'https://leetcode-cn.com/'
-    //     }
-    //   ]
-    // },
+      // {
+      //   text: '刷题平台',
+      //   children: [
+      //     {
+      //       text: '牛客网', link: 'https://www.nowcoder.com/'
+      //     }, {
+      //       text: 'LeetCode', link: 'https://leetcode-cn.com/'
+      //     }
+      //   ]
+      // },
     ]
   },
   {
@@ -203,7 +212,7 @@ module.exports = [
           text: '了不起的Node.js', link: '/'
         },
         {
-          text: '深入浅出Node.js', link: '/'
+          text: '深入浅出Node.js', link: '/go'
         }]
       },
       {
@@ -212,33 +221,37 @@ module.exports = [
           text: '你好，孤独', link: '/',
         },
         {
-          text: '社招', link: '/'
+          text: '测试', link: '/f111'
         }]
       }
     ]
   },
+  // {
+  //   text: '其他',
+  //   children: [{
+  //     text: '面试突击', link: '/',
+  //   },
+  //   {
+  //     text: '日常学习', link: '/'
+  //   },
+  //   {
+  //     text:'历史版本',link:'ddd'
+  //   }
+  // ]
+  // },
   {
-    text: '其他',
+    text: '常用网站',
     children: [{
-      text: '面试突击', link: '/',
-    },
-    {
-      text: '日常学习', link: '/'
-    },
-    {
-      text:'历史版本',link:'ddd'
-    }
-  ]
-  },
-  {
-    text: '纸飞机',
-    children: [{
-      text: '链接汇总', link: '/sum_links'
+      text: '平台汇总', link: '/sum_links'
     }, {
       text: '技术文档',
       children: [{
         text: '百度', link: 'http://www.baidu.com'
       }]
     }]
+  },
+  {
+    text: '工作机会',
+    link: '/2332323'
   },
 ];

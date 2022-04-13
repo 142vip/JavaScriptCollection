@@ -1,6 +1,6 @@
 export const data = {
-  "key": "v-73999699",
-  "path": "/front_end/ui_framework/",
+  "key": "v-217c40b6",
+  "path": "/sum_links/api_docs.html",
   "title": "",
   "lang": "en-US",
   "frontmatter": {},
@@ -8,22 +8,16 @@ export const data = {
   "headers": [
     {
       "level": 2,
-      "title": "UI框架",
-      "slug": "ui框架",
+      "title": "技术文档",
+      "slug": "技术文档",
       "children": []
     }
   ],
   "git": {
-    "updatedTime": 1649602218000,
-    "contributors": [
-      {
-        "name": "mmdapl",
-        "email": "2237221210@qq.com",
-        "commits": 1
-      }
-    ]
+    "updatedTime": null,
+    "contributors": []
   },
-  "filePathRelative": "front_end/ui_framework/Readme.md"
+  "filePathRelative": "sum_links/api_docs.md"
 }
 
 if (import.meta.webpackHot) {

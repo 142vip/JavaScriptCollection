@@ -14,6 +14,11 @@ export const data = {
         "text": "快速开始→",
         "link": "/guide/",
         "type": "primary"
+      },
+      {
+        "text": "招聘广告",
+        "link": "/gangg",
+        "type": "secondary"
       }
     ],
     "features": [
@@ -89,4 +94,17 @@ export const data = {
     ]
   },
   "filePathRelative": "README.md"
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
 }

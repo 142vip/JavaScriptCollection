@@ -3,21 +3,21 @@ export const themeData = {
   "darkMode": false,
   "navbar": [
     {
-      "text": "前端",
+      "text": "前端【Web】",
       "children": [
         {
           "text": "基础入门",
           "children": [
             {
-              "text": "html",
+              "text": "html相关",
               "link": "/html"
             },
             {
-              "text": "js",
+              "text": "js相关",
               "link": "/js"
             },
             {
-              "text": "css",
+              "text": "css相关",
               "link": "/css"
             }
           ]
@@ -65,6 +65,19 @@ export const themeData = {
             {
               "text": "Ant-design-vue",
               "link": "/css"
+            }
+          ]
+        },
+        {
+          "text": "常见部署",
+          "children": [
+            {
+              "text": "静态资源",
+              "link": "/test"
+            },
+            {
+              "text": "前后端分离",
+              "link": "/fix"
             }
           ]
         }
@@ -241,7 +254,7 @@ export const themeData = {
             },
             {
               "text": "深入浅出Node.js",
-              "link": "/"
+              "link": "/go"
             }
           ]
         },
@@ -253,35 +266,18 @@ export const themeData = {
               "link": "/"
             },
             {
-              "text": "社招",
-              "link": "/"
+              "text": "测试",
+              "link": "/f111"
             }
           ]
         }
       ]
     },
     {
-      "text": "其他",
+      "text": "常用网站",
       "children": [
         {
-          "text": "面试突击",
-          "link": "/"
-        },
-        {
-          "text": "日常学习",
-          "link": "/"
-        },
-        {
-          "text": "历史版本",
-          "link": "ddd"
-        }
-      ]
-    },
-    {
-      "text": "纸飞机",
-      "children": [
-        {
-          "text": "链接汇总",
+          "text": "平台汇总",
           "link": "/sum_links"
         },
         {
@@ -294,6 +290,10 @@ export const themeData = {
           ]
         }
       ]
+    },
+    {
+      "text": "工作机会",
+      "link": "/2332323"
     }
   ],
   "sidebar": {
@@ -316,7 +316,7 @@ export const themeData = {
   "smoothScroll": true,
   "lastUpdated": true,
   "lastUpdatedText": "最近更新",
-  "contributorsText": "感谢",
+  "contributorsText": "贡献者",
   "notFound": [
     "not exist"
   ],
@@ -339,4 +339,17 @@ export const themeData = {
   "openInNewWindow": "open in new window",
   "toggleDarkMode": "toggle dark mode",
   "toggleSidebar": "toggle sidebar"
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateThemeData) {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ themeData }) => {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  })
 }

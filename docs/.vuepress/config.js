@@ -4,7 +4,7 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-01-19 08:04:19
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-11 09:05:07
+ * @LastEditTime: 2022-04-13 09:02:03
  */
 module.exports = {
   title: "凡是过往、皆为序章",
@@ -22,7 +22,7 @@ module.exports = {
     smoothScroll: true,
     lastUpdated: true,
     lastUpdatedText: "最近更新",
-    contributorsText: '感谢',
+    contributorsText: '贡献者',
     notFound: ['not exist'],// 自定义404页面提示语，数组
     backToHome: '返回首页', // 返回首页
     repo: "https://github.com/mmdapl/JavaScriptCollection",

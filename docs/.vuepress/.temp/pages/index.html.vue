@@ -78,5 +78,6 @@
 <p>
   <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/gongzhonghao.jpg"  style="border-radius:10px;">
 </p>
-<p>当然：<strong>聊天 /提问 /建议 /提需求</strong> 可以在本公众号直接<strong>私信</strong>，后台可以看到，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。</p>
+<p>交流/加群/互看朋友圈
+当然：<strong>聊天 /提问 /建议 /提需求</strong> 可以在本公众号直接<strong>私信</strong>，后台可以看到，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。</p>
 </template>
