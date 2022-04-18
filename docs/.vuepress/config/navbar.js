@@ -4,31 +4,35 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2022-04-09 23:17:29
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-13 08:52:00
+ * @LastEditTime: 2022-04-18 23:23:20
  */
 module.exports = [
+  {
+    text:'首页',
+    link:'/'
+  },
   {
     text: "前端【Web】",
     children: [{
       text: '基础入门',
       children: [{
         text: 'html相关',
-        link: '/html'
+        link: '/front_end/base_begin/html'
       }, {
         text: 'js相关',
-        link: '/js'
+        link: '/front_end/base_begin/javascript'
       }, {
         text: 'css相关',
-        link: '/css'
+        link: '/front_end/base_begin/css'
       }]
     }, {
       text: '前端框架',
       children: [{
         text: 'JQuery.js',
-        link: '/html'
+        link: '/front_end/front_framework/jquery'
       }, {
         text: 'Vue.js',
-        link: '/js'
+        link: '/front_end/front_framework/vue'
       },
       {
         text: 'Nuxt.js',
@@ -59,11 +63,11 @@ module.exports = [
     }, {
       text: '常见部署',
       children: [{
-        text: '静态资源',
-        link: '/test'
+        text: '前端分离【nginx】',
+        link: '/front_end/server_deploy/static_nginx'
       }, {
-        text: '前后端分离',
-        link: '/fix'
+        text: '服务端渲染',
+        link: '/front_end/server_deploy/front_end_server'
       }]
     }
     ]
@@ -71,39 +75,39 @@ module.exports = [
   {
     text: "后端【Node.js】",
     children: [{
-      text: 'Node.js', link: '/school',
+      text: 'Node.js', link: '/server_end/node_learn',
     }, {
-      text: 'TypeScript', link: '/ts'
+      text: 'TypeScript', link: '/server_end/ts_learn'
     },
     {
       text: '常用框架',
       children: [{
-        text: 'Express和Koa', link: '/',
+        text: 'Express和Koa', link: '/server_end/framework/express_koa_learn',
       },
       // {
       //   text: 'Koa', link: '/'
       // },
       {
-        text: 'Egg.js', link: '/'
+        text: 'Egg.js', link: '/server_end/framework/egg_learn'
       },
       {
-        text: 'Nest.js', link: '/'
+        text: 'Nest.js', link: '/server_end/framework/nest_learn'
       },
       {
-        text: 'Midway', link: '/'
+        text: 'Midway', link: '/server_end/framework/midway_learn'
       }
       ]
     },
     {
       text: '数据库',
       children: [{
-        text: 'Redis', link: '/database/redis',
+        text: 'Redis', link: '/server_end/database/redis',
       },
       {
-        text: 'MySQL', link: '/database/mysql'
+        text: 'MySQL', link: '/server_end/database/mysql'
       },
       {
-        text: 'Mongo', link: '/database/mongo'
+        text: 'Mongo', link: '/server_end/database/mongo'
       }]
     },
     {
@@ -145,7 +149,7 @@ module.exports = [
   {
     text: "Solo算法",
     children: [{
-      text: '刷题整理', link: '/solo_algorithm'
+      text: '刷题整理', link: '/solo_algorithm/question_collections'
     }, {
       text: '刷题平台',
       // C语言网(https://www.dotcpp.com)
@@ -250,8 +254,8 @@ module.exports = [
       }]
     }]
   },
-  {
-    text: '工作机会',
-    link: '/2332323'
-  },
+  // {
+  //   text: '工作机会',
+  //   link: '/2332323'
+  // },
 ];

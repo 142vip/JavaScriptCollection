@@ -1,6 +1,6 @@
 export const data = {
-  "key": "v-217c40b6",
-  "path": "/sum_links/api_docs.html",
+  "key": "v-703a42ad",
+  "path": "/front_end/server_deploy/front_end_server.html",
   "title": "",
   "lang": "en-US",
   "frontmatter": {},
@@ -8,22 +8,16 @@ export const data = {
   "headers": [
     {
       "level": 2,
-      "title": "技术文档",
-      "slug": "技术文档",
+      "title": "前后端分离",
+      "slug": "前后端分离",
       "children": []
     }
   ],
   "git": {
-    "updatedTime": 1649812338000,
-    "contributors": [
-      {
-        "name": "mmdapl",
-        "email": "2237221210@qq.com",
-        "commits": 1
-      }
-    ]
+    "updatedTime": null,
+    "contributors": []
   },
-  "filePathRelative": "sum_links/api_docs.md"
+  "filePathRelative": "front_end/server_deploy/front_end_server.md"
 }
 
 if (import.meta.webpackHot) {

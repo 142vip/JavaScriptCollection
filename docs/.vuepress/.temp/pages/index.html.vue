@@ -80,4 +80,5 @@
 </p>
 <p>交流/加群/互看朋友圈
 当然：<strong>聊天 /提问 /建议 /提需求</strong> 可以在本公众号直接<strong>私信</strong>，后台可以看到，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。</p>
+<h3 id="外链" tabindex="-1"><a class="header-anchor" href="#外链" aria-hidden="true">#</a> 外链</h3>
 </template>

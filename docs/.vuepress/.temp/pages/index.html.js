@@ -8,7 +8,7 @@ export const data = {
     "heroImage": "https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png",
     "heroText": "JavaScriptCollection",
     "externalLinkIcon": false,
-    "tagline": "理论、实战相结合的JavaScript学习合集，内容持续更新...",
+    "tagline": "理论+实战模式下的硬核全栈学习合集，笔记内容持续更新...",
     "actions": [
       {
         "text": "快速开始→",
@@ -16,7 +16,7 @@ export const data = {
         "type": "primary"
       },
       {
-        "text": "招聘广告",
+        "text": "工作机会",
         "link": "/gangg",
         "type": "secondary"
       }
@@ -24,7 +24,7 @@ export const data = {
     "features": [
       {
         "title": "前端",
-        "details": "与官网同步的Egg.js框架基础知识整理，有效地降低日常开发和复习巩固的查询、学习时间。"
+        "details": "有效地降低日常开发和复习巩固的查询、学习时间。"
       },
       {
         "title": "后端",
@@ -81,15 +81,21 @@ export const data = {
       "title": "联系作者",
       "slug": "联系作者",
       "children": []
+    },
+    {
+      "level": 3,
+      "title": "外链",
+      "slug": "外链",
+      "children": []
     }
   ],
   "git": {
-    "updatedTime": 1649691037000,
+    "updatedTime": 1649812338000,
     "contributors": [
       {
         "name": "mmdapl",
         "email": "2237221210@qq.com",
-        "commits": 4
+        "commits": 5
       }
     ]
   },

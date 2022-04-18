@@ -1,6 +1,6 @@
 export const data = {
-  "key": "v-217c40b6",
-  "path": "/sum_links/api_docs.html",
+  "key": "v-5a0287b6",
+  "path": "/server_end/server_framework/",
   "title": "",
   "lang": "en-US",
   "frontmatter": {},
@@ -8,22 +8,16 @@ export const data = {
   "headers": [
     {
       "level": 2,
-      "title": "技术文档",
-      "slug": "技术文档",
+      "title": "服务端框架",
+      "slug": "服务端框架",
       "children": []
     }
   ],
   "git": {
-    "updatedTime": 1649812338000,
-    "contributors": [
-      {
-        "name": "mmdapl",
-        "email": "2237221210@qq.com",
-        "commits": 1
-      }
-    ]
+    "updatedTime": null,
+    "contributors": []
   },
-  "filePathRelative": "sum_links/api_docs.md"
+  "filePathRelative": "server_end/server_framework/Readme.md"
 }
 
 if (import.meta.webpackHot) {

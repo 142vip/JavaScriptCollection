@@ -3,7 +3,7 @@ home: true
 heroImage: https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png
 heroText: JavaScriptCollection
 externalLinkIcon: false 
-tagline: 理论、实战相结合的JavaScript学习合集，内容持续更新...
+tagline: 理论+实战模式下的硬核全栈学习合集，笔记内容持续更新...
 actions:
   # - text: 联系作者
   #   link: gzh
@@ -11,12 +11,12 @@ actions:
   - text: 快速开始→
     link: /guide/
     type: primary
-  - text: 招聘广告
+  - text: 工作机会
     link: /gangg
     type: secondary
 features:
 - title: 前端
-  details: 与官网同步的Egg.js框架基础知识整理，有效地降低日常开发和复习巩固的查询、学习时间。
+  details: 有效地降低日常开发和复习巩固的查询、学习时间。
 - title: 后端
   details: 官方插件的基础上，抽象、封装出适合自己功能的plus插件，能够快速集成、使用在新的项目中。
 - title: 算法
@@ -164,3 +164,6 @@ yarn run dev
 
 交流/加群/互看朋友圈
 当然：**聊天 /提问 /建议 /提需求** 可以在本公众号直接**私信**，后台可以看到，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。
+
+
+### 外链

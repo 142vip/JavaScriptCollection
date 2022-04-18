@@ -3,6 +3,10 @@ export const themeData = {
   "darkMode": false,
   "navbar": [
     {
+      "text": "首页",
+      "link": "/"
+    },
+    {
       "text": "前端【Web】",
       "children": [
         {
@@ -10,15 +14,15 @@ export const themeData = {
           "children": [
             {
               "text": "html相关",
-              "link": "/html"
+              "link": "/front_end/base_begin/html"
             },
             {
               "text": "js相关",
-              "link": "/js"
+              "link": "/front_end/base_begin/javascript"
             },
             {
               "text": "css相关",
-              "link": "/css"
+              "link": "/front_end/base_begin/css"
             }
           ]
         },
@@ -27,11 +31,11 @@ export const themeData = {
           "children": [
             {
               "text": "JQuery.js",
-              "link": "/html"
+              "link": "/front_end/front_framework/jquery"
             },
             {
               "text": "Vue.js",
-              "link": "/js"
+              "link": "/front_end/front_framework/vue"
             },
             {
               "text": "Nuxt.js",
@@ -72,12 +76,12 @@ export const themeData = {
           "text": "常见部署",
           "children": [
             {
-              "text": "静态资源",
-              "link": "/test"
+              "text": "前端分离【nginx】",
+              "link": "/front_end/server_deploy/static_nginx"
             },
             {
-              "text": "前后端分离",
-              "link": "/fix"
+              "text": "服务端渲染",
+              "link": "/front_end/server_deploy/front_end_server"
             }
           ]
         }
@@ -88,30 +92,30 @@ export const themeData = {
       "children": [
         {
           "text": "Node.js",
-          "link": "/school"
+          "link": "/server_end/node_learn"
         },
         {
           "text": "TypeScript",
-          "link": "/ts"
+          "link": "/server_end/ts_learn"
         },
         {
           "text": "常用框架",
           "children": [
             {
               "text": "Express和Koa",
-              "link": "/"
+              "link": "/server_end/framework/express_koa_learn"
             },
             {
               "text": "Egg.js",
-              "link": "/"
+              "link": "/server_end/framework/egg_learn"
             },
             {
               "text": "Nest.js",
-              "link": "/"
+              "link": "/server_end/framework/nest_learn"
             },
             {
               "text": "Midway",
-              "link": "/"
+              "link": "/server_end/framework/midway_learn"
             }
           ]
         },
@@ -120,15 +124,15 @@ export const themeData = {
           "children": [
             {
               "text": "Redis",
-              "link": "/database/redis"
+              "link": "/server_end/database/redis"
             },
             {
               "text": "MySQL",
-              "link": "/database/mysql"
+              "link": "/server_end/database/mysql"
             },
             {
               "text": "Mongo",
-              "link": "/database/mongo"
+              "link": "/server_end/database/mongo"
             }
           ]
         },
@@ -178,7 +182,7 @@ export const themeData = {
       "children": [
         {
           "text": "刷题整理",
-          "link": "/solo_algorithm"
+          "link": "/solo_algorithm/question_collections"
         },
         {
           "text": "刷题平台",
@@ -290,10 +294,6 @@ export const themeData = {
           ]
         }
       ]
-    },
-    {
-      "text": "工作机会",
-      "link": "/2332323"
     }
   ],
   "sidebar": {

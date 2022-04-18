@@ -1,29 +1,23 @@
 export const data = {
-  "key": "v-217c40b6",
-  "path": "/sum_links/api_docs.html",
+  "key": "v-d6dbc6d4",
+  "path": "/solo_algorithm/question_collections.html",
   "title": "",
   "lang": "en-US",
   "frontmatter": {},
   "excerpt": "",
   "headers": [
     {
-      "level": 2,
-      "title": "技术文档",
-      "slug": "技术文档",
+      "level": 3,
+      "title": "刷题整理",
+      "slug": "刷题整理",
       "children": []
     }
   ],
   "git": {
-    "updatedTime": 1649812338000,
-    "contributors": [
-      {
-        "name": "mmdapl",
-        "email": "2237221210@qq.com",
-        "commits": 1
-      }
-    ]
+    "updatedTime": null,
+    "contributors": []
   },
-  "filePathRelative": "sum_links/api_docs.md"
+  "filePathRelative": "solo_algorithm/question_collections.md"
 }
 
 if (import.meta.webpackHot) {
