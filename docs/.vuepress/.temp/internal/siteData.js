@@ -1,5 +1,5 @@
 export const siteData = {
-  "base": "/",
+  "base": "/JavaScriptCollection/",
   "lang": "en-US",
   "title": "凡是过往、皆为序章",
   "description": "一本有趣的JavaScript合集",
@@ -8,22 +8,9 @@ export const siteData = {
       "link",
       {
         "rel": "icon",
-        "href": "./fight_favicon.ico"
+        "href": "/fight_favicon.ico"
       }
     ]
   ],
   "locales": {}
-}
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSiteData) {
-    __VUE_HMR_RUNTIME__.updateSiteData(siteData)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ siteData }) => {
-    __VUE_HMR_RUNTIME__.updateSiteData(siteData)
-  })
 }

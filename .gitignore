@@ -97,6 +97,13 @@ dist
 # vuepress build output
 # .vuepress/dist
 
+## static resource 
+docs/.vuepress/.cache/
+docs/.vuepress/.temp/
+docs/.vuepress/dist/
+
+
+
 # Serverless directories
 .serverless/
 

@@ -1,4 +1,7 @@
 {
+  "name": "JavaScriptCollection合集",
+  "version": "Beta0.0.1",
+  "description": "一本有趣的JavaScript合集",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"

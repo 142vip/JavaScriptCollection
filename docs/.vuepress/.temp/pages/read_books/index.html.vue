@@ -419,8 +419,8 @@
 <h2 id="服务网关" tabindex="-1"><a class="header-anchor" href="#服务网关" aria-hidden="true">#</a> 服务网关</h2>
 <h3 id="kong" tabindex="-1"><a class="header-anchor" href="#kong" aria-hidden="true">#</a> kong</h3>
 <ul>
-<li><RouterLink to="/api-gateway/kong/kong%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D.html">kong的的基本介绍</RouterLink></li>
-<li><RouterLink to="/api-gateway/kong/%E5%9F%BA%E4%BA%8Edocker%E9%83%A8%E7%BD%B2kong%E7%BD%91%E5%85%B3%E6%9C%8D%E5%8A%A1.html">docker下kong的部署</RouterLink></li>
+<li><a href="/api-gateway/kong/kong%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D.md" target="_blank" rel="noopener noreferrer">kong的的基本介绍<ExternalLinkIcon/></a></li>
+<li><a href="/api-gateway/kong/%E5%9F%BA%E4%BA%8Edocker%E9%83%A8%E7%BD%B2kong%E7%BD%91%E5%85%B3%E6%9C%8D%E5%8A%A1.md" target="_blank" rel="noopener noreferrer">docker下kong的部署<ExternalLinkIcon/></a></li>
 <li>docker-compose搭建kong集群</li>
 <li>可视化管理界面介绍</li>
 </ul>

@@ -4,18 +4,18 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-01-19 08:04:19
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-13 09:02:03
+ * @LastEditTime: 2022-04-18 23:45:25
  */
 module.exports = {
   title: "凡是过往、皆为序章",
   description: "一本有趣的JavaScript合集",
-  base: "/",
+  base: "/JavaScriptCollection/",
   port: 4000,
   head: [
-    ["link", { rel: "icon", href: "./fight_favicon.ico" }]
+    ["link", { rel: "icon", href: "/fight_favicon.ico" }]
   ],
   themeConfig: {
-    logo: "./favicon.ico",
+    logo: "/favicon.ico",
     darkMode: false, // 禁用夜色
     navbar: require("./config/navbar"),  // 注意这个关键字有所改变
     sidebar: require("./config/sidebar"),
