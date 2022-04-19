@@ -47,7 +47,7 @@ export const data = {
         "details": "通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。"
       }
     ],
-    "footer": "Copyrights © 2019-2022 妍荣姑娘网络工作室",
+    "footer": "Copyrights © 2019-2022 妍荣姑娘网络工作室 Rong姐姐好可爱",
     "footerHtml": true
   },
   "excerpt": "",
@@ -100,4 +100,17 @@ export const data = {
     ]
   },
   "filePathRelative": "README.md"
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
 }

@@ -4,7 +4,7 @@
 <CodeGroup>
 <CodeGroupItem title="PNPM（推荐）" >
 <div class="language-bash ext-sh"><pre v-pre class="language-bash"><code><span class="token comment">## 进入cmd命令行，直接克隆仓库</span>
-<span class="token function">git</span> clone https://github.com/mmdapl/JavaScriptCollection.git
+<span class="token function">git</span> clone https://github.com/fairyfan1998/JavaScriptCollection.git
 
 <span class="token comment">## 进入JavaScriptCollection文件夹中</span>
 <span class="token builtin class-name">cd</span> JavaScriptCollection/
@@ -21,7 +21,7 @@
 </code></pre></div></CodeGroupItem>
 <CodeGroupItem title="  NPM  ">
 <div class="language-bash ext-sh"><pre v-pre class="language-bash"><code><span class="token comment">## 进入cmd命令行，直接克隆仓库</span>
-<span class="token function">git</span> clone https://github.com/mmdapl/JavaScriptCollection.git
+<span class="token function">git</span> clone https://github.com/fairyfan1998/JavaScriptCollection.git
 
 <span class="token comment">## 进入JavaScriptCollection文件夹中</span>
 <span class="token builtin class-name">cd</span> JavaScriptCollection/
@@ -38,7 +38,7 @@
 </code></pre></div></CodeGroupItem>
 <CodeGroupItem title=" YARN ">
 <div class="language-bash ext-sh"><pre v-pre class="language-bash"><code><span class="token comment">## 进入cmd命令行，直接克隆仓库</span>
-<span class="token function">git</span> clone https://github.com/mmdapl/JavaScriptCollection.git
+<span class="token function">git</span> clone https://github.com/fairyfan1998/JavaScriptCollection.git
 
 <span class="token comment">## 进入JavaScriptCollection文件夹中</span>
 <span class="token builtin class-name">cd</span> JavaScriptCollection/
@@ -62,7 +62,9 @@
 <div>
   <a href="https://github.com/ChiefPing" target="_blank">
     <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
-  </a>  <a href="https://github.com/xiaoliuxin" target="_blank">
+  </a> 
+  <a name="gzh"></a>
+   <a href="https://github.com/xiaoliuxin" target="_blank">
     <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
   </a>
 </div>
@@ -70,6 +72,17 @@
 <p>以下排名不分先后!  哈哈哈，还木有收到赞助，先留坑</p>
 <hr>
 <h3 id="联系作者" tabindex="-1"><a class="header-anchor" href="#联系作者" aria-hidden="true">#</a> 联系作者</h3>
+<div class="open-info-div">
+<!-- <a href="#gzh" target="self_blank"><img src="https://img.shields.io/badge/WeChat-公众号-5wd.svg"></a> 
+<a href="#wechat" target="_blank"><img src="https://img.shields.io/badge/WeChat-微信-yellow.svg"></a>  -->
+<a href="https://space.bilibili.com/350937042" target="_blank"><img src="https://img.shields.io/badge/Bilibili-B站-green.svg"></a> 
+<a href="https://142vip.cn" target="_blank"><img src="https://img.shields.io/badge/142vip-网站-orange.svg"></a>
+<a href="https://blog.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/blog-博客-blue.svg"></a>
+<a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Github-Github-9ac.svg"></a>
+<a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Gitee-码云-4ed.svg"></a>
+<a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
+<a href="https://juejin.im/user/448256476724807" target="_blank"><img src="https://img.shields.io/badge/JueJin-掘金-75c.svg"></a>
+</div>
 <p>若系列文章对你有所帮助，欢迎订阅公众号，获取更多内容。也可微信”骚扰“，商务合作请备注来意</p>
 <!-- <div align="left">
 <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/wechat_code.jpg" width="300" height="300"  style="border-radius:5px;"/>

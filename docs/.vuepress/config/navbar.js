@@ -4,7 +4,7 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2022-04-09 23:17:29
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-18 23:23:20
+ * @LastEditTime: 2022-04-19 08:41:23
  */
 module.exports = [
   {
@@ -126,14 +126,16 @@ module.exports = [
     {
       text: '容器相关',
       children: [{
-        text: 'Docker', link: '/',
+        text: 'Docker基础', link: '/server_end/container_learn/docker_base',
+      },
+
+      {
+        text: '服务部署', link: '/server_end/container_learn/server_deploy'
       },
       {
-        text: '', link: '/'
+        text: '服务集群编排', link: '/server_end/container_learn/docker_layout'
       },
-      {
-        text: '服务部署', link: '/'
-      }]
+      ]
     },
     {
       text: '测试',

@@ -5,9 +5,6 @@ heroText: JavaScriptCollection
 externalLinkIcon: false 
 tagline: 理论+实战模式下的硬核全栈学习合集，笔记内容持续更新...
 actions:
-  # - text: 联系作者
-  #   link: gzh
-  #   type: secondary
   - text: 快速开始→
     link: /guide/
     type: primary
@@ -27,7 +24,7 @@ features:
   details: 官方插件的基础上，抽象、封装出适合自己功能的plus插件，能够快速集成、使用在新的项目中。
 - title: 心路历程
   details: 通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。
-footer:    Copyrights © 2019-2022 妍荣姑娘网络工作室 
+footer:    Copyrights © 2019-2022 妍荣姑娘网络工作室 Rong姐姐好可爱
 footerHtml: true
 ---
 
@@ -44,7 +41,7 @@ footerHtml: true
 
 ```bash:no-line-numbers
 ## 进入cmd命令行，直接克隆仓库
-git clone https://github.com/mmdapl/JavaScriptCollection.git
+git clone https://github.com/fairyfan1998/JavaScriptCollection.git
 
 ## 进入JavaScriptCollection文件夹中
 cd JavaScriptCollection/
@@ -65,7 +62,7 @@ pnpm dev
 
 ```bash:no-line-numbers
 ## 进入cmd命令行，直接克隆仓库
-git clone https://github.com/mmdapl/JavaScriptCollection.git
+git clone https://github.com/fairyfan1998/JavaScriptCollection.git
 
 ## 进入JavaScriptCollection文件夹中
 cd JavaScriptCollection/
@@ -90,7 +87,7 @@ npm run dev
 
 ```bash:no-line-numbers
 ## 进入cmd命令行，直接克隆仓库
-git clone https://github.com/mmdapl/JavaScriptCollection.git
+git clone https://github.com/fairyfan1998/JavaScriptCollection.git
 
 ## 进入JavaScriptCollection文件夹中
 cd JavaScriptCollection/
@@ -131,7 +128,9 @@ yarn run dev
 <div>
   <a href="https://github.com/ChiefPing" target="_blank">
     <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
-  </a>  <a href="https://github.com/xiaoliuxin" target="_blank">
+  </a> 
+  <a name="gzh"></a>
+   <a href="https://github.com/xiaoliuxin" target="_blank">
     <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
   </a>
 </div>
@@ -147,6 +146,18 @@ yarn run dev
 
 ---
 ### 联系作者
+
+<div class="open-info-div">
+<!-- <a href="#gzh" target="self_blank"><img src="https://img.shields.io/badge/WeChat-公众号-5wd.svg"></a> 
+<a href="#wechat" target="_blank"><img src="https://img.shields.io/badge/WeChat-微信-yellow.svg"></a>  -->
+<a href="https://space.bilibili.com/350937042" target="_blank"><img src="https://img.shields.io/badge/Bilibili-B站-green.svg"></a> 
+<a href="https://142vip.cn" target="_blank"><img src="https://img.shields.io/badge/142vip-网站-orange.svg"></a>
+<a href="https://blog.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/blog-博客-blue.svg"></a>
+<a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Github-Github-9ac.svg"></a>
+<a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Gitee-码云-4ed.svg"></a>
+<a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
+<a href="https://juejin.im/user/448256476724807" target="_blank"><img src="https://img.shields.io/badge/JueJin-掘金-75c.svg"></a>
+</div>
 
 若系列文章对你有所帮助，欢迎订阅公众号，获取更多内容。也可微信”骚扰“，商务合作请备注来意
 
@@ -164,6 +175,8 @@ yarn run dev
 
 交流/加群/互看朋友圈
 当然：**聊天 /提问 /建议 /提需求** 可以在本公众号直接**私信**，后台可以看到，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。
+
+
 
 
 ### 外链

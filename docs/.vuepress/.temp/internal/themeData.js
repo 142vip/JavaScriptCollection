@@ -149,16 +149,16 @@ export const themeData = {
           "text": "容器相关",
           "children": [
             {
-              "text": "Docker",
-              "link": "/"
-            },
-            {
-              "text": "",
-              "link": "/"
+              "text": "Docker基础",
+              "link": "/server_end/container_learn/docker_base"
             },
             {
               "text": "服务部署",
-              "link": "/"
+              "link": "/server_end/container_learn/server_deploy"
+            },
+            {
+              "text": "服务集群编排",
+              "link": "/server_end/container_learn/docker_layout"
             }
           ]
         },
@@ -339,4 +339,17 @@ export const themeData = {
   "openInNewWindow": "open in new window",
   "toggleDarkMode": "toggle dark mode",
   "toggleSidebar": "toggle sidebar"
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateThemeData) {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ themeData }) => {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  })
 }
