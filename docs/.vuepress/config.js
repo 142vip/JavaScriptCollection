@@ -4,12 +4,12 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-01-19 08:04:19
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-18 23:45:25
+ * @LastEditTime: 2022-04-22 08:33:12
  */
 module.exports = {
   title: "凡是过往、皆为序章",
   description: "一本有趣的JavaScript合集",
-  base: "/JavaScriptCollection/",
+  // base: "/JavaScriptCollection/",
   port: 4000,
   head: [
     ["link", { rel: "icon", href: "/fight_favicon.ico" }]
