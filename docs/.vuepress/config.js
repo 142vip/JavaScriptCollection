@@ -4,7 +4,7 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-01-19 08:04:19
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-24 09:12:19
+ * @LastEditTime: 2022-04-24 09:22:25
  */
 const { path } = require('@vuepress/utils')
 module.exports = {
@@ -94,19 +94,19 @@ module.exports = {
     //   }],
     // other plugins
     // [
-    //   // 本地全文搜索
-    //   '@vuepress/plugin-search',
-    //   {
-    //     locales: {
-    //       '/': {
-    //         placeholder: '搜索',
-    //       },
-    //       '/zh/': {
-    //         placeholder: '搜索',
-    //       },
+    // // 本地全文搜索
+    // '@vuepress/plugin-search',
+    // {
+    //   locales: {
+    //     '/': {
+    //       placeholder: '搜索',
     //     },
-    //     maxSuggestions: 10 // 显示最大搜索
+    //     '/zh/': {
+    //       placeholder: '搜索',
+    //     },
     //   },
+    //   maxSuggestions: 10 // 显示最大搜索
+    // },
     // ],
   ]
 };

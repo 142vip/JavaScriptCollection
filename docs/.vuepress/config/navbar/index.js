@@ -4,7 +4,7 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2022-04-09 23:17:29
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-22 09:28:06
+ * @LastEditTime: 2022-04-24 09:23:17
  */
 module.exports = [
   {
@@ -61,16 +61,18 @@ module.exports = [
       //   text: 'Ant-design-vue',
       //   link: '/css'
       // }]
-    }, {
-      text: '常用工具',
-      children: [{
-        text: '包管理器',
-        link: '/front_end/server_deploy/static_nginx'
-      }, {
-        text: '服务端渲染',
-        link: '/front_end/server_deploy/front_end_server'
-      }]
-    }, {
+    },
+    // {
+    //   text: '常用工具',
+    //   children: [{
+    //     text: '包管理器',
+    //     link: '/front_end/server_deploy/static_nginx'
+    //   }, {
+    //     text: '服务端渲染',
+    //     link: '/front_end/server_deploy/front_end_server'
+    //   }]
+    // },
+    {
       text: '常见部署',
       children: [{
         text: '前端分离【nginx】',
@@ -157,6 +159,16 @@ module.exports = [
       }]
     }
     ]
+  },
+  {
+    text: "开发工具",
+    children: [{
+      text: '包管理器',
+      link: '/front_end/server_deploy/static_nginx'
+    }, {
+      text: '服务端渲染',
+      link: '/front_end/server_deploy/front_end_server'
+    }]
   },
   {
     text: "Solo算法",

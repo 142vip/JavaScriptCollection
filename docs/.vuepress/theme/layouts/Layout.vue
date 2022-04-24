@@ -4,7 +4,7 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2022-04-24 08:37:48
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-24 08:47:23
+ * @LastEditTime: 2022-04-24 09:21:08
 -->
 <script setup>
 import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
@@ -17,10 +17,10 @@ import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
 
     </template>
 
-    <template #navbar-before>
+    <!-- <template #navbar-before>
       <div class="my-footer">搜索框</div>
 
-    </template>
+    </template> -->
 
     <template #sidebar-top>
       <div class="sidebar-top">广告区域</div>

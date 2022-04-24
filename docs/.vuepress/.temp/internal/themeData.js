@@ -48,19 +48,6 @@ export const themeData = {
           "link": "/ui_framework"
         },
         {
-          "text": "常用工具",
-          "children": [
-            {
-              "text": "包管理器",
-              "link": "/front_end/server_deploy/static_nginx"
-            },
-            {
-              "text": "服务端渲染",
-              "link": "/front_end/server_deploy/front_end_server"
-            }
-          ]
-        },
-        {
           "text": "常见部署",
           "children": [
             {
@@ -162,6 +149,19 @@ export const themeData = {
               "link": "/"
             }
           ]
+        }
+      ]
+    },
+    {
+      "text": "开发工具",
+      "children": [
+        {
+          "text": "包管理器",
+          "link": "/front_end/server_deploy/static_nginx"
+        },
+        {
+          "text": "服务端渲染",
+          "link": "/front_end/server_deploy/front_end_server"
         }
       ]
     },
