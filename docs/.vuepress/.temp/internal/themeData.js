@@ -44,31 +44,19 @@ export const themeData = {
           ]
         },
         {
-          "text": "UI框架",
+          "text": "UI相关",
+          "link": "/ui_framework"
+        },
+        {
+          "text": "常用工具",
           "children": [
             {
-              "text": "Bootstrap",
-              "link": "/html"
+              "text": "包管理器",
+              "link": "/front_end/server_deploy/static_nginx"
             },
             {
-              "text": "LayerUI",
-              "link": "/js"
-            },
-            {
-              "text": "iView-UI",
-              "link": "/css"
-            },
-            {
-              "text": "VantUI",
-              "link": "/css"
-            },
-            {
-              "text": "Element-UI",
-              "link": "/css"
-            },
-            {
-              "text": "Ant-design-vue",
-              "link": "/css"
+              "text": "服务端渲染",
+              "link": "/front_end/server_deploy/front_end_server"
             }
           ]
         },

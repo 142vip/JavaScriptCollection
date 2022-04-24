@@ -90,12 +90,12 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1650295665000,
+    "updatedTime": 1650329202000,
     "contributors": [
       {
         "name": "mmdapl",
         "email": "2237221210@qq.com",
-        "commits": 6
+        "commits": 7
       }
     ]
   },
