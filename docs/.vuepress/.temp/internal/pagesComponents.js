@@ -29,6 +29,8 @@ export const pagesComponents = {
   "v-b256a9be": defineAsyncComponent(() => import(/* webpackChunkName: "v-b256a9be" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/front_end/server_deploy/static_nginx.html.vue")),
   // path: /front_end/ui_framework/
   "v-73999699": defineAsyncComponent(() => import(/* webpackChunkName: "v-73999699" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/front_end/ui_framework/index.html.vue")),
+  // path: /static/brain-maps/
+  "v-dca3d10e": defineAsyncComponent(() => import(/* webpackChunkName: "v-dca3d10e" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/static/brain-maps/index.html.vue")),
   // path: /server_end/container_learn/docker_base.html
   "v-3a6db66e": defineAsyncComponent(() => import(/* webpackChunkName: "v-3a6db66e" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/server_end/container_learn/docker_base.html.vue")),
   // path: /server_end/container_learn/docker_layout.html
@@ -45,8 +47,6 @@ export const pagesComponents = {
   "v-21fc1ee4": defineAsyncComponent(() => import(/* webpackChunkName: "v-21fc1ee4" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/server_end/framework/express_koa_learn.html.vue")),
   // path: /server_end/framework/nest_learn.html
   "v-16a56594": defineAsyncComponent(() => import(/* webpackChunkName: "v-16a56594" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/server_end/framework/nest_learn.html.vue")),
-  // path: /static/brain-maps/
-  "v-dca3d10e": defineAsyncComponent(() => import(/* webpackChunkName: "v-dca3d10e" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/static/brain-maps/index.html.vue")),
   // path: /read_books/cs_books/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%9A%84Node.js/
   "v-4450f016": defineAsyncComponent(() => import(/* webpackChunkName: "v-4450f016" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/read_books/cs_books/深入浅出的Node.js/index.html.vue")),
   // path: /404.html

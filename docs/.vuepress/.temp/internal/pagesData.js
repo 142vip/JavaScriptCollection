@@ -27,6 +27,8 @@ export const pagesData = {
   "v-b256a9be": () => import(/* webpackChunkName: "v-b256a9be" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/front_end/server_deploy/static_nginx.html.js").then(({ data }) => data),
   // path: /front_end/ui_framework/
   "v-73999699": () => import(/* webpackChunkName: "v-73999699" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/front_end/ui_framework/index.html.js").then(({ data }) => data),
+  // path: /static/brain-maps/
+  "v-dca3d10e": () => import(/* webpackChunkName: "v-dca3d10e" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/static/brain-maps/index.html.js").then(({ data }) => data),
   // path: /server_end/container_learn/docker_base.html
   "v-3a6db66e": () => import(/* webpackChunkName: "v-3a6db66e" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/server_end/container_learn/docker_base.html.js").then(({ data }) => data),
   // path: /server_end/container_learn/docker_layout.html
@@ -43,8 +45,6 @@ export const pagesData = {
   "v-21fc1ee4": () => import(/* webpackChunkName: "v-21fc1ee4" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/server_end/framework/express_koa_learn.html.js").then(({ data }) => data),
   // path: /server_end/framework/nest_learn.html
   "v-16a56594": () => import(/* webpackChunkName: "v-16a56594" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/server_end/framework/nest_learn.html.js").then(({ data }) => data),
-  // path: /static/brain-maps/
-  "v-dca3d10e": () => import(/* webpackChunkName: "v-dca3d10e" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/static/brain-maps/index.html.js").then(({ data }) => data),
   // path: /read_books/cs_books/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%9A%84Node.js/
   "v-4450f016": () => import(/* webpackChunkName: "v-4450f016" */"/Users/mmdapl/Desktop/github/JavaScriptCollection/docs/.vuepress/.temp/pages/read_books/cs_books/深入浅出的Node.js/index.html.js").then(({ data }) => data),
   // path: /404.html

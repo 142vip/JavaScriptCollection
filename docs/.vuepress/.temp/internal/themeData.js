@@ -247,6 +247,10 @@ export const themeData = {
             {
               "text": "深入浅出Node.js",
               "link": "/go"
+            },
+            {
+              "text": "高性能Web服务器详解【Nginx】",
+              "link": "/nginx"
             }
           ]
         },

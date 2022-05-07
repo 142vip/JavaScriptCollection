@@ -15,6 +15,7 @@ const routeItems = [
   ["v-703a42ad","/front_end/server_deploy/front_end_server.html",{"title":""},["/front_end/server_deploy/front_end_server","/front_end/server_deploy/front_end_server.md"]],
   ["v-b256a9be","/front_end/server_deploy/static_nginx.html",{"title":""},["/front_end/server_deploy/static_nginx","/front_end/server_deploy/static_nginx.md"]],
   ["v-73999699","/front_end/ui_framework/",{"title":""},["/front_end/ui_framework/index.html","/front_end/ui_framework/Readme.md"]],
+  ["v-dca3d10e","/static/brain-maps/",{"title":""},["/static/brain-maps/index.html","/static/brain-maps/Readme.md"]],
   ["v-3a6db66e","/server_end/container_learn/docker_base.html",{"title":""},["/server_end/container_learn/docker_base","/server_end/container_learn/docker_base.md"]],
   ["v-6ae07bd0","/server_end/container_learn/docker_layout.html",{"title":""},["/server_end/container_learn/docker_layout","/server_end/container_learn/docker_layout.md"]],
   ["v-63db38d6","/server_end/container_learn/server_deploy.html",{"title":""},["/server_end/container_learn/server_deploy","/server_end/container_learn/server_deploy.md"]],
@@ -23,7 +24,6 @@ const routeItems = [
   ["v-92e9cb52","/server_end/framework/egg_learn.html",{"title":""},["/server_end/framework/egg_learn","/server_end/framework/egg_learn.md"]],
   ["v-21fc1ee4","/server_end/framework/express_koa_learn.html",{"title":""},["/server_end/framework/express_koa_learn","/server_end/framework/express_koa_learn.md"]],
   ["v-16a56594","/server_end/framework/nest_learn.html",{"title":""},["/server_end/framework/nest_learn","/server_end/framework/nest_learn.md"]],
-  ["v-dca3d10e","/static/brain-maps/",{"title":""},["/static/brain-maps/index.html","/static/brain-maps/Readme.md"]],
   ["v-4450f016","/read_books/cs_books/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%9A%84Node.js/",{"title":""},["/read_books/cs_books/深入浅出的Node.js/","/read_books/cs_books/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%9A%84Node.js/index.html","/read_books/cs_books/深入浅出的Node.js/readme.md","/read_books/cs_books/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%9A%84Node.js/readme.md"]],
   ["v-3706649a","/404.html",{"title":""},["/404"]],
 ]
