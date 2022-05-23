@@ -7,7 +7,7 @@ LABEL version="Beta1.0"
 LABEL description="JavaScriptCollection文档合集、博客"
 # 作者信息
 LABEL author="【Github&公众号】：Rong姐姐好可爱"
-LABEL email="mmdapl@163.com"
+LABEL email="fairy@2925.com"
 
 ## 确定工作空间 /apps
 COPY . /apps
