@@ -1,19 +1,20 @@
 /*
- * @Description: 
+ * @Description:
  * @Version: Beta1.0
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-01-19 08:04:19
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2022-04-24 09:22:25
  */
-const { path } = require('@vuepress/utils')
+// const { path } = require('@vuepress/utils')
 module.exports = {
   // 自定义主题
-  theme: path.resolve(__dirname, './theme'),
+  // theme: path.resolve(__dirname, './theme'),
   // theme:'reco', // https://vuepress-theme-reco.recoluan.com/views/1.x/installUse.html
   title: "凡是过往、皆为序章",
   description: "一本有趣的JavaScript合集",
-  base: "/JavaScriptCollection/",
+  // base: "/JavaScriptCollection/",
+  // base:"./",
   port: 4000,
   head: [
     ["link", { rel: "icon", href: "/fight_favicon.ico" }]
