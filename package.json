@@ -4,7 +4,9 @@
   "description": "一本有趣的JavaScript合集",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "ali": "bash scripts/build_image.sh  $npm_package_version",
+    "github": "bash scripts/deploy.bash github"
   },
   "devDependencies": {
     "vuepress": "^2.0.0-beta.39"

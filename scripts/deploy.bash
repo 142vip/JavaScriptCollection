@@ -88,7 +88,7 @@ deploy_to_ali(){
   echo -e "${successLogger}---------------- deploy ${containerName} ali start ---------------- "
 
   docker run -d --name "${containerName}" \
-  -p 7100:80 \
+  -p 7100:7100 \
   --network="${networkName}"  \
   --restart=unless-stopped \
   --ip=172.30.0.100 \
@@ -105,6 +105,8 @@ deploy_to_github(){
   # 当命令以非零状态退出时，则退出shell
   set -e
 
+  ## 配置网站base
+
   # 进入上级目录，并编译
   npm run build && cd docs/.vuepress/dist
   git init && git add --all
@@ -117,9 +119,6 @@ deploy_to_github(){
   ## 配置个人信息
   git config user.name "喜欢吃芝士葡萄的妹妹"
   git config user.email "fairy0115@2925.com"
-
-  git config --list
-
 
   # if you are deploying to https://<USERNAME>.github.io
   # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master

@@ -97,7 +97,7 @@ remove_network(){
   fi
 
   echo -e "${successLogger}----------------删除前---------------------"
-  docker network ls
+    docker network ls
     docker network rm "${networkName}"
   echo -e "${successLogger}----------------删除后---------------------"
   docker network ls
