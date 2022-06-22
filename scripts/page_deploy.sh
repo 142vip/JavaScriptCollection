@@ -9,32 +9,36 @@
  # @LastEditTime: 2022-04-18 23:35:15
 ### 
 
-# abort on errors
+commitInfo=${1}
+
 set -e
 
-# build
+# 进入上级目录，并编译
 npm run build
 
-# navigate into the build output directory
+## 切换到dist文件目录
 cd docs/.vuepress/dist
-
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
 
 git init
 git add -A
-git commit -m 'JavaScriptCollection Init'
+
+## 如果没有输入commit信息，则采用默认
+if [ "${commitInfo}" -eq "" ]; then
+    commitInfo="JavaScriptCollection Init"
+fi
+
+git commit -m "refactor:${commitInfo}"
 
 
 ## 配置个人信息
-git config user.name "mmdapl"
-git config user.email "fairy@2925.com"
+git config user.name "喜欢吃芝士葡萄的妹妹"
+git config user.email "fairy0115@2925.com"
 
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/mmdapl/JavaScriptCollection.git master:gh-pages
+git push -f https://github.com/mmdapl/JavaScriptCollection.git master:pages/github
 
 
 cd -
