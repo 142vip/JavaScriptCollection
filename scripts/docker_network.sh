@@ -78,7 +78,8 @@ init_network(){
       "${defaultNetworkName}"
     echo -e "${successLogger}---------------- 创建后 ---------------------"
     docker network ls
-    docker netwrok inspect "${networkName}"
+    echo -e "${successLogger}---------------- 网络信息 ---------------------"
+    docker network inspect "${defaultNetworkName}"
   fi
 }
 
