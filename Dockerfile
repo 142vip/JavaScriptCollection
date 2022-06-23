@@ -1,27 +1,22 @@
-# 安装node 作为基础构建镜像
-# FROM node:12.6.0-alpine AS build_base
-FROM node AS build_base
+## 注意：vite构建需要支持node14以上，安装node16较为稳妥
+FROM registry.cn-hangzhou.aliyuncs.com/142vip/node:16.12.0-alpine AS build_base
 
-# 镜像标签
-LABEL version="Beta1.0"
-LABEL description="JavaScriptCollection文档合集、博客"
-# 作者信息
-LABEL author="【Github&公众号】：Rong姐姐好可爱"
-LABEL email="fairy@2925.com"
-
+LABEL version="Beta1.0"  description="JavaScriptCollection文档合集、博客"
+LABEL author="【Github&公众号】：Rong姐姐好可爱" email="fairy@2925.com"
+RUN mkdir -p /apps
 ## 确定工作空间 /apps
 COPY . /apps
 WORKDIR /apps
 
 ## 安装依赖
-RUN npm install && npm run build
+RUN npm ci --registry https://registry.npmmirror.com && npm run build
 
 # 设置部署镜像
-FROM nginx
+FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:latest
 
 # 将dist文件中的内容复制到 /usr/share/nginx/html/ 这个目录下面 注意：--from参数
 COPY  --from=build_base /apps/docs/.vuepress/dist/  /usr/share/nginx/html/
 
-
-## 暴露端口
-EXPOSE 80
+COPY nginx.conf /etc/nginx/
+EXPOSE 7100
+CMD ["nginx", "-g", "daemon off;"]

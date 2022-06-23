@@ -1,16 +1,16 @@
 {
   "name": "JavaScriptCollection",
-  "version": "Beta0.0.1",
+  "version": "0.0.1",
   "description": "一本有趣的JavaScript合集",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "ali": "bash scripts/build_image.sh  $npm_package_version",
+    "github": "bash scripts/deploy.bash github"
   },
   "devDependencies": {
-    "prettier": "^2.6.2",
     "vuepress": "^2.0.0-beta.39"
   },
   "dependencies": {
-    "eslint": "^8.15.0"
   }
 }

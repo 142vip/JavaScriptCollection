@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 ###
  # @Description: shell 加密|解密
  # @Version: Beta1.0

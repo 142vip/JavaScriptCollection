@@ -1,0 +1,25 @@
+version: '2'
+services:
+  ### JavaScriptCollection服务，ip范围 172.30.0.100
+  JavaScriptCollection:
+    image: registry.cn-hangzhou.aliyuncs.com/142vip/cs_:latest
+    container_name: JavaScriptCollection
+    hostname: JavaScriptCollection
+    ports:
+      - "7100:80"
+    networks:
+      net:
+        ipv4_address: 172.30.0.100
+
+## 创建桥接网络
+networks:
+  ## 桥接网络名称，配合文件前缀，最后为dev_test_env_net  参考：https://www.jianshu.com/p/d70c61d45364
+  net:
+    driver: bridge
+    # external: true
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.30.0.0/24
+          ## 网关
+          gateway: 172.30.0.1
