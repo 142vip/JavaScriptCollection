@@ -13,9 +13,9 @@ module.exports = {
   // theme:'reco', // https://vuepress-theme-reco.recoluan.com/views/1.x/installUse.html
   title: "凡是过往、皆为序章",
   description: "一本有趣的JavaScript合集",
-  base: "/JavaScriptCollection/",
+  // base: "/JavaScriptCollection/",
   // base:"./",
-  port: 4000,
+  port: 7100,
   head: [
     ["link", { rel: "icon", href: "/fight_favicon.ico" }]
   ],

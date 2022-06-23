@@ -9,7 +9,7 @@ actions:
     link: /guide/
     type: primary
   - text: 工作机会
-    link: /gangg
+    link: /gang
     type: secondary
 features:
 - title: 前端
