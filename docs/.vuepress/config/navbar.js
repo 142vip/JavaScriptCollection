@@ -19,15 +19,15 @@ module.exports = [
         children: [
           {
             text: "html相关",
-            link: "/front_end/base_begin/html",
+            link: "/front-end/base-begin/html",
           },
           {
             text: "js相关",
-            link: "/front_end/base_begin/javascript",
+            link: "/front-end/base-begin/javascript",
           },
           {
             text: "css相关",
-            link: "/front_end/base_begin/css",
+            link: "/front-end/base-begin/css",
           },
         ],
       },
@@ -36,11 +36,11 @@ module.exports = [
         children: [
           {
             text: "JQuery.js",
-            link: "/front_end/front_framework/jquery",
+            link: "/front-end/front-framework/jquery",
           },
           {
             text: "Vue.js",
-            link: "/front_end/front_framework/vue",
+            link: "/front-end/front-framework/vue",
           },
           {
             text: "Nuxt.js",
@@ -50,7 +50,7 @@ module.exports = [
       },
       {
         text: "UI相关",
-        link: "/ui_framework",
+        link: "/ui-framework",
         // children: [{
         //   text: 'Bootstrap',
         //   link: '/html'
@@ -76,11 +76,11 @@ module.exports = [
         children: [
           {
             text: "包管理器",
-            link: "/front_end/server_deploy/static_nginx",
+            link: "/front-end/server-deploy/static-nginx",
           },
           {
             text: "服务端渲染",
-            link: "/front_end/server_deploy/front_end_server",
+            link: "/front-end/server-deploy/front-end-server",
           },
         ],
       },
@@ -89,11 +89,11 @@ module.exports = [
         children: [
           {
             text: "前端分离【nginx】",
-            link: "/front_end/server_deploy/static_nginx",
+            link: "/front-end/server-deploy/static-nginx",
           },
           {
             text: "服务端渲染",
-            link: "/front_end/server_deploy/front_end_server",
+            link: "/front-end/server-deploy/front-end-server",
           },
         ],
       },
@@ -104,33 +104,33 @@ module.exports = [
     children: [
       {
         text: "Node.js",
-        link: "/server_end/node_learn",
+        link: "/server-end/node-learn",
       },
       {
         text: "TypeScript",
-        link: "/server_end/ts_learn",
+        link: "/server-end/ts-learn",
       },
       {
         text: "常用框架",
         children: [
           {
             text: "Express和Koa",
-            link: "/server_end/framework/express_koa_learn",
+            link: "/server-end/framework/express-koa-learn",
           },
           // {
           //   text: 'Koa', link: '/'
           // },
           {
             text: "Egg.js",
-            link: "/server_end/framework/egg_learn",
+            link: "/server-end/framework/egg-learn",
           },
           {
             text: "Nest.js",
-            link: "/server_end/framework/nest_learn",
+            link: "/server-end/framework/nest-learn",
           },
           {
             text: "Midway",
-            link: "/server_end/framework/midway_learn",
+            link: "/server-end/framework/midway-learn",
           },
         ],
       },
@@ -139,15 +139,15 @@ module.exports = [
         children: [
           {
             text: "Redis",
-            link: "/server_end/database/redis",
+            link: "/server-end/database/redis",
           },
           {
             text: "MySQL",
-            link: "/server_end/database/mysql",
+            link: "/server-end/database/mysql",
           },
           {
             text: "Mongo",
-            link: "/server_end/database/mongo",
+            link: "/server-end/database/mongo",
           },
         ],
       },
@@ -172,16 +172,16 @@ module.exports = [
         children: [
           {
             text: "Docker基础",
-            link: "/server_end/container_learn/docker_base",
+            link: "/server-end/container-learn/docker-base",
           },
 
           {
             text: "服务部署",
-            link: "/server_end/container_learn/server_deploy",
+            link: "/server-end/container-learn/server-deploy",
           },
           {
             text: "服务集群编排",
-            link: "/server_end/container_learn/docker_layout",
+            link: "/server-end/container-learn/docker-layout",
           },
         ],
       },
@@ -205,7 +205,7 @@ module.exports = [
     children: [
       {
         text: "刷题整理",
-        link: "/solo_algorithm/question_collections",
+        link: "/solo-algorithm/question-collections",
       },
       {
         text: "刷题平台",
@@ -243,22 +243,22 @@ module.exports = [
     children: [
       {
         text: "常见面试题",
-        link: "/battle_interview/interview_problems",
+        link: "/battle-interview/interview-problems",
       },
       {
         text: "面经分享",
-        link: "/battle_interview/introduce_share",
+        link: "/battle-interview/introduce-share",
       },
       {
         text: "工作机会",
         children: [
           {
             text: "校招",
-            link: "/battle_interview/school_recruit",
+            link: "/battle-interview/school-recruit",
           },
           {
             text: "社招",
-            link: "/battle_interview/social_recruit",
+            link: "/battle-interview/social-recruit",
           },
         ],
       },
@@ -330,7 +330,7 @@ module.exports = [
     children: [
       {
         text: "平台汇总",
-        link: "/sum_links",
+        link: "/sum-links",
       },
       {
         text: "技术文档",

@@ -6,24 +6,24 @@ externalLinkIcon: false
 tagline: 理论+实战模式下的硬核全栈学习合集，笔记内容持续更新...
 actions:
   - text: 快速开始→
-    link: /guide/
+    link: /read_books/
     type: primary
   - text: 工作机会
     link: /gang
     type: secondary
 features:
-- title: 前端
-  details: 有效地降低日常开发和复习巩固的查询、学习时间。
-- title: 后端
-  details: 官方插件的基础上，抽象、封装出适合自己功能的plus插件，能够快速集成、使用在新的项目中。
-- title: 算法
-  details: 通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。
-- title: 面试求职
-  details: 与官网同步的Egg.js框架基础知识整理，有效地降低日常开发和复习巩固的查询、学习时间。
-- title: 读书写作
-  details: 官方插件的基础上，抽象、封装出适合自己功能的plus插件，能够快速集成、使用在新的项目中。
-- title: 心路历程
-  details: 通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。
+  - title: 前端
+    details: 有效地降低日常开发和复习巩固的查询、学习时间。
+  - title: 后端
+    details: 官方插件的基础上，抽象、封装出适合自己功能的plus插件，能够快速集成、使用在新的项目中。
+  - title: 算法
+    details: 通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。
+  - title: 面试求职
+    details: 与官网同步的Egg.js框架基础知识整理，有效地降低日常开发和复习巩固的查询、学习时间。
+  - title: 读书写作
+    details: 官方插件的基础上，抽象、封装出适合自己功能的plus插件，能够快速集成、使用在新的项目中。
+  - title: 心路历程
+    details: 通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。
 footer:    Copyrights © 2019-2022 妍荣姑娘网络工作室 Rong姐姐好可爱
 footerHtml: true
 ---

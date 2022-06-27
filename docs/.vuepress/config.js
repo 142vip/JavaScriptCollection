@@ -1,15 +1,17 @@
 /*
- * @Description:
+ * @Description: 全局配置
+ * 参考：https://v2.vuepress.vuejs.org/zh/reference/default-theme/config.html#locales
  * @Version: Beta1.0
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-01-19 08:04:19
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2022-04-24 09:22:25
  */
-// const { path } = require('@vuepress/utils')
+const { path } = require('@vuepress/utils')
+const {defaultTheme} = require("vuepress");
 module.exports = {
   // 自定义主题
-  // theme: path.resolve(__dirname, './theme'),
+  theme: path.resolve(__dirname, './theme'),
   // theme:'reco', // https://vuepress-theme-reco.recoluan.com/views/1.x/installUse.html
   title: "凡是过往、皆为序章",
   description: "一本有趣的JavaScript合集",
@@ -19,7 +21,8 @@ module.exports = {
   head: [
     ["link", { rel: "icon", href: "/fight_favicon.ico" }]
   ],
-  themeConfig: {
+  theme: defaultTheme({
+    home:'/',
     logo: "/favicon.ico",
     darkMode: false, // 禁用夜色
     navbar: require("./config/navbar/index"),  // 注意这个关键字有所改变
@@ -28,17 +31,17 @@ module.exports = {
     lastUpdated: true,
     lastUpdatedText: "最近更新",
     contributorsText: '贡献者',
-    notFound: ['not exist'],// 自定义404页面提示语，数组
+    notFound: ['not exist'],// 自定义404 页面提示语，数组
     backToHome: '返回首页', // 返回首页
     repo: "https://github.com/mmdapl/JavaScriptCollection",
-
     editLink: false,
     // 默认为 "Edit this page"
     // editLinkText: '帮助我们改善此页面！',
     displayAllHeaders: true,// 默认值：false 显示所有页面的标题链接
     search: true,
     searchMaxSuggestions: 10,
-  },
+  }),
+  // themeConfig: ,
   plugins: [
     // 全文搜索 参考配置：https://github.com/vuepress/vuepress-next/blob/main/docs/.vuepress/config.ts
     // ['@vuepress/docsearch',

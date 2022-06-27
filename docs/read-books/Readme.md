@@ -2,7 +2,7 @@
 
  * @Description: JavaScriptCollection仓库的阅读大纲
  * @Version: Beata1.0
- * @Autor: 【B站&公众号】Rong姐姐好可爱
+ * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2022-04-10 11:38:29
@@ -752,7 +752,7 @@
 - [3.变量的解构赋值](./docs/article-records/读书笔记/ES6标准入门/3.变量的解构赋值.md)
 - [4.字符串详解]()
 
-#### [深入浅出的Node.js](./docs/read_books/cs_books/深入浅出的Node.js/readme.md)
+#### [深入浅出的Node.js](docs/read-books/cs_books/深入浅出的Node.js/readme.md)
 ### 非技术类
 
 > 主要是跟计算机无关的一些书，在看完之后，会选择性的进行思维导图、经典词句整理，也可能添加个人思考

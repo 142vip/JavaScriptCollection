@@ -9,5 +9,5 @@
 
 
 module.exports={
-  "/read_books":require("../../read_books/sidebar_content")
+  "/read-books":require("../../read-books/sidebar-content")
 }

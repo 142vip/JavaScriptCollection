@@ -9,5 +9,5 @@
 
 
 module.exports = {
-  "/read_books": require("./read_books_content")
+  "/read-books": require("./read-books-content")
 }
