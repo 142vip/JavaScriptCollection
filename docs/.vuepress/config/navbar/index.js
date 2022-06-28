@@ -101,22 +101,22 @@ module.exports = [
     children: [
       {
         text: "Node.js",
-        link: "/server-end/node-learn",
+        link: "/server-end/node",
       },
       {
         text: "TypeScript",
-        link: "/server-end/ts-learn",
+        link: "/server-end/typescript",
       },
       {
         text: "常用框架",
         children: [
           {
-            text: "Express和Koa",
-            link: "/server-end/framework/express-koa-learn",
+            text: "Express",
+            link: "/server-end/framework/express-learn",
           },
-          // {
-          //   text: 'Koa', link: '/'
-          // },
+          {
+            text: 'Koa', link: '/server-end/framework/koa-learn'
+          },
           {
             text: "Egg.js",
             link: "/server-end/framework/egg-learn",
@@ -155,12 +155,12 @@ module.exports = [
             text: "RabbitMQ",
             link: "/mq",
           },
-          // {
-          //   text: 'Kafka', link: '/'
-          // },
-          // {
-          //   text: 'RocketMQ', link: '/'
-          // }
+          {
+            text: 'Kafka', link: '/'
+          },
+          {
+            text: 'RocketMQ', link: '/'
+          }
         ],
       },
       {
@@ -180,20 +180,7 @@ module.exports = [
             link: "/server-end/container-learn/docker-layout",
           },
         ],
-      },
-      {
-        text: "测试",
-        children: [
-          {
-            text: "校招",
-            link: "/",
-          },
-          {
-            text: "社招",
-            link: "/",
-          },
-        ],
-      },
+      }
     ],
   },
   {
@@ -218,8 +205,6 @@ module.exports = [
       },
       {
         text: "刷题平台",
-        // C语言网(https://www.dotcpp.com)
-        // 杭电OJ(http://acm.hdu.edu.cn/)
         children: [
           {
             text: "杭电OJ",
@@ -235,16 +220,6 @@ module.exports = [
           },
         ],
       },
-      // {
-      //   text: '刷题平台',
-      //   children: [
-      //     {
-      //       text: '牛客网', link: 'https://www.nowcoder.com/'
-      //     }, {
-      //       text: 'LeetCode', link: 'https://leetcode-cn.com/'
-      //     }
-      //   ]
-      // },
     ],
   },
   {

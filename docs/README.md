@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png
+heroImage: http://cdn.142vip.cn/article-notes/img/image-20200605224832237.png
 heroText: JavaScriptCollection
 externalLinkIcon: false 
 tagline: 理论+实战模式下的硬核全栈学习合集，笔记内容持续更新...

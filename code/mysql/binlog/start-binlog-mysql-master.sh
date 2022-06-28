@@ -1,3 +1,4 @@
+#!/bin/bash
 ###
  # @Description: binlog方式搭建一主一从mysql，主库初始化脚本
  # @Version: Beata1.0
@@ -6,7 +7,7 @@
  # @LastEditors: 【B站&公众号】Rong姐姐好可爱
  # @LastEditTime: 2020-09-03 22:35:43
 ### 
-#!bin/bash
+
 
 ## 执行脚本开始
 
