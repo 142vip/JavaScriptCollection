@@ -9,7 +9,6 @@
 
 
 module.exports=[
-  // SidebarItem
   {
     text: 'Foo',
     link: '/foo/',
