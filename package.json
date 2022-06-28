@@ -9,9 +9,10 @@
     "github": "bash scripts/deploy.bash github"
   },
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.39"
+    "@vuepress/utils": "^2.0.0-beta.48",
+    "vuepress": "^2.0.0-beta.39",
+    "@vuepress/theme-default": "^2.0.0-beta.48"
   },
   "dependencies": {
-    "@vuepress/utils": "^2.0.0-beta.48"
   }
 }

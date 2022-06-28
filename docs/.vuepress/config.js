@@ -7,12 +7,11 @@
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2022-04-24 09:22:25
  */
-const { path } = require('@vuepress/utils')
 const {defaultTheme} = require("vuepress");
+const {path} = require("@vuepress/utils");
 module.exports = {
   // 自定义主题
   theme: path.resolve(__dirname, './theme'),
-  // theme:'reco', // https://vuepress-theme-reco.recoluan.com/views/1.x/installUse.html
   title: "凡是过往、皆为序章",
   description: "一本有趣的JavaScript合集",
   // base: "/JavaScriptCollection/",

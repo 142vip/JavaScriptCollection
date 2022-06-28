@@ -752,7 +752,7 @@
 - [3.变量的解构赋值](./docs/article-records/读书笔记/ES6标准入门/3.变量的解构赋值.md)
 - [4.字符串详解]()
 
-#### [深入浅出的Node.js](docs/read-books/cs_books/深入浅出的Node.js/readme.md)
+#### [深入浅出的Node.js](docs/read-books/cs-books/深入浅出的Node.js/readme.md)
 ### 非技术类
 
 > 主要是跟计算机无关的一些书，在看完之后，会选择性的进行思维导图、经典词句整理，也可能添加个人思考

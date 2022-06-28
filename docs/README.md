@@ -5,8 +5,8 @@ heroText: JavaScriptCollection
 externalLinkIcon: false 
 tagline: 理论+实战模式下的硬核全栈学习合集，笔记内容持续更新...
 actions:
-  - text: 快速开始→
-    link: /read_books/
+  - text: 快速开始
+    link: /read-books/
     type: primary
   - text: 工作机会
     link: /gang
@@ -31,6 +31,7 @@ footerHtml: true
 
 ---
 
+[//]: # (→)
 ### 本地浏览【推荐】
 
 由于平台、网络等原因，在线浏览容易出现加载面、加载不出来等常见问题，因此非常建议在本地进行浏览、学习；**下面指令默认你已经安装[Git](https://git-scm.com/download)、[NPM](https://www.npmjs.com/)、[PNPM](https://www.pnpm.cn/)、[Yarn](https://yarn.bootcss.com/)、[Node](http://nodejs.cn)等环境，并对此有一定了解!**
