@@ -1,11 +1,3 @@
-/*
- * @Description: 首页目录
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2022-04-09 23:17:29
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-24 09:23:17
- */
 module.exports = [
   {
     text: "首页",
@@ -156,10 +148,12 @@ module.exports = [
             link: "/mq",
           },
           {
-            text: 'Kafka', link: '/'
+            text: 'Kafka',
+            link: '/'
           },
           {
-            text: 'RocketMQ', link: '/'
+            text: 'RocketMQ',
+            link: '/'
           }
         ],
       },

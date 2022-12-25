@@ -8,7 +8,7 @@ module.exports = {
     // 'airbnb-base',
   ],
   parserOptions: {
-    ecmaVersion: "latest",
+    // ecmaVersion: "latest",
   },
   rules: {},
 };

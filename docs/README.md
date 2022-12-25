@@ -3,13 +3,13 @@ home: true
 heroImage: http://cdn.142vip.cn/article-notes/img/image-20200605224832237.png
 heroText: JavaScriptCollection
 externalLinkIcon: false 
-tagline: 理论+实战模式下的硬核全栈学习合集，笔记内容持续更新...
+tagline: 理论+实战模式下的硬核全栈学习合集，内容持续更新...
 actions:
   - text: 快速开始
-    link: /read-books/
+    link: /quick-start/
     type: primary
   - text: 工作机会
-    link: /gang
+    link: /job-poster
     type: secondary
 features:
   - title: 前端
@@ -181,3 +181,4 @@ yarn run dev
 
 
 ### 外链
+

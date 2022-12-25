@@ -1,17 +1,6 @@
-/*
- * @Description: 全局配置
- * 参考：https://v2.vuepress.vuejs.org/zh/reference/default-theme/config.html#locales
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-01-19 08:04:19
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-24 09:22:25
- */
-const {defaultTheme} = require("vuepress");
-const {path} = require("@vuepress/utils");
-module.exports = {
-  // 自定义主题
-  theme: path.resolve(__dirname, './theme'),
+import {defaultTheme} from "vuepress";
+
+export default {
   title: "凡是过往、皆为序章",
   description: "一本有趣的JavaScript合集",
   // base: "/JavaScriptCollection/",
@@ -40,7 +29,6 @@ module.exports = {
     search: true,
     searchMaxSuggestions: 10,
   }),
-  // themeConfig: ,
   plugins: [
     // 全文搜索 参考配置：https://github.com/vuepress/vuepress-next/blob/main/docs/.vuepress/config.ts
     // ['@vuepress/docsearch',

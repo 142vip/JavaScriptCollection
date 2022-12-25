@@ -1,11 +1,3 @@
-/*
- * @Description:
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2022-04-09 23:17:29
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-22 09:28:06
- */
 module.exports = [
   {
     text: "首页",
@@ -214,28 +206,18 @@ module.exports = [
         children: [
           {
             text: "杭电OJ",
-            link: "http://acm.hdu.edu.cn/",
+            link: "https://acm.hdu.edu.cn/",
           },
           {
             text: "牛客网",
             link: "https://www.nowcoder.com/",
           },
           {
-            text: "LeetCode",
+            text: "力扣网",
             link: "https://leetcode-cn.com/",
           },
         ],
       },
-      // {
-      //   text: '刷题平台',
-      //   children: [
-      //     {
-      //       text: '牛客网', link: 'https://www.nowcoder.com/'
-      //     }, {
-      //       text: 'LeetCode', link: 'https://leetcode-cn.com/'
-      //     }
-      //   ]
-      // },
     ],
   },
   {

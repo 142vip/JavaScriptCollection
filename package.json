@@ -3,15 +3,15 @@
   "version": "0.0.1",
   "description": "一本有趣的JavaScript合集",
   "scripts": {
+    "clean": "rm -rf node_modules",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "ali": "bash scripts/build_image.sh  $npm_package_version",
     "github": "bash scripts/deploy.bash github"
   },
   "devDependencies": {
-    "@vuepress/utils": "^2.0.0-beta.48",
-    "vuepress": "^2.0.0-beta.39",
-    "@vuepress/theme-default": "^2.0.0-beta.48"
-  },
-  "dependencies": {}
+    "@vuepress/client": "^2.0.0-beta.59",
+    "vue": "^3.2.45",
+    "vuepress": "^2.0.0-beta.59"
+  }
 }
