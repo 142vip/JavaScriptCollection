@@ -1,4 +1,4 @@
-module.exports=  {
+module.exports = {
     text: "后端【Node.js】",
     children: [
         {
@@ -6,11 +6,28 @@ module.exports=  {
             link: "/server-end/node",
         },
         {
+            text: "ES6",
+            link: "/server-end/node",
+        },
+        {
             text: "TypeScript",
             link: "/server-end/typescript",
         },
         {
-            text: "常用框架",
+            text: "ORM框架",
+            children: [
+                {
+                    text: "Sequelize",
+                    link: "/server-end/framework/express-learn",
+                },
+                {
+                    text: 'TypeOrm',
+                    link: '/server-end/framework/koa-learn'
+                },
+            ],
+        },
+        {
+            text: "应用框架",
             children: [
                 {
                     text: "Express",
@@ -28,7 +45,7 @@ module.exports=  {
                     link: "/server-end/framework/nest-learn",
                 },
                 {
-                    text: "Midway",
+                    text: "Midway.js",
                     link: "/server-end/framework/midway-learn",
                 },
             ],
@@ -45,45 +62,11 @@ module.exports=  {
                     link: "/server-end/database/mysql",
                 },
                 {
-                    text: "Mongo",
+                    text: "MongoDB",
                     link: "/server-end/database/mongo",
                 },
             ],
         },
-        {
-            text: "消息中间件",
-            children: [
-                {
-                    text: "RabbitMQ",
-                    link: "/mq",
-                },
-                {
-                    text: 'Kafka',
-                    link: '/'
-                },
-                {
-                    text: 'RocketMQ',
-                    link: '/'
-                }
-            ],
-        },
-        {
-            text: "容器相关",
-            children: [
-                {
-                    text: "Docker基础",
-                    link: "/server-end/container-learn/docker-base",
-                },
 
-                {
-                    text: "服务部署",
-                    link: "/server-end/container-learn/server-deploy",
-                },
-                {
-                    text: "服务集群编排",
-                    link: "/server-end/container-learn/docker-layout",
-                },
-            ],
-        }
     ],
 }

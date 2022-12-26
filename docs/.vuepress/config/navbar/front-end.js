@@ -1,75 +1,67 @@
-module.exports=  {
+module.exports = {
     text: "前端【Web】",
     children: [
         {
-            text: "基础入门",
-            children: [
-                {
-                    text: "html相关",
-                    link: "/front-end/base-begin/html",
-                },
-                {
-                    text: "js相关",
-                    link: "/front-end/base-begin/javascript",
-                },
-                {
-                    text: "css相关",
-                    link: "/front-end/base-begin/css",
-                },
-            ],
+            text: "HTML",
+            link: "/front-end/base-begin/html",
+        },
+        {
+            text: "CSS",
+            link: "/front-end/base-begin/css",
+        },
+        {
+            text: "Javascript",
+            link: "/front-end/base-begin/javascript",
         },
         {
             text: "前端框架",
             children: [
                 {
-                    text: "JQuery.js",
-                    link: "/front-end/front-framework/jquery",
-                },
-                {
-                    text: "Vue.js",
+                    text: "Vue",
                     link: "/front-end/front-framework/vue",
                 },
                 {
-                    text: "Nuxt.js",
-                    link: "/css",
+                    text: "Nuxt",
+                    link: "/front-end/front-framework/nuxt",
+                },
+                {
+                    text: "JQuery",
+                    link: "/front-end/front-framework/jquery",
                 },
             ],
         },
         {
-            text: "UI相关",
-            link: "/ui-framework",
-            // children: [{
-            //   text: 'Bootstrap',
-            //   link: '/html'
-            // }, {
-            //   text: 'LayerUI',
-            //   link: '/js'
-            // }, {
-            //   text: 'iView-UI',
-            //   link: '/css'
-            // }, {
-            //   text: 'VantUI',
-            //   link: '/css'
-            // }, {
-            //   text: 'Element-UI',
-            //   link: '/css'
-            // }, {
-            //   text: 'Ant-design-vue',
-            //   link: '/css'
-            // }]
+            text: "UI框架",
+            children: [
+                {
+                    text: 'Ant-Design-Vue',
+                    link: '/front-end/ui-framework/ant-design-vue'
+                },
+                {
+                    text: 'Element-UI',
+                    link: '/front-end/ui-framework/element-ui'
+                },
+                {
+                    text: 'IView-Design',
+                    link: '/front-end/ui-framework/iview-design'
+                },
+
+                {
+                    text: 'Vant-UI',
+                    link: '/front-end/ui-framework/vant-ui'
+                },
+                {
+                    text: 'Layer-UI',
+                    link: '/front-end/ui-framework/layer-ui'
+                },
+                {
+                    text: 'Bootstrap',
+                    link: '/front-end/ui-framework/bootstrap'
+                },
+            ]
         },
-        // {
-        //   text: '常用工具',
-        //   children: [{
-        //     text: '包管理器',
-        //     link: '/front-end/server-deploy/static-nginx'
-        //   }, {
-        //     text: '服务端渲染',
-        //     link: '/front-end/server-deploy/front-end-server'
-        //   }]
-        // },
         {
-            text: "常见部署",
+            text: "服务部署",
             children: [
                 {
                     text: "前端分离【nginx】",
@@ -79,6 +71,10 @@ module.exports=  {
                     text: "服务端渲染",
                     link: "/front-end/server-deploy/front-end-server",
                 },
+                {
+                    text: "SSR优化",
+                    link: '/ssr'
+                }
             ],
         },
     ],
