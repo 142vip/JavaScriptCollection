@@ -1,14 +1,13 @@
 <!--
-
  * @Description: JavaScriptCollection仓库的阅读大纲
  * @Version: Beata1.0
- * @Autor: 【B站&公众号】Rong姐姐好可爱
+ * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2022-04-10 22:54:43
 -->
 
-<p align="center">
+<p style="text-align: center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
 </p>
 <p align="center">
