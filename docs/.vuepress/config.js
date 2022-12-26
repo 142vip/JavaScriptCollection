@@ -1,10 +1,10 @@
 import {defaultTheme} from "vuepress";
-
+// 参考:https://v2.vuepress.vuejs.org/zh/guide/getting-started.html
+// 主题参考:https://antdocs.js.org/
 export default {
   title: "凡是过往、皆为序章",
   description: "一本有趣的JavaScript合集",
   // base: "/JavaScriptCollection/",
-  // base:"./",
   port: 7100,
   head: [
     ["link", { rel: "icon", href: "/fight_favicon.ico" }]
