@@ -27,7 +27,7 @@ features:
   - title: 读书写作
     details: 代码虽好但读书提升更为重要,不可偏执一端,人文社科生活百态利于提升职场人生软技能
   - title: 心路历程
-    details: 从小白一路咳咳盼盼,自认毫无天赋,个中心酸唯有自知; 做好当下,便是对自己的不辜负
+    details: 从小白一路磕磕绊绊,自认并无天赋,个中心酸唯有自知; 做好当下,便是对自己的不辜负
 
 footer: Copyrights ©2019-2022 <a href="https://github.com/mmdapl" target="_blank">Chu·Fan</a> All Rights Reserved Rong姐姐好可爱
 footerHtml: true

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     text: "Battle面试官",
     children: [
         {

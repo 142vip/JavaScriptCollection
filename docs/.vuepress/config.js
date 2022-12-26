@@ -1,4 +1,8 @@
 import {defaultTheme} from "vuepress";
+import navbar from "./config/navbar";
+import sidebar from "./config/sidebar";
+
+
 // 参考:https://v2.vuepress.vuejs.org/zh/guide/getting-started.html
 // 主题参考:https://antdocs.js.org/
 
@@ -15,8 +19,8 @@ export default {
         home: '/',
         logo: "/favicon.ico",
         darkMode: false, // 禁用夜色
-        navbar: require("./config/navbar/index"),  // 注意这个关键字有所改变
-        sidebar: require("./config/sidebar/index"),
+        navbar,
+        sidebar,
         smoothScroll: true,
         lastUpdated: true,
         lastUpdatedText: "最近更新",

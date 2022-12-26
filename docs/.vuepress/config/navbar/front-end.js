@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     text: "前端【Web】",
     children: [
         {

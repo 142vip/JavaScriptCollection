@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     text: "开发工具",
     children: [
         {

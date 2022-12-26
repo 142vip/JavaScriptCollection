@@ -1,3 +1,5 @@
-module.exports = {
-  "/read-books": require('../../../read-books/sidebar_content')
+import readBooksContent from "./read-books-content";
+
+export default {
+    "/read-books": readBooksContent
 }

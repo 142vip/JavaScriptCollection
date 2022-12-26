@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     text: '分布式微服务',
     children: [
         {
