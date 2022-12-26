@@ -1,7 +1,7 @@
 ---
 home: true
-heroImage: http://cdn.142vip.cn/article-notes/img/image-20200605224832237.png
-heroImageDark: http://cdn.142vip.cn/article-notes/img/image-20200605224832237.png
+heroImage: https://cdn.jsdelivr.net/gh/142vip/cdn_service@main/doc_book/jsc/time_begin.png
+heroImageDark: https://cdn.jsdelivr.net/gh/142vip/cdn_service@main/doc_book/jsc/time_begin.png
 heroHeight: 140
 heroAlt: 屈身守分 以待天时
 heroText: JavaScriptCollection
