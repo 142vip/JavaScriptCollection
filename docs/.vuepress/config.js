@@ -10,7 +10,7 @@ import sidebar from "./config/sidebar";
 export default {
     title: "凡是过往、皆为序章",
     description: "一本有趣的JavaScript合集",
-    base: "/JavaScriptCollection/",
+    // base: "/JavaScriptCollection/",
     port: 7100,
     head: [
         ["link", {rel: "icon", href: "/fight_favicon.ico"}]

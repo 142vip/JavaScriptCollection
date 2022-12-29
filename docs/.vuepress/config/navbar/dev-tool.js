@@ -3,7 +3,7 @@ export default {
     children: [
         {
             text: 'npm',
-            link: '/npm'
+            link: '/develop-tool/npm'
         },
         {
             text: 'pnpm',
@@ -35,7 +35,7 @@ export default {
             children: [
                 {
                     text: 'Git',
-                    link: '/git'
+                    link: '/develop-tool/git'
                 },
                 {
                     text: 'Github && GitLab',
