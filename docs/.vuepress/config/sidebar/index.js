@@ -1,5 +1,5 @@
-import readBooksContent from "./read-books-content";
+import readBooksContentSidebar from "./read-books-content.sidebar";
 
 export default {
-    "/read-books": readBooksContent
+    "/read-books": readBooksContentSidebar
 }

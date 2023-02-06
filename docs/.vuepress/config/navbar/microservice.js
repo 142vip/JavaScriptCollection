@@ -1,5 +1,5 @@
 export default {
-    text: '分布式微服务',
+    text: '微服务',
     children: [
         {
             text: "RPC框架",
@@ -36,7 +36,7 @@ export default {
             ],
         },
         {
-            text: '服务网关Kong',
+            text: '网关Kong',
             link: '/kong'
         },
         {

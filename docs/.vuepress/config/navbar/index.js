@@ -18,21 +18,24 @@ export default [
     battleInterview,
     readBooks,
     {
-        text: "常用网站",
+        text:"其他",
         children: [
             {
-                text: "平台汇总",
+                text: "常用网站",
                 link: "/sum-links",
             },
             {
                 text: "技术文档",
-                children: [
-                    {
-                        text: "百度",
-                        link: "http://www.baidu.com",
-                    },
-                ],
+                link:'/test'
+            },
+            {
+                text: "todo计划",
+                link: "/sum-links",
+            },
+            {
+                text: "变更记录",
+                link: "/sum-links",
             },
         ],
-    },
+    }
 ];

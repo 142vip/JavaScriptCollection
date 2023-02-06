@@ -1,5 +1,5 @@
 export default {
-    text: "前端【Web】",
+    text: "前端",
     children: [
         {
             text: "HTML",
