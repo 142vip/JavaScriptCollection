@@ -1,5 +1,5 @@
-module.exports = {
-    text: '分布式微服务',
+export default {
+    text: '微服务',
     children: [
         {
             text: "RPC框架",
@@ -36,7 +36,7 @@ module.exports = {
             ],
         },
         {
-            text: '服务网关Kong',
+            text: '网关Kong',
             link: '/kong'
         },
         {

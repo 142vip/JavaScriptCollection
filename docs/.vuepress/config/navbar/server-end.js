@@ -1,9 +1,9 @@
-module.exports = {
+export default {
     text: "后端【Node.js】",
     children: [
         {
             text: "Node.js",
-            link: "/server-end/node",
+            link: "/server-end/node-learn/",
         },
         {
             text: "ES6",

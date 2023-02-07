@@ -1,5 +1,5 @@
-module.exports = {
-    text: "前端【Web】",
+export default {
+    text: "前端",
     children: [
         {
             text: "HTML",

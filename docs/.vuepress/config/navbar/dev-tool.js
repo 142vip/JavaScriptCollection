@@ -1,9 +1,9 @@
-module.exports = {
+export default {
     text: "开发工具",
     children: [
         {
             text: 'npm',
-            link: '/npm'
+            link: '/develop-tool/npm'
         },
         {
             text: 'pnpm',
@@ -35,7 +35,7 @@ module.exports = {
             children: [
                 {
                     text: 'Git',
-                    link: '/git'
+                    link: '/develop-tool/git'
                 },
                 {
                     text: 'Github && GitLab',

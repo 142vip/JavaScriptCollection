@@ -1,4 +1,4 @@
-module.exports=  {
+export default {
     text: "Solo算法",
     children: [
         {

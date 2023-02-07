@@ -1,13 +1,8 @@
 ---
 home: true
-heroImage: http://cdn.142vip.cn/article-notes/img/image-20200605224832237.png
-heroImageDark: http://cdn.142vip.cn/article-notes/img/image-20200605224832237.png
-heroHeight: 140
-heroAlt: 屈身守分 以待天时
+heroAlt: 屈身守份 以待天时
 heroText: JavaScriptCollection
-externalLinkIcon: false 
 tagline: 理论+实战模式下的硬核全栈学习合集，内容持续更新...
-
 actions:
   - text: 快速开始 →
     link: /quick-start/
@@ -22,32 +17,33 @@ features:
     details: 基础扎实,熟练使用框架,有一定的封装能力,开源npm模块包,定制化插件功能,保姆级开发部署流程
   - title: 算法
     details: 习题整理,代码通过记录,个人实际解题思路,助力刷题通关
+
   - title: 面试求职
     details: 校招社招八股文集合,分享面经与常见面试题,总结面试套路经验,对线Battle面试官有条不紊
   - title: 读书写作
     details: 代码虽好但读书提升更为重要,不可偏执一端,人文社科生活百态利于提升职场人生软技能
   - title: 心路历程
-    details: 从小白一路咳咳盼盼,自认毫无天赋,个中心酸唯有自知; 做好当下,便是对自己的不辜负
-
-footer: Copyrights ©2019-2022 <a href="https://github.com/mmdapl" target="_blank">Chu·Fan</a> All Rights Reserved Rong姐姐好可爱
-footerHtml: true
----
-
+    details: 从小白一路磕磕绊绊,自认并无天赋,个中心酸唯有自知; 做好当下,便是对自己的不辜负
 
 ---
+
+
+
+---
+
+<BiliBili bvid="BV1rd4y1V7tB"  />
 
 
 ### 本地浏览【推荐】
 
 由于平台、网络等原因，在线浏览容易出现加载面、加载不出来等常见问题，因此非常建议在本地进行浏览、学习；**下面指令默认你已经安装[Git](https://git-scm.com/download)、[NPM](https://www.npmjs.com/)、[PNPM](https://www.pnpm.cn/)、[Yarn](https://yarn.bootcss.com/)、[Node](http://nodejs.cn)等环境，并对此有一定了解!**
 
-<CodeGroup>
-
-<CodeGroupItem title="PNPM（推荐）" >
+::: code-tabs#shell
+@tab PNPM（推荐）
 
 ```bash:no-line-numbers
 ## 进入cmd命令行，直接克隆仓库
-git clone https://github.com/fairyfan1998/JavaScriptCollection.git
+git clone https://github.com/142vip/JavaScriptCollection.git
 
 ## 进入JavaScriptCollection文件夹中
 cd JavaScriptCollection/
@@ -58,17 +54,16 @@ git pull
 ## 下载依赖包
 pnpm install
 
-## 执行dev指令，本地启动项目，打开http://localhost:4000即可访问文档
+## 执行dev指令，本地启动项目，打开http://localhost:5000即可访问文档
 pnpm dev
 
 ```
-</CodeGroupItem>
 
-<CodeGroupItem title="  NPM  ">
+@tab NPM
 
 ```bash:no-line-numbers
 ## 进入cmd命令行，直接克隆仓库
-git clone https://github.com/fairyfan1998/JavaScriptCollection.git
+git clone https://github.com/142vip/JavaScriptCollection.git
 
 ## 进入JavaScriptCollection文件夹中
 cd JavaScriptCollection/
@@ -79,21 +74,17 @@ git pull
 ## 下载依赖包
 npm install
 
-## 执行dev指令，本地启动项目，打开http://localhost:4000即可访问文档
+## 执行dev指令，本地启动项目，打开http://localhost:5000即可访问文档
 npm run dev
 
 ```
 
 
-
-</CodeGroupItem>
-
-
-<CodeGroupItem title=" YARN ">
+@tab YARN
 
 ```bash:no-line-numbers
 ## 进入cmd命令行，直接克隆仓库
-git clone https://github.com/fairyfan1998/JavaScriptCollection.git
+git clone https://github.com/142vip/JavaScriptCollection.git
 
 ## 进入JavaScriptCollection文件夹中
 cd JavaScriptCollection/
@@ -104,16 +95,13 @@ git pull
 ## 下载依赖包
 yarn install
 
-## 执行dev指令，本地启动项目，打开http://localhost:4000即可访问文档
+## 执行dev指令，本地启动项目，打开http://localhost:5000即可访问文档
 yarn run dev
 
 ```
-</CodeGroupItem>
+:::
 
-
-</CodeGroup>
-
-查看项目启动日志并访问：[http://127.0.0.1:4000](http://localhost:4000)，开启学习之旅吧~
+查看项目启动日志并访问：[http://127.0.0.1:5000](http://localhost:5000)，开启学习之旅吧~
 
 
 

@@ -2,7 +2,7 @@
 
 ## 功能：清除容器，删除旧镜像，创建新的容器
 ## 参考：https://blog.csdn.net/Dontla/article/details/125210694
-## 作者：Rong姐姐好可爱
+## 作者：储凡
 ## 使用示例：bash xxx.sh 容器名称  镜像地址
 ##
 
@@ -13,9 +13,10 @@ readonly warnLogger="\033[1;33m"
 ## 定义时间
 readonly currentTime=$(date "+%Y-%m-%d %H:%M:%S")
 readonly repoAddress="registry.cn-hangzhou.aliyuncs.com/142vip/doc_book"
-readonly containerName="JavaScriptCollection"
 readonly networkName="service_env_net"
+
 ## 定义参数
+containerName="JavaScriptCollection"
 operationName=${1}
 version=${2}
 
@@ -24,7 +25,7 @@ version=${2}
 
 ## 参数检查
 prepare_check(){
-  if test -z "${containerName}"
+  if test -z "${operationName}"
   then
     echo -e "${errorLogger}${currentTime}:参数错误 部署平台不能为空."
     exit 0
@@ -35,15 +36,14 @@ prepare_check(){
 ## 判断容器存在即删除
 ## - 一个参数，容器名称
 delete_container(){
-  docker inspect "${1}" -f '{{.Name}}' > /dev/null
+  docker inspect "${containerName}" -f '{{.Name}}' > /dev/null
   if [ $? -eq 0 ] ;then
-    echo -e "${warnLogger}${currentTime}容器：${1} 存在，现进行删除"
-    docker rm -f "${1}"
+    echo -e "${warnLogger}${currentTime}容器：${containerName} 存在，现进行删除"
+    docker rm -f "${containerName}"
   fi
 }
 
 ## 判断镜像存在，即删除
-## - 一个参数，镜像地址
 delete_image(){
   ## 判断版本号
   if test -z "${version}";then
@@ -51,90 +51,64 @@ delete_image(){
     exit 0
   fi
 
-  if [[ "$(docker images -q "${1}" 2> /dev/null)" != "" ]];
+  if [[ "$(docker images -q "${repoAddress}:${containerName}-${version}" 2> /dev/null)" != "" ]];
     then
-      echo -e "${warnLogger}${currentTime}镜像：${1}存在，现进行删除"
-      docker rmi "${1}"
+      echo -e "${warnLogger}${currentTime}镜像：${repoAddress}:${containerName}-${version}存在，现进行删除"
+      docker rmi "${repoAddress}:${containerName}-${version}"
   fi
 }
-
 
 ## 环境初始成功
 run(){
-    if [ "${operationName}" == "gitee" ];then
-        ## 查看所有
-        deploy_to_gitee
-      exit 0;
-    elif [ "${operationName}" == "github" ]; then
-        deploy_to_github
-      exit 0;
-    elif [ "${operationName}" == "ali" ]; then
-      ## 删除容器
-      delete_container  "${containerName}"
-      ## 删除镜像
-      delete_image "${repoAddress}:${containerName}_${version}"
-      ## 部署
-      deploy_to_ali
-      exit 0;
+    if [ "${operationName}" == "408" ];then
+        containerName="408CSFamily"
+        delete_container
+        delete_image
+        deploy_408CSFamily
+      exit 0
+    elif [ "${operationName}" == "jsc" ]; then
+        delete_container
+        delete_image
+        deploy_JavaScriptCollection
+      exit 0
     else
-      echo -e "${errorLogger}${currentTime}当前操作不支持,目前只支持:ali/gitee/github"
+      echo -e "${errorLogger}${currentTime}当前操作不支持,目前只支持:408/jsc"
       exit 0
     fi
+    exit 0
 }
 
+## 部署408CSFamily
+deploy_408CSFamily(){
+    echo -e "${successLogger}---------------- deploy ${containerName} ali start ---------------- "
 
-## 部署到阿里服务器
-deploy_to_ali(){
-  echo -e "${successLogger}---------------- deploy ${containerName} ali start ---------------- "
+    docker run -d --name "${containerName}" \
+    -p 0.0.0.0:7000:80 \
+    --network="${networkName}"  \
+    --restart=unless-stopped \
+    --ip=172.30.0.100 \
+    "${repoAddress}:${containerName}-${version}"
 
-  docker run -d --name "${containerName}" \
-  -p 7100:7100 \
-  --network="${networkName}"  \
-  --restart=unless-stopped \
-  --ip=172.30.0.100 \
-  "${repoAddress}:${containerName}_${version}"
-
-  echo -e "${successLogger}---------------- deploy ${containerName} ali end ------------------ "
-  docker ps
+    echo -e "${successLogger}---------------- deploy ${containerName} ali end ------------------ "
+    docker ps
+    exit 0
 }
 
-## 部署到github静态资源托管
-deploy_to_github(){
-  echo -e "${successLogger}---------------- deploy ${containerName} github start ---------------- "
+## 部署JavaScriptCollection
+deploy_JavaScriptCollection(){
+    echo -e "${successLogger}---------------- deploy ${containerName}  start ---------------- "
 
-  # 当命令以非零状态退出时，则退出shell
-  set -e
+    docker run -d --name "${containerName}" \
+    -p 0.0.0.0:7200:80 \
+    --network="${networkName}"  \
+    --restart=unless-stopped \
+    --ip=172.30.0.200 \
+    "${repoAddress}:${containerName}-${version}"
 
-  ## 配置网站base
-
-  # 进入上级目录，并编译
-  npm run build && cd docs/.vuepress/dist
-  git init && git add --all
-  ## 如果没有输入commit信息，则采用默认
-  if [ "${commitInfo}" -eq "" ]; then
-      commitInfo="JavaScriptCollection Init"
-  fi
-  git commit -m "refactor:${commitInfo}"
-
-  ## 配置个人信息
-  git config user.name "喜欢吃芝士葡萄的妹妹"
-  git config user.email "fairy0115@2925.com"
-
-  # if you are deploying to https://<USERNAME>.github.io
-  # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
-  # if you are deploying to https://<USERNAME>.github.io/<REPO>
-  git push -f https://github.com/mmdapl/JavaScriptCollection.git master:pages/github
-  cd -
-  echo -e "${successLogger}---------------- deploy ${containerName} github end ------------------ "
+    echo -e "${successLogger}---------------- deploy ${containerName}  end ------------------ "
+    docker ps
+    exit 0
 }
-
-
-## 部署到gitee静态资源托管
-deploy_to_gitee(){
-  exit 0
-}
-
-
 
 
 prepare_check

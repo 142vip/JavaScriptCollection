@@ -70,7 +70,7 @@ init_network(){
      docker network ls
      exit ;
   else
-    echo -e "${successLogger}---------------- 网络${networdefaultNetworkNamekName},现进行初始化 ---------------- "
+    echo -e "${successLogger}---------------- 网络${defaultNetworkName},现进行初始化 ---------------- "
     docker network ls
     docker network create \
       --subnet="${subnet}" \
