@@ -52,6 +52,7 @@ export default hopeTheme({
     // 设置页脚
     displayFooter:true,
     footer:FOOTER_HTML_INFO,
+    copyright:false,
 
     // 主题色选择器
     themeColor: {
@@ -62,7 +63,7 @@ export default hopeTheme({
     },
 
     plugins: {
-        copyright:true,
+        copyright:false,
         // 开启博客功能
         blog:true,
         // 代码块

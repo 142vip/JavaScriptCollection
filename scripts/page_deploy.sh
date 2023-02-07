@@ -1,14 +1,7 @@
 #!/usr/bin/env sh
 
-###
- # @Description: 静态资源网站部署脚本
- # @Version: Beta1.0
- # @Author: 【B站&公众号】Rong姐姐好可爱
- # @Date: 2021-02-19 22:34:57
- # @LastEditors: 【B站&公众号】Rong姐姐好可爱
- # @LastEditTime: 2022-04-18 23:35:15
-### 
 
+## 提交信息
 commitInfo=${1}
 
 set -e
@@ -22,7 +15,7 @@ cd docs/.vuepress/dist
 git init
 git add -A
 
-## 如果没有输入commit信息，则采用默认
+## 没有输入commit信息，采用默认
 if [ "${commitInfo}" -eq "" ]; then
     commitInfo="JavaScriptCollection Init"
 fi

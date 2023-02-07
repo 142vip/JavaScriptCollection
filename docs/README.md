@@ -1,11 +1,8 @@
 ---
 home: true
-heroHeight: 200
 heroAlt: 屈身守份 以待天时
 heroText: JavaScriptCollection
 tagline: 理论+实战模式下的硬核全栈学习合集，内容持续更新...
-
-
 actions:
   - text: 快速开始 →
     link: /quick-start/
@@ -34,7 +31,7 @@ features:
 
 ---
 
-<BiliBili bvid="BV1U4411A7MM"  />
+<BiliBili bvid="BV1rd4y1V7tB"  />
 
 
 ### 本地浏览【推荐】
