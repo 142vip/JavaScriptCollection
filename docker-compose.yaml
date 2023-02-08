@@ -1,6 +1,6 @@
 ##
 ## 服务名： JavaScriptCollection
-## IP范围： 172.30.0.100
+## IP范围： 172.30.0.200
 ##
 version: '2'
 services:
@@ -12,7 +12,7 @@ services:
       - "7100:80"
     networks:
       net:
-        ipv4_address: 172.30.0.100
+        ipv4_address: 172.30.0.200
 
 ## 创建桥接网络
 networks:

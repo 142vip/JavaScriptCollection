@@ -99,7 +99,7 @@ deploy_JavaScriptCollection(){
     echo -e "${successLogger}---------------- deploy ${containerName}  start ---------------- "
 
     docker run -d --name "${containerName}" \
-    -p 0.0.0.0:7200:80 \
+    -p 0.0.0.0:7100:80 \
     --network="${networkName}"  \
     --restart=unless-stopped \
     --ip=172.30.0.200 \

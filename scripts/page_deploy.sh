@@ -20,18 +20,18 @@ if [ "${commitInfo}" -eq "" ]; then
     commitInfo="JavaScriptCollection Init"
 fi
 
+## 配置个人信息
+git config user.name "吃芝士葡萄的妹妹"
+git config user.email "fairy_vip@2925.com"
+
 git commit -m "refactor:${commitInfo}"
 
-
-## 配置个人信息
-git config user.name "喜欢吃芝士葡萄的妹妹"
-git config user.email "fairy0115@2925.com"
 
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/mmdapl/JavaScriptCollection.git master:pages/github
+git push -f https://github.com/142vip/JavaScriptCollection.git main:pages/github
 
 
 cd -
