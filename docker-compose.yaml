@@ -5,7 +5,7 @@
 version: '2'
 services:
   JavaScriptCollection:
-    image: registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:JavaScriptCollection_0.0.1
+    image: registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:JavaScriptCollection-0.0.1
     container_name: JavaScriptCollection
     hostname: JavaScriptCollection
     ports:

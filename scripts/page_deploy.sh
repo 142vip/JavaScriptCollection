@@ -1,5 +1,11 @@
 #!/usr/bin/env sh
 
+## 功能：github等平台推送脚本
+## 参考：https://blog.csdn.net/Dontla/article/details/125210694
+## 作者：Chu Fan
+## 使用示例：bash xxx.sh "提交的信息"
+##
+
 
 ## 提交信息
 commitInfo=${1}

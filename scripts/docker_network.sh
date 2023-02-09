@@ -2,7 +2,7 @@
 
 ## 功能：设置docker自定义network，并指定网关、IP范围
 ## 参考：https://blog.csdn.net/Dontla/article/details/125210694
-## 作者：Rong姐姐好可爱
+## 作者：Chu Fan
 ## 使用示例：bash xxx.sh 容器名称  镜像地址
 ##
 
