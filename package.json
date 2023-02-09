@@ -6,6 +6,7 @@
     "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' + && rm -rf docs/.vuepress/dist",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
+    "build-proxy": "PROXY_DOMAIN=true vuepress build docs",
     "image": "bash scripts/build_image.sh $npm_package_version",
     "faster-image": "bash scripts/build_image.sh $npm_package_version faster",
     "github": "bash scripts/deploy.bash github"
