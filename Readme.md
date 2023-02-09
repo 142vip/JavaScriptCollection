@@ -1,14 +1,13 @@
 <!--
-
  * @Description: JavaScriptCollection仓库的阅读大纲
  * @Version: Beata1.0
- * @Autor: 【B站&公众号】Rong姐姐好可爱
+ * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2022-04-10 22:54:43
 -->
 
-<p align="center">
+<p style="text-align: center">
     <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
 </p>
 <p align="center">
@@ -35,26 +34,27 @@
 
 ## 写最前面
 
-> 这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千，水一些无关技术的文章；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容会选择性的发表于**微信公众号、个人博客、掘金、CSDN ，实际内容以本仓库排版、校对为主。** 也会不定时同步到 **码云** 。
+> 这里是日常工作、学习、生活中总结的各类文章笔记，涉及开发技术、总结记录，偶尔也会感慨万千，水一些无关技术的文章；
+> 若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；
+> 所有内容会选择性的发表于**微信公众号、个人博客、掘金、CSDN ，实际内容以本仓库排版、校对为主。**
+> 也会不定时同步到 **码云** 。
 > **以下内容没有链接的代表尚未完成，大家善用快捷键Ctrl+F**
 >
-> 创建时间：2020年2月14日
 
 
+## 在线阅读
 
-<!-- ## 关于作者
-
-
-- [个人项目整理](http://blog.142vip.cn/s/projects)
-
-
-- [自我介绍]() -->
+- 官网: https://book.142vip.cn/JavaScriptCollection
+- 备用站点一：https://github.cn/142vip/JavaScriptCollection
 
 
 ## 思维导图
 
 
 > 内容同步与文档，可以结合思维导图对文档进行有效学习.相关目录的xmind文件为思维导图原文件
+
+
+---
 
 
 ## 日常推荐
@@ -90,7 +90,7 @@
 
 - 移动端适配
 
-  
+
 
 
 ##### [基础教程](docs/css/基础教程)
@@ -102,55 +102,52 @@
 ### JavaScript
 
 
-> **本级目录下的JavaScript内容没有发表到[博客](http://blog.142vip.cn)上,建议对照[脑图](docs/javascript/README.md)在[JavaScript主目录](javascript)下学习**,依赖官方文档及自身对JavaScript语言的初步了解，进行的关于JavaScript知识整理，主要目的是复习基础概念、了解新特性、熟练ES6/7操作；整体相对来说由易到难，方便后续查阅学习~
+
+#### 快速入门
 
 
-<!-- #### 快速入门 -->
-
-
-- [【快速入门】简单介绍](docs/javascript/快速入门/javascript简单介绍.md)
-- [【快速入门】快速了解](docs/javascript/快速入门/javascript快速入门.md)
-- [【快速入门】JavasScript开发规范](docs/javascript/JavaScript开发规范.md)
+- [x] [简单介绍](docs/javascript/快速入门/javascript简单介绍.md)
+- [x] [【快速入门】快速了解](docs/javascript/快速入门/javascript快速入门.md)
+- [x] [【快速入门】JavasScript开发规范](docs/javascript/JavaScript开发规范.md)
 
 
 <!-- #### 基础教程 -->
 
 
-- [【基础教程】语法与数据结构](docs/javascript/基础教程/javascript语法与数据结构.md)
-- [【基础教程】循环与迭代](docs/javascript/基础教程/javascript循环与迭代.md)
-- [【基础教程】流程控制与错误处理](docs/javascript/基础教程/javascript流程控制与错误处理.md)
-- [【基础教程】表达式和运算符](docs/javascript/基础教程/javascript表达式和运算符.md)
-- [【基础教程】函数和方法](docs/javascript/基础教程/javascript函数.md)
-- [【基础教程】数字和日期](docs/javascript/基础教程/javascript数字和日期.md)
-- [【基础教程】对象的使用](docs/javascript/基础教程/javascript对象的使用.md)
-- [【基础教程】正则表达式](docs/javascript/基础教程/javascript正则表达式.md)
-- [【基础教程】promise对象的使用](docs/javascript/基础教程/promise对象的使用.md)
-- [【基础教程】modules模块](docs/javascript/基础教程/modules模块.md)
+- [x] [【基础教程】语法与数据结构](docs/javascript/基础教程/javascript语法与数据结构.md)
+- [x] [【基础教程】循环与迭代](docs/javascript/基础教程/javascript循环与迭代.md)
+- [x] [【基础教程】流程控制与错误处理](docs/javascript/基础教程/javascript流程控制与错误处理.md)
+- [x] [【基础教程】表达式和运算符](docs/javascript/基础教程/javascript表达式和运算符.md)
+- [x] [【基础教程】函数和方法](docs/javascript/基础教程/javascript函数.md)
+- [x] [【基础教程】数字和日期](docs/javascript/基础教程/javascript数字和日期.md)
+- [x] [【基础教程】对象的使用](docs/javascript/基础教程/javascript对象的使用.md)
+- [x] [【基础教程】正则表达式](docs/javascript/基础教程/javascript正则表达式.md)
+- [x] [【基础教程】promise对象的使用](docs/javascript/基础教程/promise对象的使用.md)
+- [x] [【基础教程】modules模块](docs/javascript/基础教程/modules模块.md)
 
 
 <!-- #### 中级教程 -->
 
 
-- [【中级教程】Promise对象](docs/javascript/中级教程/promise对象.md)
-- [【中级教程】async函数](docs/javascript/中级教程/async函数.md)
-- [【中级教程】class类](docs/javascript/中级教程/class类.md)
+- [x] [【中级教程】Promise对象](docs/javascript/中级教程/promise对象.md)
+- [x] [【中级教程】async函数](docs/javascript/中级教程/async函数.md)
+- [x] [【中级教程】class类](docs/javascript/中级教程/class类.md)
 
 
-<!-- #### 高级教程 -->
 
 
-- [【高级教程】不一样的ajax](docs/javascript/高级教程/不一样的ajax.md)
-- [【高级教程】什么是事件循环](docs/javascript/高级教程/什么是事件循环.md)
-- [【高级教程】JSON.stringify()的三个参数]()
+
+- [x] [【高级教程】不一样的ajax](docs/javascript/高级教程/不一样的ajax.md)
+- [x] [【高级教程】什么是事件循环](docs/javascript/高级教程/什么是事件循环.md)
+- [x] [【高级教程】JSON.stringify()的三个参数]()
 
 
-<!-- #### 最后稻草 -->
 
 
-- [【最后稻草】ES6、ES7、ES8、ES9、ES10的新特性](docs/javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
-- [【最后稻草】ES2020新特性](docs/javascript/最后稻草/ES2020新特性.md)
-- [【最后稻草】JavaScript 工具函数大全](docs/javascript/最后稻草/JavaScript工具函数大全.md)
-- [【最后稻草】常用函数方法整理](docs/javascript/最后稻草/常用函数方法整理.md)
+- [x] [【最后稻草】ES6、ES7、ES8、ES9、ES10的新特性](docs/javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
+- [x] [【最后稻草】ES2020新特性](docs/javascript/最后稻草/ES2020新特性.md)
+- [x] [【最后稻草】JavaScript 工具函数大全](docs/javascript/最后稻草/JavaScript工具函数大全.md)
+- [x] [【最后稻草】常用函数方法整理](docs/javascript/最后稻草/常用函数方法整理.md)
 
 
 ### JQuery
@@ -214,7 +211,7 @@
 > 市面上前端框架层出不穷，不同的技术栈依赖的UI框架也不尽相同，这里将会依据笔者使用的UI框架，以线上项目展示的方式，介绍用过的框架；
 
 
-- Bootstrap 
+- Bootstrap
 - LayerUI
 - Ant-design-vue
 - iView-UI
@@ -286,13 +283,13 @@
 - [第二部分：数据库概述](docs/eggjs/mysql-README.md)
 
 
-  - [2.1 下载和安装](docs/eggjs/mysql-download.md)
-  - [2.2 连接数据库](docs/eggjs/git-connect.md)
-  - [2.3 CURD操作](docs/eggjs/mysql-curd.md)
-  - [2.4 Redis缓存](docs/eggjs/mysql-redis.md)
-  - [2.4.1 redis安装](docs/eggjs/mysql-redis-install.md)
-  - [2.4.2 redis常用指令](docs/eggjs/mysql-redis-dns.md)
-  - [2.5 可视化管理](docs/eggjs/mysql-redis-view.md)
+- [2.1 下载和安装](docs/eggjs/mysql-download.md)
+- [2.2 连接数据库](docs/eggjs/git-connect.md)
+- [2.3 CURD操作](docs/eggjs/mysql-curd.md)
+- [2.4 Redis缓存](docs/eggjs/mysql-redis.md)
+- [2.4.1 redis安装](docs/eggjs/mysql-redis-install.md)
+- [2.4.2 redis常用指令](docs/eggjs/mysql-redis-dns.md)
+- [2.5 可视化管理](docs/eggjs/mysql-redis-view.md)
 
 
 #### 入门篇
@@ -325,12 +322,12 @@
 - [第二部分：插件开发](docs/eggjs/plugin-README.md)
 
 
-  - [2.1 egg-validate参数校验](docs/eggjs/plugin-egg-validate.md)
-  - [2.2 egg-view-ejs页面渲染](docs/eggjs/plugin-egg-view.ejs.md)
-  - [2.3 egg-redis缓存](docs/eggjs/plugin-egg-redis.md)
-  - [2.4 egg-mysql](docs/eggjs/plugin-egg-mysql.md)
-  - [2.5 egg-sequelize](docs/eggjs/plugin-egg-sequelize.md)
-  - [2.6 egg-socket.io即时通讯](docs/eggjs/plugin-egg-socket.io.md)
+- [2.1 egg-validate参数校验](docs/eggjs/plugin-egg-validate.md)
+- [2.2 egg-view-ejs页面渲染](docs/eggjs/plugin-egg-view.ejs.md)
+- [2.3 egg-redis缓存](docs/eggjs/plugin-egg-redis.md)
+- [2.4 egg-mysql](docs/eggjs/plugin-egg-mysql.md)
+- [2.5 egg-sequelize](docs/eggjs/plugin-egg-sequelize.md)
+- [2.6 egg-socket.io即时通讯](docs/eggjs/plugin-egg-socket.io.md)
 
 
 #### 代码实战篇
@@ -339,19 +336,19 @@
 - [第一部分：常用代码](docs/eggjs/project-README-CODE.md)
 
 
-  - [1.1 图片前端在线剪辑](docs/eggjs/project-images-cropper.md)
-  - [1.2 文件上传后台处理](docs/eggjs/project-upload.md)
-  - [1.3 MD5加密-解密算法](docs/eggjs/project-md5.md)
-  - [1.4 Egg Jwt加密和校验](docs/eggjs/project-token.md)
+- [1.1 图片前端在线剪辑](docs/eggjs/project-images-cropper.md)
+- [1.2 文件上传后台处理](docs/eggjs/project-upload.md)
+- [1.3 MD5加密-解密算法](docs/eggjs/project-md5.md)
+- [1.4 Egg Jwt加密和校验](docs/eggjs/project-token.md)
 - [第二部分：项目简介](docs/eggjs/project-README-INTRODUCE.md)
 
 
-  - [2.1 基于OAuth2的统一认证中心系统](docs/eggjs/project-ssoCenterSystem.md)
-  - [2.2 常用前后端分页比较与实现](docs/eggjs/project-pagenation.md)
-  - [2.3基于Spring Boot实现的个人博客](docs/eggjs/project-spring-boot-blog.md)
-  - [2.4 基于Yapi搭建的接口管理系统](docs/eggjs/project-webapi.md)
-  - [2.5 GitBook开源笔记总结站点搭建](docs/eggjs/project-gitbook.md)
-  - [2.6 个人网站及接口服务搭建搭建](docs/eggjs/project-142vip.cn.md)
+- [2.1 基于OAuth2的统一认证中心系统](docs/eggjs/project-ssoCenterSystem.md)
+- [2.2 常用前后端分页比较与实现](docs/eggjs/project-pagenation.md)
+- [2.3基于Spring Boot实现的个人博客](docs/eggjs/project-spring-boot-blog.md)
+- [2.4 基于Yapi搭建的接口管理系统](docs/eggjs/project-webapi.md)
+- [2.5 GitBook开源笔记总结站点搭建](docs/eggjs/project-gitbook.md)
+- [2.6 个人网站及接口服务搭建搭建](docs/eggjs/project-142vip.cn.md)
 - [第三部分：手把手搭建基础Egg开发框架](docs/eggjs/egg-egg-example.md)
 
 
@@ -762,7 +759,8 @@
 
 
 
-## 
+---
+
 
 
 ## 字节工作内推
@@ -887,29 +885,31 @@
 #### 前端研发工程师-智能营销中台
 
 ##### 职位描述
-- 负责设计稿智能解析生成UI界面平台开发； 
-- 负责智能设计辅助平台开发； 
+- 负责设计稿智能解析生成UI界面平台开发；
+- 负责智能设计辅助平台开发；
 - 负责公司运营活动平台建设。
 ##### 职位要求
 - 计算机、通信和电子信息科学相关专业优先；
-- 有图像算法、深度学习背景优先； 
-- 熟悉前端相关技术，包括HTML、CSS、JavaScript等； 
+- 有图像算法、深度学习背景优先；
+- 熟悉前端相关技术，包括HTML、CSS、JavaScript等；
 - 有自己的技术产品、开源作品、或活跃的开源社区贡献者优先；
 - 积极乐观、责任心强、工作认真细致、具有良好的服务意识、具有良好的沟通协作能力。
 
 #### 前端开发工程师-社区安全方向
 
 ##### 职位描述
-- 负责抖音端内社区安全和隐私合规相关功能的前端开发工作； 
+- 负责抖音端内社区安全和隐私合规相关功能的前端开发工作；
 - 负责抖音社区安全、隐私合规方向的平台建设工作。
 ##### 职位要求
 - 计算机基础扎实，熟悉常用的数据结构和算法，具备扎实的编码能力；
-- 前端基础扎实，熟练掌握HTML、Javascript、CSS及HTTP协议； 
-- 熟悉至少一种Web开发框架，如React、Vue、Angular等； 
-- 具备良好的系统设计能力，能自主完成常规技术方案的设计及落地； 
+- 前端基础扎实，熟练掌握HTML、Javascript、CSS及HTTP协议；
+- 熟悉至少一种Web开发框架，如React、Vue、Angular等；
+- 具备良好的系统设计能力，能自主完成常规技术方案的设计及落地；
 - 具有良好的团队合作精神和积极主动的沟通意识；
 - 有安全相关工作背景者优先，有大型网站架构经验者优先，具备全栈/跨端开发能力者优先。
 
+
+---
 
 ## 赞赏支持
 
