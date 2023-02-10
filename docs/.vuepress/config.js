@@ -7,7 +7,7 @@ const PROXY_DOMAIN=process.env.PROXY_DOMAIN||false
 export default {
     title: "凡是过往、皆为序章",
     description: "一本有趣的JavaScript合集",
-    base: PROXY_DOMAIN?"/JavaScriptCollection/":"/",
+    base: PROXY_DOMAIN ? "/JavaScriptCollection/":"/",
     port: 5000,
     head: [
         ["link", {rel: "icon", href: "/fight_favicon.ico"}]
@@ -16,3 +16,4 @@ export default {
     // 插件配置
     plugins:pluginsConfig,
 };
+
