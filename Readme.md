@@ -44,7 +44,7 @@
 
 ## 在线阅读
 
-https://book.142vip.cn/JavaScriptCollection
+https://142vip.cn/JavaScriptCollection
 
 网站无法访问时，建议通过科学上网访问备用网络
 
