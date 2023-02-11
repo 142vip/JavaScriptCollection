@@ -2,7 +2,7 @@
  * @Description: JavaScriptCollection仓库的阅读大纲
  * @Version: Beata1.0
  * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2020-08-30 12:23:02
+ * @Date: 2019-08-30 12:23:02
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2022-04-10 22:54:43
 -->
@@ -44,8 +44,13 @@
 
 ## 在线阅读
 
-- 官网: https://book.142vip.cn/JavaScriptCollection
-- 备用站点一：https://github.cn/142vip/JavaScriptCollection
+https://book.142vip.cn/JavaScriptCollection
+
+网站无法访问时，建议通过科学上网访问备用网络
+
+- Github： https://142vip.github.io/JavaScriptCollection
+- Netlify： https://js-collection.netlify.app
+- Vercel： https://js-collection.vercel.app
 
 
 ## 思维导图
