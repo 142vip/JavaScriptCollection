@@ -1,0 +1,106 @@
+##
+## 功能：redis-cluster 集群搭建 3主3从
+## 使用：
+##   - docker-compose up -d
+## 默认密码：123456
+##
+##
+version: '2'
+services:
+  cluster-6390:
+    image: redis:latest
+    container_name: cluster-6390
+    ports:
+      - "6390:6390"
+    command: "redis-server --requirepass 123456 --masterauth 123456 --port 6390 \
+      --appendonly yes
+      --cluster-enabled yes"
+    networks:
+      net:
+        ipv4_address: 172.19.0.3
+
+  cluster-6391:
+    image: redis:latest
+    container_name: cluster-6391
+    network_mode: "host"
+    ports:
+      - "6391:6391"
+    command: "redis-server --requirepass 123456 --masterauth 123456 --port 6391 \
+      --appendonly yes \
+      --cluster-enabled yes"
+    privileged: true
+    networks:
+      net:
+        ipv4_address: 172.19.0.3
+
+  cluster-6392:
+    image: redis:latest
+    container_name: cluster-6392
+    network_mode: "host"
+    ports:
+      - "6392:6392"
+    command: "redis-server  --requirepass 123456 --masterauth 123456 --port 6392 \
+      --appendonly yes \
+      --cluster-enabled yes"
+    privileged: true
+    networks:
+      net:
+        ipv4_address: 172.19.0.3
+
+  cluster-6393:
+    image: redis:latest
+    container_name: cluster-6393
+    ports:
+      - "6393:6393"
+    command: "redis-server  --requirepass 123456 --masterauth 123456 --port 6393 \
+      --appendonly yes \
+      --cluster-enabled yes"
+    privileged: true
+    networks:
+      net:
+        ipv4_address: 172.19.0.3
+
+  cluster-6394:
+    image: redis:latest
+    container_name: cluster-6394
+    ports:
+      - "6394:6394"
+    command: "redis-server  --requirepass 123456 --masterauth 123456 --port 6394 \ 
+      --appendonly yes \
+      --cluster-enabled yes"
+    privileged: true
+    networks:
+      net:
+        ipv4_address: 172.19.0.3
+
+  cluster-6395:
+    image: redis:latest
+    container_name: cluster-6395
+    ports:
+      - "6395:6395"
+    command: "redis-server  --requirepass 123456 --masterauth 123456 --port 6395 \
+      --appendonly yes \
+      --cluster-enabled yes"
+    privileged: true
+    networks:
+      net:
+        ipv4_address: 172.19.0.3
+## 创建桥接网络
+networks:
+  ## 桥接网络名称，配合文件前缀，最后为dev_test_env_net  参考：https://www.jianshu.com/p/d70c61d45364
+  net:
+    driver: bridge
+    # external: true
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.19.0.0/24
+          ## 网关
+          gateway: 172.19.0.1
+
+#
+#  redis-cli --cluster create
+#
+#  172.16.202.219:6391 172.16.202.219:6391 172.16.202.219:6392 172.16.202.219:6393 172.16.202.219:6394 172.16.202.219:6395 --cluster-replicas 1  -a 123456
+#
+#  cluster info

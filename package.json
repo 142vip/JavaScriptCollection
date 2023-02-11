@@ -9,10 +9,13 @@
     "build-proxy": "PROXY_DOMAIN=true vuepress build docs",
     "image": "bash scripts/build_image.sh $npm_package_version",
     "faster-image": "bash scripts/build_image.sh $npm_package_version faster",
-    "github": "bash scripts/deploy.bash github"
+    "github": "bash scripts/deploy.bash github",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lintfix": "eslint --fix --ext .js,.ts --ignore-path .gitignore ."
   },
   "devDependencies": {
     "@vuepress/client": "2.0.0-beta.60",
+    "eslint": "^8.34.0",
     "vue": "^3.2.47",
     "vuepress": "2.0.0-beta.60",
     "vuepress-plugin-search-pro": "^2.0.0-beta.172",

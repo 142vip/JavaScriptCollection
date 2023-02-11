@@ -12,8 +12,9 @@ export default {
     head: [
         ["link", {rel: "icon", href: "/fight_favicon.ico"}]
     ],
-    theme: themeConfig,
+    // 主题配置
+    ...themeConfig,
     // 插件配置
-    plugins:pluginsConfig,
+    ...pluginsConfig,
 };
 
