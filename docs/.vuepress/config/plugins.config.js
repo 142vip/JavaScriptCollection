@@ -3,8 +3,7 @@ import {searchProPlugin} from "vuepress-plugin-search-pro";
 /**
  * 使用的插件配置
  */
-export default {
-    plugins:[
+export default [
         searchProPlugin({
             // 索引全部内容
             indexContent: true,
@@ -21,4 +20,3 @@ export default {
             ],
         }),
     ]
-}
