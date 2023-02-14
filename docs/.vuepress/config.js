@@ -13,8 +13,8 @@ export default {
         ["link", {rel: "icon", href: "/fight_favicon.ico"}]
     ],
     // 主题配置
-    theme:themeConfig,
+    ...themeConfig,
     // 插件配置
-    plugins:pluginsConfig,
+    ...pluginsConfig,
 };
 

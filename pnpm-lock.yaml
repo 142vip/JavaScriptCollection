@@ -1117,7 +1117,7 @@ packages:
       babel-plugin-polyfill-corejs2: 0.3.3_@babel+core@7.20.12
       babel-plugin-polyfill-corejs3: 0.6.0_@babel+core@7.20.12
       babel-plugin-polyfill-regenerator: 0.4.1_@babel+core@7.20.12
-      core-js-compat: 3.27.2
+      core-js-compat: 3.28.0
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
@@ -2227,7 +2227,7 @@ packages:
       '@vuepress/shared': 2.0.0-beta.60
       '@vuepress/utils': 2.0.0-beta.60
       '@vueuse/core': 9.12.0_vue@3.2.47
-      sass: 1.58.0
+      sass: 1.58.1
       vue: 3.2.47
       vue-router: 4.1.6_vue@3.2.47
     transitivePeerDependencies:
@@ -2408,7 +2408,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.5
-      caniuse-lite: 1.0.30001451
+      caniuse-lite: 1.0.30001452
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -2445,7 +2445,7 @@ packages:
     dependencies:
       '@babel/core': 7.20.12
       '@babel/helper-define-polyfill-provider': 0.3.3_@babel+core@7.20.12
-      core-js-compat: 3.27.2
+      core-js-compat: 3.28.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2542,7 +2542,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001451
+      caniuse-lite: 1.0.30001452
       electron-to-chromium: 1.4.295
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
@@ -2581,8 +2581,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /caniuse-lite/1.0.30001451:
-    resolution: {integrity: sha512-XY7UbUpGRatZzoRft//5xOa69/1iGJRBlrieH6QYrkKLIFn3m7OVEJ81dSrKoy2BnKsdbX5cLrOispZNYo9v2w==}
+  /caniuse-lite/1.0.30001452:
+    resolution: {integrity: sha512-Lkp0vFjMkBB3GTpLR8zk4NwW5EdRdnitwYJHDOOKIU85x4ckYCPQ+9WlVvSVClHxVReefkUMtWZH2l9KGlD51w==}
     dev: true
 
   /chalk/2.4.2:
@@ -2737,14 +2737,14 @@ packages:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
     dev: true
 
-  /core-js-compat/3.27.2:
-    resolution: {integrity: sha512-welaYuF7ZtbYKGrIy7y3eb40d37rG1FvzEOfe7hSLd2iD6duMDqUhRfSvCGyC46HhR6Y8JXXdZ2lnRUMkPBpvg==}
+  /core-js-compat/3.28.0:
+    resolution: {integrity: sha512-myzPgE7QodMg4nnd3K1TDoES/nADRStM8Gpz0D6nhkwbmwEnE0ZGJgoWsvQ722FR8D7xS0n0LV556RcEicjTyg==}
     dependencies:
       browserslist: 4.21.5
     dev: true
 
-  /core-js/3.27.2:
-    resolution: {integrity: sha512-9ashVQskuh5AZEZ1JdQWp1GqSoC1e1G87MzRqg2gIfVAQ7Qn9K+uFj8EcniUFA4P2NLZfV+TOlX1SzoKfo+s7w==}
+  /core-js/3.28.0:
+    resolution: {integrity: sha512-GiZn9D4Z/rSYvTeg1ljAIsEqFm0LaN9gVtwDCrKL80zHtS31p9BAjmTxVqTQDMpwlMolJZOFntUG2uwyj7DAqw==}
     requiresBuild: true
     dev: true
 
@@ -4632,7 +4632,7 @@ packages:
   /plyr/3.7.3:
     resolution: {integrity: sha512-ORULENBvEvvzMYXRQBALDmEi8P+wZt1Hr/NvHqchu/t7E2xJKNkRYWx0qCA1HETIGZ6zobrOVgqeAUqWimS7fQ==}
     dependencies:
-      core-js: 3.27.2
+      core-js: 3.28.0
       custom-event-polyfill: 1.0.7
       loadjs: 4.2.0
       rangetouch: 2.0.1
@@ -4886,8 +4886,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass/1.58.0:
-    resolution: {integrity: sha512-PiMJcP33DdKtZ/1jSjjqVIKihoDc6yWmYr9K/4r3fVVIEDAluD0q7XZiRKrNJcPK3qkLRF/79DND1H5q1LBjgg==}
+  /sass/1.58.1:
+    resolution: {integrity: sha512-bnINi6nPXbP1XNRaranMFEBZWUfdW/AF16Ql5+ypRxfTvCRTTKrLsMIakyDcayUt2t/RZotmL4kgJwNH5xO+bg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
@@ -5837,7 +5837,7 @@ packages:
       '@vuepress/shared': 2.0.0-beta.60
       '@vuepress/utils': 2.0.0-beta.60
       chokidar: 3.5.3
-      sass: 1.58.0
+      sass: 1.58.1
       vuepress: 2.0.0-beta.60_936b00771fca784c47ac7ef0cdfceefc
       vuepress-shared: 2.0.0-beta.174_vuepress@2.0.0-beta.60
     transitivePeerDependencies:
