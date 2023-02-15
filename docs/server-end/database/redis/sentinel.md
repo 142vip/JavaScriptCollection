@@ -7,6 +7,7 @@ Redis的Sentinel系统用于管理多个Redis，主要执行:
 - 提醒：当某个Redis服务器出现故障，可通过API或者其他应用程序发送通知
 - 自动故障迁移：当一个主服务器不能正常工作时，Sentinel会进行一次故障自动迁移，会将失效主服务器的从服务器选举出一个新的主服务器，剩下的从服务器将会自动连接复制选举出来的新服务器的数据。
 - 配置提供者：在 Redis Sentinel 模式下，客户端应用 在初始化时连接的是 Sentinel 节点集合，从中获取主节点 的信息。
+  
 
 ![基本原理](./sentinel.png)
 
@@ -29,98 +30,9 @@ Redis的Sentinel系统是一个分布式的系统，可以在系统中配置一�
 
 ### 快速搭建
 
-```yaml
-##
-## 功能：redis主从集群 1主2从
-## 使用：
-##   - docker-compose up -d
-## 默认密码：123456
-##
-## 参考链接：https://blog.51cto.com/u_15127508/4395149
-
-version: '2'
-services:
-  redis-master-6380:
-    image: redis:latest
-    container_name: redis-master-6380
-    restart: always
-    command: redis-server --port 6380 --requirepass 123456  --appendonly yes
-    ports:
-      - "6380:6380"
-    networks:
-      net:
-        ipv4_address: 172.19.0.3
-
-  redis-slave-6381:
-    image: redis:latest
-    container_name: redis-slave-6381
-    restart: always
-    command: redis-server --slaveof redis-master-6380 6380 --port 6381  --requirepass 123456 --masterauth 123456  --appendonly yes
-    ports:
-      - "6381:6381"
-    networks:
-      net:
-        ipv4_address: 172.19.0.4
-
-  redis-slave-6382:
-    image: redis:latest
-    container_name: redis-slave-6382
-    restart: always
-    command: redis-server --slaveof redis-master-6380 6380 --port 6382  --requirepass 123456 --masterauth 123456 --appendonly yes
-    ports:
-      - "6382:6382"
-    networks:
-      net:
-        ipv4_address: 172.19.0.5
+@[code yaml](@code/redis/sentinel/docker-compose.yaml)
 
 
-  redis-sentinel-26380:
-    image: redis:latest
-    container_name: redis-sentinel-26380
-    ports:
-      - "26380:26379"
-    command: redis-sentinel /usr/local/etc/redis/sentinel.conf
-    volumes:
-      - ./conf/redis-sentinel-26380.conf:/usr/local/etc/redis/sentinel.conf
-    networks:
-      net:
-        ipv4_address: 172.19.0.11
+@[code conf{1-3}](@code/redis/sentinel/conf/redis-sentinel-26380.conf)
 
-  redis-sentinel-26381:
-    image: redis:latest
-    container_name: redis-sentinel-26381
-    ports:
-      - "26381:26379"
-    command: redis-sentinel /usr/local/etc/redis/sentinel.conf
-    volumes:
-      - ./conf/redis-sentinel-26381.conf:/usr/local/etc/redis/sentinel.conf
-    networks:
-      net:
-        ipv4_address: 172.19.0.12
-
-  redis-sentinel-26382:
-    image: redis:latest
-    container_name: redis-sentinel-26382
-    ports:
-      - "26382:26379"
-    command: redis-sentinel /usr/local/etc/redis/sentinel.conf
-    volumes:
-      - ./conf/redis-sentinel-26382.conf:/usr/local/etc/redis/sentinel.conf
-    networks:
-      net:
-        ipv4_address: 172.19.0.13
-## 创建桥接网络
-networks:
-  ## 桥接网络名称，配合文件前缀，最后为dev_test_env_net  参考：https://www.jianshu.com/p/d70c61d45364
-  net:
-    driver: bridge
-    # external: true
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.19.0.0/24
-          ## 网关
-          gateway: 172.19.0.1
-```
-
-[//]: # (注意修改各容器redis映射的配置文件;[源码]&#40;../../../../code/redis/sentinel&#41;)
+注意修改各容器redis映射的配置文件;

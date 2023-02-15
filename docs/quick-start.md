@@ -23,14 +23,12 @@
 </p>
 
 
-<!-- ## -->
-<div align="center" style="font-size:20px">
+<div  style="font-size:20px;text-align: center">
   <!-- <a href="https://gitee.com/mmdapl/JavaScriptCollection" target="_blank">国内访问</a>  -->
   <!-- || 
   <a href="readme-wechat.md" target="_blank">微信版</a> -->
 </div>
 
-##
 
 ## 写最前面
 
@@ -52,9 +50,6 @@
 ## 日常推荐
 
 
--  [云服务器推荐](docs/recommend/云服务器推荐.md)
--  [学习网站、使用工具](docs/recommend/学习网站、效率工具.md)
--  [值得细读的技术文章推荐](docs/recommend/值得细读的技术文章推荐.md)
 
 
 ## 文章笔记

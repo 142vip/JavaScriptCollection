@@ -32,6 +32,7 @@ export default {
         sidebar: sidebar,
         // sidebar: "heading",
 
+        pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
         // 主题布局选项
         docsRepo: "https://github.com/142vip/JavaScriptCollection.git",
         repo: "https://github.com/142vip/JavaScriptCollection",
@@ -45,7 +46,7 @@ export default {
             intro: '',
             roundAvatar: true,
             timeline: "时间轴的顶部文字",
-            articleInfo: "",
+            // articleInfo: "",
             medias: {
                 "BiliBili": "https://space.bilibili.com/350937042?spm_id_from=333.1007.0.0"
             }
@@ -79,6 +80,30 @@ export default {
                 imgMark: true,
                 // 启用图片大小
                 imgSize: true,
+                playground: {
+                    presets: ["ts", "vue"],
+                },
+                presentation: {
+                    plugins: ["highlight", "math", "search", "notes", "zoom"],
+                },
+                stylize: [
+                    {
+                        matcher: "Recommended",
+                        replacer: ({ tag }) => {
+                            if (tag === "em")
+                                return {
+                                    tag: "Badge",
+                                    attrs: { type: "tip" },
+                                    content: "Recommended",
+                                };
+                        },
+                    },
+                ],
+                sub: true,
+                sup: true,
+                tabs: true,
+                vPre: true,
+                vuePlayground: true,
             },
             copyCode: {
                 showInMobile: true

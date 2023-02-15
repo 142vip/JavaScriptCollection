@@ -1,8 +1,10 @@
 export default {
     text: "读书整理",
+    collapsible: true,
     children: [
         {
             text: "技术类",
+            collapsible: true,
             children: [
                 {
                     text: "ES6标准入门",
@@ -10,11 +12,11 @@ export default {
                 },
                 {
                     text: "了不起的Node.js",
-                    link: "/",
+                    link: "/read-books/cs-books/深入浅出的Node.js",
                 },
                 {
                     text: "深入浅出Node.js",
-                    link: "/go",
+                    link: "/read-books/cs-books/深入浅出的Node.js",
                 },
                 {
                     text: "高性能Web服务器详解【Nginx】",

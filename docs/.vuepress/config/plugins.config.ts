@@ -11,7 +11,7 @@ export default {
             // 为分类和标签添加索引
             customFields: [
                 {
-                    getter: (page) => page.frontmatter.category,
+                    getter: (page:any) => page.frontmatter.category,
                     formatter: "分类：$content",
                 },
                 {

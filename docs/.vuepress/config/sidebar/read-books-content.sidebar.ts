@@ -1,6 +1,6 @@
 export default [
     {
-        text: "Foo",
+        text: "测试",
         link: "/foo/",
         children: [
             // SidebarItem

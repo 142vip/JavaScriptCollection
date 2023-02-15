@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@vuepress/client': 2.0.0-beta.60
+  '@vuepress/utils': 2.0.0-beta.60
   eslint: ^8.34.0
   vue: ^3.2.47
   vuepress: 2.0.0-beta.60
@@ -10,6 +11,7 @@ specifiers:
 
 devDependencies:
   '@vuepress/client': 2.0.0-beta.60
+  '@vuepress/utils': 2.0.0-beta.60
   eslint: 8.34.0
   vue: 3.2.47
   vuepress: 2.0.0-beta.60_936b00771fca784c47ac7ef0cdfceefc
@@ -1879,8 +1881,8 @@ packages:
       '@types/node': 17.0.45
     dev: true
 
-  /@types/trusted-types/2.0.2:
-    resolution: {integrity: sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==}
+  /@types/trusted-types/2.0.3:
+    resolution: {integrity: sha512-NfQ4gyz38SL8sDNrSixxU2Os1a5xcdFxipAFxYEuLUlvU2uDwS4NUpsImcf1//SlWItCVMMLiylsxbmNMToV/g==}
     dev: true
 
   /@types/web-bluetooth/0.0.16:
@@ -2543,7 +2545,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001452
-      electron-to-chromium: 1.4.295
+      electron-to-chromium: 1.4.296
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
     dev: true
@@ -3197,8 +3199,8 @@ packages:
       jake: 10.8.5
     dev: true
 
-  /electron-to-chromium/1.4.295:
-    resolution: {integrity: sha512-lEO94zqf1bDA3aepxwnWoHUjA8sZ+2owgcSZjYQy0+uOSEclJX0VieZC+r+wLpSxUHRd6gG32znTWmr+5iGzFw==}
+  /electron-to-chromium/1.4.296:
+    resolution: {integrity: sha512-i/6Q+Y9bluDa2a0NbMvdtG5TuS/1Fr3TKK8L+7UUL9QjRS5iFJzCC3r70xjyOnLiYG8qGV4/mMpe6HuAbdJW4w==}
     dev: true
 
   /entities/3.0.1:
@@ -4237,7 +4239,7 @@ packages:
   /lit-html/2.6.1:
     resolution: {integrity: sha512-Z3iw+E+3KKFn9t2YKNjsXNEu/LRLI98mtH/C6lnFg7kvaqPIzPn124Yd4eT/43lyqrejpc5Wb6BHq3fdv4S8Rw==}
     dependencies:
-      '@types/trusted-types': 2.0.2
+      '@types/trusted-types': 2.0.3
     dev: true
 
   /lit/2.6.1:
@@ -5170,8 +5172,8 @@ packages:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
     dev: true
 
-  /twikoo/1.6.9:
-    resolution: {integrity: sha512-Umm2kqj4gPkTqxCbHpLO8QLq+T3fn4OPIa5hqW7amYj2aBVVOIdd3dsBbvE1sYT94GFu+Ivea/L41nR1g4lqqw==}
+  /twikoo/1.6.10:
+    resolution: {integrity: sha512-5CPfRUzd8kHvNB6ekYXvgEbsIEQuySBOm47VkMh3nI4rj79crT+2v9aCDVuson+KorEngdGfe5MOni0VKNblmQ==}
     dev: true
 
   /type-check/0.4.0:
@@ -5461,7 +5463,7 @@ packages:
       '@waline/client': 2.14.7
       artalk: 2.4.4
       giscus: 1.2.6
-      twikoo: 1.6.9
+      twikoo: 1.6.10
       vue: 3.2.47
       vue-router: 4.1.6_vue@3.2.47
       vuepress: 2.0.0-beta.60_936b00771fca784c47ac7ef0cdfceefc
@@ -6330,7 +6332,7 @@ packages:
   /workbox-window/6.5.4:
     resolution: {integrity: sha512-HnLZJDwYBE+hpG25AQBO8RUWBJRaCsI9ksQJEp3aCOFCaG5kqaToAYXFRAHxzRluM2cQbGzdQF5rjKPWPA1fug==}
     dependencies:
-      '@types/trusted-types': 2.0.2
+      '@types/trusted-types': 2.0.3
       workbox-core: 6.5.4
     dev: true
 
