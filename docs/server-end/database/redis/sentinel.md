@@ -30,9 +30,21 @@ Redis的Sentinel系统是一个分布式的系统，可以在系统中配置一�
 
 ### 快速搭建
 
+结合相关conf配置，本地执行`docker-compose up -d` 即可启动服务
+
 @[code yaml](@code/redis/sentinel/docker-compose.yaml)
 
 
-@[code conf{1-3}](@code/redis/sentinel/conf/redis-sentinel-26380.conf)
+- redis-sentinel-26380配置文件
+
+@[code conf](@code/redis/sentinel/conf/redis-sentinel-26380.conf)
+
+- redis-sentinel-26381配置文件
+
+@[code conf](@code/redis/sentinel/conf/redis-sentinel-26381.conf)
+
+- redis-sentinel-26382配置文件
+
+@[code conf](@code/redis/sentinel/conf/redis-sentinel-26382.conf)
 
 注意修改各容器redis映射的配置文件;

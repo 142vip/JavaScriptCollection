@@ -810,12 +810,6 @@
 - 若系列文章对你有所帮助，不如来公众号交个朋友吧.
 
 
-<a name="gzh"></a>
-
-
-<p>
-  <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/gongzhonghao.jpg"  style="border-radius:10px;">
-</p>
 
 
 

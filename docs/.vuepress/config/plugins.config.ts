@@ -1,7 +1,4 @@
-import {searchProPlugin} from "vuepress-plugin-search-pro";
-import { mdEnhancePlugin } from "vuepress-plugin-md-enhance"
-// @ts-ignore
-import {path} from "@vuepress/utils";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 /**
  * 使用的插件配置
  */
@@ -21,16 +18,6 @@ export default {
                     formatter: "标签：$content",
                 },
             ],
-        }),
-        mdEnhancePlugin({
-            // your options
-            // todo 引入代码文件时的路径替换 支持@code别名
-            include: {
-                resolvePath: (str) =>{
-                    console.log(2222,str,str.replace(/^@code/, path.resolve(__dirname, '../../code/')))
-                    return str.replace(/^@code/, path.resolve(__dirname, '../../code/'))
-                }
-            },
         }),
     ]
 }

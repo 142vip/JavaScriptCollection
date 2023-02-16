@@ -2,15 +2,6 @@ import navbar from "./navbar";
 import sidebar from "./sidebar";
 import {FOOTER_HTML_INFO} from "./constant.config";
 import {hopeTheme} from "vuepress-theme-hope";
-import {fileURLToPath} from "node:url";
-// // @ts-ignore
-// import {path} from "@vuepress/utils";
-// // @ts-ignore
-// const __dirname = path.dirname(fileURLToPath(import.meta.url))
-// @ts-ignore
-import { getDirname, path } from "@vuepress/utils";
-// @ts-ignore
-const __dirname = getDirname(import.meta.url);
 
 /**
  * 主题相关配置
@@ -75,6 +66,9 @@ export default {
         },
 
         plugins: {
+            readingTime:{
+                wordPerMinute:200
+            },
             copyright: false,
             // 开启博客功能
             blog: true,
@@ -82,13 +76,6 @@ export default {
             mdEnhance: {
                 codetabs: true,
                 tasklist: true, // 支持任务列表
-                // todo 引入代码文件时的路径替换 支持@code别名
-                include: {
-                    resolvePath: (str) =>{
-                        console.log(2222,str,str.replace(/^@code/, path.resolve(__dirname, '../../code/')))
-                        return str.replace(/^@code/, path.resolve(__dirname, '../../code/'))
-                    }
-                },
                 // 启用 figure
                 figure: true,
                 // 启用图片懒加载
@@ -127,7 +114,6 @@ export default {
             },
             // 参考：https://theme-hope.vuejs.press/zh/guide/markdown/components.html
             components: {
-                // 你想使用的组件
                 components: [
                     "AudioPlayer",
                     "Badge",
