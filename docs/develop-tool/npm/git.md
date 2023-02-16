@@ -5,7 +5,7 @@
 - 官网: https://git-scm.com/docs
 
 
-![](../assets/images/git.png)
+![](./git.png)
 
 Git 区域理解
 
