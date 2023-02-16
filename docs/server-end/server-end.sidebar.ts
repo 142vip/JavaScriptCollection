@@ -16,11 +16,11 @@ export const serverEndSidebar=[
         children: [
             {
                 text: "Sequelize",
-                link: "/server-end/framework/express-learn",
+                link: "/server-end/framework/orm/sequelize",
             },
             {
                 text: 'TypeOrm',
-                link: '/server-end/framework/koa-learn'
+                link: '/server-end/framework/orm/typeorm'
             },
         ],
     },
