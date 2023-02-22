@@ -34,7 +34,7 @@ features:
 <BiliBili bvid="BV1rd4y1V7tB"  />
 
 
-### 本地浏览【推荐】
+## 本地浏览【推荐】
 
 由于平台、网络等原因，在线浏览容易出现加载面、加载不出来等常见问题，因此非常建议在本地进行浏览、学习；**下面指令默认你已经安装[Git](https://git-scm.com/download)、[NPM](https://www.npmjs.com/)、[PNPM](https://www.pnpm.cn/)、[Yarn](https://yarn.bootcss.com/)、[Node](http://nodejs.cn)等环境，并对此有一定了解!**
 
@@ -106,22 +106,23 @@ yarn run dev
 
 ## 在线浏览
 
-https://142vip.cn/JavaScriptCollection
+<https://142vip.cn/JavaScriptCollection>
 
 网站无法访问时，建议通过科学上网访问备用网络
 
-- Github： https://142vip.github.io/JavaScriptCollection
-- Netlify： https://js-collection.netlify.app
-- Vercel： https://js-collection.vercel.app
+- Github： <https://142vip.github.io/JavaScriptCollection>
+- Netlify： <https://js-collection.netlify.app>
+- Vercel： <https://js-collection.vercel.app>
 
-### 提交记录
+
+## 提交记录
 
 
 
 ---
 
 
-### 赞赏列表
+## 赞赏列表
 
 
 以下排名不分先后! [详细统计]()
@@ -139,7 +140,7 @@ https://142vip.cn/JavaScriptCollection
 
 
 
-### 赞助商
+## 赞助商
 
 以下排名不分先后!  哈哈哈，还木有收到赞助，先留坑
 
@@ -147,7 +148,7 @@ https://142vip.cn/JavaScriptCollection
 
 
 ---
-### 联系作者
+## 联系作者
 
 <div class="open-info-div">
 <!-- <a href="#gzh" target="self_blank"><img src="https://img.shields.io/badge/WeChat-公众号-5wd.svg"></a> 
@@ -181,5 +182,5 @@ https://142vip.cn/JavaScriptCollection
 
 
 
-### 外链
+### 友联
 

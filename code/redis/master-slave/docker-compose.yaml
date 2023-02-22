@@ -5,7 +5,7 @@
 ## 默认密码：123456
 ##
 ## 参考链接：https://blog.51cto.com/u_15127508/4395149
-## 参考：http://t.zoukankan.com/JulianHuang-p-12650721.html
+
 version: '2'
 services:
   redis-master-6380:

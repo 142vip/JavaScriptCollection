@@ -5,7 +5,7 @@
 ## 默认密码：123456
 ##
 ## 参考链接：https://blog.51cto.com/u_15127508/4395149
-## 参考：http://t.zoukankan.com/JulianHuang-p-12650721.html
+
 version: '2'
 services:
   redis-master-6380:
@@ -43,7 +43,7 @@ services:
 
 
   redis-sentinel-26380:
-    image:  redis:latest
+    image: redis:latest
     container_name: redis-sentinel-26380
     ports:
       - "26380:26379"
@@ -55,7 +55,7 @@ services:
         ipv4_address: 172.19.0.11
 
   redis-sentinel-26381:
-    image:  redis:latest
+    image: redis:latest
     container_name: redis-sentinel-26381
     ports:
       - "26381:26379"
@@ -67,7 +67,7 @@ services:
         ipv4_address: 172.19.0.12
 
   redis-sentinel-26382:
-    image:  redis:latest
+    image: redis:latest
     container_name: redis-sentinel-26382
     ports:
       - "26382:26379"
