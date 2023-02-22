@@ -9,26 +9,20 @@
 
 // 利用空间
 function reOrderArray (array) {
-  // write code here
   // 奇数,偶数；
-  let odd_arr = [], even_arr = [];
+  const oddArr = []; const evenArr = []
   for (let index = 0; index < array.length; index++) {
-
     if (array[index] % 2 !== 0) {
       // 奇数
-      odd_arr.push(array[index])
+      oddArr.push(array[index])
     } else {
       // 偶数
-      even_arr.push(array[index])
+      evenArr.push(array[index])
     }
   }
 
   // 拼接
-  return odd_arr.concat(even_arr)
+  return oddArr.concat(evenArr)
 }
 
 // 利用冒泡，遇见偶数往最后放，统一前移
-
-module.exports = {
-  reOrderArray: reOrderArray
-};

@@ -7,8 +7,6 @@
  * @LastEditTime: 2021-05-05 15:11:02
  */
 
-
-
 // 把n个人的编号改为0~n-1，然后对删除的过程进行分析。
 // 第一个删除的数字是(m-1)%n，几位k，则剩余的编号为(0,1,...,k-1,k+1,...,n-1)，下次开始删除时，顺序为(k+1,...,n-1,0,1,...k-1)。
 // 用f(n,m)表示从(0~n-1)开始删除后的最终结果。
@@ -29,29 +27,26 @@
 // f(1,m) = 0;                        (n=1)
 // f(n,m)=(f(n-1,m)+m)%n; （n>1）
 
-function LastRemaining_Solution (n, m) {
-  // write code here
+function LastRemainingSolution (n, m) {
   // 递推公式： f(0)=-1  f(1)=0 f(i)={f(i-1)+m}%i
 
   if (n === 0) {
-    return -1;
+    return -1
   }
 
   if (n === 1) {
-    return 0;
+    return 0
   }
 
   // 递归
-  return (LastRemaining_Solution(n - 1, m) + m) % n;
-
+  return (LastRemainingSolution(n - 1, m) + m) % n
 }
 
 // 非递归实现
-function LastRemaining_Solution01 (n, m) {
-
+function LastRemainingSSolution01 (n, m) {
   // 当然，这里也可以添加上负数的校验情况
   if (n === 0) {
-    return -1;
+    return -1
   }
 
   if (n === 1) {
@@ -65,8 +60,5 @@ function LastRemaining_Solution01 (n, m) {
     result = (result + m) % index
   }
   // 返回
-  return result;
+  return result
 }
-module.exports = {
-  LastRemaining_Solution: LastRemaining_Solution
-};

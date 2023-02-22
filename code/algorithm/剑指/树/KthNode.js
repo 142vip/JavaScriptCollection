@@ -8,9 +8,9 @@
  */
 
 function ListNode (x) {
-  this.val = x;
-  this.left = null;
-  this.right = null;
+  this.val = x
+  this.left = null
+  this.right = null
 }
 
 // {8,6,10,5,7,9,11},1
@@ -31,11 +31,7 @@ const root = {
   },
   right: {
     val: 10,
-    left: {
-      val: 9,
-      left: null,
-      right: null
-    },
+    left: { val: 9, left: null, right: null },
     right: {
       val: 11,
       left: null,
@@ -68,8 +64,4 @@ function inOrder (root) {
   }
 
   return inOrder(root.left).concat([root]).concat(inOrder(root.right))
-
 }
-module.exports = {
-  KthNode: KthNode
-};

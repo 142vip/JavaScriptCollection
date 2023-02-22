@@ -7,18 +7,12 @@
  * @LastEditTime: 2021-04-29 22:07:22
  */
 
-let result = []
+const result = []
 function push (node) {
-  // write code here
   // 尾部进栈
   result.push(node)
 }
 function pop () {
-  // write code here
   // 队列 先进先出 头部出去
   return result.shift()
 }
-module.exports = {
-  push: push,
-  pop: pop
-};

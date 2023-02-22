@@ -13,10 +13,9 @@
     this.right = null;
 } */
 function isSymmetrical (pRoot) {
-  // write code here
   if (pRoot === null) {
     // 子树为空，判断子树为对称
-    return true;
+    return true
   }
 
   // 不为空则判断左右子树是否对称，依据：左右子树位置互换，依旧对称 【调用一次】
@@ -26,20 +25,14 @@ function isSymmetrical (pRoot) {
 // 判断左右子树是是否对称
 function isSameTree (leftTree, rightTree) {
   if (leftTree === null && rightTree === null) {
-    return true;
+    return true
   } else if (leftTree !== null && rightTree !== null) {
     // 左右子树不为空，则分别比对左右子树
     if (leftTree.val === rightTree.val) {
       // 根结点相同，比对左右子树
-      return isSameTree(leftTree.left, rightTree.right) && isSameTree(rightTree.left, leftTree.right);
+      return isSameTree(leftTree.left, rightTree.right) && isSameTree(rightTree.left, leftTree.right)
     }
-
   } else {
-    return false;
+    return false
   }
 }
-
-
-module.exports = {
-  isSymmetrical: isSymmetrical
-};

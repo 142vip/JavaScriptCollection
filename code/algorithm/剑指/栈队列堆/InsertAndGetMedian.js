@@ -7,20 +7,16 @@
  * @LastEditTime: 2021-04-29 21:39:13
  */
 
-
-
 // 存储数据
-let result = [];
+let result = []
 function Insert (num) {
-  // write code here
   result.push(num)
   // 当然，也可以在push之后去排序
 }
 function GetMedian () {
-  // write code here
   // 先排序
-  result = result.sort((a, b) => a - b);
-  let len = result.length;
+  result = result.sort((a, b) => a - b)
+  const len = result.length
 
   // 奇数
   if (len % 2 !== 0) {
@@ -34,7 +30,3 @@ function GetMedian () {
     return (high + low) / 2
   }
 }
-module.exports = {
-  Insert: Insert,
-  GetMedian: GetMedian
-};

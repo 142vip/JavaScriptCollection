@@ -1,17 +1,10 @@
-/*
- * @Description: 【简单】旋转数组的最小数字
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-05-03 15:12:26
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-05-03 15:31:34
+/**
+ * 旋转数组的最小数字
+ * 找出前者大于后者的数，立即返回
+ * 难度：简单
+ * @param rotateArray
  */
-
-
-// 找出前者大于后者的数，立即返回  
 function minNumberInRotateArray (rotateArray) {
-  // write code here
-
   if (rotateArray.length < 0) {
     return 0
   }
@@ -25,11 +18,3 @@ function minNumberInRotateArray (rotateArray) {
   // 返回
   return rotateArray[0]
 }
-
-// 考虑二分法
-function minNumberInRotateArray01(array){
-
-}
-module.exports = {
-  minNumberInRotateArray: minNumberInRotateArray
-};

@@ -7,7 +7,6 @@
  * @LastEditTime: 2021-05-12 22:01:45
  */
 
-
 /* function TreeNode(x) {
     this.val = x;
     this.left = null;
@@ -15,32 +14,24 @@
 } */
 
 function FindPath (root, expectNumber) {
-  // write code here
-  let result = [];
-  function dfs (root, target, temp_res) {
+  const result = []
+  function dfs (root, target, tempRes) {
     // 处理空树
     if (root === null) {
-      return;
+      return
     }
     // 根结点，进数组
-    temp_res.push(root.val);
+    tempRes.push(root.val)
 
     // 当前结点为叶子结点
     if (root.left === null && root.right === null && target === root.val) {
-      result.push(temp_res)
+      result.push(tempRes)
     }
 
     // 不是叶子结点，向左向右子树递归
-    dfs(root.left, target - root.val, [...temp_res])
-    dfs(root.right, target - root.val, [...temp_res])
+    dfs(root.left, target - root.val, [...tempRes])
+    dfs(root.right, target - root.val, [...tempRes])
   }
   dfs(root, expectNumber, [])
-  return result;
-
+  return result
 }
-
-
-
-module.exports = {
-  FindPath: FindPath
-};

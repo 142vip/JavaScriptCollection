@@ -8,16 +8,15 @@
  */
 
 function ListNode (x) {
-  this.val = x;
-  this.next = null;
+  this.val = x
+  this.next = null
 }
 
 // 注意是排序的结点
 // 这种先遍历，再借用临时变量 也可以考虑用递归
 function deleteDuplication (pHead) {
-  // write code here
   // 定义map
-  let map = new Map();
+  const map = new Map()
   while (pHead) {
     if (map.has(pHead.val)) {
       // 存在
@@ -28,40 +27,38 @@ function deleteDuplication (pHead) {
     }
 
     // 下一个元素
-    pHead = pHead.next;
+    pHead = pHead.next
   }
   // 遍历map 找出值为1的
   let result = new ListNode(-1)
-  let pre = result;
-  for (let m of map) {
-    const [key, count] = m;
+  const pre = result
+  for (const m of map) {
+    const [key, count] = m
     // 尾插法
     if (count === 1) {
       //             console.log(key)
-      result.next = new ListNode(key);
+      result.next = new ListNode(key)
 
       // 指针后移
-      result = result.next;
+      result = result.next
     }
-
   }
-  // pre为结果链表的头结点 ，去除-1； 
-  return pre.next;
+  // pre为结果链表的头结点 ，去除-1；
+  return pre.next
 }
 
 // 基于递归
 function deleteDuplication01 (head) {
-
   if (head === null || head.next === null) {
-    return head;
+    return head
   }
 
   // 前后结点都不为空，比较val值
-  let nextNode = head.next;
+  let nextNode = head.next
   if (head.val === nextNode.val) {
     while (nextNode !== null && head.val === nextNode.val) {
       // 值相同的情况 移动到下一个结点
-      nextNode = nextNode.next;
+      nextNode = nextNode.next
     }
     // 过滤掉值相同的，递归
     return deleteDuplication01(nextNode)
@@ -69,13 +66,6 @@ function deleteDuplication01 (head) {
     // 值不同,将头结点的下一个位置指向
     head.next = deleteDuplication01(head.next)
     // 返回头结点
-    return head;
+    return head
   }
-
-
 }
-
-module.exports = {
-  deleteDuplication: deleteDuplication
-};
-

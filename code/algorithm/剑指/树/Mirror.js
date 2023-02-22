@@ -17,31 +17,23 @@
 /**
  * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
  *
- * 
- * @param pRoot TreeNode类 
+ *
+ * @param pRoot TreeNode类
  * @return TreeNode类
  */
 function Mirror (pRoot) {
-  // write code here
   // 空树
   if (pRoot === null) {
-    return pRoot;
+    return pRoot
   }
 
   // 处理根节点，交换左右子树【建议封装函数】
   [pRoot.left, pRoot.right] = [pRoot.right, pRoot.left]
-
 
   // 左子树镜像
   Mirror(pRoot.left)
   // 右子树镜像
   Mirror(pRoot.right)
 
-  return pRoot;
-
+  return pRoot
 }
-
-
-module.exports = {
-  Mirror: Mirror
-};

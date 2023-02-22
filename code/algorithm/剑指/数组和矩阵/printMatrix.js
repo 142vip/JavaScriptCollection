@@ -7,12 +7,9 @@
  * @LastEditTime: 2021-04-28 22:25:16
  */
 
-
 function printMatrix (matrix) {
-  // write code here
-
   // 行 角标
-  let row = matrix.length - 1;
+  let row = matrix.length - 1
   // 列角标
   if (matrix[0].length === 0) {
     // 返回空数组
@@ -20,17 +17,14 @@ function printMatrix (matrix) {
   }
   let col = matrix[0].length - 1
 
-  let r = 0,
-    c = 0;
+  let r = 0
+  let c = 0
 
-  // 这里需要在脑海里想象顺时针旋转的时候，r-->left c-->top row-->right  col-->bottom 
-
-
+  // 这里需要在脑海里想象顺时针旋转的时候，r-->left c-->top row-->right  col-->bottom
 
   // 数组结果
-  let result = []
+  const result = []
   while (r <= row && c <= col) {
-
     // 上
     for (let index = c; index <= col; index++) {
       // 当前在上测，行为r 不为 row
@@ -59,20 +53,16 @@ function printMatrix (matrix) {
     }
 
     // 指针移动  转完一圈
-    r++;
-    row--;
-    c++;
-    col--;
+    r++
+    row--
+    c++
+    col--
   }
 
-  return result;
+  return result
 }
-
 
 console.log(printMatrix([
   [1, 2],
   [3, 4]
 ]))
-module.exports = {
-  printMatrix: printMatrix
-};

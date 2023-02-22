@@ -7,25 +7,25 @@
  * @LastEditTime: 2021-04-17 23:27:03
  */
 
-
-// 基于冒泡排序
-function GetLeastNumbers_Solution (input, k) {
-  // write code here
-
+/**
+ * 基于冒泡排序
+ * @param input
+ * @param k
+ */
+function GetLeastNumbersSolution (input, k) {
   const len = input.length
 
   if (k > len) {
     return []
   }
-
   // 冒泡，跑k趟,每趟就有一个元素在位置上 需要输出前k，就跑k趟
   for (let i = 0; i < k; i++) {
-    for (let j = len; j >i; j--) {
+    for (let j = len; j > i; j--) {
       if (input[i] >= input[j]) {
         // 元素换位置
         const temp = input[j]
-        input[j] = input[i];
-        input[i] = temp;
+        input[j] = input[i]
+        input[i] = temp
       }
     }
   }
@@ -33,10 +33,12 @@ function GetLeastNumbers_Solution (input, k) {
   return input.slice(0, k)
 }
 
-// 基于简单选择排序
-function GetLeastNumbers_Solution02 (input, k) {
-  // write code here
-
+/**
+ * 基于简单选择排序
+ * @param input
+ * @param k
+ */
+function GetLeastNumbersSolution02 (input, k) {
   const len = input.length
 
   if (k > len) {
@@ -49,34 +51,28 @@ function GetLeastNumbers_Solution02 (input, k) {
       if (input[i] >= input[j]) {
         // 元素换位置
         const temp = input[j]
-        input[j] = input[i];
-        input[i] = temp;
+        input[j] = input[i]
+        input[i] = temp
       }
     }
   }
-
   return input.slice(0, k)
 }
 
-// 基于sort函数
-function GetLeastNumbers_Solution03(input, k) {
-  // write code here
+/**
+ * 基于sort函数
+ * @param input
+ * @param k
+ */
+function GetLeastNumbersSolution03 (input, k) {
   // if (k > input.length) return []
-
   // // 排序
   // input.sort((a,b)=>a-b)
   // return input.slice(0, k)
 
-  return k>input.length?[]: input.sort((a,b)=>a-b).slice(0,k)
+  return k > input.length ? [] : input.sort((a, b) => a - b).slice(0, k)
 }
 
-
-console.log(GetLeastNumbers_Solution([4, 5, 1, 6, 2, 7, 3, 8], 4))
-console.log(GetLeastNumbers_Solution02([4, 5, 1, 6, 2, 7, 3, 8], 4))
-console.log(GetLeastNumbers_Solution03([4, 5, 1, 6, 2, 7, 3, 8], 4))
-
-module.exports = {
-  GetLeastNumbers_Solution: GetLeastNumbers_Solution,
-  GetLeastNumbers_Solution02: GetLeastNumbers_Solution02,
-  GetLeastNumbers_Solution03: GetLeastNumbers_Solution03
-};
+console.log(GetLeastNumbersSolution([4, 5, 1, 6, 2, 7, 3, 8], 4))
+console.log(GetLeastNumbersSolution02([4, 5, 1, 6, 2, 7, 3, 8], 4))
+console.log(GetLeastNumbersSolution03([4, 5, 1, 6, 2, 7, 3, 8], 4))

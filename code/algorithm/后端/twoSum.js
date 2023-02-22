@@ -7,13 +7,14 @@
  * @LastEditTime: 2021-04-18 10:05:27
  */
 
-// 利用左右双指针
+/**
+ * 利用左右双指针
+ * @param numbers
+ * @param target
+ */
 function twoSum (numbers, target) {
-  // write code here
-
   const len = numbers.length
 
-  // 从头开始
   for (let left = 0; left < len; left++) {
     for (let right = len - 1; right > left; right--) {
       if (numbers[left] + numbers[right] === target) {
@@ -23,34 +24,26 @@ function twoSum (numbers, target) {
   }
 }
 
-// 利用map对象来存储已经遍历的数据
-
-function twoSum02 (numbers, target) {
-
+/**
+ * 利用map对象来存储已经遍历的数据
+ * @param numbers
+ * @param target
+ */
+function twoSumByMap (numbers, target) {
   // 从左到右循环，进入map
-  let map = new Map();
+  const map = new Map()
 
   for (let left = 0; left < numbers.length; left++) {
-
-
     if (map.has(target - numbers[left]) && map.get(target - numbers[left]) !== (left + 1)) {
-
       // 则在左边找到元素
-      const right = map.get(target - numbers[left]);
-
+      const right = map.get(target - numbers[left])
       console.log(map)
       return [right, left + 1]
     }
     // 有点倒排索引的意思
     map.set(numbers[left], left + 1)
   }
-
-
 }
 
-
-console.log(twoSum([3,2,4],6))
-console.log(twoSum02([0, 4, 3, 0], 0))
-module.exports = {
-  twoSum: twoSum
-};
+console.log(twoSum([3, 2, 4], 6))
+console.log(twoSumByMap([0, 4, 3, 0], 0))

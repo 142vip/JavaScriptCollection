@@ -7,13 +7,11 @@
  * @LastEditTime: 2021-05-02 21:44:24
  */
 
-
-/*function ListNode(x){
+/* function ListNode(x){
     this.val = x;
     this.next = null;
-}*/
+} */
 function FindFirstCommonNode (pHead1, pHead2) {
-  // write code here
   // 双重循环，时间复杂度过大，考虑优化
   //     while(pHead1!==null){
   //         let pHead2_back=pHead2
@@ -30,19 +28,18 @@ function FindFirstCommonNode (pHead1, pHead2) {
   //     }
   //     return null;
 
-  let p1 = pHead1, p2 = pHead2;
+  let p1 = pHead1; let p2 = pHead2
 
   // 其实，这里有个死循环的问题
   while (p1 !== p2) {
     // 不相等，则向前，如果后继结点为空，则回到头结点，重复
-    p1 = p1 === null ? pHead1 : p1.next;
-    p2 = p2 === null ? pHead2 : p2.next;
+    p1 = p1 === null ? pHead1 : p1.next
+    p2 = p2 === null ? pHead2 : p2.next
   }
 
   // 返回公共结点
-  return p1;
-
+  return p1
 }
 module.exports = {
-  FindFirstCommonNode: FindFirstCommonNode
-};
+  FindFirstCommonNode
+}

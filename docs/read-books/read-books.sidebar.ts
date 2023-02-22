@@ -1,4 +1,4 @@
-export const readBooksSidebar=[
+export const readBooksSidebar = [
   {
     text: 'Foo',
     link: '/foo/',
@@ -7,12 +7,12 @@ export const readBooksSidebar=[
       {
         text: 'github',
         link: 'https://github.com',
-        children: [],
+        children: []
       },
       // 字符串 - 页面文件路径
-      '/foo/bar.md',
-    ],
+      '/foo/bar.md'
+    ]
   },
   // 字符串 - 页面文件路径
-  '/bar/README.md',
+  '/bar/README.md'
 ]

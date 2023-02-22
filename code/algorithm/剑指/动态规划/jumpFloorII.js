@@ -1,15 +1,4 @@
-/*
- * @Description: 
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-04-28 23:41:50
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-05-05 11:26:46
- */
-
 function jumpFloorII (number) {
-  // write code here
-
   // 我tm跳1 还剩下n-1阶  记作 G(n-1) 可选
   // 我tm跳2 还剩下n-2阶  记作 G(n-2) 可选
   // ....
@@ -26,6 +15,3 @@ function jumpFloorII (number) {
   //     return 1<<(number-1)
   return 1 << --number
 }
-module.exports = {
-  jumpFloorII: jumpFloorII
-};

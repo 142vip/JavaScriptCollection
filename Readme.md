@@ -94,38 +94,38 @@
 #### 快速入门
 
 - [x] [简单介绍](docs/javascript/快速入门/javascript简单介绍.md)
-- [x] [【快速入门】快速了解](docs/javascript/快速入门/javascript快速入门.md)
-- [x] [【快速入门】JavasScript开发规范](docs/javascript/JavaScript开发规范.md)
+- [x] [快速了解](docs/javascript/快速入门/javascript快速入门.md)
+- [x] [JavasScript开发规范](docs/javascript/JavaScript开发规范.md)
 
 <!-- #### 基础教程 -->
 
-- [x] [【基础教程】语法与数据结构](docs/javascript/基础教程/javascript语法与数据结构.md)
-- [x] [【基础教程】循环与迭代](docs/javascript/基础教程/javascript循环与迭代.md)
-- [x] [【基础教程】流程控制与错误处理](docs/javascript/基础教程/javascript流程控制与错误处理.md)
-- [x] [【基础教程】表达式和运算符](docs/javascript/基础教程/javascript表达式和运算符.md)
-- [x] [【基础教程】函数和方法](docs/javascript/基础教程/javascript函数.md)
-- [x] [【基础教程】数字和日期](docs/javascript/基础教程/javascript数字和日期.md)
-- [x] [【基础教程】对象的使用](docs/javascript/基础教程/javascript对象的使用.md)
-- [x] [【基础教程】正则表达式](docs/javascript/基础教程/javascript正则表达式.md)
-- [x] [【基础教程】promise对象的使用](docs/javascript/基础教程/promise对象的使用.md)
-- [x] [【基础教程】modules模块](docs/javascript/基础教程/modules模块.md)
+- [x] [语法与数据结构](docs/javascript/基础教程/javascript语法与数据结构.md)
+- [x] [循环与迭代](docs/javascript/基础教程/javascript循环与迭代.md)
+- [x] [流程控制与错误处理](docs/javascript/基础教程/javascript流程控制与错误处理.md)
+- [x] [表达式和运算符](docs/javascript/基础教程/javascript表达式和运算符.md)
+- [x] [函数和方法](docs/javascript/基础教程/javascript函数.md)
+- [x] [数字和日期](docs/javascript/基础教程/javascript数字和日期.md)
+- [x] [对象的使用](docs/javascript/基础教程/javascript对象的使用.md)
+- [x] [正则表达式](docs/javascript/基础教程/javascript正则表达式.md)
+- [x] [promise对象的使用](docs/javascript/基础教程/promise对象的使用.md)
+- [x] [modules模块](docs/javascript/基础教程/modules模块.md)
 
 <!-- #### 中级教程 -->
 
-- [x] [【中级教程】Promise对象](docs/javascript/中级教程/promise对象.md)
-- [x] [【中级教程】async函数](docs/javascript/中级教程/async函数.md)
-- [x] [【中级教程】class类](docs/javascript/中级教程/class类.md)
+- [x] [Promise对象](docs/javascript/中级教程/promise对象.md)
+- [x] [async函数](docs/javascript/中级教程/async函数.md)
+- [x] [class类](docs/javascript/中级教程/class类.md)
 
 
-- [x] [【高级教程】不一样的ajax](docs/javascript/高级教程/不一样的ajax.md)
-- [x] [【高级教程】什么是事件循环](docs/javascript/高级教程/什么是事件循环.md)
-- [x] [【高级教程】JSON.stringify()的三个参数]()
+- [x] [不一样的ajax](docs/javascript/高级教程/不一样的ajax.md)
+- [x] [什么是事件循环](docs/javascript/高级教程/什么是事件循环.md)
+- [x] [JSON.stringify()的三个参数]()
 
 
-- [x] [【最后稻草】ES6、ES7、ES8、ES9、ES10的新特性](docs/javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
-- [x] [【最后稻草】ES2020新特性](docs/javascript/最后稻草/ES2020新特性.md)
-- [x] [【最后稻草】JavaScript 工具函数大全](docs/javascript/最后稻草/JavaScript工具函数大全.md)
-- [x] [【最后稻草】常用函数方法整理](docs/javascript/最后稻草/常用函数方法整理.md)
+- [x] [ES6、ES7、ES8、ES9、ES10的新特性](docs/javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
+- [x] [ES2020新特性](docs/javascript/最后稻草/ES2020新特性.md)
+- [x] [JavaScript 工具函数大全](docs/javascript/最后稻草/JavaScript工具函数大全.md)
+- [x] [常用函数方法整理](docs/javascript/最后稻草/常用函数方法整理.md)
 
 ### JQuery
 

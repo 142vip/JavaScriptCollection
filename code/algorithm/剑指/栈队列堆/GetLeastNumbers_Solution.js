@@ -7,17 +7,13 @@
  * @LastEditTime: 2021-04-28 23:35:30
  */
 
-
-function GetLeastNumbers_Solution (input, k) {
-  // write code here
+function GetLeastNumbersSolution (input, k) {
   // 偷懒做法
   return k > input.length ? [] : input.sort((a, b) => a - b).slice(0, k)
 }
 
 // 基于冒泡实现
-function GetLeastNumbers_Solution01 (input, k) {
-  // write code here
-
+function GetLeastNumbersSolution01 (input, k) {
   // 添加参数校验
   if (k > input.length) {
     return []
@@ -38,6 +34,3 @@ function GetLeastNumbers_Solution01 (input, k) {
   // 排序完毕，输入前k个
   return input.slice(0, k)
 }
-module.exports = {
-  GetLeastNumbers_Solution: GetLeastNumbers_Solution
-};

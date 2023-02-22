@@ -1,25 +1,19 @@
 /**
- * 
- * @param matrix int整型二维数组 
+ *
+ * @param matrix int整型二维数组
  * @return int整型一维数组
  */
-function spiralOrder(matrix) {
-    // write code here
+function spiralOrder (matrix) {
+  const high = matrix.length
+  const width = matrix[0].length
 
-    const high = matrix.length;
-    const width = matrix[0].length;
-
-    let top = width
-    let bottom = width
-    let right = high
-    let left = high
+  const top = width
+  const bottom = width
+  const right = high
+  const left = high
 }
-module.exports = {
-    spiralOrder: spiralOrder
-};
-
-consle.log(spiralOrder([
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
+console.log(spiralOrder([
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
 ]))
