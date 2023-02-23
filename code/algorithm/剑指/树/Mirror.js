@@ -21,7 +21,7 @@
  * @param pRoot TreeNode类
  * @return TreeNode类
  */
-function Mirror (pRoot) {
+function Mirror(pRoot) {
   // 空树
   if (pRoot === null) {
     return pRoot

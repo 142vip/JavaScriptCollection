@@ -11,7 +11,7 @@
 // x+y=(x+m)+(y-m)=sum  假设x是左边元素，y是右边元素 即：y>x
 // 可以理解乘积(x+m)(y-m)=xy-(y-x)*m-m^2 其中y-x>0 m^2
 // 所以m值越大，其实(x+m)(y-m)越小，也就是x与y间隔也大 xy越小 ，由于array是递增的，所以只需要找到第一个满足和为sum的即可
-function FindNumbersWithSum (array, sum) {
+function FindNumbersWithSum(array, sum) {
   let left = 0; let right = array.length - 1
 
   while (left < right) {
@@ -33,7 +33,7 @@ function FindNumbersWithSum (array, sum) {
 
 // 注意数组array是递增的
 // 不存在的时候，返回空数组
-function FindNumbersWithSum01 (array, sum) {
+function FindNumbersWithSum01(array, sum) {
   let left = 0; let right = array.length - 1
 
   // 将最小值标记设置成最大

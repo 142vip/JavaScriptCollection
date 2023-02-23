@@ -4,7 +4,7 @@
  * @param numbers
  * @returns {number|*}
  */
-function duplicateOne (numbers) {
+function duplicateOne(numbers) {
   // 升序
   numbers = numbers.sort((a, b) => a - b)
   // 降序
@@ -24,7 +24,7 @@ function duplicateOne (numbers) {
  * @param numbers
  * @returns {number|*}
  */
-function duplicateTwo (numbers) {
+function duplicateTwo(numbers) {
   const arr = []
   for (let i = 0; i < numbers.length; i++) {
     // 这部分依赖的是排序后，如果不重复理想情况下：numbers[index]===index的情况
@@ -43,7 +43,7 @@ function duplicateTwo (numbers) {
  * @param numbers
  * @returns {number|*}
  */
-function duplicateThree (numbers) {
+function duplicateThree(numbers) {
   const set = new Set()
   for (const number of numbers) {
     if (set.has(number)) {

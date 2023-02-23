@@ -7,14 +7,14 @@
  * @LastEditTime: 2021-05-02 09:15:24
  */
 
-function ListNode (x) {
+function ListNode(x) {
   this.val = x
   this.next = null
 }
 
 // 注意是排序的结点
 // 这种先遍历，再借用临时变量 也可以考虑用递归
-function deleteDuplication (pHead) {
+function deleteDuplication(pHead) {
   // 定义map
   const map = new Map()
   while (pHead) {
@@ -48,7 +48,7 @@ function deleteDuplication (pHead) {
 }
 
 // 基于递归
-function deleteDuplication01 (head) {
+function deleteDuplication01(head) {
   if (head === null || head.next === null) {
     return head
   }

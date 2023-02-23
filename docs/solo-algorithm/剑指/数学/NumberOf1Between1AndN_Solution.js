@@ -8,7 +8,7 @@
  */
 
 // 转化
-function NumberOf1Between1AndNSolution (n) {
+function NumberOf1Between1AndNSolution(n) {
   let count = 0
   while (n > 0) {
     // 转化为字符串

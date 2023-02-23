@@ -11,7 +11,7 @@
     this.val = x;
     this.next = null;
 } */
-function FindFirstCommonNode (pHead1, pHead2) {
+function FindFirstCommonNode(pHead1, pHead2) {
   // 双重循环，时间复杂度过大，考虑优化
   //     while(pHead1!==null){
   //         let pHead2_back=pHead2

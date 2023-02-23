@@ -12,7 +12,7 @@
  * @param numbers
  * @param target
  */
-function twoSum (numbers, target) {
+function twoSum(numbers, target) {
   const len = numbers.length
 
   for (let left = 0; left < len; left++) {
@@ -29,7 +29,7 @@ function twoSum (numbers, target) {
  * @param numbers
  * @param target
  */
-function twoSumByMap (numbers, target) {
+function twoSumByMap(numbers, target) {
   // 从左到右循环，进入map
   const map = new Map()
 

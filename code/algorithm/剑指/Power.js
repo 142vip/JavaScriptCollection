@@ -13,7 +13,7 @@
  * @param {double} base
  * @param {int} exponent
  */
-function Power (base, exponent) {
+function Power(base, exponent) {
   let result = 1
 
   if (exponent > 0) {

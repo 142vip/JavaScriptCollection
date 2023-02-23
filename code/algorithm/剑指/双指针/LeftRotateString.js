@@ -7,7 +7,7 @@
  * @LastEditTime: 2021-04-30 22:16:13
  */
 
-function LeftRotateString (str, n) {
+function LeftRotateString(str, n) {
   // 临界条件
   if (!str || str.length < n) {
     return ''
@@ -21,7 +21,7 @@ function LeftRotateString (str, n) {
 }
 
 // 偷懒做法
-function LeftRotateString01 (str, n) {
+function LeftRotateString01(str, n) {
   // 两两翻转后，在统一翻转
   return `${str.slice(0, n).split('').reverse().join('')}${str.slice(n).split('').reverse().join('')}`.split('').reverse().join('')
 }
@@ -31,7 +31,7 @@ function LeftRotateString01 (str, n) {
  * @param {string} str
  * @returns
  */
-function reverseStr (str) {
+function reverseStr(str) {
   const result = str.split('')
   let left = 0; let right = result.length - 1
   while (left <= right) {

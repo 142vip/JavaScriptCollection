@@ -7,13 +7,13 @@
  * @LastEditTime: 2021-05-01 21:24:40
  */
 
-function ListNode (x) {
+function ListNode(x) {
   this.val = x
   this.next = null
 }
 
 // 偷懒写法
-function printListFromTailToHead (head) {
+function printListFromTailToHead(head) {
   // 只有单个指针，从头出链表，按序放入数组，最后翻转数组
   const result = []
   while (head !== null) {
@@ -26,7 +26,7 @@ function printListFromTailToHead (head) {
 }
 
 // 先翻转链表【采用头插法】，再按序输入到数组中
-function printListFromTailToHead01 (head) {
+function printListFromTailToHead01(head) {
   let reverseHead = new ListNode(-1)
   // 头插法
   while (head !== null) {
@@ -50,7 +50,7 @@ function printListFromTailToHead01 (head) {
 }
 
 // 相比链表的头插，这里对数组array进行头插unshift()即可
-function printListFromTailToHead02 (head) {
+function printListFromTailToHead02(head) {
   const result = []
   while (head !== null) {
     result.unshift(head.val)

@@ -7,7 +7,7 @@
  * @LastEditTime: 2021-05-02 15:55:43
  */
 
-function ListNode (x) {
+function ListNode(x) {
   this.val = x
   this.next = null
 }
@@ -20,7 +20,7 @@ function ListNode (x) {
  * @param k int整型
  * @return ListNode类
  */
-function FindKthToTail (pHead, k) {
+function FindKthToTail(pHead, k) {
   // 结点不存在返回空
   if (pHead === null) {
     return null
@@ -48,7 +48,7 @@ function FindKthToTail (pHead, k) {
 
 // 上面是有两次while一次计数，一次移动指针找到目标结点
 // 可以利用数组，不能是头插入，还是尾插都行，存储的元素为链表的结点，也就是链表的子链表的头指针
-function FindKthToTail01 (pHead, k) {
+function FindKthToTail01(pHead, k) {
   const result = []
   while (pHead !== null) {
     // 头插

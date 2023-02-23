@@ -3,7 +3,7 @@
  * 难度:比较难
  * @param index
  */
-function GetUglyNumberSolution (index) {
+function GetUglyNumberSolution(index) {
   // 由于丑数只包含因子 2 3 5 且，下一个丑数是通过上一个丑数，去x2 x3 或 x5  取最小得到的，要保证丑数的顺序递增的
 
   // 定义存放丑数的数组，且第一个丑数为1=2^0 * 3^0 * 5^0

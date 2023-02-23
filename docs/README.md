@@ -172,9 +172,11 @@ yarn run dev
 <a name="gzh"></a>
 
 
-<p>
-  <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/gongzhonghao.jpg"  style="border-radius:10px;">
-</p>
+[//]: # (<p>)
+
+[//]: # (  <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/gongzhonghao.jpg"  style="border-radius:10px;">)
+
+[//]: # (</p>)
 
 交流/加群/互看朋友圈
 当然：**聊天 /提问 /建议 /提需求** 可以在本公众号直接**私信**，后台可以看到，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。
@@ -182,5 +184,6 @@ yarn run dev
 
 
 
-### 友联
+### 友链
+
 

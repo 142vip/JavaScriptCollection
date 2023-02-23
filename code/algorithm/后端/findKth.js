@@ -6,7 +6,7 @@
  * @param K int整型
  * @return int整型
  */
-function findKth (a, n, K) {
+function findKth(a, n, K) {
   const result = quickSort(a, 0, n - 1)
 
   console.log(result)
@@ -19,7 +19,7 @@ function findKth (a, n, K) {
  * @param low
  * @param high
  */
-function quickSort (arr, low, high) {
+function quickSort(arr, low, high) {
   if (low < high) {
     // 中间区分值
     const pivot = getPivot(arr, low, high)
@@ -37,7 +37,7 @@ function quickSort (arr, low, high) {
  * @param low
  * @param high
  */
-function getPivot (arr, low, high) {
+function getPivot(arr, low, high) {
   const pivot = arr[low]
   while (low < high) {
     // pivot右侧元素都比arr[pivot]值大

@@ -8,12 +8,12 @@
  */
 
 // 先转化为数组，再进行拼接
-function replaceSpace (s) {
+function replaceSpace(s) {
   return s.split(' ').join('%20')
 }
 
 // 利用循环拼接，然后slice剪切
-function replaceSpace01 (s) {
+function replaceSpace01(s) {
   const arr = s.split(' ')
   let str = ''
 

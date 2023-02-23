@@ -7,7 +7,7 @@
  * @LastEditTime: 2021-04-24 12:02:23
  */
 
-function multiply (array) {
+function multiply(array) {
   const result = []
 
   for (let index = 0; index < array.length; index++) {

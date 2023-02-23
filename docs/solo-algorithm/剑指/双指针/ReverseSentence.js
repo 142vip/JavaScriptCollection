@@ -8,13 +8,13 @@
  */
 
 // 偷懒做法
-function ReverseSentence (str) {
+function ReverseSentence(str) {
   return str.split(' ').reverse().join(' ')
 }
 
 // 先将每个字符翻转 再将所有翻转
 // nowcoder. a am I ---> .redocwon a ma I -----> I am a nowcoder.
-function ReverseSentence01 (str) {
+function ReverseSentence01(str) {
   const arr = str.split(' ')
 
   for (let index = 0; index < arr.length; index++) {
@@ -25,7 +25,7 @@ function ReverseSentence01 (str) {
   return reverseArr(arr).join(' ')
 }
 
-function reverseStr (str) {
+function reverseStr(str) {
   let result = ''
   for (let index = str.length - 1; index >= 0; index--) {
     result += str[index]
@@ -33,7 +33,7 @@ function reverseStr (str) {
   return result
 }
 
-function reverseArr (arr) {
+function reverseArr(arr) {
   const result = []
   for (let index = arr.length - 1; index >= 0; index--) {
     result.push(reverseStr(arr[index]))

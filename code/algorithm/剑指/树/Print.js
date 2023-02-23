@@ -12,7 +12,7 @@
     this.left = null;
     this.right = null;
 } */
-function Print (pRoot) {
+function Print(pRoot) {
   // 层序遍历的 进阶
 
   // 处理空树的情况

@@ -3,5 +3,5 @@
  * @param pushV
  * @param popV
  */
-function IsPopOrder (pushV, popV) {
+function IsPopOrder(pushV, popV) {
 }

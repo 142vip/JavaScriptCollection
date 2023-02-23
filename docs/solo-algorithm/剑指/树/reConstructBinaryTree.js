@@ -7,12 +7,12 @@
  * @LastEditTime: 2021-05-11 12:58:33
  */
 
-function TreeNode (x) {
+function TreeNode(x) {
   this.val = x
   this.left = null
   this.right = null
 }
-function reConstructBinaryTree (pre, vin) {
+function reConstructBinaryTree(pre, vin) {
   if (pre.length === 0) {
     return null
   }

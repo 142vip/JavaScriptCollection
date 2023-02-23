@@ -3,7 +3,7 @@
  * @param base
  * @param exponent
  */
-function Power (base, exponent) {
+function Power(base, exponent) {
   let result = 1
   if (exponent === 0) {
     return result

@@ -1,4 +1,4 @@
-function jumpFloorII (number) {
+function jumpFloorII(number) {
   // 我tm跳1 还剩下n-1阶  记作 G(n-1) 可选
   // 我tm跳2 还剩下n-2阶  记作 G(n-2) 可选
   // ....

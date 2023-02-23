@@ -1,5 +1,5 @@
 
-function FindGreatestSumOfSubArray01 (array) {
+function FindGreatestSumOfSubArray01(array) {
   // 标记指针
   let index = 0
   // 子串的累计结果
@@ -19,7 +19,7 @@ function FindGreatestSumOfSubArray01 (array) {
   return max
 }
 
-function FindGreatestSumOfSubArray (array) {
+function FindGreatestSumOfSubArray(array) {
   // 首位指针
   let i = 0
   // 从第一个元素开始，假设最大

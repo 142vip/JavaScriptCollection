@@ -27,7 +27,7 @@
 // f(1,m) = 0;                        (n=1)
 // f(n,m)=(f(n-1,m)+m)%n; （n>1）
 
-function LastRemainingSolution (n, m) {
+function LastRemainingSolution(n, m) {
   // 递推公式： f(0)=-1  f(1)=0 f(i)={f(i-1)+m}%i
 
   if (n === 0) {
@@ -43,7 +43,7 @@ function LastRemainingSolution (n, m) {
 }
 
 // 非递归实现
-function LastRemainingSSolution01 (n, m) {
+function LastRemainingSSolution01(n, m) {
   // 当然，这里也可以添加上负数的校验情况
   if (n === 0) {
     return -1

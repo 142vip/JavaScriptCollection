@@ -3,7 +3,7 @@
  * @param numbers
  * @returns {boolean}
  */
-function IsContinuous (numbers) {
+function IsContinuous(numbers) {
   numbers = numbers.sort((a, b) => a - b)
 
   // 判断0的个数

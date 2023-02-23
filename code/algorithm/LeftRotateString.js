@@ -1,5 +1,5 @@
 //
-function LeftRotateString (str, n) {
+function LeftRotateString(str, n) {
   if (!str) {
     return str
   }
@@ -15,7 +15,7 @@ function LeftRotateString (str, n) {
 }
 
 // 数组中翻转
-function reverse (arr, left, right) {
+function reverse(arr, left, right) {
   while (left < right) {
     // 元素交换
     arr = swap(arr, left, right)
@@ -28,7 +28,7 @@ function reverse (arr, left, right) {
 }
 
 // 元素交换
-function swap (arr, left, right) {
+function swap(arr, left, right) {
   const temp = arr[left]
   arr[left] = arr[right]
   arr[right] = temp

@@ -3,7 +3,7 @@
  * @param numbers
  * @returns {number}
  */
-function MoreThanHalfNumSolution (numbers) {
+function MoreThanHalfNumSolution(numbers) {
   const map = new Map()
   numbers.forEach(item => {
     if (map.has(item)) {

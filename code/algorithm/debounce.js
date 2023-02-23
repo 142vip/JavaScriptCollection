@@ -3,7 +3,7 @@
  * @param func
  * @param time
  */
-function debounce (func, time) {
+function debounce(func, time) {
   let timeout
   return () => {
     clearTimeout(timeout)
@@ -14,7 +14,7 @@ function debounce (func, time) {
   }
 }
 
-function test () {
+function test() {
   console.log(new Date().getTime())
 }
 

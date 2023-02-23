@@ -3,7 +3,7 @@
  * @param arr
  * @returns {*[]}
  */
-function duplicates (arr) {
+function duplicates(arr) {
   const sortArr = arr.sort()
   const result = []
   const len = sortArr.length

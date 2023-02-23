@@ -3,7 +3,7 @@
  * @param data
  * @param k
  */
-function GetNumberOfK (data, k) {
+function GetNumberOfK(data, k) {
   // 分两次二分查找，知道重复元素首次和最后一次出现位置，相减就能拿到重复次数了.
 
   // 左侧二分查找，重复元素第一次出现的索引位置
@@ -16,7 +16,7 @@ function GetNumberOfK (data, k) {
   return left === -1 && right === -1 ? 0 : right - left + 1
 }
 
-function rightBinarySearch (data, target) {
+function rightBinarySearch(data, target) {
   if (!data.length) {
     return -1
   }
@@ -44,7 +44,7 @@ function rightBinarySearch (data, target) {
 }
 
 // [left，right]
-function leftBinarySearch (data, target) {
+function leftBinarySearch(data, target) {
   if (!data.length) {
     return -1
   }

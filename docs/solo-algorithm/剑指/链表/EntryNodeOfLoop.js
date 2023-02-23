@@ -7,10 +7,10 @@
  * @LastEditTime: 2021-05-02 15:58:58
  */
 
-function ListNode (x) {
+function ListNode(x) {
   this.val = x
   this.next = null
 }
-function EntryNodeOfLoop (pHead) {
+function EntryNodeOfLoop(pHead) {
 
 }

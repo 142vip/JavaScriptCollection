@@ -1,4 +1,4 @@
-function NumberOf1 (n) {
+function NumberOf1(n) {
   // 记录1的个数
   let count = 0
 

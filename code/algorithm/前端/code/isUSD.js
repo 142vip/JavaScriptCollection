@@ -2,7 +2,7 @@
  * 检测是否为USD字符
  * @param str
  */
-function isUSD (str) {
+function isUSD(str) {
   if (!str.startsWith('$')) {
     return false
   }

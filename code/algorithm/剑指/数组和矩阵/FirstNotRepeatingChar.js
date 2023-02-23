@@ -7,7 +7,7 @@
  * @LastEditTime: 2021-04-28 22:24:20
  */
 
-function FirstNotRepeatingChar (str) {
+function FirstNotRepeatingChar(str) {
   // 转换为数组
   const arr = str.split('')
   // 数组里面去去重
@@ -19,7 +19,7 @@ function FirstNotRepeatingChar (str) {
   return -1
 }
 
-function FirstNotRepeatingChar01 (str) {
+function FirstNotRepeatingChar01(str) {
   const len = str.length
 
   for (let index = 0; index < len - 1; index++) {

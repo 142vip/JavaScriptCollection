@@ -2,7 +2,7 @@
  * 暴力枚举，无法通过
  * @param num
  */
-function threeSum (num) {
+function threeSum(num) {
   // 从小排序
   num = num.sort((a, b) => a - b)
   const len = num.length

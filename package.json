@@ -23,7 +23,6 @@
     "@typescript-eslint/parser": "^5.53.0",
     "@vuepress/client": "2.0.0-beta.60",
     "@vuepress/utils": "2.0.0-beta.60",
-    "cz-git": "^1.4.1",
     "eslint": "^8.34.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
@@ -36,10 +35,5 @@
     "vuepress": "2.0.0-beta.60",
     "vuepress-plugin-search-pro": "2.0.0-beta.174",
     "vuepress-theme-hope": "^2.0.0-beta.174"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-git"
-    }
   }
 }

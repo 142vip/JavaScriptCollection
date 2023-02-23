@@ -7,7 +7,7 @@
  * @returns {number}
  * @constructor
  */
-function MoreThanHalfNumSolution (numbers) {
+function MoreThanHalfNumSolution(numbers) {
   const map = new Map()
 
   numbers.forEach(item => {

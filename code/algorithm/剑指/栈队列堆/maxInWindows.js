@@ -7,7 +7,7 @@
  * @LastEditTime: 2021-04-29 21:58:32
  */
 
-function maxInWindows (num, size) {
+function maxInWindows(num, size) {
   const len = num.length
   const result = []
   if (len < size || size === 0) {

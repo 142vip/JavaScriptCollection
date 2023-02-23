@@ -1,4 +1,3 @@
-import readBooks from "./navbar-back/read-books";
 export default [
     {
         text: "首页", link: "/",
@@ -15,7 +14,9 @@ export default [
     {
         text: "Solo算法", link: "/solo-algorithm",
     },
-    readBooks,
+    {
+        text: "读书整理", link: "/read-books",
+    },
     {
         text: "其他", link: "/",
     },

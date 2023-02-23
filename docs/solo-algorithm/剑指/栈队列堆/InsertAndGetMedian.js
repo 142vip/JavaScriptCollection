@@ -9,11 +9,11 @@
 
 // 存储数据
 let result = []
-function Insert (num) {
+function Insert(num) {
   result.push(num)
   // 当然，也可以在push之后去排序
 }
-function GetMedian () {
+function GetMedian() {
   // 先排序
   result = result.sort((a, b) => a - b)
   const len = result.length

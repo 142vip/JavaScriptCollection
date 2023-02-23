@@ -8,22 +8,22 @@
  */
 
 const result = []
-function push (node) {
+function push(node) {
   if (result) {
     return result.push(node)
   }
 }
-function pop () {
+function pop() {
   if (result.length > 0) {
     return result.pop()
   }
 }
-function top () {
+function top() {
   if (result.length > 0) {
     return result[result.length - 1]
   }
 }
-function min () {
+function min() {
   // 对result数组进行排序
   return Math.min(...result)
 }

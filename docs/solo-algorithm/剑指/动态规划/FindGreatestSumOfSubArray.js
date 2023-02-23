@@ -5,7 +5,7 @@
  * @returns {number|*}
  * @constructor
  */
-function FindGreatestSumOfSubArray (array) {
+function FindGreatestSumOfSubArray(array) {
   // 标记指针
   let index = 0
   // 子串的累计结果

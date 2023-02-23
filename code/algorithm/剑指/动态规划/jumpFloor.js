@@ -8,13 +8,13 @@
  */
 
 // 递归实现
-function jumpFloor (number) {
+function jumpFloor(number) {
   // 递归，要么跳一阶，要么跳两阶
   return number < 3 ? number : jumpFloor(number - 1) + jumpFloor(number - 2)
 }
 
 // 非递归调用
-function jumpFloor01 (number) {
+function jumpFloor01(number) {
   let a = 1
   let b = 2
   let result = 0

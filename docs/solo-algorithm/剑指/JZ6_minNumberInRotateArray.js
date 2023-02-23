@@ -3,7 +3,7 @@
  * @param rotateArray
  * @returns {number}
  */
-function minNumberInRotateArray (rotateArray) {
+function minNumberInRotateArray(rotateArray) {
   const len = rotateArray.length
   if (rotateArray.length < 0) {
     return 0
@@ -21,7 +21,7 @@ function minNumberInRotateArray (rotateArray) {
  * @param arr
  * @returns {boolean}
  */
-function isSortArr (arr) {
+function isSortArr(arr) {
   for (let index = 0; index < arr.length - 1; index++) {
     if (arr[index] > arr[index + 1]) {
       return true

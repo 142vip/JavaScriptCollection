@@ -8,7 +8,7 @@
  */
 
 // 利用空间
-function reOrderArray (array) {
+function reOrderArray(array) {
   // 奇数,偶数；
   const oddArr = []; const evenArr = []
   for (let index = 0; index < array.length; index++) {

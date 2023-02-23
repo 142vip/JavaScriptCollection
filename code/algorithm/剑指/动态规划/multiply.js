@@ -3,7 +3,7 @@
  * @param array
  * @returns {*[]}
  */
-function multiply (array) {
+function multiply(array) {
   const result = []
 
   for (let index = 0; index < array.length; index++) {

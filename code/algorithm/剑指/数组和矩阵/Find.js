@@ -17,7 +17,7 @@
  */
 
 // 右上角元素为起点，确保每个元素都能遍历到，都能按照方向走即可
-function Find (target, array) {
+function Find(target, array) {
   // 行数
   const row = array.length
   if (row === 0) {
@@ -46,7 +46,7 @@ function Find (target, array) {
 // 比较蠢的方法，通过遍历二维数组进行比较
 // 这里可以将第二层循环改成二分查找【用到从左到右递增的特点】；降低时间复杂度
 // 这里的时间复杂度为O(nlogn)
-function Find01 (target, array) {
+function Find01(target, array) {
   const row = array.length
   if (row === 0) {
     return false
@@ -78,7 +78,7 @@ function Find01 (target, array) {
 // 利用一些api
 // every()是对数组中每一项运行给定函数，如果该函数对每一项返回true,则返回true。
 // some()是对数组中每一项运行给定函数，如果该函数对任一项返回true，则返回true。
-function Find02 (target, array) {
+function Find02(target, array) {
   return array.some(arr => {
     return arr.some(item => item === target)
   })

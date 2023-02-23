@@ -2,7 +2,7 @@
  *
  * @param str
  */
-function Permutation (str) {
+function Permutation(str) {
   const result = []
   const i = 0
   while (i < str.length) {

@@ -4,7 +4,7 @@
  * 难度：简单
  * @param rotateArray
  */
-function minNumberInRotateArray (rotateArray) {
+function minNumberInRotateArray(rotateArray) {
   if (rotateArray.length < 0) {
     return 0
   }
