@@ -49,11 +49,11 @@ export default {
             children: [
                 {
                     text: 'Eslint',
-                    link: '/eslint'
+                    link: '/develop-tool/eslint'
                 },
                 {
                     text: 'Prettier',
-                    link: '/prettier'
+                    link: '/develop-tool/prettier'
                 },
             ]
         },

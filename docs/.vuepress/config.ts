@@ -22,7 +22,13 @@ export default defineUserConfig({
         // todo 引入代码文件时的路径替换
         importCode: {
             handleImportPath: (str) =>{
-                return str.replace(/^@code/, path.resolve(__dirname, '../../code/'))
+                if(str.includes('@code')){
+                    return str.replace(/^@code/, path.resolve(__dirname, '../../code/'))
+                }
+                if(str.includes('~@')){
+                    return str.replace(/^~@/, path.resolve(__dirname, '../../'))
+                }
+                return str
             },
         },
     },

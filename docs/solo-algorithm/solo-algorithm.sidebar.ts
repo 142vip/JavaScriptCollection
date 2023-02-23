@@ -1,11 +1,7 @@
 
 export const soloAlgorithmSidebar = [
   {
-    text: '刷题整理',
-    link: '/solo-algorithm/question-collections'
-  },
-  {
-    text: '刷题平台',
+    text: '在线刷题',
     children: [
       {
         text: '杭电OJ',
@@ -20,5 +16,23 @@ export const soloAlgorithmSidebar = [
         link: 'https://leetcode-cn.com/'
       }
     ]
+  },
+  {
+    text: '刷题整理',
+    children: [
+      {
+        text: '前端',
+        link: 'http://acm.hdu.edu.cn/'
+      },
+      {
+        text: '剑指Offer',
+        link: 'https://www.nowcoder.com/'
+      },
+      {
+        text: '后端',
+        link: 'https://leetcode-cn.com/'
+      }
+    ]
   }
+
 ]
