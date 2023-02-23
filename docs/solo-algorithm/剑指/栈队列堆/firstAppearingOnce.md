@@ -32,3 +32,9 @@ function FirstAppearingOnce() {
   // 没有返回
   return '#'
 }
+
+### 代码实现
+
+@[code js](@code/algorithm/剑指/栈队列堆/firstAppearingOnce.js)
+
+### 一些建议

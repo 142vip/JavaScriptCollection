@@ -1,5 +1,4 @@
 /**
- *
  * @param array
  * @returns {*[]}
  */

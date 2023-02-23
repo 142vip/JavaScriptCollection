@@ -66,3 +66,9 @@ console.log(printMatrix([
   [1, 2],
   [3, 4]
 ]))
+
+### 代码实现
+
+@[code js](@code/algorithm/剑指/数组和矩阵/printMatrix.js)
+
+### 一些建议

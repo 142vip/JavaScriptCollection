@@ -8,21 +8,21 @@
 
 ### 数组和矩阵
 
- - [ ] [【简单】数组中重复的数字](./数组和矩阵/duplicate.md)
- - [ ] [【中等】二维数组中的查找](./数组和矩阵/Find.md)
+ - [x] [【简单】数组中重复的数字](./数组和矩阵/duplicate.md)
+ - [x] [【中等】二维数组中的查找](./数组和矩阵/find.md)
  - [ ] [【较难】替换空格](./数组和矩阵/replaceSpace.md)
  - [ ] [【较难】顺时针打印矩阵](./数组和矩阵/printMatrix.md)
- - [ ] [【简单】第一个只出现一次的字符位置](./数组和矩阵/FirstNotRepeatingChar.md)
+ - [ ] [【简单】第一个只出现一次的字符位置](./数组和矩阵/firstNotRepeatingChar.md)
 
 
 ### 栈队列堆
 
-- [ ] [【简单】两个栈实现队列](./栈队列堆/JSStackToQueue.js)
-- [ ] [【中等】最小的k个数](./栈队列堆/GetLeastNumbers_Solution.js)
-- [ ] [【中等】数据流中的中位数](./栈队列堆/InsertAndGetMedian.js)
-- [ ] [【中等】字符流中的第一个不重复的字符](./栈队列堆/FirstAppearingOnce.js)
-- [ ] [【较难】滑动窗口的最大值](./栈队列堆/maxInWindows.js)
-- [ ] [【较难】包含min函数的栈](./栈队列堆/GetMinInJSStack.js)
+- [ ] [【简单】两个栈实现队列](./栈队列堆/stackToQueue.md)
+- [ ] [【中等】最小的k个数](./栈队列堆/getLeastNumbersSolution.md)
+- [ ] [【中等】数据流中的中位数](./栈队列堆/insertAndGetMedian.md)
+- [ ] [【中等】字符流中的第一个不重复的字符](./栈队列堆/firstAppearingOnce.md)
+- [ ] [【较难】滑动窗口的最大值](./栈队列堆/maxInWindows.md)
+- [ ] [【较难】包含min函数的栈](./栈队列堆/getMinInJSStack.md)
 - 栈的压入、弹出序列
 
 
@@ -52,11 +52,11 @@
 
 ### 树
 
-- [ ] [【中等】重建二叉树](./树/reConstructBinaryTree.js)
-- [ ] [【中等】二叉树的下一个结点](./树/GetNext.js)
-- [ ] [【较难】树的子结构](./树/HasSubtree.js)
-- [ ] [【简单】二叉树的镜像](./树/Mirror.js)
-- [ ] [【困难】对称的二叉树](./树/isSymmetrical.js)
+- [ ] [【中等】重建二叉树](./树/reConstructBinaryTree.md)
+- [ ] [【中等】二叉树的下一个结点](./树/getNext.md)
+- [ ] [【较难】树的子结构](./树/hasSubtree.md)
+- [ ] [【简单】二叉树的镜像](./树/mirror.md)
+- [ ] [【困难】对称的二叉树](./树/isSymmetrical.md)
 - 从上往下打印二叉树
 - 把二叉树打印成多行
 - 二叉搜索树的后续遍历序列

@@ -30,3 +30,9 @@ function FirstNotRepeatingChar01 (str) {
   }
   return -1
 }
+
+### 代码实现
+
+@[code js](@code/algorithm/剑指/数组和矩阵/FirstNotRepeatingChar.js)
+
+### 一些建议
