@@ -70,7 +70,7 @@ export const frontEndSidebar = [
     text: '服务部署',
     children: [
       {
-        text: '前端分离【nginx】',
+        text: 'Nginx托管',
         link: '/front-end/server-deploy/static-nginx'
       },
       {
@@ -79,7 +79,7 @@ export const frontEndSidebar = [
       },
       {
         text: 'SSR优化',
-        link: '/ssr'
+        link: '/front-end/server-deploy/ssr'
       }
     ]
   }

@@ -1,3 +1,7 @@
+---
+sidebar: heading
+sidebarDepth: 3
+---
 
 ## 工作机会
 

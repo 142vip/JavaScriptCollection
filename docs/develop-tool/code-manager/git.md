@@ -21,11 +21,11 @@ Git 区域理解
 ```bash
 ## 项目级配置
 git config  user.name "chufan"
-git config  user.email "chufan@dtstack.com"
+git config  user.email "fairy_vip@2925.com"
 
 ## 全局配置
 git config --global user.name "chufan"
-git config --global user.email "chufan@dtstack.com"
+git config --global user.email "fairy_vip@2925.com"
 
 
 ## 查看配置效果
@@ -162,3 +162,4 @@ git branch -D <branch-nane>
 # 重新命名分支
 git branch -m <old-branch-name> <new-branch-name>
 ```
+

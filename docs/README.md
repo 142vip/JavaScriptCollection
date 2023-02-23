@@ -2,7 +2,7 @@
 home: true
 heroAlt: 屈身守份 以待天时
 heroText: JavaScriptCollection
-tagline: 理论+实战模式下的硬核全栈学习合集，内容持续更新...
+tagline: 【理论+实战】超硬核全栈学习合集，持续更新...
 actions:
   - text: 快速开始 →
     link: /quick-start/
@@ -170,6 +170,9 @@ yarn run dev
 
 
 <a name="gzh"></a>
+
+
+
 
 
 [//]: # (<p>)

@@ -71,10 +71,17 @@ export const developToolSidebar = [
             link: '/develop-tool/code-manager/git.md'
           },
           {
-            text: '提交规则',
+            text: '分支版本规范',
+            link: '/develop-tool/code-manager/git-branch-rule.md'
+          },
+          {
+            text: '提交规范',
             link: '/develop-tool/code-manager/git-commit-rule.md'
+          },
+          {
+            text: '修改历史提交信息',
+            link: '/develop-tool/code-manager/git-info-reset.md'
           }
-
         ]
       },
       {
@@ -85,6 +92,7 @@ export const developToolSidebar = [
   },
   {
     text: '代码风格',
+    collapsible: true,
     children: [
       {
         text: 'Eslint',

@@ -1,13 +1,11 @@
-/*
- * @Description: 第一个只出现一次的字符位置
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-04-28 22:23:51
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-28 22:24:20
- */
 
-function FirstNotRepeatingChar(str) {
+
+/**
+ *
+ * @param str
+ * @returns {number}
+ */
+function firstNotRepeatingCharOne(str) {
   // 转换为数组
   const arr = str.split('')
   // 数组里面去去重
@@ -19,9 +17,13 @@ function FirstNotRepeatingChar(str) {
   return -1
 }
 
-function FirstNotRepeatingChar01(str) {
-  const len = str.length
 
+/**
+ *
+ * @param str
+ */
+function firstNotRepeatingCharTwo(str) {
+  const len = str.length
   for (let index = 0; index < len - 1; index++) {
     const s = str.slice(index, index + 1)
     if (`${str.slice(0, index)}${str.slice(index + 1)}`.indexOf(s) === -1) {
