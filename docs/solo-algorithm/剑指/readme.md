@@ -1,17 +1,18 @@
 
 
-## 剑指Offer
+## 剑指Offer算法
 
 总结整理，剑指Offer上笔刷的算法习题
 
+- [牛客网](https://www.nowcoder.com/exam/oj/ta?tpId=13)
 
 ### 数组和矩阵
 
-- [ ] [【简单】数组中重复的数字](./数组和矩阵/duplicate.js)
-- [ ] [【中等】二维数组中的查找](./数组和矩阵/Find.js)
-- [ ] [【较难】替换空格](./数组和矩阵/replaceSpace.js)
-- [ ] [【较难】顺时针打印矩阵](./数组和矩阵/printMatrix.js)
-- [ ] [【简单】第一个只出现一次的字符位置](./数组和矩阵/FirstNotRepeatingChar.js)
+ - [ ] [【简单】数组中重复的数字](./数组和矩阵/duplicate.md)
+ - [ ] [【中等】二维数组中的查找](./数组和矩阵/Find.md)
+ - [ ] [【较难】替换空格](./数组和矩阵/replaceSpace.md)
+ - [ ] [【较难】顺时针打印矩阵](./数组和矩阵/printMatrix.md)
+ - [ ] [【简单】第一个只出现一次的字符位置](./数组和矩阵/FirstNotRepeatingChar.md)
 
 
 ### 栈队列堆
@@ -42,10 +43,10 @@
 - [ ] [【中等】链表中倒数第K个结点](./链表/FindKthToTail.js)
 - [ ] [【中等】反转链表](./链表/ReverseList.js)
 - [ ] [【较难】从尾到头打印链表](./链表/printListFromTailToHead.js)
-- [ ] ~~在O(1)时间内删除链表节点~~
+- ~~在O(1)时间内删除链表节点~~
 - [ ] [【较难】删除链表中重复的结点](./链表/deleteDuplication.js)
-- [ ] 链表中环的入口结点
-- [ ]【较难】复杂链表的复制
+- 链表中环的入口结点[暂时没思路]
+- 【较难】复杂链表的复制[暂时没有思路]
 
 
 
@@ -78,8 +79,8 @@
 
 #### 二分查找
 
-- [ ] [【简单】旋转数组的最小数字](./二分查找/minNumberInRotateArray.js)
-- [ ] [【中等】数字在排序数组中出现的次数](./二分查找/GetNumberOfK.js)
+- [ ] [【简单】旋转数组的最小数字](./二分查找/minNumberInRotateArray.md)
+- [ ] [【中等】数字在排序数组中出现的次数](./二分查找/GetNumberOfK.md)
 
 
 #### 分治
@@ -107,24 +108,24 @@
 - [ ] [【简单】连续子数组的最大和 时间复杂度O(n)](./动态规划/FindGreatestSumOfSubArray.js)
 - [ ] [【简单】构建乘积数组](./动态规划/multiply.js)
 - [ ] [【中等】矩形覆盖](./动态规划/rectCover.js)
-- [【中等】跳台阶 非递归，要么跳一阶，要么跳两阶](./动态规划/jumpFloor.js)
-- [【较难】丑数](./动态规划/GetUglyNumber_Solution.js)
+- [ ] [【中等】跳台阶 非递归，要么跳一阶，要么跳两阶](./动态规划/jumpFloor.js)
+- [ ] [【较难】丑数](./动态规划/GetUglyNumber_Solution.js)
 
 
 
 #### 数学问题
 
-- [【简单】数组中出现次数超过一半的数字](./数学/MoreThanHalfNum_Solution.js)
-- [【中等】圆圈中最后剩下的数 约瑟夫问题](./数学/LastRemaining_Solution.js)
-- [【中等】从1到n整数中1出现的次数](./数学/NumberOf1Between1AndN_Solution.js)
+- [ ] [【简单】数组中出现次数超过一半的数字](./数学/MoreThanHalfNum_Solution.js)
+- [ ] [【中等】圆圈中最后剩下的数 约瑟夫问题](./数学/LastRemaining_Solution.js)
+- [ ] [【中等】从1到n整数中1出现的次数](./数学/NumberOf1Between1AndN_Solution.js)
 
 #### 位运算
 
-- [【中等】二进制中1的个数](./位运算/NumberOf1.js)
-- [【中等】数组中只出现一次的数字]()
+- [ ] [【中等】二进制中1的个数](./位运算/NumberOf1.md)
+- [ ] [【中等】数组中只出现一次的数字]()
 
 #### 其他分类
 
-- [【简单】不用加减乘除做加法](./其他相关/Add.js)
-- [【中等】扑克牌顺子](./其他相关/IsContinuous.js)
-- [【较难】把字符串转换成整数](./其他相关/StrToInt.js)
+- [ ] [【简单】不用加减乘除做加法](./其他相关/Add.md)
+- [ ] [【中等】扑克牌顺子](./其他相关/IsContinuous.md)
+- [ ] [【较难】把字符串转换成整数](./其他相关/StrToInt.md)
