@@ -1,8 +1,8 @@
 import pluginsConfig from "./config/plugins.config";
 import themeConfig from "./config/theme.config";
 import {defineUserConfig} from "vuepress";
-import { fileURLToPath } from 'node:url'
-import { path } from "@vuepress/utils";
+import {fileURLToPath} from 'node:url'
+import {path} from "@vuepress/utils";
 // @ts-ignore
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -16,21 +16,27 @@ export default defineUserConfig({
     base: PROXY_DOMAIN ? "/JavaScriptCollection/" : "/",
     port: 5000,
     head: [
-        ["link", {rel: "icon", href: "/fight_favicon.ico"}]
+        ["link", {rel: "icon", href: "/fight_favicon.ico"}],
+        // vercel统计 相关配置
+        ['script', {type: 'text/javascript', src: '/_vercel/insights/script.js'}]
     ],
     markdown: {
         // todo 引入代码文件时的路径替换
         importCode: {
-            handleImportPath: (str) =>{
-                if(str.includes('@code')){
+            handleImportPath: (str) => {
+                if (str.includes('@code')) {
                     return str.replace(/^@code/, path.resolve(__dirname, '../../code/'))
                 }
-                if(str.includes('~@')){
+                if (str.includes('~@')) {
                     return str.replace(/^~@/, path.resolve(__dirname, '../../'))
                 }
                 return str
             },
         },
+        // md doc formatter  headerDepth
+        headers: {
+            level: [2, 3, 4]
+        }
     },
     // 主题配置
     ...themeConfig,

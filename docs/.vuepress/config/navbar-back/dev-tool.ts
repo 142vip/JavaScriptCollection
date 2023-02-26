@@ -4,7 +4,7 @@ export default {
     children: [
         {
             text: 'npm',
-            link: '/develop-tool/npm'
+            link: '/develop-skill/npm'
         },
         {
             text: 'pnpm',
@@ -36,7 +36,7 @@ export default {
             children: [
                 {
                     text: 'Git',
-                    link: '/develop-tool/git'
+                    link: '/develop-skill/git'
                 },
                 {
                     text: 'Github && GitLab',
@@ -49,11 +49,11 @@ export default {
             children: [
                 {
                     text: 'Eslint',
-                    link: '/develop-tool/eslint'
+                    link: '/develop-skill/eslint'
                 },
                 {
                     text: 'Prettier',
-                    link: '/develop-tool/prettier'
+                    link: '/develop-skill/prettier'
                 },
             ]
         },

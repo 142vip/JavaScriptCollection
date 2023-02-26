@@ -3,7 +3,7 @@
  * @param matrix int整型二维数组
  * @return int整型一维数组
  */
-function spiralOrder (matrix) {
+function spiralOrder(matrix) {
   const high = matrix.length
   const width = matrix[0].length
 

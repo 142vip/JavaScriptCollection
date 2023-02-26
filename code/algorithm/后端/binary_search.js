@@ -14,7 +14,7 @@
  * @param nums
  * @param target
  */
-const search = function (nums, target) {
+const search = function(nums, target) {
   // 投机
   // return nums.indexOf(target)
 
@@ -27,7 +27,7 @@ const search = function (nums, target) {
  * @param nums
  * @param target
  */
-function binarySearch (nums, target) {
+function binarySearch(nums, target) {
   let left = 0; let right = nums.length
   while (left < right) {
     // 注意js取整问题；
@@ -51,7 +51,7 @@ function binarySearch (nums, target) {
  * @param nums
  * @param target
  */
-function leftBound (nums, target) {
+function leftBound(nums, target) {
   let left = 0; let right = nums.length - 1
 
   // [left,right]
@@ -78,7 +78,7 @@ function leftBound (nums, target) {
  * @param nums
  * @param target
  */
-function rightBound (nums, target) {
+function rightBound(nums, target) {
   let left = 0; let right = nums.length
   // [left,right) 情况
   while (left < right) {

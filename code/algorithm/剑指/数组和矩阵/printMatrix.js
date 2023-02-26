@@ -7,7 +7,7 @@
  * @LastEditTime: 2021-04-28 22:25:16
  */
 
-function printMatrix (matrix) {
+function printMatrix(matrix) {
   // 行 角标
   let row = matrix.length - 1
   // 列角标

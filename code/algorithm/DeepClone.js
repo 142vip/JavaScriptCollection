@@ -2,7 +2,7 @@
  * 判断数据类型
  * @param target
  */
-function checkType (target) {
+function checkType(target) {
   // 判断类型 -typeof -instanceof -toString.call()  -Array.isArray()
   return Object.prototype.toString.call(target).slice(8, -1)
 }
@@ -11,12 +11,12 @@ function checkType (target) {
  * 基于Json序列化的深拷贝【不能处理函数】
  * @param target
  */
-function DeepCloneByJSON (target) {
+function DeepCloneByJSON(target) {
   return JSON.parse(JSON.stringify(target))
 }
 
 // 基于递归思想的深拷贝
-function DeepClone (target) {
+function DeepClone(target) {
   let result
   const targetType = checkType(target)
 

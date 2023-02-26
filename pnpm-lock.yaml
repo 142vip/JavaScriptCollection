@@ -5,7 +5,6 @@ specifiers:
   '@typescript-eslint/parser': ^5.53.0
   '@vuepress/client': 2.0.0-beta.60
   '@vuepress/utils': 2.0.0-beta.60
-  cz-git: ^1.4.1
   eslint: ^8.34.0
   eslint-config-standard: ^17.0.0
   eslint-plugin-import: ^2.25.2
@@ -24,7 +23,6 @@ devDependencies:
   '@typescript-eslint/parser': 5.53.0_hohtbvzfsjvc7fid5hot6aht4e
   '@vuepress/client': 2.0.0-beta.60
   '@vuepress/utils': 2.0.0-beta.60
-  cz-git: 1.4.1
   eslint: 8.34.0
   eslint-config-standard: 17.0.0_rwq7hzy2vtlwiajbw6pmw3rkzy
   eslint-plugin-import: 2.27.5_dbs2zxbe2aiqaiiio3svelvkai
@@ -3033,10 +3031,6 @@ packages:
     dependencies:
       heap: 0.2.7
       lodash: 4.17.21
-    dev: true
-
-  /cz-git/1.4.1:
-    resolution: {integrity: sha512-EOtuitcnfxde8t3NNTKh2YxEJhLXGiVlKSVaZipK3+DVo135rEUifAfqxkslM66Nf6ZO7a+3JR+XAOLhMXUAjQ==}
     dev: true
 
   /d3-array/3.2.2:

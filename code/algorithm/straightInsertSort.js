@@ -3,7 +3,7 @@
  *  ++i 和 i++ 的区别： https://zhidao.baidu.com/question/40433825.html
  */
 
-function straightInsertSort (arr, len) {
+function straightInsertSort(arr, len) {
   len = arr.length === len ? len : arr.length
   // console.log(len)
   for (let i = 1; i < len; i++) {

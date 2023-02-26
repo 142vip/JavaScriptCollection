@@ -4,7 +4,7 @@
  * @param low
  * @param high
  */
-function quickSort (data, low, high) {
+function quickSort(data, low, high) {
   console.log(data, low, high)
   const pivot = partition(data, low, high)
   const result = []
@@ -39,7 +39,7 @@ function quickSort (data, low, high) {
  * @param low
  * @param high
  */
-function partition (data, low, high) {
+function partition(data, low, high) {
   const pivot = data[low]
 
   while (low < high) {

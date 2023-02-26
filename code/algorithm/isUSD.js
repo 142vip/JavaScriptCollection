@@ -1,6 +1,6 @@
 const { lstat } = require('fs-extra')
 
-function isUSD (str) {
+function isUSD(str) {
   if (!str.startsWith('$')) {
     return false
   }

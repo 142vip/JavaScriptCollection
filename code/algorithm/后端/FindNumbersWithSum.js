@@ -4,7 +4,7 @@
  * @param array
  * @param sum
  */
-function FindNumbersWithSum (array, sum) {
+function FindNumbersWithSum(array, sum) {
   let left = 0
   let right = array.length - 1
 

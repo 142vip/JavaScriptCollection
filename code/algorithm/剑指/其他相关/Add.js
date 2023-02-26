@@ -3,7 +3,7 @@
  * @param num1
  * @param num2
  */
-function Add (num1, num2) {
+function Add(num1, num2) {
   let count = num1
 
   if (num2 === 0) {

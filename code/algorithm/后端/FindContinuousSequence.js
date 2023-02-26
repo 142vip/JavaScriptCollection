@@ -1,5 +1,5 @@
 // 指针矛盾了
-function FindContinuousSequence (sum) {
+function FindContinuousSequence(sum) {
   // 首先，序列最少包含两位数，则 x+(x+1)<=sum ===> x<sum/2 暂且向上取整吧
   let left = 1; const right = 2
   let tempSum = 3

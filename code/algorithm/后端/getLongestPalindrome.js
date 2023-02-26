@@ -12,7 +12,7 @@
  * @param str
  * @param len
  */
-function getLongestPalindrome (str, len) {
+function getLongestPalindrome(str, len) {
   let max = 0
   for (let i = 0; i < len; i++) {
     for (let j = i + 1; j < len; j++) {

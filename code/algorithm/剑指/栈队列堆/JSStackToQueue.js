@@ -8,11 +8,11 @@
  */
 
 const result = []
-function push (node) {
+function push(node) {
   // 尾部进栈
   result.push(node)
 }
-function pop () {
+function pop() {
   // 队列 先进先出 头部出去
   return result.shift()
 }

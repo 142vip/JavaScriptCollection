@@ -9,16 +9,16 @@
 
 // Init module if you need
 let result
-function Init () {
+function Init() {
   result = ''
 }
 // Insert one char from stringstream
-function Insert (ch) {
+function Insert(ch) {
   result += ch
   return result
 }
 // return the first appearence once char in current stringstream
-function FirstAppearingOnce () {
+function FirstAppearingOnce() {
   for (let index = 0; index < result.length; index++) {
     //
     const str = result[index]

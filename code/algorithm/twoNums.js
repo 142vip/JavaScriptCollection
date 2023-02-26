@@ -3,7 +3,7 @@
  你给出的函数twoSum 需要返回这两个数字的下标（ index1， index2）， 需要满足 index1 小于index2.。注意： 下标是从1开始的
  假设给出的数组中只存在唯一解
  */
-function captureThreeNumbers (str) {
+function captureThreeNumbers(str) {
   // 切割转化
   const arr = str.split('')
   console.log(arr)
@@ -20,7 +20,7 @@ function captureThreeNumbers (str) {
 
 console.log(captureThreeNumbers('abc123'))
 
-function matchesPattern (str) {
+function matchesPattern(str) {
   if (str.length !== 12) {
     return false
   }

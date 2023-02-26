@@ -37,7 +37,7 @@ export default {
         // 主题布局选项
         docsRepo: "https://github.com/142vip/JavaScriptCollection.git",
         repo: "https://github.com/142vip/JavaScriptCollection",
-        logoDark: "/assets/408_logo.png",
+        // logoDark: "/assets/408_logo.png",
 
         // 博客配置
         blog: {
@@ -66,8 +66,8 @@ export default {
         },
 
         plugins: {
-            readingTime:{
-                wordPerMinute:200
+            readingTime: {
+                wordPerMinute: 200
             },
             copyright: false,
             // 开启博客功能
@@ -93,11 +93,11 @@ export default {
                 stylize: [
                     {
                         matcher: "Recommended",
-                        replacer: ({ tag }) => {
+                        replacer: ({tag}) => {
                             if (tag === "em")
                                 return {
                                     tag: "Badge",
-                                    attrs: { type: "tip" },
+                                    attrs: {type: "tip"},
                                     content: "Recommended",
                                 };
                         },
@@ -120,6 +120,7 @@ export default {
                     "BiliBili",
                     "CodePen",
                     "PDF",
+                    "Replit",
                     "StackBlitz",
                     "VideoPlayer",
                     "YouTube",

@@ -3,7 +3,7 @@
  * @param str
  * @returns {number|number|number}
  */
-function StrToInt (str) {
+function StrToInt(str) {
   if (!str) return 0
   let bool = false; const firstLetter = str[0]
   if (firstLetter === '-') bool = true

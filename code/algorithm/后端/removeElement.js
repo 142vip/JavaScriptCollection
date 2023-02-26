@@ -3,7 +3,7 @@
  * @param nums
  * @param val
  */
-const removeElement = function (nums, val) {
+const removeElement = function(nums, val) {
   // 等于val值的个数
   return nums.filter(item => item !== val)
 }

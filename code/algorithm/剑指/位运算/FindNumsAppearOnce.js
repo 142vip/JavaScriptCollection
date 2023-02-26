@@ -1,9 +1,8 @@
 /**
- *
  * @param array
  * @returns {*[]}
  */
-function FindNumsAppearOnce (array) {
+function FindNumsAppearOnce(array) {
   // 数组中元素要么出现一次，要么出现两次，可以先对元素进行排序 Math.sort((a,b)=>a-b) 从小到大  有点偷懒的样子
 
   array = quickSort(array, 0, array.length - 1)
@@ -31,7 +30,7 @@ function FindNumsAppearOnce (array) {
   return result.sort((a, b) => a - b)
 }
 
-function quickSort (arr, left, right) {
+function quickSort(arr, left, right) {
   if (left < right) {
     const pivot = partition(arr, left, right)
     // 左侧
@@ -44,7 +43,7 @@ function quickSort (arr, left, right) {
   return arr
 }
 
-function partition (arr, left, right) {
+function partition(arr, left, right) {
   const pivot = arr[left]
   while (left < right) {
     while (left < right && pivot <= arr[right]) --right

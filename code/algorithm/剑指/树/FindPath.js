@@ -13,9 +13,9 @@
     this.right = null;
 } */
 
-function FindPath (root, expectNumber) {
+function FindPath(root, expectNumber) {
   const result = []
-  function dfs (root, target, tempRes) {
+  function dfs(root, target, tempRes) {
     // 处理空树
     if (root === null) {
       return

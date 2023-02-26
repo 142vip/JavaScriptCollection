@@ -13,13 +13,21 @@ export const frontEndSidebar = [
   },
   {
     text: '前端框架',
+    collapsible: true,
     children: [
       {
         text: 'Vue',
-        link: '/front-end/front-framework/vue'
+        children: [{
+          text: '安装',
+          link: '/front-end/front-framework/vue'
+        }]
       },
       {
         text: 'Nuxt',
+        link: '/front-end/front-framework/nuxt'
+      },
+      {
+        text: 'Vuepress',
         link: '/front-end/front-framework/nuxt'
       },
       {
@@ -62,7 +70,7 @@ export const frontEndSidebar = [
     text: '服务部署',
     children: [
       {
-        text: '前端分离【nginx】',
+        text: 'Nginx托管',
         link: '/front-end/server-deploy/static-nginx'
       },
       {
@@ -71,7 +79,7 @@ export const frontEndSidebar = [
       },
       {
         text: 'SSR优化',
-        link: '/ssr'
+        link: '/front-end/server-deploy/ssr'
       }
     ]
   }

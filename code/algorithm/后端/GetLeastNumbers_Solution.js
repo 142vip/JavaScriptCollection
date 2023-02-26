@@ -12,7 +12,7 @@
  * @param input
  * @param k
  */
-function GetLeastNumbersSolution (input, k) {
+function GetLeastNumbersSolution(input, k) {
   const len = input.length
 
   if (k > len) {
@@ -38,7 +38,7 @@ function GetLeastNumbersSolution (input, k) {
  * @param input
  * @param k
  */
-function GetLeastNumbersSolution02 (input, k) {
+function GetLeastNumbersSolution02(input, k) {
   const len = input.length
 
   if (k > len) {
@@ -64,7 +64,7 @@ function GetLeastNumbersSolution02 (input, k) {
  * @param input
  * @param k
  */
-function GetLeastNumbersSolution03 (input, k) {
+function GetLeastNumbersSolution03(input, k) {
   // if (k > input.length) return []
   // // 排序
   // input.sort((a,b)=>a-b)

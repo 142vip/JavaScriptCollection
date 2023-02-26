@@ -3,7 +3,7 @@
  * @param x
  * @constructor
  */
-function ListNode (x) {
+function ListNode(x) {
   this.val = x
   this.next = null
 }
@@ -15,7 +15,7 @@ function ListNode (x) {
  * @param k int整型
  * @return ListNode类
  */
-function FindKthToTail (pHead, k) {
+function FindKthToTail(pHead, k) {
   // 结点不存在返回空
   if (!pHead) {
     return null
