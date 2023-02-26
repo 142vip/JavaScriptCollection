@@ -16,7 +16,8 @@ export default defineUserConfig({
     base: PROXY_DOMAIN ? "/JavaScriptCollection/" : "/",
     port: 5000,
     head: [
-        ["link", {rel: "icon", href: "/fight_favicon.ico"}]
+        ["link", {rel: "icon", href: "/fight_favicon.ico"}],
+        ['script', {type: 'text/javascript', src: '/_vercel/insights/script.js'}]
     ],
     markdown: {
         // todo 引入代码文件时的路径替换
