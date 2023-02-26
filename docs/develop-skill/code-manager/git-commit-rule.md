@@ -50,7 +50,8 @@ subject是 commit 目的的简短描述，不超过50个字符。
 - 结尾不加句号（.）
 #### Body
 Body 部分是对本次 commit 的详细描述，可以分成多行，每行尽量不超过72个字符。例如：
-```typescript
+
+```text
 More detailed explanatory text, if necessary.  Wrap it to 
 about 72 characters or so. 
 
@@ -60,11 +61,12 @@ Further paragraphs come after blank lines.
 - Use a hanging indent
 ```
 **关闭 Issue**
-如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。
-```typescript
+如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 
+
+```text
 Closes #234
 ```
 也可以一次关闭多个 issue 。
-```typescript
+```text
 Closes #123, #245, #992
 ```
