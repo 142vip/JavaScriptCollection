@@ -37,7 +37,7 @@ export default {
         // 主题布局选项
         docsRepo: "https://github.com/142vip/JavaScriptCollection.git",
         repo: "https://github.com/142vip/JavaScriptCollection",
-        logoDark: "/assets/408_logo.png",
+        // logoDark: "/assets/408_logo.png",
 
         // 博客配置
         blog: {

@@ -1,34 +1,79 @@
-<p style="text-align: center">
-    <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
-</p>
-<p style="text-align: center">
-  <a href="#gzh" target="_blank"><img src="https://img.shields.io/badge/WeChat-公众号-5wd.svg"></a> 
-<a href="#wechat" target="_blank"><img src="https://img.shields.io/badge/WeChat-微信-yellow.svg"></a> 
-<a href="https://space.bilibili.com/350937042" target="_blank"><img src="https://img.shields.io/badge/Bilibili-哔哩哔哩-green.svg"></a> 
-<a href="https://142vip.cn" target="_blank"><img src="https://img.shields.io/badge/142vip-网站-orange.svg"></a>
-<a href="https://blog.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/blog-博客-blue.svg"></a>
-<a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Github-Github-9ac.svg"></a>
-<a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Gitee-码云-4ed.svg"></a>
-<a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
-<a href="https://juejin.im/user/448256476724807" target="_blank"><img src="https://img.shields.io/badge/JueJin-掘金-75c.svg"></a>
-</p>
-
-
-<div  style="font-size:20px;text-align: center">
-  <!-- <a href="https://gitee.com/mmdapl/JavaScriptCollection" target="_blank">国内访问</a>  -->
-  <!-- || 
-  <a href="readme-wechat.md" target="_blank">微信版</a> -->
-</div>
-
+---
+headerDepth:4
+---
 
 ## 写最前面
 
-> 这里是日常工作、学习、生活中总结的各类文章笔记，主要涉及开发技术总结记录，偶尔也会感慨万千，水一些无关技术的文章；若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；所有内容会选择性的发表于**微信公众号、个人博客、掘金、CSDN ，实际内容以本仓库排版、校对为主。** 也会不定时同步到 **码云** 。
-> **以下内容没有链接的代表尚未完成，大家善用快捷键Ctrl+F**
->
-> 创建时间：2020年2月14日
+<div style="text-align: center">
+    <div  align="center" >
+        <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
+            <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
+                width="250px"
+                title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
+            <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
+                width="250px"
+                title="欢迎添加微信：chufan443 " alt="联系作者"/>
+        </table>
+    </div>
+    <div  style="text-align: center;padding: 10px" align="center">
+        <a
+          href="https://github.com/mmdapl"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转Github主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/github.svg"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+        <a
+          href="https://gitee.com/Mmdapl"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转码云主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+        <a
+          href="https://juejin.im/user/448256476724807"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转掘金主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+        <a
+          href="https://space.bilibili.com/350937042"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转B站主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+        <a
+          href="https://blog.csdn.net/Mmdapl"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转CSDN博客主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
+            title="点击跳转CSDN博客主页"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+    </div>
+</div>
 
 
+> 这里是工作、学习、生活中总结的各类笔记文章，涉及开发技术，也会感慨万千、水一些`思考`；若发现博客外链不能访问欢迎指正；
+> 所有内容会选择性的发表于**微信公众号、博客、掘金、CSDN、Github ，实际内容以本仓库排版、校对为主。** 代码会不定期同步到 **码云** 。
+
+
+**没有效访问链接的代表尚未完成，大家善用快捷键`Ctrl+F`**
+
+
+## 日常推荐
 
 
 
@@ -38,17 +83,13 @@
 > 内容同步与文档，可以结合思维导图对文档进行有效学习.相关目录的xmind文件为思维导图原文件
 
 
-## 日常推荐
-
 
 
 
 ## 文章笔记
 
-**注：无高亮有效访问链接的待完成/同步**
 
-
-## 前端
+### 前端
 
 
 > 前端技术百花齐放、层出不穷，个人认为要注重广度，学会看官方文档熟练操作即可；
@@ -73,8 +114,6 @@
 
 ##### 基础教程
 
-
-##
 
 
 ### JavaScript
@@ -736,66 +775,99 @@
 
 
 
-## 
+[[toc]]
 
 
 
 
-## 赞赏支持
+## 赞赏列表
 
 
-**赞赏过的一定要微信跟我说呀！！！！！！**
-
-
-<a name="wechat"></a>
-
-
-<div align="left">
-<img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/wechat_donate.png" width="300" height="300" style="border-radius:5px;" />
-</div>
-
-
-## 联系我
-
-
-有任何问题或建议，欢迎微信“骚扰”，商务合作请备注！
-
-<div style="text-align: left">
-<img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/wechat_code.jpg" width="300" height="300"  style="border-radius:5px;"/>
-</div>
-
-
-## 鸣谢
-
-
-以下排名不分先后 详细统计
+以下排名不分先后!  [传送门→]() **赞赏过的一定要微信跟我说呀！！！！！！**
 
 
 <div>
-  <a href="https://github.com/ChiefPing" target="_blank">
-    <img alt="感谢各位观众大老爷" src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
-  </a>  <a href="https://github.com/xiaoliuxin" target="_blank">
-    <img alt="感谢观众大老爷" src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
+  <a href="https://github.com/ChiefPing" target="_blank" style="margin: 5px">
+    <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
+  </a> 
+   <a href="https://github.com/xiaoliuxin" target="_blank" style="margin: 5px">
+    <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
   </a>
 </div>
 
 
-## 赞助列表
 
-以下排名不分先后!
+## 赞助商
 
-
-
+**以下排名不分先后! 还木有收到赞助，哈哈哈，先留坑**
 
 
 
-## 公众号
 
+## 联系作者
 
-- 相逢不用忙归去，明日黄花蝶也愁....
+若系列文章对你有所帮助，欢迎订阅公众号或微信”骚扰“，获取更多内容。**商务合作请备注来意**
 
-- 若系列文章对你有所帮助，不如来公众号交个朋友吧.
-
+<div style="text-align: center">
+    <div  align="center" >
+        <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
+            <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
+                width="250px"
+                title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
+            <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
+                width="250px"
+                title="欢迎添加微信：chufan443 " alt="联系作者"/>
+        </table>
+    </div>
+    <div  style="text-align: center;padding: 10px" align="center">
+        <a
+          href="https://github.com/mmdapl"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转Github主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/github.svg"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+        <a
+          href="https://gitee.com/Mmdapl"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转码云主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+        <a
+          href="https://juejin.im/user/448256476724807"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转掘金主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+        <a
+          href="https://space.bilibili.com/350937042"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转B站主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+        <a
+          href="https://blog.csdn.net/Mmdapl"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转CSDN博客主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
+            title="点击跳转CSDN博客主页"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+    </div>
+</div>
 
 
 
