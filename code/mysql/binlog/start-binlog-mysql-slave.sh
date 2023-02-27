@@ -1,12 +1,13 @@
+#!/bin/bash
+
 ###
- # @Description: binlog从服务器启动初始化配置
- # @Version: Beata1.0
- # @Autor: 【B站&公众号】Rong姐姐好可爱
- # @Date: 2020-09-03 22:36:42
- # @LastEditors: 【B站&公众号】Rong姐姐好可爱
- # @LastEditTime: 2020-09-03 23:57:38
-### 
-#!bin/bash
+# @Description: binlog从服务器启动初始化配置
+# @Version: Beata1.0
+# @Author: 【B站&公众号】Rong姐姐好可爱
+# @Date: 2020-09-03 22:36:42
+# @LastEditors: 【B站&公众号】Rong姐姐好可爱
+# @LastEditTime: 2020-09-03 23:57:38
+###
 
 ## 执行脚本开始
 

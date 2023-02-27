@@ -1,16 +1,7 @@
-'use strict';
-/*
- * @Description: 
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2022-04-10 00:50:30
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-10 16:37:52
- */
+'use strict'
 
 
-module.exports=[
-  // SidebarItem
+module.exports = [
   {
     text: 'Foo',
     link: '/foo/',
@@ -19,12 +10,12 @@ module.exports=[
       {
         text: 'github',
         link: 'https://github.com',
-        children: [],
+        children: []
       },
       // 字符串 - 页面文件路径
-      '/foo/bar.md',
-    ],
+      '/foo/bar.md'
+    ]
   },
   // 字符串 - 页面文件路径
-  '/bar/README.md',
+  '/bar/README.md'
 ]
