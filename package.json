@@ -3,7 +3,7 @@
   "engines": {
     "node": ">=14.20.1"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "一本有趣的JavaScript合集",
   "scripts": {
     "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lintfix\" && chmod +x .husky/pre-commit",
