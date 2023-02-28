@@ -1,5 +1,9 @@
 export const OtherSidebar = [
   {
+    text: '公众号文章',
+    link: '/other/wechat-list'
+  },
+  {
     text: '常用网站',
     link: '/other/frequent-site-link'
   },
@@ -8,7 +12,7 @@ export const OtherSidebar = [
     link: '/other/api-docs'
   },
   {
-    text: 'todo计划',
+    text: 'Todo计划',
     link: '/other/todo-list'
   },
   {

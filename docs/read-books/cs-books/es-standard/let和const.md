@@ -1,4 +1,7 @@
-## let和const命令
+---
+title: let和const命令
+headerDepth: 4
+---
 
 ### let命令
 >ES6 新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，**只在let命令所在的代码块内有效。**

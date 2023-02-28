@@ -1,9 +1,11 @@
-## Eslint
+---
+title: Eslint
+---
 
 ### 基础使用
-配置eslint
+- 配置eslint
 
-生产环境安装eslint
+- 生产环境安装eslint
 
 ```bash
 ## 安装eslint
@@ -31,7 +33,6 @@ pnpm i eslint -D
 相关`eslint`包`package.json`文件如下：
 
 ```package.json
-
 "@typescript-eslint/eslint-plugin": "^5.53.0",
 "@typescript-eslint/parser": "^5.53.0",
 "cz-git": "^1.4.1",

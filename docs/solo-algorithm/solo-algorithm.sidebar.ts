@@ -17,6 +17,36 @@ export const soloAlgorithmSidebar = [
     ]
   },
   {
+    text: '面试题整理',
+    collapsible: true,
+    children: [
+      {
+        text: '前端常考',
+        link: '/solo-algorithm/interview/前端常考.md'
+      },
+      {
+        text: '接口幂等',
+        link: '/solo-algorithm/interview/接口幂等.md'
+      },
+      {
+        text: 'Node面试',
+        link: '/solo-algorithm/interview/node面试.md'
+      },
+      {
+        text: 'Nginx面试',
+        link: '/solo-algorithm/interview/Nginx面试.md'
+      },
+      {
+        text: 'MySQL面试',
+        link: '/solo-algorithm/interview/MySQL面试.md'
+      },
+      {
+        text: '碎碎念',
+        link: '/solo-algorithm/interview/碎碎念.md'
+      }
+    ]
+  },
+  {
     text: '在线刷题',
     children: [
 

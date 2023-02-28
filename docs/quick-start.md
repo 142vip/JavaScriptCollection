@@ -98,7 +98,7 @@ headerDepth:4
 ### CSS
 
 
-> 依赖W3CSchool文档和日常整理，主要是对CSS常用操作和基础属性进行整理总结。不会过多深入
+> 依赖W3CSchool文档和日常整理，主要是对CSS常用操作和基础属性进行整理总结。不是专家，望谅解
 
 
 - CSS开发规范
@@ -235,7 +235,7 @@ headerDepth:4
 - Element-UI
 
 
-## 后端【Node】
+## 后端【Node.js】
 
 
 > 相比前端，作为偏后端的开发者， 后端技术的学习则需要稳扎稳打、不断积累整理，在会用、能用、熟练的基础上，更应该学习其中的原理；所以若你为后端开发者，不论Java、Nodejs、Go等技术栈，对待下面将提及的微服务架构、容器技术、服务治理、高可用等都需要努力学习，抓住重点；
@@ -775,99 +775,10 @@ headerDepth:4
 
 
 
-[[toc]]
 
 
 
 
-## 赞赏列表
-
-
-以下排名不分先后!  [传送门→]() **赞赏过的一定要微信跟我说呀！！！！！！**
-
-
-<div>
-  <a href="https://github.com/ChiefPing" target="_blank" style="margin: 5px">
-    <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
-  </a> 
-   <a href="https://github.com/xiaoliuxin" target="_blank" style="margin: 5px">
-    <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
-  </a>
-</div>
-
-
-
-## 赞助商
-
-**以下排名不分先后! 还木有收到赞助，哈哈哈，先留坑**
-
-
-
-
-## 联系作者
-
-若系列文章对你有所帮助，欢迎订阅公众号或微信”骚扰“，获取更多内容。**商务合作请备注来意**
-
-<div style="text-align: center">
-    <div  align="center" >
-        <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
-            <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
-                width="250px"
-                title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
-            <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
-                width="250px"
-                title="欢迎添加微信：chufan443 " alt="联系作者"/>
-        </table>
-    </div>
-    <div  style="text-align: center;padding: 10px" align="center">
-        <a
-          href="https://github.com/mmdapl"
-          rel="nofollow noreferrer"
-          target="_blank"
-          title="点击跳转Github主页"
-        >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/github.svg"
-            style="margin: 5px;width: 24px;height: 24px;">
-        </a>
-        <a
-          href="https://gitee.com/Mmdapl"
-          rel="nofollow noreferrer"
-          target="_blank"
-          title="点击跳转码云主页"
-        >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg"
-            style="margin: 5px;width: 24px;height: 24px;">
-        </a>
-        <a
-          href="https://juejin.im/user/448256476724807"
-          rel="nofollow noreferrer"
-          target="_blank"
-          title="点击跳转掘金主页"
-        >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg"
-            style="margin: 5px;width: 24px;height: 24px;">
-        </a>
-        <a
-          href="https://space.bilibili.com/350937042"
-          rel="nofollow noreferrer"
-          target="_blank"
-          title="点击跳转B站主页"
-        >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
-            style="margin: 5px;width: 24px;height: 24px;">
-        </a>
-        <a
-          href="https://blog.csdn.net/Mmdapl"
-          rel="nofollow noreferrer"
-          target="_blank"
-          title="点击跳转CSDN博客主页"
-        >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
-            title="点击跳转CSDN博客主页"
-            style="margin: 5px;width: 24px;height: 24px;">
-        </a>
-    </div>
-</div>
 
 
 
