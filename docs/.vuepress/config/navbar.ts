@@ -6,13 +6,13 @@ export default [
         text: "前端", link: "/front-end/",
     },
     {
-        text: "后端【Node.js】", link: "/server-end/",
-    },
-    {
-        text: "开发技巧", link: "/develop-skill/",
+        text: "Node后端", link: "/server-end/",
     },
     {
         text: "Solo算法", link: "/solo-algorithm/",
+    },
+    {
+        text: "开发技巧", link: "/develop-skill/",
     },
     {
         text: "读书整理", link: "/read-books/",

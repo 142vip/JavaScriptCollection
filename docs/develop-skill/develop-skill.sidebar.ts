@@ -1,17 +1,7 @@
 export const developSkillSidebar = [
   {
     text: '软件安装',
-    collapsible: true,
-    children: [
-      {
-        text: 'IDEA',
-        link: '/develop-skill/npm/npm'
-      },
-      {
-        text: '软件大杂烩',
-        link: '/develop-skill/software-install/readme.md'
-      }
-    ]
+    link: '/develop-skill/software-install/readme.md'
   },
   {
     text: '包管理器',
@@ -40,7 +30,7 @@ export const developSkillSidebar = [
         link: '/develop-skill/monorepo/pnpm-style.md'
       },
       {
-        text: 'turboRepo',
+        text: 'TurboRepo',
         link: '/develop-skill/monorepo/turboRepo.md'
       }
     ]

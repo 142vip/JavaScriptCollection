@@ -112,6 +112,8 @@ export default {
             copyCode: {
                 showInMobile: true
             },
+            // 不自动生成readme目录
+            autoCatalog: false,
             // 参考：https://theme-hope.vuejs.press/zh/guide/markdown/components.html
             components: {
                 components: [

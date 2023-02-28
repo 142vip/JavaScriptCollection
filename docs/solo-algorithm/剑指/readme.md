@@ -1,14 +1,14 @@
 ---
-headerDepth: 1
+title: 剑指Offer算法
+headerDepth: 3
 ---
 
-### 剑指Offer算法
 
 总结整理，剑指Offer上笔刷的算法习题
 
 - [牛客网](https://www.nowcoder.com/exam/oj/ta?tpId=13)
 
-#### 数组和矩阵
+### 数组和矩阵
 
  - [x] [【简单】数组中重复的数字](./数组和矩阵/duplicate.md)
  - [x] [【中等】二维数组中的查找](./数组和矩阵/find.md)
@@ -17,7 +17,7 @@ headerDepth: 1
  - [ ] [【简单】第一个只出现一次的字符位置](./数组和矩阵/firstNotRepeatingChar.md)
 
 
-#### 栈队列堆
+### 栈队列堆
 
 - [ ] [【简单】两个栈实现队列](./栈队列堆/stackToQueue.md)
 - [ ] [【中等】最小的k个数](./栈队列堆/getLeastNumbersSolution.md)
@@ -29,7 +29,7 @@ headerDepth: 1
 
 
 
-#### 双指针
+### 双指针
 
 - [ ] [【中等】和为S的两个数字](./双指针/FindNumbersWithSum.js)
 - [ ] [【中等】和为S的连续正数序列](./双指针/FindContinuousSequence.js)
@@ -38,7 +38,7 @@ headerDepth: 1
 
 
 
-#### 链表
+### 链表
 
 - [ ] [【简单】合并两个排序的链表](./链表/Merge.js)
 - [ ] [【简单】两个链表的第一个公共结点](./链表/FindFirstCommonNode.js)
@@ -52,7 +52,7 @@ headerDepth: 1
 
 
 
-#### 树
+### 树
 
 - [ ] [【中等】重建二叉树](./树/reConstructBinaryTree.md)
 - [ ] [【中等】二叉树的下一个结点](./树/getNext.md)
@@ -71,39 +71,39 @@ headerDepth: 1
 - 树中两个节点的最低公共祖先
 
 
-#### 综合类型
+## 综合类型
 
-##### 贪心思想
+### 贪心思想
 
 - 剪绳子
 - [ ] [【LeetCode题目】股票的最大利润](./贪心思想/maxProfit.js)
 
 
-##### 二分查找
+### 二分查找
 
 - [ ] [【简单】旋转数组的最小数字](./二分查找/minNumberInRotateArray.md)
 - [ ] [【中等】数字在排序数组中出现的次数](./二分查找/GetNumberOfK.md)
 
 
-##### 分治
+### 分治
 
 - [ ] [【中等】数值的整数次方](./分治/Power.js)
 
 
-##### 搜索
+### 搜索
 
 - 矩阵中的路径 有难度
 - 机器人的运动范围
 - 字符串的排列
 
 
-##### 排列
+### 排列
 
 - [ ] [【中等】调整数组顺序使奇数位于偶数前面](./排列/reOrderArray.js)
 - [ ] [【较难】把数组排成最小的数](./双指针/ReverseSentence.js)
 - 数组中的逆序对 困难
 
-##### 动态规划
+### 动态规划
 
 - [ ] [【入门】斐波拉契数列](./动态规划/Fibonacci.js)
 - [ ] [【简单】变态跳台阶 找规律 可跳任意阶](./动态规划/jumpFloorII.js)
@@ -115,18 +115,18 @@ headerDepth: 1
 
 
 
-##### 数学问题
+### 数学问题
 
 - [ ] [【简单】数组中出现次数超过一半的数字](./数学/MoreThanHalfNum_Solution.js)
 - [ ] [【中等】圆圈中最后剩下的数 约瑟夫问题](./数学/LastRemaining_Solution.js)
 - [ ] [【中等】从1到n整数中1出现的次数](./数学/NumberOf1Between1AndN_Solution.js)
 
-##### 位运算
+### 位运算
 
 - [ ] [【中等】二进制中1的个数](./位运算/NumberOf1.md)
 - [ ] [【中等】数组中只出现一次的数字]()
 
-##### 其他分类
+### 其他分类
 
 - [ ] [【简单】不用加减乘除做加法](./其他相关/Add.md)
 - [ ] [【中等】扑克牌顺子](./其他相关/IsContinuous.md)

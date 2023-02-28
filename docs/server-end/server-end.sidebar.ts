@@ -2,7 +2,19 @@ export const serverEndSidebar = [
   {
     text: 'Node.js',
     collapsible: true,
-    link: '/server-end/node-learn/'
+    link: '/server-end/node-learn/',
+    children: [
+      {
+        text: 'Stream',
+        collapsible: true,
+        link: '/server-end/node-learn/stream'
+      },
+      {
+        text: '常用模块包',
+        collapsible: true,
+        link: '/server-end/node-learn/npm-package'
+      }
+    ]
   },
   {
     text: 'ES6',
@@ -57,58 +69,8 @@ export const serverEndSidebar = [
         link: '/server-end/framework/koa-learn'
       },
       {
-        text: 'Egg',
-        collapsible: true,
-        children: [
-          {
-            text: '简介',
-            link: '/server-end/framework/egg/简介.md'
-          },
-          {
-            text: '快速入门',
-            link: '/server-end/framework/egg/快速入门.md'
-          },
-          {
-            text: '目录结构',
-            link: '/server-end/framework/egg/目录结构.md'
-          },
-          {
-            text: '框架对象',
-            link: '/server-end/framework/egg/框架对象.md'
-          },
-          {
-            text: '配置和运行环境',
-            link: '/server-end/framework/egg/配置和运行环境.md'
-          },
-          {
-            text: '中间件',
-            link: '/server-end/framework/egg/中间件.md'
-          },
-          {
-            text: '路由的使用',
-            link: '/server-end/framework/egg/路由的使用.md'
-          },
-          {
-            text: '控制器和服务',
-            link: '/server-end/framework/egg/控制器和服务.md'
-          },
-          {
-            text: '定时任务',
-            link: '/server-end/framework/egg/定时任务.md'
-          },
-          {
-            text: '框架拓展',
-            link: '/server-end/framework/egg/框架拓展.md'
-          },
-          {
-            text: 'egg-mysql',
-            link: '/server-end/framework/egg/egg-mysql.md'
-          },
-          {
-            text: '最佳实践',
-            link: '/server-end/framework/egg/最佳实践.md'
-          }
-        ]
+        text: 'Egg.js',
+        link: '/server-end/framework/egg'
       },
       {
         text: 'Nest.js',
@@ -126,7 +88,7 @@ export const serverEndSidebar = [
     children: [
       {
         text: 'Sequelize',
-        link: '/server-end/framework/orm/sequelize'
+        link: '/server-end/orm/sequelize'
       },
       {
         text: 'TypeOrm',
@@ -154,11 +116,19 @@ export const serverEndSidebar = [
     ]
   },
   {
-    text: '容器部署',
+    text: '服务部署',
     collapsible: true,
     children: [
       {
-        text: '安装',
+        text: '基础安装',
+        link: '/server-end/docker-cluster/docker.md'
+      },
+      {
+        text: 'PM2管理',
+        link: '/server-end/docker-cluster/docker.md'
+      },
+      {
+        text: 'egg-cluster',
         link: '/server-end/docker-cluster/docker.md'
       },
       {
@@ -172,6 +142,51 @@ export const serverEndSidebar = [
       {
         text: 'Dockerfile详解',
         link: '/server-end/docker-cluster/dockerfile.md'
+      }
+
+    ]
+  },
+  {
+    text: 'Linux操作',
+    collapsible: true,
+    children: [
+      {
+        text: '软件安装',
+        link: '/server-end/linux/soft-install.md'
+      },
+      {
+        text: 'vim',
+        link: '/server-end/linux/vim.md'
+      },
+      {
+        text: 'curl',
+        link: '/server-end/linux/vim.md'
+      },
+      {
+        text: '基本指令',
+        link: '/server-end/linux/vim.md'
+      }
+    ]
+  },
+  {
+    text: '建站技能',
+    collapsible: true,
+    children: [
+      {
+        text: 'SSL证书配置',
+        link: '/server-end/build-website/ssl-install.md'
+      },
+      {
+        text: '镜像托管',
+        link: '/server-end/build-website/ssl-install.md'
+      },
+      {
+        text: '二级域名',
+        link: '/server-end/build-website/ssl-install.md'
+      },
+      {
+        text: '反向代理',
+        link: '/server-end/build-website/ssl-install.md'
       }
     ]
   }
