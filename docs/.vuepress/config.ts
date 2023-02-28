@@ -38,6 +38,7 @@ export default defineUserConfig({
             level: [2, 3, 4]
         }
     },
+
     // 主题配置
     ...themeConfig,
     // 插件配置

@@ -7,9 +7,13 @@ actions:
   - text: 快速开刷 →
     link: /quick-start/
     type: primary
+  - text: 公众号
+    link: /wechat-list.md
+    type: secondary
   - text: 工作机会
     link: /job-chance
     type: secondary
+
 features:
   - title: 前端
     details: 熟练使用前端知识,熟悉常用框架,总结提炼前端部署方案
