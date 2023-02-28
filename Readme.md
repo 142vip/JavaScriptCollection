@@ -7,77 +7,18 @@
  * @LastEditTime: 2022-04-10 22:54:43
 -->
 
-## 写最前面
+### 写最前面
 
-<div style="text-align: center">
-    <div  align="center" >
-        <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
-            <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
-                width="250px"
-                title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
-            <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
-                width="250px"
-                title="欢迎添加微信：chufan443 " alt="联系作者"/>
-        </table>
-    </div>
-    <div  style="text-align: center;padding: 10px" align="center">
-        <a
-          href="https://github.com/mmdapl"
-          rel="nofollow noreferrer"
-          target="_blank"
-          title="点击跳转Github主页"
-        >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/github.svg"
-            style="margin: 5px;width: 24px;height: 24px;">
-        </a>
-        <a
-          href="https://gitee.com/Mmdapl"
-          rel="nofollow noreferrer"
-          target="_blank"
-          title="点击跳转码云主页"
-        >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg"
-            style="margin: 5px;width: 24px;height: 24px;">
-        </a>
-        <a
-          href="https://juejin.im/user/448256476724807"
-          rel="nofollow noreferrer"
-          target="_blank"
-          title="点击跳转掘金主页"
-        >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg"
-            style="margin: 5px;width: 24px;height: 24px;">
-        </a>
-        <a
-          href="https://space.bilibili.com/350937042"
-          rel="nofollow noreferrer"
-          target="_blank"
-          title="点击跳转B站主页"
-        >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
-            style="margin: 5px;width: 24px;height: 24px;">
-        </a>
-        <a
-          href="https://blog.csdn.net/Mmdapl"
-          rel="nofollow noreferrer"
-          target="_blank"
-          title="点击跳转CSDN博客主页"
-        >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
-            title="点击跳转CSDN博客主页"
-            style="margin: 5px;width: 24px;height: 24px;">
-        </a>
-    </div>
-</div>
 
-> 这里是日常工作、学习、生活中总结的各类文章笔记，涉及开发技术、总结记录，偶尔也会感慨万千，水一些无关技术的文章；
-> 若发现博客外链不能访问则可能博客设置修改过，请直接访问博客；
-> 所有内容会选择性的发表于**微信公众号、个人博客、掘金、CSDN ，实际内容以本仓库排版、校对为主。**
-> 也会不定时同步到 **码云** 。
-> **以下内容没有链接的代表尚未完成，大家善用快捷键Ctrl+F**
->
+> 这里是工作、学习、生活中总结的各类笔记文章，涉及开发技术，也会感慨万千、水一些`思考`；若发现博客外链不能访问欢迎指正；
+> 所有内容会选择性的发表于**微信公众号、博客、掘金、CSDN、Github ，实际内容以本仓库排版、校对为主。** 代码会不定期同步到 **码云** 。
 
-## 在线浏览
+
+**没有效访问链接的代表尚未完成，大家善用快捷键`Ctrl+F`**
+
+
+
+### 在线浏览
 
 <https://142vip.cn/JavaScriptCollection>
 
@@ -88,18 +29,14 @@
 - Vercel： <https://js-collection.vercel.app>
 
 
-## 思维导图
+### 思维导图
 
 > 内容同步与文档，可以结合思维导图对文档进行有效学习.相关目录的xmind文件为思维导图原文件
 
 
----
 
-## 日常推荐
+### 日常推荐
 
-- [云服务器推荐](docs/recommend/云服务器推荐.md)
-- [学习网站、使用工具](docs/recommend/学习网站、效率工具.md)
-- [值得细读的技术文章推荐](docs/recommend/值得细读的技术文章推荐.md)
 
 ## 文章笔记
 
@@ -653,7 +590,6 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 
 #### [你好孤独 - 陈果](docs/article-records/读书笔记/好的孤独-陈果/Readme.md)
 
----
 
 ## 字节工作内推
 
