@@ -20,11 +20,12 @@
 
 ### 在线浏览
 
-<https://142vip.cn/JavaScriptCollection>
+- 尝鲜版：<https://142vip.github.io/JavaScriptCollection>
+- 稳定版：<https://142vip.cn/JavaScriptCollection>
+
 
 网站无法访问时，建议通过科学上网访问备用网络
 
-- Github： <https://142vip.github.io/JavaScriptCollection>
 - Netlify： <https://js-collection.netlify.app>
 - Vercel： <https://js-collection.vercel.app>
 

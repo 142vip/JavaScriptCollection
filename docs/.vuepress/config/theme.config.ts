@@ -2,6 +2,7 @@ import navbar from "./navbar";
 import sidebar from "./sidebar";
 import {FOOTER_HTML_INFO} from "./constant.config";
 import {hopeTheme} from "vuepress-theme-hope";
+import {langConfig} from "./lang.config";
 
 /**
  * 主题相关配置
@@ -9,6 +10,7 @@ import {hopeTheme} from "vuepress-theme-hope";
  */
 export default {
     theme: hopeTheme({
+        locales: langConfig,
         navbarIcon: false,
         darkmode: "toggle",
         // 支持全屏
@@ -17,7 +19,7 @@ export default {
         // pure: true,
         hostname: 'https://408.142vip.cn',
         author: {
-            name: 'Chu·Fan',
+            name: '储凡',
             email: 'fairy_408@2925.com',
             url: 'https://www.142vip.cn'
         },
@@ -31,13 +33,15 @@ export default {
             end: ["Language", "Search", "Repo", "Outlook",]
         },
         sidebar: sidebar,
-        // sidebar: "heading",
 
         pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
         // 主题布局选项
-        docsRepo: "https://github.com/142vip/JavaScriptCollection.git",
-        repo: "https://github.com/142vip/JavaScriptCollection",
+        docsRepo: "https://github.com/142vip/JavaScriptCollection",
+        docsDir: "docs",
+        docsBranch: "master",
+        repo: "https://github.com/142vip/JavaScriptCollection.git",
         // logoDark: "/assets/408_logo.png",
+        // logo: "/assets/408_logo.png",
 
         // 博客配置
         blog: {

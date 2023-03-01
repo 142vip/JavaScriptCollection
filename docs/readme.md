@@ -108,16 +108,16 @@ yarn run dev
 查看项目启动日志并访问：[http://127.0.0.1:5000](http://localhost:5000)，开启学习之旅吧~
 
 
-## 在线浏览
+### 在线浏览
 
-<https://142vip.cn/JavaScriptCollection>
+- 尝鲜版：<https://142vip.github.io/JavaScriptCollection>
+- 稳定版：<https://142vip.cn/JavaScriptCollection>
 
-网站无法访问时，建议通过科学`上网访问`备用网络
 
-- Github： <https://142vip.github.io/JavaScriptCollection>
+网站无法访问时，建议通过科学上网访问备用网络
+
 - Netlify： <https://js-collection.netlify.app>
 - Vercel： <https://js-collection.vercel.app>
-
 
 ## 提交记录
 
