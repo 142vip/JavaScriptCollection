@@ -7,6 +7,8 @@ import {esStandardSidebar} from "../../manuscript/read-books/cs-books/es-standar
 import {OtherSidebar} from "../../manuscript/other/other.sidebar";
 import {jobChanceSidebar} from "../../manuscript/job-chance/job-chance.sidebar";
 import {readBooksSidebar} from "../../manuscript/read-books/read-books.sidebar";
+import {microserviceSidebar} from "../../manuscript/microservice/microservice.sidebar";
+import {battleInterviewSidebar} from "../../manuscript/battle-interview/battle-interview.sidebar";
 
 export default {
     "/manuscript/front-end": frontEndSidebar,
@@ -18,4 +20,6 @@ export default {
     "/manuscript/read-books/cs-books/es-standard": esStandardSidebar,
     "/manuscript/other": OtherSidebar,
     "/manuscript/job-chance": jobChanceSidebar,
+    "/manuscript/microservice": microserviceSidebar,
+    "/manuscript/battle-interview": battleInterviewSidebar,
 }
