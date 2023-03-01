@@ -17,7 +17,7 @@
 ### 栈队列堆
 
 - [ ] [【简单】两个栈实现队列](./栈队列堆/JSStackToQueue.js)
-- [ ] [【中等】最小的k个数](./栈队列堆/GetLeastNumbers_Solution.js)
+- [ ] [【中等】最小的k个数](./栈队列堆/getLeastNumbersSolution.js)
 - [ ] [【中等】数据流中的中位数](./栈队列堆/InsertAndGetMedian.js)
 - [ ] [【中等】字符流中的第一个不重复的字符](./栈队列堆/FirstAppearingOnce.js)
 - [ ] [【较难】滑动窗口的最大值](./栈队列堆/maxInWindows.js)
