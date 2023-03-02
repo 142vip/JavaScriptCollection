@@ -52,10 +52,10 @@ jobs:
 
         # 列出所有镜像
       - name: Docker Images And Container List
-        run:
-          docker images
-          echo "-----------正在运行的服务--------"
-          docker ps
+        run: |
+          docker images;
+          echo "-----------正在运行的服务--------";
+          docker ps;
 
       - name: 读取当前版本号
         id: version
