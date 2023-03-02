@@ -49,7 +49,7 @@ jobs:
   Build_Service:
     needs: ENV_Init
     name: "构建服务"
-    runs-on: ubuntu-latest
+    runs-on: ENV_Init
     permissions:
       contents: read
       packages: write
@@ -73,7 +73,7 @@ jobs:
   Deploy_ESC:
     needs: [ ENV_Init , Build_Service ]
     name: "ESC服务更新"
-    runs-on: ubuntu-latest
+    runs-on: Build_Service
     permissions:
       contents: read
       packages: write
