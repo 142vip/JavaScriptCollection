@@ -40,7 +40,7 @@ jobs:
           cache: pnpm
 
       - name: Login Docker
-        run:
+        run: |
           docker version;
           # 登录阿里云镜像仓库
           docker login --username=${{ env.UserName }} --password=${{ secrets.Docker_Password }} ${{env.REGISTRY}}
@@ -64,7 +64,7 @@ jobs:
     steps:
       ## 构建镜像并推送
       - name: Build And Push Docker image
-        run:
+        run: |
           PROXY_DOMAIN=true pnpm image
 
         # 列出所有镜像
@@ -99,7 +99,7 @@ jobs:
           port: ${{ secrets.Server_Port }}
           username: ${{ secrets.Server_UserName }}
           password: ${{ secrets.Server_Password }}
-          script:
+          script: |
             docker images;
             echo "-----------正在运行的服务--------";
             docker ps;
