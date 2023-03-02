@@ -21,7 +21,7 @@ jobs:
   Docker-Image:
     name: "构建Docker镜像"
     runs-on: ubuntu-latest
-    if: github.repository == "142vip/JavaScriptCollection"
+    if: github.repository == '142vip/JavaScriptCollection'
     permissions:
       contents: read
       packages: write
