@@ -1,0 +1,107 @@
+# 部署到服务器
+name: Deploy-ESC
+
+on:
+  push: # 推送的时候触发
+    branches: [ "master" ] # 推送的分支
+    # Publish semver tags as releases.
+    tags: [ 'v*.*.*' ]
+  # 手动触发部署
+  workflow_dispatch:
+  pull_request:
+    branches: [ "next" ]
+
+env:
+  # 仓库地址
+  REGISTRY: registry.cn-hangzhou.aliyuncs.com
+  UserName: mmdapl
+
+
+jobs:
+  ENV_Init:
+    name: "环境初始化"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      # This is used to complete the identity challenge
+      # with sigstore/fulcio when running outside of PRs.
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node And PNPM
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.20.1
+          # 缓存 pnpm 依赖
+          cache: pnpm
+
+      - name: Login Docker
+        run:
+          docker version;
+          # 登录阿里云镜像仓库
+          docker login --username=${{ env.UserName }} --password=${{ secrets.Docker_Password }} ${{env.REGISTRY}}
+
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          # 使用 pnpm 安装依赖
+          run_install: true
+
+  Build_Service:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      # This is used to complete the identity challenge
+      # with sigstore/fulcio when running outside of PRs.
+      id-token: write
+
+    steps:
+      ## 构建镜像并推送
+      - name: Build And Push Docker image
+        run:
+          PROXY_DOMAIN=true pnpm image
+
+        # 列出所有镜像
+      - name: Docker Images And Container List
+        run:
+          docker images
+          echo "-----------正在运行的服务--------"
+          docker ps
+
+  Deploy_ESC:
+    name: "ESC服务更新"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      # This is used to complete the identity challenge
+      # with sigstore/fulcio when running outside of PRs.
+      id-token: write
+
+    steps:
+      - name: 读取当前版本号
+        id: version
+        uses: ashley-taylor/read-json-property-action@v1.0
+        with:
+          path: ./package.json
+          property: version
+        # 拉取镜像，更新服务
+      - name: Pull Image And Update ESC
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.Server_Host }}
+          port: ${{ secrets.Server_Port }}
+          username: ${{ secrets.Server_UserName }}
+          password: ${{ secrets.Server_Password }}
+          script:
+            docker images;
+            echo "-----------正在运行的服务--------";
+            docker ps;
+            cd /service && git reset --hard && git pull origin master;
+            bash ./scripts/book_doc.deploy.sh jsc v${{steps.version.outputs.value}} ;
