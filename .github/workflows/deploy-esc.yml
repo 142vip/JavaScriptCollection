@@ -3,9 +3,9 @@ name: Deploy-ESC
 
 on:
   push: # 推送的时候触发
-  #   branches: [ "master" ] # 推送的分支
+#    branches: [ "master" ] # 推送的分支
     # Publish semver tags as releases.
-  #  tags: [ 'v*.*.*' ]
+#    tags: [ 'v*.*.*' ]
   # 手动触发部署
   workflow_dispatch:
   pull_request:
@@ -32,16 +32,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Node And PNPM
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14.20.1
-          # 缓存 pnpm 依赖
-          cache: pnpm
-          
       - name: Login Docker
-        run: |
-          docker version
+        run:
+          docker version;
           # 登录阿里云镜像仓库
           docker login --username=${{ env.UserName }} --password=${{ secrets.Docker_Password }} ${{env.REGISTRY}}
 
@@ -49,6 +42,7 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: 7
+          node-version: 14.20.1
           # 使用 pnpm 安装依赖
           run_install: true
 
@@ -64,7 +58,7 @@ jobs:
     steps:
       ## 构建镜像并推送
       - name: Build And Push Docker image
-        run: |
+        run:
           PROXY_DOMAIN=true pnpm image
 
         # 列出所有镜像
@@ -99,7 +93,7 @@ jobs:
           port: ${{ secrets.Server_Port }}
           username: ${{ secrets.Server_UserName }}
           password: ${{ secrets.Server_Password }}
-          script: |
+          script:
             docker images;
             echo "-----------正在运行的服务--------";
             docker ps;
