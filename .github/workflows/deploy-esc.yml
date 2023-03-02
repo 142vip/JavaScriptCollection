@@ -51,4 +51,4 @@ jobs:
             echo "-----------正在运行的服务--------" &&
             docker ps &&
             cd /service && git reset --hard && git pull origin master && 
-            bash ./scripts/book_doc.deploy.sh jsc ${{steps.version.outputs.value}} &&
+            bash ./scripts/book_doc.deploy.sh jsc ${{steps.version.outputs.value}} 
