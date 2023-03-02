@@ -3,7 +3,7 @@ name: docs-page-deploy
 on:
   # 每当 push 到 next 分支时触发部署
   push:
-    branches: [next]
+    branches: ["next"]
   # 手动触发部署
   workflow_dispatch:
 
