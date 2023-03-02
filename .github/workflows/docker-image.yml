@@ -1,0 +1,51 @@
+# 构建Docker镜像
+name: Docker-Image
+
+on:
+  push: # 推送的时候触发
+  #    branches: [ "master" ] # 推送的分支
+  # Publish semver tags as releases.
+  #    tags: [ 'v*.*.*' ]
+  # 手动触发部署
+  workflow_dispatch:
+#  pull_request:
+#    branches: [ "next" ]
+
+env:
+  # 仓库地址
+  REGISTRY: registry.cn-hangzhou.aliyuncs.com
+  UserName: mmdapl
+
+
+jobs:
+  Docker-Image:
+    name: "构建Docker镜像"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      # This is used to complete the identity challenge
+      # with sigstore/fulcio when running outside of PRs.
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Login Docker
+        run: |
+          docker version;
+          # 登录阿里云镜像仓库
+          docker login --username=${{ env.UserName }} --password=${{ secrets.Docker_Password }} ${{env.REGISTRY}}
+
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          node-version: 14.20.1
+          # 使用 pnpm 安装依赖
+          run_install: true
+
+      - name: Build And Push Docker image
+        run:
+          PROXY_DOMAIN=true pnpm faster-image
