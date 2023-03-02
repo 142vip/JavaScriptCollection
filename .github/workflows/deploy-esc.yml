@@ -21,7 +21,7 @@ jobs:
   Deploy-ESC:
     name: "部署到ESC"
     runs-on: ubuntu-latest
-    if: github.repository == "142vip/JavaScriptCollection"
+    if: github.repository == '142vip/JavaScriptCollection'
     permissions:
       contents: read
       packages: write
