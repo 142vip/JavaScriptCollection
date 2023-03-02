@@ -72,8 +72,8 @@ jobs:
           username: ${{ secrets.Server_UserName }}
           password: ${{ secrets.Server_Password }}
           script: |
-            docker images;
-            echo "-----------正在运行的服务--------";
-            docker ps;
-            cd /service && git reset --hard && git pull origin master;
-            bash ./scripts/book_doc.deploy.sh jsc v${{steps.version.outputs.value}} ;
+            docker images &&
+            echo "-----------正在运行的服务--------" &&
+            docker ps &&
+            cd /service && git reset --hard && git pull origin master && 
+            bash ./scripts/book_doc.deploy.sh jsc v${{steps.version.outputs.value}} &&
