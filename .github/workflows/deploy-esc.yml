@@ -31,13 +31,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        
-        # 列出所有镜像
-      - name: Docker Images And Container List
-        run: |
-          docker images &&
-          echo "-----------正在运行的服务--------" &&
-          docker ps 
 
       - name: 读取当前版本号
         id: version
@@ -47,7 +40,7 @@ jobs:
           property: version
         # 拉取镜像，更新服务
       - name: Pull Image And Update ESC
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.8
         with:
           host: ${{ secrets.Server_Host }}
           port: ${{ secrets.Server_Port }}
