@@ -9,16 +9,19 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 // 用于区分base路径，是否nginx代理
 const PROXY_DOMAIN = process.env.PROXY_DOMAIN || false
 
-
 export default defineUserConfig({
     title: "凡是过往、皆为序章",
     description: "一本有趣的JavaScript合集",
     base: PROXY_DOMAIN ? "/JavaScriptCollection/" : "/",
     port: 5000,
     head: [
-        ["link", {rel: "icon", href: "/fight_favicon.ico"}],
+        [
+            "link", {rel: "icon", href: "/fight_favicon.ico"}
+        ],
         // vercel统计 相关配置
-        ['script', {type: 'text/javascript', src: '/_vercel/insights/script.js'}]
+        [
+            'script', {type: 'text/javascript', src: '/_vercel/insights/script.js'}
+        ]
     ],
     markdown: {
         // todo 引入代码文件时的路径替换

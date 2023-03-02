@@ -8,7 +8,6 @@
   "scripts": {
     "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lintfix\" && chmod +x .husky/pre-commit",
     "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' + && rm -rf docs/.vuepress/dist",
-    "commit": "git cz",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "build-proxy": "PROXY_DOMAIN=true vuepress build docs",
