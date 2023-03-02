@@ -46,19 +46,6 @@ jobs:
           # 使用 pnpm 安装依赖
           run_install: true
 
-  Build_Service:
-    needs: ENV_Init
-    name: "构建服务"
-    runs-on: ENV_Init
-    permissions:
-      contents: read
-      packages: write
-      # This is used to complete the identity challenge
-      # with sigstore/fulcio when running outside of PRs.
-      id-token: write
-
-    steps:
-      ## 构建镜像并推送
       - name: Build And Push Docker image
         run:
           PROXY_DOMAIN=true pnpm image
@@ -70,18 +57,6 @@ jobs:
           echo "-----------正在运行的服务--------"
           docker ps
 
-  Deploy_ESC:
-    needs: [ ENV_Init , Build_Service ]
-    name: "ESC服务更新"
-    runs-on: Build_Service
-    permissions:
-      contents: read
-      packages: write
-      # This is used to complete the identity challenge
-      # with sigstore/fulcio when running outside of PRs.
-      id-token: write
-
-    steps:
       - name: 读取当前版本号
         id: version
         uses: ashley-taylor/read-json-property-action@v1.0
@@ -96,7 +71,7 @@ jobs:
           port: ${{ secrets.Server_Port }}
           username: ${{ secrets.Server_UserName }}
           password: ${{ secrets.Server_Password }}
-          script:
+          script: |
             docker images;
             echo "-----------正在运行的服务--------";
             docker ps;
