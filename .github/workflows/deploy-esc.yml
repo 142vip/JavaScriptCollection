@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Login Docker
-        run:
+        run: |
           docker version;
           # 登录阿里云镜像仓库
           docker login --username=${{ env.UserName }} --password=${{ secrets.Docker_Password }} ${{env.REGISTRY}}
