@@ -40,7 +40,7 @@ jobs:
           property: version
         # 拉取镜像，更新服务
       - name: Pull Image And Update ESC
-        uses: appleboy/ssh-action@v0.1.8
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.Server_Host }}
           port: ${{ secrets.Server_Port }}
@@ -51,4 +51,4 @@ jobs:
             echo "-----------正在运行的服务--------" &&
             docker ps &&
             cd /service && git reset --hard && git pull origin master && 
-            bash ./scripts/book_doc.deploy.sh jsc v${{steps.version.outputs.value}} &&
+            bash ./scripts/book_doc.deploy.sh jsc ${{steps.version.outputs.value}} &&
