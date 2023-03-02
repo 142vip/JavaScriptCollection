@@ -1,5 +1,5 @@
-# 部署到服务器
-name: Deploy-ESC
+# 构建Docker镜像
+name: Docker-Image
 
 on:
   push: # 推送的时候触发
