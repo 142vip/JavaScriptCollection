@@ -33,7 +33,6 @@ features:
 
 
 
----
 
 <BiliBili bvid="BV1rd4y1V7tB"  />
 
@@ -158,9 +157,11 @@ yarn run dev
         <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
             <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
                 width="250px"
+                style="margin: 10px"
                 title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
             <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
                 width="250px"
+style="margin: 10px"
                 title="欢迎添加微信：chufan443 " alt="联系作者"/>
         </table>
     </div>
