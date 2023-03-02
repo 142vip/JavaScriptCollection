@@ -18,8 +18,8 @@ env:
 
 
 jobs:
-  Docker-Image:
-    name: "构建Docker镜像"
+  Deploy-ESC:
+    name: "部署到ESC"
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -29,23 +29,30 @@ jobs:
       id-token: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Login Docker
+        # 列出所有镜像
+      - name: Docker Images And Container List
         run: |
-          docker version;
-          # 登录阿里云镜像仓库
-          docker login --username=${{ env.UserName }} --password=${{ secrets.Docker_Password }} ${{env.REGISTRY}}
+          docker images;
+          echo "-----------正在运行的服务--------";
+          docker ps;
 
-      - name: PNPM Install
-        uses: pnpm/action-setup@v2
+      - name: 读取当前版本号
+        id: version
+        uses: ashley-taylor/read-json-property-action@v1.0
         with:
-          version: 7
-          node-version: 14.20.1
-          # 使用 pnpm 安装依赖
-          run_install: true
-
-      - name: Build And Push Docker image
-        run:
-          PROXY_DOMAIN=true pnpm faster-image
+          path: ./package.json
+          property: version
+        # 拉取镜像，更新服务
+      - name: Pull Image And Update ESC
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.Server_Host }}
+          port: ${{ secrets.Server_Port }}
+          username: ${{ secrets.Server_UserName }}
+          password: ${{ secrets.Server_Password }}
+          script: |
+            docker images &&
+            echo "-----------正在运行的服务--------" &&
+            docker ps &&
+            cd /service && git reset --hard && git pull origin master && 
+            bash ./scripts/book_doc.deploy.sh jsc v${{steps.version.outputs.value}} &&
