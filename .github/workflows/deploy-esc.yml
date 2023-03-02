@@ -47,6 +47,8 @@ jobs:
           run_install: true
 
   Build_Service:
+    needs: ENV_Init
+    name: "构建服务"
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -69,6 +71,7 @@ jobs:
           docker ps
 
   Deploy_ESC:
+    needs: [ ENV_Init , Build_Service ]
     name: "ESC服务更新"
     runs-on: ubuntu-latest
     permissions:
