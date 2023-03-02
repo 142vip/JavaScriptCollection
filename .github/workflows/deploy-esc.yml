@@ -50,5 +50,5 @@ jobs:
             docker images &&
             echo "-----------正在运行的服务--------" &&
             docker ps &&
-            cd //service_env/ && git reset --hard && git pull origin master && 
+            cd //service_env/ && git reset --hard && git pull origin main && 
             bash ./scripts/book_doc.deploy.sh jsc ${{steps.version.outputs.value}} 
