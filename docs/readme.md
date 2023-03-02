@@ -33,7 +33,6 @@ features:
 
 
 
----
 
 <BiliBili bvid="BV1rd4y1V7tB"  />
 
@@ -108,16 +107,16 @@ yarn run dev
 查看项目启动日志并访问：[http://127.0.0.1:5000](http://localhost:5000)，开启学习之旅吧~
 
 
-## 在线浏览
+### 在线浏览
 
-<https://142vip.cn/JavaScriptCollection>
+- 尝鲜版：<https://142vip.github.io/JavaScriptCollection>
+- 稳定版：<https://142vip.cn/JavaScriptCollection>
 
-网站无法访问时，建议通过科学`上网访问`备用网络
 
-- Github： <https://142vip.github.io/JavaScriptCollection>
+网站无法访问时，建议通过科学上网访问备用网络
+
 - Netlify： <https://js-collection.netlify.app>
 - Vercel： <https://js-collection.vercel.app>
-
 
 ## 提交记录
 
@@ -158,9 +157,11 @@ yarn run dev
         <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
             <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
                 width="250px"
+                style="margin: 10px"
                 title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
             <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
                 width="250px"
+style="margin: 10px"
                 title="欢迎添加微信：chufan443 " alt="联系作者"/>
         </table>
     </div>

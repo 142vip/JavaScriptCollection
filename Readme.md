@@ -20,25 +20,25 @@
 
 ### 在线浏览
 
-<https://142vip.cn/JavaScriptCollection>
+- 尝鲜版：<https://142vip.github.io/JavaScriptCollection>
+- 稳定版：<https://142vip.cn/JavaScriptCollection>
+
 
 网站无法访问时，建议通过科学上网访问备用网络
 
-- Github： <https://142vip.github.io/JavaScriptCollection>
 - Netlify： <https://js-collection.netlify.app>
 - Vercel： <https://js-collection.vercel.app>
 
 
-### 思维导图
+### 学习路线
 
-> 内容同步与文档，可以结合思维导图对文档进行有效学习.相关目录的xmind文件为思维导图原文件
 
 
 
 ### 日常推荐
 
 
-## 文章笔记
+###  文章笔记
 
 **注：无高亮有效访问链接的待完成/同步**
 
@@ -786,9 +786,11 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
         <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
             <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
                 width="250px"
+                style="margin: 10px"
                 title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
             <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
                 width="250px"
+                style="margin: 10px"
                 title="欢迎添加微信：chufan443 " alt="联系作者"/>
         </table>
     </div>

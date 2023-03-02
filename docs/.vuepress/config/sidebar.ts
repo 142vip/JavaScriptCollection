@@ -1,55 +1,25 @@
-import {readBooksSidebar} from "../../read-books/read-books.sidebar";
-import {soloAlgorithmSidebar} from "../../solo-algorithm/solo-algorithm.sidebar";
-import {serverEndSidebar} from "../../server-end/server-end.sidebar";
-import {developSkillSidebar} from "../../develop-skill/develop-skill.sidebar";
-import {frontEndSidebar} from "../../front-end/front-end.sidebar";
-import {OtherSidebar} from "../../other/other.sidebar";
-import {jobChanceSidebar} from "../../job-chance/job-chance.sidebar";
-import {eggSidebar} from "../../server-end/framework/egg/egg.sidebar";
-import {esStandardSidebar} from "../../read-books/cs-books/es-standard/es-standard-sidebar";
+import {frontEndSidebar} from "../../manuscript/front-end/front-end.sidebar";
+import {serverEndSidebar} from "../../manuscript/server-end/server-end.sidebar";
+import {eggSidebar} from "../../manuscript/server-end/framework/egg/egg.sidebar";
+import {developSkillSidebar} from "../../manuscript/develop-skill/develop-skill.sidebar";
+import {soloAlgorithmSidebar} from "../../manuscript/solo-algorithm/solo-algorithm.sidebar";
+import {esStandardSidebar} from "../../manuscript/read-books/cs-books/es-standard/es-standard-sidebar";
+import {OtherSidebar} from "../../manuscript/other/other.sidebar";
+import {jobChanceSidebar} from "../../manuscript/job-chance/job-chance.sidebar";
+import {readBooksSidebar} from "../../manuscript/read-books/read-books.sidebar";
+import {microserviceSidebar} from "../../manuscript/microservice/microservice.sidebar";
+import {battleInterviewSidebar} from "../../manuscript/battle-interview/battle-interview.sidebar";
 
 export default {
-    "/front-end": frontEndSidebar,
-    "/server-end": serverEndSidebar,
-    "/server-end/framework/egg": eggSidebar,
-    "/develop-skill": developSkillSidebar,
-    "/solo-algorithm": soloAlgorithmSidebar,
-    "/read-books": readBooksSidebar,
-    "/read-books/cs-books/es-standard": esStandardSidebar,
-    "/other": OtherSidebar,
-    "/job-chance": jobChanceSidebar,
-    // "/": [
-    //     {
-    //         text: "首页", link: "/",
-    //     },
-    //     frontEnd,
-    //     serverEnd,
-    //     microservice,
-    //     devTool,
-    //     soloAlgorithm,
-    //     battleInterview,
-    //     readBooks,
-    //     {
-    //         text: "其他",
-    //         prefix: '/other',
-    //         collapsible: true,
-    //         children: [
-    //             {
-    //                 text: "Todo计划",
-    //                 link: "/sum-links",
-    //             },
-    //             {
-    //                 text: "常用网站",
-    //                 link: "/sum-links",
-    //             },
-    //             {
-    //                 text: "技术文档",
-    //                 link: '/test'
-    //             },
-    //             {
-    //                 text: "变更记录",
-    //                 link: "/sum-links",
-    //             },
-    //         ],
-    //     }]
+    "/manuscript/front-end": frontEndSidebar,
+    "/manuscript/server-end": serverEndSidebar,
+    "/manuscript/server-end/framework/egg": eggSidebar,
+    "/manuscript/develop-skill": developSkillSidebar,
+    "/manuscript/solo-algorithm": soloAlgorithmSidebar,
+    "/manuscript/read-books": readBooksSidebar,
+    "/manuscript/read-books/cs-books/es-standard": esStandardSidebar,
+    "/manuscript/other": OtherSidebar,
+    "/manuscript/job-chance": jobChanceSidebar,
+    "/manuscript/microservice": microserviceSidebar,
+    "/manuscript/battle-interview": battleInterviewSidebar,
 }
