@@ -3,7 +3,7 @@ name: Deploy-ESC
 
 on:
   push: # 推送的时候触发
-  #    branches: [ "master" ] # 推送的分支
+      branches: [ "master" ] # 推送的分支
   # Publish semver tags as releases.
   #    tags: [ 'v*.*.*' ]
   # 手动触发部署
@@ -21,6 +21,7 @@ jobs:
   Deploy-ESC:
     name: "部署到ESC"
     runs-on: ubuntu-latest
+    if: github.repository == "142vip/JavaScriptCollection"
     permissions:
       contents: read
       packages: write
