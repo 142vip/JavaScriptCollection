@@ -14,7 +14,6 @@ on:
 jobs:
   Code-CI:
     runs-on: ubuntu-latest
-#    if: github.repository == '142vip/JavaScriptCollection'
     permissions:
       actions: read
       pull-requests: read
@@ -29,7 +28,6 @@ jobs:
           version: 7
           node-version: 14.20.1
           run_install: true
-          # 缓存 pnpm 依赖
           cache: pnpm
 
       - name: Code Eslint Fix
