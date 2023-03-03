@@ -3,6 +3,7 @@ name: gh-deploy
 on:
   push:
     branches:
+      - master
       - next
   workflow_dispatch:
 
