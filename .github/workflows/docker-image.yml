@@ -35,9 +35,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Login Docker
-      - run: docker version
-      - run: echo "-----------Docker Login-----------"
-      - run: docker login --username=${{ env.UserName }} --password=${{ secrets.Docker_Password }} ${{env.REGISTRY}}
+        run: |
+          docker version
+          echo "-----------Docker Login-----------"
+          docker login --username=${{ env.UserName }} --password=${{ secrets.Docker_Password }} ${{env.REGISTRY}}
 
       - name: PNPM Install
         uses: pnpm/action-setup@v2
@@ -48,4 +49,4 @@ jobs:
           # 缓存 pnpm 依赖
           cache: pnpm
       - name: Build And Push Docker image
-      - run: PROXY_DOMAIN=true pnpm faster-image
+        run: PROXY_DOMAIN=true pnpm faster-image
