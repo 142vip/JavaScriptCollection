@@ -38,7 +38,7 @@ jobs:
         run: |
           docker version
           echo "-----------Docker Login-----------"
-          docker login --username=${{ env.UserName }} --password=${{ secrets.Docker_Password }} ${{env.REGISTRY}}
+          docker login --username=${{ env.UserName }} --password=${{ secrets.DOCKER_PASSWORD }} ${{env.REGISTRY}}
 
       - name: PNPM Install
         uses: pnpm/action-setup@v2

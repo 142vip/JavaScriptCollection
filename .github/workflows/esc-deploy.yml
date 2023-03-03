@@ -36,10 +36,10 @@ jobs:
       - name: Pull Image And Update ESC
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.Server_Host }}
-          port: ${{ secrets.Server_Port }}
-          username: ${{ secrets.Server_UserName }}
-          password: ${{ secrets.Server_Password }}
+          host: ${{ secrets.SERVER_HOST }}
+          port: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             docker images 
             echo "-----------正在运行的服务--------" 
