@@ -11,7 +11,7 @@ jobs:
   deploy-github:
     name: "部署到Github"
     runs-on: ubuntu-latest
-
+    if: github.repository == '142vip/JavaScriptCollection'
     steps:
       - uses: actions/checkout@v3
         with:
