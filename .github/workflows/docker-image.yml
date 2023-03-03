@@ -3,18 +3,18 @@ name: Docker-Image
 
 ## 触发条件
 on:
-  push:
-      branches:
-        - master
-        - next
+#  push:
+#      branches:
+#        - master
+#        - next
    # Publish semver tags as releases.
 #      tags: [ 'v*.*.*' ]
   # 手动触发部署
   workflow_dispatch:
-  pull_request:
-    branches:
-      - master
-      - next
+#  pull_request:
+#    branches:
+#      - master
+#      - next
 
 ## 环境变量
 env:
