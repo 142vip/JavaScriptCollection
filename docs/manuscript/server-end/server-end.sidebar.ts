@@ -176,6 +176,10 @@ export const serverEndSidebar = [
     collapsible: true,
     children: [
       {
+        text: '配置gzip',
+        link: 'build-website/ssl-install.md'
+      },
+      {
         text: 'SSL证书配置',
         link: 'build-website/ssl-install.md'
       },

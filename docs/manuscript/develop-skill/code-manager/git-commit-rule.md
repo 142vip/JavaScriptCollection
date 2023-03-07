@@ -1,6 +1,6 @@
 
 
-## Git提交规范
+# Git提交规范
 
 
 - type: commit 的类型
@@ -20,7 +20,7 @@
 
 
 每次提交，Commit message 都包括三个部分：Header，Body 和 Footer。
-```typescript
+```text
 <type>(<scope>): <subject>
 // 空一行
 <body>

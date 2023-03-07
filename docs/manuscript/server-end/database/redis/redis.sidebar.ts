@@ -1,7 +1,7 @@
 export const redisSidebar = [
   {
-    text: '安装',
-    link: 'install-by-docker.md'
+    text: '基础安装',
+    link: 'base-install.md'
   },
   {
     text: 'key命名规范',
