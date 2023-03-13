@@ -171,3 +171,5 @@ const readFileAsync = Promise.promisify(fs.readFile)
 参考资料：
 
 - 地址：<http://bluebirdjs.com/docs/getting-started.html>
+
+

@@ -5,6 +5,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.54.1
   '@vuepress/client': 2.0.0-beta.61
   '@vuepress/utils': 2.0.0-beta.61
+  dayjs: ^1.11.7
   eslint: ^8.35.0
   eslint-config-standard: ^17.0.0
   eslint-plugin-import: ^2.27.5
@@ -23,6 +24,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.54.1_gv45cv5f5y7bgncpx37yd3rwim
   '@vuepress/client': 2.0.0-beta.61
   '@vuepress/utils': 2.0.0-beta.61
+  dayjs: 1.11.7
   eslint: 8.35.0
   eslint-config-standard: 17.0.0_hwjsujmtoc7k47rjh5qfu7woty
   eslint-plugin-import: 2.27.5_uyiasnnzcqrxqkfvjklwnmwcha

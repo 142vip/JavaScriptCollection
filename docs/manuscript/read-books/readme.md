@@ -4,9 +4,16 @@ title: 读书整理
 
 
 
-## 技术类
+### 技术类
 
-#### ES6标准入门
+
+|书名|在线阅读|进度|
+|:-:|:-:|:-:|
+| ![](https://es6.ruanyifeng.com/images/cover-3rd.jpg "ES6标准入门 " =100x150) | <https://es6.ruanyifeng.com/>  | [ x ]       |
+| ![](https://es6.ruanyifeng.com/images/cover-3rd.jpg "ES6标准入门 " =200x300) | <https://es6.ruanyifeng.com/>  | [ x ]       |
+
+
+
 
 
 
@@ -22,7 +29,7 @@ title: 读书整理
 
 ...
 
-## 非技术类
+### 非技术类
 
 
 
