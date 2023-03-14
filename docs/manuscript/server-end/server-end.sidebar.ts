@@ -128,11 +128,11 @@ export const serverEndSidebar = [
       },
       {
         text: 'PM2管理',
-        link: 'docker-cluster/docker.md'
+        link: 'docker-cluster/pm2.md'
       },
       {
         text: 'egg-cluster',
-        link: 'docker-cluster/docker.md'
+        link: 'docker-cluster/egg-cluster.md'
       },
       {
         text: 'Docker',
