@@ -4,11 +4,11 @@
 
 
 - [ ] [SHELL-1 统计文件的行数【简单】](shell-1.md) 
-- [ ] [SHELL-2 打印文件的最后5行【简单】](shell-1.md)
-- [ ] [SHELL-3 输出7的倍数【中等】](shell-1.md)
-- [ ] [SHELL-4 输出第5行的内容【中等】](shell-1.md)
-- [ ] [SHELL-5 打印空行的行号【中等】](shell-1.md)
-- [ ] [SHELL-6 去掉空行【中等】](shell-1.md)
+- [ ] [SHELL-2 打印文件的最后5行【简单】](shell-2.md)
+- [ ] [SHELL-3 输出7的倍数【中等】](shell-3.md)
+- [ ] [SHELL-4 输出第5行的内容【中等】](shell-4.md)
+- [ ] [SHELL-5 打印空行的行号【中等】](shell-5.md)
+- [ ] [SHELL-6 去掉空行【中等】](shell-6.md)
 - [ ] [SHELL-7 打印字母数小于8的单词 【较难】](shell-1.md)
 - [ ] [SHELL-8 统计所有进程占用内存大小的和 【较难】](shell-1.md)
 - [ ] [SHELL-9 统计每个单词出现的个数 【较难】](shell-1.md)
