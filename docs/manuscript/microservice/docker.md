@@ -1,38 +1,8 @@
 
 # Docker
 
-### docker-ce安装
 
-```bash
-# 卸载docker原有镜像
-yum remove docker docker-common docker-selinux docker-engine -y
-
-yum install -y yum-utils device-mapper-persistent-data lvm2
-
-yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-
-yum makecache fast
-
-yum install docker-ce -y
-
-```
-
-#### 后台自启动
-```bash
-$ systemctl enable docker 
-```
-#### 服务控制
-
-```bash
-#启动docker
-service docker start
-#停止docker
-service docker stop
-#重启docker
-service docker restart
-```
-
-### 基础命令
+### 常用命令
 
 基于linux系统使用
 
@@ -161,19 +131,19 @@ docker inspect 容器ID
 
 ```
 
-### 容器退出
+#### 容器两种退出方式
 
-#### exit命令
+##### exit命令
 
 run命令进入容器，通过exit命令退出后，容器停止运行
 
 
-#### ctrl+p+q 命令
+##### ctrl+p+q 命令
 
 run命令进入容器，通过`ctrl+p+q`退出，容器不停止
 
 
-### 容器进入
+#### 容器两种进入方法
 
 ```bash
 ## exec命令进入容器
@@ -193,7 +163,7 @@ attach命令和exec命令的执行区别：
 
 
 
-### 启动后台守护容器
+#### 启动后台守护容器
 
 > 在大部分场景下，希望docker的服务在后台运行的，可以通过`-d`指定容器的后台运行模式
 
@@ -207,25 +177,25 @@ docker run -it xxxx
 ```
 
 
-### 文件相关
+#### 文件相关
 
 > export和import命令可以参考：https://blog.csdn.net/clj198606061111/article/details/50450793
 
 
-### 拷贝cp命令
+#### 拷贝cp命令
 
 docker cp 容器ID : 容器中文件路径 当前主机待保存的路径
 
-### export命令
+#### 导出export命令
 
 docker export 容器ID > 文件名.tar
 
-### import命令
+#### 导入import命令
 
 cat 文件名.tar | docker import -镜像用户/镜像名：镜像版本号
 
 
-### 容器数据卷
+## docker容器数据卷
 
 注意开启文件权限，避免权限不够出现错误
 
@@ -235,6 +205,8 @@ cat 文件名.tar | docker import -镜像用户/镜像名：镜像版本号
 --privileged=true
 
 ```
+
+### 什么是数据卷
 
 卷就是目录或者文件，存在于一个或多个容器中，由于docker挂载到容器，但不属于`联合文件系统`，因此能够绕过Union File System提供一些用于持续存储或者共享数据的特性；
 
@@ -247,55 +219,19 @@ cat 文件名.tar | docker import -镜像用户/镜像名：镜像版本号
 - 数据卷中的更改不会包含在镜像的更新中
 - 数据卷的生命周期一直持续到没有容器使用它为止
 
-#### 文件映射
+### 文件映射
 
 > 方便进行文件映射，完成数据的持久化，保存重要数据
 
 命令格式： `-v  xxx容器文件路径:宿主机文件路径`
 
 
-#### 读写规则
+### 容器卷读写规则
 
 - ro: 只读
 - rw：可读可写
 
 命令格式： `-v  xxx容器文件路径:宿主机文件路径:读写规则`
-
-
-### 推送至阿里云
-#### 用户登录
-
-```bash
-## 注意密码
-docker login --username=mmdapl registry.cn-hangzhou.aliyuncs.com
-```
-#### 镜像拉取
-```bash
-$ sudo docker pull registry.cn-hangzhou.aliyuncs.com/142vip/docker-yapi:[镜像版本号]
-```
-*注意:不同的仓库需要匹配镜像的版本*
-
-#### 镜像推送
-
-```bash
-
-### 修改本地镜像tag标签
-docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/142vip/docker-yapi:[镜像版本号]
-docker tag a27c1a247a64 registry.cn-hangzhou.aliyuncs.com/142vip/oauth2:0.0.1.0
-### 修改后的镜像按照版本号推送到阿里云
-docker push registry.cn-hangzhou.aliyuncs.com/142vip/docker-yapi:[镜像版本号]
-
-```
-
-
-#### 退出登录
-
-```bash
-docker logout
-```
-
-
-
 
 
 
