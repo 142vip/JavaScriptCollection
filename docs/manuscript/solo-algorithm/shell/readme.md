@@ -1,9 +1,8 @@
 
-
 # SHELL篇刷题
 
 
-- [ ] [SHELL-1 统计文件的行数【简单】](shell-1.md) 
+- [x] [SHELL-1 统计文件的行数【简单】](shell-1.md) 
 - [ ] [SHELL-2 打印文件的最后5行【简单】](shell-2.md)
 - [ ] [SHELL-3 输出7的倍数【中等】](shell-3.md)
 - [ ] [SHELL-4 输出第5行的内容【中等】](shell-4.md)
