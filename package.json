@@ -6,7 +6,7 @@
   "version": "0.0.2",
   "description": "一本有趣的JavaScript合集",
   "scripts": {
-    "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lint\" && chmod +x .husky/pre-commit",
+    "prepare": "rm -rf .husky &&  husky install && npx husky add .husky/pre-commit \"npm run lintfix && git add .\" && chmod +x .husky/pre-commit",
     "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' + && rm -rf docs/.vuepress/dist",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
