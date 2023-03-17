@@ -4,7 +4,6 @@ export const serverEndSidebar = [
   {
     text: 'Node.js',
     collapsible: true,
-    link: 'node-learn/',
     children: [
       {
         text: '常用模块包',
@@ -19,8 +18,15 @@ export const serverEndSidebar = [
       {
         text: 'dayjs',
         link: 'node-learn/dayjs.md'
+      },
+      {
+        text: 'lodash',
+        link: 'node-learn/lodash.md'
+      },
+      {
+        text: 'axios',
+        link: 'node-learn/axios.md'
       }
-
     ]
   },
   {
