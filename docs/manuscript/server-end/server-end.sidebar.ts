@@ -19,8 +19,11 @@ export const serverEndSidebar = [
       {
         text: 'dayjs',
         link: 'node-learn/dayjs.md'
+      },
+      {
+        text: 'lodash',
+        link: 'node-learn/lodash.md'
       }
-
     ]
   },
   {
