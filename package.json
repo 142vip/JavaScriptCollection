@@ -6,7 +6,7 @@
   "version": "0.0.2",
   "description": "一本有趣的JavaScript合集",
   "scripts": {
-    "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lint\" && chmod +x .husky/pre-commit",
+    "prepare": "rm -rf .husky &&  husky install && npx husky add .husky/pre-commit \"npm run lintfix && git add .\" && chmod +x .husky/pre-commit",
     "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' + && rm -rf docs/.vuepress/dist",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
@@ -22,6 +22,7 @@
     "@typescript-eslint/parser": "^5.54.1",
     "@vuepress/client": "2.0.0-beta.61",
     "@vuepress/utils": "2.0.0-beta.61",
+    "dayjs": "^1.11.7",
     "eslint": "^8.35.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",

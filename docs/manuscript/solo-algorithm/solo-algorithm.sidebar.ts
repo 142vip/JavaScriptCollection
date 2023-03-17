@@ -1,15 +1,15 @@
 export const soloAlgorithmSidebar = [
   {
-    text: '前端',
-    link: '前端'
+    text: '面试必须刷101',
+    link: 'interview-101'
   },
   {
     text: '剑指Offer',
     link: 'sword-point'
   },
   {
-    text: '后端',
-    link: '后端'
+    text: 'Shell篇',
+    link: 'shell/'
   },
   {
     text: '在线刷题',

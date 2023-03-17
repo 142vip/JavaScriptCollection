@@ -7,7 +7,7 @@ export const readBooksSidebar = [
         link: 'cs-books/es-standard'
       },
       {
-        text: '更了不起的Node.js(狼书卷1) ',
+        text: '更了不起的Node.js ',
         collapsible: true,
         link: 'cs-books/狼书.md'
       },

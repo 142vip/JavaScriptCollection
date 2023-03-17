@@ -38,6 +38,7 @@ export const frontEndSidebar = [
   },
   {
     text: 'UI框架',
+    collapsible: true,
     children: [
       {
         text: 'Ant-Design-Vue',

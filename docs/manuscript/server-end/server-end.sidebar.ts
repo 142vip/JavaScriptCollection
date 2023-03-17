@@ -7,15 +7,20 @@ export const serverEndSidebar = [
     link: 'node-learn/',
     children: [
       {
-        text: 'Stream',
+        text: '常用模块包',
+        collapsible: true,
+        link: 'node-learn/npm-package'
+      },
+      {
+        text: 'stream',
         collapsible: true,
         link: 'node-learn/stream'
       },
       {
-        text: '常用模块包',
-        collapsible: true,
-        link: 'node-learn/npm-package'
+        text: 'dayjs',
+        link: 'node-learn/dayjs.md'
       }
+
     ]
   },
   {
@@ -158,12 +163,16 @@ export const serverEndSidebar = [
         link: 'linux/soft-install.md'
       },
       {
+        text: '包管理器',
+        link: 'linux/package.md'
+      },
+      {
         text: 'vim',
         link: 'linux/vim.md'
       },
       {
         text: 'curl',
-        link: 'linux/vim.md'
+        link: 'linux/curl.md'
       },
       {
         text: '基本指令',

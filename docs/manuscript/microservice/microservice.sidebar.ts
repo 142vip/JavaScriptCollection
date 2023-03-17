@@ -4,19 +4,19 @@ export const microserviceSidebar = [
     children: [
       {
         text: 'grpc',
-        link: '/manuscript/server-end/database/redis'
+        link: 'grpc.md'
       },
       {
         text: 'node-grpc',
-        link: '/manuscript/server-end/database/redis'
+        link: 'node-grpc.md'
       },
       {
         text: 'egg-grpc-client',
-        link: '/manuscript/server-end/database/mysql'
+        link: 'egg-grpc-client.md'
       },
       {
         text: 'egg-grpc-server',
-        link: '/manuscript/server-end/database/mongo'
+        link: 'egg-grpc-server.md'
       }
     ]
   },

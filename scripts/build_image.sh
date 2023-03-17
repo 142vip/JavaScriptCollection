@@ -4,7 +4,7 @@
 ## 参考：https://blog.csdn.net/Dontla/article/details/125210694
 ## 使用示例：bash xxx.sh 版本号 faster[可选]
 ##    -  bash build_image.sh  0.0.x faster
-## 作者：储凡
+## 作者：Chu Fan
 ##
 
 ## 日志颜色定义
