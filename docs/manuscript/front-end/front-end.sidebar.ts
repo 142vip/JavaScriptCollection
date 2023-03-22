@@ -38,6 +38,7 @@ export const frontEndSidebar = [
   },
   {
     text: 'UI框架',
+    collapsible: true,
     children: [
       {
         text: 'Ant-Design-Vue',
@@ -70,7 +71,7 @@ export const frontEndSidebar = [
     text: '服务部署',
     children: [
       {
-        text: 'Nginx托管',
+        text: '静态文件部署',
         link: 'server-deploy/static-nginx'
       },
       {

@@ -4,17 +4,28 @@ export const serverEndSidebar = [
   {
     text: 'Node.js',
     collapsible: true,
-    link: 'node-learn/',
     children: [
-      {
-        text: 'Stream',
-        collapsible: true,
-        link: 'node-learn/stream'
-      },
       {
         text: '常用模块包',
         collapsible: true,
         link: 'node-learn/npm-package'
+      },
+      {
+        text: 'stream',
+        collapsible: true,
+        link: 'node-learn/stream'
+      },
+      {
+        text: 'dayjs',
+        link: 'node-learn/dayjs.md'
+      },
+      {
+        text: 'lodash',
+        link: 'node-learn/lodash.md'
+      },
+      {
+        text: 'axios',
+        link: 'node-learn/axios.md'
       }
     ]
   },
@@ -128,11 +139,11 @@ export const serverEndSidebar = [
       },
       {
         text: 'PM2管理',
-        link: 'docker-cluster/docker.md'
+        link: 'docker-cluster/pm2.md'
       },
       {
         text: 'egg-cluster',
-        link: 'docker-cluster/docker.md'
+        link: 'docker-cluster/egg-cluster.md'
       },
       {
         text: 'Docker',
@@ -158,12 +169,16 @@ export const serverEndSidebar = [
         link: 'linux/soft-install.md'
       },
       {
+        text: '包管理器',
+        link: 'linux/package.md'
+      },
+      {
         text: 'vim',
         link: 'linux/vim.md'
       },
       {
         text: 'curl',
-        link: 'linux/vim.md'
+        link: 'linux/curl.md'
       },
       {
         text: '基本指令',
@@ -175,6 +190,10 @@ export const serverEndSidebar = [
     text: '建站技能',
     collapsible: true,
     children: [
+      {
+        text: '配置gzip',
+        link: 'build-website/ssl-install.md'
+      },
       {
         text: 'SSL证书配置',
         link: 'build-website/ssl-install.md'

@@ -77,6 +77,13 @@ export const developSkillSidebar = [
       {
         text: 'Github && GitLab',
         link: 'code-manager/github.md'
+      },
+      {
+        text: 'CI && CD',
+        children: [{
+          text: 'Jenkins',
+          link: 'code-manager/jenkins.md'
+        }]
       }
     ]
   },

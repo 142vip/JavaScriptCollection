@@ -2,7 +2,7 @@
 
 ## 功能：清除容器，删除旧镜像，创建新的容器
 ## 参考：https://blog.csdn.net/Dontla/article/details/125210694
-## 作者：储凡
+## 作者：Chu Fan
 ## 使用示例：bash xxx.sh 容器名称  镜像地址
 ##
 
