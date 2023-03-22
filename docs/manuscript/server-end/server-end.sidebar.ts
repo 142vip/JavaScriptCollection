@@ -24,6 +24,10 @@ export const serverEndSidebar = [
         link: 'node-learn/lodash.md'
       },
       {
+        text: 'rxjs',
+        link: 'node-learn/rxjs.md'
+      },
+      {
         text: 'axios',
         link: 'node-learn/axios.md'
       }
@@ -31,7 +35,7 @@ export const serverEndSidebar = [
   },
   {
     text: 'ES6',
-    collapsible: true,
+    // collapsible: true,
     link: 'es6'
   },
   {
@@ -170,7 +174,7 @@ export const serverEndSidebar = [
       },
       {
         text: '包管理器',
-        link: 'linux/package.md'
+        link: 'linux/package-manage.md'
       },
       {
         text: 'vim',
