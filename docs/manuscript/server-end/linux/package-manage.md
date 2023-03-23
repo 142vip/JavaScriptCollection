@@ -1,85 +1,6 @@
 
 # 包管理工具
 
-
-### yum
-
-使用yum安装和卸载软件，软件包都是rpm格式的
-
-#### 安装
-
-```bash
-## -y:不询问，默认安装
-yum  install XXX -y
-
-## 升级
-yum install/update xxx
-```
-
-#### 查询
-
-
-```bash
-## 使用YUM查找软件包
-yum search
-
-## 列出所有可安装的软件包
-yum list
-
-## 列出所有可更新的软件清单
-yum check-update
-
-## 列出所有已安装的软件包
-yumlist installed
-
-## 列出所有已安装但不在Yum Repository內的软件包
-yumlist extras
-
-## 获取所有软件包信息
-yum info
-
-## 列出软件包提供哪些文件
-yum provides~
-```
-
-#### 清除
-
-```bash
-## 卸载
-yum erase 安装包名称
-yum remove xxx
-
-## 清除缓存目录下的软件包
-yum clean packages
-
-## 清除缓存目录下的 headers
-yum clean headers
-
-## 清除缓存目录下旧的 headers
-yum clean oldheaders
-```
-
-
-#### 更换软件源
-
-```bash
-## 1. 安装wget
-yum -y install wget
-
-## 2.修改原yum源文件名称，备份
-mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
-
-## 3.下载阿里yum源或163都可以
-# 163的yum源
-wget http://mirrors.163.com/.help/CentOS7-Base-163.repo
-# 阿里yum源
-wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-
-## 4.清楚缓存
-yum makecache
-```
-
-
 ### apt-get
 
 apt-get 命令适用于 deb 包管理式的 Linux 操作系统（Debian、Ubuntu等），主要用于自动从互联网软件仓库中搜索、下载、安装、升级、卸载软件或操作系统
@@ -222,6 +143,86 @@ sudo apt-get update
 sudo apt-get upgrade
 
 ```
+
+
+### yum
+
+使用yum安装和卸载软件，软件包都是rpm格式的
+
+#### 安装
+
+```bash
+## -y:不询问，默认安装
+yum  install XXX -y
+
+## 升级
+yum install/update xxx
+```
+
+#### 查询
+
+
+```bash
+## 使用YUM查找软件包
+yum search
+
+## 列出所有可安装的软件包
+yum list
+
+## 列出所有可更新的软件清单
+yum check-update
+
+## 列出所有已安装的软件包
+yumlist installed
+
+## 列出所有已安装但不在Yum Repository內的软件包
+yumlist extras
+
+## 获取所有软件包信息
+yum info
+
+## 列出软件包提供哪些文件
+yum provides~
+```
+
+#### 清除
+
+```bash
+## 卸载
+yum erase 安装包名称
+yum remove xxx
+
+## 清除缓存目录下的软件包
+yum clean packages
+
+## 清除缓存目录下的 headers
+yum clean headers
+
+## 清除缓存目录下旧的 headers
+yum clean oldheaders
+```
+
+
+#### 更换软件源
+
+```bash
+## 1. 安装wget
+yum -y install wget
+
+## 2.修改原yum源文件名称，备份
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
+
+## 3.下载阿里yum源或163都可以
+# 163的yum源
+wget http://mirrors.163.com/.help/CentOS7-Base-163.repo
+# 阿里yum源
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+
+## 4.清楚缓存
+yum makecache
+```
+
+
 
 
 ### apk

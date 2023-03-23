@@ -10,9 +10,7 @@ function removeWithoutCopy(arr, item) {
   // return result;
 
   // 每次都和arr中的首个元素去比较
-
   const len = arr.length
-
   for (let index = 0; index < len; index++) {
     if (arr[0] !== item) {
       arr.push(arr[0])
@@ -21,7 +19,6 @@ function removeWithoutCopy(arr, item) {
     // 删除第一个
     arr.shift()
   }
-
   return arr
 }
 

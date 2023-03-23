@@ -1,4 +1,9 @@
-//
+/**
+ * @param str
+ * @param n
+ * @returns {*}
+ * @constructor
+ */
 function LeftRotateString(str, n) {
   if (!str) {
     return str
