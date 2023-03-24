@@ -130,7 +130,28 @@ export default {
                     "StackBlitz",
                     "VideoPlayer",
                     "YouTube",
+                    "Share",
+                    "XiGua"
                 ],
+                rootComponents: {
+                    // 公告
+                    notice: [
+                        {
+                            path: "/",
+                            title: "公告测试",
+                            content: "Notice Content",
+                            actions: [
+                                {
+                                    text: "跳转链接",
+                                    link: "https://theme-hope.vuejs.press/",
+                                    type: "primary",
+                                },
+                                {text: "默认按钮"},
+                            ],
+                            fullscreen: false,
+                        },
+                    ],
+                },
             },
         }
     })
