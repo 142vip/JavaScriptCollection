@@ -1,10 +1,7 @@
----
-title: 剑指Offer算法
-headerDepth: 3
----
 
+# 剑指Offer算法
 
-总结整理，剑指Offer上笔刷的算法习题
+> 总结整理，剑指Offer上笔刷的算法习题
 
 - [牛客网](https://www.nowcoder.com/exam/oj/ta?tpId=13)
 
@@ -31,7 +28,7 @@ headerDepth: 3
 
 ### 双指针
 
-- [ ] [【中等】和为S的两个数字](./双指针/FindNumbersWithSum.md)
+- [ ] [【中等】和为S的两个数字](./双指针/findNumbersWithSum.md)
 - [ ] [【中等】和为S的连续正数序列](./双指针/FindContinuousSequence.md)
 - [ ] [【中等】左旋转字符串](./双指针/LeftRotateString.md)
 - [ ] [【较难】翻转单词顺序列](./双指针/ReverseSentence.md)
@@ -82,7 +79,7 @@ headerDepth: 3
 ### 二分查找
 
 - [ ] [【简单】旋转数组的最小数字](./二分查找/minNumberInRotateArray.md)
-- [ ] [【中等】数字在排序数组中出现的次数](./二分查找/GetNumberOfK.md)
+- [ ] [【中等】数字在排序数组中出现的次数](./二分查找/getNumberOfK.md)
 
 
 ### 分治
@@ -105,13 +102,13 @@ headerDepth: 3
 
 ### 动态规划
 
-- [ ] [【入门】斐波拉契数列](./动态规划/Fibonacci.md)
-- [ ] [【简单】变态跳台阶 找规律 可跳任意阶](./动态规划/jumpFloorII.md)
+- [x] [【入门】斐波那契数列](./动态规划/fibonacci.md)
+- [x] [【简单】跳台阶 要么跳一阶，要么跳两阶](./动态规划/jumpFloor.md)
+- [x] [【中等】变态跳台阶 找规律 可跳任意阶](./动态规划/jumpFloorII.md)
 - [ ] [【简单】连续子数组的最大和 时间复杂度O(n)](./动态规划/FindGreatestSumOfSubArray.md)
 - [ ] [【简单】构建乘积数组](./动态规划/multiply.md)
 - [ ] [【中等】矩形覆盖](./动态规划/rectCover.md)
-- [ ] [【中等】跳台阶 非递归，要么跳一阶，要么跳两阶](./动态规划/jumpFloor.md)
-- [ ] [【较难】丑数](./动态规划/GetUglyNumber_Solution.md)
+- [ ] [【较难】丑数](./动态规划/getUglyNumber.md)
 
 
 
@@ -123,15 +120,12 @@ headerDepth: 3
 
 ### 位运算
 
-- [ ] [【中等】二进制中1的个数](./位运算/NumberOf1.md)
-- [ ] [【中等】数组中只出现一次的数字]()
+- [ ] [【中等】二进制中1的个数](./位运算/numberOf1.md)
+- [x] [【中等】数组中只出现一次的两个数字](./位运算/findNumsAppearOnce.md)
 
 ### 其他分类
 
 - [x] [【简单】不用加减乘除做加法](./其他相关/add.md)
-- [ ] [【中等】扑克牌顺子](./其他相关/IsContinuous.md)
-- [ ] [【较难】把字符串转换成整数](./其他相关/StrToInt.md)
+- [ ] [【中等】扑克牌顺子](./其他相关/isContinuous.md)
+- [ ] [【较难】把字符串转换成整数](./其他相关/strToInt.md)
   
-
-<StackBlitz id="vuepress-theme-hope" />
-
