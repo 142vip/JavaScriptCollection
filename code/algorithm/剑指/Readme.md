@@ -116,15 +116,15 @@
 
 - [ ] [【简单】数组中出现次数超过一半的数字](./数学/moreThanHalfNum.md)
 - [ ] [【中等】圆圈中最后剩下的数 约瑟夫问题](./数学/LastRemaining_Solution.md)
-- [ ] [【中等】从1到n整数中1出现的次数](./数学/NumberOf1Between1AndN_Solution.js)
+- [ ] [【中等】从1到n整数中1出现的次数](./数学/numberOf1Between1AndN.js)
 
 #### 位运算
 
-- [ ] [【中等】二进制中1的个数](./位运算/NumberOf1.js)
+- [ ] [【中等】二进制中1的个数](./位运算/numberOf1.js)
 - [ ] [【中等】数组中只出现一次的数字]()
 
 #### 其他分类
 
 - [ ] [【简单】不用加减乘除做加法](./其他相关/add.js)
-- [ ] [【中等】扑克牌顺子](./其他相关/IsContinuous.js)
-- [ ] [【较难】把字符串转换成整数](./其他相关/StrToInt.js)
+- [ ] [【中等】扑克牌顺子](./其他相关/isContinuous.js)
+- [ ] [【较难】把字符串转换成整数](./其他相关/strToInt.js)

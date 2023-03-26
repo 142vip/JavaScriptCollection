@@ -41,7 +41,7 @@
 - [ ] [【简单】两个链表的第一个公共结点](链表/findFirstCommonNode.md)
 - [ ] [【中等】链表中倒数第K个结点](链表/findKthToTail.md)
 - [ ] [【中等】反转链表](链表/reverseList.md)
-- [ ] [【较难】从尾到头打印链表](链表/printListFromTailToHead.md)
+- [x] [【简单】从尾到头打印链表](链表/printListFromTailToHead.md)
 - ~~在O(1)时间内删除链表节点~~
 - [ ] [【较难】删除链表中重复的结点](链表/deleteDuplication.md)
 - [ ] 链表中环的入口结点[暂时没思路]

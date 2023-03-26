@@ -1,64 +1,38 @@
-/*
- * @Description: 【较难】从尾到头打印链表
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-05-01 20:49:28
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-05-01 21:24:40
- */
+# 从尾到头打印链表
 
-function ListNode(x) {
-  this.val = x
-  this.next = null
+### 题目链接
+
+- [牛客网](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)
+- [欢迎讨论]()
+
+### 题目描述
+
+输入一个链表的头节点，按链表从尾到头的顺序返回每个节点的值（用数组返回）。
+
+如输入{1,2,3}的链表如下图:
+
+![](./printListFromTailToHead.png)
+
+返回一个数组为[3,2,1]
+
+0 <= 链表长度 <= 10000
+
+### 思路
+
+单链表比较直接的想法就是：顺讯访问、按照链表结点循环即可，比较好的模型：
+
+```js
+
+while(head!=null){
+    // 结点向后
+    head=head.next
 }
+```
 
-// 偷懒写法
-function printListFromTailToHead(head) {
-  // 只有单个指针，从头出链表，按序放入数组，最后翻转数组
-  const result = []
-  while (head !== null) {
-    result.push(head.val)
-    // 下一个元素
-    head = head.next
-  }
-  // 翻转并返回
-  return result.reverse()
-}
 
-// 先翻转链表【采用头插法】，再按序输入到数组中
-function printListFromTailToHead01(head) {
-  let reverseHead = new ListNode(-1)
-  // 头插法
-  while (head !== null) {
-    const pre = head
-    // 下一个结点
-    head = head.next
-    pre.next = reverseHead.next
-    reverseHead.next = pre
-  }
-  // 重新整理 去掉val=-1的点
-  reverseHead = reverseHead.next
-  const result = []
-  // 遍历链表
-  while (reverseHead !== null) {
-    result.push(reverseHead.val)
-    // 下一个结点
-    reverseHead = reverseHead.next
-  }
-  // 返回
-  return result
-}
+### 代码实现
 
-// 相比链表的头插，这里对数组array进行头插unshift()即可
-function printListFromTailToHead02(head) {
-  const result = []
-  while (head !== null) {
-    result.unshift(head.val)
+@[code js](@code/algorithm/剑指/链表/printListFromTailToHead.js)
 
-    // 下一个结点
-    head = head.next
-  }
 
-  // 返回，输出
-  return result
-}
+### 一些建议
