@@ -9,6 +9,7 @@
 
 描述
 编写一个shell脚本以输出一个文本文件nowcoder.txt中的行数
+
 示例:
 假设 nowcoder.txt 内容如下：
 ```txt
@@ -28,7 +29,7 @@ int main()
 
 ### 代码实现
 
-@[code js](@code/algorithm/剑指/数组和矩阵/FirstNotRepeatingChar.js)
+@[code bash](@code/algorithm/shell/shell-1.sh)
 
 
 ### 一些建议

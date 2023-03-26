@@ -8,11 +8,27 @@
  */
 
 const result = []
+
+/**
+ * 模拟进队列操作
+ * @param node
+ * @returns {*[]}
+ */
 function push(node) {
   // 尾部进栈
   result.push(node)
+  return result
 }
+
+/**
+ * 模拟出队列操作
+ * @returns {*}
+ */
 function pop() {
   // 队列 先进先出 头部出去
   return result.shift()
 }
+
+
+console.log(push(1), push(2))
+console.log(pop(), pop())

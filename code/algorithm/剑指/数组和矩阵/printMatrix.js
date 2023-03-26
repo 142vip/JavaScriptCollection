@@ -7,7 +7,13 @@
  * @LastEditTime: 2021-04-28 22:25:16
  */
 
-function printMatrix(matrix) {
+
+/**
+ * 没有技巧，按照方向转
+ * @param matrix
+ * @returns {*[]}
+ */
+function printMatrixOne(matrix) {
   // 行 角标
   let row = matrix.length - 1
   // 列角标
@@ -62,7 +68,50 @@ function printMatrix(matrix) {
   return result
 }
 
-console.log(printMatrix([
-  [1, 2],
-  [3, 4]
-]))
+/**
+ * 利用一些特性和api
+ * @param matrix
+ * @returns {*[]}
+ */
+function printMatrixTwo(matrix) {
+  const len = matrix.length
+  if (len === 1) return [...matrix[0]]
+
+  let seq = []
+  for (let i = 0; i < matrix.length / 2; i++) {
+    // 元素平铺为一维
+    seq.push(...matrix.shift())
+
+    for (const row of matrix) {
+      seq.push(row.pop())
+    }
+
+    if (matrix.length === 0) break
+    else seq.push(...matrix.pop().reverse())
+
+    // 左侧  从下网上aa'a's'd'fa's'da's'd'fa's'da's'd'fa's'd
+    const leftResult = []
+    for (const row of matrix) {
+      leftResult.push(row.shift())
+    }
+    seq = seq.concat(leftResult.reverse())
+  }
+
+  // 过滤
+  return seq.filter(x => x != null)
+}
+
+console.log(printMatrixOne([
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16]]
+))
+
+console.log(printMatrixTwo([
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16]]
+))
+
