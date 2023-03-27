@@ -3,7 +3,6 @@
  * 难度：入门
  * @param n
  * @returns {*}
- * @constructor
  */
 function fibonacciOne(n) {
   return n < 2 ? n : fibonacciOne(n - 1) + fibonacciOne(n - 2)
@@ -21,9 +20,7 @@ function fibonacciTwo(n) {
 
   let result = 1
   for (let index = 3; index <= n; index++) {
-    // 求和
     result = firstValue + secondValue
-
     // 前面两列重新赋值
     firstValue = secondValue
     secondValue = result

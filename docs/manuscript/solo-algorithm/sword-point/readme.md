@@ -10,7 +10,7 @@
  - [x] [【简单】数组中重复的数字](数组和矩阵/duplicate.md)
  - [x] [【中等】二维数组中的查找](数组和矩阵/find.md)
  - [x] [【简单】替换空格](数组和矩阵/replaceSpace.md)
- - [ ] [【较难】顺时针打印矩阵](数组和矩阵/printMatrix.md)
+ - [x] [【较难】顺时针打印矩阵](数组和矩阵/printMatrix.md)
  - [x] [【简单】第一个只出现一次的字符位置](数组和矩阵/firstNotRepeatingChar.md)
 
 
@@ -28,7 +28,7 @@
 
 ### 双指针
 
-- [ ] [【中等】和为S的两个数字](双指针/findNumbersWithSum.md)
+- [x] [【中等】和为S的两个数字](双指针/findNumbersWithSum.md)
 - [ ] [【中等】和为S的连续正数序列](双指针/findContinuousSequence.md)
 - [ ] [【中等】左旋转字符串](双指针/leftRotateString.md)
 - [ ] [【较难】翻转单词顺序列](双指针/reverseSentence.md)
