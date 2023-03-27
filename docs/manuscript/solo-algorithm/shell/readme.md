@@ -4,6 +4,22 @@
 
 ### 基础
 
+#### cd命令
+#### ls命令
+#### cat命令
+
+#### echo命令
+
+#### grep命令
+
+#### sed命令
+
+#### awk命令
+
+### shell语法
+
+
+
 
 ### 刷题
 
@@ -44,3 +60,7 @@
 
 
 ### 参考资料
+
+- <https://www.runoob.com/linux/linux-shell.html>
+- <https://www.nowcoder.com/exam/oj?page=1&tab=SHELL%E7%AF%87&topicId=195>
+- <https://www.bilibili.com/video/BV1bK411Z7oN>
