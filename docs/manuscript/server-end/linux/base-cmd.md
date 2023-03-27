@@ -208,9 +208,91 @@ cat 1.txt
 
 ### echo命令
 
+```bash
+# 直接输出文本
+echo hello 
+# 解压使用引号将内容括起来，单引号，双引号均可
+echo 'hello'
+#使用-e可以识别特殊字符
+echo -e "hello\tworld" 
+```
+
+echo可以配合重定向符将内容输入到文件
+- `>` :为重定向符号，表示清除原文件里面的所有内容，然后将内容追加到文件的末尾
+- `>>` :为追加重定向符号，即追加内容到文件的尾部（文件的最后一行）。
+
+
+```bash
+## 文本追加到文件中
+echo "hello world" >>hello.txt #文件会被自动创建
+
+## test.sh内容
+#!/bin/sh
+read name 
+echo "$name It is a test"
+
+## 执行
+sh test.sh
+OK                     #标准输入
+OK It is a test        #输出
+
+## 换行
+echo -e "OK! \n" # -e 开启转义
+echo "It is a test"
+
+## 不换行
+echo -e "OK! \c" # -e 开启转义 \c 不换行
+echo "It is a test"
+
+## 显示命令执行结果  执行函数date
+echo `date`
+
+```
+
+
+
 ### grep命令
 
+参考： https://www.cnblogs.com/chentiao/p/16626503.html
+
+- `-i` ： 搜索时候忽略大小写
+- -n 列出所有的匹配行，显示行号
+- -v 反向选择
+- -c 只输出匹配行的数量
+- -l 只列出符合匹配的文件名，不列出具体的匹配行
+- -h 查询多文件时不显示文件名
+- -r 递归搜索
+- -q 禁止输出任何结果，已退出状态表示搜索是否成功
+- --color=auto 将找到的关键字加上颜色显示
+- -E, --extended-regexp PATTERN 是一个可扩展的正则表达式(缩写为 ERE)
+- -B, --before-context=NUM 打印以文本起始的NUM 行
+- -A, --after-context=NUM 打印以文本结尾的NUM 行
+
+
+```bash
+
+## 删除掉空行，"^$" 表示空行
+grep -v "^$" test.txt
+
+## 过滤不包含sbin关键词，并输出行号
+grep -n -v "sbin" test.txt
+```
+
 ### sed命令
+
+sed是Stream Editor（字符流编辑器）的缩写，简称流编辑器。
+ed是操作、过滤和转换文本内容的强大工具。sed的常用功能包含对文件实现快速增删改查（增加、删
+除、修改、查询），其中查询的功能中最常用的两大功能是过滤（过滤指定字符串）和取行（取出指定
+的行）。
+
+```bash
+## 格式
+sed [选项] [sed内置命令字符] [输入文件]
+
+
+
+```
+
 
 ### awk命令
 
