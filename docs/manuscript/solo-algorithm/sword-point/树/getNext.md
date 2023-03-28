@@ -42,3 +42,25 @@ function GetNext(pNode) {
   // 都找不到，则返回null
   return null
 }
+
+# 算法相关文档格式模版
+
+
+
+
+### 题目链接
+
+- [牛客网]()
+- [欢迎讨论]()
+
+### 题目描述
+
+
+### 思路
+
+
+### 代码实现
+
+@[code js](@code/algorithm/剑指/树/reConstructBinaryTree.js)
+
+### 一些建议

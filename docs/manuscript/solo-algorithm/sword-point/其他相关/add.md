@@ -1,8 +1,5 @@
 # 不用加减乘除做加法
 
-
-
-
 ### 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215)
