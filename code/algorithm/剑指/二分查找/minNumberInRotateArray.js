@@ -8,13 +8,11 @@ function minNumberInRotateArray(rotateArray) {
   if (rotateArray.length < 0) {
     return 0
   }
-
   for (let index = 0; index < rotateArray.length - 1; index++) {
     if (rotateArray[index] > rotateArray[index + 1]) {
       return rotateArray[index + 1]
     }
   }
-
-  // 返回
   return rotateArray[0]
 }
+
