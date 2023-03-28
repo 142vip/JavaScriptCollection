@@ -6,7 +6,6 @@
 function captureThreeNumbers(str) {
   // 切割转化
   const arr = str.split('')
-  console.log(arr)
   const num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
   for (let index = 0; index < arr.length - 1; index++) {
@@ -14,7 +13,6 @@ function captureThreeNumbers(str) {
       return parseInt(`${arr[index]}${arr[index + 1]}${arr[index + 2]}`)
     }
   }
-
   return false
 }
 
@@ -46,25 +44,21 @@ function matchesPattern(str) {
   console.log(lowArr, midArr, highArr)
 
   // 逐一比对
-
   for (let index = 0; index < lowArr.length; index++) {
     if (!rule.includes(lowArr[index])) {
       return false
     }
   }
-
   for (let index = 0; index < midArr.length; index++) {
     if (!rule.includes(midArr[index])) {
       return false
     }
   }
-
   for (let index = 0; index < highArr.length; index++) {
     if (!rule.includes(highArr[index])) {
       return false
     }
   }
-
   return true
 }
 
