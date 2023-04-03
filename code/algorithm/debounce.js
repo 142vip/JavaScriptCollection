@@ -8,6 +8,7 @@ function debounce(func, time) {
   return () => {
     clearTimeout(timeout)
     timeout = setTimeout(() => {
+      // 执行函数
       func.apply(this, arguments)
       // func()
     }, time)

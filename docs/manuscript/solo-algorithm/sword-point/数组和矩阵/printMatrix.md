@@ -1,74 +1,35 @@
-/*
- * @Description: 顺时针打印矩阵
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-04-27 14:22:13
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-28 22:25:16
- */
+# 顺时针打印矩阵
 
-function printMatrix (matrix) {
-  // 行 角标
-  let row = matrix.length - 1
-  // 列角标
-  if (matrix[0].length === 0) {
-    // 返回空数组
-    return []
-  }
-  let col = matrix[0].length - 1
 
-  let r = 0
-  let c = 0
 
-  // 这里需要在脑海里想象顺时针旋转的时候，r-->left c-->top row-->right  col-->bottom
 
-  // 数组结果
-  const result = []
-  while (r <= row && c <= col) {
-    // 上
-    for (let index = c; index <= col; index++) {
-      // 当前在上测，行为r 不为 row
-      result.push(matrix[r][index])
-    }
+### 题目链接
 
-    // 跳出后，到右侧
-    for (let index = r + 1; index <= row; index++) {
-      result.push(matrix[index][col])
-    }
-    // 跳出来，就是下测 判断右下角拐角
-    if (r !== row) {
-      // 从右到左边
-      for (let index = col - 1; index >= c; index--) {
-        // 当前在底部，所以行为row
-        result.push(matrix[row][index])
-      }
-    }
-    // 左侧，注意判断条件
-    if (c !== col) {
-      // 从下到上
-      for (let index = row - 1; index > r; index--) {
-        // 当前在左侧，所以列表为c 部位col
-        result.push(matrix[index][c])
-      }
-    }
+- [牛客网](https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a)
+- [欢迎讨论]()
 
-    // 指针移动  转完一圈
-    r++
-    row--
-    c++
-    col--
-  }
+### 题目描述
 
-  return result
-}
+输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵：
+```bash
+[[1,2,3,4],
+[5,6,7,8],
+[9,10,11,12],
+[13,14,15,16]]
+```
+则依次打印出数字
 
-console.log(printMatrix([
-  [1, 2],
-  [3, 4]
-]))
+```bash
+[1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10]
+```
+
+数据范围: `0 <= matrix.length <= 100` 、 `0 <= matrix[i].length <= 100`
+### 思路
 
 ### 代码实现
 
 @[code js](@code/algorithm/剑指/数组和矩阵/printMatrix.js)
 
+
 ### 一些建议
+

@@ -19,8 +19,8 @@ export default {
         // pure: true,
         hostname: 'https://408.142vip.cn',
         author: {
-            name: '储凡',
-            email: 'fairy_408@2925.com',
+            name: '公众号：储凡',
+            email: 'fairy_vip@2925.com',
             url: 'https://www.142vip.cn'
         },
         favicon: "/favicon.ico",
@@ -130,7 +130,32 @@ export default {
                     "StackBlitz",
                     "VideoPlayer",
                     "YouTube",
+                    "Share",
+                    "XiGua"
                 ],
+                rootComponents: {
+                    // 公告
+                    notice: [
+                        {
+                            path: "/",
+                            title: "在线浏览",
+                            content: "网站无法访问时，建议通过科学上网访问备用网络",
+                            actions: [
+                                {
+                                    text: "尝鲜版",
+                                    link: "https://142vip.github.io/JavaScriptCollection",
+                                    type: "default",
+                                },
+                                {
+                                    text: "稳定版",
+                                    link: "https://142vip.cn/JavaScriptCollection",
+                                    type: "primary",
+                                },
+                            ],
+                            fullscreen: false,
+                        },
+                    ],
+                },
             },
         }
     })
