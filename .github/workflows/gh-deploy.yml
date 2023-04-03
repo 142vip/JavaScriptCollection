@@ -36,7 +36,7 @@ jobs:
           PROXY_DOMAIN=true pnpm build
 
       - name: Deploy to GitHub Page
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: pages/github
           build_dir: docs/.vuepress/dist
