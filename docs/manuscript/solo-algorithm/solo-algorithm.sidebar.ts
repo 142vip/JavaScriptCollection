@@ -9,12 +9,11 @@ export const soloAlgorithmSidebar = [
   },
   {
     text: 'Shell篇',
-    link: 'shell/'
+    link: 'shell'
   },
   {
     text: '在线刷题',
     children: [
-
       {
         text: '牛客网',
         link: 'https://www.nowcoder.com/'

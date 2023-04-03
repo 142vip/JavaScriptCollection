@@ -46,3 +46,25 @@ function isSubTreeWithRoot(root1, root2) {
   // 当前结点相同，继续递归校验后续左右子树结点，两树同时向左或者向右
   return isSubTreeWithRoot(root1.left, root2.left) && isSubTreeWithRoot(root1.right, root2.right)
 }
+
+# 算法相关文档格式模版
+
+
+
+
+### 题目链接
+
+- [牛客网]()
+- [欢迎讨论]()
+
+### 题目描述
+
+
+### 思路
+
+
+### 代码实现
+
+@[code js](@code/algorithm/剑指/树/reConstructBinaryTree.js)
+
+### 一些建议

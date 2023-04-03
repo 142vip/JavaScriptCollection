@@ -15,7 +15,6 @@ function merge(A, m, B, n) {
       next++
     }
   }
-  console.log(result, pre, next)
   // A的元素都遍历完了，B没有遍历完，next<n,将后面的元素都追加到result后面
   if (pre === m) {
     // 连接后要重新赋值

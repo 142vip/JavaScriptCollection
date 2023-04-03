@@ -1,6 +1,4 @@
----
-title: MySQL面试
----
+# MySQL面试
 
 > 参考：https://juejin.cn/post/6850037271233331208#comment
 >

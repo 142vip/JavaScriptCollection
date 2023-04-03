@@ -28,7 +28,8 @@ int main()
 
 ### 代码实现
 
-@[code js](@code/algorithm/剑指/数组和矩阵/FirstNotRepeatingChar.js)
+
+@[code bash](@code/algorithm/shell/shell-2.sh)
 
 
 ### 一些建议
