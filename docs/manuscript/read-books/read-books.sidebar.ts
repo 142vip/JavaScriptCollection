@@ -37,6 +37,10 @@ export const readBooksSidebar = [
         link: '/'
       },
       {
+        text: '好的，爱情',
+        link: '/'
+      },
+      {
         text: '测试',
         link: '/f111'
       }
