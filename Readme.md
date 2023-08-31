@@ -607,6 +607,17 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 
 **以下排名不分先后! 还木有收到赞助，哈哈哈，先留坑**
 
+## 贡献
+
+感谢向仓库提交mr的所有开发者
+
+[![contributors](https://contrib.rocks/image?repo=142vip/JavaScriptCollection)](https://github.com/142vip/JavaScriptCollection/graphs/contributors)
+
+## 趋势
+
+<div style="text-align: center" align="center">
+<img alt="Star History" src="https://api.star-history.com/svg?repos=142vip/JavaScriptCollection&type=Date" >
+</div>
 
 
 

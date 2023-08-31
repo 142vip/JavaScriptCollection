@@ -27,7 +27,7 @@ if [ "${commitInfo}" -eq "" ]; then
 fi
 
 ## 配置个人信息
-git config user.name "吃芝士葡萄的妹妹"
+git config user.name "chufan"
 git config user.email "fairy_vip@2925.com"
 
 git commit -m "refactor:${commitInfo}"
