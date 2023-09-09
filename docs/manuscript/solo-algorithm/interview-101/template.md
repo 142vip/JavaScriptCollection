@@ -15,8 +15,7 @@
 
 ### 代码实现
 
-
-@[code bash](@code/algorithm/shell/shell-4.sh)
+@[code js](@code/algorithm/interview-101/reverseList.js)
 
 
 ### 一些建议

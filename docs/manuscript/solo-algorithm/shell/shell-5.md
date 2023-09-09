@@ -16,7 +16,7 @@
 ### 代码实现
 
 
-@[code bash](@code/algorithm/shell/shell-1.sh)
+@[code bash](@code/algorithm/shell/shell-5.sh)
 
 
 ### 一些建议

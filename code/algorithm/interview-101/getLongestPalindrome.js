@@ -1,12 +1,3 @@
-/*
- * @Description: 最长回文字符串
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-05-20 21:06:00
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-05-20 21:06:17
- */
-
 /**
  * 求给定字符的最大回文字符串
  * @param str
