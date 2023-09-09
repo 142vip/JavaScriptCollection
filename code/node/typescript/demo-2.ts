@@ -103,11 +103,11 @@ class Inter implements myInter {
 
 // 直接将属性定义在构造函数中
 class StudentA {
-  constructor(
-    public readonly name:string,
-    public readonly age:number
-  ) {
-
+  name:string
+  age:number
+  constructor(name: string, age: number) {
+    this.name = name
+    this.age = age
   }
 
   async getName() {
@@ -118,6 +118,9 @@ class StudentA {
     return this.age
   }
 }
+
+const stuA = new StudentA('chufan', 18)
+console.log(stuA)
 
 // 等价于
 class StudentB {
@@ -192,9 +195,10 @@ class DogB extends Dog {
     return this._gender
   }
 
-  set gender(gender:number):void {
-    this._gender = gender
-  }
+  // 异常
+  // set gender(gender:number):void {
+  //   this._gender = gender
+  // }
 
 
   // 等价于
@@ -210,7 +214,7 @@ class DogB extends Dog {
 const dogB = new DogB()
 
 // 通过gender方法来获取_gender私有属性值
-dogB.gender = 18
+// dogB.gender = 18
 console.log(dogB.gender)
 
 class TestStatic {
