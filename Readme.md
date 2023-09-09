@@ -1,6 +1,3 @@
-## JavaScriptCollection
-
-
 ### 在线浏览
 
 - 尝鲜版：<https://142vip.github.io/JavaScriptCollection>
