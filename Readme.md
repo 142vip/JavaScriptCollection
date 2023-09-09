@@ -1,17 +1,6 @@
 ## JavaScriptCollection
 
 
-### 写最前面
-
-
-这里是工作、学习、生活中总结的各类笔记文章，涉及开发技术，也会感慨万千、水一些`思考`；若发现博客外链不能访问欢迎指正；
-所有内容会选择性的发表于**微信公众号、博客、掘金、CSDN、Github ，实际内容以本仓库排版、校对为主。** 代码会不定期同步到 **码云** 。
-
-
-**没有效访问链接的代表尚未完成，大家善用快捷键`Ctrl+F`**
-
-
-
 ### 在线浏览
 
 - 尝鲜版：<https://142vip.github.io/JavaScriptCollection>
@@ -24,9 +13,18 @@
 - Vercel： <https://js-collection.vercel.app>
 
 
+### 写在最前面
+
+
+这里是工作、学习、生活中总结的各类笔记文章，涉及开发技术，也会感慨万千、水一些`思考`；若发现博客外链不能访问欢迎指正；
+所有内容会选择性的发表于**微信公众号、博客、掘金、CSDN、Github ，实际内容以本仓库排版、校对为主。** 代码会不定期同步到 **码云** 。
+
+
+**没有效访问链接的代表尚未完成，大家善用快捷键`Ctrl+F`**
+
+
+
 ### 学习路线
-
-
 
 
 ### 日常推荐
@@ -607,6 +605,17 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 
 **以下排名不分先后! 还木有收到赞助，哈哈哈，先留坑**
 
+## 贡献
+
+感谢向仓库提交mr的所有开发者
+
+[![contributors](https://contrib.rocks/image?repo=142vip/JavaScriptCollection)](https://github.com/142vip/JavaScriptCollection/graphs/contributors)
+
+## 趋势
+
+<div style="text-align: center" align="center">
+<img alt="Star History" src="https://api.star-history.com/svg?repos=142vip/JavaScriptCollection&type=Date" >
+</div>
 
 
 

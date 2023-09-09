@@ -95,4 +95,3 @@ docs/.vuepress/dist/
 .tern-port
 /docs/.vuepress/.temp/
 /.husky/
-/.husky/

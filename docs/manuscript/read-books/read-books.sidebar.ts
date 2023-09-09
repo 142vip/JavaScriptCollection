@@ -41,7 +41,19 @@ export const readBooksSidebar = [
         link: '/'
       },
       {
-        text: '测试',
+        text: '细雨中呼喊',
+        link: '/f111'
+      },
+      {
+        text: '第七天',
+        link: '/f111'
+      },
+      {
+        text: '文城',
+        link: '/f111'
+      },
+      {
+        text: '兄弟',
         link: '/f111'
       }
     ]
