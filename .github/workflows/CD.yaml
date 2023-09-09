@@ -20,7 +20,7 @@ env:
 
 jobs:
   install-init:
-    name: "依赖安装初始化"
+    name: "流水线初始化"
     runs-on: ubuntu-latest
 
     steps:

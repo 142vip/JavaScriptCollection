@@ -1,6 +1,6 @@
 
 /**
- *
+ * 寻找最大K数
  * @param a int整型一维数组
  * @param n int整型
  * @param K int整型
@@ -8,7 +8,6 @@
  */
 function findKth(a, n, K) {
   const result = quickSort(a, 0, n - 1)
-
   console.log(result)
   return result[K - 1]
 }
