@@ -34,7 +34,6 @@ function findNumsAppearOnceOne(array) {
  */
 function findNumsAppearOnceTwo(array) {
   const resMap = new Map()
-
   // 统计
   for (const value of array) {
     if (resMap.has(value)) {

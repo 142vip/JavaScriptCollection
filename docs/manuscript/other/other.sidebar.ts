@@ -18,5 +18,5 @@ export const OtherSidebar = [
   {
     text: 'Todo计划',
     link: 'todo-list'
-  },
+  }
 ]
