@@ -26,7 +26,7 @@
 
 ### 代码实现
 
-@[code js](@code/algorithm/interview-101/动态规划/fibonacci.js)
+@[code js](@code/algorithm/interview-101/fibonacci.js)
 
 
 ### 一些建议
