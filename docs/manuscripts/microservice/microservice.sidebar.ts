@@ -25,32 +25,32 @@ export const microserviceSidebar = [
     children: [
       {
         text: 'Apollo',
-        link: '/manuscript/server-end/database/redis'
+        link: '/manuscripts/server-end/database/redis'
       },
       {
         text: 'Consul',
-        link: '/manuscript/server-end/database/mysql'
+        link: '/manuscripts/server-end/database/mysql'
       },
       {
         text: 'Nacos',
-        link: '/manuscript/server-end/database/mongo'
+        link: '/manuscripts/server-end/database/mongo'
       }
     ]
   },
   {
     text: '网关',
-    link: '/manuscript/kong'
+    link: '/manuscripts/kong'
   },
   {
     text: 'ELK',
-    link: '/manuscript/elk'
+    link: '/manuscripts/elk'
   },
   {
     text: '消息中间件',
     children: [
       {
         text: 'RabbitMQ',
-        link: '/manuscript/mq'
+        link: '/manuscripts/mq'
       },
       {
         text: 'Kafka',
@@ -67,16 +67,16 @@ export const microserviceSidebar = [
     children: [
       {
         text: 'docker',
-        link: '/manuscript/server-end/container-learn/docker-base'
+        link: '/manuscripts/server-end/container-learn/docker-base'
       },
 
       {
         text: 'docker-compose',
-        link: '/manuscript/server-end/container-learn/server-deploy'
+        link: '/manuscripts/server-end/container-learn/server-deploy'
       },
       {
         text: 'k8s',
-        link: '/manuscript/server-end/container-learn/docker-layout'
+        link: '/manuscripts/server-end/container-learn/docker-layout'
       }
     ]
   }]

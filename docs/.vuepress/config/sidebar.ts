@@ -1,25 +1,25 @@
-import {frontEndSidebar} from "../../manuscript/front-end/front-end.sidebar";
-import {serverEndSidebar} from "../../manuscript/server-end/server-end.sidebar";
-import {eggSidebar} from "../../manuscript/server-end/framework/egg/egg.sidebar";
-import {developSkillSidebar} from "../../manuscript/develop-skill/develop-skill.sidebar";
-import {soloAlgorithmSidebar} from "../../manuscript/solo-algorithm/solo-algorithm.sidebar";
-import {esStandardSidebar} from "../../manuscript/read-books/cs-books/es-standard/es-standard-sidebar";
-import {OtherSidebar} from "../../manuscript/other/other.sidebar";
-import {jobChanceSidebar} from "../../manuscript/job-chance/job-chance.sidebar";
-import {readBooksSidebar} from "../../manuscript/read-books/read-books.sidebar";
-import {microserviceSidebar} from "../../manuscript/microservice/microservice.sidebar";
-import {battleInterviewSidebar} from "../../manuscript/battle-interview/battle-interview.sidebar";
+import {frontEndSidebar} from "../../manuscripts/front-end/front-end.sidebar";
+import {serverEndSidebar} from "../../manuscripts/server-end/server-end.sidebar";
+import {eggSidebar} from "../../manuscripts/server-end/framework/egg/egg.sidebar";
+import {developSkillSidebar} from "../../manuscripts/develop-skill/develop-skill.sidebar";
+import {soloAlgorithmSidebar} from "../../manuscripts/solo-algorithm/solo-algorithm.sidebar";
+import {esStandardSidebar} from "../../manuscripts/read-books/cs-books/es-standard/es-standard-sidebar";
+import {OtherSidebar} from "../../manuscripts/other/other.sidebar";
+import {jobChanceSidebar} from "../../manuscripts/job-chance/job-chance.sidebar";
+import {readBooksSidebar} from "../../manuscripts/read-books/read-books.sidebar";
+import {microserviceSidebar} from "../../manuscripts/microservice/microservice.sidebar";
+import {battleInterviewSidebar} from "../../manuscripts/battle-interview/battle-interview.sidebar";
 
 export default {
-    "/manuscript/front-end": frontEndSidebar,
-    "/manuscript/server-end": serverEndSidebar,
-    "/manuscript/server-end/framework/egg": eggSidebar,
-    "/manuscript/develop-skill": developSkillSidebar,
-    "/manuscript/solo-algorithm": soloAlgorithmSidebar,
-    "/manuscript/read-books": readBooksSidebar,
-    "/manuscript/read-books/cs-books/es-standard": esStandardSidebar,
-    "/manuscript/other": OtherSidebar,
-    "/manuscript/job-chance": jobChanceSidebar,
-    "/manuscript/microservice": microserviceSidebar,
-    "/manuscript/battle-interview": battleInterviewSidebar,
+    "/manuscripts/front-end": frontEndSidebar,
+    "/manuscripts/server-end": serverEndSidebar,
+    "/manuscripts/server-end/framework/egg": eggSidebar,
+    "/manuscripts/develop-skill": developSkillSidebar,
+    "/manuscripts/solo-algorithm": soloAlgorithmSidebar,
+    "/manuscripts/read-books": readBooksSidebar,
+    "/manuscripts/read-books/cs-books/es-standard": esStandardSidebar,
+    "/manuscripts/other": OtherSidebar,
+    "/manuscripts/job-chance": jobChanceSidebar,
+    "/manuscripts/microservice": microserviceSidebar,
+    "/manuscripts/battle-interview": battleInterviewSidebar,
 }

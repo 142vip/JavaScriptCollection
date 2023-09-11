@@ -8,10 +8,10 @@ actions:
     link: /quick-start.md
     type: primary
   - text: 公众号
-    link: /manuscript/other/wechat-list.md
+    link: /manuscripts/other/wechat-list.md
     type: secondary
   - text: 工作机会
-    link: /manuscript/job-chance/job-poster-bytedance.md
+    link: /manuscripts/job-chance/job-poster-bytedance.md
     type: secondary
 
 features:

@@ -16,6 +16,6 @@
 
 ### 代码实现
 
-@[code js](@code/algorithm/剑指/树/hashSubTree.js)
+@[code js](@code/algorithm/剑指/树/hasSubTree.js)
 
 ### 一些建议
