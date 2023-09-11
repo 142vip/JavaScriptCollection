@@ -5,6 +5,7 @@
 ## 默认密码：123456
 ##
 ##
+
 version: '2'
 services:
   cluster-6390:

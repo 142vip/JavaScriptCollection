@@ -26,9 +26,8 @@ function IsContinuous(numbers) {
   // 判断每个的间隔
   for (let index = 0; index < numbers.length - 1; index++) {
     if (numbers[index] !== 0 && numbers[index + 1] - numbers[index] > 1) {
-      //             console.log(count,(numbers[index+1]-numbers[index]))
+      // console.log(count, (numbers[index + 1] - numbers[index]))
       count -= (numbers[index + 1] - numbers[index] - 1)
-      //             console.log(count)
     }
   }
 

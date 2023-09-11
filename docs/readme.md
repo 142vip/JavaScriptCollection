@@ -5,13 +5,13 @@ heroText: JavaScriptCollection
 tagline: 【理论+实战】超硬核全栈学习笔记，持续更新...
 actions:
   - text: 快速开刷 →
-    link: /quick-start/
+    link: /quick-start.md
     type: primary
   - text: 公众号
-    link: /wechat-list.md
+    link: /manuscript/other/wechat-list.md
     type: secondary
   - text: 工作机会
-    link: /job-chance
+    link: /manuscript/job-chance/job-poster-bytedance.md
     type: secondary
 
 features:

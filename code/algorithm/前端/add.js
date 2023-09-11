@@ -3,7 +3,6 @@
  */
 function add() {
   const args = Array.prototype.slice.call(arguments)
-
   const _add = function() {
     console.log('add', arguments)
     args.push(...arguments)
@@ -11,9 +10,7 @@ function add() {
     // 返回函数
     return _add
   }
-
   // 对参数数组做求和处理
-
   _add.toString = function() {
     // 设置sum的起始值为0
     return args.reduce((sum, item) => {

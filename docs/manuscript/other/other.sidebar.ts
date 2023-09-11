@@ -12,11 +12,11 @@ export const OtherSidebar = [
     link: 'api-docs'
   },
   {
-    text: 'Todo计划',
-    link: 'todo-list'
+    text: '网站动态',
+    link: 'change-log'
   },
   {
-    text: '变更记录',
-    link: 'change-log'
+    text: 'Todo计划',
+    link: 'todo-list'
   }
 ]

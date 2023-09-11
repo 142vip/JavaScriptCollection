@@ -1,8 +1,6 @@
 # 剪绳子
 
 
-
-
 ### 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)

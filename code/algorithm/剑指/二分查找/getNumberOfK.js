@@ -19,11 +19,6 @@ function GetNumberOfK(data, k) {
   return left === -1 && right === -1 ? 0 : right - left + 1
 }
 
-/**
- *
- * @param data
- * @param target
- */
 function rightBinarySearch(data, target) {
   if (!data.length) {
     return -1

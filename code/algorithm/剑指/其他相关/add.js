@@ -1,10 +1,6 @@
 /**
  * 【简单】不用加减乘除做加法
- */
-
-
-/**
- * 利用自增
+ * - 利用自增
  * @param num1
  * @param num2
  */
@@ -28,7 +24,8 @@ function addOne(num1, num2) {
 }
 
 /**
- * 利用位运算【递归】
+ * 【简单】不用加减乘除做加法
+ * - 利用位运算【递归】
  * @param num1
  * @param num2
  */
@@ -38,7 +35,8 @@ function addTwo(num1, num2) {
 
 
 /**
- * 利用位运算【循环】
+ * 【简单】不用加减乘除做加法
+ * - 利用位运算【循环】
  * @param num1
  * @param num2
  * @returns {number}

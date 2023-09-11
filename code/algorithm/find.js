@@ -1,8 +1,3 @@
-/**
- *
- * @param target
- * @param array
- */
 function Find(target, array) {
   if (!array) {
     return false

@@ -1,6 +1,6 @@
 import pluginsConfig from "./config/plugins.config";
 import themeConfig from "./config/theme.config";
-import {defineUserConfig} from "vuepress";
+import {defineUserConfig, viteBundler} from "vuepress";
 import {fileURLToPath} from 'node:url'
 import {path} from "@vuepress/utils";
 // @ts-ignore
