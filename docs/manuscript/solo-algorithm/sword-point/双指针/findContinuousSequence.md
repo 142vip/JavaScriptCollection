@@ -1,3 +1,24 @@
+# 算法相关文档格式模版
+
+
+
+
+### 题目链接
+
+- [牛客网]()
+- [欢迎讨论]()
+
+### 题目描述
+
+
+### 思路
+
+
+### 代码实现
+
+@[code js](@code/algorithm/剑指/双指针/findContinuousSequence.js)
+
+```js
 
 // 注意是连续递增数列，间距为1 那么可以将序列开始、结束元素看做 a 、 b
 // 按照数列求和公式sum=（首项+尾项）* 项数 /2 即可
@@ -34,24 +55,7 @@ function FindContinuousSequence(sum) {
   return result
 }
 
-# 算法相关文档格式模版
 
-
-
-
-### 题目链接
-
-- [牛客网]()
-- [欢迎讨论]()
-
-### 题目描述
-
-
-### 思路
-
-
-### 代码实现
-
-@[code js](@code/algorithm/剑指/栈队列堆/firstAppearingOnce.js)
+```
 
 ### 一些建议

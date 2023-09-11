@@ -3,7 +3,6 @@
  */
 function add() {
   const args = Array.prototype.slice.call(arguments)
-
   const _add = function() {
     console.log('add', arguments)
     args.push(...arguments)

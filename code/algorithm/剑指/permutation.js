@@ -1,7 +1,3 @@
-/**
- *
- * @param str
- */
 function Permutation(str) {
   const result = []
   const i = 0

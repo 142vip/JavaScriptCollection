@@ -4,6 +4,10 @@ export default [
         link: "/",
     },
     {
+        text: "SOLO算法",
+        link: "/manuscript/solo-algorithm",
+    },
+    {
         text: "前端",
         link: "/manuscript/front-end",
     },
@@ -11,10 +15,7 @@ export default [
         text: "Node后端",
         link: "/manuscript/server-end",
     },
-    {
-        text: "Solo算法",
-        link: "/manuscript/solo-algorithm",
-    },
+
     {
         text: '微服务',
         link: "/manuscript/microservice",

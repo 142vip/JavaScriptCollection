@@ -12,7 +12,7 @@
     this.left = null;
     this.right = null;
 } */
-function HasSubtree(pRoot1, pRoot2) {
+function HasSubTree(pRoot1, pRoot2) {
   // 空树的情况
   if (pRoot1 === null || pRoot2 === null) {
     return false
@@ -20,8 +20,8 @@ function HasSubtree(pRoot1, pRoot2) {
   // 1.假设子结构从根结点开始；
   const isRoot = isSubTreeWithRoot(pRoot1, pRoot2)
   // 2 子结构从左、右子树开始；
-  const inLeft = HasSubtree(pRoot1.left, pRoot2)
-  const inRight = HasSubtree(pRoot1.right, pRoot2)
+  const inLeft = HasSubTree(pRoot1.left, pRoot2)
+  const inRight = HasSubTree(pRoot1.right, pRoot2)
 
   // 三种满足一种，就是子结构了
   return isRoot || inLeft || inRight

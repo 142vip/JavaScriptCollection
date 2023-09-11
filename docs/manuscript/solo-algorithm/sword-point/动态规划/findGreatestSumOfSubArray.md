@@ -1,8 +1,6 @@
 # 连续子数组的最大和
 
 
-
-
 ### 题目链接
 
 - [牛客网]()
@@ -15,7 +13,7 @@
 
 ### 代码实现
 
-@[code js](@code/algorithm/剑指/动态规划/getUglyNumber.js)
+@[code js](@code/algorithm/剑指/动态规划/findGreatestSumOfSubArray.js)
 
 
 ### 一些建议

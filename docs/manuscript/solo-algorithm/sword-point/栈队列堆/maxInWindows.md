@@ -1,4 +1,4 @@
-# 算法相关文档格式模版
+# 滑动窗口的最大值
 
 
 
@@ -16,7 +16,7 @@
 
 ### 代码实现
 
-@[code js](@code/algorithm/剑指/树/reConstructBinaryTree.js)
+@[code js](@code/algorithm/剑指/栈队列堆/maxInWindows.js)
 
 ### 一些建议
 

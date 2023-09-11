@@ -30,7 +30,7 @@ export const developSkillSidebar = [
         link: 'monorepo/pnpm-style.md'
       },
       {
-        text: 'TurboRepo',
+        text: 'turboRepo',
         link: 'monorepo/turboRepo.md'
       }
     ]

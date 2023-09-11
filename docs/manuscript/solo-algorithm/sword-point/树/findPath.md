@@ -1,11 +1,3 @@
-
-### 代码实现
-
-@[code js](@code/algorithm/剑指/栈队列堆/getLeastNumbers.js)
-
-### 一些建议
-
-
 # 算法相关文档格式模版
 
 
@@ -24,6 +16,6 @@
 
 ### 代码实现
 
-@[code js](@code/algorithm/剑指/树/reConstructBinaryTree.js)
+@[code js](@code/algorithm/剑指/树/findPath.js)
 
 ### 一些建议
