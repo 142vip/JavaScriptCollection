@@ -34,11 +34,11 @@ export const readBooksSidebar = [
     children: [
       {
         text: '你好，孤独',
-        link: '/'
+        link: 'not-cs-book/hello-alone.md'
       },
       {
         text: '好的，爱情',
-        link: '/'
+        link: 'not-cs-book/good-love.md'
       },
       {
         text: '细雨中呼喊',

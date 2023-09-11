@@ -22,10 +22,6 @@ export const battleInterviewSidebar = [
       {
         text: 'MySQL面试',
         link: 'problems/MySQL面试.md'
-      },
-      {
-        text: '碎碎念',
-        link: 'problems/碎碎念.md'
       }
     ]
   },
@@ -51,10 +47,6 @@ export const battleInterviewSidebar = [
       {
         text: 'MySQL面试',
         link: 'problems/MySQL面试.md'
-      },
-      {
-        text: '碎碎念',
-        link: 'problems/碎碎念.md'
       }
     ]
   },
