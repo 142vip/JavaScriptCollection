@@ -31,7 +31,7 @@ export const battleInterviewSidebar = [
       {
         text: '后端汇总',
         link: 'problems/后端汇总.md'
-      },
+      }
     ]
   },
   {
