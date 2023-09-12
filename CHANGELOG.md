@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-beta -->
 
+## [0.0.2-alpha.2](https://github.com/mmdapl/JavaScriptCollection/compare/v0.0.2-alpha.1...v0.0.2-alpha.2) (2023-09-12)
+
+
+### Features
+
+* 剑指算法文档更新，修改目录结构 ([8de1a9b](https://github.com/mmdapl/JavaScriptCollection/commit/8de1a9b45da47622612ff6fcc1b9c407ac5254be))
+* 站点新增百度统计相关配置 ([0724b3b](https://github.com/mmdapl/JavaScriptCollection/commit/0724b3b08a723601642eee238310cc0ef6508c8c))
+
+
+### Performance Improvements
+
+* update package version ([1ee2370](https://github.com/mmdapl/JavaScriptCollection/commit/1ee2370107265b68ef39b3571f9cb1f5a9f33c68))
+
 ## 0.0.2-alpha.1 (2023-09-09)
 
 
