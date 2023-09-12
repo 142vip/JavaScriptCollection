@@ -5,36 +5,36 @@ export default [
     },
     {
         text: "SOLO算法",
-        link: "/manuscript/solo-algorithm",
+        link: "/manuscripts/solo-algorithm",
     },
     {
         text: "前端",
-        link: "/manuscript/front-end",
+        link: "/manuscripts/front-end",
     },
     {
         text: "Node后端",
-        link: "/manuscript/server-end",
+        link: "/manuscripts/server-end",
     },
 
     {
         text: '微服务',
-        link: "/manuscript/microservice",
+        link: "/manuscripts/microservice",
     },
     {
         text: "Battle面试官",
-        link: "/manuscript/battle-interview",
+        link: "/manuscripts/battle-interview",
     },
     {
         text: "开发技巧",
-        link: "/manuscript/develop-skill",
+        link: "/manuscripts/develop-skill",
     },
     {
         text: "读书整理",
-        link: "/manuscript/read-books",
+        link: "/manuscripts/read-books",
     },
 
     {
         text: "其他",
-        link: "/manuscript/other",
+        link: "/manuscripts/other",
     },
 ];

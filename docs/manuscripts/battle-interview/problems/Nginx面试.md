@@ -1,6 +1,4 @@
----
-title: Nginx面试
----
+# Nginx面试
 
 
 

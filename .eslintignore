@@ -1,5 +1,5 @@
 node_modules
-manuscript
+docs/manuscripts
 .github
 .idea
 .dockerignore
