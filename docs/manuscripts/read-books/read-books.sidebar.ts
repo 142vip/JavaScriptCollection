@@ -41,20 +41,20 @@ export const readBooksSidebar = [
         link: 'not-cs-book/good-love.md'
       },
       {
-        text: '细雨中呼喊',
-        link: '/f111'
+        text: '在细雨中呼喊',
+        link: 'not-cs-book/shouting-drizzle.md'
       },
       {
         text: '第七天',
-        link: '/f111'
+        link: 'not-cs-book/seventh-day.md'
       },
       {
         text: '文城',
-        link: '/f111'
+        link: 'not-cs-book/wen-city.md'
       },
       {
         text: '兄弟',
-        link: '/f111'
+        link: 'not-cs-book/brother.md'
       }
     ]
   }
