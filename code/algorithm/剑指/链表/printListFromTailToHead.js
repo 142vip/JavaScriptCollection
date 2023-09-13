@@ -1,9 +1,9 @@
 /*
  * @Description: 【简单】从尾到头打印链表
  * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
+ * @Author: 【B站&公众号】储凡
  * @Date: 2021-05-01 20:49:28
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
+ * @LastEditors: 【B站&公众号】储凡
  * @LastEditTime: 2021-05-01 21:24:40
  */
 

@@ -1,16 +1,14 @@
 # BM2 链表内指定区间反转
 
 
-
-
 ### 题目链接
 
-- [牛客网](https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca)
+- [牛客网](https://www.nowcoder.com/share/jump/8484115461694574050421)
 - [欢迎讨论]()
 
 ### 题目描述
 
-![反转链表.png](../images/reverseList.png)
+![区间反转.png](../images/reverseBetween.png)
 
 
 
@@ -18,7 +16,7 @@
 
 ### 代码实现
 
-@[code js](@code/algorithm/interview-101/reverseGroup.js)
+@[code js](@code/algorithm/interview-101/reverseBetween.ts)
 
 
 ### 一些建议

@@ -1,11 +1,3 @@
-/*
- * @Description:
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-04-29 22:43:05
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-29 22:44:23
- */
 function theNumberOf0(n) {
   let result = 1
   let count = 0

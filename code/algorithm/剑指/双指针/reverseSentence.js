@@ -1,10 +1,5 @@
-/*
- * @Description: 翻转单词顺序列
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-04-30 21:40:57
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-30 21:54:47
+/**
+ * 翻转单词顺序列
  */
 
 // 偷懒做法

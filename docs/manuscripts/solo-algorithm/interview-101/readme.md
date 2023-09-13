@@ -1,5 +1,5 @@
 
-# 面试必刷101
+# 面试必刷Top101
 
 - [牛客网](https://www.nowcoder.com/exam/oj)
 
@@ -7,8 +7,8 @@
 
 - [x] [1.反转链表【简单】](链表/reverseList.md)
 - [ ] [2.链表内指定区间反转 【中等】](链表/reverseBetween.md)
-- [ ] [3.链表中的节点每k个一组翻转 【中等】](链表/reserseGroup.md)
-- [ ] [4.合并两个排序的链表 【简单】](链表/reverseList.md)
+- [ ] [3.链表中的节点每k个一组翻转 【中等】](链表/reverseGroup.md)
+- [ ] [4.合并两个排序的链表 【简单】](链表/merge.md)
 - [ ] [5.合并k个已排序的链表 【较难】](链表/reverseList.md)
 - [ ] [6.判断链表中是否有环 【简单】](链表/reverseList.md)
 - [ ] [7.链表中环的入口结点 【中等】](链表/reverseList.md)

@@ -8,21 +8,21 @@ export default [
         link: "/manuscripts/solo-algorithm",
     },
     {
+        text: "Battle面试官",
+        link: "/manuscripts/battle-interview",
+    },
+    {
         text: "前端",
         link: "/manuscripts/front-end",
     },
+
     {
         text: "Node后端",
         link: "/manuscripts/server-end",
     },
-
     {
         text: '微服务',
         link: "/manuscripts/microservice",
-    },
-    {
-        text: "Battle面试官",
-        link: "/manuscripts/battle-interview",
     },
     {
         text: "开发技巧",

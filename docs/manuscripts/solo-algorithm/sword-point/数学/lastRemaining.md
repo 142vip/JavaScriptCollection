@@ -43,9 +43,9 @@ f(n,m)=(f(n-1,m)+m)%n; （n>1）
 /*
  * @Description: 【中等】圆圈中最后剩下的数 约瑟夫问题
  * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
+ * @Author: 【B站&公众号】储凡
  * @Date: 2021-05-05 14:48:28
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
+ * @LastEditors: 【B站&公众号】储凡
  * @LastEditTime: 2021-05-05 15:11:02
  */
 
