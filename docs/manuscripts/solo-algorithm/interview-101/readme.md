@@ -15,12 +15,12 @@
 - [ ] [8.链表中倒数最后k个结点 【简单】](链表/findKthToTail.md)
 - [ ] [9.删除链表的倒数第n个节点 【中等】](链表/removeNthFromEnd.md)
 - [ ] [10.两个链表的第一个公共结点 【简单】](链表/findFirstCommonNode.md)
-- [ ] [11.链表相加(二) 【中等】](链表/reverseList.md)
-- [ ] [12.单链表的排序 【中等】](链表/reverseList.md)
-- [ ] [13.判断一个链表是否为回文结构 【简单】](链表/reverseList.md)
-- [ ] [14.链表的奇偶重排  【中等】](链表/reverseList.md)
-- [ ] [15.删除有序链表中重复的元素-I  【简单】](链表/reverseList.md)
-- [ ] [16.删除有序链表中重复的元素-II 【中等】](链表/reverseList.md)
+- [ ] [11.链表相加(二) 【中等】](链表/addInList.md)
+- [ ] [12.单链表的排序 【中等】](链表/sortInList.md)
+- [ ] [13.判断一个链表是否为回文结构 【简单】](链表/isPail.md)
+- [ ] [14.链表的奇偶重排  【中等】](链表/oddEvenList.md)
+- [ ] [15.删除有序链表中重复的元素-I  【简单】](链表/deleteDuplicates-1.md)
+- [ ] [16.删除有序链表中重复的元素-II 【中等】](链表/deleteDuplicates-2.md)
 
 ### 二分查找/排序
 
