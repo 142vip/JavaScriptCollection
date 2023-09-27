@@ -1,9 +1,9 @@
 /*
  * @Description: 【中等】反转链表
  * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
+ * @Author: 【B站&公众号】储凡
  * @Date: 2021-05-02 16:13:46
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
+ * @LastEditors: 【B站&公众号】储凡
  * @LastEditTime: 2021-05-02 16:36:52
  */
 

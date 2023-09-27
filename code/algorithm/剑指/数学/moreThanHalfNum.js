@@ -1,11 +1,5 @@
-/*
- * @Description:数组中出现次数超过一半的数字
- * 难度：简单
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-04-28 22:23:51
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-28 22:24:20
+/**
+ * 数组中出现次数超过一半的数字
  */
 
 

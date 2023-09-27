@@ -1,12 +1,3 @@
-/*
- * @Description:
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-04-23 22:14:37
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-23 22:23:46
- */
-
 /**
  * Math.power(base,exponent)
  * 保证base和exponent不同时为0。不得使用库函数，同时不需要考虑大数问题，也不用考虑小数点后面0的位数。

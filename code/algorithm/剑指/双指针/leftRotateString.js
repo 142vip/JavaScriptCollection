@@ -1,10 +1,5 @@
-/*
- * @Description: 【中等】左旋转字符串
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-04-30 22:00:13
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-30 22:16:13
+/**
+ * 【中等】左旋转字符串
  */
 
 function LeftRotateString(str, n) {

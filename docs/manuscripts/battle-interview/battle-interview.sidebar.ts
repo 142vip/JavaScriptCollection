@@ -4,16 +4,12 @@ export const battleInterviewSidebar = [
     link: 'introduce-share',
     children: [
       {
-        text: '前端常考',
-        link: 'problems/前端常考.md'
-      },
-      {
         text: '接口幂等',
         link: 'problems/接口幂等.md'
       },
       {
         text: 'Node面试',
-        link: 'problems/node面试.md'
+        link: 'problems/Node面试.md'
       },
       {
         text: 'Nginx面试',
@@ -33,20 +29,8 @@ export const battleInterviewSidebar = [
         link: 'problems/前端常考.md'
       },
       {
-        text: '接口幂等',
-        link: 'problems/接口幂等.md'
-      },
-      {
-        text: 'Node面试',
-        link: 'problems/node面试.md'
-      },
-      {
-        text: 'Nginx面试',
-        link: 'problems/Nginx面试.md'
-      },
-      {
-        text: 'MySQL面试',
-        link: 'problems/MySQL面试.md'
+        text: '后端汇总',
+        link: 'problems/后端汇总.md'
       }
     ]
   },

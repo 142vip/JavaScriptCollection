@@ -14,12 +14,13 @@ export default {
         navbarIcon: false,
         darkmode: "toggle",
         // 支持全屏
-        // fullscreen: true,
+        fullscreen: true,
         // 纯净模式
         // pure: true,
-        hostname: 'https://408.142vip.cn',
+        print: false, // 打印按钮
+        hostname: 'https://142vip.cn',
         author: {
-            name: '公众号：储凡',
+            name: '微信公众号：储凡',
             email: 'fairy_vip@2925.com',
             url: 'https://www.142vip.cn'
         },
@@ -59,7 +60,7 @@ export default {
         // 设置页脚
         displayFooter: true,
         footer: FOOTER_HTML_INFO,
-        copyright: false,
+        // copyright: false,
 
         // 主题色选择器
         // themeColor: {

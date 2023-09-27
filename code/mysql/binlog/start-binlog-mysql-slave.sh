@@ -3,9 +3,9 @@
 ###
 # @Description: binlog从服务器启动初始化配置
 # @Version: Beata1.0
-# @Author: 【B站&公众号】Rong姐姐好可爱
+# @Author: 【B站&公众号】储凡
 # @Date: 2020-09-03 22:36:42
-# @LastEditors: 【B站&公众号】Rong姐姐好可爱
+# @LastEditors: 【B站&公众号】储凡
 # @LastEditTime: 2020-09-03 23:57:38
 ###
 
