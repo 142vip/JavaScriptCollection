@@ -1,9 +1,9 @@
 /*
  * @Description: 【较难】二叉树中和为某一值的路径
  * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
+ * @Author: 【B站&公众号】储凡
  * @Date: 2021-05-12 22:01:00
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
+ * @LastEditors: 【B站&公众号】储凡
  * @LastEditTime: 2021-05-12 22:01:45
  */
 

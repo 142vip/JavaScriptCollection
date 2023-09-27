@@ -1,10 +1,5 @@
-/*
- * @Description: 【中等】和为S的两个数字
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-04-30 20:29:08
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-30 21:04:46
+/**
+ * 【中等】和为S的两个数字
  */
 
 

@@ -1,4 +1,4 @@
-# BM1 反转链表
+# BM3 链表中的节点每k个一组翻转
 
 
 
@@ -10,7 +10,7 @@
 
 ### 题目描述
 
-![反转链表.png](./reverseList.png)
+![反转链表.png](../images/reverseList.png)
 
 
 
@@ -18,7 +18,7 @@
 
 ### 代码实现
 
-@[code js](@code/algorithm/interview-101/reverseList.js)
+@[code js](@code/algorithm/interview-101/reverseGroup.js)
 
 
 ### 一些建议

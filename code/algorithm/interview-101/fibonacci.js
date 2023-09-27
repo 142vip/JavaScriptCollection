@@ -11,7 +11,6 @@ function fibonacciOne(n) {
 /**
  * 斐波那契数列，迭代
  * 难度：入门
- * @param n
  */
 function fibonacciTwo(n) {
   // 数列初始化

@@ -1,27 +1,12 @@
 
 # SHELL篇
 
+> 结合shell相关教程使用
 
-### 基础
+- [基础教程](../../server-end/linux/base-cmd.md)
+- [牛客网](https://www.nowcoder.com/exam/oj?page=1&tab=SHELL%E7%AF%87&topicId=195)
 
-#### cd命令
-#### ls命令
-#### cat命令
-
-#### echo命令
-
-#### grep命令
-
-#### sed命令
-
-#### awk命令
-
-### shell语法
-
-
-
-
-### 刷题
+### 刷题总结
 
 - [x] [SHELL-1 统计文件的行数【简单】](shell-1.md) 
 - [ ] [SHELL-2 打印文件的最后5行【简单】](shell-2.md)

@@ -13,7 +13,7 @@ export const frontEndSidebar = [
   },
   {
     text: '前端框架',
-    collapsible: true,
+    // collapsible: true,
     children: [
       {
         text: 'Vue',
@@ -38,7 +38,7 @@ export const frontEndSidebar = [
   },
   {
     text: 'UI框架',
-    collapsible: true,
+    // collapsible: true,
     children: [
       {
         text: 'Ant-Design-Vue',

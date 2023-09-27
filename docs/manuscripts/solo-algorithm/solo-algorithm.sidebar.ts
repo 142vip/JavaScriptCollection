@@ -1,6 +1,6 @@
 export const soloAlgorithmSidebar = [
   {
-    text: '面试必须刷101',
+    text: '面试必须刷Top101',
     link: 'interview-101'
   },
   {

@@ -1,9 +1,9 @@
 /*
  * @Description: 【较难】滑动窗口的最大值
  * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
+ * @Author: 【B站&公众号】储凡
  * @Date: 2021-04-29 21:49:42
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
+ * @LastEditors: 【B站&公众号】储凡
  * @LastEditTime: 2021-04-29 21:58:32
  */
 
