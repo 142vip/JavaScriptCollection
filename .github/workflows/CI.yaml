@@ -38,6 +38,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.20.2
+          cache: 'npm'
 
       - name: PNPM Install
         uses: pnpm/action-setup@v2
