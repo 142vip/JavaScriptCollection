@@ -45,18 +45,18 @@ export default {
         // logo: "/assets/408_logo.png",
 
         // 博客配置
-        blog: {
-            name: '测试',
-            avatar: '',
-            description: '',
-            intro: '',
-            roundAvatar: true,
-            timeline: "时间轴的顶部文字",
-            // articleInfo: "",
-            medias: {
-                "BiliBili": "https://space.bilibili.com/350937042?spm_id_from=333.1007.0.0"
-            }
-        },
+        // blog: {
+        //     name: '测试',
+        //     avatar: '',
+        //     description: '',
+        //     intro: '',
+        //     roundAvatar: true,
+        //     timeline: "时间轴的顶部文字",
+        //     // articleInfo: "",
+        //     medias: {
+        //         "BiliBili": "https://space.bilibili.com/350937042?spm_id_from=333.1007.0.0"
+        //     }
+        // },
         // 设置页脚
         displayFooter: true,
         footer: FOOTER_HTML_INFO,
@@ -76,7 +76,7 @@ export default {
             },
             copyright: false,
             // 开启博客功能
-            blog: true,
+            blog: false,
             // 代码块
             mdEnhance: {
                 codetabs: true,
@@ -92,7 +92,7 @@ export default {
                 playground: {
                     presets: ["ts", "vue"],
                 },
-                presentation: ["highlight", "math", "search", "notes", "zoom"],
+                revealjs: ["highlight", "math", "search", "notes", "zoom"],
                 stylize: [
                     {
                         matcher: "Recommended",

@@ -40,7 +40,7 @@ exports.execShell = async commands => {
       console.log(`\n<<<command(${count})--ending === `)
       // 指令异常，不执行后续指令
       if(execResult.code!==0){
-        break;
+        exit(1);
       }
     }
 }
