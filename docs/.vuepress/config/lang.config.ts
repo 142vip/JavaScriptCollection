@@ -1,4 +1,5 @@
 import {ThemeLocaleData} from "vuepress-theme-hope";
+import {NotFoundMsgList} from "./constant.config";
 
 /**
  * 支持中文
@@ -62,15 +63,10 @@ const localCN: ThemeLocaleData = {
     },
     routeLocales: {
         skipToContent: "跳至主要內容",
-        notFoundTitle: "访问的页面不存在，嘤嘤嘤",
-        notFoundMsg: [
-            "这里什么也没有",
-            "我们是怎么来到这儿的？",
-            "这 是 四 零 四 !",
-            "看起来你访问了一个失效的链接",
-        ],
-        back: "返回",
-        home: "首页",
+        notFoundTitle: "访问的页面不存在",
+        notFoundMsg: NotFoundMsgList,
+        back: "返回上一页",
+        home: "进入首页",
         openInNewWindow: "新窗口打开",
     },
 }
