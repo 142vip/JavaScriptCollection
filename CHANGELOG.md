@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.2-alpha.3](https://github.com/mmdapl/JavaScriptCollection/compare/v0.0.2-alpha.2...v0.0.2-alpha.3) (2023-10-13)
+
+
+### Features
+
+* 新增变更记录文档，支持release自动生成 ([77bf314](https://github.com/mmdapl/JavaScriptCollection/commit/77bf314d715a7b01cd8fe90e1691a9b13d192b68))
+* 站点404信息优化，新增周杰伦歌词 ([aafdd25](https://github.com/mmdapl/JavaScriptCollection/commit/aafdd25f0726ce730e463529739eaf6bedda30c6))
+
+
+### Bug Fixes
+
+* 修复图片显示异常，cdn域名切换为：cdn.statically.io ([5a20451](https://github.com/mmdapl/JavaScriptCollection/commit/5a204516805dc1cd173c9434a5e4e5b25c62d858))
+
+
+### Performance Improvements
+
+* vuepress版本升级到最新，关闭站点博客功能 ([ddd10b4](https://github.com/mmdapl/JavaScriptCollection/commit/ddd10b41a6ee71bb76bed67aabdf4ed4a9441a6c))
+* 流水线支持国内依赖源，规范CI/CD流程 ([bc36957](https://github.com/mmdapl/JavaScriptCollection/commit/bc369576e9f08d25139cbe1d118b052f5da4faf9))
+* 锁定版本Node>18，scripts钩子分配权限 ([09089fb](https://github.com/mmdapl/JavaScriptCollection/commit/09089fb6d022c50034129a77e772da284c513b03))
+
 ## [0.0.2-alpha.2](https://github.com/mmdapl/JavaScriptCollection/compare/v0.0.2-alpha.1...v0.0.2-alpha.2) (2023-09-12)
 
 
