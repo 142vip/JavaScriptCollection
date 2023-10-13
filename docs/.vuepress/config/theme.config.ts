@@ -111,6 +111,14 @@ export default {
                 tabs: true,
                 vPre: true,
                 vuePlayground: true,
+                // 文件导入
+                include: true,
+                // 容器
+                container: true,
+                // mermaid
+                mermaid: true,
+                // 自定义对齐
+                align: true,
             },
             copyCode: {
                 showInMobile: true

@@ -1,5 +1,6 @@
 ---
 home: true
+title: 首页
 heroAlt: 屈身守份 以待天时
 heroText: JavaScriptCollection
 tagline: 【理论+实战】超硬核全栈学习笔记，持续更新...
@@ -28,7 +29,6 @@ features:
     details: 代码虽好但读书提升更为重要,不可偏执一端,人文社科生活百态利于提升职场人生软技能
   - title: 心路历程
     details: 从小白一路磕磕绊绊,自认并无天赋,个中心酸唯有自知; 做好当下,便是对自己的不辜负
-
 ---
 
 
