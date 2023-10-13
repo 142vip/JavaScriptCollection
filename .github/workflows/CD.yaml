@@ -23,60 +23,33 @@ env:
 
 
 jobs:
-  install-init:
-    name: "流水线初始化"
-    runs-on: ubuntu-latest
+  ## 部署到Github-Pages
+  deploy-github:
+    name: "部署到Github-Pages"
+    runs-on: macos-latest
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
+          persist-credentials: false
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
+      ## 依赖下载完成后，或执行思维导图编译
       - name: PNPM Install
         uses: pnpm/action-setup@v2
         with:
           version: 7
-          run_install: true
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.20.2
-          cache: 'pnpm'
-
-      - name: Cache Dependencies
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
-
-  ## 部署到Github-Pages
-  deploy-github:
-    name: "部署到Github-Pages"
-    needs: install-init
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Restore Dependencies From cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
-
+          run_install: |
+            args: [--frozen-lockfile, --registry=https://registry.npmmirror.com]
 
       # 运行构建脚本
       - name: Build VuePress Site
-        run: ./scripts/bundle build_proxy
+        run: |
+          ./scripts/bundle build_proxy
 
+      ## 部署到Github Pages
       - name: Deploy To GitHub Page
         uses: crazy-max/ghaction-github-pages@v3
         with:
@@ -89,7 +62,7 @@ jobs:
 #  deploy-vercel:
 #    name: "部署到Vercel平台"
 #    needs: install-init
-#    runs-on: ubuntu-latest
+#    runs-on: macos-latest
 #    if: github.repository == '142vip/JavaScriptCollection'
 #    steps:
 #      - name: Checkout Code
@@ -117,18 +90,17 @@ jobs:
   ## 版本发布
   release:
     name: "创建Github发布"
-    runs-on: ubuntu-latest
-    needs: install-init
+    runs-on: macos-latest
     ## 主库master、next且执行release更新时执行
     if: github.repository == '142vip/JavaScriptCollection' && startsWith(github.event.head_commit.message, 'chore(release):')
 
     steps:
-      - name: Restore Dependencies From cache
-        uses: actions/cache@v3
+      - name: Checkout Code
+        uses: actions/checkout@v4
         with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
+          persist-credentials: false
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
+          fetch-depth: 0
 
       ### 打成压缩包
       - name: Create Zip Package
@@ -172,7 +144,7 @@ jobs:
 #  Deploy-ESC:
 #    name: "部署到ESC服务器"
 #    needs: install-init
-#    runs-on: ubuntu-latest
+#    runs-on: macos-latest
 #    ## 主库master、next且执行release更新时执行
 #    if: github.repository == '142vip/JavaScriptCollection' && startsWith(github.event.head_commit.message, 'chore(release):')
 #
