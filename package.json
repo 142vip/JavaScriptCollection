@@ -4,9 +4,11 @@
   "version": "0.0.2-alpha.2",
   "packageManager": "pnpm@7.2.1",
   "engines": {
-    "node": ">=14.20.1"
+    "node": "^18.x",
+    "pnpm": ">=7.2.1"
   },
   "scripts": {
+    "preinstall": "chmod +x ./scripts/*",
     "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"./scripts/lint --fix\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
@@ -15,18 +17,11 @@
     "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' + "
   },
   "scripts-info": {
+    "preinstall": "在安装依赖前分配脚本权限",
+    "postinstall": "在安装依赖后编译markdown文档转化为思维导图",
     "prepare": "安装依赖预执行脚本",
+    "build:mark-map": "./scripts/mark-map",
     "dev": "本地启动项目",
-    "build": "构建、打包",
-    "build:proxy": "构建、打包，支持项目名代理，使用第三方托管平台",
-    "image": "容器打包、构建镜像",
-    "image:faster": "本地build后，快速构建镜像",
-    "deploy:ali": "部署到阿里云服务器",
-    "deploy:github": "部署到github平台，集成ci",
-    "version:alpha": "alpha测试版号更新，基于next分之操作",
-    "version:patch": "稳定版号更新，基于master分支操作",
-    "lint": "eslint校验代码，指出异常",
-    "lintfix": "格式化代码，自动化处理异常",
     "clean": "快速删除本地依赖"
   },
   "devDependencies": {
