@@ -22,43 +22,52 @@ on:
 jobs:
   install-init:
     name: "流水线初始化"
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     permissions:
       actions: read
       pull-requests: read
 
     steps:
-      - name: checkout code
-        uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v4
         with:
+          persist-credentials: false
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
+      ## 依赖下载完成后，或执行思维导图编译
       - name: PNPM Install
         uses: pnpm/action-setup@v2
         with:
           version: 7
-          run_install: true
+          run_install: |
+            args: [--frozen-lockfile, --registry=https://registry.npmmirror.com]
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.20.2
-          cache: 'pnpm'
+      #      - name: Install Node.js
+      #        uses: actions/setup-node@v3
+      #        with:
+      #          node-version: 18.18.0
+      #          ## 淘宝镜像加速
+      #          registry-url: 'https://registry.npmmirror.com'
+      #          cache: 'pnpm'
 
       - name: Cache Dependencies
         uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
+
   Base-Build:
     name: "基础编译构建"
-    runs-on: ubuntu-latest
-    needs: install-init
+    runs-on: macos-latest
+    needs:
+      - install-init
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
+          persist-credentials: false
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
       - name: Restore Dependencies From Cache
@@ -68,18 +77,22 @@ jobs:
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Code LintFix
-        run: ./scripts/lint --fix
+        run: |
+          ./scripts/lint --fix
 
       - name: Build Site
-        run: ./scripts/bundle build
+        run: |
+          ./scripts/bundle build
 
       - name: Build Site With Proxy
-        run: ./scripts/bundle build_proxy
+        run: |
+          ./scripts/bundle build_proxy
 
   Build-Docker-Image:
     name: "构建Docker镜像"
-    runs-on: ubuntu-latest
-    needs: install-init
+    runs-on: macos-latest
+    needs:
+      - install-init
     ## 主库master、next且执行release更新时执行
     if: github.repository == '142vip/JavaScriptCollection' && startsWith(github.event.head_commit.message, 'chore(release):')
     permissions:
@@ -111,7 +124,10 @@ jobs:
 
       ## 构建，支持domain
       - name: Build To Dist
-        run: ./scripts/bundle build_proxy
+        run: |
+          ./scripts/bundle build_proxy
 
+      ## 快速构建并推送
       - name: Push Docker Image
-        run: ./scripts/bundle image_faster
+        run: |
+          ./scripts/bundle image_faster
