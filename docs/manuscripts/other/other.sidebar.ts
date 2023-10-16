@@ -14,5 +14,5 @@ export const OtherSidebar = [
   {
     text: '网站动态',
     link: 'big-event-history.md'
-  },
+  }
 ]

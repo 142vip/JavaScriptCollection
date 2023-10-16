@@ -1,7 +1,7 @@
 export const readBooksSidebar = [
   {
     text: '技术类',
-    prefix:"cs-books",
+    prefix: 'cs-books',
     children: [
       {
         text: 'ES6标准入门',
@@ -32,7 +32,7 @@ export const readBooksSidebar = [
   },
   {
     text: '非技术类',
-    prefix: "not-cs-book",
+    prefix: 'not-cs-book',
     children: [
       {
         text: '你好，孤独',

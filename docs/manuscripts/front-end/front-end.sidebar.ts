@@ -14,11 +14,11 @@ export const frontEndSidebar = [
   {
     text: '前端框架',
     collapsible: true,
-    prefix:"front-framework",
+    prefix: 'front-framework',
     children: [
       {
         text: 'Vue',
-        link: "vue.md"
+        link: 'vue.md'
       },
       {
         text: 'Nuxt',
@@ -37,7 +37,7 @@ export const frontEndSidebar = [
   {
     text: 'UI框架',
     // collapsible: true,
-    prefix:"ui-framework",
+    prefix: 'ui-framework',
     children: [
       {
         text: 'Ant-Design-Vue',
@@ -68,7 +68,7 @@ export const frontEndSidebar = [
   },
   {
     text: '服务部署',
-    prefix: "server-deploy",
+    prefix: 'server-deploy',
     children: [
       {
         text: '静态文件部署',

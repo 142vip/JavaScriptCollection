@@ -1,7 +1,7 @@
 export const battleInterviewSidebar = [
   {
     text: '面经分享',
-    prefix:"problems",
+    prefix: 'problems',
     children: [
       {
         text: '接口幂等',

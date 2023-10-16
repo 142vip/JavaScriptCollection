@@ -3,7 +3,7 @@ import { redisSidebar } from './database/redis/redis.sidebar'
 export const serverEndSidebar = [{
   text: 'Node.js',
   // collapsible: true,
-  prefix: "node-learn",
+  prefix: 'node-learn',
   children: [
     {
       text: '常用模块包',
@@ -45,7 +45,7 @@ export const serverEndSidebar = [{
 {
   text: '开发知识',
   collapsible: true,
-  prefix: "base",
+  prefix: 'base',
   children: [
     {
       text: 'RestFul风格',
@@ -72,7 +72,7 @@ export const serverEndSidebar = [{
 {
   text: '常用框架',
   collapsible: true,
-  prefix: "framework",
+  prefix: 'framework',
   children: [
     {
       text: 'Express',
@@ -114,7 +114,7 @@ export const serverEndSidebar = [{
 {
   text: '数据库',
   // collapsible: true,
-  prefix: "database",
+  prefix: 'database',
   children: [
     {
       text: 'Redis',
@@ -166,7 +166,7 @@ export const serverEndSidebar = [{
 {
   text: 'Linux操作',
   collapsible: true,
-  prefix:"linux",
+  prefix: 'linux',
   children: [
     {
       text: '基本指令',
@@ -193,13 +193,13 @@ export const serverEndSidebar = [{
           link: 'linux/curl.md'
         }
       ]
-    },
+    }
   ]
 },
 {
   text: '建站技能',
   collapsible: true,
-  prefix: "build-website",
+  prefix: 'build-website',
   children: [
     {
       text: 'SSL证书配置',
@@ -220,7 +220,7 @@ export const serverEndSidebar = [{
     {
       text: '配置gzip',
       link: 'nginx-gzip.md'
-    },
+    }
   ]
 }
 

@@ -9,7 +9,7 @@ export const microserviceSidebar = [
       {
         text: 'node-grpc',
         link: 'node-grpc.md'
-      },
+      }
     ]
   },
   {
@@ -36,29 +36,29 @@ export const microserviceSidebar = [
   },
   {
     text: 'ELK',
-    prefix: "elk",
+    prefix: 'elk',
     children: [
       {
-        text: "Elasticsearch",
-        link:"elasticsearch.md"
+        text: 'Elasticsearch',
+        link: 'elasticsearch.md'
       },
       {
-        text: "Kibana",
-        link:"kibana.md"
+        text: 'Kibana',
+        link: 'kibana.md'
       },
       {
-        text: "Logstash",
-        link:"logstash.md"
+        text: 'Logstash',
+        link: 'logstash.md'
       },
       {
-        text: "Filebeat",
-        link:"filebeat.md"
+        text: 'Filebeat',
+        link: 'filebeat.md'
       }
     ]
   },
   {
     text: '消息中间件',
-    prefix: "mq",
+    prefix: 'mq',
     children: [
       {
         text: 'RabbitMQ',
@@ -76,7 +76,7 @@ export const microserviceSidebar = [
   },
   {
     text: '容器相关',
-    prefix:"",
+    prefix: '',
     children: [
       {
         text: 'docker',

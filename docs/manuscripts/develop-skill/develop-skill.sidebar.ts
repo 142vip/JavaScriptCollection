@@ -5,16 +5,16 @@ export const developSkillSidebar = [
   },
   {
     text: 'npm&pnpm&yarn',
-    link: 'package-manager.md',
+    link: 'package-manager.md'
   },
   {
     text: 'monorepo',
-    link:"monorepo.md",
+    link: 'monorepo.md'
   },
   {
     text: '编译工具',
     // collapsible: true,
-    prefix:"build-tools",
+    prefix: 'build-tools',
     children: [
       {
         text: 'webpack',
@@ -28,11 +28,11 @@ export const developSkillSidebar = [
   },
   {
     text: '代码管理',
-    prefix:"code-manager",
+    prefix: 'code-manager',
     children: [
       {
         text: 'GIT',
-        link:"git.md",
+        link: 'git.md'
       },
       {
         text: '托管平台',
@@ -55,7 +55,7 @@ export const developSkillSidebar = [
   {
     text: '代码风格',
     // collapsible: true,
-    prefix: "code-style",
+    prefix: 'code-style',
     children: [
       {
         text: 'Eslint',
