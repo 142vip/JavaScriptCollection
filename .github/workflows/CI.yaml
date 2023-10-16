@@ -1,4 +1,5 @@
 ## 代码CI快速集成流水线，lint、fix、build
+## 注意： 只在142vip/JavaScriptCollection时执行
 
 
 name: CI
@@ -23,6 +24,7 @@ jobs:
   install-init:
     name: "流水线初始化"
     runs-on: macos-latest
+    if: github.repository == '142vip/JavaScriptCollection'
     permissions:
       actions: read
       pull-requests: read
@@ -35,21 +37,23 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      ## 依赖下载完成后，或执行思维导图编译
-      - name: PNPM Install
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
-          run_install: |
-            args: [--frozen-lockfile, --registry=https://registry.npmmirror.com]
-
-      #      - name: Install Node.js
-      #        uses: actions/setup-node@v3
+      #      ## 依赖下载完成后，或执行思维导图编译
+      #      - name: PNPM Install
+      #        uses: pnpm/action-setup@v2
       #        with:
-      #          node-version: 18.18.0
-      #          ## 淘宝镜像加速
-      #          registry-url: 'https://registry.npmmirror.com'
-      #          cache: 'pnpm'
+      #          version: 7
+      #          run_install: |
+      #            args: [--frozen-lockfile, --registry=https://registry.npmmirror.com]
+      # 安装Node环境
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.18.0
+          ## 淘宝镜像加速
+          registry-url: 'https://registry.npmmirror.com'
+
+      - name: Install Dependencies
+        run: ./scripts/ci
 
       - name: Cache Dependencies
         uses: actions/cache@v3
@@ -60,6 +64,7 @@ jobs:
   Base-Build:
     name: "基础编译构建"
     runs-on: macos-latest
+    if: github.repository == '142vip/JavaScriptCollection'
     needs:
       - install-init
     steps:
