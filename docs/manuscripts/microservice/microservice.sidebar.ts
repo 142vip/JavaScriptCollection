@@ -9,74 +9,86 @@ export const microserviceSidebar = [
       {
         text: 'node-grpc',
         link: 'node-grpc.md'
-      },
-      {
-        text: 'egg-grpc-client',
-        link: 'egg-grpc-client.md'
-      },
-      {
-        text: 'egg-grpc-server',
-        link: 'egg-grpc-server.md'
       }
     ]
   },
   {
     text: '服务注册|发现',
+    collapsible: true,
     children: [
       {
         text: 'Apollo',
-        link: '/manuscripts/server-end/database/redis'
+        link: 'apollo.md'
       },
       {
         text: 'Consul',
-        link: '/manuscripts/server-end/database/mysql'
+        link: 'consul.md'
       },
       {
         text: 'Nacos',
-        link: '/manuscripts/server-end/database/mongo'
+        link: 'nacos.md'
       }
     ]
   },
   {
     text: '网关',
-    link: '/manuscripts/kong'
+    link: 'kong'
   },
   {
     text: 'ELK',
-    link: '/manuscripts/elk'
+    prefix: 'elk',
+    children: [
+      {
+        text: 'Elasticsearch',
+        link: 'elasticsearch.md'
+      },
+      {
+        text: 'Kibana',
+        link: 'kibana.md'
+      },
+      {
+        text: 'Logstash',
+        link: 'logstash.md'
+      },
+      {
+        text: 'Filebeat',
+        link: 'filebeat.md'
+      }
+    ]
   },
   {
     text: '消息中间件',
+    prefix: 'mq',
     children: [
       {
         text: 'RabbitMQ',
-        link: '/manuscripts/mq'
+        link: 'rabbitmq.md'
       },
       {
         text: 'Kafka',
-        link: '/'
+        link: 'kafka.md'
       },
       {
         text: 'RocketMQ',
-        link: '/'
+        link: 'rocketmq.md'
       }
     ]
   },
   {
     text: '容器相关',
+    prefix: '',
     children: [
       {
         text: 'docker',
-        link: '/manuscripts/server-end/container-learn/docker-base'
+        link: 'docker.md'
       },
-
       {
         text: 'docker-compose',
-        link: '/manuscripts/server-end/container-learn/server-deploy'
+        link: 'docker-compose.md'
       },
       {
         text: 'k8s',
-        link: '/manuscripts/server-end/container-learn/docker-layout'
+        link: 'k8s.md'
       }
     ]
   }]

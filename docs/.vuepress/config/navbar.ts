@@ -32,7 +32,17 @@ export default [
         text: "读书整理",
         link: "/manuscripts/read-books",
     },
-
+    // {
+    //     text: "网站",
+    //     children:[
+    //       "/manuscripts/other/公众号文章.md",
+    //       "/manuscripts/other/技术文档.md",
+    //         {
+    //             text:"RoadMap",
+    //             link:"https://142vip-cn.feishu.cn/share/base/view/shrcnxtFKV2JfBZbqFh0GUxzTOg"
+    //         }
+    //     ],
+    // },
     {
         text: "其他",
         link: "/manuscripts/other",

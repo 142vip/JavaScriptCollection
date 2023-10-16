@@ -141,27 +141,27 @@ export default {
                     "XiGua"
                 ],
                 rootComponents: {
-                    // 公告
-                    notice: [
-                        {
-                            path: "/",
-                            title: "在线浏览",
-                            content: "网站无法访问时，建议通过科学上网访问备用网络",
-                            actions: [
-                                {
-                                    text: "尝鲜版",
-                                    link: "https://142vip.github.io/JavaScriptCollection",
-                                    type: "default",
-                                },
-                                {
-                                    text: "稳定版",
-                                    link: "https://142vip.cn/JavaScriptCollection",
-                                    type: "primary",
-                                },
-                            ],
-                            fullscreen: false,
-                        },
-                    ],
+                    // 公告 参考：https://plugin-components.vuejs.press/zh/guide/notice.html
+                    // notice: [
+                    //     {
+                    //         path: "/",
+                    //         title: "在线浏览",
+                    //         content: "网站无法访问时，建议通过科学上网访问备用网络",
+                    //         actions: [
+                    //             {
+                    //                 text: "尝鲜版",
+                    //                 link: "https://142vip.github.io/JavaScriptCollection",
+                    //                 type: "default",
+                    //             },
+                    //             {
+                    //                 text: "稳定版",
+                    //                 link: "https://142vip.cn/JavaScriptCollection",
+                    //                 type: "primary",
+                    //             },
+                    //         ],
+                    //         fullscreen: false,
+                    //     },
+                    // ],
                 },
             },
         }
