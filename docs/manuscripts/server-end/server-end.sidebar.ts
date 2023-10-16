@@ -2,33 +2,34 @@ import { redisSidebar } from './database/redis/redis.sidebar'
 
 export const serverEndSidebar = [{
   text: 'Node.js',
-  collapsible: true,
+  // collapsible: true,
+  prefix: 'node-learn',
   children: [
     {
       text: '常用模块包',
       collapsible: true,
-      link: 'node-learn/npm-package'
+      link: 'npm-package.md'
     },
     {
       text: 'stream',
       collapsible: true,
-      link: 'node-learn/stream'
+      link: 'stream.md'
     },
     {
       text: 'dayjs',
-      link: 'node-learn/dayjs.md'
+      link: 'dayjs.md'
     },
     {
       text: 'lodash',
-      link: 'node-learn/lodash.md'
+      link: 'lodash.md'
     },
     {
       text: 'rxjs',
-      link: 'node-learn/rxjs.md'
+      link: 'rxjs.md'
     },
     {
       text: 'axios',
-      link: 'node-learn/axios.md'
+      link: 'axios.md'
     }
   ]
 },
@@ -44,57 +45,54 @@ export const serverEndSidebar = [{
 {
   text: '开发知识',
   collapsible: true,
+  prefix: 'base',
   children: [
     {
       text: 'RestFul风格',
-      collapsible: true,
-      link: 'framework/express-learn'
+      link: 'restFul.md'
     },
     {
       text: '接口规范',
-      collapsible: true,
-      link: 'framework/koa-learn'
+      link: '接口规范.md'
     },
     {
       text: 'OAuth2.0协议',
-      collapsible: true,
-      link: 'framework/koa-learn'
+      link: 'OAuth2.0协议.md'
     },
     {
       text: '会话信息',
-      link: 'framework/nest-learn'
+      link: '会话信息.md'
     },
     {
       text: '远程调用',
-      link: 'framework/midway-learn'
+      link: '远程调用.md'
     }
   ]
 },
 {
-  text: '应用框架',
+  text: '常用框架',
   collapsible: true,
+  prefix: 'framework',
   children: [
     {
       text: 'Express',
-      collapsible: true,
-      link: 'framework/express/express-learn'
+      link: 'express-learn.md'
     },
     {
       text: 'Koa',
-      collapsible: true,
-      link: 'framework/koa/koa-learn'
+      link: 'koa-learn.md'
     },
     {
       text: 'Egg.js',
-      link: 'framework/egg'
+      link: 'egg'
     },
     {
       text: 'Nest.js',
-      link: 'framework/nest-learn'
+      link: 'nest-learn.md'
     },
     {
       text: 'Midway.js',
-      link: 'framework/midway-learn'
+      link: 'midway-learn.md'
     }
   ]
 },
@@ -115,20 +113,22 @@ export const serverEndSidebar = [{
 
 {
   text: '数据库',
-  collapsible: true,
+  // collapsible: true,
+  prefix: 'database',
   children: [
     {
       text: 'Redis',
-      prefix: 'database/redis',
+      prefix: 'redis',
+      collapsible: true,
       children: redisSidebar
     },
     {
       text: 'MySQL',
-      link: 'database/mysql'
+      link: 'mysql'
     },
     {
       text: 'MongoDB',
-      link: 'database/mongo/install.md'
+      link: 'mongo.md'
     }
   ]
 },
@@ -166,57 +166,60 @@ export const serverEndSidebar = [{
 {
   text: 'Linux操作',
   collapsible: true,
+  prefix: 'linux',
   children: [
     {
       text: '基本指令',
-      link: 'linux/base-cmd.md'
-    },
-    {
-      text: 'shell',
-      link: 'linux/shell.md'
+      link: 'base-shell.md'
     },
     {
       text: '软件安装',
-      link: 'linux/soft-install.md'
+      link: 'soft-install.md'
     },
     {
       text: '包管理器',
-      link: 'linux/package-manage.md'
+      link: 'package-manage.md'
     },
     {
-      text: 'vim',
-      link: 'linux/vim.md'
-    },
-    {
-      text: 'curl',
-      link: 'linux/curl.md'
+      text: '常用软件',
+      collapsible: true,
+      children: [
+        {
+          text: 'vim',
+          link: 'linux/vim.md'
+        },
+        {
+          text: 'curl',
+          link: 'linux/curl.md'
+        }
+      ]
     }
-
   ]
 },
 {
   text: '建站技能',
   collapsible: true,
+  prefix: 'build-website',
   children: [
     {
-      text: '配置gzip',
-      link: 'build-website/ssl-install.md'
-    },
-    {
       text: 'SSL证书配置',
-      link: 'build-website/ssl-install.md'
+      link: 'ssl-install.md'
     },
     {
       text: '镜像托管',
-      link: 'build-website/ssl-install.md'
+      link: 'store-image.md'
     },
     {
       text: '二级域名',
-      link: 'build-website/ssl-install.md'
+      link: 'web-domain.md'
     },
     {
       text: '反向代理',
-      link: 'build-website/ssl-install.md'
+      link: 'proxy.md'
+    },
+    {
+      text: '配置gzip',
+      link: 'nginx-gzip.md'
     }
   ]
 }

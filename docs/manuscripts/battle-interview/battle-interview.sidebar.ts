@@ -1,23 +1,23 @@
 export const battleInterviewSidebar = [
   {
     text: '面经分享',
-    link: 'introduce-share',
+    prefix: 'problems',
     children: [
       {
         text: '接口幂等',
-        link: 'problems/接口幂等.md'
+        link: '接口幂等.md'
       },
       {
-        text: 'Node面试',
-        link: 'problems/Node面试.md'
+        text: 'Node',
+        link: 'Node面试.md'
       },
       {
-        text: 'Nginx面试',
-        link: 'problems/Nginx面试.md'
+        text: 'Nginx',
+        link: 'Nginx面试.md'
       },
       {
-        text: 'MySQL面试',
-        link: 'problems/MySQL面试.md'
+        text: 'MySQL',
+        link: 'MySQL面试.md'
       }
     ]
   },
@@ -35,11 +35,7 @@ export const battleInterviewSidebar = [
     ]
   },
   {
-    text: '工作机会',
-    link: 'social-recruit'
-  },
-  {
-    text: '小技巧',
+    text: '面试技巧',
     link: 'social-recruit'
   }
 ]

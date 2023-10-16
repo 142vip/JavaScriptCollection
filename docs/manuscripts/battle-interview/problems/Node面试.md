@@ -72,7 +72,7 @@ process.nextTick(() => {
 
 
 
-#### Node 跟 Chrome 有什么区别？
+## Node 跟 Chrome 有什么区别？
 　　
 - 架构一样，都是基于事件驱动的异步架构！
 
@@ -83,7 +83,7 @@ process.nextTick(() => {
 - node 没有HTML，WebKit和显卡等等的UI技术支持
 
 
-#### Cookies如何防范XSS攻击？
+## Cookies如何防范XSS攻击？
 
 XSS(Cross-Site Scripting，跨站脚本攻击)是指攻击者在返回的HTML中插入JavaScript脚本。为了减轻这些攻击，需要在HTTP头部配置set-cookie:
 
@@ -101,8 +101,7 @@ Set-Cookie: sid=; HttpOnly. 使用Express的话，cookie-session默认配置好�
 
 ## 常考问题
 
-
-1. 图片懒加载是如何实现的？（字节跳动）
+### 1. 图片懒加载是如何实现的？（字节跳动）
 
 将图片的所有src均指向一个小图片或者设为空 真正的src放在data-src中，监听滚动事件，用户浏览到该图片时 将src真实值从data-src中拷贝到src中去
 
@@ -157,8 +156,6 @@ documentElement.addEventListener('keyup', debounce(getData, 1000))
 - 定时器
 - 时间差
 
-
-
 ```js
 // 基于定时器实现
 function throttle(func, wait) {
@@ -193,11 +190,7 @@ function throttle(func, wait) {
 
 看完后，我觉得有点单例模式的感觉...
 
-
-
 参考lodash节流函数:https://www.lodashjs.com/docs/lodash.throttle
-
-
 
 闭包有三个特性：
 - 1.函数嵌套函数
@@ -210,11 +203,10 @@ function throttle(func, wait) {
 - 2.避免全局变量的污染
 - 3.私有成员的存在
 
-参考：https://segmentfault.com/a/1190000000652891
+参考：<https://segmentfault.com/a/1190000000652891>
 
 
------
-2.了解TS吗
+### 2.了解TS吗
 
 - 有清晰的函数参数和接口属性，便于修改
 - 会有静态检查
@@ -222,8 +214,7 @@ function throttle(func, wait) {
 - 配和编译器，提示充分
 - 社区活跃
 
-----
-3. 简单介绍下koa
+### 3.简单介绍下koa
 
 Koa本质上是调用一系列的中间件，来处理对应的请求，并决定是否传递到下一个中间件去处理
 
@@ -234,13 +225,12 @@ Koa本质上是调用一系列的中间件，来处理对应的请求，并决�
 - 在建立好http服务器后，会调用**koa-compose模块**对middleware中间件数组进行处理。
 > 原理就是：会从middleware数组中取第一个函数开始执行，中间件函数中调用next方法就会去取下一个中间件函数继续执行。每个中间件函数执行完毕后都会返回一个promise对象。(ps:调用next方法并不是表示当前中间件函数执行完毕了，调用next之后仍可以继续执行其他代码)
 
-参考：https://zhuanlan.zhihu.com/p/29455788
+参考：<https://zhuanlan.zhihu.com/p/29455788>
 
 Compose 是一种基于 Promise 的流程控制方式，可以通过这种方式对异步流程同步化，解决之前的嵌套回调和 Promise 链式耦合。
 
-----
 
-4.node多线程怎么管理
+### 4.node多线程怎么管理
 
 **Node.js 只支持单线程**。但是可以开启多进程充分利用多核 CPU，
 单个 Node.js 实例运行在单个线程中。 为了充分利用多核系统，有时需要启用一组 Node.js 进程去处理负载任务。可以使用node.js原生的cluster （集群）模块创建共享服务器端口的子进程，cluster 模块支持两种分发连接的方法。
@@ -254,36 +244,31 @@ Compose 是一种基于 Promise 的流程控制方式，可以通过这种方式
 
 对应到egg的多线程模型
 
-  ----
-4.node路由是什么
+### 4.node路由是什么
 
 node中的路由由自己的框架处理，通过分析url路径分发到相应控制器中，一个路由对应的是一个或多个负责请求调用的js文件，里面包括业务逻辑（拦截，捕获，处理）
 
 路由是一组映射关系，分析URL将访问的内容映射到实际的action或者controller上。
 
 
----  
-5.Node的Event Loop 【重要】
+### 5.Node的Event Loop 【重要】
 
 
---- 
-6.介绍一下node中间件
+### 6.介绍一下node中间件
 
-中间件就是请求req和响应res之间的一个应用，请求浏览器向服务器发送一个请求后，服务器直接通过request定位属性的方式得到通过request携带过去的数据，就是用户输入的数据和浏览器本身的数据信息，这中间就一定有一个函数将这些数据分类做了处理，最后让request对象调用使用，这个处理函数就是我们所所得中间插件。比如生活中的租客和房主，中间需要一个中介来搭桥，这个中介就类似于中间件。一般来说，中间件用来封装底层细节，组织基础功能，分离基础设施和业务逻辑
+中间件就是请求req和响应res之间的一个应用，请求浏览器向服务器发送一个请求后，
+服务器直接通过request定位属性的方式得到通过request携带过去的数据，就是用户输入的数据和浏览器本身的数据信息，
+这中间就一定有一个函数将这些数据分类做了处理，最后让request对象调用使用，
+这个处理函数就是我们所所得中间插件。
+
+比如生活中的租客和房主，中间需要一个中介来搭桥，这个中介就类似于中间件。一般来说，中间件用来封装底层细节，组织基础功能，分离基础设施和业务逻辑
 
 
-
-
-7.数组去重的方法有哪些
-
-参考： https://segmentfault.com/a/1190000016418021?utm_source=tag-newest
+### 7.数组去重的方法有哪些
 
 - 遍历数组，indexof过滤，再push
-
 - reduce方法
-
 - filter方法
-
 - 利用集合Set元素不能重合，定义集合，解构后成新数组
 
 
@@ -321,17 +306,18 @@ let arr2 = arr.filter(function(item,index) {
 })
 // 4. Set
 let arr2 = [...new Set(arr)]
-
 ```
 
+参考： <https://segmentfault.com/a/1190000016418021?utm_source=tag-newest>
 
-8.判断类型有哪些方法
 
-参考：https://www.jb51.net/article/190286.htm
+### 8.判断类型有哪些方法
 
-- typeof：可以判断出’string’,‘number’,‘boolean’,‘undefined’,‘symbol’
-  但判断 typeof(null) 时值为 ‘object’; 判断数组和对象时值均为 ‘object’
+- typeof：可以判断出`string`,`number`,`boolean`,`undefined`,`symbol`
+  但判断 typeof(null) 时值为 `object`; 判断数组和对象时值均为 `object`
 - instanceof：原理是 构造函数的 prototype 属性是否出现在对象的原型链中的任何位置
 - Object.prototype.toString.call()：常用于判断浏览器内置对象,对于所有基本的数据类型都能进行判断
 - Array.isArray()：只能用于判断是否为数组
-- constructor 
+- constructor
+ 
+参考：<https://www.jb51.net/article/190286.htm>

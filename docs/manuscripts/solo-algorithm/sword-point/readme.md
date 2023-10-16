@@ -5,7 +5,7 @@
 
 - [牛客网](https://www.nowcoder.com/exam/oj/ta?tpId=13)
 
-### 数组和矩阵
+## 数组和矩阵
 
  - [x] [【简单】数组中重复的数字](数组和矩阵/duplicate.md)
  - [x] [【中等】二维数组中的查找](数组和矩阵/find.md)
@@ -14,7 +14,7 @@
  - [x] [【简单】第一个只出现一次的字符位置](数组和矩阵/firstNotRepeatingChar.md)
 
 
-### 栈队列堆
+## 栈、队列、堆
 
 - [x] [【简单】两个栈实现队列](栈队列堆/stackToQueue.md)
 - [x] [【中等】最小的k个数](栈队列堆/getLeastNumbers.md)
@@ -26,7 +26,7 @@
 
 
 
-### 双指针
+## 双指针
 
 - [x] [【中等】和为S的两个数字](双指针/findNumbersWithSum.md)
 - [ ] [【中等】和为S的连续正数序列](双指针/findContinuousSequence.md)
@@ -35,7 +35,7 @@
 
 
 
-### 链表
+## 链表
 
 - [ ] [【简单】合并两个排序的链表](链表/merge.md)
 - [ ] [【简单】两个链表的第一个公共结点](链表/findFirstCommonNode.md)
@@ -49,7 +49,7 @@
 
 
 
-### 树
+## 树
 
 - [ ] [【中等】重建二叉树](树/reConstructBinaryTree.md)
 - [ ] [【中等】二叉树的下一个结点](树/getNext.md)
@@ -123,7 +123,7 @@
 - [ ] [【中等】二进制中1的个数](位运算/numberOf1.md)
 - [x] [【中等】数组中只出现一次的两个数字](位运算/findNumsAppearOnce.md)
 
-### 其他分类
+## 其他分类
 
 - [x] [【简单】不用加减乘除做加法](其他相关/add.md)
 - [ ] [【中等】扑克牌顺子](其他相关/isContinuous.md)

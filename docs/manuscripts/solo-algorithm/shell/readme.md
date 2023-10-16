@@ -3,10 +3,10 @@
 
 > 结合shell相关教程使用
 
-- [基础教程](../../server-end/linux/base-cmd.md)
+- [基础教程](../../server-end/linux/base-shell.md)
 - [牛客网](https://www.nowcoder.com/exam/oj?page=1&tab=SHELL%E7%AF%87&topicId=195)
 
-### 刷题总结
+## 刷题总结
 
 - [x] [SHELL-1 统计文件的行数【简单】](shell-1.md) 
 - [ ] [SHELL-2 打印文件的最后5行【简单】](shell-2.md)
@@ -44,7 +44,7 @@
 - [ ] [SHELL-34 ps分析-统计VSZ,RSS各自总和 【中等】](shell-34.md) 
 
 
-### 参考资料
+## 参考资料
 
 - <https://www.runoob.com/linux/linux-shell.html>
 - <https://www.nowcoder.com/exam/oj?page=1&tab=SHELL%E7%AF%87&topicId=195>

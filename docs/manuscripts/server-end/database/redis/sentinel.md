@@ -9,7 +9,7 @@ Redis的Sentinel系统用于管理多个Redis，主要执行:
 - 配置提供者：在 Redis Sentinel 模式下，客户端应用 在初始化时连接的是 Sentinel 节点集合，从中获取主节点 的信息。
   
 
-![基本原理](./sentinel.png)
+![基本原理](images/sentinel.png)
 
 Redis的Sentinel系统是一个分布式的系统，可以在系统中配置一个或多个Sentinel
 
@@ -20,13 +20,13 @@ Redis的Sentinel系统是一个分布式的系统，可以在系统中配置一�
 - 主观下线：适用于所有 主节点 和 从节点。如果在 down-after-milliseconds 毫秒内，Sentinel 没有收到 目标节点 的有效回复，则会判定
   该节点为主观下线。
 
-![主观下线](./subjective-down.png)
+![主观下线](images/subjective-down.png)
 
 - 客观下线： 只适用于 主节点。如果 主节点 出现故障，Sentinel 节点会通过 sentinel is-master-down-by-addr 命令，向其它
   Sentinel 节点询问对该节点的状态判断。如果超过 `quorum` 设置的数据量判定 主节点 不可达，则该 Sentinel 节点会判断 主节点 为
   客观下线。
 
-![客观下线](./objective-down.png)
+![客观下线](images/objective-down.png)
 
 ### 快速搭建
 

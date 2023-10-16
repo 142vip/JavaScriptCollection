@@ -13,74 +13,74 @@ export const frontEndSidebar = [
   },
   {
     text: '前端框架',
-    // collapsible: true,
+    collapsible: true,
+    prefix: 'front-framework',
     children: [
       {
         text: 'Vue',
-        children: [{
-          text: '安装',
-          link: 'front-framework/vue'
-        }]
+        link: 'vue.md'
       },
       {
         text: 'Nuxt',
-        link: 'front-framework/nuxt'
+        link: 'nuxt.md'
       },
       {
         text: 'Vuepress',
-        link: 'front-framework/nuxt'
+        link: 'vuepress.md'
       },
       {
         text: 'JQuery',
-        link: 'front-framework/jquery'
+        link: 'jquery'
       }
     ]
   },
   {
     text: 'UI框架',
     // collapsible: true,
+    prefix: 'ui-framework',
     children: [
       {
         text: 'Ant-Design-Vue',
-        link: 'ui-framework/ant-design-vue'
+        link: 'ant-design-vue'
       },
       {
         text: 'Element-UI',
-        link: 'ui-framework/element-ui'
+        link: 'element-ui'
       },
       {
         text: 'IView-Design',
-        link: 'ui-framework/iview-design'
+        link: 'iview-design'
       },
 
       {
         text: 'VAnt-UI',
-        link: 'ui-framework/vant-ui'
+        link: 'vant-ui'
       },
       {
         text: 'Layer-UI',
-        link: 'ui-framework/layer-ui'
+        link: 'layer-ui'
       },
       {
         text: 'Bootstrap',
-        link: 'ui-framework/bootstrap'
+        link: 'bootstrap'
       }
     ]
   },
   {
     text: '服务部署',
+    prefix: 'server-deploy',
     children: [
       {
         text: '静态文件部署',
-        link: 'server-deploy/static-nginx'
+        link: '静态文件部署.md'
       },
       {
         text: '服务端渲染',
-        link: 'server-deploy/front-end-server'
+        link: '服务端渲染.md'
       },
       {
         text: 'SSR优化',
-        link: 'server-deploy/ssr'
+        link: 'SSR优化.md'
       }
     ]
   }
