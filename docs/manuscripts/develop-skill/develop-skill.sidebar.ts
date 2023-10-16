@@ -4,100 +4,66 @@ export const developSkillSidebar = [
     link: 'software-install/readme.md'
   },
   {
-    text: '包管理器',
-    collapsible: true,
-    children: [
-      {
-        text: 'npm',
-        link: 'npm/npm'
-      },
-      {
-        text: 'pnpm',
-        link: 'npm/pnpm'
-      },
-      {
-        text: 'yarn',
-        link: 'npm/yarn'
-      }
-    ]
+    text: 'npm&pnpm&yarn',
+    link: 'package-manager.md',
   },
   {
     text: 'monorepo',
-    collapsible: true,
-    children: [
-      {
-        text: 'pnpm实现',
-        link: 'monorepo/pnpm-style.md'
-      },
-      {
-        text: 'turboRepo',
-        link: 'monorepo/turboRepo.md'
-      }
-    ]
+    link:"monorepo.md",
   },
   {
     text: '编译工具',
-    collapsible: true,
+    // collapsible: true,
+    prefix:"build-tools",
     children: [
       {
         text: 'webpack',
-        link: '/'
+        link: 'webpack.md'
       },
       {
         text: 'vite',
-        link: '/'
+        link: 'vite.md'
       }
     ]
   },
   {
     text: '代码管理',
-    collapsible: true,
+    prefix:"code-manager",
     children: [
       {
-        text: 'Git',
-        children: [
-          {
-            text: '基本操作',
-            link: 'code-manager/git.md'
-          },
-          {
-            text: '分支版本规范',
-            link: 'code-manager/git-branch-rule.md'
-          },
-          {
-            text: '提交规范',
-            link: 'code-manager/git-commit-rule.md'
-          },
-          {
-            text: '修改历史提交信息',
-            link: 'code-manager/git-info-reset.md'
-          }
-        ]
+        text: 'GIT',
+        link:"git.md",
       },
       {
-        text: 'Github && GitLab',
-        link: 'code-manager/github.md'
+        text: '托管平台',
+        link: 'github.md'
       },
       {
-        text: 'CI && CD',
-        children: [{
-          text: 'Jenkins',
-          link: 'code-manager/jenkins.md'
-        }]
+        text: '流水线',
+        link: 'github-actions.md'
+      },
+      {
+        text: 'CI & CD',
+        link: 'CI-CD.md'
+      },
+      {
+        text: 'Jenkins',
+        link: 'jenkins.md'
       }
     ]
   },
   {
     text: '代码风格',
-    collapsible: true,
+    // collapsible: true,
+    prefix: "code-style",
     children: [
       {
         text: 'Eslint',
-        link: 'code-style/eslint'
+        link: 'eslint.md'
       },
       {
         text: 'Prettier',
-        link: 'code-style/prettier'
+        link: 'prettier.md'
       }
     ]
   }

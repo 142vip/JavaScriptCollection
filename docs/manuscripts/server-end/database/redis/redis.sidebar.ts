@@ -4,10 +4,6 @@ export const redisSidebar = [
     link: 'base-install.md'
   },
   {
-    text: 'key命名规范',
-    link: 'key-rule.md'
-  },
-  {
     text: '使用规范',
     link: 'use-rule.md'
   },

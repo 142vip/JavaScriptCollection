@@ -8,19 +8,11 @@ export const OtherSidebar = [
     link: 'frequent-site-link.md'
   },
   {
-    text: '技术文档',
-    link: 'api-docs.md'
-  },
-  {
     text: '变更记录',
     link: 'changelog.md'
   },
   {
     text: '网站动态',
-    link: 'todo.md'
+    link: 'big-event-history.md'
   },
-  {
-    text: 'Todo计划',
-    link: 'todo-list'
-  }
 ]

@@ -1,60 +1,62 @@
 export const readBooksSidebar = [
   {
     text: '技术类',
+    prefix:"cs-books",
     children: [
       {
         text: 'ES6标准入门',
-        link: 'cs-books/es-standard'
+        link: 'es-standard'
       },
       {
         text: '更了不起的Node.js ',
         collapsible: true,
-        link: 'cs-books/狼书.md'
+        link: '狼书.md'
       },
       {
         text: '了不起的Node.js',
-        link: 'cs-books/了不起的Node.js.md'
+        link: '了不起的Node.js.md'
       },
       {
         text: '深入浅出Node.js',
-        link: 'cs-books/深入浅出的Node.js.md'
+        link: '深入浅出的Node.js.md'
       },
       {
         text: '分布式消息中间件实践',
-        link: 'cs-books/分布式消息中间件实践.md'
+        link: '分布式消息中间件实践.md'
       },
       {
         text: '高性能Web服务器详解',
-        link: 'cs-books/nginx'
+        link: '高性能Web服务器详解.md'
       }
     ]
   },
   {
     text: '非技术类',
+    prefix: "not-cs-book",
     children: [
       {
         text: '你好，孤独',
-        link: 'not-cs-book/hello-alone.md'
+        link: 'hello-alone.md'
       },
       {
         text: '好的，爱情',
-        link: 'not-cs-book/good-love.md'
+        link: '好的，爱情.md'
       },
       {
         text: '在细雨中呼喊',
-        link: 'not-cs-book/shouting-drizzle.md'
+        link: '在细雨中呼喊.md'
       },
       {
         text: '第七天',
-        link: 'not-cs-book/seventh-day.md'
+        link: '第七天.md'
       },
       {
         text: '文城',
-        link: 'not-cs-book/wen-city.md'
+        link: '文城.md'
       },
       {
         text: '兄弟',
-        link: 'not-cs-book/brother.md'
+        link: '兄弟.md'
       }
     ]
   }
