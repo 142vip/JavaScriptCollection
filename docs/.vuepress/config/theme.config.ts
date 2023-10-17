@@ -71,6 +71,11 @@ export default {
         // },
 
         plugins: {
+            comment:{
+                  provider: "Artalk",
+                  server:"https://408.142vip.cn/",
+                  site:'JavaScriptCollection',
+            },
             readingTime: {
                 wordPerMinute: 200
             },
