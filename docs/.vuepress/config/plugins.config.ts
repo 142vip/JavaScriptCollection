@@ -24,12 +24,8 @@ export default {
         }),
         // commentPlugin({
         //     provider: "Artalk",
-        //     server:"http://127.0.0.1:8080",
-        //     // el:'#Comments',
-        //     // pageKey:   `${location.pathname}`,
-        //     // pageTitle: `${document.title}`,
-        //     site:      'JavaScriptCollection',
-        //
+        //     server:"https://408.142vip.cn/",
+        //     site:'JavaScriptCollection',
         // })
     ]
 }
