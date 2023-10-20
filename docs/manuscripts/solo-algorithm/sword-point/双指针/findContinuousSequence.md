@@ -3,18 +3,18 @@
 
 
 
-### 题目链接
+## 题目链接
 
 - [牛客网]()
 - [欢迎讨论]()
 
-### 题目描述
+## 题目描述
 
 
-### 思路
+## 刷题思路
 
 
-### 代码实现
+## 代码实现
 
 @[code js](@code/algorithm/剑指/双指针/findContinuousSequence.js)
 
@@ -58,4 +58,4 @@ function FindContinuousSequence(sum) {
 
 ```
 
-### 一些建议
+## 一些建议

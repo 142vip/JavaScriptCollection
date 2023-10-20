@@ -5,11 +5,10 @@ export const readBooksSidebar = [
     children: [
       {
         text: 'ES6标准入门',
-        link: 'es-standard'
+        link: 'ES6标准入门.md'
       },
       {
         text: '更了不起的Node.js ',
-        collapsible: true,
         link: '狼书.md'
       },
       {

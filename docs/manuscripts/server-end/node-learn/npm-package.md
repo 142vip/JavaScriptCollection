@@ -1,9 +1,9 @@
 ---
 title: 常用模块包
 ---
+# 常用NPM包
 
-
-### gm
+## gm
 
 > 使用前，先安装GraphicsMagick或者ImageMagick，支持图片处理，添加水印、裁剪...
 
@@ -36,7 +36,7 @@ gm('/path/to/my/img.jpg')
 - 在线体验：<http://aheckmann.github.io/gm/> 
 
 
-### moment
+## moment
 
 > 时间格式化
 
@@ -50,7 +50,7 @@ moment(XXXXXX).format('YYYY-MM-DD HH:mm:ss')
 
 - <https://momentjs.com/docs/>
 
-### crypto || crypto.js
+## crypto || crypto.js
 
 > 支持加密、哈希、指定长度随机字符串 等 【非常好用】
 
@@ -75,7 +75,7 @@ function hashMac(code,key){
 
 - crypto.js地址：<https://www.npmjs.com/package/crypto.js>
 
-### path
+## path
 
 > 内置模块。路径处理，在相对路径、绝对路劲的处理上，很有优势
 
@@ -94,7 +94,7 @@ path.sep
 
 - <http://nodejs.cn/api/path.html>
 
-### fs-extra
+## fs-extra
 
 
 > 文件操作相关，基于fs模块封装
@@ -111,7 +111,7 @@ fse.readdirSync(path.join(_dirname),'XXXX')
 
 - <https://www.npmjs.com/package/fs-extra>
 
-### qr-images
+## qr-images
 
 
 > 简单易用的二维码生成,模块[qrcode](https://www.npmjs.com/package/qrcode)也支持类似功能
@@ -130,7 +130,7 @@ const svg_string = qr.imageSync('I love QR!', { type: 'svg' });
 - <https://www.npmjs.com/package/qr-image>
 
 
-### lodash
+## lodash
 
 
 
@@ -152,7 +152,7 @@ const  _ = require('lodash');
 - 地址：<https://www.lodashjs.com/>
 
 
-### bluebird
+## bluebird
 
 
 > bluebird是一个第三方Promise类库，相比其它第三方类库或标准对象来说，功能更齐全而不臃肿、浏览器兼容性更好!

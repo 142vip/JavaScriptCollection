@@ -21,6 +21,5 @@ console.log(dayjs('2022-01-25').unix())
 // 获取当前月份包含的天数
 console.log(dayjs('2019-01-25').daysInMonth())
 
-
 // 原生Date对象
 console.log(dayjs('2019-01-25').toDate())

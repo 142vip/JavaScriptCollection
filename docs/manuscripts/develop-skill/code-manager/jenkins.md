@@ -1,3 +1,7 @@
+---
+title: Jenkins
+permalink: /manuscripts/develop-skill/code-manager/jenkins.html
+---
 
 # Jenkins
 

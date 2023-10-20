@@ -1,11 +1,11 @@
 # 二维数组中的查找
 
-### 题目链接
+## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)
 - [欢迎讨论](https://github.com/142vip/JavaScriptCollection/issues/20)
 
-### 题目描述
+## 题目描述
 
 在一个二维数组array中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
 
@@ -23,10 +23,10 @@
 
 - 给定 target = 3，返回 false。
 
-### 思路
+## 刷题思路
 
-### 代码实现
+## 代码实现
 
 @[code js](@code/algorithm/剑指/数组和矩阵/find.js)
 
-### 一些建议
+## 一些建议

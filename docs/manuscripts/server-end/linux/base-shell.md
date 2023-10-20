@@ -1,6 +1,6 @@
 # 常用命令
 
-### cd命令
+## cd
 
 Change Directory的缩写，用来变换工作目录的命令
 
@@ -19,7 +19,7 @@ cd ..
 ```
 
 
-### ls命令
+## ls
 列出目录及文件名
 - `-a` ：全部的文件，连同隐藏文件( 开头为 . 的文件) 一起列出来(常用)
 - `-d` ：仅列出目录本身，而不是列出目录内的文件数据(常用)
@@ -33,7 +33,7 @@ ls -l
 ls -al
 ```
 
-### pwd命令
+## pwd
 Print Working Directory 的缩写，显示目前所在目录的命令
 
 - `-P` ：显示出确实的路径，而非使用链接 (link) 路径。
@@ -43,7 +43,7 @@ pwd
 pwd -P
 ```
 
-### mkdir命令
+## mkdir
 
 创建新的目录
 - `-m` ：直接配置文件的权限！
@@ -61,7 +61,7 @@ mkdir -p test
 
 ```
 
-### rmdir命令
+## rmdir
 
 删除空的目录
 
@@ -75,7 +75,7 @@ rmdir test/
 rmdir -p test/aaa/bbb
 ```
 
-### cp命令
+## cp
 
 拷贝文件和目录
 
@@ -103,7 +103,7 @@ cp ~/test /tmp/test
 cp -i ~/test /tmp/test
 ```
 
-### mv命令
+## mv
 
 移动文件与目录，或修改名称
 
@@ -125,7 +125,7 @@ mv -f sourceDir targetDir
 
 ```
 
-### rm命令
+## rm
 
 移除文件或目录
 
@@ -133,7 +133,7 @@ mv -f sourceDir targetDir
 - -i ：互动模式，在删除前会询问使用者是否动作
 - -r ：**递归删除！最常用在目录的删除了**！
 
-### head命令
+## head
 
 取出文件前面几行
 
@@ -143,7 +143,7 @@ mv -f sourceDir targetDir
 head -n -10 running.log
 ```
 
-### tail命令
+## tail
 
 取出文件后面几行，一般用来查看日志
 
@@ -156,7 +156,7 @@ tail [-n number] 文件
 tail -n -10 running.log
 ```
 
-### cat命令
+## cat
 
 由第一行开始显示文件内容，对于大文件谨慎使用
 
@@ -204,7 +204,7 @@ cat 1.txt
 
 
 
-### echo命令
+## echo
 
 ```bash
 # 直接输出文本
@@ -249,7 +249,7 @@ echo `date`
 
 
 
-### grep命令
+## grep
 
 参考： https://www.cnblogs.com/chentiao/p/16626503.html
 
@@ -276,7 +276,7 @@ grep -v "^$" test.txt
 grep -n -v "sbin" test.txt
 ```
 
-### sed命令
+## sed
 
 sed是Stream Editor（字符流编辑器）的缩写，简称流编辑器。
 ed是操作、过滤和转换文本内容的强大工具。sed的常用功能包含对文件实现快速增删改查（增加、删
@@ -292,6 +292,6 @@ sed [选项] [sed内置命令字符] [输入文件]
 ```
 
 
-### awk命令
+## awk
 
 

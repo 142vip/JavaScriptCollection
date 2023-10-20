@@ -51,7 +51,7 @@
     "vuepress-plugin-md-enhance": "2.0.0-beta.238",
     "vuepress-plugin-search-pro": "2.0.0-beta.238",
     "vuepress-theme-hope": "2.0.0-beta.238",
-    "webpack": "^5.88.2",
+    "webpack": "^5.89.0",
     "xmind-embed-viewer": "^1.2.0"
   }
 }

@@ -1,3 +1,7 @@
+---
+title: Git的使用
+permalink: /manuscripts/develop-skill/code-manager/git.html
+---
 
 # Git的使用
 

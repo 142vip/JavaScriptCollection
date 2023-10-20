@@ -32,7 +32,7 @@ export const microserviceSidebar = [
   },
   {
     text: '网关',
-    link: 'kong'
+    link: 'gateway.md'
   },
   {
     text: 'ELK',

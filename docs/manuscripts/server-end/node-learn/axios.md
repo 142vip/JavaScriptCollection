@@ -1,4 +1,3 @@
-
 # Axios
 
 `Axios` 是一个基于 `promise` 网络请求库，作用于`node.js` 和浏览器中。 它是 `isomorphic` 的(同一套代码可以运行在浏览器和`node.js`中)。
@@ -6,7 +5,7 @@
 - 在服务端它使用原生 node.js `http` 模块
 - 在客户端 (浏览端) 则使用 `XMLHttpRequests`
 
-### 优点
+## 优点
 
 - [x] 从浏览器创建 XMLHttpRequests
 - [x] 从 node.js 创建 http 请求
@@ -18,16 +17,16 @@
 - [x] 客户端支持防御XSRF
 - ...
 
-### 安装
+## 安装
 
 ```bash
 pnpm install axios
 npm install axios
 ```
 
-### 基本使用
+## 基本使用
 
-#### TypeScript类型推断
+### TypeScript类型推断
 
 为了在CommonJS中使用 require（） 导入时获得TypeScript类型推断（智能感知/自动完成），可以使用以下方法：
 
@@ -37,7 +36,7 @@ const axios = require('axios').default
 // ... 使用axios对象的api 支持类型推断
 ```
 
-#### 发送请求
+### 发送请求
 
 
 ```js
@@ -63,7 +62,7 @@ axios({
 });
 ```
 
-#### 并发请求
+### 并发请求
 
 ```js
 
@@ -83,7 +82,7 @@ Promise.all([getUserAccount(), getUserPermissions()])
   });
 ```
 
-### 取消请求
+## 取消请求
 
 axios从`v0.22.0` 开始支持以fetch api的方式：AbortController取消请求
 ```js
@@ -100,7 +99,7 @@ controller.abort()
 
 
 
-### 实例方法
+## 实例方法
 
 支持多种HTTP网络请求类型，例如：Get、Post、Put、Delete等
 
@@ -117,7 +116,7 @@ controller.abort()
 **在使用别名方法时， url、method、data 这些属性都不必在配置中指定。**
 
 
-#### 创建实例
+### 创建实例
 
 ```js
 const instance = axios.create({
@@ -129,6 +128,7 @@ const instance = axios.create({
 
 
 #### 配置
+
 **全局默认配置，将作用于每个请求**
 
 ```js
@@ -143,9 +143,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 ```
 
-### 请求配置
-
-
+## 请求配置
 
 **只有 url 是必需的。如果没有指定 method，请求将默认使用 GET 方法。**
 
@@ -313,7 +311,7 @@ instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 }
 ```
 
-### 响应结构
+## 响应结构
 
 ```js
 {
@@ -341,9 +339,9 @@ instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 }
 ```
 
-### 拦截器
+## 拦截器
 
-#### 请求拦截器
+### 请求拦截器
 ```js
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
@@ -355,7 +353,7 @@ axios.interceptors.request.use(function (config) {
 });
 
 ```
-#### 响应拦截器
+### 响应拦截器
 
 ```js
 
@@ -371,14 +369,14 @@ axios.interceptors.response.use(function (response) {
 });
 ```
 
-#### 自定义
+### 自定义
 
 ```js
 const instance = axios.create();
 instance.interceptors.request.use(function () {/*...*/});
 ```
 
-#### 移除
+### 移除
 
 使用`eject`方法
 
@@ -388,7 +386,7 @@ axios.interceptors.request.eject(myInterceptor);
 ```
 
 
-#### 错误处理
+### 错误处理
 
 ```js
 axios.get('/user/12345')
@@ -415,7 +413,7 @@ axios.get('/user/12345')
 ```
 
 
-### 最佳实践
+## 最佳实践
 
 默认情况下，axios将 JavaScript 对象序列化为 JSON，针对不同的传参风格，需要对数据进行处理
 
@@ -473,7 +471,7 @@ axios.interceptors.request.use(config => {
 
 另外在实际使用axios时，会结合项目开发对axios进行全局封装处理，区分环境切换不同的配置。一般采用`process.env`来区分环境
 
-### 参考资料
+## 参考资料
 
 - <https://github.com/axios/axios>
 - <https://blog.csdn.net/rudy_zhou/article/details/113252392>
