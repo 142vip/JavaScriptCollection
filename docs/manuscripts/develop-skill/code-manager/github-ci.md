@@ -1,3 +1,8 @@
+---
+title: Github-CI
+permalink: /manuscripts/develop-skill/code-manager/github-ci.html
+---
+
 # Github-CI
 
 当提交代码后需要做的事情：

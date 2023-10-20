@@ -1,5 +1,3 @@
-
-
 # RxJS
 
 - <https://rxjs.dev/guide/overview>

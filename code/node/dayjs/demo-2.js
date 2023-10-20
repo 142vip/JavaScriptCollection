@@ -36,7 +36,6 @@ console.log(dayjs().month(0))
 console.log(dayjs().year())
 console.log(dayjs().year(2023))
 
-
 // get方法获取
 console.log(dayjs().get('year'))
 console.log(dayjs().get('month'))

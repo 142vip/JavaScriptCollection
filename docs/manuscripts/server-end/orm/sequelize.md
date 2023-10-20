@@ -1,10 +1,13 @@
 
-### 快速入门
+
+# SequelizeORM
+
+## 快速入门
 
 Sequelize 是一个基于 promise 的 Node.js ORM, 目前支持 Postgres, MySQL, MariaDB, SQLite 以及 Microsoft SQL Server. 它具有强大的事务支持, 关联关系, 预读和延迟加载,读取复制等功能.
 
 
-### 安装
+## 安装
 
 `Sequelize` 的使用可以通过 npm (或 yarn)模块包管理器进行下载.
 
@@ -25,11 +28,11 @@ $ npm install --save tedious # Microsoft SQL Server
 ```
 
 
-### 数据库连接
+## 数据库连接
 
 要连接到数据库,必须创建一个 `Sequelize` 实例. 这可以通过将连接参数分别传递到 `Sequelize` 构造函数或通过传递一个连接 `URI` 来完成：
 
-```javascript
+```js
 const { Sequelize } = require('sequelize');
 
 // 方法 1: 传递一个连接 URI
@@ -54,7 +57,7 @@ const sequelize = new Sequelize('database', 'username', 'password', {
 
 
 
-### 测试连接
+## 测试连接
 
 可以使用 `.authenticate()` 函数测试连接是否正常，**无法连接数据库时，会抛出异常**
 
@@ -69,13 +72,13 @@ try {
 ```
 
 
-### 关闭连接
+## 关闭连接
 
 默认情况下,`Sequelize` 将保持连接打开状态,并对所有查询使用相同的连接. 如果需要关闭连接,请调用 `sequelize.close()`(这方法异步的并返回一个 Promise对象).
 
 
 
-### 新旧数据库
+## 新旧数据库
 
 如果你是从0开始一个项目,且你的数据库尚不存在,那么一开始就可以使用 `Sequelize`,以便自动创建数据库中的每个表（糟糕的是，`egg-sequelize`插件由于加载的约束，只能连接存在的数据库）.
 
@@ -85,7 +88,7 @@ try {
 
 
 
-### 模型基础概念
+## 模型基础概念
 
 模型是通过官方文档中Model一词，直接翻译过来，在使用ORM框架去操作数据库的时候，**模型是 Sequelize 的本质. 模型是代表数据库中表的抽象. 在 Sequelize 中,它是一个 Model 的扩展类.** 模型往往和表字段是一一对应的，这样非常利于封装，类似于Java中的MyBatis。
 
@@ -97,7 +100,7 @@ try {
 相比官方文档的详细、全面，这里主要从实用出发，总记一套完整、基础、易于上手的模型笔记文档，开始吧~
 
 
-### 模型定义
+## 模型定义
 
 在 `Sequelize` 中可以用两种等效的方式定义模型：
 
@@ -114,7 +117,7 @@ try {
 
 
 
-### 使用`sequelize.define`
+## 使用`sequelize.define`
 
 ```js
 // 直接使用sequelize缓存封装，方便举例
@@ -139,7 +142,7 @@ const User = sequelize.define('User', {
 console.log(User === sequelize.models.User); // true
 ```
 
-### 扩展 `Model`
+## 扩展 `Model`
 
 ```js
 const { Sequelize, DataTypes, Model } = require('sequelize');
@@ -241,7 +244,7 @@ sequelize.define('User', {
 * `User.sync({ alter: true })` - 这将检查数据库中表的当前状态(它具有哪些列,它们的数据类型等),然后在表中进行必要的更改以使其与模型匹配.
 
 
-```javascript
+```js
 
 await User.sync({ force: true });
 
@@ -263,7 +266,7 @@ console.log("所有模型均已成功同步.");
 
 ### 删除表
 
-```javascript
+```js
 // 删除单个表，例如：User
 await User.drop();
 
@@ -295,7 +298,7 @@ await sequelize.drop();
 
 **直接 SQL 查询(例如,通过任何其他方式在不使用 Sequelize 的情况下执行的查询)将不会导致这些字段自动更新.**
 
-```javascript
+```js
 // 配置单个表的字段自动管理
 sequelize.define('User', {
   // ... (属性)
@@ -307,19 +310,16 @@ sequelize.define('User', {
 
 也可以只启用 `createdAt`/`updatedAt` 之一,并为这些列提供自定义名称：
 
-```javascript
+```js
 class Foo extends Model {}
 Foo.init({ 
    // ... (属性)
 }, {
   sequelize,
-
   // 这里时间戳必须启用true
   timestamps: true,
-
   // 不使用createdAt字段
   createdAt: false,
-
   // 使用 updatedAt字段 但是希望名称叫做 create_time
   updatedAt: 'create_time'
 });
@@ -426,7 +426,6 @@ DataTypes.DOUBLE(11, 10)     // DOUBLE(11,10)
 
 DataTypes.DECIMAL            // DECIMAL
 DataTypes.DECIMAL(10, 2)     // DECIMAL(10,2)
-
 ```
 
 #### 无符号和零填充整数
@@ -555,7 +554,7 @@ Foo.init({
 ```
 
 
-# 模型实例
+## 模型实例
 
 模型是 [ES6 类](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
 
@@ -756,8 +755,6 @@ console.log(user.favoriteColor); // "green"
 
 ## 改变对save()的原有认知
 
-
-
 `save()`方法在内部进行了优化，只更新真正更改的字段。这意味着，如果不更改任何内容并调用`save()`方法，`Sequelize`将知道`save()`方法是多余的，并且不执行任何操作，即不会生成任何查询（仍返回一个Promise对象，但会立即解决）。
 
 
@@ -773,7 +770,6 @@ console.log(user.favoriteColor); // "green"
 ```js
 // 创建实例对象
 const user = await User.create({ name: "Lisa", age: 100 });
-
 // age属性+1
 const incrementResult = await user.increment('age', { by: 2 });
 ```
@@ -781,7 +777,6 @@ const incrementResult = await user.increment('age', { by: 2 });
 **注意: 如只增加 1, 你可以省略 'by' 参数, 只需执行 `user.increment('age')`**
 
 - 在 PostgreSQL 中, 除非设置了 `{returning：false}` 参数(不然它将是 `undefined`), 否则 `incrementResult` 将是更新后的 user.
-
 - 在其它数据库方言中, `incrementResult` 将会是 `undefined`. 如果你需要更新的实例, 你需要调用 `user.reload()`.
 
 

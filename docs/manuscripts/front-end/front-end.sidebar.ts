@@ -30,7 +30,7 @@ export const frontEndSidebar = [
       },
       {
         text: 'JQuery',
-        link: 'jquery'
+        link: 'jquery.md'
       }
     ]
   },
@@ -41,28 +41,28 @@ export const frontEndSidebar = [
     children: [
       {
         text: 'Ant-Design-Vue',
-        link: 'ant-design-vue'
+        link: 'ant-design-vue.md'
       },
       {
         text: 'Element-UI',
-        link: 'element-ui'
+        link: 'element-ui.md'
       },
       {
         text: 'IView-Design',
-        link: 'iview-design'
+        link: 'iview-design.md'
       },
 
       {
         text: 'VAnt-UI',
-        link: 'vant-ui'
+        link: 'vant-ui.md'
       },
       {
         text: 'Layer-UI',
-        link: 'layer-ui'
+        link: 'layer-ui.md'
       },
       {
         text: 'Bootstrap',
-        link: 'bootstrap'
+        link: 'bootstrap.md'
       }
     ]
   },

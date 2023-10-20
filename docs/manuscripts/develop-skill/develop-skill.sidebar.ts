@@ -1,7 +1,7 @@
 export const developSkillSidebar = [
   {
     text: '软件安装',
-    link: 'software-install/readme.md'
+    link: 'software-install.md'
   },
   {
     text: 'npm&pnpm&yarn',

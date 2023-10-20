@@ -169,7 +169,7 @@ Options: (H) means HTTP/HTTPS only, (F) means FTP only
 ```
 
 
-### 基本安装
+## 基本安装
 
 下载链接：<https://curl.se/download.html>
 
@@ -200,10 +200,10 @@ curl --version
 curl --help
 ```
 
-### 常见用法
+## 常见用法
 
 
-#### 查看源码
+### 查看源码
 
 直接返回的是网页源码
 ```bash
@@ -222,7 +222,7 @@ curl www.142vip.cn
 curl -o xxx www.142vip.cn
 ```
 
-#### 显示头信息
+### 显示头信息
 
 - `-i` 参数可以显示 http response 的头信息，连同网页代码一起
 - `-I` 参数则只显示 http response 的头信息
@@ -261,7 +261,7 @@ Location: https://www.142vip.cn/
 
 ```
 
-#### 显示通信过程
+### 显示通信过程
 
 -v 参数可以显示一次 http 通信的整个过程，包括端口连接和 http request 头信息
 
@@ -308,7 +308,7 @@ cat xxx.txt
 ```
 
 
-#### 网页自动跳转
+### 网页自动跳转
 
 有的网址是自动跳转的。使用`-L`参数，curl 可以跳转到新的网址
 ```bash
@@ -317,16 +317,16 @@ curl -L www.142vip.cn
 ## 这里直接跳转到反向代理页面
 ```
 
-### 发送http请求
+## 发送http请求
 
-#### Get请求
+### Get请求
 
 ```bash
 ## get请求 query和params传参
 curl www.142vip.cn/abc?id=xxx
 ```
 
-#### Post请求
+### Post请求
 
 支持 `--data` 或者 `-d` 来传递`body`参数
 
@@ -355,7 +355,7 @@ curl -X POST www.142vip.cn/abc
 curl -X DELETE www.142vip.cn/abc
 ```
 
-#### 传递Cookie
+### 传递Cookie
 
 `--cookie` 参数 可以让 curl 发送 cookie。
 
@@ -363,14 +363,14 @@ curl -X DELETE www.142vip.cn/abc
 curl --cookie "id=123456" www.142vip.cn
 ```
 
-#### 添加请求头
+### 添加请求头
 
 `--header` 参数添加请求头信息
 ```bash
 curl --header "Content-Type:application/json" www.142vip.cn
 ```
 
-#### 支持HTTP认证
+### 支持HTTP认证
 `--user` 或者 `-u` 参数 来传递用户信息，进行HTTP认证
 ```bash
 ## 格式
@@ -381,7 +381,7 @@ curl --user root:123456 www.142vip.cn
 
 ```
 
-#### 传递User-Agent
+### 传递User-Agent
 
 使用`--user-agent`参数
 ```bash
@@ -415,6 +415,5 @@ curl --user-agent "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTM
 * Connection #0 to host www.142vip.cn left intact
 ```
 
-### 参考资料
 
-- 
+## 参考资料

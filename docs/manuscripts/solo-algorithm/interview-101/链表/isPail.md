@@ -1,23 +1,26 @@
+---
+permalink: /manuscripts/solo-algorithm/link-table/isPail.html
+---
 # BM13 判断一个链表是否为回文结构
 
 
 
-### 题目链接
+## 题目链接
 
 - [牛客网](https://www.nowcoder.com/share/jump/8484115461694840858005)
 - [欢迎讨论]()
 
-### 题目描述
+## 题目描述
 
 ![反转链表.png](../images/isPail.png)
 
 
 
-### 思路
+## 刷题思路
 
-### 代码实现
+## 代码实现
 
 @[code js](@code/algorithm/interview-101/isPail.js)
 
 
-### 一些建议
+## 一些建议

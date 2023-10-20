@@ -2,22 +2,22 @@
 # 包含min函数的栈
 
 
-### 题目链接
+## 题目链接
 
 - [牛客网]()
 - [欢迎讨论]()
 
-### 题目描述
+## 题目描述
 
 
-### 思路
+## 刷题思路
 
 
-### 代码实现
+## 代码实现
 
 @[code js](@code/algorithm/剑指/栈队列堆/getMinInJSStack.js)
 
-```javascript
+```js
 /*
  * @Description: 
  * @Version: Beta1.0
@@ -51,4 +51,4 @@ function min() {
 
 ```
 
-### 一些建议
+## 一些建议

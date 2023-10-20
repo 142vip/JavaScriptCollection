@@ -4,7 +4,6 @@ Copyrights ©2015-${new Date().getFullYear()} 妍荣姑娘网络工作室
 
 // 代码组织:<a href="https://github.com/142vip" target="_blank">142VIP</a>
 // Theme By <a href="https://theme-hope.vuejs.press/" target="_blank">vuepress-theme-hope</a> |
-
 export const NotFoundMsgList = [
   "徒留我孤单在湖面成双。",
   "就让回忆永远停在那里。",

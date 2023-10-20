@@ -1,9 +1,116 @@
+---
+title: Docker
+permalink: /manuscripts/microservice/docker.html
+---
+
 # Docker
 
+```mindmap
+root(Docker)
+    简单介绍
+    镜像命令
+    容器命令
+    数据卷
+```
+    
+Docker是一个开源的应用容器引擎，它是基于Go语言并遵从Apache2.0协议开源。是一个应用打包、分发、部署的工具，可以把它理解为一个轻量的虚拟机。
 
-### 常用命令
+Docker可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的linux机器上，也可以实现虚拟化。
+通过容器可以实现方便快速并且与平台解耦的自动化部署方式，无论你部署时的环境如何，容器中的应用程序都会运行在同一种环境下。并且它是完全使用沙箱机制，相互之间是隔离的，更重要的是容器性能开销极低。
 
-基于linux系统使用
+
+Docker思想：
+
+- 集装箱
+- 标准化： ① 运输方式 ② 存储方式 ③ API 接口
+- 隔离
+
+## 安装
+
+### Mac
+
+使用Mac中的`Homebrew`直接安装即可
+
+
+```bash
+brew install --cask docker
+```
+
+
+### Linux
+> 以CentOS系统为例
+
+#### 使用Yum安装
+
+- 检查系统版本
+
+```bash
+uname -r 
+```
+
+- 移除旧Docker版本
+
+```bash
+$ sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-selinux \
+                  docker-engine-selinux \
+                  docker-engine
+```
+
+- 安装docker-ce
+
+使用yum下载，可以先对yum更新
+
+```bash
+
+## 软件更新
+yum update
+
+## 安装docker社区版
+sudo yum -y install docker-ce
+```
+
+#### 使用官方脚本安装
+
+```bash
+## 下载脚本
+curl -fsSL get.docker.com -o get-docker.sh
+
+## 执行安装
+sh get-docker.sh --mirror Aliyun
+```
+
+
+当docker安装完成后，建议设置开机启动启动服务
+
+```bash
+# 开启docker服务开机自启动命令
+systemctl enable docker.service
+
+# 关闭docker服务开机自启动命令
+systemctl disable docker.service
+```
+
+
+
+## 卸载
+
+```bash
+# 卸载docker-ce
+sudo yum remove docker-ce
+
+# 删除docker文件数据
+sudo rm -rf /var/lib/docker
+```
+
+
+## 启动|停止服务
 
 ```bash
 ## 启动docker
@@ -34,7 +141,7 @@ docker create/log --help
 
 ```
 
-### 镜像命令
+## 镜像命令
 
 ```bash
 ## 查看本地所有镜像
@@ -85,7 +192,7 @@ docker image prune
 > 虚悬镜像名字很高大上，实际就是指：镜像没有仓库名或没有标签
 
 
-### 容器命令
+## 容器命令
 
 ```bash
 ## 运行容器
@@ -116,7 +223,6 @@ docker rm 容器ID
 docker rm -f ${docker ps -a -q}
 docker ps -a -q | xargs docker rm
 
-
 ## 查看容器日志
 docker logs xxxx
 
@@ -125,24 +231,21 @@ docker top xxxx
 
 ## 查看容器详细信息
 docker inspect 容器ID
-
-
-
 ```
 
-#### 容器两种退出方式
+### 容器退出
 
-##### exit命令
+- exit命令
 
 run命令进入容器，通过exit命令退出后，容器停止运行
 
 
-##### ctrl+p+q 命令
+- ctrl+p+q 命令
 
 run命令进入容器，通过`ctrl+p+q`退出，容器不停止
 
 
-#### 容器两种进入方法
+### 进入容器
 
 ```bash
 ## exec命令进入容器
@@ -162,7 +265,7 @@ attach命令和exec命令的执行区别：
 
 
 
-#### 启动后台守护容器
+### 后台守护容器
 
 > 在大部分场景下，希望docker的服务在后台运行的，可以通过`-d`指定容器的后台运行模式
 
@@ -178,23 +281,58 @@ docker run -it xxxx
 
 #### 文件相关
 
-> export和import命令可以参考：https://blog.csdn.net/clj198606061111/article/details/50450793
 
 
-#### 拷贝cp命令
 
-docker cp 容器ID : 容器中文件路径 当前主机待保存的路径
+### 文件拷贝
+
+通过docker cp指令能够将文件复制到容器中，也可以将容器中的文件复制出来
+
+```bash
+## 复制到容器中
+docker cp 当前主机待保存的路径 容器ID:容器中文件路径 
+
+## 将容器中的文件复制到容器外
+docker cp 容器ID:容器中文件路径 当前主机待保存的路径
+
+```
+
+
+
+### 导入|导出
+
+> 参考：https://blog.csdn.net/clj198606061111/article/details/50450793
+
 
 #### 导出export命令
 
-docker export 容器ID > 文件名.tar
+> 可以自定义容器导出后文件的格式
+
+
+命令格式： docker export 容器ID > 文件名.tar
+
+
+
+```bash
+## 例如：
+docker export xxx xxx.tar
+docker export -o "xxx.tar" xxx
+
+```
 
 #### 导入import命令
 
-cat 文件名.tar | docker import -镜像用户/镜像名：镜像版本号
+> 将本地保存的容器快照导入为镜像
+
+命令格式： docker import -镜像用户/镜像名：镜像版本号
+
+```bash
+# 例如：
+docker import web.tar web:v1
+```
 
 
-## docker容器数据卷
+## 容器数据卷
 
 注意开启文件权限，避免权限不够出现错误
 
@@ -225,13 +363,21 @@ cat 文件名.tar | docker import -镜像用户/镜像名：镜像版本号
 命令格式： `-v  xxx容器文件路径:宿主机文件路径`
 
 
-### 容器卷读写规则
+### 读写规则
 
 - ro: 只读
 - rw：可读可写
 
 命令格式： `-v  xxx容器文件路径:宿主机文件路径:读写规则`
 
+
+
+## 实战操作
+
+
+## 参考资料
+
+- <https://docs.docker.com/get-started/>
 
 
 

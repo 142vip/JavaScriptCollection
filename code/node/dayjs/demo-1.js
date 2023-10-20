@@ -31,11 +31,9 @@ console.log(dayjs(1318781876406))
 console.log(dayjs.unix(1318781876))
 console.log(dayjs.unix(1318781876.721))
 
-
 // Date对象
 const date = new Date(2022, 8, 18)
 console.log(dayjs(date))
-
 
 // 对象复制
 const a = dayjs()
@@ -46,7 +44,6 @@ console.log(a, b)
 const c = dayjs()
 const d = dayjs(c)
 console.log(c, d)
-
 
 // 校验是否为日期
 console.log(dayjs('2022-01-33').isValid())
