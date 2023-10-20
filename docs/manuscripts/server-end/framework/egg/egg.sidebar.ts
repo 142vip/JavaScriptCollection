@@ -1,8 +1,8 @@
 export const eggSidebar = [
   {
-    text:"使用教程",
-    prefix:"tutorial",
-    children:[
+    text: '使用教程',
+    prefix: 'tutorial',
+    children: [
       {
         text: '简介',
         link: '简介.md'
@@ -42,12 +42,12 @@ export const eggSidebar = [
       {
         text: '框架拓展',
         link: '框架拓展.md'
-      },
+      }
     ]
   },
   {
     text: '插件使用',
-    prefix:"plugin",
+    prefix: 'plugin',
     children: [
       {
         text: 'egg-mysql',
