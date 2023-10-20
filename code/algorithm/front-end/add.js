@@ -24,6 +24,5 @@ function add() {
 
 const str = add(1, 6)(2)(3)
 console.log(str)
-// console.log(String(add(1,6)(2)(3)) )
-// console.log(add(1)(2)(3))
-// console.log(add(1)(2,3,4))
+console.log(add(1)(2)(3))
+console.log(add(1)(2, 3, 4))

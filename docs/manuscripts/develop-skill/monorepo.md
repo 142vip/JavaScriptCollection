@@ -1,3 +1,8 @@
+---
+title: Monorepo
+permalink: /manuscripts/develop-skill/monorepo.html
+---
+
 # Monorepo
 
 - pnpm
@@ -5,7 +10,7 @@
 
 ## pnpm
 
-## turboRepo
+## TurboRepo
 
 `turbo`支持在`yarn`和`npm`上使用，但在使用`pnpm`目前支持：
 
@@ -17,5 +22,6 @@
 
 
 
-参考资料
+
+## 参考资料
 - <https://turbo.build/repo/docs/installing>

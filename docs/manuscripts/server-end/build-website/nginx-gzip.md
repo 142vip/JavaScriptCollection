@@ -9,7 +9,7 @@ npm compression-webpack-plugin --save-dev
 ```
 
 ### 配置vue.config.js文件
-```JavaScript
+```js
 // 导入compression-webpack-plugin
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 // 定义压缩文件类型

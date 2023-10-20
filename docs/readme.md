@@ -8,8 +8,8 @@ actions:
   - text: 快速开刷 →
     link: /quick-start.md
     type: primary
-  - text: 公众号
-    link: /manuscripts/other/wechat-list.md
+  - text: 公众号文章💡
+    link: /manuscripts/wechat-list.md
     type: secondary
   - text: 工作机会
     link: /manuscripts/job-chance/job-poster-bytedance.md
@@ -17,18 +17,21 @@ actions:
 
 features:
   - title: 前端
-    details: 熟练使用前端知识,熟悉常用框架,总结提炼前端部署方案
-  - title: 后端
-    details: 基础扎实,熟练使用框架,有一定的封装能力,开源npm模块包,定制化插件功能,保姆级开发部署流程
-  - title: 算法
-    details: 习题整理,代码通过记录,个人实际解题思路,助力刷题通关
-
+    details: 熟练前端基础知识、常用框架，总结提炼前端部署方案
+  - title: 后端&微服务
+    details: 基础扎实、熟练使用框架，有一定的封装能力。造轮子、定制化插件功能，保姆级前后端开发部署流程
+  - title: SOLO算法
+    details: 习题整理，代码通过记录，个人实际解题思路，助力刷题通关
+  - title: 开发技巧
+    details: 习题整理，代码通过记录，总结刷题、解题思路，助力算法能力Up
   - title: 面试求职
-    details: 校招社招八股文集合,分享面经与常见面试题,总结面试套路经验,对线Battle面试官有条不紊
+    details: 校招社招八股文集合，分享面经与常见面试题，总结面试套路经验，对线Battle面试官有条不紊
   - title: 读书写作
-    details: 代码虽好但读书提升更为重要,不可偏执一端,人文社科生活百态利于提升职场人生软技能
+    details: 代码虽好但读书提升更为重要，不可偏执一端。人文社科生活百态提升职场人生软技能
   - title: 心路历程
-    details: 从小白一路磕磕绊绊,自认并无天赋,个中心酸唯有自知; 做好当下,便是对自己的不辜负
+    details: 从小白一路磕磕绊绊，自认并无天赋，个中辛酸、冷暖自知; 做好当下，便是对自己的不辜负
+  - title: 自媒体
+    details: 尝试尝试再尝试，等等我呀...
 ---
 
 

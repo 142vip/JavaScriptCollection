@@ -1,8 +1,10 @@
 ---
 title: Eslint
+permalink: /manuscripts/develop-skill/code-style/eslint.html
 ---
+# Eslint
 
-### 基础使用
+## 基础使用
 - 配置eslint
 
 - 生产环境安装eslint
@@ -47,7 +49,7 @@ pnpm i eslint -D
 ```
 
 
-### 参考资料
+## 参考资料
 
 - <https://zhuanlan.zhihu.com/p/404677113>
 

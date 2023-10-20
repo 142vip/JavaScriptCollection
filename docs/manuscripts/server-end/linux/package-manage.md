@@ -1,11 +1,11 @@
 
 # 包管理工具
 
-### apt-get
+## apt-get
 
 apt-get 命令适用于 deb 包管理式的 Linux 操作系统（Debian、Ubuntu等），主要用于自动从互联网软件仓库中搜索、下载、安装、升级、卸载软件或操作系统
 
-#### 安装
+### 安装
 
 ```bash
 ## 普通安装
@@ -24,7 +24,7 @@ apt-get source xxx
 ```
 
 
-#### 卸载
+### 卸载
 
 ```bash
 #删除软件包, 保留配置文件
@@ -44,7 +44,7 @@ apt-get clean && apt-get autoclean
 ```
 
 
-#### 更新
+### 更新
 
 ```bash
 # 更新安装源（Source）
@@ -56,14 +56,14 @@ apt-get dist-upgrade
 ```
 
 
-#### 帮助命令
+### 帮助命令
 
 ```bash
 apt-get --help
 ```
 
 
-#### 配置软件源
+### 配置软件源
 
 ```bash
 
@@ -145,11 +145,11 @@ sudo apt-get upgrade
 ```
 
 
-### yum
+## yum
 
 使用yum安装和卸载软件，软件包都是rpm格式的
 
-#### 安装
+### 安装
 
 ```bash
 ## -y:不询问，默认安装
@@ -159,7 +159,7 @@ yum  install XXX -y
 yum install/update xxx
 ```
 
-#### 查询
+### 查询
 
 
 ```bash
@@ -185,7 +185,7 @@ yum info
 yum provides~
 ```
 
-#### 清除
+### 清除
 
 ```bash
 ## 卸载
@@ -203,7 +203,7 @@ yum clean oldheaders
 ```
 
 
-#### 更换软件源
+### 更换软件源
 
 ```bash
 ## 1. 安装wget
@@ -225,7 +225,7 @@ yum makecache
 
 
 
-### apk
+## apk
 
 Alpine Linux 下的包管理工具
 
@@ -242,7 +242,7 @@ Alpine Linux 下的包管理工具
 Alpine使用apk进行包管理，通过apk --help命令查看完整的包管理命令
 
 
-####  基础使用
+###  基础使用
 
 ```bash
 apk install xxx
@@ -264,7 +264,7 @@ $ apk info #列出所有已安装的软件包
 
 ```
 
-#### 升级
+### 升级
 
 upgrade命令升级系统已安装的所以软件包（一般包括内核），当然也可指定仅升级部分软件包（通过-u或–upgrade选择指定）。
 
@@ -279,7 +279,7 @@ apk add --upgrade busybox
 apk add docker --update-cache --repository http://mirrors.ustc.edu.cn/alpine/v3.4/main/ --allow-untrusted
 ```
 
-#### 配置软件源
+### 配置软件源
 
 - <https://mirrors.tuna.tsinghua.edu.cn/help/alpine/>
 

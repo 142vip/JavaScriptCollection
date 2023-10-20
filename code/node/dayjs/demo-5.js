@@ -20,7 +20,6 @@ console.log(dayjs().isAfter(dayjs('2021-01-01')))
 // 比较年份
 console.log(dayjs().isAfter('2024-01-01', 'year'))
 
-
 // 是否为dayjs对象
 console.log(dayjs.isDayjs(dayjs()))
 console.log(dayjs.isDayjs(new Date()))

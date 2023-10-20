@@ -3,8 +3,6 @@ import {serverEndSidebar} from "../../manuscripts/server-end/server-end.sidebar"
 import {eggSidebar} from "../../manuscripts/server-end/framework/egg/egg.sidebar";
 import {developSkillSidebar} from "../../manuscripts/develop-skill/develop-skill.sidebar";
 import {soloAlgorithmSidebar} from "../../manuscripts/solo-algorithm/solo-algorithm.sidebar";
-import {esStandardSidebar} from "../../manuscripts/read-books/cs-books/es-standard/es-standard-sidebar";
-import {OtherSidebar} from "../../manuscripts/other/other.sidebar";
 import {jobChanceSidebar} from "../../manuscripts/job-chance/job-chance.sidebar";
 import {readBooksSidebar} from "../../manuscripts/read-books/read-books.sidebar";
 import {microserviceSidebar} from "../../manuscripts/microservice/microservice.sidebar";
@@ -17,8 +15,6 @@ export default {
     "/manuscripts/develop-skill": developSkillSidebar,
     "/manuscripts/solo-algorithm": soloAlgorithmSidebar,
     "/manuscripts/read-books": readBooksSidebar,
-    "/manuscripts/read-books/cs-books/es-standard": esStandardSidebar,
-    "/manuscripts/other": OtherSidebar,
     "/manuscripts/job-chance": jobChanceSidebar,
     "/manuscripts/microservice": microserviceSidebar,
     "/manuscripts/battle-interview": battleInterviewSidebar,

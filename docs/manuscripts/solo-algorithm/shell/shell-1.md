@@ -1,11 +1,11 @@
 # SHELL-1 统计文件的行数
 
-### 题目链接
+## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/205ccba30b264ae697a78f425f276779)
 - [欢迎讨论]()
 
-### 题目描述
+## 题目描述
 
 描述
 编写一个shell脚本以输出一个文本文件nowcoder.txt中的行数
@@ -25,11 +25,11 @@ int main()
 ```
 你的脚本应当输出：9
 
-### 思路
+## 刷题思路
 
-### 代码实现
+## 代码实现
 
 @[code bash](@code/algorithm/shell/shell-1.sh)
 
 
-### 一些建议
+## 一些建议

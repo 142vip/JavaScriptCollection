@@ -1,4 +1,3 @@
-
 # Linux下软件安装
 
 linux系统，主要分debian系和redhat系，还有其它自由的发布版本
@@ -11,19 +10,19 @@ linux系统，主要分debian系和redhat系，还有其它自由的发布版本
 
 
 
-###  RedHat系列
+##  RedHat系列
 
 - 安装包格式：rpm包
 - 包管理工具 yum
 - 支持tar包
 
-### Debian系列
+## Debian系列
 
 - 安装包格式 deb包
 - 包管理工具 apt-get
 - 支持tar包
 
-### 安装方式
+## 安装方式
 
 #### yum
 
@@ -42,7 +41,7 @@ yum update xxx
 
 
 
-#### apt-get
+### apt-get
 
 - 可以用于运作deb包
 
@@ -54,7 +53,7 @@ apt-get remove
 ## 更新
 apt-get update
 ```
-#### wget
+### wget
 
 **本质是一个下载工具** 特点如下：
 - 只管下载，不会安装
@@ -81,8 +80,8 @@ curl -O https://curl.haxx.se/download/curl-7.30.1.tar.gz
 
 ```
 
-### curl
+## curl
 
-### vim
+## vim
 
-### gcc
+## gcc

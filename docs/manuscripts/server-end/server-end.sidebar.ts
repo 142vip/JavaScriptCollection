@@ -71,7 +71,7 @@ export const serverEndSidebar = [{
 },
 {
   text: '常用框架',
-  collapsible: true,
+  // collapsible: true,
   prefix: 'framework',
   children: [
     {
@@ -98,7 +98,7 @@ export const serverEndSidebar = [{
 },
 {
   text: 'ORM框架',
-  collapsible: true,
+  // collapsible: true,
   children: [
     {
       text: 'Sequelize',
@@ -135,30 +135,31 @@ export const serverEndSidebar = [{
 {
   text: '服务部署',
   collapsible: true,
+  prefix: 'docker-cluster',
   children: [
     {
       text: '基础安装',
-      link: 'docker-cluster/docker.md'
+      link: 'docker.md'
     },
     {
       text: 'PM2管理',
-      link: 'docker-cluster/pm2.md'
+      link: 'pm2.md'
     },
     {
       text: 'egg-cluster',
-      link: 'docker-cluster/egg-cluster.md'
+      link: 'egg-cluster.md'
     },
     {
       text: 'Docker',
-      link: 'docker-cluster/docker.md'
+      link: 'docker.md'
     },
     {
       text: '集群管理',
-      link: 'docker-cluster/docker-compose.md'
+      link: 'docker-compose.md'
     },
     {
       text: 'Dockerfile详解',
-      link: 'docker-cluster/dockerfile.md'
+      link: 'dockerfile.md'
     }
 
   ]
@@ -186,11 +187,11 @@ export const serverEndSidebar = [{
       children: [
         {
           text: 'vim',
-          link: 'linux/vim.md'
+          link: 'vim.md'
         },
         {
           text: 'curl',
-          link: 'linux/curl.md'
+          link: 'curl.md'
         }
       ]
     }

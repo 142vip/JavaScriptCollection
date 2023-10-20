@@ -9,7 +9,7 @@ Lodash 是一个一致性、模块化、高性能的 JavaScript 实用工具库�
 - 对值进行操作和检测
 - 创建符合功能的函数
 
-### 安装
+## 安装
 
 使用`npm`或者`pnpm`等包管理工具下载依赖都行，注意区分环境
 
@@ -29,7 +29,7 @@ npm install --save @types/lodash
 ```
 
 
-### 简单使用
+## 简单使用
 
 ```js
 // 支持import导入
@@ -44,15 +44,15 @@ console.log(_.chunk(['a', 'b', 'c', 'd'], 3))
 
 ```
 
-### 高频使用
+## 高频使用
 
 以下列举出常用的函数，**有的很容易忘记**
 
-![](./lodash.png)
+![](images/lodash.png)
 
-### 实际使用 
+## 实际使用 
 
-#### 数组
+### 数组
 
 - compact: 过滤假值（false, null,0, "", undefined，NaN）
 - concat: 拼接
@@ -82,7 +82,7 @@ console.log(_.chunk(['a', 'b', 'c', 'd'], 3))
 
 @[code js](@code/node/lodash/demo-array.js)
 
-#### 对象
+### 对象
 
 - assign：拷贝
 - merge:  深拷贝
@@ -112,7 +112,7 @@ console.log(_.chunk(['a', 'b', 'c', 'd'], 3))
 
 @[code js](@code/node/lodash/demo-object.js)
 
-#### 集合
+### 集合
 
 - countBy:  计数
 - each: 遍历
@@ -137,7 +137,7 @@ console.log(_.chunk(['a', 'b', 'c', 'd'], 3))
 @[code js](@code/node/lodash/demo-set.js)
 
 
-#### 数字
+### 数字
 
 - inRange： 判断是否在范围中
 - random: 返回指定范围随机值
@@ -154,7 +154,7 @@ console.log(_.chunk(['a', 'b', 'c', 'd'], 3))
 - min: 最小值
 @[code js](@code/node/lodash/demo-num.js)
 
-#### 字符串
+### 字符串
 
 - camelCase： 小驼峰
 - kebabCase： 转换为-连接，例如：Foo Bar ----> foo-bar
@@ -181,7 +181,7 @@ console.log(_.chunk(['a', 'b', 'c', 'd'], 3))
 
 
 
-### 参考资料
+## 参考资料
 
 - <https://www.lodashjs.com/docs>
 - <https://www.npmjs.com/search?q=lodash>

@@ -1,3 +1,8 @@
+---
+title: 依赖管理
+permalink: /manuscripts/develop-skill/package-manager.html
+---
+
 # 依赖管理
 
 ## PNPM
@@ -299,5 +304,6 @@ pnpm add <pkg>@3.0.0
 - `--global, -g`:将软件包安装都全局环境中。
 
 
+## 参考资料
 
-参考：https://blog.csdn.net/tangxiujiang/article/details/119977698
+- <https://blog.csdn.net/tangxiujiang/article/details/119977698>

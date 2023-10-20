@@ -5,22 +5,22 @@
 
 
 
-### 题目链接
+## 题目链接
 
 - [牛客网]()
 - [欢迎讨论]()
 
-### 题目描述
+## 题目描述
 
 
-### 思路
+## 刷题思路
 
 
-### 代码实现
+## 代码实现
 
 @[code js](@code/algorithm/剑指/栈队列堆/firstAppearingOnce.js)
 
-```javascript
+```js
 
 /*
  * @Description: 【中等】字符流中的第一个不重复的字符
@@ -60,5 +60,5 @@ function FirstAppearingOnce() {
 
 ```
 
-### 一些建议
+## 一些建议
 
