@@ -1,4 +1,5 @@
 import {searchProPlugin} from "vuepress-plugin-search-pro";
+// import {commentPlugin} from "vuepress-plugin-comment2";
 
 /**
  * 使用的插件配置
@@ -21,5 +22,10 @@ export default {
                 },
             ],
         }),
+        // commentPlugin({
+        //     provider: "Artalk",
+        //     server:"https://408.142vip.cn/",
+        //     site:'JavaScriptCollection',
+        // })
     ]
 }
