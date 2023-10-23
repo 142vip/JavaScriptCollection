@@ -71,11 +71,11 @@ export default {
     },
 
     plugins: {
-      comment:{
-        provider: "Artalk",
-        server:"https://408.142vip.cn/",
-        site:'JavaScriptCollection',
-      },
+      // comment:{
+      //   provider: "Artalk",
+      //   server:"https://408.142vip.cn/",
+      //   site:'JavaScriptCollection',
+      // },
       readingTime: {
         wordPerMinute: 200
       },
@@ -84,6 +84,7 @@ export default {
       blog: false,
       // 代码块
       mdEnhance: {
+        card:true,
         codetabs: true,
         tasklist: true, // 支持任务列表
         // 启用 figure
