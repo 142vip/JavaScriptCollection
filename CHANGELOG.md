@@ -4,6 +4,29 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.2-alpha.4](///compare/v0.0.2-alpha.3...v0.0.2-alpha.4) (2023-10-23)
+
+
+### Features
+
+* 优化流水线执行条件，只允许在主仓库执行 7080c96
+* 关闭artalk评论，后续统一开放 1da7eca
+* 大幅修改网站导航、目录结构，新增一些文档 0bf5ce8
+* 导航栏、侧边栏内容修改，新增目录对应的文档 5f1e13b
+* 文档内容大幅变更，新增部分文章固定链接 e1f1df0
+* 集成artalk评论系统 64bc531
+
+
+### Bug Fixes
+
+* 修复内容宽度错误，水平管道条异常显示 97ee116
+
+
+### Performance Improvements
+
+* CI脚本添加pnpm下载，导航栏配置文件优化 0e6034a
+* 更新依赖，升级webpack 9779c79
+
 ## [0.0.2-alpha.3](https://github.com/mmdapl/JavaScriptCollection/compare/v0.0.2-alpha.2...v0.0.2-alpha.3) (2023-10-13)
 
 
