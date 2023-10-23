@@ -1,4 +1,6 @@
 import { redisSidebar } from './database/redis/redis.sidebar'
+import { mySqlSideBar } from './database/mysql/mysql.sidebar'
+import {mongoSideBar} from "./database/mongo/mongo.sidebar";
 
 export const serverEndSidebar = [{
   text: 'Node.js',
@@ -124,11 +126,15 @@ export const serverEndSidebar = [{
     },
     {
       text: 'MySQL',
-      link: 'mysql'
+      prefix: 'mysql',
+      collapsible: true,
+      children: mySqlSideBar
     },
     {
       text: 'MongoDB',
-      link: 'mongo.md'
+      prefix: 'mongo',
+      collapsible: true,
+      children: mongoSideBar
     }
   ]
 },

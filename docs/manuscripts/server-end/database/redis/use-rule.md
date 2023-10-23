@@ -102,13 +102,10 @@ HASH_SLOT = CRC16(key) mod 16384
 
 
 
-## 参考资料
-
-- <https://blog.csdn.net/qq_36042938/article/details/108845426>
 
 
 
-# 使用规范
+## 使用规范
 
 在项目中，redis属于高频使用，遇到了各种各样的redis问题，针对自身情况梳理了一个redis使用规范。
 
@@ -181,3 +178,6 @@ HASH_SLOT = CRC16(key) mod 16384
 >redis是单线程处理，在线上Key数量较多时，操作效率极低【时间复杂度为O(N)】，该命令一旦执行会严重阻塞线上其它命令的正常请求，而且在高QPS情况下会直接造成redis服务崩溃！如果有类似需求，可以使用scan命令代替。
 
 
+## 参考资料
+
+- <https://blog.csdn.net/qq_36042938/article/details/108845426>

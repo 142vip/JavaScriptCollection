@@ -37,7 +37,7 @@ features:
 
 
 
-<BiliBili bvid="BV1rd4y1V7tB"  />
+[//]: # (<BiliBili bvid="BV1rd4y1V7tB"  />)
 
 [//]: # (<XiGua id="7191010629048716605" />)
 
