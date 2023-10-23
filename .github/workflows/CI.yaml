@@ -7,6 +7,7 @@ name: CI
 on:
   pull_request:
     branches:
+      - 'master'
       - 'next'
       - '!pages/**'
   push:
@@ -68,7 +69,7 @@ jobs:
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
   Base-Build:
-    name: "基础编译构建"
+    name: "基础编译校验"
     runs-on: ubuntu-latest
     if: github.repository == '142vip/JavaScriptCollection'
     needs:
@@ -106,7 +107,7 @@ jobs:
     needs:
       - install-init
     ## 主库master、next且执行release更新时执行
-#    if: github.repository == '142vip/JavaScriptCollection' && startsWith(github.event.head_commit.message, 'chore(release):')
+    if: github.repository == '142vip/JavaScriptCollection' && startsWith(github.event.head_commit.message, 'chore(release):')
     permissions:
       actions: read
       pull-requests: read
