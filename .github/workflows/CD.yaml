@@ -13,13 +13,11 @@ on:
   workflow_dispatch:
 
 
-## vercel 环境变量
+# 环境变量
 env:
+## vercel
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-#  阿里云仓库信息
-  REGISTRY: registry.cn-hangzhou.aliyuncs.com
-  UserName: mmdapl
 
 
 jobs:

@@ -7,8 +7,6 @@ name: CI
 on:
   pull_request:
     branches:
-      - 'master'
-      - 'next'
       - '!pages/**'
   push:
     branches:
@@ -19,6 +17,12 @@ on:
 
   schedule:
     - cron: "0 0 1 * *"
+
+# 环境变量
+env:
+#  阿里云仓库信息
+  REGISTRY: registry.cn-hangzhou.aliyuncs.com
+  UserName: 142vip
 
 jobs:
   install-init:
