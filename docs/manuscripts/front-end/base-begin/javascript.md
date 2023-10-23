@@ -1,5 +1,6 @@
 ---
 title: JavaScript相关
+permalink: /manuscripts/front-end/base-begin/javascript.html
 ---
 # JavaScript
 

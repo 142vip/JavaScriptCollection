@@ -1,5 +1,6 @@
 ---
 title: HTML相关
+permalink: /manuscripts/front-end/base-begin/html-correlation.html
 ---
 
 # HTML
@@ -9,7 +10,7 @@ HTML的全称为超文本标记语言，是一种标记语言。它包括一系�
 
 
 
-#### 标题
+## 标题
 
 HTML 标题（Heading）是通过 `<h1> - <h6>` 等标签进行定义的。
 
@@ -24,6 +25,6 @@ HTML 链接是通过 `<a>` 标签进行定义的。
 HTML 图像是通过 <img> 标签进行定义的。
 
 
-### 元素
+## 元素
 
 `<p>` 元素

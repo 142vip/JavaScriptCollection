@@ -8,7 +8,7 @@ permalink: /manuscripts/read-books
 > 赶稿中..
 
 
-### 技术类
+## 技术类
 
 - ES6标准入门
 - 深入浅出的Node.js
@@ -17,9 +17,8 @@ permalink: /manuscripts/read-books
 - 分布式消息中间件实践
 ...
 
-----
 
-### 非技术类
+## 非技术类
 
 - 你好孤独 - 陈果
 - 好的，爱情 - 陈果

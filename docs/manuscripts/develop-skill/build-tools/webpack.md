@@ -1,6 +1,6 @@
 ---
 title: Vite
-permalink: /manuscripts/develop-skill/build-tools/vite.html
+permalink: /manuscripts/develop-skill/build-tools/webpack.html
 ---
 
 # webpack
