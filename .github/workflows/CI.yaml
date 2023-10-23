@@ -53,7 +53,8 @@ jobs:
           registry-url: 'https://registry.npmmirror.com'
 
       - name: Install Dependencies
-        run: ./scripts/ci
+        run: |
+          ./scripts/ci
 
       - name: Cache Dependencies
         uses: actions/cache@v3

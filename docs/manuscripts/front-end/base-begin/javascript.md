@@ -1,5 +1,6 @@
 ---
 title: JavaScript相关
+permalink: /manuscripts/front-end/base-begin/javascript.html
 ---
 # JavaScript
 
@@ -694,7 +695,7 @@ fun1()
 ```
 
 
-## 浅拷贝和深拷贝
+## 数据拷贝
 
 > 浅拷贝只是拷贝一层，更深层次对象级别的只**拷贝引用**
 > 深拷贝拷贝多层，每一级别的数据都会拷贝。

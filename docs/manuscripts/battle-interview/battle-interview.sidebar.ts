@@ -8,6 +8,10 @@ export const battleInterviewSidebar = [
         link: '接口幂等.md'
       },
       {
+        text: '乐观锁和悲观锁',
+        link: '乐观锁和悲观锁.md'
+      },
+      {
         text: 'Node',
         link: 'Node面试.md'
       },
