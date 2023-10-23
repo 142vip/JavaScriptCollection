@@ -1,6 +1,6 @@
 import { redisSidebar } from './database/redis/redis.sidebar'
 import { mySqlSideBar } from './database/mysql/mysql.sidebar'
-import {mongoSideBar} from "./database/mongo/mongo.sidebar";
+import { mongoSideBar } from './database/mongo/mongo.sidebar'
 
 export const serverEndSidebar = [{
   text: 'Node.js',
