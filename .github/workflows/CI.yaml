@@ -23,7 +23,7 @@ on:
 jobs:
   install-init:
     name: "流水线初始化"
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     if: github.repository == '142vip/JavaScriptCollection'
     permissions:
       actions: read
@@ -64,7 +64,7 @@ jobs:
 
   Base-Build:
     name: "基础编译构建"
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     if: github.repository == '142vip/JavaScriptCollection'
     needs:
       - install-init
@@ -96,7 +96,8 @@ jobs:
 
   Build-Docker-Image:
     name: "构建Docker镜像"
-    runs-on: macos-latest
+    ## macos不支持docker的使用
+    runs-on: ubuntu-latest
     needs:
       - install-init
     ## 主库master、next且执行release更新时执行
