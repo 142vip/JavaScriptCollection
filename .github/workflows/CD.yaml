@@ -13,13 +13,11 @@ on:
   workflow_dispatch:
 
 
-## vercel 环境变量
+# 环境变量
 env:
+## vercel
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-#  阿里云仓库信息
-  REGISTRY: registry.cn-hangzhou.aliyuncs.com
-  UserName: mmdapl
 
 
 jobs:
@@ -27,7 +25,7 @@ jobs:
   deploy-github:
     name: "部署到Github-Pages"
     if: github.repository == '142vip/JavaScriptCollection'
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
@@ -74,7 +72,7 @@ jobs:
 #  deploy-vercel:
 #    name: "部署到Vercel平台"
 #    needs: install-init
-#    runs-on: macos-latest
+#    runs-on: ubuntu-latest
 #    if: github.repository == '142vip/JavaScriptCollection'
 #    steps:
 #      - name: Checkout Code
@@ -102,7 +100,7 @@ jobs:
   ## 版本发布
   release:
     name: "创建Github发布"
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     ## 主库master、next且执行release更新时执行
     if: github.repository == '142vip/JavaScriptCollection' && startsWith(github.event.head_commit.message, 'chore(release):')
 
@@ -156,7 +154,7 @@ jobs:
 #  Deploy-ESC:
 #    name: "部署到ESC服务器"
 #    needs: install-init
-#    runs-on: macos-latest
+#    runs-on: ubuntu-latest
 #    ## 主库master、next且执行release更新时执行
 #    if: github.repository == '142vip/JavaScriptCollection' && startsWith(github.event.head_commit.message, 'chore(release):')
 #
