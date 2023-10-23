@@ -53,7 +53,8 @@ jobs:
           registry-url: 'https://registry.npmmirror.com'
 
       - name: Install Dependencies
-        run: ./scripts/ci
+        run: |
+          ./scripts/ci
 
       # 运行构建脚本
       - name: Build VuePress Site

@@ -1,3 +1,7 @@
+---
+title: Vite
+permalink: /manuscripts/develop-skill/build-tools/vite.html
+---
 
 # webpack
 

@@ -13,7 +13,7 @@ export const frontEndSidebar = [
   },
   {
     text: '前端框架',
-    collapsible: true,
+    // collapsible: true,
     prefix: 'front-framework',
     children: [
       {

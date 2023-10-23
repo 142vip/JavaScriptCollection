@@ -1,5 +1,14 @@
+---
+title: MySQL面试
+permalink: /manuscripts/battle-interview/mysql.html
+---
+
 # MySQL面试
 
+[//]: # (```mindmap)
+[//]: # (root&#40;思维导图&#41;)
+[//]: # (  test)
+[//]: # (```)
 
 ## 基础架构
 
