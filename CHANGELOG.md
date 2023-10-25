@@ -4,28 +4,28 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
-## [0.0.2-alpha.4](///compare/v0.0.2-alpha.3...v0.0.2-alpha.4) (2023-10-23)
+## [0.0.2-alpha.4](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.3...v0.0.2-alpha.4) (2023-10-25)
 
 
 ### Features
 
-* 优化流水线执行条件，只允许在主仓库执行 7080c96
-* 关闭artalk评论，后续统一开放 1da7eca
-* 大幅修改网站导航、目录结构，新增一些文档 0bf5ce8
-* 导航栏、侧边栏内容修改，新增目录对应的文档 5f1e13b
-* 文档内容大幅变更，新增部分文章固定链接 e1f1df0
-* 集成artalk评论系统 64bc531
+* 优化流水线执行条件，只允许在主仓库执行 ([7080c96](https://github.com/142vip/JavaScriptCollection/commit/7080c96afa67535e986baef9693f6447d79be350))
+* 关闭artalk评论，后续统一开放 ([1da7eca](https://github.com/142vip/JavaScriptCollection/commit/1da7ecad8d62bd27919c6aec7e390227864dd878))
+* 大幅修改网站导航、目录结构，新增一些文档 ([0bf5ce8](https://github.com/142vip/JavaScriptCollection/commit/0bf5ce88fbedc42143d46404cf6cfa8ab2b0d2cd))
+* 导航栏、侧边栏内容修改，新增目录对应的文档 ([5f1e13b](https://github.com/142vip/JavaScriptCollection/commit/5f1e13b3bb1c3978831a6119a006b5db9e39ed90))
+* 文档内容大幅变更，新增部分文章固定链接 ([e1f1df0](https://github.com/142vip/JavaScriptCollection/commit/e1f1df06a22ac3fe4c329acefca035b914542346))
+* 集成artalk评论系统 ([64bc531](https://github.com/142vip/JavaScriptCollection/commit/64bc5319e2d73d9c9047e823ed0edcea2358554b))
 
 
 ### Bug Fixes
 
-* 修复内容宽度错误，水平管道条异常显示 97ee116
+* 修复内容宽度错误，水平管道条异常显示 ([97ee116](https://github.com/142vip/JavaScriptCollection/commit/97ee116c654597cdcf06b3f62c940f371422d193))
 
 
 ### Performance Improvements
 
-* CI脚本添加pnpm下载，导航栏配置文件优化 0e6034a
-* 更新依赖，升级webpack 9779c79
+* CI脚本添加pnpm下载，导航栏配置文件优化 ([0e6034a](https://github.com/142vip/JavaScriptCollection/commit/0e6034a286cb3c5362df4440562cf1d0ddf03d06))
+* 更新依赖，升级webpack ([9779c79](https://github.com/142vip/JavaScriptCollection/commit/9779c79b9b6869fc8d8d2b03e8b3e3599f46868a))
 
 ## [0.0.2-alpha.3](https://github.com/mmdapl/JavaScriptCollection/compare/v0.0.2-alpha.2...v0.0.2-alpha.3) (2023-10-13)
 
