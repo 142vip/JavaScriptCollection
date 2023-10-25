@@ -16,10 +16,8 @@ readonly commitInfo='chore(release): publish v%s'
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 
 # 判断分支名称
-if [ "$current_branch" = "next1" ]; then
-
+if [ "$current_branch" = "next" ]; then
   bumpp  --preid alpha  --execute="$generateChangeLog" --commit "$commitInfo" --all --tag --push
-
 else
   echo "当前分支是：$current_branch ，版本迭代允许在next分之操作，并推送到远程！！！"
 fi
