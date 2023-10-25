@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.2-alpha.5](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.4...v0.0.2-alpha.5) (2023-10-25)
+
+
+### Bug Fixes
+
+* 修复CI中docker镜像构建异常，约束release脚本使用范围 ([#74](https://github.com/142vip/JavaScriptCollection/issues/74)) ([249524e](https://github.com/142vip/JavaScriptCollection/commit/249524e50ba74694f9eebd0dd4cf11b27393aec7))
+* 修复dockerfile构建异常 ([d8e025d](https://github.com/142vip/JavaScriptCollection/commit/d8e025ded69b6de9bd93d8f6677b86a712768c37))
+
+
+### Performance Improvements
+
+* **pnpm:** CI支持PNPM8 ([d17baf7](https://github.com/142vip/JavaScriptCollection/commit/d17baf7642ee91709ea2e83dd51d95089dffe89e))
+* vue、eslint模块依赖更新 ([b29225e](https://github.com/142vip/JavaScriptCollection/commit/b29225e8ef0e3763cfee8d4fbdc36ea6595626de))
+
 ## [0.0.2-alpha.4](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.3...v0.0.2-alpha.4) (2023-10-25)
 
 

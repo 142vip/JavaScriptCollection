@@ -1,7 +1,7 @@
 {
   "name": "JavaScriptCollection",
   "description": "一本有趣的JavaScript合集",
-  "version": "0.0.2-alpha.4",
+  "version": "0.0.2-alpha.5",
   "packageManager": "pnpm@7.2.1",
   "engines": {
     "node": "^18.x",
