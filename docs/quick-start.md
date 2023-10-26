@@ -5,7 +5,7 @@ headerDepth:4
 ### 在线浏览
 
 - 尝鲜版：<https://142vip.github.io/JavaScriptCollection>
-- 稳定版：<https://142vip.cn/JavaScriptCollection>
+- 稳定版：<https://code.142vip.cn>
 
 网站无法访问时，建议通过科学上网访问备用网络
 

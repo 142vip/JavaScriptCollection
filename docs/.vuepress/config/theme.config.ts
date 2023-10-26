@@ -73,7 +73,7 @@ export default {
     plugins: {
       // comment:{
       //   provider: "Artalk",
-      //   server:"https://408.142vip.cn/",
+      //   server:"https://test.142vip.cn/",
       //   site:'JavaScriptCollection',
       // },
       readingTime: {
@@ -161,7 +161,7 @@ export default {
           //             },
           //             {
           //                 text: "稳定版",
-          //                 link: "https://142vip.cn/JavaScriptCollection",
+          //                 link: "https://code.142vip.cn",
           //                 type: "primary",
           //             },
           //         ],
