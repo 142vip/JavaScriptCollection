@@ -16,7 +16,7 @@ export default defineUserConfig({
     port: 5000,
     head: [
         [
-            "link", {rel: "icon", href: "/fight_favicon.ico"}
+            "link", {rel: "icon", href: "fight_favicon.ico"}
         ],
         // vercel统计 相关配置
         [
