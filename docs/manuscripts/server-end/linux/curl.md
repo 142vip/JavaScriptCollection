@@ -168,11 +168,9 @@ Options: (H) means HTTP/HTTPS only, (F) means FTP only
  -q                 If used as the first parameter disables .curlrc
 ```
 
-
 ## 基本安装
 
 下载链接：<https://curl.se/download.html>
-
 
 ```bash
 ## 压缩包安装
@@ -192,6 +190,7 @@ yum install curl
 ```
 
 查看是否安装成功
+
 ```bash
 ## 版本
 curl --version
@@ -202,10 +201,10 @@ curl --help
 
 ## 常见用法
 
-
 ### 查看源码
 
 直接返回的是网页源码
+
 ```bash
 curl www.142vip.cn
 
@@ -307,10 +306,10 @@ curl --trace-ascii xxx.txt www.142vip.cn
 cat xxx.txt
 ```
 
-
 ### 网页自动跳转
 
 有的网址是自动跳转的。使用`-L`参数，curl 可以跳转到新的网址
+
 ```bash
 curl -L www.142vip.cn
 
@@ -366,12 +365,15 @@ curl --cookie "id=123456" www.142vip.cn
 ### 添加请求头
 
 `--header` 参数添加请求头信息
+
 ```bash
 curl --header "Content-Type:application/json" www.142vip.cn
 ```
 
 ### 支持HTTP认证
+
 `--user` 或者 `-u` 参数 来传递用户信息，进行HTTP认证
+
 ```bash
 ## 格式
 curl --user name:password www.142vip.cn
@@ -384,6 +386,7 @@ curl --user root:123456 www.142vip.cn
 ### 传递User-Agent
 
 使用`--user-agent`参数
+
 ```bash
 ## 指定user-agent
 curl --user-agent "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36" www.142vip.cn
@@ -414,6 +417,5 @@ curl --user-agent "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTM
 </html>
 * Connection #0 to host www.142vip.cn left intact
 ```
-
 
 ## 参考资料

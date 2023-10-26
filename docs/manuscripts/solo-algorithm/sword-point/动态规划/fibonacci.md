@@ -1,8 +1,5 @@
 # 斐波那契数列
 
-
-
-
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)
@@ -29,7 +26,6 @@
 ## 代码实现
 
 @[code js](@code/algorithm/剑指/动态规划/fibonacci.js)
-
 
 ## 一些建议
 

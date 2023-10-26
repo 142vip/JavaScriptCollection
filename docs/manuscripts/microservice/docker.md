@@ -12,12 +12,11 @@ root(Docker)
     容器命令
     数据卷
 ```
-    
+
 Docker是一个开源的应用容器引擎，它是基于Go语言并遵从Apache2.0协议开源。是一个应用打包、分发、部署的工具，可以把它理解为一个轻量的虚拟机。
 
 Docker可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的linux机器上，也可以实现虚拟化。
 通过容器可以实现方便快速并且与平台解耦的自动化部署方式，无论你部署时的环境如何，容器中的应用程序都会运行在同一种环境下。并且它是完全使用沙箱机制，相互之间是隔离的，更重要的是容器性能开销极低。
-
 
 Docker思想：
 
@@ -31,13 +30,12 @@ Docker思想：
 
 使用Mac中的`Homebrew`直接安装即可
 
-
 ```bash
 brew install --cask docker
 ```
 
-
 ### Linux
+>
 > 以CentOS系统为例
 
 #### 使用Yum安装
@@ -86,7 +84,6 @@ curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh --mirror Aliyun
 ```
 
-
 当docker安装完成后，建议设置开机启动启动服务
 
 ```bash
@@ -97,8 +94,6 @@ systemctl enable docker.service
 systemctl disable docker.service
 ```
 
-
-
 ## 卸载
 
 ```bash
@@ -108,7 +103,6 @@ sudo yum remove docker-ce
 # 删除docker文件数据
 sudo rm -rf /var/lib/docker
 ```
-
 
 ## 启动|停止服务
 
@@ -191,7 +185,6 @@ docker image prune
 
 > 虚悬镜像名字很高大上，实际就是指：镜像没有仓库名或没有标签
 
-
 ## 容器命令
 
 ```bash
@@ -239,11 +232,9 @@ docker inspect 容器ID
 
 run命令进入容器，通过exit命令退出后，容器停止运行
 
-
 - ctrl+p+q 命令
 
 run命令进入容器，通过`ctrl+p+q`退出，容器不停止
-
 
 ### 进入容器
 
@@ -263,8 +254,6 @@ attach命令和exec命令的执行区别：
 
 一般用`-d`命令后台启动的程序，再用`exit`命令进行对应容器实例
 
-
-
 ### 后台守护容器
 
 > 在大部分场景下，希望docker的服务在后台运行的，可以通过`-d`指定容器的后台运行模式
@@ -278,11 +267,7 @@ docker run -it xxxx
 
 ```
 
-
 #### 文件相关
-
-
-
 
 ### 文件拷贝
 
@@ -297,21 +282,15 @@ docker cp 容器ID:容器中文件路径 当前主机待保存的路径
 
 ```
 
-
-
 ### 导入|导出
 
-> 参考：https://blog.csdn.net/clj198606061111/article/details/50450793
-
+> 参考：<https://blog.csdn.net/clj198606061111/article/details/50450793>
 
 #### 导出export命令
 
 > 可以自定义容器导出后文件的格式
 
-
 命令格式： docker export 容器ID > 文件名.tar
-
-
 
 ```bash
 ## 例如：
@@ -330,7 +309,6 @@ docker export -o "xxx.tar" xxx
 # 例如：
 docker import web.tar web:v1
 ```
-
 
 ## 容器数据卷
 
@@ -362,7 +340,6 @@ docker import web.tar web:v1
 
 命令格式： `-v  xxx容器文件路径:宿主机文件路径`
 
-
 ### 读写规则
 
 - ro: 只读
@@ -370,24 +347,8 @@ docker import web.tar web:v1
 
 命令格式： `-v  xxx容器文件路径:宿主机文件路径:读写规则`
 
-
-
 ## 实战操作
-
 
 ## 参考资料
 
 - <https://docs.docker.com/get-started/>
-
-
-
-
-
-
-
-
-
-
-
-
-

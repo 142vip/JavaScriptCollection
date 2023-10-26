@@ -8,9 +8,7 @@ linux系统，主要分debian系和redhat系，还有其它自由的发布版本
 在日常的服务端开发中，接触频率较高为：`Debian`、`Ubuntu`、`CentOs`，我们需要知道在不同类型的服务器中，掌握基础软件安装、卸载方式
 ；
 
-
-
-##  RedHat系列
+## RedHat系列
 
 - 安装包格式：rpm包
 - 包管理工具 yum
@@ -39,8 +37,6 @@ yum remove xxx
 yum update xxx
 ```
 
-
-
 ### apt-get
 
 - 可以用于运作deb包
@@ -53,9 +49,11 @@ apt-get remove
 ## 更新
 apt-get update
 ```
+
 ### wget
 
 **本质是一个下载工具** 特点如下：
+
 - 只管下载，不会安装
 - 安装的时候需要找rpm命令帮忙
 - 遵循协议：http fpt https这三个都是tcp/ip协议

@@ -12,6 +12,7 @@
 
 示例:
 假设 nowcoder.txt 内容如下：
+
 ```txt
 #include <iostream>
 using namespace std;
@@ -23,6 +24,7 @@ int main()
     return 0;
 }
 ```
+
 你的脚本应当输出：9
 
 ## 刷题思路
@@ -30,6 +32,5 @@ int main()
 ## 代码实现
 
 @[code bash](@code/algorithm/shell/shell-1.sh)
-
 
 ## 一些建议

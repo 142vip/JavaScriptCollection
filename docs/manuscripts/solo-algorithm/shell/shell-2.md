@@ -11,6 +11,7 @@
 编写一个shell脚本以输出一个文本文件nowcoder.txt中的行数
 示例:
 假设 nowcoder.txt 内容如下：
+
 ```txt
 #include <iostream>
 using namespace std;
@@ -22,13 +23,11 @@ int main()
     return 0;
 }
 ```
-你的脚本应当输出：9
 
+你的脚本应当输出：9
 
 ## 代码实现
 
-
 @[code bash](@code/algorithm/shell/shell-2.sh)
-
 
 ## 一些建议

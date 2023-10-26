@@ -12,7 +12,6 @@ Redis的Sentinel系统用于管理多个Redis，主要执行:
 - 自动故障迁移：当一个主服务器不能正常工作时，Sentinel会进行一次故障自动迁移，会将失效主服务器的从服务器选举出一个新的主服务器，剩下的从服务器将会自动连接复制选举出来的新服务器的数据。
 - 配置提供者：在 Redis Sentinel 模式下，客户端应用 在初始化时连接的是 Sentinel 节点集合，从中获取主节点 的信息。
   
-
 ![基本原理](images/sentinel.png)
 
 Redis的Sentinel系统是一个分布式的系统，可以在系统中配置一个或多个Sentinel
@@ -37,7 +36,6 @@ Redis的Sentinel系统是一个分布式的系统，可以在系统中配置一�
 结合相关conf配置，本地执行`docker-compose up -d` 即可启动服务
 
 @[code yaml](@code/redis/sentinel/docker-compose.yaml)
-
 
 - redis-sentinel-26380配置文件
 

@@ -28,7 +28,6 @@ npm i --save lodash
 npm install --save @types/lodash
 ```
 
-
 ## 简单使用
 
 ```js
@@ -50,7 +49,7 @@ console.log(_.chunk(['a', 'b', 'c', 'd'], 3))
 
 ![](images/lodash.png)
 
-## 实际使用 
+## 实际使用
 
 ### 数组
 
@@ -136,7 +135,6 @@ console.log(_.chunk(['a', 'b', 'c', 'd'], 3))
 
 @[code js](@code/node/lodash/demo-set.js)
 
-
 ### 数字
 
 - inRange： 判断是否在范围中
@@ -176,13 +174,9 @@ console.log(_.chunk(['a', 'b', 'c', 'd'], 3))
 - trim: 移除前面和后面的 空格 或 指定的字符
 - words: 拆分词为数组
 
-
 @[code js](@code/node/lodash/demo-string.js)
-
-
 
 ## 参考资料
 
 - <https://www.lodashjs.com/docs>
 - <https://www.npmjs.com/search?q=lodash>
-

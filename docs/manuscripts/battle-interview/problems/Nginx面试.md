@@ -10,10 +10,9 @@ permalink: /manuscripts/battle-interview/nginx.html
 [//]: # (  test)
 [//]: # (```)
 
-
 ## 什么是Nginx
 
-> 参考链接：https://blog.csdn.net/weixin_43122090/article/details/105461971
+> 参考链接：<https://blog.csdn.net/weixin_43122090/article/details/105461971>
 
 `Stub_status`指令：该指令用于了解`Nginx`当前状态的当前状态，如当前的活动连接，接受和处理当前读/写/等待连接的总数
 
@@ -23,15 +22,13 @@ permalink: /manuscripts/battle-interview/nginx.html
 
 gunzip就是gzip的[硬连接](https://baike.baidu.com/item/硬连接/3923435)，不论是压缩或解压缩，都可通过gzip指令单独完成
 
-
-
 ## 限制浏览器方式
 
 > 变量$http_user_agent
 
 ```nginx
-	## 不允许谷歌浏览器访问 如果是谷歌浏览器返回500
- 	if ($http_user_agent ~ Chrome) {   
+ ## 不允许谷歌浏览器访问 如果是谷歌浏览器返回500
+  if ($http_user_agent ~ Chrome) {   
         return 500;  
     }
 ```
@@ -60,8 +57,6 @@ proxy_send_timeout 1s;
 proxy_read_timeout 1s;
 ```
 
-
-
 ## Nginx负载均衡的算法怎么实现的?策略有哪些
 
 - 轮询（默认）
@@ -77,8 +72,6 @@ proxy_read_timeout 1s;
 ### 权重
 
 > 权重weight分配的越大，访问的频率越高，用于上游服务器性能不均衡的情况下，合理利用主机资源
-
-
 
 ### IP_Hash（IP绑定）
 
@@ -116,8 +109,6 @@ upstream backserver {
 } 
 ```
 
-
-
 ## 为什么要做动静分离？
 
 - Nginx的静态处理能力很强，但是动态处理能力不足，因此，在企业中常用动静分离技术
@@ -150,7 +141,7 @@ upstream backserver {
 
 限制方式【基于漏桶算法】：
 
--  正常限制访问频率（正常流量）
+- 正常限制访问频率（正常流量）
 - 突发限制访问频率（突发流量）
 - 限制并发连接数
 
@@ -167,11 +158,11 @@ upstream backserver {
 limit_req_zone $binary_remote_addr zone=one:10m rate=1r/m;
 #绑定限流维度
 server{
-		
-	location/seckill.html{
-		limit_req zone=zone;	
-		proxy_pass http://lj_seckill;
-	}
+  
+ location/seckill.html{
+  limit_req zone=zone; 
+  proxy_pass http://lj_seckill;
+ }
 }
 ```
 
@@ -183,18 +174,16 @@ server{
 >
 > - 可以设置能处理的超过设置的请求数外能额外处理的请求数
 
-
-
 ```nginx
 #定义限流维度，一个用户一分钟一个请求进来，多余的全部漏掉
 limit_req_zone $binary_remote_addr zone=one:10m rate=1r/m;
 #绑定限流维度
 server{
-	location/seckill.html{
+ location/seckill.html{
         # burst=5 nodelay :Nginx对于一个用户的请求会立即处理前五个，多余的就慢慢来落，没有其他用户的请求我就处理你的，有其他的请求的话我Nginx就漏掉不接受你的请求
-		limit_req zone=zone burst=5 nodelay;
-		proxy_pass http://lj_seckill;
-	}
+  limit_req zone=zone burst=5 nodelay;
+  proxy_pass http://lj_seckill;
+ }
 }
 ```
 
@@ -205,8 +194,8 @@ server{
 
 ```nginx
 http {
-	limit_conn_zone $binary_remote_addr zone=myip:10m;
-	limit_conn_zone $server_name zone=myServerName:10m;
+ limit_conn_zone $binary_remote_addr zone=myip:10m;
+ limit_conn_zone $server_name zone=myServerName:10m;
 }
 server {
      location / {
@@ -220,10 +209,6 @@ server {
 ```
 
 **只有当请求的header被服务器处理后，虚拟服务器的连接数才会计数**
-
-
-
-
 
 ## location的作用是什么？
 
@@ -276,25 +261,25 @@ server {
 ## Nginx配置文件nginx.conf有哪些属性模块?
 
 ```nginx
-worker_processes  1；                					# worker进程的数量
-events {                              					# 事件区块开始
-    worker_connections  1024；            				# 每个worker进程支持的最大连接数
-}                                    					# 事件区块结束
-http {                               					# HTTP区块开始
-    include       mime.types；            				# Nginx支持的媒体类型库文件
-    default_type  application/octet-stream；     		# 默认的媒体类型
-    sendfile        on；       							# 开启高效传输模式
-    keepalive_timeout  65；       						# 连接超时
-    server {            								# 第一个Server区块开始，表示一个独立的虚拟主机站点
-        listen       80；      							# 提供服务的端口，默认80
-        server_name  localhost；       					# 提供服务的域名主机名
-        location / {            						# 第一个location区块开始
-            root   html；       						# 站点的根目录，相当于Nginx的安装目录
-            index  index.html index.htm；      			# 默认的首页文件，多个用空格分开
-        }          										# 第一个location区块结果
-        error_page   500502503504  /50x.html；     		# 出现对应的http状态码时，使用50x.html回应客户
-        location = /50x.html {          				# location区块开始，访问50x.html
-            root   html；      							# 指定对应的站点目录为html
+worker_processes  1；                     # worker进程的数量
+events {                                   # 事件区块开始
+    worker_connections  1024；                # 每个worker进程支持的最大连接数
+}                                         # 事件区块结束
+http {                                    # HTTP区块开始
+    include       mime.types；                # Nginx支持的媒体类型库文件
+    default_type  application/octet-stream；       # 默认的媒体类型
+    sendfile        on；              # 开启高效传输模式
+    keepalive_timeout  65；             # 连接超时
+    server {                    # 第一个Server区块开始，表示一个独立的虚拟主机站点
+        listen       80；             # 提供服务的端口，默认80
+        server_name  localhost；            # 提供服务的域名主机名
+        location / {                  # 第一个location区块开始
+            root   html；             # 站点的根目录，相当于Nginx的安装目录
+            index  index.html index.htm；         # 默认的首页文件，多个用空格分开
+        }                    # 第一个location区块结果
+        error_page   500502503504  /50x.html；       # 出现对应的http状态码时，使用50x.html回应客户
+        location = /50x.html {              # location区块开始，访问50x.html
+            root   html；             # 指定对应的站点目录为html
         }
     }  
     ......
@@ -310,40 +295,39 @@ http {                               					# HTTP区块开始
 ## Nginx的优缺点？
 
 优点：
+
 - 占内存小，可实现高并发连接，处理响应快
 - 可实现http服务器、虚拟主机、反向代理、负载均衡
 - 配置简单，可以不用暴露正式的IP地址
 
 缺点：
+
 - nginx处理静态文件耗费内存小，处理动态页面则明显不足，需要依靠反向代理抗住流量压力
 - 动静分离 -----> 处理资源
-
-
 
 ## 为什么要用Nginx？
 
 - 跨平台（多系统支持）、配置简单、反向代理、高并发连接（官方检测：5万并发）
 - 内存消耗小（开10个nginx内存才占150M），处理静态资源性能优越---->耗费内存小
 - 提供内置的健康检查功能，服务宕机会被剔除，后面的请求会提交到其他上游服务上（基于nginx自带模块**ngx_http_proxy_module和ngx_http_upstream_module**对后端节点做健康检查）[链接](https://www.cnblogs.com/xingxia/p/nginx_healthcheck.html)
--  节阅流量、加速前端页面访问（支持GZIP压缩，可以添加浏览器本地缓存）
+- 节阅流量、加速前端页面访问（支持GZIP压缩，可以添加浏览器本地缓存）
 - 稳定性高、宕机的概率小
 - 接收用户请求是异步操作的【Nginx事件处理机制是`异步非阻塞`事件处理机制，运用了**epoll模型**，提供了一个队列，排队解决】 [链接](https://zhuanlan.zhihu.com/p/77887952)
 
-##  解释下正向代理和反向代理
+## 解释下正向代理和反向代理
 
 **正向代理隐藏真实客户端，反向代理隐藏真实服务端**
 
-> 参考链接：https://www.cnblogs.com/taostaryu/p/10547132.html
+> 参考链接：<https://www.cnblogs.com/taostaryu/p/10547132.html>
 
 ### 正向代理
 
 例如：翻墙访问google、买票的黄牛 用途：
- - 访问原来无法访问的资源，如google
- - 可以做缓存，加速访问资源
- - 对客户端访问授权，上网进行认证
- - 代理可以记录用户访问记录（上网行为管理），对外隐藏用户信息
 
-
+- 访问原来无法访问的资源，如google
+- 可以做缓存，加速访问资源
+- 对客户端访问授权，上网进行认证
+- 代理可以记录用户访问记录（上网行为管理），对外隐藏用户信息
 
 ### 反向代理
 
@@ -352,10 +336,9 @@ http {                               					# HTTP区块开始
 代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器
 
 用途：
- - 负载均衡，通过反向代理服务器来优化网站的负载
- - 保证内网的安全，阻止web攻击，大型网站，通常将反向代理作为公网访问地址，Web服务器是内网
 
-
+- 负载均衡，通过反向代理服务器来优化网站的负载
+- 保证内网的安全，阻止web攻击，大型网站，通常将反向代理作为公网访问地址，Web服务器是内网
 
 ## Nginx常用指令有哪些？
 
@@ -391,4 +374,3 @@ nginx -g directives #设置配置文件外的全局指令
 killall nginx #杀死所有nginx进程
 kill -quit 61333 # 退出某个进程
 ```
-

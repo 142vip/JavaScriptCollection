@@ -1,6 +1,5 @@
 # 剪绳子
 
-
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)
@@ -12,7 +11,6 @@
 
 数据范围：2≤n≤60
 进阶：空间复杂度O(1) ，时间复杂度O(n)
-
 
 示例：
 
@@ -29,10 +27,8 @@
 
 - 贪心思想
 
-
 ## 代码实现
 
 @[code js](@code/algorithm/剑指/贪心思想/cutRope.js)
-
 
 ## 一些建议

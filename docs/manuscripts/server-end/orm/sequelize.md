@@ -1,11 +1,9 @@
 
-
 # SequelizeORM
 
 ## 快速入门
 
 Sequelize 是一个基于 promise 的 Node.js ORM, 目前支持 Postgres, MySQL, MariaDB, SQLite 以及 Microsoft SQL Server. 它具有强大的事务支持, 关联关系, 预读和延迟加载,读取复制等功能.
-
 
 ## 安装
 
@@ -26,7 +24,6 @@ $ npm install --save mariadb
 $ npm install --save sqlite3
 $ npm install --save tedious # Microsoft SQL Server
 ```
-
 
 ## 数据库连接
 
@@ -55,8 +52,6 @@ const sequelize = new Sequelize('database', 'username', 'password', {
 
 注意在分别传递数据库参数的时候，`sqlite`数据库与其他数据库不一致。
 
-
-
 ## 测试连接
 
 可以使用 `.authenticate()` 函数测试连接是否正常，**无法连接数据库时，会抛出异常**
@@ -71,12 +66,9 @@ try {
 
 ```
 
-
 ## 关闭连接
 
 默认情况下,`Sequelize` 将保持连接打开状态,并对所有查询使用相同的连接. 如果需要关闭连接,请调用 `sequelize.close()`(这方法异步的并返回一个 Promise对象).
-
-
 
 ## 新旧数据库
 
@@ -85,8 +77,6 @@ try {
 除此之外,如果你想使用 `Sequelize` 连接到已经充满了表和数据的数据库,那也可以正常工作！
 
 在两种情况下,`Sequelize` 都能满足使用要求.
-
-
 
 ## 模型基础概念
 
@@ -99,13 +89,12 @@ try {
 
 相比官方文档的详细、全面，这里主要从实用出发，总记一套完整、基础、易于上手的模型笔记文档，开始吧~
 
-
 ## 模型定义
 
 在 `Sequelize` 中可以用两种等效的方式定义模型：
 
-* 调用 `sequelize.define(modelName, attributes, options)`
-* 扩展 `Model` 并调用 `init(attributes, options)`
+- 调用 `sequelize.define(modelName, attributes, options)`
+- 扩展 `Model` 并调用 `init(attributes, options)`
 
 **在内部,`sequelize.define` 调用 `Model.init`,因此两种方法本质上是等效的.**
 
@@ -114,8 +103,6 @@ try {
 例如，创建一个代表用户的模型,该模型具有一个 `firstName` 和一个 `lastName`. 我们希望将模型称为 `User`,并将其表示的表在数据库中称为 `Users`.
 
 定义该模型的两种：
-
-
 
 ## 使用`sequelize.define`
 
@@ -172,15 +159,11 @@ console.log(User === sequelize.models.User); // true
 
 定义后,我们可以使用 `sequelize.models.User` 访问模型.
 
-
-
 ## 表名规则
-
 
 上面两种方法的模型定义中,都未明确定义表名(`Users`). 但是,给出了模型名称(`User`).
 
 默认情况下,当**未提供表名时,Sequelize 会自动将模型名复数并将其用作表名.** 这种复数是通过称为 [inflection](https://www.npmjs.com/package/inflection) 的库在后台完成的,因此可以正确计算不规则的复数(例如 `person -> people`).
-
 
 ### 强制表名称等于模型名称
 
@@ -195,7 +178,6 @@ sequelize.define('User', {
 ```
 
 上面的示例将创建一个名为 `User` 的模型,该模型指向一个也名为 `User` 的表.
-
 
 ```js
 // sequelize 实例全局定义 强制表名称等于模型名称
@@ -214,7 +196,6 @@ const sequelize = new Sequelize('sqlite::memory:', {
 
 > 建议数据库表名以tbl开头，例如： tbl_user_list
 
-
 ```js
 // tableName指定表名
 sequelize.define('User', {
@@ -223,7 +204,6 @@ sequelize.define('User', {
   tableName: 'Employees'
 });
 ```
-
 
 ## 同步模型
 
@@ -239,10 +219,9 @@ sequelize.define('User', {
 
 特别注意：**这仅更改数据库中的表,而不更改 JavaScript 端的模型.**+
 
-* `User.sync()` - 如果表不存在,则创建该表(如果已经存在,则不执行任何操作)
-* `User.sync({ force: true })` - 将创建表,如果表已经存在,则将其首先删除
-* `User.sync({ alter: true })` - 这将检查数据库中表的当前状态(它具有哪些列,它们的数据类型等),然后在表中进行必要的更改以使其与模型匹配.
-
+- `User.sync()` - 如果表不存在,则创建该表(如果已经存在,则不执行任何操作)
+- `User.sync({ force: true })` - 将创建表,如果表已经存在,则将其首先删除
+- `User.sync({ alter: true })` - 这将检查数据库中表的当前状态(它具有哪些列,它们的数据类型等),然后在表中进行必要的更改以使其与模型匹配.
 
 ```js
 
@@ -251,7 +230,6 @@ await User.sync({ force: true });
 await User.sync({force:false,alter:true})
 
 ```
-
 
 ### 一次同步所有模型
 
@@ -281,8 +259,6 @@ await sequelize.drop();
 
 - 删除所有表时，是当前连接的sequelize实例调用drop()方法实现。
 
-
-
 ## 时间戳的使用
 
 **默认情况下,Sequelize 使用数据类型 `DataTypes.DATE` 自动向每个模型添加 `createdAt` 和 `updatedAt` 字段.**
@@ -292,7 +268,6 @@ await sequelize.drop();
 - `createdAt` 字段将包含代表创建时刻的时间戳
 
 - `updatedAt` 字段将包含最新更新的时间戳.
-
 
 **特别需要注意的是：上面的字段自动管理实在在 Sequelize 级别完成的(即未使用 *SQL触发器* 完成)**.
 
@@ -325,7 +300,6 @@ Foo.init({
 });
 ```
 
-
 ## 表字段简写
 
 如果关于列的唯一指定内容是其数据类型,可以缩短语法：
@@ -342,7 +316,6 @@ sequelize.define('User', {
 sequelize.define('User', { name: DataTypes.STRING });
 
 ```
-
 
 ## 默认值
 
@@ -371,7 +344,6 @@ sequelize.define('Foo', {
 });
 ```
 
-
 ## 数据类型
 
 **在模型中定义的每一列都必须具有数据类型.** `Sequelize` 提供[很多内置数据类型](https://github.com/sequelize/sequelize/blob/master/lib/data-types.js).
@@ -383,7 +355,6 @@ sequelize.define('Foo', {
 const { DataTypes } = require("sequelize"); 
 
 ```
-
 
 ### 字符串
 
@@ -445,7 +416,6 @@ DataTypes.INTEGER.UNSIGNED.ZEROFILL
 - 可以指定大小,即INTEGER(10)而不是简单的INTEGER
 - 同样适用于 BIGINT, FLOAT 和 DOUBLE
 
-
 ### 日期
 
 ```js
@@ -458,7 +428,6 @@ DataTypes.DATE(6)
 // 不带时间的 DATE
 DataTypes.DATEONLY   
 ```
-
 
 ### UUID
 
@@ -477,7 +446,6 @@ DataTypes.DATEONLY
   defaultValue:  Sequelize.UUIDV4
 }
 ```
-
 
 ## 列参数
 
@@ -552,7 +520,6 @@ Foo.init({
   indexes: [{ unique: true, fields: ['someUnique'] }]
 });
 ```
-
 
 ## 模型实例
 
@@ -645,8 +612,6 @@ console.log(JSON.stringify(jane, null, 4));
 ```
 
 注意：`JSON.stringify(jane, null, 4)`中，三个参数的使用情况；
-
-## 默认值
 
 当字段未赋值时，内置实例将自动获得默认值：
 
@@ -757,7 +722,6 @@ console.log(user.favoriteColor); // "green"
 
 `save()`方法在内部进行了优化，只更新真正更改的字段。这意味着，如果不更改任何内容并调用`save()`方法，`Sequelize`将知道`save()`方法是多余的，并且不执行任何操作，即不会生成任何查询（仍返回一个Promise对象，但会立即解决）。
 
-
 另外，如果在调用`save()`方法时只有几个属性发生了更改，那么在UPDATE操作时，将只发送这些更改字段，以提高性能
 
 ## 递增和递减整数值
@@ -779,7 +743,6 @@ const incrementResult = await user.increment('age', { by: 2 });
 - 在 PostgreSQL 中, 除非设置了 `{returning：false}` 参数(不然它将是 `undefined`), 否则 `incrementResult` 将是更新后的 user.
 - 在其它数据库方言中, `incrementResult` 将会是 `undefined`. 如果你需要更新的实例, 你需要调用 `user.reload()`.
 
-
 也可以一次递增多个字段：
 
 ```js
@@ -798,4 +761,4 @@ await user.increment(['age', 'cash'], { by: 2 });
 
 ### 参考资料
 
-- 官方api: https://sequelize.org/master/class/lib/model.js~Model.html
+- 官方api: <https://sequelize.org/master/class/lib/model.js~Model.html>

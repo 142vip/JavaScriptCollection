@@ -1,6 +1,5 @@
 # Dockerfile
 
-
 ### 运行流程
 
 - docker从基础镜像运行一个容器
@@ -8,7 +7,6 @@
 - 执行类似docker commit 的操作提交一个新的镜像层
 - docker再基于提交的镜像运行一个容器
 - 执行dockerfile中的下一条指令知道所有指令都执行完成
-
 
 ### 常用指令
 
@@ -19,7 +17,6 @@
 #### MAINTAINER
 
 镜像维护者的姓名和邮箱地址，表明联系方式
-
 
 #### RUN
 
@@ -33,7 +30,6 @@ RUN是在执行`docker bulid`命令时候运行的
 #### EXPOSE
 
 当前容器需要对外暴露的端口
-
 
 #### WORKDIR
 
@@ -50,7 +46,6 @@ RUN是在执行`docker bulid`命令时候运行的
 #### ADD
 
 将宿主机目录下的文件拷贝到镜像中，并且会自动处理URL和解压tar压缩包
-
 
 #### COPY
 
@@ -71,26 +66,22 @@ RUN是在执行`docker bulid`命令时候运行的
 
 用来指定容器启动后需要做的事情/流程，
 
-
-
 CMD指令和RUN指令格式相似，支持两种格式：
+
 - shell格式： CMD <命令>
 - exec 格式： CMD ["参数一" , "参数二" ,"...."]
 - 参数列表格式： CMD ["参数一" , "参数二" ,  "..."]，在指定了ENTRYPOINT指令后，用CMD指定具体的参数
 
 **注意：dockerfile中可以有多个CMD指令，但是只有最后一个会生效，CMD会被docker run之后的参数/bin/bash替换掉**
 
-
 CMD指令和RUN指令的区别：
 
 - CMD命令是在docker run时运行
 - RUN命令是在docker build命令时运行
 
-
 #### ENTRYPOINT
 
 也是用来指定一个容器启动时要运行的命令，类似CMD指令，注意传参格式
-
 
 ### 构建镜像
 

@@ -13,9 +13,6 @@ title: egg-mysql
 
 **除了上面的两种之外，还有`Node.js`中常用的`mysql`或者`mysql2`模块，这里单纯从`egg-mysql`插件和`ali-rds`模块出发，进行使用总结和整理；**
 
-
-
-
 ## 安装插件
 
 ```bash
@@ -30,7 +27,6 @@ npm install egg-mysql --save
 - 配置plugin.js: 申明需要使用插件；
 - 修改config.js: 配置数据库连接相关参数；
 
-
 ```js
 // config/plugin.js
 // 开启egg-mysql插件
@@ -41,7 +37,6 @@ exports.mysql = {
 ```
 
 在开启插件的同时，项目中使用外部数据库就需要进行相关的连接参数配置，值得一提的是：egg-mysql同egg-sequelize一样，支持多数据库连接。
-
 
 #### 连接单个数据库
 
@@ -78,9 +73,7 @@ app.mysql.query(sql, values);
 
 ```
 
-
 #### 连接多个数据库
-
 
 ```js
 
@@ -115,7 +108,6 @@ exports.mysql = {
 
 **获取mysql对象：**
 
-
 ```js
 // 获取mysql_salve_01 实例
 const mysqlSlaveClient01 = app.mysql.get('mysql_slave_01');
@@ -129,11 +121,9 @@ mysqlSlaveClient02.query(sql, values);
 
 ```
 
-
 ## 操作教程
 
 前面可以看到，不论是多数据库还是单个数据库，在获取到mysql的连接实例后，都可以通过`query(sql,value)`来执行自定义的sql语句，有一定基础的一定能够此次展开，完成对数据库的增删改查操作。但是`egg-mysql`插件是提供了一系列的[语法糖](https://blog.csdn.net/wofreeo/article/details/80679290)
-
 
 ### IO查询
 
@@ -153,7 +143,6 @@ mysqlSlaveClient02.query(sql, values);
 - beginTransactionScope(scope)
 
 事务众所周知，要么同时成功，要么同时失败；这里提供`beginTransaction()`和`beginTransactionScope(scope)`来实现事务操作
-
 
 #### Transaction
 
@@ -176,12 +165,11 @@ try {
 }
 
 ```
+
 提供两个方法：
 
 - 事务提交 ：commit()
 - 事务回滚 ：rollback()
-
-
 
 #### Transaction with scope
 
@@ -239,8 +227,8 @@ async function* bar(ctx, data) {
 
 ```
 
-
 ### egg-mysql中的事务
+
 从上面的简单例子中可以很容易的学会关于事务(Transaction)的相关操作，这里重点来说一下在`egg-mysql`插件中，`Transaction`的`api`定义：
 
 #### 手动控制事务
@@ -269,12 +257,9 @@ async function* bar(ctx, data) {
 - 非常容易使用，不容易犯错，就跟代码里面没有transaction操作一样。
 - 不需要手动的进行事务提交和回滚
 
-
 ##### 缺点
 
 - 所有的事务只有成功或者失败两个状态，无法做细粒度控制。
-
-
 
 ### 工具方法(Utils)
 
@@ -282,12 +267,9 @@ async function* bar(ctx, data) {
 - escapeId(value, forbidQualified)
 - format(sql, values, stringifyObjects, timeZone)
 
-
 在`egg-mysql`插件的`Readme.md`说明文档中有很多内容没有提及到，但是前面有说过，`egg-mysql`是依赖于`ali-rds`(有点旧),因此关于上面的一些，都是可以从`ali-rds`的[`Readme.md`](https://github.com/ali-sdk/ali-rds#io-queries)文档中找到的,[参考资料](https://github.com/ali-sdk/ali-rds#io-queries)
 
-
 现在，我结合`ali-rds`和`egg-mysql`文档整理egg-mysql插件的一些常用操作
-
 
 ### 添加（insert）
 
@@ -299,6 +281,7 @@ const result =await app.mysql.insert('user', { name: 'tom' });
 // 判断插入结果
 const insertSuccess = result.affectedRows === 1;
 ```
+
 从上面可以看到，利用的`insert`的操作，当然也是能够支持多条数据同时添加的
 
 ```js
@@ -371,11 +354,9 @@ console.log(result);
 
 ```
 
-
 ### 查询（select）
 
 查询分为多种，较为简单的查询操作可以直接借助get()和select(),凡是复杂一点（聚合、分组、排序等...)的操作，就需要借助query()来自定义sql执行；
-
 
 #### 获取一行
 
@@ -386,7 +367,6 @@ let row = await db.get('user', { name: 'tom' });
 // 转换成sql
 ==> SELECT * FROM `user` WHERE `name` = 'tom'
 ```
-
 
 #### 获取多行
 
@@ -414,7 +394,6 @@ let rows = await db.select('user', {
 
 上面可以在where对象中通过特定的key来指定匹配条件，`columns`指定获取的数据列，`orders`指定排序方式。
 
-
 ### 删除（delete）
 
 ```js
@@ -428,11 +407,9 @@ let result = await db.delete('user', {
 
 ```
 
-
 ### 更新（update）
 
 更新操作分为很多种，但是基本都是根据特定条件更新部分数据，或者更新多条数据
-
 
 #### 根据主键更新一行数据
 
@@ -491,7 +468,6 @@ let result = await db.update('user', row, {
 }
 
 ```
-
 
 ### 根据主键更新多行数据
 
@@ -576,12 +552,9 @@ let result = yield db.updateRows('user', options);
 
 这里需要补充一句：**虽然这里列举了四种常见的更新方法，但实际情况基本的update()方法可以满足需求。特殊的情况可以考虑直接通过query()执行sql语句实现。**
 
-
-
 ### 计数（count）
 
 像MySQL等数据库中count()函数计数，统计数据量条数使用是非常频繁的，当然这里也是支持按照条件统计计数
-
 
 ```js
 
@@ -600,10 +573,13 @@ const count = await db.count('user', {
 // 将数组中的数据与 ? 进行匹配替换
 const results = await app.mysql.query('update posts set hits = (hits + ?) where id = ?', [1, postId]);
 ```
+
 ### 表达式(Literal)
+
 如果需要调用mysql内置的函数（或表达式），可以使用Literal。
 
 #### 内置表达式
+
 **NOW(): 数据库当前系统时间，通过app.mysql.literals.now获取**。
 
 ```js
@@ -614,8 +590,6 @@ await app.mysql.insert(table, {
 ===> INSERT INTO `$table`(`create_time`) VALUES(NOW())
 
 ```
-
-
 
 #### 自定义表达式
 
@@ -635,16 +609,13 @@ await app.mysql.insert(table, {
 // INSERT INTO `$table`(`id`, `full_name`) VALUES(123, CONCAT("lisa", "marry"))
 ```
 
-
 ## 最后总结
 
 以上基本整理在项目中可能会使用到的
 `mysql`基础操作，但是纵观官方文档和日常使用体验就能看出，`egg-mysql`插件只是抽象出egg.js框架下`mysql`的简单应用，更多操作还是需要我们去手写`sql`像关联表操作等还是无法满足，因此基于egg.js框架开发的项目，更多的会推荐使用`sequelize`模块，即：`egg-sequelize`插件，有兴趣可以很好了解学习一下我的相关笔记文档或者[官网文档](https://www.npmjs.com/package/egg-sequelize)
 
-## 参考文档：
+## 参考文档
 
-- `egg-mysql插件文档`:https://www.npmjs.com/package/egg-mysql
+- `egg-mysql插件文档`:<https://www.npmjs.com/package/egg-mysql>
 
-- `ali-rds模块文档`:https://github.com/ali-sdk/ali-rds#io-queries)
-
-
+- `ali-rds模块文档`:<https://github.com/ali-sdk/ali-rds#io-queries>)
