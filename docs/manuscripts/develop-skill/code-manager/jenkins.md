@@ -5,7 +5,6 @@ permalink: /manuscripts/develop-skill/code-manager/jenkins.html
 
 # Jenkins
 
-
 ```bash
 docker run \
   -u root \

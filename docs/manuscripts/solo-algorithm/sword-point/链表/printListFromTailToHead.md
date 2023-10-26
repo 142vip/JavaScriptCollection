@@ -29,10 +29,8 @@ while(head!=null){
 }
 ```
 
-
 ## 代码实现
 
 @[code js](@code/algorithm/剑指/链表/printListFromTailToHead.js)
-
 
 ## 一些建议

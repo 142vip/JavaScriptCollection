@@ -3,7 +3,6 @@ permalink: /manuscripts/solo-algorithm/link-table/reverseBetween.html
 ---
 # BM2 链表内指定区间反转
 
-
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/share/jump/8484115461694574050421)
@@ -13,13 +12,10 @@ permalink: /manuscripts/solo-algorithm/link-table/reverseBetween.html
 
 ![区间反转.png](../images/reverseBetween.png)
 
-
-
 ## 刷题思路
 
 ## 代码实现
 
 @[code js](@code/algorithm/interview-101/reverseBetween.ts)
-
 
 ## 一些建议

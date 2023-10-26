@@ -1,9 +1,7 @@
 
 # Mongo简单部署
 
-
 > 在mac本地部署MongoDB数据库，用来进行yapi功能测试
-
 
 ## 部署命令
 
@@ -15,9 +13,7 @@ docker run -d --name=mongo-master --restart=always -p 27017:27017 -v /Users/Shar
 ## --auth表示连接mongodb需要授权
 ```
 
-
 - 数据持久化于`/Users/Shared/web-project/mongo`下，账号：root，密码：123456
-
 
 ## 创建用户
 
@@ -30,11 +26,11 @@ use admin
 
 ## 创建管理员用户
 db.createUser(
-	{
-		user:"root",
-		pwd:"123456",
-		roles:[{role:"root",db:"admin"}]
-	}
+ {
+  user:"root",
+  pwd:"123456",
+  roles:[{role:"root",db:"admin"}]
+ }
 );
 
 ## 登录

@@ -20,8 +20,6 @@ permalink: /manuscripts/develop-skill/monorepo.html
 
 ### 安装
 
-
-
-
 ## 参考资料
+
 - <https://turbo.build/repo/docs/installing>

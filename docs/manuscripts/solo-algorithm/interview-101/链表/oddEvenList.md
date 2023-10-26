@@ -12,13 +12,10 @@ permalink: /manuscripts/solo-algorithm/link-table/link-table/oddEventList.html
 
 ![反转链表.png](../images/oddEvenList.png)
 
-
-
 ## 刷题思路
 
 ## 代码实现
 
 @[code js](@code/algorithm/interview-101/oddEvenList.js)
-
 
 ## 一些建议

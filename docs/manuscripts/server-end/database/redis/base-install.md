@@ -5,10 +5,10 @@ permalink: /manuscripts/server-end/database/redis/base-install.html
 
 # 基础安装
 
-
 ## 脚本方式
 
 利用官方脚本进行安装，注意更新apt工具：`apt-get update -y`
+
 ```bash
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 
@@ -19,9 +19,7 @@ sudo apt-get install redis
 
 ```
 
-
 ## 压缩包方式
-
 
 ### 获取redis压缩包
 
@@ -34,7 +32,6 @@ wget http://download.redis.io/releases/redis-4.0.8.tar.gz
 tar xzvf redis-4.0.8.tar.gz
 ```
 
-
 ### 安装
 
 ```bash
@@ -46,9 +43,7 @@ cd src
 make install PREFIX=/usr/local/redis
 ```
 
-
-
-###  移动配置文件到安装目录下
+### 移动配置文件到安装目录下
 
 ```bash
 cd ../
@@ -62,6 +57,7 @@ mv redis.conf /usr/local/redis/etc
 ### redis配置后台启动
 
 将`daemonize no` 改成`daemonize yes`
+
 ```bash
 ## 编辑redis.conf配置
 vi /usr/local/redis/etc/redis.conf 
@@ -78,6 +74,7 @@ vi /usr/local/redis/etc/redis.conf
 ```
 
 意思是：开机调用这段开启redis的命令
+
 ```bash
 vi /etc/rc.local 
 ```
@@ -105,14 +102,11 @@ netstat -lntp | grep 6379
 
 ```
 
-
 ## docker容器方式
 
 ### 创建容器
 
-
 @[code sh](@code/redis/docker-install.sh)
-
 
 ### 相关命令
 
@@ -140,12 +134,12 @@ docker exec -it xxx bash
 ## docker-compose方式
 
 ### 创建服务
-@[code yaml](@code/redis/docker-compose.yaml)
 
+@[code yaml](@code/redis/docker-compose.yaml)
 
 ### 相关命令
 
-容器操作命令和上面的类似 
+容器操作命令和上面的类似
 
 ```bash
 ## 下线
@@ -155,7 +149,6 @@ docker-compose down
 docker-compose up -d
 
 ```
-
 
 ## 参考资料
 

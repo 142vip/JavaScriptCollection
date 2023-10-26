@@ -23,7 +23,6 @@ apt-get -f install
 apt-get source xxx                  
 ```
 
-
 ### 卸载
 
 ```bash
@@ -43,7 +42,6 @@ apt-get clean && apt-get autoclean
 
 ```
 
-
 ### 更新
 
 ```bash
@@ -55,13 +53,11 @@ apt-get upgrade
 apt-get dist-upgrade            
 ```
 
-
 ### 帮助命令
 
 ```bash
 apt-get --help
 ```
-
 
 ### 配置软件源
 
@@ -144,7 +140,6 @@ sudo apt-get upgrade
 
 ```
 
-
 ## yum
 
 使用yum安装和卸载软件，软件包都是rpm格式的
@@ -160,7 +155,6 @@ yum install/update xxx
 ```
 
 ### 查询
-
 
 ```bash
 ## 使用YUM查找软件包
@@ -202,7 +196,6 @@ yum clean headers
 yum clean oldheaders
 ```
 
-
 ### 更换软件源
 
 ```bash
@@ -222,9 +215,6 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 yum makecache
 ```
 
-
-
-
 ## apk
 
 Alpine Linux 下的包管理工具
@@ -235,14 +225,13 @@ Alpine Linux 下的包管理工具
 - Docker官方镜像可能会用Alpine Linux替换Ubuntu。
 
 劣势:
+
 - Alpine Linux使用了musl，可能和其他Linux发行版使用的glibc实现会有些不同。
 - musl实现的DNS服务不会使用resolv.conf文件中的search和domain两个配置，通过DNS来进行服务发现时需要注意
 
-
 Alpine使用apk进行包管理，通过apk --help命令查看完整的包管理命令
 
-
-###  基础使用
+### 基础使用
 
 ```bash
 apk install xxx
@@ -296,6 +285,3 @@ sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 ## 替换中科大源
 sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 ```
-
-
-

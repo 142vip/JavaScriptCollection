@@ -25,8 +25,6 @@
 
 功能:读取input.txt中文件流式发送到服务端，服务端解析到output.txt
 
-
-
 **依赖**
 
 ```json
@@ -80,6 +78,3 @@ axios({
     console.log(res.data)
 })
 ```
-
-
-

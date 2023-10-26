@@ -5,6 +5,7 @@ permalink: /manuscripts/develop-skill/code-style/eslint.html
 # Eslint
 
 ## 基础使用
+
 - 配置eslint
 
 - 生产环境安装eslint
@@ -26,8 +27,6 @@ pnpm i eslint -D
 
 会自动生成`.eslintrc.js`文件，例如：
 
-
-
 @[code js](~@/.eslintrc.js)
 
 其中`rules`对象可以自定义规则
@@ -48,8 +47,6 @@ pnpm i eslint -D
 "typescript": "^3.9.10",
 ```
 
-
 ## 参考资料
 
 - <https://zhuanlan.zhihu.com/p/404677113>
-

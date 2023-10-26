@@ -7,7 +7,6 @@ permalink: /manuscripts/front-end/front-framework/vuepress.html
 
 Vue 驱动的静态网站生成器，具有简介至上、高性能、Vue驱动等特点。
 
-
 ## 快速上手
 
 ```bash
@@ -28,22 +27,15 @@ pnpm vuepress build
 
 这样在本地就可以生成一个静态网站
 
-VuePress 会在 http://localhost:8080 启动一个热重载的开发服务器。当你修改你的 Markdown 文件时，浏览器中的内容也会自动更新
-
-
-
-
-
+VuePress 会在 <http://localhost:8080> 启动一个热重载的开发服务器。当你修改你的 Markdown 文件时，浏览器中的内容也会自动更新
 
 ## 使用主题
 
 VuePress 主题为你提供了布局、样式和其他功能，帮助你专注于 Markdown 内容的写作。
 
-
 ### 默认主题
 
 VuePress 有一个开箱即用的默认主题，正使用在你当前正在浏览的文档网站上。 **如果你不指定要使用的主题，那么就会自动使用默认主题。**
-
 
 为了配置默认主题，你需要在你的配置文件中通过`theme`配置项来使用它：
 
@@ -63,19 +55,13 @@ export default {
 }
 ```
 
-
 更多关于默认主题的配置，可以参考： <https://v2.vuepress.vuejs.org/zh/reference/default-theme/config.html>
-
 
 ### 社区主题
 
 除了默认主题外，Vuepress社区也提供了一些比较好的主题，这里主要介绍自己使用非常频繁的主题 —— 【Vuepress-Theme-Hope】
 
-
-
 ## 网站部署
-
-
 
 ### Github Pages
 
@@ -170,21 +156,11 @@ jobs:
 
 ```
 
-
 ### Vercel
 
-
 ### Netlify
-
-
-
-
 
 ## 参考资料
 
 - Vuepress：<https://vuepress.vuejs.org/zh/guide/getting-started.html>
 - Hope主题：<https://theme-hope.vuejs.press/zh/>
-
-
-
-

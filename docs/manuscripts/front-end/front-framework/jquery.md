@@ -6,7 +6,6 @@ permalink: /manuscripts/front-end/front-framework/jquery.html
 
 > 不推荐学，直接看官方文档，操作api方法即可
 
-
 jQuery是一个轻量级的JavaScript框架，简化JavaScript编程，适合Js入门学习，在目前的前端工程化浪潮中使用频率越来越低，
 建议直接根据[jQuery中文API文档](https://jquery.cuishifeng.cn/)进行学习，熟悉常用API即可。
 
@@ -18,7 +17,6 @@ jQuery是一个轻量级的JavaScript框架，简化JavaScript编程，适合Js�
 - HTML 事件函数
 - HTML DOM 遍历和修改
 - AJAX发送HTTP请求
-
 
 ## 安装
 
@@ -37,7 +35,6 @@ jQuery是一个轻量级的JavaScript框架，简化JavaScript编程，适合Js�
 
 使用<https://www.bootcdn.cn/>开源CDN，查询jQuery相关的cdn连接及scripts引入方式。
 
-
 参考：<https://www.bootcdn.cn/jquery/>
 
 ```js
@@ -45,7 +42,6 @@ jQuery是一个轻量级的JavaScript框架，简化JavaScript编程，适合Js�
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 ```
-
 
 ## 参考资料
 

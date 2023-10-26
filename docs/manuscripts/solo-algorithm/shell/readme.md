@@ -8,7 +8,7 @@
 
 ## 刷题总结
 
-- [x] [SHELL-1 统计文件的行数【简单】](shell-1.md) 
+- [x] [SHELL-1 统计文件的行数【简单】](shell-1.md)
 - [ ] [SHELL-2 打印文件的最后5行【简单】](shell-2.md)
 - [ ] [SHELL-3 输出7的倍数【中等】](shell-3.md)
 - [ ] [SHELL-4 输出第5行的内容【中等】](shell-4.md)
@@ -41,8 +41,7 @@
 - [ ] [SHELL-31 netstat练习3-输出每个IP的连接数 【较难】](shell-31.md)
 - [ ] [SHELL-32 netstat练习4-输出和3306端口建立连接总的各个状态的数目 【较难】](shell-32.md)
 - [ ] [SHELL-33 业务分析-提取值 【中等】](shell-33.md)
-- [ ] [SHELL-34 ps分析-统计VSZ,RSS各自总和 【中等】](shell-34.md) 
-
+- [ ] [SHELL-34 ps分析-统计VSZ,RSS各自总和 【中等】](shell-34.md)
 
 ## 参考资料
 

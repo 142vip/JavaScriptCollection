@@ -1,7 +1,5 @@
 # 数组中重复的数字
 
-
-
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/6fe361ede7e54db1b84adc81d09d8524)

@@ -8,12 +8,10 @@
 
 ## 题目描述
 
-
 ## 刷题思路
 
 ## 代码实现
 
 @[code js](@code/algorithm/剑指/树/print.js)
-
 
 ## 一些建议

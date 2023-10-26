@@ -4,7 +4,6 @@ permalink: /manuscripts/solo-algorithm/jumpFloor.html
 
 # 跳台阶
 
-
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4)
@@ -24,16 +23,13 @@ permalink: /manuscripts/solo-algorithm/jumpFloor.html
 - 第一次跳1阶，即：a1=1,则还剩下n-1可以再第二次选择，那么共n-1个台阶，会有多少种跳法？？？
 - 第一次跳2阶，即：a1=2,则还剩下n-2可以再第二次选择，那么共n-2个台阶，会有多少种跳法？？？
 
-
 问题很容易就演变成G(n)=G(n-1)+ G(n-2)
 
 这不就是斐波那契数列么？？？？ 可以参考：[【入门】斐波那契数列](./fibonacci.md)
 
-
 ## 代码实现
 
 @[code js](@code/algorithm/剑指/动态规划/jumpFloor.js)
-
 
 ## 一些建议
 

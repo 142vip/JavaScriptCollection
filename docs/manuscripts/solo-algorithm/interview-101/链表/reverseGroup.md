@@ -12,13 +12,10 @@ permalink: /manuscripts/solo-algorithm/link-table/reverseGroup.html
 
 ![反转链表.png](../images/reverseList.png)
 
-
-
 ## 刷题思路
 
 ## 代码实现
 
 @[code js](@code/algorithm/interview-101/reverseGroup.js)
-
 
 ## 一些建议

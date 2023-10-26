@@ -28,13 +28,11 @@ gm('/path/to/my/img.jpg')
 
 参考资料：
 
-
 - api参考：<https://github.com/aheckmann/gm>
 
 - 文档参考：<http://aheckmann.github.io/gm/docs.html>
 
-- 在线体验：<http://aheckmann.github.io/gm/> 
-
+- 在线体验：<http://aheckmann.github.io/gm/>
 
 ## moment
 
@@ -53,9 +51,6 @@ moment(XXXXXX).format('YYYY-MM-DD HH:mm:ss')
 ## crypto || crypto.js
 
 > 支持加密、哈希、指定长度随机字符串 等 【非常好用】
-
-
-
 
 ```js
 const crypto = require('crypto.js')
@@ -79,7 +74,6 @@ function hashMac(code,key){
 
 > 内置模块。路径处理，在相对路径、绝对路劲的处理上，很有优势
 
-
 ```js
 // 路径拼接
 path.join()
@@ -96,7 +90,6 @@ path.sep
 
 ## fs-extra
 
-
 > 文件操作相关，基于fs模块封装
 
 ```js
@@ -107,12 +100,12 @@ fse.readdirSync(path.join(_dirname),'XXXX')
 .forEach() // 遍历
 
 ```
+
 参考资料：
 
 - <https://www.npmjs.com/package/fs-extra>
 
 ## qr-images
-
 
 > 简单易用的二维码生成,模块[qrcode](https://www.npmjs.com/package/qrcode)也支持类似功能
 
@@ -129,13 +122,9 @@ const svg_string = qr.imageSync('I love QR!', { type: 'svg' });
 
 - <https://www.npmjs.com/package/qr-image>
 
-
 ## lodash
 
-
-
 > Lodash 是一个一致性、模块化、高性能的 JavaScript 实用工具库。
-
 
 ```js
 // Load the full build.
@@ -151,14 +140,11 @@ const  _ = require('lodash');
 - 发音：<https://zh.forvo.com/search/lodash/>
 - 地址：<https://www.lodashjs.com/>
 
-
 ## bluebird
-
 
 > bluebird是一个第三方Promise类库，相比其它第三方类库或标准对象来说，功能更齐全而不臃肿、浏览器兼容性更好!
 >
 > 在async/await之前使用频率非常高的npm包，直接将回调函数转化为promise对象【配合wechat项目学习】
-
 
 ```js
 const fs=require('fs')
@@ -171,5 +157,3 @@ const readFileAsync = Promise.promisify(fs.readFile)
 参考资料：
 
 - 地址：<http://bluebirdjs.com/docs/getting-started.html>
-
-

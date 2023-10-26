@@ -1,9 +1,6 @@
 # 变更记录
 
-
-
 该文件包含 `JavaScriptCollection` 仓库和网站所有显着更改。
-
 
 <!-- @include: ../../CHANGELOG.md#recent-alpha -->
 

@@ -38,7 +38,6 @@ const axios = require('axios').default
 
 ### 发送请求
 
-
 ```js
 
 // 发送基础post请求
@@ -85,6 +84,7 @@ Promise.all([getUserAccount(), getUserPermissions()])
 ## 取消请求
 
 axios从`v0.22.0` 开始支持以fetch api的方式：AbortController取消请求
+
 ```js
 const controller = new AbortController();
 
@@ -96,8 +96,6 @@ axios.get('/foo/bar', {
 // 取消请求
 controller.abort()
 ```
-
-
 
 ## 实例方法
 
@@ -115,7 +113,6 @@ controller.abort()
 
 **在使用别名方法时， url、method、data 这些属性都不必在配置中指定。**
 
-
 ### 创建实例
 
 ```js
@@ -126,7 +123,6 @@ const instance = axios.create({
 });
 ```
 
-
 #### 配置
 
 **全局默认配置，将作用于每个请求**
@@ -136,6 +132,7 @@ axios.defaults.baseURL = 'https://api.example.com';
 axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 ```
+
 实例对象创建后，支持对默认值进行修改、覆盖
 
 ```js
@@ -342,6 +339,7 @@ instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 ## 拦截器
 
 ### 请求拦截器
+
 ```js
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
@@ -353,6 +351,7 @@ axios.interceptors.request.use(function (config) {
 });
 
 ```
+
 ### 响应拦截器
 
 ```js
@@ -385,7 +384,6 @@ const myInterceptor = axios.interceptors.request.use(function () {/*...*/});
 axios.interceptors.request.eject(myInterceptor);
 ```
 
-
 ### 错误处理
 
 ```js
@@ -412,12 +410,9 @@ axios.get('/user/12345')
   });
 ```
 
-
 ## 最佳实践
 
 默认情况下，axios将 JavaScript 对象序列化为 JSON，针对不同的传参风格，需要对数据进行处理
-
-
 
 以application/x-www-form-urlencoded格式发送数据时，可以做如下处理：
 

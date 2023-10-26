@@ -29,9 +29,7 @@ npm install tedious --save
 
 另外，这里除了下载`egg-sequelize`插件外，至于需要下载其他什么数据库支撑模块(eg:mysql2/pg-hstore/tedious)是根据`config.js`文件中`dialect: 'mysql'`的配置来进行选择的。
 
-
 ## 配置
-
 
 ### 开启插件
 
@@ -91,15 +89,14 @@ module.exports = {
 };
 ```
 
-
 ## 模板文件
 
 默认情况下，将与数据库表字段对应的mode文件放在`app/model`下，`egg-sequelize`插件会自动加载和处理。
 
-
 ### 默认约定
 
 model文件 | 加载后类名 |
+
 - | :-: |
   `user.js` | `app.model.User` |
   `person.js` | `app.model.Person`|
@@ -112,10 +109,7 @@ model文件 | 加载后类名 |
 
 - 列名使用下划线风格进行命名，例如：`user_id`、`create_time`
 
-
-
 ### 使用示例
-
 
 #### 基础
 
@@ -163,7 +157,6 @@ module.exports = app => {
 - `app.model.sync()`: 数据库model与字段同步
 - `app.model.query()`: 执行自定义sql语句
 
-
 现在可以在`controller`层中，使用封装的方法来操作数据库了
 
 ```js
@@ -184,12 +177,9 @@ class UserController extends Controller {
 
 ```
 
-
 ### 关联
 
 可以通过`Model.associate()`来定义表之间的关联关系，`egg-sequelize`将会在模块model加载完毕后执行`associate()`,创建关联
-
-
 
 ### 多数据源
 
@@ -283,7 +273,6 @@ module.exports = (app, model) => {
 
 ```
 
-
 ### 自定义sequelize
 
 默认情况下，`egg-sequelize`将会使用`sequelize@5`,也就是V5版本.可以通过配置`config.sequelize.Sequelize`来自定义`sequelize`的对象版本。
@@ -298,9 +287,7 @@ exports.sequelize = {
 
 ```
 
-
 ### 完整的示例
-
 
 ```js
 // app/model/post.js
@@ -360,19 +347,15 @@ class PostController extends Controller {
 
 ```
 
-
 ### 同步model到数据库中
 
 强烈建议使用[sequelize-migrations](https://sequelize.org/master/manual/migrations.html)来创建或者迁移数据
 
 **当然在开发环境中，可以使用sync()方法进行数据库同步。**
 
-
 ### 迁移
 
 使用[sequelize-cli]可以帮助管理数据库，数据结构和原始数据，这个也是基于[sequelize-migrations](https://sequelize.org/master/manual/migrations.html)来的
-
-
 
 ### 扩展
 

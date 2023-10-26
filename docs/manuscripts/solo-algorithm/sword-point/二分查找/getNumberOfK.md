@@ -1,10 +1,11 @@
 /**
- * 数字在排序数组中出现的次数
- * 难度：中等
- * @param data
- * @param k
- * @returns {number|number}
- * @constructor
+
+- 数字在排序数组中出现的次数
+- 难度：中等
+- @param data
+- @param k
+- @returns {number|number}
+- @constructor
  */
 function GetNumberOfK (data, k) {
   // 分两次二分查找，知道重复元素首次和最后一次出现位置，相减就能拿到重复次数了.
@@ -21,8 +22,9 @@ function GetNumberOfK (data, k) {
 
 /**
  *
- * @param data
- * @param target
+
+- @param data
+- @param target
  */
 function rightBinarySearch (data, target) {
   if (!data.length) {
@@ -87,9 +89,6 @@ module.exports = {
 
 # 算法相关文档格式模版
 
-
-
-
 ## 题目链接
 
 - [牛客网]()
@@ -97,9 +96,7 @@ module.exports = {
 
 ## 题目描述
 
-
 ## 刷题思路
-
 
 ## 代码实现
 

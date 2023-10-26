@@ -1,6 +1,5 @@
 # 从1到n整数中1出现的次数
 
-
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/bd7f978302044eee894445e244c7eee6)
@@ -19,15 +18,16 @@
 ## 刷题思路
 
 方案一：
+
 - 转化为字符串，再遍历计数，属于投机方法
 
 方案二：
+
 - 数学方法，对进位、余数进行处理
 
 ## 代码实现
 
 @[code js](@code/algorithm/剑指/数组和矩阵/FirstNotRepeatingChar.js)
-
 
 ## 一些建议
 

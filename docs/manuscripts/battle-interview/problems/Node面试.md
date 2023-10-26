@@ -10,28 +10,22 @@ permalink: /manuscripts/battle-interview/node.html
 [//]: # (  test)
 [//]: # (```)
 
-参考：https://juejin.cn/post/6844904071501971469#heading-0
+参考：<https://juejin.cn/post/6844904071501971469#heading-0>
 
 重要重要！！！
 
-
-js事件循环：https://juejin.cn/post/6844903968292749319
-
+js事件循环：<https://juejin.cn/post/6844903968292749319>
 
 **同步和异步关注的是消息通信机制。**
 
-
 - 同步：在发起一个调用后，在没有得到结果前，该调用不返回，知道调用返回，才往下执行，也就是说调用者等待被调用方返回结果。
 
-
 - 异步：在发起一个调用后，调用就直接返回，不等待结果，继续往下执行，而执行的结果是由被调用方通过状态、通知等方式告知调用方，典型的异步编程模型比如 Node.js
-
 
 **阻塞和非阻塞，关注的是在等待结果时，线程的状态**。
 
 - 阻塞：在等待调用结果时，线程挂起了，不往下执行
 - 非阻塞：与上面相反，当前线程继续往下执行
-
 
 Nodejs事件循环中细分为这六个阶段，依次如下：
 
@@ -41,7 +35,6 @@ Nodejs事件循环中细分为这六个阶段，依次如下：
 - Poll: IO回调函数，这个阶段较为重要也复杂些，
 - Check: 执行 setImmediate() 的回调
 - Close: 执行 socket 的 close 事件回调
-
 
 **关于 process.nextTick ，这个事件的优先级要高于其他微队列的事件，所以对于需要立即执行的回调事件可以通过该方法将事件放置到微队列的起始位置。**
 
@@ -67,9 +60,9 @@ process.nextTick(() => {
 
 ```
 
-
 开发需要关系的阶段
 与我们开发相关的三个阶段分别是 Timers Poll Check
+
 - Timers ：执行定时器的回调，但注意，**在 node 11 前，连续的几个定时器回调会连续的执行，而不是像浏览器那样，执行完一个宏任务立即执行微任务。**
 - Check ：这个阶段执行 setImmediate() 的回调，这个事件只在 nodejs 中存在。
 - Poll ：上面两个阶段的触发，其实是在 poll 阶段触发的，poll 阶段的执行顺序是这样的。
@@ -79,8 +72,6 @@ process.nextTick(() => {
 >poll 的队列执行完成后，执行 check 阶段的事件
 
 在 nodejs 中也是有宏任务和微任务的， nodejs 中除了多了 process.nextTick ，宏任务、微任务的分类都是一致的。
-
-
 
 ## Node 跟 Chrome 有什么区别？
 　　
@@ -92,7 +83,6 @@ process.nextTick(() => {
 
 - node 没有HTML，WebKit和显卡等等的UI技术支持
 
-
 ## Cookies如何防范XSS攻击？
 
 XSS(Cross-Site Scripting，跨站脚本攻击)是指攻击者在返回的HTML中插入JavaScript脚本。为了减轻这些攻击，需要在HTTP头部配置set-cookie:
@@ -101,13 +91,9 @@ XSS(Cross-Site Scripting，跨站脚本攻击)是指攻击者在返回的HTML中
 
 - secure  - 这个属性告诉浏览器仅在请求为HTTPS时发送cookie。
 
-
 结果应该是这样的:
 
 Set-Cookie: sid=; HttpOnly. 使用Express的话，cookie-session默认配置好了。
-
-
-
 
 ## 常考问题
 
@@ -124,7 +110,6 @@ Set-Cookie: sid=; HttpOnly. 使用Express的话，cookie-session默认配置好�
 先说，防抖怎么防？
 
 > 防抖函数可以通过闭包 + 定时器实现。
-
 
 ```js
 
@@ -155,11 +140,9 @@ documentElement.addEventListener('keyup', debounce(getData, 1000))
 >
 > 如果你想要终止setTimeout()方法的执行，那就必须使用 clearTimeout()方法来终止，而使用这个方法的时候，系统必须知道你到底要终止的是哪一个setTimeout()方法(因为你可能同时调用了好几个 setTimeout()方法)，这样clearTimeout()方法就需要一个参数，这个参数就是setTimeout()方法的返回值(数值)，用这个数值来唯一确定结束哪一个setTimeout()方法。
 
-
 说白了，就是利用全局变量做标记，然后延时处理
 
-参考lodash的实现:https://www.lodashjs.com/docs/lodash.debounce
-
+参考lodash的实现:<https://www.lodashjs.com/docs/lodash.debounce>
 
 再来说说节流（一段时间内只触发一次请求加载），两种实现方式：
 
@@ -200,9 +183,10 @@ function throttle(func, wait) {
 
 看完后，我觉得有点单例模式的感觉...
 
-参考lodash节流函数:https://www.lodashjs.com/docs/lodash.throttle
+参考lodash节流函数:<https://www.lodashjs.com/docs/lodash.throttle>
 
 闭包有三个特性：
+
 - 1.函数嵌套函数
 - 2.函数内部可以引用外部的参数和变量
 - 3.参数和变量不会被垃圾回收机制回收
@@ -214,7 +198,6 @@ function throttle(func, wait) {
 - 3.私有成员的存在
 
 参考：<https://segmentfault.com/a/1190000000652891>
-
 
 ### 2.了解TS吗
 
@@ -228,17 +211,17 @@ function throttle(func, wait) {
 
 Koa本质上是调用一系列的中间件，来处理对应的请求，并决定是否传递到下一个中间件去处理
 
-> compose 是一个工具函数，Koa.js 的中间件通过这个工具函数组合后，按 app.use() 的顺序同步执行，也就是形成了 洋葱圈 式的调用。 参考：https://github.com/koajs/compose/blob/master/index.js
+> compose 是一个工具函数，Koa.js 的中间件通过这个工具函数组合后，按 app.use() 的顺序同步执行，也就是形成了 洋葱圈 式的调用。 参考：<https://github.com/koajs/compose/blob/master/index.js>
 
 - 初始化koa实例后，我们会用use方法来加载中间件(middleware)，**会有一个数组来存储中间件**，use调用顺序会决定中间件的执行顺序。
 - 每个中间件都是一个函数(不是函数将报错)，接收两个参数，第一个是ctx上下文对象，另一个是next函数(由koa-compose定义)
 - 在建立好http服务器后，会调用**koa-compose模块**对middleware中间件数组进行处理。
+
 > 原理就是：会从middleware数组中取第一个函数开始执行，中间件函数中调用next方法就会去取下一个中间件函数继续执行。每个中间件函数执行完毕后都会返回一个promise对象。(ps:调用next方法并不是表示当前中间件函数执行完毕了，调用next之后仍可以继续执行其他代码)
 
 参考：<https://zhuanlan.zhihu.com/p/29455788>
 
 Compose 是一种基于 Promise 的流程控制方式，可以通过这种方式对异步流程同步化，解决之前的嵌套回调和 Promise 链式耦合。
-
 
 ### 4.node多线程怎么管理
 
@@ -260,9 +243,7 @@ node中的路由由自己的框架处理，通过分析url路径分发到相应�
 
 路由是一组映射关系，分析URL将访问的内容映射到实际的action或者controller上。
 
-
 ### 5.Node的Event Loop 【重要】
-
 
 ### 6.介绍一下node中间件
 
@@ -273,14 +254,12 @@ node中的路由由自己的框架处理，通过分析url路径分发到相应�
 
 比如生活中的租客和房主，中间需要一个中介来搭桥，这个中介就类似于中间件。一般来说，中间件用来封装底层细节，组织基础功能，分离基础设施和业务逻辑
 
-
 ### 7.数组去重的方法有哪些
 
 - 遍历数组，indexof过滤，再push
 - reduce方法
 - filter方法
 - 利用集合Set元素不能重合，定义集合，解构后成新数组
-
 
 ```js
 let arr = [1,1,2,3,4,5,5,6];
@@ -320,7 +299,6 @@ let arr2 = [...new Set(arr)]
 
 参考： <https://segmentfault.com/a/1190000016418021?utm_source=tag-newest>
 
-
 ### 8.判断类型有哪些方法
 
 - typeof：可以判断出`string`,`number`,`boolean`,`undefined`,`symbol`
@@ -329,5 +307,5 @@ let arr2 = [...new Set(arr)]
 - Object.prototype.toString.call()：常用于判断浏览器内置对象,对于所有基本的数据类型都能进行判断
 - Array.isArray()：只能用于判断是否为数组
 - constructor
- 
+
 参考：<https://www.jb51.net/article/190286.htm>
