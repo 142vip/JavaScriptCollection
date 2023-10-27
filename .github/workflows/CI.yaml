@@ -5,15 +5,14 @@
 name: CI
 ## 触发条件
 on:
+  # 提PR到next分支触发CI
   pull_request:
     branches:
-      - 'master'
-      - 'next'
-      - '!pages/**'
+      - next
   push:
     branches:
-      - master
       - next
+
   # 手动触发部署
   workflow_dispatch:
 
@@ -27,10 +26,10 @@ env:
   UserName: 142vip
 
 jobs:
-  install-init:
-    name: "流水线初始化"
+  Base-Build:
+    name: "基础编译构建"
     runs-on: ubuntu-latest
-    if: github.repository == '142vip/JavaScriptCollection'
+    if: github.repository == '142vip/JavaScriptCollection' &&  github.event_name == 'pull_request'
     permissions:
       actions: read
       pull-requests: read
@@ -43,50 +42,26 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      #      ## 依赖下载完成后，或执行思维导图编译
-      #      - name: PNPM Install
-      #        uses: pnpm/action-setup@v2
-      #        with:
-      #          version: 7
-      #          run_install: |
-      #            args: [--frozen-lockfile, --registry=https://registry.npmmirror.com]
-      # 安装Node环境
+      ## 安装PNPM
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      ## 安装Node环境
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18.18.0
           ## 淘宝镜像加速
           registry-url: 'https://registry.npmmirror.com'
+          ## 缓存
+          cache: 'pnpm'
 
+      ## 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
       - name: Install Dependencies
         run: |
           ./scripts/ci
-
-      - name: Cache Dependencies
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
-
-  Base-Build:
-    name: "基础编译校验"
-    runs-on: ubuntu-latest
-    if: github.repository == '142vip/JavaScriptCollection'
-    needs:
-      - install-init
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-          fetch-depth: 0
-
-      - name: Restore Dependencies From Cache
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Code LintFix
         run: |
@@ -100,12 +75,11 @@ jobs:
         run: |
           ./scripts/bundle build_proxy
 
+
   Build-Docker-Image:
     name: "构建Docker镜像"
     ## macos不支持docker的使用
     runs-on: ubuntu-latest
-    needs:
-      - install-init
     ## 主库master、next且执行release更新时执行
     if: github.repository == '142vip/JavaScriptCollection' && startsWith(github.event.head_commit.message, 'chore(release):')
     permissions:
@@ -119,7 +93,10 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: Set up Docker
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
       - name: Login Docker
@@ -131,17 +108,15 @@ jobs:
           --password=${{ secrets.DOCKER_PASSWORD }} \
           ${{env.REGISTRY}}
 
-      - name: Restore Dependencies From Cache
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
+      - name: Install Dependencies
+        run: |
+          ./scripts/ci
 
       ## 构建，支持domain
       - name: Build To Dist
         run: |
-          ./scripts/bundle build_proxy
+          ./scripts/bundle build
 
       ## 快速构建并推送
       - name: Push Docker Image
