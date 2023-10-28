@@ -9,6 +9,7 @@ on:
   push:
     branches:
       - next
+      - feat/add-gh-pages
   workflow_dispatch:
 
 
@@ -68,7 +69,7 @@ jobs:
       - name: Get Commit Info
         id: gitInfo
         run: |
-          echo "commitMessage=$(git log -1 --pretty=%B)" >> $GITHUB_OUTPUT
+          echo "commitMessage='$(git log -1 --pretty=%B)'" >> $GITHUB_OUTPUT
           echo "author=$(git log -1 --pretty=%an)" >> $GITHUB_OUTPUT
           echo "email=$(git log -1 --pretty=%ae)" >> $GITHUB_OUTPUT
 
