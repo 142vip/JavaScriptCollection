@@ -43,7 +43,7 @@ const SupportScripts = {
       `,
       // 镜像存在即删除
       `
-        if [[ "$(docker images -q ${imageName} 2> /dev/null)" != "" ]];then 
+        if [ "$(docker images -q ${imageName} 2> /dev/null)" != "" ];then 
           docker rmi ${imageName}
           exit 0;
         else
