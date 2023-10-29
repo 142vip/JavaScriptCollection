@@ -140,7 +140,9 @@ rpc BidiHello(stream HelloRequest) returns (stream HelloResponse);
 - 广播实时通信
 - 进程间通信
 
-## 优势
+## 简单比较
+
+### 优势
 
 - **实现的进程间通信方式高效。** gRPC 不使用 JSON 或 XML 等文本格式，而是使用基于二进制协议的protocol buffer与 gRPC 服务、客户端进行通信。此外，gRPC 是在 HTTP/2 之上实现的protocol buffer，这使得进程间通信更快。
 
@@ -156,7 +158,7 @@ rpc BidiHello(stream HelloRequest) returns (stream HelloResponse);
 
 - **与云原生生态系统高度集成。** gRPC 是 CNCF 的一部分，大多数现代框架和技术都为 gRPC 提供了开箱即用的原生支持。
 
-## 不足
+### 不足
 
 - **可能不适合面向外部的服务。**  当你想将应用程序或服务提供给外部客户端使用时，gRPC 可能不是最合适的协议，因为大多数外部使用者对 gRPC 还很陌生。而且，gRPC 服务的协议驱动、强类型化特性可能会降低你向外部提供的服务的灵活性，因为外部使用者可以控制的东西要少得多。
 - **生态系统相对较小。** 与传统的 REST/HTTP 协议相比，gRPC 生态系统仍然相对较小。浏览器和移动应用程序对 gRPC 的支持仍处于初级阶段。

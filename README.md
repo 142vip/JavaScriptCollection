@@ -1,35 +1,20 @@
-### 在线浏览
+<!-- #region quick-start -->
 
-- 尝鲜版：<https://142vip.github.io/JavaScriptCollection>
-- 稳定版：<https://code.142vip.cn>
+>这里是工作、学习、生活中总结的各类文章，`有技术`、`有生活`、`有思考`。
+所有内容会选择性的发表于**微信公众号、博客、掘金、CSDN、Github ，实际内容以本仓库排版、校对为主。**
+代码会不定期同步到 **码云** 。
 
-
-网站无法访问时，建议通过科学上网访问备用网络
-
-- Netlify： <https://js-collection.netlify.app>
-- Vercel： <https://js-collection.vercel.app>
-
-
-### 写在最前面
-
-
-这里是工作、学习、生活中总结的各类笔记文章，涉及开发技术，也会感慨万千、水一些`思考`；若发现博客外链不能访问欢迎指正；
-所有内容会选择性的发表于**微信公众号、博客、掘金、CSDN、Github ，实际内容以本仓库排版、校对为主。** 代码会不定期同步到 **码云** 。
-
+## 在线浏览
 
 **没有效访问链接的代表尚未完成，大家善用快捷键`Ctrl+F`**
 
+- 稳定版：<https://code.142vip.cn>
 
+> 网站无法访问时，合理使用魔法通过科学上网访问第三方托管平台
 
-### 学习路线
-
-
-### 日常推荐
-
-
-###  文章笔记
-
-**注：无高亮有效访问链接的待完成/同步**
+- Github：<https://142vip.github.io/JavaScriptCollection>
+- Netlify： <https://js-collection.netlify.app>
+- Vercel： <https://js-collection.vercel.app>
 
 ## 前端
 
@@ -39,90 +24,60 @@
 
 > 依赖W3CSchool文档和日常整理，主要是对CSS常用操作和基础属性进行整理总结。不会过多深入
 
-- [CSS开发规范](docs/css/CSS开发规范.md)
-
+- CSS开发规范
 - 样式属性
-
 - 页面布局
-
 - 移动端适配
 
-##### [基础教程](docs/css/基础教程)
-
-##
+##### 基础教程
 
 ### JavaScript
 
-#### 快速入门
+##### 快速入门
 
-- [x] [简单介绍](docs/javascript/快速入门/javascript简单介绍.md)
-- [x] [快速了解](docs/javascript/快速入门/javascript快速入门.md)
-- [x] [JavasScript开发规范](docs/javascript/JavaScript开发规范.md)
+- [简单介绍]()
+- [快速了解]()
+- [JavasScript开发规范]()
 
-<!-- #### 基础教程 -->
+##### 基础教程
 
-- [x] [语法与数据结构](docs/javascript/基础教程/javascript语法与数据结构.md)
-- [x] [循环与迭代](docs/javascript/基础教程/javascript循环与迭代.md)
-- [x] [流程控制与错误处理](docs/javascript/基础教程/javascript流程控制与错误处理.md)
-- [x] [表达式和运算符](docs/javascript/基础教程/javascript表达式和运算符.md)
-- [x] [函数和方法](docs/javascript/基础教程/javascript函数.md)
-- [x] [数字和日期](docs/javascript/基础教程/javascript数字和日期.md)
-- [x] [对象的使用](docs/javascript/基础教程/javascript对象的使用.md)
-- [x] [正则表达式](docs/javascript/基础教程/javascript正则表达式.md)
-- [x] [promise对象的使用](docs/javascript/基础教程/promise对象的使用.md)
-- [x] [modules模块](docs/javascript/基础教程/modules模块.md)
+- [语法与数据结构]()
+- [循环与迭代]()
+- [流程控制与错误处理]()
+- [表达式和运算符]()
+- [函数和方法]()
+- [数字和日期]()
+- [对象的使用]()
+- [正则表达式]()
+- [promise对象的使用]()
+- [modules模块]()
 
-<!-- #### 中级教程 -->
+##### 中级教程
 
-- [x] [Promise对象](docs/javascript/中级教程/promise对象.md)
-- [x] [async函数](docs/javascript/中级教程/async函数.md)
-- [x] [class类](docs/javascript/中级教程/class类.md)
-
-
-- [x] [不一样的ajax](docs/javascript/高级教程/不一样的ajax.md)
-- [x] [什么是事件循环](docs/javascript/高级教程/什么是事件循环.md)
-- [x] [JSON.stringify()的三个参数]()
-
-
-- [x] [ES6、ES7、ES8、ES9、ES10的新特性](docs/javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
-- [x] [ES2020新特性](docs/javascript/最后稻草/ES2020新特性.md)
-- [x] [JavaScript 工具函数大全](docs/javascript/最后稻草/JavaScript工具函数大全.md)
-- [x] [常用函数方法整理](docs/javascript/最后稻草/常用函数方法整理.md)
+- [Promise对象]()
+- [async函数]()
+- [class类]()
+- [不一样的ajax]()
+- [什么是事件循环]()
+- [JSON.stringify()的三个参数]()
+- [ES6、ES7、ES8、ES9、ES10的新特性]()
+- [ES2020新特性]()
+- [JavaScript 工具函数大全]()
+- [常用函数方法整理]()
 
 ### JQuery
 
-- [安装使用](docs/jquery/安装使用.md)
-- [基本属性](docs/jquery/基本属性.md)
-
-
+- [安装使用]()
+- [基本属性]()
 - Css样式
-
-
 - 选择器
-
-
 - 文档处理
-
-
 - 筛选
-
-
 - 事件
-
-
 - 效果
-
-
 - 事件对象
-
-
 - 延迟对象
-
-
 - 回调函数
-
-
-- 其他整理
 
 ### Vue.js
 
@@ -134,8 +89,7 @@
 
 Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的服务端渲染问题，提供网站进行SEO优化的可能
 
-
-[前端读写cookie]()
+- [前端读写cookie]()
 
 ### UI框架
 
@@ -158,22 +112,22 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 ### Express框架
 
-- [框架概念简介](docs/express/框架介绍.md)
-- [brew和tree的安装](docs/express/brew和tree的安装.md)
+- [框架概念简介]()
+- [brew和tree的安装]()
 - 搭建express基础项目
 - 安装
 - 路由
 - 静态文件
 - 中间件
 - 统一错误处理
-- [express()函数](docs/express/express()函数.md)
-- [application对象详解](docs/express/application对象详解.md)
-- [request对象](docs/express/request对象.md)
-- [respon对象]()
+- [express()函数]()
+- [application对象详解]()
+- [request对象]()
+- [response对象]()
 - [router对象]()
 - 数据库集成
 - MVC分层
-- [pm2进程管理](docs/express/pm2进程管理.md)
+- [pm2进程管理]()
 - 分环境部署上线
 
 ### Koa框架
@@ -186,105 +140,65 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 - 请求(Request)
 - 响应(Response)
 
-### Eggjs框架
-
-#### 基础篇
-
-- [第一部分：Git概述](docs/eggjs/git-README.md)
-
-
-* [1.1 下载和安装](docs/eggjs/git-download.md)
-    * [1.2 基本配置](docs/eggjs/git-config.md)
-    * [1.3 常用命令](docs/eggjs/git-dns.md)
-    * [1.4 GitHub简单使用](docs/eggjs/git-github.md)
-    * [1.5 GitBook简单使用](https://mp.weixin.qq.com/s/Wn_IZ6K4eqh1PtomRtqdqg)
-        * [1.5.1 Typora简介](docs/eggjs/git-typora.md)
-        * [1.5.2 MarkDown语法](docs/eggjs/git-markdown.md)
-    * [1.6 码云和GitHub的选择](docs/eggjs/git-choice.md)
-
-
-- [第二部分：数据库概述](docs/eggjs/mysql-README.md)
-
-
-- [2.1 下载和安装](docs/eggjs/mysql-download.md)
-- [2.2 连接数据库](docs/eggjs/git-connect.md)
-- [2.3 CURD操作](docs/eggjs/mysql-curd.md)
-- [2.4 Redis缓存](docs/eggjs/mysql-redis.md)
-- [2.4.1 redis安装](docs/eggjs/mysql-redis-install.md)
-- [2.4.2 redis常用指令](docs/eggjs/mysql-redis-dns.md)
-- [2.5 可视化管理](docs/eggjs/mysql-redis-view.md)
+### Egg.js框架
 
 #### 入门篇
 
-- [第一部分：Egg框架快速入门](docs/eggjs/egg-README.md)
-
-
-- [1.1 基础功能](docs/eggjs/egg-base.md)
-    - [1.1.1 接口参数获取](docs/eggjs/egg-request-params.md)
-    - [1.1.2 Egg内置对象 ](docs/eggjs/egg-object.md)
-    - [1.1.3 Config配置](docs/eggjs/egg-config.md)
-    - [1.1.4 Egg生命周期](docs/eggjs/egg-life.md)
-    - [1.1.5 中间件理解](docs/eggjs/egg-middleware.md)
-    - [1.1.6 Router路由分发](docs/eggjs/egg-router.md)
-    - [1.1.7 Controller控制器](docs/eggjs/egg-controller.md)
-    - [1.1.8 Service服务](docs/eggjs/egg-service.md)
-    - [1.1.9 常用插件](docs/eggjs/egg-plugin.md)
-- [1.2 核心功能](docs/eggjs/egg-core.md)
-    - [1.2.1 日志输出](docs/eggjs/egg-logger.md)
-    - [1.2.2 定时任务](docs/eggjs/egg-schedule.md)
-    - [1.2.2 HttpClient网络请求](docs/eggjs/egg-httpclient.md)
-    - [1.2.3 Cookie的基本使用](docs/eggjs/egg-cookies.md)
-    - [1.2.4 Session的基本使用](docs/eggjs/egg-session.md)
-    - [1.2.5 统一异常-错误处理](docs/eggjs/egg-try-catch.md)
-    - [1.2.6 CSRF防范和XSS攻击](docs/eggjs/egg-csrf-xss.md)
-    - [1.2.7 RESTful API接口风格](docs/eggjs/egg-restful.md)
-
-
-- [第二部分：插件开发](docs/eggjs/plugin-README.md)
-
-
-- [2.1 egg-validate参数校验](docs/eggjs/plugin-egg-validate.md)
-- [2.2 egg-view-ejs页面渲染](docs/eggjs/plugin-egg-view.ejs.md)
-- [2.3 egg-redis缓存](docs/eggjs/plugin-egg-redis.md)
-- [2.4 egg-mysql](docs/eggjs/plugin-egg-mysql.md)
-- [2.5 egg-sequelize](docs/eggjs/plugin-egg-sequelize.md)
-- [2.6 egg-socket.io即时通讯](docs/eggjs/plugin-egg-socket.io.md)
+- [第一部分：Egg框架快速入门]()
+- [1.1 基础功能]()
+  - [1.1.1 接口参数获取]()
+  - [1.1.2 Egg内置对象]()
+  - [1.1.3 Config配置]()
+  - [1.1.4 Egg生命周期]()
+  - [1.1.5 中间件理解]()
+  - [1.1.6 Router路由分发]()
+  - [1.1.7 Controller控制器]()
+  - [1.1.8 Service服务]()
+  - [1.1.9 常用插件]()
+- [1.2 核心功能]()
+  - [1.2.1 日志输出]()
+  - [1.2.2 定时任务]()
+  - [1.2.2 HttpClient网络请求]()
+  - [1.2.3 Cookie的基本使用]()
+  - [1.2.4 Session的基本使用]()
+  - [1.2.5 统一异常-错误处理]()
+  - [1.2.6 CSRF防范和XSS攻击]()
+  - [1.2.7 RESTful API风格]()
+- [第二部分：插件开发]()
+- [2.1 egg-validate参数校验]()
+- [2.2 egg-view-ejs页面渲染]()
+- [2.3 egg-redis缓存]()
+- [2.4 egg-mysql]()
+- [2.5 egg-sequelize]()
+- [2.6 egg-socket.io即时通讯]()
 
 #### 代码实战篇
 
-- [第一部分：常用代码](docs/eggjs/project-README-CODE.md)
+##### 常用代码
 
+- [图片前端在线剪辑]()
+- [文件上传后台处理]()
+- [MD5加密-解密算法]()
+- [Egg Jwt加密和校验]()
 
-- [1.1 图片前端在线剪辑](docs/eggjs/project-images-cropper.md)
-- [1.2 文件上传后台处理](docs/eggjs/project-upload.md)
-- [1.3 MD5加密-解密算法](docs/eggjs/project-md5.md)
-- [1.4 Egg Jwt加密和校验](docs/eggjs/project-token.md)
-- [第二部分：项目简介](docs/eggjs/project-README-INTRODUCE.md)
+##### 框架集成
 
+- [手把手搭建基础Egg开发框架]()
 
-- [2.1 基于OAuth2的统一认证中心系统](docs/eggjs/project-ssoCenterSystem.md)
-- [2.2 常用前后端分页比较与实现](docs/eggjs/project-pagenation.md)
-- [2.3基于Spring Boot实现的个人博客](docs/eggjs/project-spring-boot-blog.md)
-- [2.4 基于Yapi搭建的接口管理系统](docs/eggjs/project-webapi.md)
-- [2.5 GitBook开源笔记总结站点搭建](docs/eggjs/project-gitbook.md)
-- [2.6 个人网站及接口服务搭建搭建](docs/eggjs/project-142vip.cn.md)
-- [第三部分：手把手搭建基础Egg开发框架](docs/eggjs/egg-egg-example.md)
+### Nest.js框架
 
-### Nestjs框架
+> Nestjs框架推崇Typescript语法，友好的兼容express框架，因此在学习Nestjs框架之前，请务必熟悉express框架、Typescript入门。
 
->
-Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此在学习Nestjs框架之前，请务必先熟悉express框架相关操作并进行typescript入门；在一定程度上typescript和面向对象语言Java、Net等很相似，如果你之前有JavaScript和Java的基础，那么应该恭喜你，你的学习速度将会倍速提高
-
-- [核心基础概念](nestjs/nestjs核心基础概念.md)
-- [项目创建初始化入门](nestjs/nestjs项目创建初始化入门.md)
-- [整合swagger快速生成api文档](nestjs/nestjs整合swagger快速生成api文档.md)
-- [接口路由请求传参](nestjs/nestjs接口路由请求传参.md)
+- [核心基础概念]()
+- [项目创建初始化入门]()
+- [整合swagger快速生成api文档]()
+- [接口路由请求传参]()
 
 ## 算法
 
-- 算法分析
+- 算法分析——时间、空间复杂度
 
-### 查找
+### 查找算法
 
 - 顺序查找
 - 折半查找
@@ -293,17 +207,21 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 - 散列（Hash）表
 - 字符串模式匹配(KPM)
 
-### 排序
+### 排序算法
 
 - 插入排序
 - 交换排序
 - 选择排序
 - 归并排序
 - 基数排序
-- 内部排序比较
-- 外部排序比较
 
-### LeetCode刷题
+## 开发技巧
+
+### 代码管理
+
+### 代码风格
+
+### 编译工具
 
 ## 数据库
 
@@ -312,67 +230,69 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 ### MySQL
 
 - [【服务器版】MySQL的安装部署](https://mp.weixin.qq.com/s/U1OUZYHEChFDx03FvgbMHA)
-- [MySQL优化之Explain参数说明](docs/mysql/MySQL优化之Explain参数说明.md)
+- [MySQL优化之Explain参数说明]()
 - 索引
 - sql优化
-- [基于GTID主从复制的原理和基础配置](docs/mysql/基于GTID主从复制的原理和基础配置.md)
-- [MySQL日志类型把我难哭了，你学废了吗？](docs/mysql/mysql日志比较.md)
+- [基于GTID主从复制的原理和基础配置]()
+- [MySQL日志类型把我难哭了，你学废了吗？]()
 
 ### Redis
 
 > 将围绕redis基础概念、使用场景、使用方式、简单部署等方面 展开介绍，[主目录](redis)下有自己觉得还不错PDF文档~
 
-- [key命名规范与建议](docs/redis/key命名规范与建议.md)
-- [redis开发使用规范](docs/redis/redis开发使用规范.md)
-- [redis基础介绍](docs/redis/redis基础介绍.md)
+- [key命名规范与建议]()
+- [redis开发使用规范]()
+- [redis基础介绍]()
 - [redis的简单安装和部署](https://mp.weixin.qq.com/s/Xe-ZDf2kgUWfYSkuULAdlw)
-- [官方默认配置模板](code/docs/redis/redis-default.conf)
+- [官方默认配置模板]()
 - 数据类型
-- [redis简单主从集群部署-docker方式](docs/docs/redis/redis集群部署.md)
-- [memCache与Redis比较](docs/redis/memCache与Redis.md)
+- [redis简单主从集群部署-docker方式]()
+- [memCache与Redis比较]()
 
-### Mongo
+### MongoDB
 
 - 基本介绍
 - 安装部署
 - 简单使用
-- Node下的CURD操作
+- Node下的CURD操作、
+
+## 容器相关
 
 ## 服务部署
 
-### nginx
+### Nginx
 
-- [nginx安装，普通安装 Or Docker搞定？](docs/nginx/nginx基础部署.md)
+- [nginx安装，普通安装 Or Docker搞定？]()
 - [手把手nginx基础入门]()
 - [反向代理、负载均衡真有那么难吗？]()
-- [Nginx SSL证书，从此踏上Https之路](docs/nginx/nginx服务器ssl证书配置.md)
+- [Nginx SSL证书，从此踏上Https之路]()
 
-### docker
+### Docker
 
 - 我与docker的第一次硬碰硬
 - docker操作入门真有那么难吗？
 - 这些基础操作指令，你会吗？
 - 那些年，我常用的docker指令操作汇总
 
-### docker-compose
+### Docker-Compose
 
 - 听说你装了N次都没搞定？
 - 集群启动失败，yaml规范不清楚？
 - [我了解的docker-compose都在这里了](https://mp.weixin.qq.com/s/nC4nF51xn61TZlenuUxDog)
 
-### linux下shell编程
+### Linux下Shell编程
 
 - [shell基础整理](https://mp.weixin.qq.com/s/gctrWdB1JEK59_a9tJQSkg)
-- [操作mysql数据库](shell/shell连接mysql.md)
+- [操作mysql数据库]()
 - shell操作docker
 - 环境变量env
 
-## 服务网关
+## 网关
 
 ### Kong
 
-- [kong的的基本介绍](/api-gateway/kong/kong的基本介绍.md)
-- [docker下kong的部署](/api-gateway/kong/基于docker部署kong网关服务.md)
+- [kong的的基本介绍]()
+- [docker下kong的部署]()
 - docker-compose搭建kong集群
 - 可视化管理界面介绍
 
@@ -388,26 +308,23 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 - 路由管理
 - 插件介绍
 
-## 服务注册
+## 服务注册|发现
 
 ### Apollo
-
+>
 > 携程开发的配置中心经典项目，可集成多语言客户端，实现灰度部署，在分布式微服务的场景下抽离出服务配置，方便统一管理、发布
 
 ### Consul
-
+>
 > 服务注册、发现，key-value键值对管理
 
 ### Nacos
-
-> 背靠国内一线互联网大厂——阿里巴巴，也是可适用于微服务下的配置管理，支持Java、Nodejs等主流语言，目前生态良好，技术支持表现一般，属于Apollo替代产品
+>
+> 阿里巴巴出品，适用于微服务下的配置管理，支持Java、Nodejs等主流语言，目前生态良好，技术支持表现一般，属于Apollo替代产品|发、、
 
 ## 消息中间件
 
->
-消息队列已经逐渐成为企业IT系统内部通信的核心手段。具有低耦合、可靠投递、广播、流量控制、最终一致性等一系列功能，成为异步RPC的主要手段之一。当今市面上有很多主流的消息中间件，如老牌的ActiveMQ、RabbitMQ，炙手可热的Kafka，阿里巴巴自主开发RocketMQ等。
->
-> 目前个人了解的有：RabbitMQ、Kafka、RocketMQ
+>消息队列已经逐渐成为企业IT系统内部通信的核心手段。具有低耦合、可靠投递、广播、流量控制、最终一致性等一系列功能，成为异步RPC的主要手段之一。当今市面上有很多主流的消息中间件，如老牌的ActiveMQ、RabbitMQ，炙手可热的Kafka，阿里巴巴自主开发RocketMQ等。
 
 ### RabbitMQ
 
@@ -423,17 +340,9 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 > serving底层通信都是是用的grpc。我自己基于JavaScript技术栈上较多的接触到gRPC，传送门:[基于js下各框架grpc的使用]()
 
 - nodejs下grpc的简单实用
-
-
 - grpc集成express框架
-
-
 - grpc集成koa框架
-
-
-- eggjs框架下grpc的线上部署
-
-
+- grpc在egg.js下的应用
 - grpc插件开发示例
 
 ### Dubbo
@@ -442,30 +351,25 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 
 ### Thrift
 
-> Apache的一个项目(http://thrift.apache.org)，前身是Facebook开发的一个RPC框架，采用thrift作为IDL (Interface description
-> language)。
+## ELK
+>
+> 全链路日志追踪
 
-## Elk日志管理平台
-
-> 全链路日志
-
-- [ELK基础概念与常用架构整理](docs/elk/基础概念与常用架构整理.md)
+- [ELK基础概念与常用架构整理]()
 
 ### ElasticSearch
-
+>
 > 数据存储
 
 ### Logstash
-
+>
 > 数据收集
 
 ### Kibana
-
+>
 > 数据展示
 
 ## 监控工具
-
-> 参考笔者线上平台:http://view.142vip.cn/grafana  账号/密码：test/123456 基于docker部署，由于是个人学生服务器，站点访问延迟较高
 >
 > 常用工具：Prometheus 、Grafana、zabbix、lepus等
 
@@ -496,7 +400,7 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 - MyCat
 - 360Atlas
 
-#### 集群监控
+#### 可视化监控
 
 > 实现功能：实时监控、可视化数据显示、故障报警
 
@@ -525,78 +429,62 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 
 - jmeter
 
-## Redis集群
+### Redis集群
 
 > 持续整理中...
 
-### 简单主从模式
+#### 主从模式
 
-### 哨兵模式
+#### 哨兵模式
 
-### cluster模式
+#### 集群模式
 
-## 网站搭建
-
-> 从大二开始搭建个人网站：http://www.142vip.cn 起初非常简陋，工作之后计划进行三次重构，一直抽空佛系谢谢， 目前在重构中..
+## 程序人生
 
 - 最初的梦想
 - 舍弃Java，我的重构之路
 - 网站正规化，Nginx配置SSL证书
 - 小小网站却耗费三台学生服务器？
 
-## 书籍整理
+## 读书整理
 
 ### 技术类
 
-> 待整理
-
-#### [狼书 - 了不起的Node.js](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/Readme.md)
-
-- [第一章 Node.js初识](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第一章%20Node.js初识.md)
-- [第二章 Nodejs安装与入门](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第二章%20Nodejs安装与入门.md)
-- [第三章 更了不起的Node.js](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第三章%20更了不起的Node.js.md)
-- [第四章 更好的Node.js](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第四章%20更好的Node.js.md)
-- [第五章 Node.js是如何执行的](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第五章%20Node.js是如何执行的.md)
-- [第六章 模块与核心](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第六章%20模块与核心.md)
-- [第七章 异步写法与流程控制](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第七章%20异步写法与流程控制.md)
-
-- [全部笔记](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/全部笔记.md)
-
-#### [ES6标准入门——阮一峰]()
-
-> 本书内容较多，很多基础细节都有说明，难度中等、适合入门，书中很多例子我也摘抄了很多，主要是我认为重要的，笔记按照自己学习逻辑整理的，请君慢用
-
-- [1.ECMAScript 6 简介](./docs/article-records/读书笔记/ES6标准入门/1.ECMAScript%206%20简介.md)
-- [2.let和const命令](./docs/article-records/读书笔记/ES6标准入门/2.let和const的命令.md)
-- [3.变量的解构赋值](./docs/article-records/读书笔记/ES6标准入门/3.变量的解构赋值.md)
-- [4.字符串详解]()
-
-#### [深入浅出的Node.js](docs/read-books/cs-books/深入浅出的Node.js/readme.md)
+- ES6标准入门
+- 深入浅出的Node.js
+- 更了不起的Node.js - 狼书卷1
+- 了不起的Node.js
+- 分布式消息中间件实践
+  ...
 
 ### 非技术类
-
+>
 > 主要是跟计算机无关的一些书，在看完之后，会选择性的进行思维导图、经典词句整理，也可能添加个人思考
 
-#### [你好孤独 - 陈果]()
+- 你好孤独 - 陈果
+- 好的，爱情 - 陈果
+- 在细雨中呼喊 - 余华
+- 第七天 - 余华
+- 兄弟 - 余华
+- 文城 - 余华
 
+<!-- #endregion quick-start -->
 
+[//]: # (宣传内容)
+<!-- #region we-media -->
 
 ## 赞赏列表
 
-
 以下排名不分先后!  [传送门→]() **赞赏过的一定要微信跟我说呀！！！！！！**
-
 
 <div>
   <a href="https://github.com/ChiefPing" target="_blank" style="margin: 5px">
-    <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
-  </a> 
+    <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="border-radius:5px;"/>
+  </a>
    <a href="https://github.com/xiaoliuxin" target="_blank" style="margin: 5px">
     <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
   </a>
 </div>
-
-
 
 ## 赞助商
 
@@ -604,17 +492,15 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 
 ## 贡献
 
-感谢向仓库提交mr的所有开发者
+感谢向仓库提交MR的所有开发者
 
 [![contributors](https://contrib.rocks/image?repo=142vip/JavaScriptCollection)](https://github.com/142vip/JavaScriptCollection/graphs/contributors)
 
 ## 趋势
 
 <div style="text-align: center" align="center">
-<img alt="Star History" src="https://api.star-history.com/svg?repos=142vip/JavaScriptCollection&type=Date" >
+  <img alt="Star History" src="https://api.star-history.com/svg?repos=142vip/JavaScriptCollection&type=Date" >
 </div>
-
-
 
 ## 联系作者
 
@@ -623,7 +509,7 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 <div style="text-align: center">
     <div  align="center" >
         <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
-            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
+            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg"
                 width="250px"
                 style="margin: 10px"
                 title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
@@ -682,3 +568,7 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
         </a>
     </div>
 </div>
+
+交流/加群/互看朋友圈 当然：**聊天/提问/建议/提需求** 可以在本公众号直接私信，后台可以看到，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，**蟹蟹**。
+
+<!-- #endregion we-media -->
