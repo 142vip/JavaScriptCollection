@@ -3,31 +3,23 @@
 - 尝鲜版：<https://142vip.github.io/JavaScriptCollection>
 - 稳定版：<https://code.142vip.cn>
 
-
 网站无法访问时，建议通过科学上网访问备用网络
 
 - Netlify： <https://js-collection.netlify.app>
 - Vercel： <https://js-collection.vercel.app>
 
-
 ### 写在最前面
-
 
 这里是工作、学习、生活中总结的各类笔记文章，涉及开发技术，也会感慨万千、水一些`思考`；若发现博客外链不能访问欢迎指正；
 所有内容会选择性的发表于**微信公众号、博客、掘金、CSDN、Github ，实际内容以本仓库排版、校对为主。** 代码会不定期同步到 **码云** 。
 
-
 **没有效访问链接的代表尚未完成，大家善用快捷键`Ctrl+F`**
-
-
 
 ### 学习路线
 
-
 ### 日常推荐
 
-
-###  文章笔记
+### 文章笔记
 
 **注：无高亮有效访问链接的待完成/同步**
 
@@ -48,8 +40,6 @@
 - 移动端适配
 
 ##### [基础教程](docs/css/基础教程)
-
-##
 
 ### JavaScript
 
@@ -78,11 +68,9 @@
 - [x] [async函数](docs/javascript/中级教程/async函数.md)
 - [x] [class类](docs/javascript/中级教程/class类.md)
 
-
 - [x] [不一样的ajax](docs/javascript/高级教程/不一样的ajax.md)
 - [x] [什么是事件循环](docs/javascript/高级教程/什么是事件循环.md)
 - [x] [JSON.stringify()的三个参数]()
-
 
 - [x] [ES6、ES7、ES8、ES9、ES10的新特性](docs/javascript/最后稻草/ES6、ES7、ES8、ES9、ES10的新特性.md)
 - [x] [ES2020新特性](docs/javascript/最后稻草/ES2020新特性.md)
@@ -94,33 +82,23 @@
 - [安装使用](docs/jquery/安装使用.md)
 - [基本属性](docs/jquery/基本属性.md)
 
-
 - Css样式
-
 
 - 选择器
 
-
 - 文档处理
-
 
 - 筛选
 
-
 - 事件
-
 
 - 效果
 
-
 - 事件对象
-
 
 - 延迟对象
 
-
 - 回调函数
-
 
 - 其他整理
 
@@ -133,7 +111,6 @@
 ### Nuxt.js
 
 Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的服务端渲染问题，提供网站进行SEO优化的可能
-
 
 [前端读写cookie]()
 
@@ -192,19 +169,16 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 - [第一部分：Git概述](docs/eggjs/git-README.md)
 
-
-* [1.1 下载和安装](docs/eggjs/git-download.md)
-    * [1.2 基本配置](docs/eggjs/git-config.md)
-    * [1.3 常用命令](docs/eggjs/git-dns.md)
-    * [1.4 GitHub简单使用](docs/eggjs/git-github.md)
-    * [1.5 GitBook简单使用](https://mp.weixin.qq.com/s/Wn_IZ6K4eqh1PtomRtqdqg)
-        * [1.5.1 Typora简介](docs/eggjs/git-typora.md)
-        * [1.5.2 MarkDown语法](docs/eggjs/git-markdown.md)
-    * [1.6 码云和GitHub的选择](docs/eggjs/git-choice.md)
-
+- [1.1 下载和安装](docs/eggjs/git-download.md)
+  - [1.2 基本配置](docs/eggjs/git-config.md)
+  - [1.3 常用命令](docs/eggjs/git-dns.md)
+  - [1.4 GitHub简单使用](docs/eggjs/git-github.md)
+  - [1.5 GitBook简单使用](https://mp.weixin.qq.com/s/Wn_IZ6K4eqh1PtomRtqdqg)
+    - [1.5.1 Typora简介](docs/eggjs/git-typora.md)
+    - [1.5.2 MarkDown语法](docs/eggjs/git-markdown.md)
+  - [1.6 码云和GitHub的选择](docs/eggjs/git-choice.md)
 
 - [第二部分：数据库概述](docs/eggjs/mysql-README.md)
-
 
 - [2.1 下载和安装](docs/eggjs/mysql-download.md)
 - [2.2 连接数据库](docs/eggjs/git-connect.md)
@@ -218,30 +192,27 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 - [第一部分：Egg框架快速入门](docs/eggjs/egg-README.md)
 
-
 - [1.1 基础功能](docs/eggjs/egg-base.md)
-    - [1.1.1 接口参数获取](docs/eggjs/egg-request-params.md)
-    - [1.1.2 Egg内置对象 ](docs/eggjs/egg-object.md)
-    - [1.1.3 Config配置](docs/eggjs/egg-config.md)
-    - [1.1.4 Egg生命周期](docs/eggjs/egg-life.md)
-    - [1.1.5 中间件理解](docs/eggjs/egg-middleware.md)
-    - [1.1.6 Router路由分发](docs/eggjs/egg-router.md)
-    - [1.1.7 Controller控制器](docs/eggjs/egg-controller.md)
-    - [1.1.8 Service服务](docs/eggjs/egg-service.md)
-    - [1.1.9 常用插件](docs/eggjs/egg-plugin.md)
+  - [1.1.1 接口参数获取](docs/eggjs/egg-request-params.md)
+  - [1.1.2 Egg内置对象](docs/eggjs/egg-object.md)
+  - [1.1.3 Config配置](docs/eggjs/egg-config.md)
+  - [1.1.4 Egg生命周期](docs/eggjs/egg-life.md)
+  - [1.1.5 中间件理解](docs/eggjs/egg-middleware.md)
+  - [1.1.6 Router路由分发](docs/eggjs/egg-router.md)
+  - [1.1.7 Controller控制器](docs/eggjs/egg-controller.md)
+  - [1.1.8 Service服务](docs/eggjs/egg-service.md)
+  - [1.1.9 常用插件](docs/eggjs/egg-plugin.md)
 - [1.2 核心功能](docs/eggjs/egg-core.md)
-    - [1.2.1 日志输出](docs/eggjs/egg-logger.md)
-    - [1.2.2 定时任务](docs/eggjs/egg-schedule.md)
-    - [1.2.2 HttpClient网络请求](docs/eggjs/egg-httpclient.md)
-    - [1.2.3 Cookie的基本使用](docs/eggjs/egg-cookies.md)
-    - [1.2.4 Session的基本使用](docs/eggjs/egg-session.md)
-    - [1.2.5 统一异常-错误处理](docs/eggjs/egg-try-catch.md)
-    - [1.2.6 CSRF防范和XSS攻击](docs/eggjs/egg-csrf-xss.md)
-    - [1.2.7 RESTful API接口风格](docs/eggjs/egg-restful.md)
-
+  - [1.2.1 日志输出](docs/eggjs/egg-logger.md)
+  - [1.2.2 定时任务](docs/eggjs/egg-schedule.md)
+  - [1.2.2 HttpClient网络请求](docs/eggjs/egg-httpclient.md)
+  - [1.2.3 Cookie的基本使用](docs/eggjs/egg-cookies.md)
+  - [1.2.4 Session的基本使用](docs/eggjs/egg-session.md)
+  - [1.2.5 统一异常-错误处理](docs/eggjs/egg-try-catch.md)
+  - [1.2.6 CSRF防范和XSS攻击](docs/eggjs/egg-csrf-xss.md)
+  - [1.2.7 RESTful API接口风格](docs/eggjs/egg-restful.md)
 
 - [第二部分：插件开发](docs/eggjs/plugin-README.md)
-
 
 - [2.1 egg-validate参数校验](docs/eggjs/plugin-egg-validate.md)
 - [2.2 egg-view-ejs页面渲染](docs/eggjs/plugin-egg-view.ejs.md)
@@ -254,13 +225,11 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 - [第一部分：常用代码](docs/eggjs/project-README-CODE.md)
 
-
 - [1.1 图片前端在线剪辑](docs/eggjs/project-images-cropper.md)
 - [1.2 文件上传后台处理](docs/eggjs/project-upload.md)
 - [1.3 MD5加密-解密算法](docs/eggjs/project-md5.md)
 - [1.4 Egg Jwt加密和校验](docs/eggjs/project-token.md)
 - [第二部分：项目简介](docs/eggjs/project-README-INTRODUCE.md)
-
 
 - [2.1 基于OAuth2的统一认证中心系统](docs/eggjs/project-ssoCenterSystem.md)
 - [2.2 常用前后端分页比较与实现](docs/eggjs/project-pagenation.md)
@@ -424,15 +393,11 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 
 - nodejs下grpc的简单实用
 
-
 - grpc集成express框架
-
 
 - grpc集成koa框架
 
-
 - eggjs框架下grpc的线上部署
-
 
 - grpc插件开发示例
 
@@ -442,7 +407,7 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 
 ### Thrift
 
-> Apache的一个项目(http://thrift.apache.org)，前身是Facebook开发的一个RPC框架，采用thrift作为IDL (Interface description
+> Apache的一个项目(<http://thrift.apache.org)，前身是Facebook开发的一个RPC框架，采用thrift作为IDL> (Interface description
 > language)。
 
 ## Elk日志管理平台
@@ -465,7 +430,7 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 
 ## 监控工具
 
-> 参考笔者线上平台:http://view.142vip.cn/grafana  账号/密码：test/123456 基于docker部署，由于是个人学生服务器，站点访问延迟较高
+> 参考笔者线上平台:<http://view.142vip.cn/grafana>  账号/密码：test/123456 基于docker部署，由于是个人学生服务器，站点访问延迟较高
 >
 > 常用工具：Prometheus 、Grafana、zabbix、lepus等
 
@@ -537,7 +502,7 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 
 ## 网站搭建
 
-> 从大二开始搭建个人网站：http://www.142vip.cn 起初非常简陋，工作之后计划进行三次重构，一直抽空佛系谢谢， 目前在重构中..
+> 从大二开始搭建个人网站：<http://www.142vip.cn> 起初非常简陋，工作之后计划进行三次重构，一直抽空佛系谢谢， 目前在重构中..
 
 - 最初的梦想
 - 舍弃Java，我的重构之路
@@ -579,24 +544,18 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 
 #### [你好孤独 - 陈果]()
 
-
-
 ## 赞赏列表
 
-
 以下排名不分先后!  [传送门→]() **赞赏过的一定要微信跟我说呀！！！！！！**
-
 
 <div>
   <a href="https://github.com/ChiefPing" target="_blank" style="margin: 5px">
     <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
-  </a> 
+  </a>
    <a href="https://github.com/xiaoliuxin" target="_blank" style="margin: 5px">
     <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
   </a>
 </div>
-
-
 
 ## 赞助商
 
@@ -614,8 +573,6 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 <img alt="Star History" src="https://api.star-history.com/svg?repos=142vip/JavaScriptCollection&type=Date" >
 </div>
 
-
-
 ## 联系作者
 
 若系列文章对你有所帮助，欢迎订阅公众号或微信”骚扰“，获取更多内容。**商务合作请备注来意**
@@ -623,7 +580,7 @@ Nestjs框架推崇typescript语法，并且友好的兼容express框架，因此
 <div style="text-align: center">
     <div  align="center" >
         <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
-            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
+            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg"
                 width="250px"
                 style="margin: 10px"
                 title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
