@@ -1,7 +1,6 @@
 
 ## 接入Artalk评论系统
 
-
 ```bash
 
 # 为 Artalk 创建一个目录
@@ -25,5 +24,3 @@ docker run -d \
   artalk/artalk-go
 
 ```
-
-

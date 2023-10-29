@@ -1,37 +1,30 @@
 ---
 title: Git的使用
 permalink: /manuscripts/develop-skill/code-manager/git.html
+headerDepth: 3
 ---
-
 # Git的使用
+
+## 简单介绍
 
 - 官网: <https://git-scm.com/docs>
 
 ![](images/git.png)
 
-Git 区域理解
+Git 区域理解:
 
-- 远程仓库区：也就是我们代码最终提交的归宿，没啥好说的。
-- 远端分支本地副本：这个其实主要储存了远程仓库各分支数据在本地的一个副本，你可以打开你 Git 项目下的 .git 文件，里面有个 refs/remotes，这里就主要存的就是远程仓库的分支信息，一般你执行 push 或者 pull、fetch 都会往这里进行更新。
-- 本地分支：这里就是我们经常会打交道的区域，你在执行 commit 之后，本质上就是提交到了这个区域，你可以查看你的 .git 目录下的 refs/heads 目录，里面存的就是我们本地的分支代码信息。
-- 暂存区：这个区域就是我们每次执行 git add 之后会存到的区域，用来与本地仓库之间做一个缓存，同时也是 Git 底层设计上来说也算是比较重要的一个区域，它能帮助 Git 在做 diff 的时候提高查找性能。
-- 工作区：这个一般就是我们写代码的地方，比如你的 vscode 打开的项目，你可以进行代码编辑的地方。
+- `远程仓库区`：也就是我们代码最终提交的归宿，没啥好说的。
 
-### 配置用户名和邮箱
+- `远端分支本地副本`：这个其实主要储存了远程仓库各分支数据在本地的一个副本，
+你可以打开你 Git 项目下的 `.git` 文件，里面有个 `refs/remotes`，这里就主要存的就是远程仓库的分支信息，一般你执行 push 或者 pull、fetch 都会往这里进行更新。
 
-```bash
-## 项目级配置
-git config  user.name "chufan"
-git config  user.email "fairy_vip@2925.com"
+- `本地分支`：这里就是我们经常会打交道的区域，你在执行 commit 之后，本质上就是提交到了这个区域，你可以查看你的 `.git` 目录下的 `refs/heads` 目录，里面存的就是我们本地的分支代码信息。
 
-## 全局配置
-git config --global user.name "chufan"
-git config --global user.email "fairy_vip@2925.com"
+- `暂存区`：这个区域就是我们每次执行`git add`之后会存到的区域，用来与本地仓库之间做一个缓存，同时也是 Git 底层设计上来说也算是比较重要的一个区域，它能帮助 Git 在做diff的时候提高查找性能。
 
+- `工作区`：这个一般就是我们写代码的地方
 
-## 查看配置效果
-git config --list
-```
+## 常用命令
 
 ### git stash
 
@@ -57,13 +50,11 @@ git stash clear
 ### git clone
 
 ```bash
-
 ## 一般我们直接 clone 下来不带参数的话，它会默认停留在 master
 git clone xxx.git
 
 ## 克隆特定分支
 git clone xxx.git -b branch1
-
 ```
 
 ### git init
@@ -81,7 +72,6 @@ git remote rm origin
 
 ## 表示把当前仓库的 master 分支和远端仓库的 master 分支关联起来，后面我们执行 push 或者 pull 都可以非常方便的进行操作了。
 git push -u origin master
-
 ```
 
 ### git checkout
@@ -99,7 +89,6 @@ git add xxx
 
 # 添加当前更改的所有文件到暂存区。
 git add .
-
 ```
 
 ### git commit
@@ -123,7 +112,6 @@ git commit --amend
 ```bash
 # 从远程仓库拉取代码并合并到本地，可简写为 git pull 等同于 git fetch && git merge 
 git pull <远程主机名> <远程分支名>:<本地分支名>
-
 
 # 使用rebase的模式进行合并
 git pull --rebase <远程主机名> <远程分支名>:<本地分支名>
@@ -161,7 +149,6 @@ git branch -D <branch-nane>
 
 # 重新命名分支
 git branch -m <old-branch-name> <new-branch-name>
-
 ```
 
 ## 分支命名规范
@@ -175,24 +162,23 @@ git branch -m <old-branch-name> <new-branch-name>
 #### 上游优先
 
 - `master` 作为主分支  一般稳定版本
-- 其他分支皆从 master 分支`衍生`
+- 其他分支皆从 `master` 分支`衍生`
 - 注意与传统分支策略区别
 
 #### 多环境长线分支
 
-- master：开发稳定分支
-- test：测试测试环境，一般对应测试服，可以详细分为测试--->预发
-- prod：线上环境，一般对应正式服【重要】
+- `master`：开发稳定分支
+- `test`：测试测试环境，一般对应测试服，可以详细分为测试--->预发
+- `prod`：线上环境，一般对应正式服【重要】
 
 #### 分支类型
 
-- 功能迭代分支：feature
-- 提测后bugfix分支：bugfix
-- 线上问题紧急修复：hotfix
+- 功能迭代分支：`feature`
+- 提测后bugfix分支：`bugfix`
+- 线上问题紧急修复：`hotfix`
 - 所有开发动作在短期分支上完成
 
-**长线分支只允许mr、禁止push，feature、bugfix 从 master 分支拉取，
-hotfix 从 master(线上稳定分支) 拉取。**分支目的完成后要求及时删除
+**长线分支只允许mr、禁止push、feature、bugfix 从 `master` 分支拉取，hotfix 从 `master`(线上稳定分支) 拉取。**分支目的完成后要求及时删除
 
 #### 分支命名
 
@@ -202,18 +188,18 @@ hotfix 从 master(线上稳定分支) 拉取。**分支目的完成后要求及�
 
 ## 提交规范
 
-- type: commit 的类型
-- feat: 新特性
-- fix: 修改问题
-- refactor: 代码重构
-- docs: 文档修改
-- style: 代码格式修改, 注意不是 css 修改
-- test: 测试用例修改
-- chore: 其他修改, 比如构建流程, 依赖管理.
-- scope: commit 影响的范围, 比如: route, component, utils, build...
-- subject: commit 的概述, 建议符合  50/72 formatting
-- body: commit 具体修改内容, 可以分为多行, 建议符合 50/72 formatting
-- footer: 一些备注, 通常是 BREAKING CHANGE 或修复的 bug 的链接.
+- `type`： commit 的类型
+- `feat`： 新特性
+- `fix`： 修改问题
+- `refactor`： 代码重构
+- `docs`： 文档修改
+- `style`： 代码格式修改, 注意不是 css 修改
+- `test`： 测试用例修改
+- `chore`： 其他修改, 比如构建流程, 依赖管理.
+- `scope`： commit 影响的范围, 比如: route, component, utils, build...
+- `subject`： commit 的概述, 建议符合  50/72 formatting
+- `body`： commit 具体修改内容, 可以分为多行, 建议符合 50/72 formatting
+- `footer`： 一些备注, 通常是 BREAKING CHANGE 或修复的 bug 的链接.
 
 每次提交，Commit message 都包括三个部分：Header，Body 和 Footer。
 
@@ -272,6 +258,21 @@ Closes #234
 Closes #123, #245, #992
 ```
 
+## 配置用户名和邮箱
+
+```bash
+## 项目级配置
+git config  user.name "142vip"
+git config  user.email "fairy_vip@2925.com"
+
+## 全局配置
+git config --global user.name "142vip"
+git config --global user.email "fairy_vip@2925.com"
+
+## 查看配置效果
+git config --list
+```
+
 ## 修改历史提交信息
 
 #### 查看提交日志
@@ -287,7 +288,6 @@ git rebase -i xxx
 
 ## 或者按相对位置rebase
 git rebase -i HEAD~1
-
 ```
 
 #### 进入编辑界面，记录着commit的信息
@@ -299,6 +299,7 @@ pick---->edit
 #### 重新设置用户名和邮箱
 
 ```bash
+## 用户信息
 git commit --amend --author="chufan <fariy_vip@2925.com>"
 ```
 
@@ -314,6 +315,23 @@ git rebase --continue
 git push -f
 ```
 
-### 参考资料
+## 同步Tag标记
+
+```bash
+## 删除本地多少标记
+git tag -l | xargs git tag -d #删除所有本地分支
+
+## 从远程拉取所有信息
+git fetch origin --prune
+
+## 将本地所有Tag推到远程
+git push origin --tags
+
+#推送指定本地tag到远程
+git push origin 
+
+```
+
+## 参考资料
 
 - <https://www.bbsmax.com/A/lk5a87O4J1/>
