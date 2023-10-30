@@ -1,5 +1,6 @@
 ---
-permalink: /manuscripts/solo-algorithm/link-table/sortInList.html
+title: BM12 单链表的排序
+permalink: /manuscripts/solo-algorithm/interview-101/sortInList.html
 ---
 # BM12 单链表的排序
 

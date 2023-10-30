@@ -1,3 +1,8 @@
+---
+title: 配置gzip
+permalink: /manuscripts/server-end/nginx-gzip.html
+---
+
 # 配置gzip
 
 > nginx返回js文件的时候，会判断是否开启gzip，然后压缩后再还给浏览器。但是nginx其实会先判断是否有.gz后缀的相同文件，有的话直接返回，nginx自己不再进行压缩处理。而压缩是要时间的！不同级别的压缩率花的时间也不一样。所以提前准备gz文件，可以更加优化。而且你可以把压缩率提高点，这样带宽消耗会更小

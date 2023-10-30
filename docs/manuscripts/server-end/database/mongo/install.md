@@ -1,3 +1,7 @@
+---
+title: Mongo简单部署
+permalink: /manuscripts/server-end/database/mongo/install.html
+---
 
 # Mongo简单部署
 

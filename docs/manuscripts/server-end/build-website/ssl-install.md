@@ -1,3 +1,8 @@
+---
+title: SSL证书配置
+permalink: /manuscripts/server-end/ssl.html
+---
+
 
 # SSL证书配置
 

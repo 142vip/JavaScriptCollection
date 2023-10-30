@@ -1,5 +1,5 @@
 ---
-title: 数据库
+title:  Redis-Key命名规范
 permalink: /manuscripts/server-end/database/redis/use-rule.html
 ---
 

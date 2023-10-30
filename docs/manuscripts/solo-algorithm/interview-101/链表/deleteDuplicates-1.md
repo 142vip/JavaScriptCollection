@@ -1,5 +1,5 @@
 ---
-permalink: /manuscripts/solo-algorithm/link-table/deleteDuplicates-one.html
+permalink: /manuscripts/solo-algorithm/interview-101/deleteDuplicates-one.html
 ---
 
 # BM15 删除有序链表中重复的元素-I

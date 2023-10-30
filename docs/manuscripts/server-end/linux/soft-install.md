@@ -1,3 +1,8 @@
+---
+title: Linux下软件安装
+permalink: /manuscripts/server-end/linux/soft-install.html
+---
+
 # Linux下软件安装
 
 linux系统，主要分debian系和redhat系，还有其它自由的发布版本

@@ -1,5 +1,5 @@
 ---
-permalink: /manuscripts/solo-algorithm/link-table/isPail.html
+permalink: /manuscripts/solo-algorithm/interview-101/isPail.html
 ---
 # BM13 判断一个链表是否为回文结构
 

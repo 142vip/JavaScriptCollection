@@ -1,3 +1,8 @@
+---
+title: Docker-Compose
+permalink: /manuscripts/server-end/server-deploy/docker-compose.html
+---
+
 # Docker-Compose
 
 ### 简介

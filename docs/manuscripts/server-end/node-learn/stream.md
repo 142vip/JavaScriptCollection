@@ -1,3 +1,7 @@
+---
+title: stream
+permalink: /manuscripts/server-end/stream.html
+---
 
 # node核心模块 stream
 

@@ -1,5 +1,5 @@
 ---
-permalink: /manuscripts/solo-algorithm/link-table/findKthToTail.html
+permalink: /manuscripts/solo-algorithm/interview-101/findKthToTail.html
 ---
 # BM8 链表中倒数最后k个结点
 

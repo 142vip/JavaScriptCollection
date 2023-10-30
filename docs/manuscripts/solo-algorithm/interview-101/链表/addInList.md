@@ -1,6 +1,6 @@
 ---
 title: BM11 链表相加(二)
-permalink: /manuscripts/solo-algorithm/link-table/addList.html
+permalink: /manuscripts/solo-algorithm/interview-101/addList.html
 ---
 
 # BM11 链表相加(二)

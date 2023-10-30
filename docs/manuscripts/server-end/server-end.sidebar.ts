@@ -141,33 +141,24 @@ export const serverEndSidebar = [{
 {
   text: '服务部署',
   collapsible: true,
-  prefix: 'docker-cluster',
+  prefix: 'server-deploy',
   children: [
     {
       text: '基础安装',
-      link: 'docker.md'
+      link: 'install.md'
     },
     {
-      text: 'PM2管理',
+      text: 'PM2部署',
       link: 'pm2.md'
     },
     {
-      text: 'egg-cluster',
-      link: 'egg-cluster.md'
-    },
-    {
-      text: 'Docker',
+      text: 'Docker部署',
       link: 'docker.md'
     },
     {
-      text: '集群管理',
+      text: '集群部署',
       link: 'docker-compose.md'
-    },
-    {
-      text: 'Dockerfile详解',
-      link: 'dockerfile.md'
     }
-
   ]
 },
 {

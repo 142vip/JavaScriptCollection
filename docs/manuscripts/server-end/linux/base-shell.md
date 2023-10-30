@@ -1,3 +1,8 @@
+---
+title: 常用命令
+permalink: /manuscripts/server-end/linux/base-install.html
+---
+
 # 常用命令
 
 ## cd

@@ -1,3 +1,8 @@
+---
+title: RxJS
+permalink: /manuscripts/server-end/rxjs.html
+---
+
 # RxJS
 
 - <https://rxjs.dev/guide/overview>

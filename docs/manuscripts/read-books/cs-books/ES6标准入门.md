@@ -1,4 +1,7 @@
-
+---
+title: ES6标准入门.js
+permalink: /manuscripts/read-books/cs-books/standard-es6.html
+---
 # ES6标准入门
 
 ## 简介

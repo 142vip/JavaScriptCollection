@@ -1,3 +1,8 @@
+---
+title: Linux vi/vim
+permalink: /manuscripts/server-end/linux/vim.html
+---
+
 # Linux vi/vim
 
 ![](images/vim.gif)

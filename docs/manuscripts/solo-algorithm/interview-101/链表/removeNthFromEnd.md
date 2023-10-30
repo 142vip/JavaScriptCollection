@@ -1,5 +1,5 @@
 ---
-permalink: /manuscripts/solo-algorithm/link-table/removeNthFromEnd.html
+permalink: /manuscripts/solo-algorithm/interview-101/removeNthFromEnd.html
 ---
 
 # BM9 删除链表的倒数第n个节点

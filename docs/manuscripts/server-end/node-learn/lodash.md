@@ -1,3 +1,7 @@
+---
+title: Lodash
+permalink: /manuscripts/server-end/lodash.html
+---
 
 # Lodash
 

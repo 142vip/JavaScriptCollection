@@ -79,6 +79,10 @@ export const microserviceSidebar = [
     prefix: '',
     children: [
       {
+        text: 'Dockerfile',
+        link: 'dockerfile.md'
+      },
+      {
         text: 'docker',
         link: 'docker.md'
       },
