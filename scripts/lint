@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 ##
 ## 自动格式化
 ##  - 代码
@@ -11,9 +12,13 @@
 ##   - https://github.com/igorshubovych/markdownlint-cli
 ##
 
+
+# 设置 PATH 环境变量，避免command not found问题
+export PATH="$(pnpm bin):$PATH"
+
 # ESLint格式化代码
-$(pnpm bin)/eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .
+eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .
 
 # markdown-cli格式化markdown 文档
-$(pnpm bin)/markdownlint '**/*.md'  -c .markdownlint.js -p .markdownlintignore --fix
+markdownlint '**/*.md'  -c .markdownlint.js -p .markdownlintignore --fix
 
