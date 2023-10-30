@@ -3,7 +3,6 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/0e26e5551f2b489b9f58bc83aa4b6c68)
-- [欢迎讨论]()
 
 ## 题目描述
 
@@ -30,7 +29,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/数组和矩阵/replaceSpace.js)
+@[code js](@code/algorithm/sword-point/数组和矩阵/replaceSpace.js)
 
 ## 一些建议
 

@@ -7,7 +7,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/removeNthFromEnd.html
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/share/jump/8484115461694594387319)
-- [欢迎讨论]()
 
 ## 题目描述
 

@@ -3,7 +3,6 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)
-- [欢迎讨论]()
 
 ## 题目描述
 
@@ -31,6 +30,6 @@ while(head!=null){
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/链表/printListFromTailToHead.js)
+@[code js](@code/algorithm/sword-point/链表/printListFromTailToHead.js)
 
 ## 一些建议

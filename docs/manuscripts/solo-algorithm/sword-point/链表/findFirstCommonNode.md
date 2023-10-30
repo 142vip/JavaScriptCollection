@@ -3,7 +3,6 @@
 ## 题目链接
 
 - [牛客网]()
-- [欢迎讨论]()
 
 ## 题目描述
 
@@ -11,6 +10,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/链表/findFirstCommonNode.js)
+@[code js](@code/algorithm/sword-point/链表/findFirstCommonNode.js)
 
 ## 一些建议

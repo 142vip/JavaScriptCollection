@@ -3,7 +3,6 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4)
-- [欢迎讨论]()
 
 ## 题目描述
 
@@ -25,7 +24,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/动态规划/jumpFloor.js)
+@[code js](@code/algorithm/sword-point/动态规划/jumpFloor.js)
 
 ## 一些建议
 

@@ -3,7 +3,6 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba)
-- [欢迎讨论]()
 
 ## 题目描述
 
@@ -26,6 +25,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/二分查找/minNumberInRotateArray.js)
+@[code js](@code/algorithm/sword-point/二分查找/minNumberInRotateArray.js)
 
 ## 一些建议

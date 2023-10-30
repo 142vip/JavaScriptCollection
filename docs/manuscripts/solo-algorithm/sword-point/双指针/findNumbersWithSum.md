@@ -3,7 +3,6 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/390da4f7a00f44bea7c2f3d19491311b)
-- [欢迎讨论]()
 
 ## 题目描述
 
@@ -39,7 +38,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/双指针/findNumbersWithSum.js)
+@[code js](@code/algorithm/sword-point/双指针/findNumbersWithSum.js)
 
 ## 一些建议
 

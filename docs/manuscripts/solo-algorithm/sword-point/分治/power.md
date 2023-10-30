@@ -4,7 +4,6 @@
 ## 题目链接
 
 - [牛客网]()
-- [欢迎讨论]()
 
 ## 题目描述
 
@@ -12,7 +11,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/分治/power.js)
+@[code js](@code/algorithm/sword-point/分治/power.js)
 
 ```js
 /**

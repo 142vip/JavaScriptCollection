@@ -3,7 +3,6 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6)
-- [欢迎讨论]()
 
 ## 题目描述
 
@@ -37,7 +36,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/栈队列堆/stackToQueue.js)
+@[code js](@code/algorithm/sword-point/栈队列堆/stackToQueue.js)
 
 ## 一些建议
 

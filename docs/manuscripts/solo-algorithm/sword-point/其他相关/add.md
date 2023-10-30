@@ -8,7 +8,6 @@ permalink: /manuscripts/solo-algorithm/sword-point/add.html
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215)
-- [欢迎讨论]()
 
 ## 题目描述
 
@@ -47,7 +46,7 @@ permalink: /manuscripts/solo-algorithm/sword-point/add.html
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/其他相关/add.js)
+@[code js](@code/algorithm/sword-point/其他相关/add.js)
 
 ## 一些建议
 

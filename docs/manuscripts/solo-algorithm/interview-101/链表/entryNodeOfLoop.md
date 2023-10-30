@@ -6,7 +6,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/entryNodeOfLoop.html
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/share/jump/8484115461694593953358)
-- [欢迎讨论]()
 
 ## 题目描述
 

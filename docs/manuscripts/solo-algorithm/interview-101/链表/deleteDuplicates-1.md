@@ -7,7 +7,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/deleteDuplicates-one.html
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/share/jump/8484115461694841529345)
-- [欢迎讨论]()
 
 ## 题目描述
 

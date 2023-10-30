@@ -6,7 +6,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/oddEventList.html
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/share/jump/8484115461694841372669)
-- [欢迎讨论]()
 
 ## 题目描述
 
