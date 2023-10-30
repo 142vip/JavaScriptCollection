@@ -9,6 +9,7 @@
   },
   "scripts": {
     "preinstall": "chmod +x ./scripts/*",
+    "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"./scripts/lint\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "build:proxy": "./scripts/bundle build_proxy",

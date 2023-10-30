@@ -12,7 +12,7 @@
 ##
 
 # 设置 PATH 环境变量，避免command not found问题
-export PATH="$(pnpm bin):$PATH"
+#export PATH="$(pnpm bin):$PATH"
 
 # ESLint格式化代码
 eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .
