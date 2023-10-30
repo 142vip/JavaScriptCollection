@@ -12,8 +12,8 @@
 ##
 
 # ESLint格式化代码
-eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .
+$(pnpm bin)/eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .
 
 # markdown-cli格式化markdown 文档
-markdownlint '**/*.md'  -c .markdownlint.js -p .markdownlintignore --fix
+$(pnpm bin)/markdownlint '**/*.md'  -c .markdownlint.js -p .markdownlintignore --fix
 

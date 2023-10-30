@@ -63,9 +63,6 @@ jobs:
         run: |
           ./scripts/ci
 
-      - name: Set PATH environment variable
-        run: echo "PATH=\$PATH:$(pnpm bin)" >> $GITHUB_ENV
-
       - name: Code LintFix
         run: |
           bash ./scripts/lint
