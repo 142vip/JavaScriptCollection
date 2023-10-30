@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.2-alpha.7](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.6...v0.0.2-alpha.7) (2023-10-30)
+
+
+### Features
+
+* **CD:** 静态站点分支新增next分支的README.md文档 ([3172690](https://github.com/142vip/JavaScriptCollection/commit/3172690201d8601e61a412e42dc102e9ca9563b4))
+* **docs:** 更新readme文档，新增一些文章 ([6cc6fc7](https://github.com/142vip/JavaScriptCollection/commit/6cc6fc7a04da6e0c6039e13716510d1e4152577d))
+* 更新一些文档的固定链接 ([#87](https://github.com/142vip/JavaScriptCollection/issues/87)) ([c374b0b](https://github.com/142vip/JavaScriptCollection/commit/c374b0b434ed3f2e0cb0fecd94f8ad75f11dbde2))
+* 算法相关文档更新,删除讨论链接 ([#88](https://github.com/142vip/JavaScriptCollection/issues/88)) ([9b9e44a](https://github.com/142vip/JavaScriptCollection/commit/9b9e44ad59a102e69624e65e99c211da81e2967b))
+
+
+### Bug Fixes
+
+* **scripts:** 优化deploy脚本，修复镜像构建异常 ([1f9f6ac](https://github.com/142vip/JavaScriptCollection/commit/1f9f6ac65495d81d8a953f841f09f8b4e5259e5f))
+
+
+### Performance Improvements
+
+* **scripts:** 修改lint脚本，优化markdown文档格式化配置 ([#85](https://github.com/142vip/JavaScriptCollection/issues/85)) ([2bac047](https://github.com/142vip/JavaScriptCollection/commit/2bac0478b77db619ea25f5b4c16f2fcc2a6b9914))
+
 ## [0.0.2-alpha.6](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.5...v0.0.2-alpha.6) (2023-10-28)
 
 ### Features
