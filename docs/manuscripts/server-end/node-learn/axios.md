@@ -1,3 +1,8 @@
+---
+title: Axios
+permalink: /manuscripts/server-end/axios.html
+---
+
 # Axios
 
 `Axios` 是一个基于 `promise` 网络请求库，作用于`node.js` 和浏览器中。 它是 `isomorphic` 的(同一套代码可以运行在浏览器和`node.js`中)。

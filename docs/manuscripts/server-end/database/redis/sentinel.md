@@ -2,6 +2,7 @@
 title: 哨兵模式
 permalink: /manuscripts/server-end/database/redis/sentinel.html
 ---
+
 # 哨兵模式
 
 基本原理

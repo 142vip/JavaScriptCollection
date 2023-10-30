@@ -1,3 +1,7 @@
+---
+title: SequelizeORM
+permalink: /manuscripts/server-end/sequelize.html
+---
 
 # SequelizeORM
 

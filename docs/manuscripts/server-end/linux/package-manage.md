@@ -1,3 +1,7 @@
+---
+title: 包管理工具
+permalink: /manuscripts/server-end/linux/package-manage.html
+---
 
 # 包管理工具
 

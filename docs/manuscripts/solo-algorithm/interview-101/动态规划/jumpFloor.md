@@ -1,5 +1,6 @@
 ---
-permalink: /manuscripts/solo-algorithm/jumpFloor.html
+title: 跳台阶
+permalink: /manuscripts/solo-algorithm/interview-101/jumpFloor.html
 ---
 
 # 跳台阶
