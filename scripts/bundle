@@ -47,7 +47,7 @@ function getBuildImageScript({ containerBuild, preBuild, needProxy = false }) {
       `,
       // 推送镜像
       `
-        if [[ "$(docker images -q  ${imageName} 2> /dev/null)" != "" ]];then
+        if [ "$(docker images -q  ${imageName} 2> /dev/null)" != "" ];then
           ## 推送
           docker push ${imageName}
           echo  "---------------- 上传镜像成功，删除本地镜像 ---------------- "
