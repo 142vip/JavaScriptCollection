@@ -4,7 +4,6 @@
 
 - [牛客网](https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163)
 
-
 ## 题目描述
 
 给一个长度为 n 的数组，数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。

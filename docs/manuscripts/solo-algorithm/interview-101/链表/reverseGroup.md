@@ -7,7 +7,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/reverseGroup.html
 
 - [牛客网](https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca)
 
-
 ## 题目描述
 
 ![反转链表.png](../images/reverseList.png)

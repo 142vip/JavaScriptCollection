@@ -4,7 +4,6 @@
 
 - [牛客网](https://www.nowcoder.com/practice/0e26e5551f2b489b9f58bc83aa4b6c68)
 
-
 ## 题目描述
 
 请实现一个函数，将一个字符串s中的每个空格替换成“%20”。

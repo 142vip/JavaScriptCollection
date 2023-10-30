@@ -9,7 +9,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/addList.html
 
 - [牛客网](https://www.nowcoder.com/share/jump/8484115461694840620281)
 
-
 ## 题目描述
 
 ![反转链表.png](../images/addInList.png)

@@ -8,7 +8,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/removeNthFromEnd.html
 
 - [牛客网](https://www.nowcoder.com/share/jump/8484115461694594387319)
 
-
 ## 题目描述
 
 ![区间反转.png](../images/removeNthFromEnd.png)

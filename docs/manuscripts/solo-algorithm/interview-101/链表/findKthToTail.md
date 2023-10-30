@@ -7,7 +7,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/findKthToTail.html
 
 - [牛客网](https://www.nowcoder.com/share/jump/8484115461694594062276)
 
-
 ## 题目描述
 
 ![反转链表.png](../images/findKthToTail.png)

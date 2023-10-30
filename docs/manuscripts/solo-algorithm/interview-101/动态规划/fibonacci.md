@@ -9,7 +9,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/fibonacci.html
 
 - [牛客网](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)
 
-
 ## 题目描述
 
 大家都知道斐波那契数列，现在要求输入一个正整数 n ，请你输出斐波那契数列的第 n 项。
