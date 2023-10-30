@@ -3,7 +3,7 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/bd7f978302044eee894445e244c7eee6)
-- [欢迎讨论]()
+
 
 ## 题目描述
 
@@ -27,7 +27,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/数组和矩阵/FirstNotRepeatingChar.js)
+@[code js](@code/algorithm/sword-point/数组和矩阵/firstNotRepeatingChar.js)
 
 ## 一些建议
 

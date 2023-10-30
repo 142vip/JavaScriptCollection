@@ -3,7 +3,7 @@
 ## 题目链接
 
 - [牛客网]()
-- [欢迎讨论]()
+
 
 ## 题目描述
 
@@ -11,6 +11,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/贪心思想/maxProfit.js)
+@[code js](@code/algorithm/sword-point/贪心思想/maxProfit.js)
 
 ## 一些建议

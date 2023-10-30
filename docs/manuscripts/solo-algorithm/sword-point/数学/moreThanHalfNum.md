@@ -3,7 +3,7 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163)
-- [欢迎讨论]()
+
 
 ## 题目描述
 
@@ -43,7 +43,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/数学/moreThanHalfNum.js)
+@[code js](@code/algorithm/sword-point/数学/moreThanHalfNum.js)
 
 ## 一些建议
 

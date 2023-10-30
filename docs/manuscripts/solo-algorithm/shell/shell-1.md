@@ -3,7 +3,7 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/205ccba30b264ae697a78f425f276779)
-- [欢迎讨论]()
+
 
 ## 题目描述
 

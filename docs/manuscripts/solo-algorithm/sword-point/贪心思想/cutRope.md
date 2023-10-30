@@ -3,7 +3,7 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)
-- [欢迎讨论]()
+
 
 ## 题目描述
 
@@ -29,6 +29,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/贪心思想/cutRope.js)
+@[code js](@code/algorithm/sword-point/贪心思想/cutRope.js)
 
 ## 一些建议

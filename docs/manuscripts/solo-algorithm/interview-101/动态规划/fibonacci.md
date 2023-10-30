@@ -8,7 +8,7 @@ permalink: /manuscripts/solo-algorithm/interview-101/fibonacci.html
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)
-- [欢迎讨论]()
+
 
 ## 题目描述
 

@@ -3,7 +3,7 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/389fc1c3d3be4479a154f63f495abff8)
-- [欢迎讨论]()
+
 
 ## 题目描述
 
@@ -47,7 +47,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/位运算/findNumsAppearOnce.js)
+@[code js](@code/algorithm/sword-point/位运算/findNumsAppearOnce.js)
 
 ## 一些建议
 

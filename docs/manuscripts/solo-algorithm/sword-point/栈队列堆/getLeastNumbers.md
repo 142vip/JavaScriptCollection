@@ -3,7 +3,7 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf)
-- [欢迎讨论]()
+
 
 ## 题目描述
 
@@ -54,7 +54,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/栈队列堆/getLeastNumbers.js)
+@[code js](@code/algorithm/sword-point/栈队列堆/getLeastNumbers.js)
 
 ## 一些建议
 

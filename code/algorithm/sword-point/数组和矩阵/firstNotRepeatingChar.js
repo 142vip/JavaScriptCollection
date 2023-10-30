@@ -64,7 +64,6 @@ function firstNotRepeatingCharThree(str) {
       return str.indexOf(key)
     }
   }
-
   return -1
 }
 

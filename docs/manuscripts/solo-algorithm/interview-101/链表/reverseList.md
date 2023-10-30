@@ -6,7 +6,7 @@ permalink: /manuscripts/solo-algorithm/interview-101/reverseList.html
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca)
-- [欢迎讨论]()
+
 
 ## 题目描述
 

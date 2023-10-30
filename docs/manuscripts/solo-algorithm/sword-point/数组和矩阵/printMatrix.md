@@ -3,7 +3,7 @@
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a)
-- [欢迎讨论]()
+
 
 ## 题目描述
 
@@ -28,6 +28,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/数组和矩阵/printMatrix.js)
+@[code js](@code/algorithm/sword-point/数组和矩阵/printMatrix.js)
 
 ## 一些建议

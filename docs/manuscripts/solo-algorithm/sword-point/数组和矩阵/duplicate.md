@@ -17,6 +17,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/数组和矩阵/duplicate.js)
+@[code js](@code/algorithm/sword-point/数组和矩阵/duplicate.js)
 
 ## 一些建议

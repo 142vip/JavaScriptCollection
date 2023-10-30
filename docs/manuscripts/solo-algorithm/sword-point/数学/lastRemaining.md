@@ -4,7 +4,7 @@
 ## 题目链接
 
 - [牛客网]()
-- [欢迎讨论]()
+
 
 ## 题目描述
 
@@ -32,7 +32,7 @@ f(n,m)=(f(n-1,m)+m)%n; （n>1）
 
 ## 代码实现
 
-@[code js](@code/algorithm/剑指/数学/lastRemaining.js)
+@[code js](@code/algorithm/sword-point/数学/lastRemaining.js)
 
 ```js
 
