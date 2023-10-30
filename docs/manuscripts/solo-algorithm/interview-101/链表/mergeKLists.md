@@ -1,5 +1,5 @@
 ---
-permalink: /manuscripts/solo-algorithm/link-table/mergeList.html
+permalink: /manuscripts/solo-algorithm/interview-101/mergeList.html
 ---
 # BM5 合并k个已排序的链表
 

@@ -158,7 +158,7 @@ export const serverEndSidebar = [{
     {
       text: '集群部署',
       link: 'docker-compose.md'
-    },
+    }
   ]
 },
 {

@@ -1,5 +1,5 @@
 ---
-permalink: /manuscripts/solo-algorithm/link-table/reverseBetween.html
+permalink: /manuscripts/solo-algorithm/interview-101/reverseBetween.html
 ---
 # BM2 链表内指定区间反转
 

@@ -1,5 +1,5 @@
 ---
-permalink: /manuscripts/solo-algorithm/link-table/hasCycle.html
+permalink: /manuscripts/solo-algorithm/interview-101/hasCycle.html
 ---
 # BM6 判断链表中是否有环
 

@@ -1,5 +1,5 @@
 ---
-permalink: /manuscripts/solo-algorithm/link-table/reverseList.html
+permalink: /manuscripts/solo-algorithm/interview-101/reverseList.html
 ---
 # BM1 反转链表
 

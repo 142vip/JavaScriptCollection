@@ -1,5 +1,5 @@
 ---
-permalink: /manuscripts/solo-algorithm/link-table/entryNodeOfLoop.html
+permalink: /manuscripts/solo-algorithm/interview-101/entryNodeOfLoop.html
 ---
 # BM7 链表中环的入口结点
 

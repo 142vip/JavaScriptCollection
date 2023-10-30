@@ -1,3 +1,8 @@
+---
+title:
+permalink: /manuscripts/solo-algorithm/sword-point/add.html
+---
+
 # 不用加减乘除做加法
 
 ## 题目链接

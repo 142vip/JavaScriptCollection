@@ -87,7 +87,7 @@ module.exports = {
   GetNumberOfK
 }
 
-# 算法相关文档格式模版
+# 数字在排序数组中出现的次数
 
 ## 题目链接
 

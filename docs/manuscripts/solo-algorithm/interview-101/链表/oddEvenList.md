@@ -1,5 +1,5 @@
 ---
-permalink: /manuscripts/solo-algorithm/link-table/link-table/oddEventList.html
+permalink: /manuscripts/solo-algorithm/interview-101/oddEventList.html
 ---
 # BM14 链表的奇偶重排
 

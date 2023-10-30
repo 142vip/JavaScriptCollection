@@ -1,6 +1,6 @@
 ---
 title: 斐波那契数列
-permalink: /manuscripts/solo-algorithm/fibonacci.html
+permalink: /manuscripts/solo-algorithm/interview-101/fibonacci.html
 ---
 
 # 斐波那契数列
