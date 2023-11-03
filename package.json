@@ -56,7 +56,12 @@
     "webpack": "^5.89.0",
     "xmind-embed-viewer": "^1.2.0"
   },
-  "lint-staged":{
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
     "*": "./scripts/lint"
   }
 }
