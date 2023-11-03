@@ -2,7 +2,7 @@
 export const ServerEndSidebar = [
   {
     text: '基础知识',
-    link:'base/restful.html'
+    link: 'base/restful.html'
   },
   {
     text: 'Node.js',
