@@ -8,12 +8,12 @@ export const readBooksSidebar = [
         link: 'ES6标准入门.md'
       },
       {
-        text: '更了不起的Node.js ',
-        link: '狼书.md'
-      },
-      {
         text: '了不起的Node.js',
         link: '了不起的Node.js.md'
+      },
+      {
+        text: '更了不起的Node.js ',
+        link: '狼书.md'
       },
       {
         text: '深入浅出Node.js',

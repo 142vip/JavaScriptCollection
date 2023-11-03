@@ -1,3 +1,8 @@
+---
+title: SHELL-1 统计文件的行数
+permalink: /manuscripts/solo-algorithm/shell/shell-1.html
+---
+
 # SHELL-1 统计文件的行数
 
 ## 题目链接
@@ -12,7 +17,7 @@
 示例:
 假设 nowcoder.txt 内容如下：
 
-```txt
+```cpp
 #include <iostream>
 using namespace std;
 int main()

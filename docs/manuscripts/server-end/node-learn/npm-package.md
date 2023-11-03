@@ -1,6 +1,6 @@
 ---
 title: 常用模块包
-permalink: /manuscripts/server-end/npm-package.html
+permalink: /manuscripts/server-end/node-learn/npm-package.html
 ---
 
 # 常用NPM包

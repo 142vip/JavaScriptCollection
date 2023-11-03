@@ -1,6 +1,6 @@
 ---
 title: Lodash
-permalink: /manuscripts/server-end/lodash.html
+permalink: /manuscripts/server-end/node-learn/lodash.html
 ---
 
 # Lodash

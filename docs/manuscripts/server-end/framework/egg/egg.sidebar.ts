@@ -64,19 +64,19 @@ export const eggSidebar = [
       {
         text: 'egg-sequelize',
         link: 'egg-sequelize.md'
-      },
-      {
-        text: 'egg-sequelize-plus',
-        link: 'egg-sequelize-plus.md'
-      },
-      {
-        text: 'egg-grpc-client',
-        link: 'egg-grpc-client.md'
-      },
-      {
-        text: 'egg-grpc-server',
-        link: 'egg-grpc-server.md'
       }
+      // {
+      //   text: 'egg-sequelize-plus',
+      //   link: 'egg-sequelize-plus.md'
+      // },
+      // {
+      //   text: 'egg-grpc-client',
+      //   link: 'egg-grpc-client.md'
+      // },
+      // {
+      //   text: 'egg-grpc-server',
+      //   link: 'egg-grpc-server.md'
+      // }
     ]
   },
   {

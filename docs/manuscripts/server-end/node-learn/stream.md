@@ -1,6 +1,6 @@
 ---
 title: stream
-permalink: /manuscripts/server-end/stream.html
+permalink: /manuscripts/server-end/node-learn/stream.html
 ---
 
 # node核心模块 stream
