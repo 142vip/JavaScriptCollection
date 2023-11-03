@@ -1,4 +1,4 @@
-export const BaseSidebar=[
+export const BaseSidebar = [
   {
     text: 'RestFul风格',
     link: 'restFul.md'

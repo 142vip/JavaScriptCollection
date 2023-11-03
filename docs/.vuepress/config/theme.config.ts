@@ -1,6 +1,6 @@
 import navbar from "./navbar";
 import sidebar from "./sidebar";
-import {FOOTER_HTML_INFO} from "./constant.config";
+import {AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO} from "./constant.config";
 import {hopeTheme} from "vuepress-theme-hope";
 import {langConfig} from "./lang.config";
 
@@ -19,11 +19,7 @@ export default {
     // pure: true,
     print: false, // 打印按钮
     hostname: 'https://142vip.cn',
-    author: {
-      name: '微信公众号：储凡',
-      email: 'fairy_vip@2925.com',
-      url: 'https://www.142vip.cn'
-    },
+    author: AUTHOR_INFO,
     favicon: "/favicon.ico",
     // logo: "/assets/408_logo.png",
     navbar: navbar,
@@ -41,8 +37,6 @@ export default {
     docsDir: "docs",
     docsBranch: "master",
     repo: "https://github.com/142vip/JavaScriptCollection.git",
-    // logoDark: "/assets/408_logo.png",
-    // logo: "/assets/408_logo.png",
 
     // 博客配置
     // blog: {
@@ -60,15 +54,10 @@ export default {
     // 设置页脚
     displayFooter: true,
     footer: FOOTER_HTML_INFO,
-    // copyright: false,
+    copyright: COPYRIGHT,
 
     // 主题色选择器
-    themeColor: {
-      blue: "#2196f3",
-      red: "#f26d6d",
-      green: "#3eaf7c",
-      orange: "#fb9b5f",
-    },
+    themeColor: true,
 
     plugins: {
       // comment:{
@@ -77,7 +66,7 @@ export default {
       //   site:'JavaScriptCollection',
       // },
       readingTime: {
-        wordPerMinute: 200
+        wordPerMinute: 100
       },
       copyright: false,
       // 开启博客功能
