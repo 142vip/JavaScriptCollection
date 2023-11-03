@@ -1,6 +1,6 @@
 ---
 title: RxJS
-permalink: /manuscripts/server-end/rxjs.html
+permalink: /manuscripts/server-end/node-learn/rxjs.html
 ---
 
 # RxJS

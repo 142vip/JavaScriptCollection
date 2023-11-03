@@ -1,6 +1,6 @@
 ---
 title: dayjs
-permalink: /manuscripts/server-end/dayjs.html
+permalink: /manuscripts/server-end/node-learn/dayjs.html
 ---
 
 

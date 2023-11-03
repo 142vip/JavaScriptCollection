@@ -1,5 +1,5 @@
 ---
-title:
+title: 不用加减乘除做加法
 permalink: /manuscripts/solo-algorithm/sword-point/add.html
 ---
 

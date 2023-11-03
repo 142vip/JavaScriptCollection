@@ -1,3 +1,8 @@
+---
+title: 算法相关文档格式模版
+permalink: /manuscripts/solo-algorithm/shell/shell-7.html
+---
+
 # 算法相关文档格式模版
 
 ## 题目链接

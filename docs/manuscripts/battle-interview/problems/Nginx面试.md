@@ -5,10 +5,6 @@ permalink: /manuscripts/battle-interview/nginx.html
 
 # Nginx面试
 
-[//]: # (```mindmap)
-[//]: # (root&#40;思维导图&#41;)
-[//]: # (  test)
-[//]: # (```)
 
 ## 什么是Nginx
 

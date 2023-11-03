@@ -1,15 +1,15 @@
 export const soloAlgorithmSidebar = [
   {
-    text: '面试必须刷Top101',
-    link: 'interview-101'
+    text: '面试必刷Top101',
+    link: '/manuscripts/solo-algorithm/interview-101'
   },
   {
     text: '剑指Offer',
-    link: 'sword-point'
+    link: '/manuscripts/solo-algorithm/sword-point'
   },
   {
     text: 'Shell篇',
-    link: 'shell'
+    link: '/manuscripts/solo-algorithm/shell'
   },
   {
     text: '在线刷题',
@@ -24,7 +24,7 @@ export const soloAlgorithmSidebar = [
       },
       {
         text: '杭电OJ',
-        link: 'http://acm.hdu.edu.cn/'
+        link: 'https://acm.hdu.edu.cn/'
       }
     ]
   }

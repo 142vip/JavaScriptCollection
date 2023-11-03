@@ -1,3 +1,5 @@
+import {soloAlgorithmSidebar} from "../../manuscripts/solo-algorithm/solo-algorithm.sidebar";
+
 export default [
   {
     text: "首页",
@@ -5,7 +7,8 @@ export default [
   },
   {
     text: "SOLO算法",
-    link: "/manuscripts/solo-algorithm",
+    // link: "/manuscripts/solo-algorithm",
+    children: soloAlgorithmSidebar
   },
   {
     text: "Battle面试官",

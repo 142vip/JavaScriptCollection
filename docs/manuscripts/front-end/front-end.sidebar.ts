@@ -1,4 +1,4 @@
-export const frontEndSidebar = [
+export const FrontEndSidebar = [
   {
     text: 'HTML',
     link: 'base-begin/html.md'

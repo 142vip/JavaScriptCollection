@@ -1,6 +1,6 @@
 ---
 title: Axios
-permalink: /manuscripts/server-end/axios.html
+permalink: /manuscripts/server-end/node-learn/axios.html
 ---
 
 # Axios
