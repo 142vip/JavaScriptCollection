@@ -1,3 +1,3 @@
 module.exports = {
-  "*": "./scripts/lint"
+  "{**/*,*}.{js, ts, vue , md}": "./scripts/lint"
 }
