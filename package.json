@@ -2,6 +2,12 @@
   "name": "JavaScriptCollection",
   "description": "一本有趣的JavaScript合集",
   "version": "0.0.2-alpha.7",
+  "authorInfo": {
+    "name": "微信公众号：储凡",
+    "email": "fairy_408@2925.com",
+    "url": "https://github.com/142vip",
+    "homePage": "https://www.142vip.cn"
+  },
   "packageManager": "pnpm@8.9.2",
   "engines": {
     "node": "^18.x",
