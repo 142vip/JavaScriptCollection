@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.2-alpha.8](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.7...v0.0.2-alpha.8) (2023-11-05)
+
+
+### Features
+
+* docker镜像新增git相关记录的label标记 ([b7d0dae](https://github.com/142vip/JavaScriptCollection/commit/b7d0dae090693594ae4b259a7bd05b40780024e0))
+* 优化页面footer显示形式，展示版本信息 ([fadf7ae](https://github.com/142vip/JavaScriptCollection/commit/fadf7ae022b5a51d5dfa8829c960de0548bda377))
+* 新增一些文档，调整导航栏内容 ([b556388](https://github.com/142vip/JavaScriptCollection/commit/b5563889c7909cd56e16ab2d5e08277407382773))
+
+
+### Bug Fixes
+
+* **CI:** 修复依赖下载异常，PNPM版本约束统一 ([7360718](https://github.com/142vip/JavaScriptCollection/commit/73607188ceec341f9ac264469b0c53cf88f96c15))
+* **CI:** 修复镜像构建异常 ([0e57d48](https://github.com/142vip/JavaScriptCollection/commit/0e57d486a3fe9f48042d74130c69e6273c0baa67))
+* **scripts:** 修复脚本prepare异常 ([#89](https://github.com/142vip/JavaScriptCollection/issues/89)) ([324a422](https://github.com/142vip/JavaScriptCollection/commit/324a422a066c5b3064400f508e22cd8934bb5529))
+* 修复缺少.husky目录导致dockerfile构建异常 ([2f357a4](https://github.com/142vip/JavaScriptCollection/commit/2f357a4d102937390269b2763885588f968c61b0))
+* 引入lint-staged格式化提交内容，修复git提交前hooks执行异常 ([#91](https://github.com/142vip/JavaScriptCollection/issues/91)) ([97689ab](https://github.com/142vip/JavaScriptCollection/commit/97689ab5ed8cecdcb2d8e0f65ed203a149961bcf))
+
 ## [0.0.2-alpha.7](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.6...v0.0.2-alpha.7) (2023-10-30)
 
 ### Features
