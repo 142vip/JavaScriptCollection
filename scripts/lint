@@ -5,8 +5,8 @@
 ##  - 代码
 ##  - markdown文档
 ## 使用:
-#    - ./scripts/lint
-#    - ./scripts/lint --fix
+#    - ./scripts/lint           校验
+#    - ./scripts/lint --fix     格式化
 ## 参考链接：
 ##   - https://eslint.org/docs/latest/use/getting-started
 ##   - https://github.com/igorshubovych/markdownlint-cli

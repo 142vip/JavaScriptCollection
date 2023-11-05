@@ -1,5 +1,4 @@
-
-## 接入Artalk评论系统
+# 接入Artalk评论系统
 
 ```bash
 
@@ -24,8 +23,3 @@ docker run -d \
   artalk/artalk-go
 
 ```
-
-# 12324取34
-
-2323
-23241
