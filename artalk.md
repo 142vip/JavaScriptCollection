@@ -1,5 +1,4 @@
-
-## 接入Artalk评论系统
+# 接入Artalk评论系统
 
 ```bash
 
