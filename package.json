@@ -15,7 +15,7 @@
   },
   "scripts": {
     "preinstall": "chmod +x ./scripts/*",
-    "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"npx lint-staged\" && chmod +x .husky/pre-commit",
+    "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"npx lint-staged\" && npx husky add .husky/commit-msg  'npx --no -- commitlint --edit ${1}' && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "build:proxy": "./scripts/bundle build_proxy",
@@ -31,6 +31,8 @@
     "clean": "快速删除本地依赖"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vuepress/client": "2.0.0-beta.67",
