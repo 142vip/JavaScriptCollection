@@ -64,6 +64,10 @@ export const developSkillSidebar = [
       {
         text: 'Prettier',
         link: 'prettier.md'
+      },
+      {
+        text: '工程化规范',
+        link: 'engineering-lint.md'
       }
     ]
   }
