@@ -5,7 +5,6 @@ logs
 .vscode/*
 */.DS_Store
 .DS_Store
-*/.vscode
 .idea
 # Coverage directory used by tools like istanbul
 coverage
@@ -36,4 +35,3 @@ docs/.vuepress/.temp/
 docs/.vuepress/dist/
 # TernJS port file
 .tern-port
-/.husky/

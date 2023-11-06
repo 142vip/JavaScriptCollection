@@ -23,6 +23,8 @@ RUN if [ "$CONTAINER_BUILD" = "true" ]; then  \
 
 FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.23.0-alpine
 
+
+## 自定义镜像的Label信息
 ARG APP_NAME
 ARG APP_VERSION
 ARG AUTHOR

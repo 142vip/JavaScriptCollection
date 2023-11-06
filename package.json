@@ -15,7 +15,7 @@
   },
   "scripts": {
     "preinstall": "chmod +x ./scripts/*",
-    "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"npx lint-staged\" && npx husky add .husky/commit-msg  'npx --no -- commitlint --edit ${1}' && chmod +x .husky/pre-commit",
+    "prepare": "husky install",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "build:proxy": "./scripts/bundle build_proxy",
