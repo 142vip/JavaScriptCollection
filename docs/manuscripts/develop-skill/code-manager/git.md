@@ -1,13 +1,24 @@
 ---
 title: Git的使用
 permalink: /manuscripts/develop-skill/code-manager/git.html
-headerDepth: 3
+headerDepth: 2
 ---
 # Git的使用
 
-## 简单介绍
+**到目前为止，当今世界上使用最广泛的现代版本控制系统是 Git**。Git 是一个成熟的、积极维护的开源项目，最初由 Linux 操作系统内核的著名创建者 Linus Torvalds 于 2005 年开发。
+有海量软件项目依赖 Git 进行版本控制，包括商业项目和开源项目。使用过 Git 的开发人员在可用的软件开发人才库中占有很好的比例，它在各种操作系统和 IDE（集成开发环境）上都能很好地运行。
 
-- 官网: <https://git-scm.com/docs>
+Git 采用分布式架构，是 DVCS（分布式版本控制系统）的示例。在 Git 中，每个开发人员的代码工作副本也是一个可以包含所有变更完整历史记录的存储库，
+而不是像曾经流行的 CVS 或 Subversion（也称为 SVN）等版本控制系统那样，只有一个地方存放软件的完整版本历史记录。
+
+除了分布式外，Git 的设计还考虑了`性能`、`安全性`和`灵活性`。
+
+## 版本控制
+
+版本控制，也称为源代码控制，是一种跟踪和管理软件代码变更的实践。版本控制系统是软件工具，可帮助软件团队管理源代码随时间推移而发生的变更。
+随着开发环境的加速，版本控制系统可以帮助软件团队更快、更智能地工作。它们对于 DevOps 团队特别有用，因为它们可以帮助该团队缩短开发时间并提高部署成功率。
+
+**版本控制软件在特殊类型的数据库中跟踪对代码的每一次修改。如果犯了错误，开发人员可以回退并比较代码的早期版本，以帮助修复错误，同时最大限度地减少对所有团队成员的干扰。**
 
 ![](images/git.png)
 
@@ -24,28 +35,59 @@ Git 区域理解:
 
 - `工作区`：这个一般就是我们写代码的地方
 
-## 常用命令
+## 安装Git
 
-### git stash
+### Mac OS X 系统
+
+#### 利用官方镜像
+
+下载最新的[Git for Mac 安装程序](https://sourceforge.net/projects/git-osx-installer/files/)，按照提示安装即可。
+
+#### 利用Homebrew
 
 ```bash
-## 储存变更
-git stash
-git stash save 'xxx':
+##  Homebrew安装Git
+brew install git
 
-## 查看储存区所有提交列表
-git stash list
-
-## 弹出并应用最近的一次储存区的代码提交
-git stash pop
-
-## 删除某次储存记录
-git stash drop stash@{n}
-
-## 清楚所有 stash 信息
-git stash clear
-
+## 查看版本，检查是否安装成功
+git --version
 ```
+
+### Windows系统
+
+利用官方安装包，下载最新的[Git for Windows 安装程序](https://gitforwindows.org/)，按照提示安装即可。
+
+### Linux系统
+
+#### Debian/Ubuntu (apt-get)
+
+Git 软件包可通过 `apt` 获得
+
+```bash
+## 安装包更新
+sudo apt-get update
+
+## 安装Git
+sudo apt-get install git
+```
+
+#### Fedora (dnf/yum)
+
+Git 软件包可以通过 `yum` 和 `dnf` 获得：
+
+```bash
+## dnf安装git
+sudo dnf install git
+
+## yum安装git
+sudo yum install git
+```
+
+## 常用命令
+
+### git init
+
+将目录进行git仓库初始化
 
 ### git clone
 
@@ -57,9 +99,29 @@ git clone xxx.git
 git clone xxx.git -b branch1
 ```
 
-### git init
+### git stash
 
-将目录进行git仓库初始化
+```bash
+## 暂存变更
+git stash
+git stash save 'xxx':
+
+## 查看暂存区所有提交列表
+git stash list
+
+## 弹出并应用最近的一次暂存区的代码提交
+git stash pop
+
+## 删除某次暂存记录
+git stash drop stash@{n}
+
+## 查看暂存内容变更
+git stash show
+
+## 清楚所有 stash 信息
+git stash clear
+
+```
 
 ### git remote
 
@@ -151,40 +213,34 @@ git branch -D <branch-nane>
 git branch -m <old-branch-name> <new-branch-name>
 ```
 
-## 分支命名规范
+## 分支规范
 
-#### 版本命名格式：X.Y.Z
+### 分支命名
 
-- **修订版号 Z**（x.y.Z | x > 0）向下兼容的修正时才递增，线上bug修复。
-- **次版本号 Y**（x.Y.z | x > 0）向下兼容的新功能出现时递增，日常迭代。
-- **主版本号 X**（X.y.z | X > 0）不兼容的修改被加入公共 API 时递增，大版本更新。
+- 功能迭代：`feat/xxx`
+- 提测bugfix：`fix/xxx`
+- 线上问题紧急修复：`hotfix/xxx`
 
-#### 上游优先
+### 上游优先
 
 - `master` 作为主分支  一般稳定版本
 - 其他分支皆从 `master` 分支`衍生`
 - 注意与传统分支策略区别
 
-#### 多环境长线分支
+### 多环境长线分支
 
 - `master`：开发稳定分支
 - `test`：测试测试环境，一般对应测试服，可以详细分为测试--->预发
 - `prod`：线上环境，一般对应正式服【重要】
 
-#### 分支类型
+### 分支类型
 
-- 功能迭代分支：`feature`
+- 功能迭代分支：`feat`
 - 提测后bugfix分支：`bugfix`
 - 线上问题紧急修复：`hotfix`
 - 所有开发动作在短期分支上完成
 
-**长线分支只允许mr、禁止push、feature、bugfix 从 `master` 分支拉取，hotfix 从 `master`(线上稳定分支) 拉取。**分支目的完成后要求及时删除
-
-#### 分支命名
-
-- 功能迭代：feature/xxx
-- 提测bugfix：fix/xxx
-- 线上问题紧急修复：hotfix/xxx
+**长线分支只允许MR、禁止push、feature、bugfix 从 `master` 分支拉取，hotfix 从 `master`(线上稳定分支) 拉取。** 分支目的完成后及时删除
 
 ## 提交规范
 
@@ -231,8 +287,6 @@ subject是 commit 目的的简短描述，不超过50个字符。
 - 第一个字母小写
 - 结尾不加句号（.）
 
-#### Body
-
 Body 部分是对本次 commit 的详细描述，可以分成多行，每行尽量不超过72个字符。例如：
 
 ```text
@@ -258,6 +312,12 @@ Closes #234
 Closes #123, #245, #992
 ```
 
+## 版本格式X.Y.Z
+
+- **修订版号 Z**（x.y.Z | x > 0）向下兼容的修正时才递增，线上bug修复。
+- **次版本号 Y**（x.Y.z | x > 0）向下兼容的新功能出现时递增，日常迭代。
+- **主版本号 X**（X.y.z | X > 0）不兼容的修改被加入公共 API 时递增，大版本更新。
+
 ## 配置用户名和邮箱
 
 ```bash
@@ -275,13 +335,13 @@ git config --list
 
 ## 修改历史提交信息
 
-#### 查看提交日志
+### 查看提交日志
 
 ```bash
 git log
 ```
 
-#### rebase到指定结点
+### rebase到指定结点
 
 ```bash
 git rebase -i xxx
@@ -290,26 +350,26 @@ git rebase -i xxx
 git rebase -i HEAD~1
 ```
 
-#### 进入编辑界面，记录着commit的信息
+### 进入编辑界面，记录着commit的信息
 
 pick---->edit
 
 并保存，即使用`wq`退出
 
-#### 重新设置用户名和邮箱
+### 重新设置用户名和邮箱
 
 ```bash
 ## 用户信息
 git commit --amend --author="chufan <fariy_vip@2925.com>"
 ```
 
-#### 结束rebase
+### 结束rebase
 
 ```bash
 git rebase --continue
 ```
 
-#### 强制推送到目标分支
+### 强制推送到目标分支
 
 ```bash
 git push -f
@@ -329,9 +389,9 @@ git push origin --tags
 
 #推送指定本地tag到远程
 git push origin 
-
 ```
 
 ## 参考资料
 
-- <https://www.bbsmax.com/A/lk5a87O4J1/>
+- 官网：<https://git-scm.com/docs>
+- <https://www.atlassian.com/zh/git>
