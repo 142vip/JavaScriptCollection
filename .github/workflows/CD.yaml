@@ -81,7 +81,10 @@ jobs:
         with:
           target_branch: pages/github
           build_dir: docs/.vuepress/dist
-          commit_message: chore(sync) v${{steps.gitInfo.outputs.version}}
+          commit_message: |
+            chore(sync): v${{steps.gitInfo.outputs.version}}
+
+            部署地址: https://142vip.github.io/JavaScriptCollection
           committer: ${{steps.gitInfo.outputs.author}}<${{steps.gitInfo.outputs.email}}>
           author: Mr·Sync
         env:
@@ -136,7 +139,7 @@ jobs:
         run: |
           zip -r JavaScriptCollection.zip . \
           -x "node_modules/*" \
-          -x ".git/*" 
+          -x "*.git*" 
 
       # 提取版本号
       - name: Get New Version Number
