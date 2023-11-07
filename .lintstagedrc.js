@@ -5,6 +5,6 @@
 module.exports = {
   "*.{js,ts,md}":[
     "./scripts/lint --fix",
-    "git add"
+    // "git add"
   ]
 }
