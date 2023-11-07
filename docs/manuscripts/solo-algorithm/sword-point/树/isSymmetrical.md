@@ -1,4 +1,8 @@
-# 算法相关文档格式模版
+---
+title: 对称的二叉树
+permalink: /manuscripts/solo-algorithm/sword-point/is-symmetrical.html
+---
+# 对称的二叉树
 
 ## 题目链接
 
@@ -10,6 +14,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/树/isSymmetrical.js)
+@[code js](@algorithm/sword-point/树/isSymmetrical.js)
 
 ## 一些建议

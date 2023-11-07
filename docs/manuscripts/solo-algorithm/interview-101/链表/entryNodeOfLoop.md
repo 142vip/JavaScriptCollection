@@ -15,6 +15,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/entryNodeOfLoop.html
 
 ## 代码实现
 
-@[code js](@code/algorithm/interview-101/entryNodeOfLoop.js)
+@[code js](@algorithm/interview-101/entryNodeOfLoop.js)
 
 ## 一些建议

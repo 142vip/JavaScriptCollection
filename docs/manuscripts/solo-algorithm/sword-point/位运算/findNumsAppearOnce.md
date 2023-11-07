@@ -1,3 +1,7 @@
+---
+title: 数组中只出现一次的两个数字
+permalink: /manuscripts/solo-algorithm/sword-point/find-nums-appear-once.html
+---
 # 数组中只出现一次的两个数字
 
 ## 题目链接
@@ -46,7 +50,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/位运算/findNumsAppearOnce.js)
+@[code js](@algorithm/sword-point/位运算/findNumsAppearOnce.js)
 
 ## 一些建议
 

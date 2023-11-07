@@ -1,4 +1,8 @@
-# 算法相关文档格式模版
+---
+title: 左旋转字符串
+permalink: /manuscripts/solo-algorithm/sword-point/left-rotate-str.html
+---
+# 左旋转字符串
 
 ## 题目链接
 
@@ -10,7 +14,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/双指针/leftRotateString.js)
+@[code js](@algorithm/sword-point/双指针/leftRotateString.js)
 
 ```js
 /*

@@ -46,7 +46,7 @@ permalink: /manuscripts/solo-algorithm/sword-point/add.html
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/其他相关/add.js)
+@[code js](@algorithm/sword-point/其他相关/add.js)
 
 ## 一些建议
 

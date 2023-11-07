@@ -15,6 +15,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/findKthToTail.html
 
 ## 代码实现
 
-@[code js](@code/algorithm/interview-101/findKthToTail.js)
+@[code js](@algorithm/interview-101/findKthToTail.js)
 
 ## 一些建议

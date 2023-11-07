@@ -15,6 +15,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/hasCycle.html
 
 ## 代码实现
 
-@[code js](@code/algorithm/interview-101/hasCycle.js)
+@[code js](@algorithm/interview-101/hasCycle.js)
 
 ## 一些建议

@@ -1,3 +1,7 @@
+---
+title: 树的子结构
+permalink: /manuscripts/solo-algorithm/sword-point/hash-subtree.html
+---
 # 树的子结构
 
 ## 题目链接
@@ -10,6 +14,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/树/hasSubTree.js)
+@[code js](@algorithm/sword-point/树/hasSubTree.js)
 
 ## 一些建议

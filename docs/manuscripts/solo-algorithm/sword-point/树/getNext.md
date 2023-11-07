@@ -1,3 +1,7 @@
+---
+title: 二叉树的下一个结点
+permalink: /manuscripts/solo-algorithm/sword-point/get-next-node.html
+---
 # 二叉树的下一个结点
 
 ## 题目链接
@@ -10,6 +14,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/树/getNext.js)
+@[code js](@algorithm/sword-point/树/getNext.js)
 
 ## 一些建议

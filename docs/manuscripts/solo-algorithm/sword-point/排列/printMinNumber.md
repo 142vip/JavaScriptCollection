@@ -1,4 +1,7 @@
-
+---
+title: 把数组排成最小的数
+permalink: /manuscripts/solo-algorithm/sword-point/print-min-number.html
+---
 # 把数组排成最小的数
 
 ## 题目链接
@@ -11,7 +14,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/排列/printMinNumber.js)
+@[code js](@algorithm/sword-point/排列/printMinNumber.js)
 
 ```js
 

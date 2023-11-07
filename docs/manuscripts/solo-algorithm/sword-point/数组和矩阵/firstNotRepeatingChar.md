@@ -1,3 +1,7 @@
+---
+title: 第一个只出现一次的字符
+permalink: /manuscripts/solo-algorithm/sword-point/first-not-repeating-char.html
+---
 # 第一个只出现一次的字符
 
 ## 题目链接
@@ -23,7 +27,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/数组和矩阵/firstNotRepeatingChar.js)
+@[code js](@algorithm/sword-point/数组和矩阵/firstNotRepeatingChar.js)
 
 ## 一些建议
 

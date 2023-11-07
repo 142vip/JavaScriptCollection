@@ -1,3 +1,7 @@
+---
+title: 两个栈实现队列
+permalink: /manuscripts/solo-algorithm/sword-point/stack-to-queue.html
+---
 # 两个栈实现队列
 
 ## 题目链接
@@ -36,7 +40,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/栈队列堆/stackToQueue.js)
+@[code js](@algorithm/sword-point/栈队列堆/stackToQueue.js)
 
 ## 一些建议
 

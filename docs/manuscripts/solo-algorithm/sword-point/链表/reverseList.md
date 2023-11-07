@@ -1,3 +1,8 @@
+---
+title: 反转链表
+permalink: /manuscripts/solo-algorithm/sword-point/reverse-list.html
+---
+
 # 反转链表
 
 ## 题目链接
@@ -10,6 +15,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/链表/reverseList.js)
+@[code js](@algorithm/sword-point/链表/reverseList.js)
 
 ## 一些建议

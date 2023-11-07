@@ -1,3 +1,7 @@
+---
+title: 从1到n整数中1出现的次数
+permalink: /manuscripts/solo-algorithm/sword-point/number-count-in-n.html
+---
 # 从1到n整数中1出现的次数
 
 ## 题目链接
@@ -26,7 +30,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/数组和矩阵/firstNotRepeatingChar.js)
+@[code js](@algorithm/sword-point/数组和矩阵/firstNotRepeatingChar.js)
 
 ## 一些建议
 

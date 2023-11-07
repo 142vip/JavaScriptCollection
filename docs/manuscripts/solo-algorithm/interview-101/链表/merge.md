@@ -15,6 +15,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/merge.html
 
 ## 代码实现
 
-@[code js](@code/algorithm/interview-101/merge.js)
+@[code js](@algorithm/interview-101/merge.js)
 
 ## 一些建议

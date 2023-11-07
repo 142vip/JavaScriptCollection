@@ -1,12 +1,3 @@
-/*
- * @Description:
- * @Version: Beta1.0
- * @Author: 【B站&公众号】储凡
- * @Date: 2021-05-02 15:47:20
- * @LastEditors: 【B站&公众号】储凡
- * @LastEditTime: 2021-05-02 15:55:43
- */
-
 function ListNode(x) {
   this.val = x
   this.next = null
@@ -14,8 +5,6 @@ function ListNode(x) {
 
 /**
  * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
- *
- *
  * @param pHead ListNode类
  * @param k int整型
  * @return ListNode类

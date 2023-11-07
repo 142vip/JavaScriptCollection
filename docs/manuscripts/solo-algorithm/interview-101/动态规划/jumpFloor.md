@@ -29,7 +29,7 @@ permalink: /manuscripts/solo-algorithm/interview-101/jumpFloor.html
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/动态规划/jumpFloor.js)
+@[code js](@algorithm/sword-point/动态规划/jumpFloor.js)
 
 ## 一些建议
 

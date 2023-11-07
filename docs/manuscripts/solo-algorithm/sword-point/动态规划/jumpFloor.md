@@ -1,3 +1,7 @@
+---
+title: 跳台阶 要么跳一阶，要么跳两阶
+permalink: /manuscripts/solo-algorithm/sword-point/jump-floor.html
+---
 # 跳台阶
 
 ## 题目链接
@@ -24,7 +28,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/动态规划/jumpFloor.js)
+@[code js](@algorithm/sword-point/动态规划/jumpFloor.js)
 
 ## 一些建议
 

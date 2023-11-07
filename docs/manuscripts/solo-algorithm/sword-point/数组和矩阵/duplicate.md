@@ -1,3 +1,7 @@
+---
+title: 数组中重复的数字
+permalink: /manuscripts/solo-algorithm/sword-point/duplicate.html
+---
 # 数组中重复的数字
 
 ## 题目链接
@@ -17,6 +21,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/数组和矩阵/duplicate.js)
+@[code js](@algorithm/sword-point/数组和矩阵/duplicate.js)
 
 ## 一些建议

@@ -1,3 +1,8 @@
+---
+title: 二维数组中的查找
+permalink: /manuscripts/solo-algorithm/sword-point/find.html
+---
+
 # 二维数组中的查找
 
 ## 题目链接
@@ -26,6 +31,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/数组和矩阵/find.js)
+@[code js](@algorithm/sword-point/数组和矩阵/find.js)
 
 ## 一些建议

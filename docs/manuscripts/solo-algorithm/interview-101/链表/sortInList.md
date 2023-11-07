@@ -16,6 +16,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/sortInList.html
 
 ## 代码实现
 
-@[code js](@code/algorithm/interview-101/sortInList.js)
+@[code js](@algorithm/interview-101/sortInList.js)
 
 ## 一些建议

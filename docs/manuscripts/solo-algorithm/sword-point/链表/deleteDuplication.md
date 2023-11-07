@@ -1,4 +1,8 @@
-# 【较难】删除链表中重复的结点
+---
+title: 删除链表中重复的结点
+permalink: /manuscripts/solo-algorithm/sword-point/delete-duplicate-node.html
+---
+# 删除链表中重复的结点
 
 ## 题目链接
 
@@ -10,6 +14,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/链表/deleteDuplication.js)
+@[code js](@algorithm/sword-point/链表/deleteDuplication.js)
 
 ## 一些建议

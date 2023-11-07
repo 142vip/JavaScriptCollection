@@ -1,3 +1,7 @@
+---
+title: 扑克牌顺子
+permalink: /manuscripts/solo-algorithm/sword-point/is-continuous.html
+---
 # 扑克牌顺子
 
 ## 题目链接
@@ -10,7 +14,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/其他相关/isContinuous.js)
+@[code js](@algorithm/sword-point/其他相关/isContinuous.js)
 
 ```js
 
