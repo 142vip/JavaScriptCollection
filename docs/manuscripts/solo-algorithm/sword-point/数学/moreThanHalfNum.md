@@ -1,3 +1,8 @@
+---
+title: 数组中出现次数超过一半的数字
+permalink: /manuscripts/solo-algorithm/sword-point/more-than-half-num.html
+---
+
 # 数组中出现次数超过一半的数字
 
 ## 题目链接
@@ -42,7 +47,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/数学/moreThanHalfNum.js)
+@[code js](@algorithm/sword-point/数学/moreThanHalfNum.js)
 
 ## 一些建议
 

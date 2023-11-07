@@ -14,6 +14,6 @@ permalink: /manuscripts/solo-algorithm/shell/shell-4.html
 
 ## 代码实现
 
-@[code bash](@code/algorithm/shell/shell-4.sh)
+@[code bash](@algorithm/shell/shell-4.sh)
 
 ## 一些建议

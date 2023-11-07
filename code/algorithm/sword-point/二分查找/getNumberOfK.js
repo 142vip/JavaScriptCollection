@@ -3,8 +3,6 @@
  * 难度：中等
  * @param data
  * @param k
- * @returns {number|number}
- * @constructor
  */
 function GetNumberOfK(data, k) {
   // 分两次二分查找，知道重复元素首次和最后一次出现位置，相减就能拿到重复次数了.
@@ -19,6 +17,7 @@ function GetNumberOfK(data, k) {
   return left === -1 && right === -1 ? 0 : right - left + 1
 }
 
+// 右侧二分查找
 function rightBinarySearch(data, target) {
   if (!data.length) {
     return -1
@@ -47,7 +46,7 @@ function rightBinarySearch(data, target) {
   return right
 }
 
-// [left，right]
+// 左侧二分查找
 function leftBinarySearch(data, target) {
   if (!data.length) {
     return -1
@@ -74,8 +73,4 @@ function leftBinarySearch(data, target) {
     return -1
   }
   return left
-}
-
-module.exports = {
-  GetNumberOfK
 }

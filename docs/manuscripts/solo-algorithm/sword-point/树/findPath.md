@@ -1,4 +1,8 @@
-# 算法相关文档格式模版
+---
+title: 二叉树中和为某一值的路径
+permalink: /manuscripts/solo-algorithm/sword-point/find-path-sum.html
+---
+# 二叉树中和为某一值的路径
 
 ## 题目链接
 
@@ -10,6 +14,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/树/findPath.js)
+@[code js](@algorithm/sword-point/树/findPath.js)
 
 ## 一些建议

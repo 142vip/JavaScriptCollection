@@ -1,3 +1,7 @@
+---
+title: 剪绳子
+permalink: /manuscripts/solo-algorithm/sword-point/cut-rope.html
+---
 # 剪绳子
 
 ## 题目链接
@@ -28,6 +32,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/贪心思想/cutRope.js)
+@[code js](@algorithm/sword-point/贪心思想/cutRope.js)
 
 ## 一些建议

@@ -1,4 +1,8 @@
-# 算法相关文档格式模版
+---
+title: 二叉树的镜像
+permalink: /manuscripts/solo-algorithm/sword-point/mirror-tree.html
+---
+# 二叉树的镜像
 
 ## 题目链接
 
@@ -10,6 +14,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/树/mirror.js)
+@[code js](@algorithm/sword-point/树/mirror.js)
 
 ## 一些建议

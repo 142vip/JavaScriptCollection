@@ -1,7 +1,5 @@
 /**
  * 先排序，利用出现一次特性
- * @param array
- * @returns {*[]}
  */
 function findNumsAppearOnceOne(array) {
   // 数组中元素要么出现一次，要么出现两次，可以先对元素进行排序有点偷懒的样子
@@ -29,8 +27,6 @@ function findNumsAppearOnceOne(array) {
 
 /**
  * 利用Map统计出现次数
- * @param array
- * @returns {*[]}
  */
 function findNumsAppearOnceTwo(array) {
   const resMap = new Map()
@@ -56,8 +52,6 @@ function findNumsAppearOnceTwo(array) {
 
 /**
  * 利用异或运算
- * @param array
- * @returns {*[]}
  */
 function findNumsAppearOnceThree(array) {
   let res1 = 0

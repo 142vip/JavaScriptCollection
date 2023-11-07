@@ -1,3 +1,8 @@
+---
+title: 替换空格
+permalink: /manuscripts/solo-algorithm/sword-point/replace-space.html
+---
+
 # 替换空格
 
 ## 题目链接
@@ -18,7 +23,6 @@
 "We Are Happy"
 // 返回值：
 "We%20Are%20Happy"
-
 ```
 
 ## 刷题思路
@@ -29,7 +33,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/数组和矩阵/replaceSpace.js)
+@[code js](@algorithm/sword-point/数组和矩阵/replaceSpace.js)
 
 ## 一些建议
 

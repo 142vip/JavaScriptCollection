@@ -1,3 +1,7 @@
+---
+title: 变态跳台阶 找规律 可跳任意阶
+permalink: /manuscripts/solo-algorithm/sword-point/jump-floor-random.html
+---
 # 跳台阶扩展问题
 
 ## 题目链接
@@ -28,7 +32,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/动态规划/jumpFloorII.js)
+@[code js](@algorithm/sword-point/动态规划/jumpFloorII.js)
 
 ## 一些建议
 

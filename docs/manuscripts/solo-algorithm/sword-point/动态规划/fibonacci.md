@@ -1,3 +1,8 @@
+---
+title: 斐波那契数列
+permalink: /manuscripts/solo-algorithm/sword-point/fibonacci.html
+---
+
 # 斐波那契数列
 
 ## 题目链接
@@ -24,7 +29,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/动态规划/fibonacci.js)
+@[code js](@algorithm/sword-point/动态规划/fibonacci.js)
 
 ## 一些建议
 

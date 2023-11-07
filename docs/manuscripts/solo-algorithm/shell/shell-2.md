@@ -31,6 +31,6 @@ int main()
 
 ## 代码实现
 
-@[code bash](@code/algorithm/shell/shell-2.sh)
+@[code bash](@algorithm/shell/shell-2.sh)
 
 ## 一些建议

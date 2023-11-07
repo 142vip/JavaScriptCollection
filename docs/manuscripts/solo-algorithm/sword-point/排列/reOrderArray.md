@@ -1,3 +1,7 @@
+---
+title: 调整数组顺序使奇数位于偶数前面
+permalink: /manuscripts/solo-algorithm/sword-point/reorder-array.html
+---
 # 【中等】调整数组顺序使奇数位于偶数前面
 
 ## 题目链接
@@ -10,31 +14,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/排列/reOrderArray.js)
-
-```js
-// 利用空间
-function reOrderArray(array) {
-  // 奇数,偶数；
-  const oddArr = []; const evenArr = []
-  for (let index = 0; index < array.length; index++) {
-    if (array[index] % 2 !== 0) {
-      // 奇数
-      oddArr.push(array[index])
-    } else {
-      // 偶数
-      evenArr.push(array[index])
-    }
-  }
-
-  // 拼接
-  return oddArr.concat(evenArr)
-}
-
-// 利用冒泡，遇见偶数往最后放，统一前移
-
-
-
-```
+@[code js](@algorithm/sword-point/排列/reOrderArray.js)
 
 ## 一些建议

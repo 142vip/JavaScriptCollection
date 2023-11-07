@@ -1,3 +1,7 @@
+---
+title: 连续子数组的最大和
+permalink: /manuscripts/solo-algorithm/sword-point/find-greatest-sum.html
+---
 # 连续子数组的最大和
 
 ## 题目链接
@@ -10,6 +14,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/动态规划/findGreatestSumOfSubArray.js)
+@[code js](@algorithm/sword-point/动态规划/findGreatestSumOfSubArray.js)
 
 ## 一些建议

@@ -1,3 +1,7 @@
+---
+title: 和为S的两个数字
+permalink: /manuscripts/solo-algorithm/sword-point/find-sum-nums.html
+---
 # 和为S的两个数字
 
 ## 题目链接
@@ -38,7 +42,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/双指针/findNumbersWithSum.js)
+@[code js](@algorithm/sword-point/双指针/findNumbersWithSum.js)
 
 ## 一些建议
 

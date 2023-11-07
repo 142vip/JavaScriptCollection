@@ -15,6 +15,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/oddEventList.html
 
 ## 代码实现
 
-@[code js](@code/algorithm/interview-101/oddEvenList.js)
+@[code js](@algorithm/interview-101/oddEvenList.js)
 
 ## 一些建议

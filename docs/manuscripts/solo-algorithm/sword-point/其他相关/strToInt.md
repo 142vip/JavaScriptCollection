@@ -1,4 +1,8 @@
-# 算法相关文档格式模版
+---
+title: 把字符串转换成整数
+permalink: /manuscripts/solo-algorithm/sword-point/str-to-int.html
+---
+# 把字符串转换成整数
 
 ## 题目链接
 
@@ -10,6 +14,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/其他相关/strToInt.js)
+@[code js](@algorithm/sword-point/其他相关/strToInt.js)
 
 ## 一些建议

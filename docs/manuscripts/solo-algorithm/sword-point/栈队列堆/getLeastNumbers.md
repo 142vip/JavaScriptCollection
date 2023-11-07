@@ -1,3 +1,7 @@
+---
+title: 最小的k个数
+permalink: /manuscripts/solo-algorithm/sword-point/get-least-num.html
+---
 # 最小的k个数
 
 ## 题目链接
@@ -53,7 +57,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/栈队列堆/getLeastNumbers.js)
+@[code js](@algorithm/sword-point/栈队列堆/getLeastNumbers.js)
 
 ## 一些建议
 

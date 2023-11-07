@@ -1,5 +1,9 @@
+---
+title: 数值的整数次方
+permalink: /manuscripts/solo-algorithm/sword-point/power.html
+---
 
-# 算法相关文档格式模版
+# 数值的整数次方
 
 ## 题目链接
 
@@ -11,7 +15,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/分治/power.js)
+@[code js](@algorithm/sword-point/分治/power.js)
 
 ```js
 /**

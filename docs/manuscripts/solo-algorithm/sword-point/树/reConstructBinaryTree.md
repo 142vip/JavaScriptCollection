@@ -1,5 +1,9 @@
+---
+title: 重建二叉树
+permalink: /manuscripts/solo-algorithm/sword-point/reconstruct-binary-tree.html
+---
 
-# 算法相关文档格式模版
+# 重建二叉树
 
 ## 题目链接
 
@@ -11,6 +15,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/树/reConstructBinaryTree.js)
+@[code js](@algorithm/sword-point/树/reConstructBinaryTree.js)
 
 ## 一些建议

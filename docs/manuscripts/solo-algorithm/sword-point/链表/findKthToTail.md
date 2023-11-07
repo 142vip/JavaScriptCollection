@@ -1,4 +1,8 @@
-# 算法相关文档格式模版
+---
+title: 链表中倒数第K个结点
+permalink: /manuscripts/solo-algorithm/sword-point/find-k-node.html
+---
+# 链表中倒数第K个结点
 
 ## 题目链接
 
@@ -10,6 +14,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/链表/findKthToTail.js)
+@[code js](@algorithm/sword-point/链表/findKthToTail.js)
 
 ## 一些建议

@@ -1,19 +1,7 @@
-
-# 算法相关文档格式模版
-
-## 题目链接
-
-- [牛客网]()
-
-## 题目描述
-
-## 刷题思路
-
-## 代码实现
-
-@[code js](@code/algorithm/sword-point/栈队列堆/firstAppearingOnce.js)
-
-## 一些建议
+---
+title: 矩形覆盖
+permalink: /manuscripts/solo-algorithm/sword-point/rect-cover.html
+---
 
 # 矩形覆盖
 
@@ -27,7 +15,7 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/动态规划/rectCover.js)
+@[code js](@algorithm/sword-point/动态规划/rectCover.js)
 
 ```js
 /**

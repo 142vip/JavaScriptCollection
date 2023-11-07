@@ -10,6 +10,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/数组和矩阵/firstNotRepeatingChar.js)
+@[code js](@algorithm/sword-point/数组和矩阵/firstNotRepeatingChar.js)
 
 ## 一些建议

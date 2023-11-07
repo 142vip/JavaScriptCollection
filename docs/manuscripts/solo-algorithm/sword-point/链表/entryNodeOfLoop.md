@@ -1,3 +1,7 @@
+---
+title: 算法相关文档格式模版
+permalink: /manuscripts/solo-algorithm/sword-point/entry-loop-node.html
+---
 
 # 算法相关文档格式模版
 
@@ -11,6 +15,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/链表/entryNodeOfLoop.js)
+@[code js](@algorithm/sword-point/链表/entryNodeOfLoop.js)
 
 ## 一些建议

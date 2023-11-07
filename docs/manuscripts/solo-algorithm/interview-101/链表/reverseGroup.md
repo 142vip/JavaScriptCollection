@@ -15,6 +15,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/reverseGroup.html
 
 ## 代码实现
 
-@[code js](@code/algorithm/interview-101/reverseGroup.js)
+@[code js](@algorithm/interview-101/reverseGroup.js)
 
 ## 一些建议

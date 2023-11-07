@@ -1,3 +1,8 @@
+---
+title: 滑动窗口的最大值
+permalink: /manuscripts/solo-algorithm/sword-point/max-window-value.html
+---
+
 # 滑动窗口的最大值
 
 ## 题目链接
@@ -10,6 +15,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/栈队列堆/maxInWindows.js)
+@[code js](@algorithm/sword-point/栈队列堆/maxInWindows.js)
 
 ## 一些建议

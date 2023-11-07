@@ -1,3 +1,7 @@
+---
+title: 数据流中的中位数
+permalink: /manuscripts/solo-algorithm/sword-point/insert-get-median.html
+---
 # 数据流中的中位数
 
 ## 题目链接
@@ -10,6 +14,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/栈队列堆/insertAndGetMedian.js)
+@[code js](@algorithm/sword-point/栈队列堆/insertAndGetMedian.js)
 
 ## 一些建议

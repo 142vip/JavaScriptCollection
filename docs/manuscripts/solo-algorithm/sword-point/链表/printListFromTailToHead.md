@@ -1,3 +1,7 @@
+---
+title: 从尾到头打印链表
+permalink: /manuscripts/solo-algorithm/sword-point/print-list.html
+---
 # 从尾到头打印链表
 
 ## 题目链接
@@ -10,7 +14,7 @@
 
 如输入{1,2,3}的链表如下图:
 
-![](./printListFromTailToHead.png)
+![](../images/printListFromTailToHead.png)
 
 返回一个数组为[3,2,1]
 
@@ -30,6 +34,6 @@ while(head!=null){
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/链表/printListFromTailToHead.js)
+@[code js](@algorithm/sword-point/链表/printListFromTailToHead.js)
 
 ## 一些建议

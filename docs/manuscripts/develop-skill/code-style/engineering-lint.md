@@ -38,7 +38,7 @@ pnpm install markdownlint-cli  -D
 
 在项目根目录新建`.markdownlint.js`文件，配置markdown的一些规则，例如：
 
-@[code js](~@/.markdownlint.js)
+@[code js](~/.markdownlint.js)
 
 ### 配置忽略
 
@@ -47,7 +47,7 @@ pnpm install markdownlint-cli  -D
 
 在项目根目录新建`.markdownlintignore`文件，配置markdown的忽略规则，例如：
 
-@[code txt](~@/.markdownlintignore)
+@[code txt](~/.markdownlintignore)
 
 ### 使用
 
@@ -115,7 +115,7 @@ pnpm install lint-staged -D
 
 在项目根目录中新建`.lintstagedrc.js`文件
 
-@[code js](~@/.lintstagedrc.js)
+@[code js](~/.lintstagedrc.js)
 
 以上规则是：
 

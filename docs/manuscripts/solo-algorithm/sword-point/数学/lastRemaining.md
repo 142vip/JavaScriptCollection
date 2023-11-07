@@ -1,4 +1,7 @@
-
+---
+title: 圆圈中最后剩下的数 约瑟夫问题
+permalink: /manuscripts/solo-algorithm/sword-point/last-remaining.html
+---
 # 圆圈中最后剩下的数 约瑟夫问题
 
 ## 题目链接
@@ -31,7 +34,7 @@ f(n,m)=(f(n-1,m)+m)%n; （n>1）
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/数学/lastRemaining.js)
+@[code js](@algorithm/sword-point/数学/lastRemaining.js)
 
 ```js
 

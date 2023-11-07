@@ -2,7 +2,7 @@ import pluginsConfig from "./config/plugins.config";
 import themeConfig from "./config/theme.config";
 import {defineUserConfig, viteBundler} from "vuepress";
 import {fileURLToPath} from 'node:url'
-import {path} from "@vuepress/utils";
+import {getDirname, path} from "@vuepress/utils";
 // @ts-ignore
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -41,8 +41,11 @@ export default defineUserConfig({
                 if (str.includes('@code')) {
                     return str.replace(/^@code/, path.resolve(__dirname, '../../code/'))
                 }
-                if (str.includes('~@')) {
-                    return str.replace(/^~@/, path.resolve(__dirname, '../../'))
+                if (str.includes('@algorithm')) {
+                    return str.replace(/^@algorithm/, path.resolve(__dirname, '../../code/algorithm/'))
+                }
+                if (str.includes('~')) {
+                    return str.replace(/^~/, path.resolve(__dirname, '../../'))
                 }
                 return str
             },

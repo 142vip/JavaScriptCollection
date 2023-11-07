@@ -3,6 +3,7 @@ import sidebar from "./sidebar";
 import {AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO} from "./constant.config";
 import {hopeTheme} from "vuepress-theme-hope";
 import {langConfig} from "./lang.config";
+import {path} from "@vuepress/utils";
 
 /**
  * 主题相关配置

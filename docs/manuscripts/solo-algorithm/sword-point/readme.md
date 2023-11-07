@@ -9,13 +9,13 @@ permalink: /manuscripts/solo-algorithm/sword-point.html
 
 ```mindmap
 root(剑指Offer)
-    数组和矩阵
-    栈、队列、堆
-    双指针
-    链表
-    树
-    综合类型
-    其他分类
+    (数组和矩阵)
+    (栈、队列、堆)
+    (双指针)
+    (链表)
+    (树)
+    (综合类型)
+    (其他分类)
 ```
 
 ## 算法题
@@ -54,8 +54,8 @@ root(剑指Offer)
 - [x] [【简单】从尾到头打印链表](链表/printListFromTailToHead.md)
 - ~~在O(1)时间内删除链表节点~~
 - [ ] [【较难】删除链表中重复的结点](链表/deleteDuplication.md)
-- [ ] 链表中环的入口结点[暂时没思路]
-- [ ]【较难】复杂链表的复制[暂时没有思路]
+- [ ] 链表中环的入口结点(暂时没思路）
+- [ ] 【较难】复杂链表的复制（暂时没有思路）
 
 ### 树
 
@@ -108,7 +108,7 @@ root(剑指Offer)
 - [x] [【入门】斐波那契数列](动态规划/fibonacci.md)
 - [x] [【简单】跳台阶 要么跳一阶，要么跳两阶](动态规划/jumpFloor.md)
 - [x] [【中等】变态跳台阶 找规律 可跳任意阶](动态规划/jumpFloorII.md)
-- [ ] [【简单】连续子数组的最大和 时间复杂度O(n)](动态规划/findGreatestSumOfSubArray.md)
+- [ ] [【简单】连续子数组的最大和](动态规划/findGreatestSumOfSubArray.md)
 - [ ] [【简单】构建乘积数组](动态规划/multiply.md)
 - [ ] [【中等】矩形覆盖](动态规划/rectCover.md)
 - [ ] [【较难】丑数](动态规划/getUglyNumber.md)

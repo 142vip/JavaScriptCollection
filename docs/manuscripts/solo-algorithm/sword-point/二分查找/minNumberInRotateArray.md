@@ -1,4 +1,8 @@
-# 算法相关文档格式模版
+---
+title: 旋转数组的最小数字
+permalink: /manuscripts/solo-algorithm/sword-point/min-rotate-number.html
+---
+# 旋转数组的最小数字
 
 ## 题目链接
 
@@ -25,6 +29,6 @@
 
 ## 代码实现
 
-@[code js](@code/algorithm/sword-point/二分查找/minNumberInRotateArray.js)
+@[code js](@algorithm/sword-point/二分查找/minNumberInRotateArray.js)
 
 ## 一些建议

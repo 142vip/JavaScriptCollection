@@ -17,6 +17,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/addList.html
 
 ## 代码实现
 
-@[code js](@code/algorithm/interview-101/addInList.js)
+@[code js](@algorithm/interview-101/addInList.js)
 
 ## 一些建议

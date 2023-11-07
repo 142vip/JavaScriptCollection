@@ -16,6 +16,6 @@ permalink: /manuscripts/solo-algorithm/interview-101/deleteDuplicates-one.html
 
 ## 代码实现
 
-@[code js](@code/algorithm/interview-101/deleteDuplicates-1.js)
+@[code js](@algorithm/interview-101/deleteDuplicates-1.js)
 
 ## 一些建议
