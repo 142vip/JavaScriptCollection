@@ -7,10 +7,10 @@ permalink: /manuscripts/microservice/docker.html
 
 ```mindmap
 root(Docker)
-    简单介绍
-    镜像命令
-    容器命令
-    数据卷
+    (简单介绍)
+    (镜像命令)
+    (容器命令)
+    (数据卷)
 ```
 
 Docker是一个开源的应用容器引擎，它是基于Go语言并遵从Apache2.0协议开源。是一个应用打包、分发、部署的工具，可以把它理解为一个轻量的虚拟机。

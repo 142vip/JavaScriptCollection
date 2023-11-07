@@ -238,8 +238,6 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 ### Redis
 
-> 将围绕redis基础概念、使用场景、使用方式、简单部署等方面 展开介绍，[主目录](redis)下有自己觉得还不错PDF文档~
-
 - [key命名规范与建议]()
 - [redis开发使用规范]()
 - [redis基础介绍]()
@@ -479,10 +477,10 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 <div>
   <a href="https://github.com/ChiefPing" target="_blank" style="margin: 5px">
-    <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="border-radius:5px;"/>
+    <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="border-radius:5px;" alt="ChiefPing"/>
   </a>
    <a href="https://github.com/xiaoliuxin" target="_blank" style="margin: 5px">
-    <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
+    <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px" alt="xiaoliuxin"/>
   </a>
 </div>
 
@@ -508,7 +506,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 <div style="text-align: center">
     <div  align="center" >
-        <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
+        <table style="border:none;border-collapse:collapse;" border="0">
             <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg"
                 width="250px"
                 style="margin: 10px"
@@ -526,7 +524,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
           target="_blank"
           title="点击跳转Github主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/github.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/github.svg" alt="Github"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -535,7 +533,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
           target="_blank"
           title="点击跳转码云主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg" alt="Gitee"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -544,7 +542,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
           target="_blank"
           title="点击跳转掘金主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg" alt="掘金"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -553,7 +551,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
           target="_blank"
           title="点击跳转B站主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg" alt="Bilibili"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -562,7 +560,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
           target="_blank"
           title="点击跳转CSDN博客主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg" alt="CSDN"
             title="点击跳转CSDN博客主页"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>

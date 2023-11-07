@@ -7,4 +7,6 @@
  */
 
 const { execShell } = require('./.exec');
-(async() => await execShell('vuepress dev docs'))()
+(async() => await execShell([
+  'vuepress dev docs'
+]))()

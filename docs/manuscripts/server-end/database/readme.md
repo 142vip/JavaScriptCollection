@@ -7,7 +7,7 @@ permalink: /manuscripts/server-end/database
 
 ```mindmap
 root(数据库)
-    MySQL
-    MongoDB
-    Redis
+    (MySQL)
+    (MongoDB)
+    (Redis)
 ```

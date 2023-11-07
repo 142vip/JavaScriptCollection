@@ -5,11 +5,6 @@ permalink: /manuscripts/battle-interview/node.html
 
 # Node面试
 
-[//]: # (```mindmap)
-[//]: # (root&#40;思维导图&#41;)
-[//]: # (  test)
-[//]: # (```)
-
 参考：<https://juejin.cn/post/6844904071501971469#heading-0>
 
 重要重要！！！

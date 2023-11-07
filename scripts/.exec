@@ -5,42 +5,43 @@
 const {join} = require('path')
 const cwd = join(__dirname, '..')
 process.env.PATH = `${join(cwd, 'node_modules', '.bin')}:${process.env.PATH}`
-const  {exec,exit} = require('shelljs');
+const {exec, exit} = require('shelljs');
 
 /**
  * 监听进程
  * - 退出进程
  */
 process.on('exit', () => {
-    exit()
+  exit()
 })
 
 /**
  * 执行shell指令
- * @param commands
  */
 exports.execShell = async commands => {
-    let runCommands=[]
-    if(typeof commands ==='string'){
-        runCommands.push(commands)
-    }
+  let runCommands = []
+  if (typeof commands === 'string') {
+    runCommands.push(commands)
+  }
 
-    // 批量执行
-    if(Array.isArray(commands)){
-        runCommands=commands
-    }
+  // 批量执行
+  if (Array.isArray(commands)) {
+    runCommands = commands
+  }
 
-    for (let index=0;index<runCommands.length;index++) {
-      const command=runCommands[index]
-      const count=index+1
-      console.log(`>>>command(${count}):\n${command} \n<<<command(${count})--start  === \n`)
-      // await syncExec(command)
-      const execResult=await exec(command)
-
-      console.log(`\n<<<command(${count})--ending === `)
-      // 指令异常，不执行后续指令
-      if(execResult.code!==0){
-        exit(1);
-      }
+  for (let index = 0; index < runCommands.length; index++) {
+    const command = runCommands[index]
+    const count = index + 1
+    console.log(`step${count}:\n${command} \nstep${count}(start):  === `)
+    // await syncExec(command)
+    const execResult = await exec(command)
+    // 打印输出结果
+    console.log(execResult.stdout);
+    console.log(`step${count}(ending): === \n`)
+    // 指令异常，不执行后续指令，非0退出
+    if (execResult.code !== 0) {
+      exit(1)
+      break;
     }
+  }
 }
