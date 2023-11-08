@@ -56,7 +56,6 @@ export default {
     displayFooter: true,
     footer: FOOTER_HTML_INFO,
     copyright: COPYRIGHT,
-
     // 主题色选择器
     themeColor: true,
 

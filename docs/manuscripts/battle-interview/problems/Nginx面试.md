@@ -140,7 +140,7 @@ upstream backserver {
 - 突发限制访问频率（突发流量）
 - 限制并发连接数
 
-### 正常限制访问频率（正常流量）
+### 正常流量
 
 > 限制一个用户发送的请求或者Nginx多久接收一个请求
 >
@@ -161,7 +161,7 @@ server{
 }
 ```
 
-### 突发限制访问频率（突发流量）
+### 突发流量
 
 > 如果突发流量超出请求被拒绝处理，无法处理活动时候的突发流量，这时候应该如何进一步处理呢？
 >
@@ -184,8 +184,8 @@ server{
 
 ## 限制并发连接数
 
-> - ngx_http_limit_conn_module模块提供了限制并发连接数的功能
-> - 使用limit_conn_zone指令以及limit_conn执行进行配置
+- `ngx_http_limit_conn_module`模块提供了限制并发连接数的功能
+- 使用`limit_conn_zone`指令以及`limit_conn`执行进行配置
 
 ```nginx
 http {
@@ -198,7 +198,7 @@ server {
         limit_conn myip 10;
         ## 整个虚拟服务器同时最大并发数最多只能100个链接
         limit_conn myServerName 100;
-        rewrite / http://www.lijie.net permanent;
+        rewrite / https://www.142vip.cn permanent;
       }
 }
 ```
@@ -207,13 +207,7 @@ server {
 
 ## location的作用是什么？
 
-> location指令的作用是根据用户请求的URI来执行不同的应用,即：根据用户请求的网站URL进行匹配，匹配成功即进行相关的操作
-
-### Nginx虚拟主机怎么配置?
-
-- 基于域名的虚拟主机
-- 基于端口的虚拟主机
-- 基于IP的虚拟主机【建议配合域名解析】
+location指令的作用是根据用户请求的URI来执行不同的应用,即：根据用户请求的网站URL进行匹配，匹配成功即进行相关的操作
 
 ## Nginx目录结构有哪些？
 
@@ -309,7 +303,7 @@ http {                                    # HTTP区块开始
 - 稳定性高、宕机的概率小
 - 接收用户请求是异步操作的【Nginx事件处理机制是`异步非阻塞`事件处理机制，运用了**epoll模型**，提供了一个队列，排队解决】 [链接](https://zhuanlan.zhihu.com/p/77887952)
 
-## 解释下正向代理和反向代理
+## 解释下代理
 
 **正向代理隐藏真实客户端，反向代理隐藏真实服务端**
 
@@ -335,37 +329,54 @@ http {                                    # HTTP区块开始
 - 负载均衡，通过反向代理服务器来优化网站的负载
 - 保证内网的安全，阻止web攻击，大型网站，通常将反向代理作为公网访问地址，Web服务器是内网
 
-## Nginx常用指令有哪些？
+## Nginx常用命令有哪些？
 
 ```bash
-nginx -s reopen #重启Nginx
+#重启Nginx
+nginx -s reopen 
 
-nginx -s reload #重新加载Nginx配置文件，然后以优雅的方式重启Nginx
+#重新加载Nginx配置文件，然后以优雅的方式重启Nginx
+nginx -s reload 
 
-nginx -s stop #强制停止Nginx服务
+#强制停止Nginx服务
+nginx -s stop 
 
-nginx -s quit #优雅地停止Nginx服务（即处理完所有请求后再停止服务）
+#优雅地停止Nginx服务（即处理完所有请求后再停止服务）
+nginx -s quit 
 
-nginx -t #检测配置文件是否有语法错误，然后退出
+#检测配置文件是否有语法错误，然后退出
+nginx -t 
 
-nginx -?,-h #打开帮助信息
+#打开帮助信息
+nginx -?,-h 
 
-nginx -v #显示版本信息并退出
+#显示版本信息并退出
+nginx -v 
 
-nginx -V #显示版本和配置选项信息，然后退出
+#显示版本和配置选项信息，然后退出
+nginx -V 
 
-nginx -t #检测配置文件是否有语法错误，然后退出
+#检测配置文件是否有语法错误，然后退出
+nginx -t
 
-nginx -T #检测配置文件是否有语法错误，转储并退出
+#检测配置文件是否有语法错误，转储并退出
+nginx -T 
 
-nginx -q #在检测配置文件期间屏蔽非错误信息
+#在检测配置文件期间屏蔽非错误信息
+nginx -q 
 
-nginx -p prefix #设置前缀路径(默认是:/usr/share/nginx/)
+#设置前缀路径(默认是:/usr/share/nginx/)
+nginx -p prefix 
 
-nginx -c filename #设置配置文件(默认是:/etc/nginx/nginx.conf)
+#设置配置文件(默认是:/etc/nginx/nginx.conf)
+nginx -c filename
 
-nginx -g directives #设置配置文件外的全局指令
+#设置配置文件外的全局指令
+nginx -g directives 
 
-killall nginx #杀死所有nginx进程
-kill -quit 61333 # 退出某个进程
+#杀死所有nginx进程
+killall nginx 
+
+# 退出某个进程
+kill -quit 61333 
 ```

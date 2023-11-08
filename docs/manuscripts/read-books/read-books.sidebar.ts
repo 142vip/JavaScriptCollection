@@ -8,16 +8,12 @@ export const readBooksSidebar = [
         link: 'ES6标准入门.md'
       },
       {
-        text: '了不起的Node.js',
-        link: '了不起的Node.js.md'
+        text: '深入浅出Node.js',
+        link: '深入浅出的Node.js.md'
       },
       {
         text: '更了不起的Node.js ',
-        link: '狼书.md'
-      },
-      {
-        text: '深入浅出Node.js',
-        link: '深入浅出的Node.js.md'
+        link: '更了不起的Node.js.md'
       },
       {
         text: '分布式消息中间件实践',
@@ -34,12 +30,12 @@ export const readBooksSidebar = [
     prefix: 'not-cs-book',
     children: [
       {
-        text: '你好，孤独',
-        link: 'hello-alone.md'
+        text: '好的孤独',
+        link: '好的孤独.md'
       },
       {
-        text: '好的，爱情',
-        link: '好的，爱情.md'
+        text: '好的爱情',
+        link: '好的爱情.md'
       },
       {
         text: '在细雨中呼喊',

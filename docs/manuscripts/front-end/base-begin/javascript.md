@@ -1,8 +1,14 @@
 ---
 title: JavaScript相关
 permalink: /manuscripts/front-end/base-begin/javascript.html
+headerDepth: 2
 ---
+
 # JavaScript
+
+`JavaScript`是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。
+虽然它是作为开发Web页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，
+`JavaScript`基于原型编程、多范式的动态脚本语言，并且支持`面向对象`、`命令式`、`声明式`、`函数式编程范式`。
 
 ## 面向对象编程
 
@@ -13,9 +19,9 @@ permalink: /manuscripts/front-end/base-begin/javascript.html
 - 每个对象都是功能中心，具有明确分工
 - 编程灵活、代码可复用，容易维护和开发，适合多人合作的大型软件项目
 
-面向对象的特性： 封装、继承、多态
+面向对象的特性： `封装`、`继承`、`多态`
 
-### 面向过程VS面向对象
+## 面向过程VS面向对象
 
 面向过程
 
@@ -42,7 +48,7 @@ permalink: /manuscripts/front-end/base-begin/javascript.html
 - 属性：事物的特征，在对象中用属性来表示
 - 方法：事物的行为，在对象中用方法来表示
 
-## ES6中的类（Class）
+## 类（Class）
 
 > ES6新增了类的概念，可以使用class关键字来声明一个类，然后用类来实例化对象
 
@@ -67,7 +73,7 @@ let star=new Star('xxx');
 star.say();
 ```
 
-### 类的继承(extends)
+## 类的继承(extends)
 
 > 子类可以继承父类的属性和方法
 
@@ -152,31 +158,28 @@ obj.test();
 
 ```
 
-### 构造函数
-
 > 构造函数是一种特殊的函数，主要用来初始化对象，即为对象成员变量赋初始值，总是与new一起使用。可以把对象中一些公共的属性和方法抽取出来，然后封装在这个函数里面；
 
-创建对象时候，执行new会做：
+创建对象时候，执行`new`会做：
 
-- 在内存中创建一个新的空对象（开辟内存空间）；
-- 让this指向这个新的对象；
+- 在内存中创建一个新的空对象（开辟内存空间）
+- 让this指向这个新的对象
 - 执行构造函数里面的代码，给构造函数添加属性和方法
 - 返回对象【因此，构造函数中不需要return】
 
 **注意： 构造函数虽然好用，但是存在浪费内存的问题，每次都会开辟不同的内存空间，存放同一函数**
 
-### 构造函数原型prototype
+### 构造函数原型
 
 > 构造函数通过原型分配的函数是所有对象所共享的
 
-JavaScript规定，每一个构造函数都有一个prototype属性，指向另一个对象。
+JavaScript规定，每一个构造函数都有一个`prototype`属性，指向另一个对象。
 
-prototype本身就是一个对象，这个对象的所有属性和方法，都会被构造函数所拥有。
+`prototype`本身就是一个对象，这个对象的所有属性和方法，都会被构造函数所拥有。
 
 **因此，我们可以把那些不变的方法，直接定义在prototype对象上面，这样所有的对象的实例就可以共享这些方法**
 
 ```js
-
 // 方法挂在构造函数的原型对象
 creatObj.prototype.test=function(){
   // ...
@@ -186,12 +189,12 @@ creatObj.prototype.test=function(){
 
 一般情况下，我们把公共属性定义到构造函数里面，公共的方法放在原型对象身上；
 
-- 原型的本质： 对象，prototype也可以称为原型对象
+- 原型的本质： 对象，`prototype`也可以称为原型对象
 - 原型的作用是：共享方法
 
 ### 对象原型_proto_
 
-**对象都会有一个属性_proto_指向构造函数的prototype原型对象**
+**对象都会有一个属性_proto_指向构造函数的`prototype`原型对象**
 
 我们对象可以使用构造函数prototype原型对象的属性和方法，就是因为对象有_proto_原型的存在
 
@@ -202,23 +205,21 @@ creatObj.prototype.test=function(){
 
 调用对象方法的查找规则：
 
-- 1. 先查实例化对象是否有对应方法。如果有就直接调用
-- 2. 没有则根据对象原型_proto_的存在，去查找构造函数原型对象prototype上查找对应方法
+- 先查实例化对象是否有对应方法。如果有就直接调用
+- 没有则根据对象原型_proto_的存在，去查找构造函数原型对象prototype上查找对应方法
 
 ```js
 // 实例化对象中的_proto对象原型 和 构造函数中的原型对象prototype是等价的  输出结构为:true;
 console.log(obj._proto_===creatObj.prototype)
-
 ```
 
-### constructor 构造函数
+### 构造函数
 
 对象原型`_proto_`  和 构造函数`prototype`原型对象里面都有一个属性constructor属性，constructor称为构造函数，是直接指向构造函数本身的
 
 **用来记录该对象引用那个构造函数，可以让原型对象重新指向原来的构造函数**
 
 ```js
-
 creatObj.prototype={
   // 如果修改了原来的原型对象，给原型对象赋值的是一个对象，则必须手动的利用constructor指回原来的构造函数
   constructor: creatObj,
@@ -227,19 +228,18 @@ creatObj.prototype={
     // ...
   }
 }
-
 ```
 
-### 构造函数、实例、原型对新那个三者之间的关系
+### 构造函数VS实例VS原型对象
 
-### 原型链
+#### 原型链
 
 - 构造函数的原型对象里面的_proto_原型指向'父类' Object.prototype
 - Object.prototype原型对象里面的_proto_原型，指向为null
 
 **这里的Object就好像提供的最高级父类，后面的对象类似继承，通过原型链链接**
 
-### JavaScript的成员查找机制（规则）
+#### 成员查找机制（规则）
 
 - 当访问一个对象的属性（包括方法）时，首先查找这个对象**自身**有没有该属性
 - 如果没有就查找它的原型（也就是_proto_指向的prototype原型对象）；
@@ -251,20 +251,19 @@ creatObj.prototype={
 
 实例对象----> 构造函数---->Object对象----> null
 
-### this指向
+#### this指向
 
 - 在构造函数中，里面的this指向的是对象实例
 
 - 在原型对象函数里面的this指向的是实例对象
 
-## ES6之前的集成——组合继承
+## 组合继承
 
 > ES6之前并没有提供extends继承，可以通过构造函数+原型对象模拟实现继承，即：组合继承
 
 ### call()
 
 ```js
-
 // 定义函数
 function fn(x,y){
   console.log('xxxx');
@@ -278,11 +277,8 @@ let result={
 // 1. call() 可以调用函数
 // fn()=== fn.call()
 
-
 // 2. call()可以改变这个函数的this指向，此时这个函数的this就指向了call的第一个参数对象 格式：fn.call(对象，参数一，参数二, ....)
 // fn.call(result,1,2)
-
-
 ```
 
 ### 借用构造函数继承属性
@@ -304,73 +300,15 @@ function Son(name,age){
 let son = new Son('xxx',18);
 // 输出： {name:'xx',age:18}
 console.log(son)
-
 ```
 
-### 类的本质
-
-> 类的本质其实还是一个函数（function），可以简单的认为，**类就是构造函数的另一种写法**
+类本质上其实还是一个函数（function），可以简单的认为，**类就是构造函数的另一种写法**
 
 **ES6中的类其实就是语法糖，可以理解为ES5中的构造函数实现的简单写法**
 
-## ES5中新增的方法
-
-### 数组方法
-
-> forEach()  、 map() 、filter() 、some() 、every()
-
-```js
-
-array.forEach(function(currentValue,index,arr){});
-
-// 数组元素过滤，筛选数组 返回新的数组
-array.filter(function(currentValue,index,arr){
-  // 过滤出大于20的元素值
-  return currentValue > 20 ;
-});
-
-// 检测数组中的元素是否满足指定条件，即：查找数组中是否有满足条件的元素
-// 返回值为true|false
-array.some(function(currentValue,index,arr){
-    // ...
-})
-
-```
-
-some()和forEach()的区别：
-
-- some()里面遇到return true就会终止遍历，迭代效率更高
-- forEach()会遍历完整个数组
-
-### 对象方法
-
-```js
-// 定义对象总新属性或修改原有的属性
-// - obj: 必须 ，目标对象
-// - prop: 必须，需定义或修改的属性的名字
-// - descriptor: 必须，目标属性所拥有的特性 以{}
-//    - value : 设置属性的值，默认为undefined
-//    - writable: 值是否可以重写，true|false 默认为false
-//    - enumerable: 目标属性是否可以被枚举 true|false 默认为false
-//    - configurable: 目标属性是否可以被删除或者可以再次修改特性 true|false 默认为false
-
-Object.defineProperty(obj,prop,descriptor);
-
-// 例如
-let obj={
-  name:'lx'
-}
-// 注意参数调用
-Object.defineProperty(obj,'name',{
-  value: 'xxx'
-})
-
-
-```
-
 ## 函数进阶
 
-### 函数的定义方式
+### 定义方式
 
 - 自定义函数(命名函数）
 - 函数表达式(匿名函数)
@@ -393,7 +331,7 @@ let fn=new Function('a','b','return a+b')
 
 ```
 
-### 函数的调用方式
+### 调用方式
 
 - 普通函数
 - 对象的方法
@@ -403,7 +341,6 @@ let fn=new Function('a','b','return a+b')
 - 立即执行函数
 
 ```js
-
 // 普通函数
 function fn(){
   // ...
@@ -420,14 +357,12 @@ let obj={
 
 obj.test();
 
-
 // 构造函数
 function Fn(){
   // ...
 }
 
 new Fn();
-
 
 // 绑定事件函数(例如：按钮点击事件)
 button.onclick=function(){
@@ -440,16 +375,13 @@ setInterval(function(){
   // ....
 },1000)
 
-
 // 立即执行函数（自动调用）
 (function(){
   // .....
 })()
-
-
 ```
 
-### 函数内部的this指向
+### 内部的this指向
 
 - 普通函数this指向window
 - 对象的方法this指向的是对象
@@ -458,7 +390,7 @@ setInterval(function(){
 - 定时器函数this指向window
 - 立即执行函数this指向window
 
-### 改变函数内部this指向
+### 改变内部this指向
 
 - call()
 - bind()
@@ -466,7 +398,6 @@ setInterval(function(){
 
 ```js
 // call() ：1. 调用函数fn.call() 2.改变this指向
-
 let obj={
   name:'xxx'
 }
@@ -500,7 +431,6 @@ fun.apply(thisArg,[argsArray]);
 let arr=[1,4,23,78,25];
 let max=Math.max.apply(null,arr)
 let max=Math.max.apply(Math,arr)
-
 ```
 
 #### bind()方法
@@ -534,8 +464,6 @@ f();
 //    - 如果有的函数不需要立即调用，但是有需要改变函数内部的this指向，此时用bind
 ```
 
-### call()  apply() bind() 指向
-
 #### 相同点
 
 都可以改变函数内部的this指向
@@ -564,7 +492,6 @@ f();
 ```js
 // 严格模式
 'use strict'
-
 ```
 
 **在严格模式下，全局作用域中函数的this指向的是undefined，而不是window对象**
@@ -615,9 +542,7 @@ fn();
 
 ```
 
-### 闭包的作用
-
-> 外面的作用域可以访问函数内部的局部变量
+**闭包的作用：外面的作用域可以访问函数内部的局部变量**
 
 ```js
 function fn(){
@@ -644,358 +569,27 @@ fun1()
 
 ```
 
-## 数据拷贝
-
+## 浅拷贝
+>
 > 浅拷贝只是拷贝一层，更深层次对象级别的只**拷贝引用**
-> 深拷贝拷贝多层，每一级别的数据都会拷贝。
 
-### 浅拷贝
-
-```js
-
-let obj={
-  name:'xxxx',
-  test:'xxx',
-  // 浅拷贝中，这一层只能拷贝引用
-  msg:{
-    name:'xxx'
-  }
-} 
-
-let obj_test={
-
-}
-
-// 循环拷贝一层
-for(let key in obj){
-  // key 对象的属性名  obj[key] 对象的属性值
-  obj_test[key]=obj[k]
-}
-
-console.log(obj_test);
-// 修改obj_test对象中的msg属性的值
-obj_test.msg.name='2332';
-// 但是原来的obj对象中的msg属性对应的值也会变
-console.log(obj)
-
-
-// ES6中实现浅拷贝的语法糖  效果和上面一样
-Object.assign(obj_test,obj)
-
-```
+@[code js](@code/node/javascript/simpleCopy.js)
 
 注意：
 
-Object.assign() 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。
+`Object.assign()` 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。
 
 Object.assign(target, ...sources)
 
 - 【target：目标对象】
-- 【souce：源对象（可多个）】
+- 【source：源对象（可多个）】
 
-### 深拷贝
+## 深拷贝
 
+> 深拷贝拷贝多层，每一级别的数据都会拷贝。
 > 会新开辟内存空间，拷贝多层，每一级别的数据都会拷贝
 
-```js
-
-
-let obj={
-  name:'xxxx',
-  test:'xxx',
-  // 浅拷贝中，这一层只能拷贝引用
-  msg:{
-    name:'xxx'
-  },
-  color:['pink','red']
-} 
-
-let obj_test={
-
-}
-
-// 利用函数递归来实现深拷贝
-function deepCopy(newObj,oldObj){
-    for(let key in oldObj){
-      // 判断我们的属性值属于那种数据类型
-      let item =oldObj[key];
-      // 判断item是否为数组
-      if(item instanceof Array){
-        newObj[key]=[];
-        deepCopy(newObj[key],item);
-        // 注意 Array instanceof Object 数组是属于对象的 先过滤
-      }else if(item instanceof Object){
-        // 判断item是否为对象
-        newObj[key]={}
-        deepCopy(newObj[key],item);
-      }else{
-        // 判断是否为简单数据类型
-        newObj[key]=item
-      }
-    }
-}
-
-deepCopy(obj_test,obj)
-// 输出对比
-console.log(obj_test,obj)
-
-```
-
-## ES6
-
-> 全称是：ECMAAScript，是由ECMA国际标准组织制定一项脚本语言的标准化规范
-
-**ES6实际上是一个泛指，指ES2015及后续的版本**
-
-### let关键字
-
-> 新增的，用于声明变量的关键字
-
-- let声明的变量只在所处于的块级有效
-
-注意：使用let关键字声明的变量才具有块级作用域，使用var声明的变量不具备块级作用域特性；
-
-- 不存在变量提升（先定义再使用）
-- 具有暂时性死区【let声明，会和当前的块级进行绑定】
-
-```js
-var num=10;
-if(true){
-  // 此时输出会出现无定义，只会在块级里面查找num是否定义，不会查找外面
-  console.log(num)
-  let num=20;
-}
-
-```
-
-### let面试题
-
-```js
-var arr=[];
-
-for(var i=0;i<2;i++){
-  arr[i]=function(){
-    console.log(i)
-  }
-}
-
-arr[0](); // 输出2 
-arr[1](); // 输出2
-
-
-
-```
-
-```js
-let arr=[];
-
-// 每次循环let都会产生块级作用域
-for(let i=0;i<2;i++){
-  arr[i]=function(){
-    console.log(i)
-  }
-}
-
-arr[0](); // 输出0
-arr[1](); // 输出1
-
-```
-
-### const关键字
-
-> 作用：声明常量，常量就是值（内存地址）不能变化的量
-
-- 使用const声明的常量，具有块级作用域
-- 声明常量时，必须赋初始值
-- 常量赋值后，内存地址值不可以改
-
-```js
-const PI=3.14
-PI=100 // 出错
-
-const arr=[10,11];
-
-arr[0]=12
-arr[1]=13
-
-console.log(arr) // 输出 [12,13]
-
-// 注意：这种修改不行，不要试图去修改内存地址
-arr=[12,13]
-```
-
-### let const var的区别
-
-- var声明的变量，作用域为该语句所在的函数内，存在变量提升
-- let声明的变量，作用域为该语句的代码块内，不存在变量提升
-- const声明的是常量，在后面出现的代码中，不能在修改常量的内存地址值
-
-### 解构赋值
-
-> 允许从数组中提取值，按照对应位置，对变量赋值。对象也可以实现解构
-
-```js
-
-// 数组解构
-let [a,b,c]=[1,2,3]
-console.log(a,b,c) // 1,2,3
-
-
-// 对象解构
-let person = {
-  name:'leo',
-  age:20
-}
-let {name:name,age:age}=person  // 或者 let {name,age}=person
-console.log(name,age) // leo  20
-
-
-// 解构并赋变量
-let {name:my_name,age:my_age}=person
-console.log(my_name,my_age); // leo 20
-
-```
-
-### 箭头函数
-
-> 新增的定义函数的方式
-
-```js
-()=>{}
-const fn=()=>{
-  console.log(123)
-}
-
-const sum =(a,b)=>a+b
-
-const sum = a=>a
-```
-
-### 箭头函数的this关键字
-
-**箭头函数不绑定this关键字，箭头函数中的this，指向的是函数定义位置的上下文this**
-
-```js
-const obj={name:'leo'}
-
-function fn(){
-  console.log('fn-->:',this);
-
-  return ()=>{
-    console.log('箭头-->:',this)
-  }
-}
-
-// 注意call方法调用，将fn的this关键字指向obj对象
-const resFn=fn.call(obj)
-
-resFn();
-
-// fn--> {name:'leo'}
-// 箭头--> {name:'leo'}
-```
-
-### 箭头函数面试题
-
-```js
-
-let obj={
-  age:20,
-  say:()=>{
-    return this.age;
-  }
-}
-
-// 此时thi指向的是window，没有age定义，所以为undefined
-obj.say();
-
-// 定义一个age变量
-let age=30
-// 此时this指向的是window中的age变量，所以为 30
-obj.say();
-
-```
-
-### 剩余参数
-
-```js
-function sum(first,...args){
-  console.log(first);
-  console.log(args);
-}
-
-const result=(...args)=>{
-  // ...
-}
-
-```
-
-### Array扩展方法
-
-```js
-
-// ## 扩展运算符合并数组 ##
-let arr1=[1,2,3];
-let arr2=[4,5,6];
-// 合并
-let arr3=[...arr1,...arr2]
-let arr4=arr1.push(...arr2)
-
-
-// ## 构造函数方法：Array.from() 将类数组或可遍历对象转换为真正的数组 ##
-
-// 伪数组
-let arrayLike={
-  '0':1,
-  '1':2,
-  '2':3,
-  length:3
-}
-
-// 伪数组转换为数组
-let arr2=Array.from(arrayLike) // ['a',''b,'c']
-
-// 函数统一处理每一项
-let arr3=Array.from(arrayLike,item=>{
-  return item + 100
-}) // 101,102,103 
-
-```
-
-### find()
-
-数组中用来查找第一个符合条件的数组成员，如果没有找到就返回undefined
-
-### findIndex()
-
-数组中用来找出第一个符合条件的数组成员的索引位置，如果没有就返回-1
-
-### includes()
-
-表示某个数组是否包含给定的值，返回布尔值
-
-```js
-[1,2,3].includes(2); // true
-
-[1,2,3].includes(4); // false
-
-```
-
-### startsWith()和endsWith()
-
-- startsWith: 表示参数字符串是否在原字符串的头部，返回布尔值
-- endsWith(): 表示参数字符串是否在原字符串的尾部，返回布尔值
-
-```js
-let str = 'hello world!';
-
-str.startsWith('Hello'); // true
-str.endsWith('!') // true
-```
-
-### repeat()
-
-repeat()方法表示将原字符串重复n次，返回一个新的字符串；
+@[code js](@code/node/javascript/deepCopy.js)
 
 ## Set集合
 
@@ -1017,7 +611,7 @@ arr=[...temp]
 
 ```
 
-### Set提供的常用方法
+Set提供的常用方法:
 
 - add(value): 添加某个值，返回Set本身
 - delete(value): 删除某个值，返回一个布尔值，表示删除是否成功
@@ -1051,21 +645,6 @@ set.forEach(value=>{
 ```
 
 ## 数组方法
-
-- join()
-- push()和pop()
-- shift() 和 unshift()
-- sort()
-- reverse()
-- concat()
-- slice()
-- splice()
-- indexOf()和 lastIndexOf() （ES5新增）
-- forEach() （ES5新增）
-- map() （ES5新增）
-- filter() （ES5新增）
-- every() （ES5新增）
-- some() （ES5新增）
 
 ### join()
 
