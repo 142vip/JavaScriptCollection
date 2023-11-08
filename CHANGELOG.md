@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.2-alpha.9](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.8...v0.0.2-alpha.9) (2023-11-08)
+
+
+### Features
+
+* **commitlint:** 去掉手动add提交，lint操作后自动提交 ([4c9515d](https://github.com/142vip/JavaScriptCollection/commit/4c9515d8cea6f4c8846ce8933a7cd9b40c1ab4a5))
+* **commitlint:** 新增commit提交信息校验 ([9958944](https://github.com/142vip/JavaScriptCollection/commit/9958944460af7d0e35884c5a8a684506b72ea171))
+* **release:** 同步到github pages时增加部署地址信息 ([2d37056](https://github.com/142vip/JavaScriptCollection/commit/2d37056003b9bd9a8f7fd25379e1518a3feb0729))
+* **scripts:** 修改脚本配置、思维导图样式等 ([dc6e56c](https://github.com/142vip/JavaScriptCollection/commit/dc6e56cb1de72485e070aa1c551750bbc01854a0))
+* 修改husky初始方式，简化工程化校验链路 ([1733b29](https://github.com/142vip/JavaScriptCollection/commit/1733b290ce2efeac608fcd1df88dcc000372d612))
+* 新增一些读书整理文档 ([f11753d](https://github.com/142vip/JavaScriptCollection/commit/f11753d7d678158affbd2d456854d98556f1879f))
+* 新增工程规范文档 ([f38f513](https://github.com/142vip/JavaScriptCollection/commit/f38f513fd9dc68b9358cd57b1d8111cccf9f1855))
+* 算法相关文档新增固定链接，优化导入代码配置 ([06596e7](https://github.com/142vip/JavaScriptCollection/commit/06596e70307b19892d229d6143b0ae81ace30cf8))
+
+
+### Bug Fixes
+
+* **lint:**  修复提交自动格式化,改良lint-staged配置 ([#96](https://github.com/142vip/JavaScriptCollection/issues/96)) ([16c924a](https://github.com/142vip/JavaScriptCollection/commit/16c924ad8f4f4f078fb282f0ac26dcf7653fe59c))
+
 ## [0.0.2-alpha.8](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.7...v0.0.2-alpha.8) (2023-11-05)
 
 
