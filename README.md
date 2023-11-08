@@ -1,7 +1,7 @@
 <!-- #region quick-start -->
 
 <div align="center" style="margin: 10px">
-<img src="./img.png">
+  <img alt="JavaScriptCollection" width="240" src="https://cdn.statically.io/gh/142vip/cdn_service@main/doc_book/jsc/jsc_logo.png" style="text-align: center;">
 <p style="font-size: 30px"><strong>✨【理论+实战】保姆级成长笔记✨</strong></p>
 
 </div>
@@ -15,7 +15,7 @@
     <img alt="Vercel" src="https://therealsujitk-vercel-badge.vercel.app/?app=408">
    </a>
  </div>
- <div>
+ <div style="margin: 10px;">
   <img alt="code size" src="https://img.shields.io/github/languages/code-size/142vip/JavaScriptCollection" style="padding: 5px">
   <img alt="release version" src="https://img.shields.io/github/v/release/142vip/JavaScriptCollection" style="padding: 5px">
   <img alt="repo size" src="https://img.shields.io/github/repo-size/142vip/JavaScriptCollection" style="padding: 5px">
