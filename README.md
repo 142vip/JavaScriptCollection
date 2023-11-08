@@ -1,9 +1,8 @@
 <!-- #region quick-start -->
 
-<div align="center" style="margin: 10px">
-  <img alt="JavaScriptCollection" width="240" src="https://cdn.statically.io/gh/142vip/cdn_service@main/doc_book/jsc/jsc_logo.png" style="text-align: center;">
+<div align="center">
+  <img alt="JavaScriptCollection"  src="https://cdn.statically.io/gh/142vip/cdn_service@main/doc_book/jsc/jsc_logo.png" style="text-align: center;">
 <p style="font-size: 30px"><strong>✨【理论+实战】保姆级成长笔记✨</strong></p>
-
 </div>
 
 <div align="center">
@@ -15,12 +14,13 @@
     <img alt="Vercel" src="https://therealsujitk-vercel-badge.vercel.app/?app=408">
    </a>
  </div>
- <div style="margin: 10px;">
+ <div >
   <img alt="code size" src="https://img.shields.io/github/languages/code-size/142vip/JavaScriptCollection" style="padding: 5px">
   <img alt="release version" src="https://img.shields.io/github/v/release/142vip/JavaScriptCollection" style="padding: 5px">
   <img alt="repo size" src="https://img.shields.io/github/repo-size/142vip/JavaScriptCollection" style="padding: 5px">
  </div>
 </div>
+<br><br>
 
 这里是工作、学习、生活中总结的各类文章，`有技术`、`有生活`、`有思考`。
 所有内容会选择性的发表于`微信公众号`、`掘金`、`CSDN`、`Github` ，实际内容以本仓库排版、校对为主。
