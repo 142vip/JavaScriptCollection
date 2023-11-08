@@ -1,15 +1,12 @@
 <!-- #region quick-start -->
 
-<div align="center">
-
-<p>
-  JavaScriptCollection
-</p>
+<div align="center" style="margin: 10px">
+<img src="./img.png">
 <p style="font-size: 30px"><strong>✨【理论+实战】保姆级成长笔记✨</strong></p>
 
 </div>
 
-<div style="text-align: center">
+<div align="center">
  <div>
    <a href="https://js-collection.netlify.app" target="_blank" style="padding: 5px">
     <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status">
