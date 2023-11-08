@@ -1,9 +1,16 @@
 ---
-title: 狼书 - 更了不起的Node.js
+title: 狼书（卷1） - 更了不起的Node.js
 permalink: /manuscripts/read-books/cs-books/better-nodejs.html
 ---
 
-# 狼书 - 更了不起的Node.js
+# 更了不起的Node.js
+
+![](../images/better-nodejs.png)
+
+《狼书（卷1）：更了不起的Node.js》以`Node.js`为主，讲解了`Node.js`的基础知识、开发调试方法、源码原理和应用场景，
+旨在向读者展示如何通过最新的`Node.js`和`npm`编写出更具前端特色、更具工程化优势的代码。
+
+`Node.js`开发简单，性能极好，一经发布便成了明星级项目。随着大前端领域的蓬勃发展，跨平台开发、`API`构建、`Web`应用开发等场景愈加常见，`Node.js`也成为大前端开发的必备“神器”。
 
 ## Node.js初识
 
@@ -606,14 +613,13 @@ process.on('uncaughtException',err=>{
 
 ### 宏任务和微任务
 
-在libuv事件编程模型中，应用程序只负责监视特定的事件，并在事件发生后进行响应。
+在`libuv`事件编程模型中，应用程序只负责监视特定的事件，并在事件发生后进行响应。
 
 当前调用栈执行完毕时，会分两种情况进行处理。首先处理microtask(微任务)队列里的事件，然后再从macrotask(宏任务)里中取出一个执行事件并执行。
 
 **在同一次事件循环中，微任务永远在宏任务前执行**
 
-```
-graph LR
+```state
 
 microtask(微任务)-->macrotask(宏任务)
 
@@ -720,8 +726,7 @@ module.exports={
 
 #### 模块导出
 
-```
-graph LR
+```state
 exports-->module.exports
 
 module.exports-->exports
@@ -910,15 +915,11 @@ if(debug===true){
 扩展方法：
 
 ```js
-
 // log方法扩展
-
 global.log=console.log
 
 // 等价使用console.log('something')
 log('something')
-
-
 ```
 
 #### ES模块
@@ -937,7 +938,7 @@ ES模块的优势：
 
 ##### 模块导入
 
-```
+```ts
 // 直接导入，并取名fs 与CommonJS中的const fs=require('fs')类似
 import * as fs from 'fs'
 
@@ -1235,8 +1236,7 @@ function readJSON(filePath,callback){
 
 > 事件模块是Node.js内置的对观察者模式的实现，通过EventEmitter属性提供一个构造函数。该构造函数的实例中具有两个常用的方法，其中on方法可以用来监听指定事件，并触发回调函数，另外一个emit方法可以用来发布事件。可以通过发布订阅模型来理解；
 
-```
-graph LR
+```state
 订阅-->发布
 on-->emit
 ```
@@ -1309,7 +1309,7 @@ event.on('someEvent',()=>{
 
 当超过10个回调函数时会发出警告⚠，当然也可以通过`setMaxListeners`方法来改变
 
-```
+```js
 event.setMaxListeners(100)
 ```
 
@@ -1375,16 +1375,12 @@ Promise.protype.then=function(success,fail){
 
 #### 状态切换
 
-```
-graph LR
+```state
 pending-->fulfilled
-
 ```
 
-```
-graph LR
+```state
 pending-->rejected
-
 ```
 
 以上两种状态的转换都是单向的，而且fulfilled和rejected两个状态之间是不能互相转换的,最重要的是：**只有异步操作有结果的手，可能决定当前Promise处于那种状态，任何其他操作都没法改变这个状态**
@@ -1395,7 +1391,6 @@ pending-->rejected
 
 ```js
 // 构造函数
-
 new Promise((resolve,reject)=>{
     
 })
@@ -1406,11 +1401,11 @@ new Promise((resolve,reject)=>{
 - reject可以让状态从pending切换到rejected(当然，reject是可选参数)
 
 ```js
+// 捕获当前操作的resolve结果
+Promise.protype.then()
 
-Promise.protype.then() 捕获当前操作的resolve结果
-
-Promise.protype.catch() 捕获全局操作的reject异常
-
+// 捕获全局操作的reject异常
+Promise.protype.catch() 
 ```
 
 **特别值得注意的是：resolve相当于Promise.resolve的别名，reject相当于Promise.reject的别名**。

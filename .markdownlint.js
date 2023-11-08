@@ -66,7 +66,7 @@ module.exports = {
     "style": "---"
   },
   "MD036": false,
-  "MD040": false,
+  "MD040": true,
   "MD045": false,
   "MD041": false,
   "MD042": false,

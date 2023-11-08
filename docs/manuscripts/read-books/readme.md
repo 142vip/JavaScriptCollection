@@ -2,7 +2,6 @@
 title: 读书整理
 permalink: /manuscripts/read-books
 ---
-
 # 读书整理
 
 > 赶稿中..
@@ -12,7 +11,6 @@ permalink: /manuscripts/read-books
 - ES6标准入门
 - 深入浅出的Node.js
 - 更了不起的Node.js - 狼书卷1
-- 了不起的Node.js
 - 分布式消息中间件实践
 ...
 
@@ -24,3 +22,4 @@ permalink: /manuscripts/read-books
 - 第七天 - 余华
 - 兄弟 - 余华
 - 文城 - 余华
+- ...

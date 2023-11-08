@@ -1,18 +1,27 @@
 ---
-title: ES6标准入门.js
+title: ES6标准入门
 permalink: /manuscripts/read-books/cs-books/standard-es6.html
+headerDepth: 2
 ---
+
 # ES6标准入门
+
+![](../images/es6-standard.png)
+
+ES6是下一代JavaScript语言标准的统称，每年6月发布一次修订版，迄今为止已经发布了3个版本，分别是ES2015、ES2016、ES2017。
+本书根据ES2017标准，详尽介绍了所有新增的语法，对基本概念、设计目的和用法进行了清晰的讲解，给出了大量简单易懂的示例。
+本书为中级难度，适合那些已经对JavaScript语言有一定了解的读者，可以作为学习这门语言最新进展的工具书，也可以作为参考手册供大家随时查阅新语法。
+第3版增加了超过30%的内容，完全覆盖了ES2017标准，相比第2版介绍了更多的语法点，还调整了原有章节的文字表达，充实了示例，论述更准确，更易懂易学。
 
 ## 简介
 
 ### ECMAScript VS JavaScript
->
->前者是后者的规格，后者是前者的一种实现（另外的 ECMAScript 方言还有 JScript 和 ActionScript）。日常场合，这两个词是可以互换的。
+
+前者是后者的规格，后者是前者的一种实现（另外的 ECMAScript 方言还有 JScript 和 ActionScript）。日常场合，这两个词是可以互换的。
 
 ### ECMAScript2015 VS ES6
 
->ES6 既是一个历史名词，也是一个泛指，含义是 5.1 版以后的 JavaScript 的下一代标准，涵盖了 ES2015、ES2016、ES2017 等等，而 ES2015 则是正式名称，特指该年发布的正式版本的语言标准。本书中提到 ES6 的地方，一般是指 ES2015 标准，但有时也是泛指“下一代 JavaScript 语言”
+ES6 既是一个历史名词，也是一个泛指，含义是 5.1 版以后的 JavaScript 的下一代标准，涵盖了 ES2015、ES2016、ES2017 等等，而 ES2015 则是正式名称，特指该年发布的正式版本的语言标准。本书中提到 ES6 的地方，一般是指 ES2015 标准，但有时也是泛指“下一代 JavaScript 语言”
 
 ### Babel转码器
 
@@ -26,7 +35,6 @@ input.map(item=>item+1)
 input.map(function (item){
     return item+1
 })
-
 ```
 
 #### 安装Babel
@@ -45,7 +53,6 @@ Babel 的配置文件是.babelrc，存放在项目的根目录下。使用 Babel
   "presets": [],
   "plugins": []
 }
-
 ```
 
 presets字段设定转码规则
@@ -73,8 +80,8 @@ $ npm install --save-dev @babel/preset-react
 ## let和const命令
 
 ### let命令
->
->ES6 新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，**只在let命令所在的代码块内有效。**
+
+ES6 新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，**只在let命令所在的代码块内有效。**
 
 ```js
 
@@ -84,13 +91,14 @@ function test(){
     var b=1
 }
 
-console.log(a) //输出报错，let块级作用域
+//输出报错，let块级作用域
+console.log(a)
 
-console.log(b) // 输出1
-
+// 输出1
+console.log(b) 
 ```
 
-#### 不存在变量提升
+不存在变量提升:
 
 > var命令会发生“变量提升”现象，即变量可以在声明之前使用，值为undefined
 
@@ -106,7 +114,7 @@ console.log(err) // 输出ReferenceError错误
 let err=1
 ```
 
-#### 暂时性死区
+暂时性死区:
 
 >只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。
 
@@ -134,7 +142,7 @@ if (true) {
 
 总之，暂时性死区的本质就是，只要一进入当前作用域，所要使用的变量就已经存在了，但是不可获取，只有等到声明变量的那一行代码出现，才可以获取和使用该变量。
 
-#### 不允许重复声明
+不允许重复声明:
 
 > let不允许在相同作用域内，重复声明同一个变量。
 
@@ -177,14 +185,11 @@ for (var i = 0; i < s.length; i++) {
   console.log(s[i]);
 }
 
-console.log(i); // 5
+// 输出5
+console.log(i); 
 ```
 
-#### ES6的块级作用域
-
-let为 JavaScript 新增了块级作用域。
-
-ES6 允许块级作用域的任意嵌套。
+let为 JavaScript 新增了块级作用域。ES6 允许块级作用域的任意嵌套。
 
 ```js
 // 报错情况
@@ -227,9 +232,7 @@ ES6 允许块级作用域的任意嵌套。
 
 ```
 
-#### 块级作用域和函数声明
-
-ES5 规定，函数只能在顶层作用域和函数作用域之中声明，不能在块级作用域声明。
+块级作用域和函数声明：ES5 规定，函数只能在顶层作用域和函数作用域之中声明，不能在块级作用域声明。
 
 ```js
 // 按照 ES5 的规定以下情况都是非法的。
@@ -393,24 +396,19 @@ if (true)
 **const声明一个只读的常量。一旦声明，常量的值就不能改变。**
 
 ```js
-
 const test=2323
 
 console.log(test) // 输出：2323
 
 // 重新赋值会报错:Assignment to constant variable
-
 test=4567
-
 ```
 
 **const声明的变量不得改变值**，这意味着，const一旦声明变量，就必须立即初始化，不能留到以后赋值。
 
 ```js
-
 // 只声明、不赋值会报错
 const test;
-
 ```
 
 **const的作用域与let命令相同：只在声明所在的块级作用域内有效。**
@@ -422,7 +420,6 @@ if(true){
 
 // 输出报错：max is not defined
 console.log(max)
-
 ```
 
 const命令声明的常量也是不提升的，同样存在暂时性死区，**只能在声明的位置后面使用**
@@ -434,7 +431,6 @@ if(true){
     console.log(max)
     const max=34;
 }
-
 ```
 
 **const声明的常量，也与let一样不可重复声明。**
@@ -447,7 +443,6 @@ let gender='girl'
 const message='go go go'
 
 const gender='boy'
-
 ```
 
 **const实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。**
@@ -466,7 +461,6 @@ console.log(student.age)
 
 // 此时指针地址发生了变化，报错
 student={}
-
 ```
 
 > 常量student储存的是一个地址，这个地址指向一个对象。不可变的只是这个地址，即不能把student指向另一个地址，但对象本身是可变的，所以依然可以为其添加新属性
@@ -480,7 +474,6 @@ const student=Object.freeze({})
 // 常规模式： 赋值不起作用
 // 严格模式： 报错
 student.age=18
-
 ```
 
 当然，出了冻结对象本身，对象可能存在的属性也需要冻结
@@ -501,7 +494,7 @@ function objectConstant(obj){
 }
 ```
 
-### ES6声明变量的6中方法
+### 变量声明方法
 
 - var定义
 - function命令

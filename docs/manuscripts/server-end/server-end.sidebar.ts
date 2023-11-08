@@ -15,7 +15,7 @@ export const ServerEndSidebar = [
   },
   {
     text: 'TypeScript',
-    link: 'typescript'
+    link: 'typescript/简介.md'
   },
 
   {

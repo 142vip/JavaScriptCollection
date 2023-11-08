@@ -31,11 +31,11 @@ export const battleInterviewSidebar = [
       {
         text: '前端常考',
         link: 'problems/前端常考.md'
-      },
-      {
-        text: '后端汇总',
-        link: 'problems/后端汇总.md'
       }
+      // {
+      //   text: '后端汇总',
+      //   link: 'problems/后端汇总.md'
+      // }
     ]
   },
   {

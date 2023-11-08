@@ -26,7 +26,7 @@ permalink: /manuscripts/battle-interview/mysql.html
 
 **一个数据库中多个表可以使用不同引擎以满足各种性能和实际需求**，使用合适的存储引擎，将会提高整个数据库的性能
 
-### 查看存储引擎
+查看存储引擎命令：
 
 ```bash
 -- 查看支持的存储引擎
@@ -50,13 +50,13 @@ show table status from database where name="tablename"
 
 ## 数据类型
 
-- 整数类型：BIT、BOOL、TINY INT、SMALL INT、MEDIUM INT、 INT、 BIG INT
-- 浮点数类型：FLOAT、DOUBLE、DECIMAL
-- 字符串类型：CHAR、VARCHAR、TINY TEXT、TEXT、MEDIUM TEXT、LONGTEXT、TINY BLOB、BLOB、MEDIUM BLOB、LONG BLOB
-- 日期类型：Date、DateTime、TimeStamp、Time、Year
-- 其他数据类型：BINARY、VARBINARY、ENUM、SET、Geometry、Point、MultiPoint、LineString、MultiLineString、Polygon、GeometryCollection等
+- 整数类型：`BIT`、`BOOL`、`TINY` `INT`、`SMALL INT`、`MEDIUM INT`、 `INT`、 `BIG INT`
+- 浮点数类型：`FLOAT`、`DOUBLE`、`DECIMAL`
+- 字符串类型：`CHAR`、`VARCHAR`、`TINY TEXT`、`TEXT、MEDIUM TEXT`、`LONGTEXT`、`TINY` `BLOB`、`MEDIUM BLOB`、`LONG BLOB`
+- 日期类型：`Date`、`DateTime`、`TimeStamp`、`Time`、`Year`
+- 其他数据类型：`BINARY`、`VARBINARY`、`ENUM`、`SET`、`Geometry`、`Point`、`MultiPoint`、`LineString`、`MultiLineString`、`Polygon`、`GeometryCollection`等
 
-> BLOB和TEXT有什么区别？   **字符串类型是：SET、BLOB、ENUM、CHAR、TEXT、VARCHAR**
+> BLOB和TEXT有什么区别？   **字符串类型是：`SET`、`BLOB`、`ENUM`、`CHAR`、`TEXT`、`VARCHAR`**
 
 - BLOB是一个二进制对象，可以容纳可变数量的数据。有四种类型的BLOB：TINYBLOB、BLOB、MEDIUMBLO和 LONGBLOB
 - TEXT是一个不区分大小写的BLOB。四种TEXT类型：TINYTEXT、TEXT、MEDIUMTEXT 和 LONGTEXT。
@@ -82,7 +82,7 @@ show table status from database where name="tablename"
 
 > 主要用于处理操作量大，复杂度高的数据
 
-### 基本要素（ACID）
+基本要素（ACID）:
 
 - **A (Atomicity) 原子性**：整个事务中的所有操作，要么全部完成，要么全部不完成，不可能停滞在中间某个环节。事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样
 - **C (Consistency) 一致性**：在事务开始之前和事务结束以后，数据库的**完整性约束**没有被破坏
@@ -140,7 +140,7 @@ show table status from database where name="tablename"
 
 为了提供更好的并发，InnoDB提供了**非锁定读**：不需要等待访问行上的锁释放，读取行的一个快照。**该方法是通过InnoDB的一个特性：MVCC来实现的**。
 
-### MVCC 多版本并发控制
+## MVCC 多版本并发控制
 
 - **乐观（optimistic）并发控制**
 - **悲观（pressimistic）并发控制**
@@ -166,7 +166,7 @@ MVCC 是行级锁的一个变种，但它在很多情况下避免了加锁操作
 - **redo log（重做日志**） 实现持久化和原子性
 - **undo log（回滚日志）** 实现一致性
 
-### MySQL日志分类
+## MySQL日志分类
 
 > 参考：<https://www.cnblogs.com/myseries/p/10728533.html>
 
@@ -179,29 +179,27 @@ MVCC 是行级锁的一个变种，但它在很多情况下避免了加锁操作
 
 > 事务日志均可以视为一种恢复操作，redo_log是恢复提交事务修改的页操作，而undo_log是回滚行记录到特定版本；redo_log是物理日志，记录页的物理修改操作，而undo_log是逻辑日志
 
-```
-redo 重做日志 【实现持久性和一致性】
+- redo 重做日志 【实现持久性和一致性】
   作用：确保事务的持久性，防止在发生故障，脏页未写入磁盘。重启数据库会进行redo log执行重做，到达事务一致性
   
-undo 回滚日志 【实现原子性】
+- undo 回滚日志 【实现原子性】
   作用：保证数据的原子性，记录事务发生之前的数据的一个版本，用于回滚。
   innodb事务的可重复读和读取已提交 隔离级别就是通过mvcc+undo实现
 
-errorlog 错误日志
+- errorlog 错误日志
   作用：Mysql本身启动、停止、运行期间发生的错误信息
   
-slow query log 慢查询日志
+- slow query log 慢查询日志
   作用：记录执行时间过长的sql，时间阈值可以配置，只记录执行成功
 
-binlog 二进制日志
+- binlog 二进制日志
   作用：用于主从复制，实现主从同步
   
-relay log 中继日志
+- relay log 中继日志
   作用：用于数据库主从同步，将主库发送来的binlog先保存在本地，然后从库进行回放
   
-general log 普通日志
+- general log 普通日志
   作用：记录数据库操作明细，默认关闭，开启会降低数据库性能
-```
 
 ## MySQL锁机制
 
@@ -393,17 +391,17 @@ hash 分发，好处在于说，可以平均分配每个库的数据量和请求
 
 ## 主从复制
 
-- master将改变记录到二进制日志（binary log）。这些记录过程叫做二进制日志事件，binary log events；
+- `master`将改变记录到二进制日志`binary log`。这些记录过程叫做二进制日志事件`binary log events`
 
-- salve 将 master 的 binary log events 拷贝到它的中继日志（relay log）;
+- `salve` 将 `master` 的 `binary log events` 拷贝到它的中继日志`relay log`
 
-- slave 重做中继日志中的事件，将改变应用到自己的数据库中。**MySQL 复制是异步且是串行化的。**
+- `slave` 重做中继日志中的事件，将改变应用到自己的数据库中。**MySQL复制是异步且是串行化的。**
 
-### 复制的基本原则
+复制的基本原则:
 
-- 每个 slave只有一个 master
-- 每个 salve只能有一个唯一的服务器 ID【mysql_id唯一性】
-- 每个master可以有多个salve
+- 每个`slave`只有一个 `master`
+- 每个`salve`只能有一个唯一的服务器 ID【mysql_id唯一性】
+- 每个`master`可以有多个`salve`
 
 ## 三个范式
 

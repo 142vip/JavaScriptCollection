@@ -4,9 +4,13 @@ permalink: /manuscripts/read-books/cs-books/base-nodejs.html
 ---
 # 深入浅出Node.js
 
->花费时间：2021.2.18 - 2021.2.20
+![](../images/base-nodejs.png)
 
-node.js保持了Javascript在浏览器中单线程的特点。无法与其余线程共享任何状态；
+从不同的视角介绍了 Node 内在的特点和结构，很经典、非常推荐阅读
+
+## 单线程
+
+`Node.js`保持了`Javascript`在浏览器中单线程的特点。无法与其余线程共享任何状态；
 
 单线程的好处：
 
@@ -36,8 +40,6 @@ Node是单线程的，没有提供对多线程的技术支持，但是可以充�
 ## 模块机制
 
 ### CommonJS的模块规范
-
-> 对模块的定义非常简单，包括模块定义、模块引入、模块标识三个部分。
 
 #### 模块定义
 
@@ -192,7 +194,7 @@ Node就他妈很牛逼的提出：
 **事件循环是一个典型的生产者、消费者模型，在Linux系统下基于多线程创建，Windows系统下基于IOCP创建**
 。异步I/O、网络请求等则是事件的生产者。生产者源源不断的为Node提供不同类型的事件，同时事件被传递到对应的观察者哪里；而事件循环就是从观察者哪里取出事件并处理
 
-**libuv提供线程池的概念**
+**`libuv`提供线程池的概念**
 
 ### 事件驱动与高性能服务器
 
@@ -255,9 +257,7 @@ async (function (err,data){
 })
 ```
 
-Web Workers能够解决利用CPU和减少阻塞UI渲染，但是不能解决前端UI渲染的效率问题
-
-Node借鉴了Web Workers模式，提出了child_process模块，用来多进程处理
+Web Workers能够解决利用CPU和减少阻塞UI渲染，但是不能解决前端UI渲染的效率问题。Node借鉴了Web Workers模式，提出了child_process模块，用来多进程处理
 
 ### 异步编程解决方案
 
@@ -1027,11 +1027,7 @@ assert.equal(Math.max(1, 100), 100);
 
 ### 压力测试
 
-对网络的压力测试考察目标：
-
-- 吞吐率
-- 响应事件
-- 并发数
+对网络的压力测试考察目标：`吞吐率`、`响应事件`、`并发数`
 
 能够反映出服务器的并发处理能力
 
@@ -1044,33 +1040,3 @@ assert.equal(Math.max(1, 100), 100);
 **测试是应用或者系统最重要的质量保证手段，有单元测试实践的项目，必然对代码的粒度和层次都掌握的比较好。**
 
 **单元测试能够保证项目每个局部的正确性，也能够在项目迭代过程中很好地监督和反馈迭代质量。**
-
-### Node.js发送邮件
-
-```js
-var nodemailer = require("nodemailer");
-// 建立一个SMTP的传输连接
-var smtpTransport = nodemailer.createTransport("SMTP", {
- service: "Gmail",
- auth: {
- user: "gmail.user@gmail.com",
- pass: "userpass"
- }
-});
-// 邮件选项
-var mailOptions = {
- from: "Fred Foo ✔ <foo@bar.com>", // 发件人邮件地址
- to: "bar@bar.com, baz@bar.com", // 收件人邮件地址列表
- subject: "Hello ✔", // 标题
- text: "Hello world ✔", // 纯文本内容
- html: "<b>Hello world ✔</b>" // HTML内容
-}
-// 发送邮件
-smtpTransport.sendMail(mailOptions, function (err, response) {
- if (err) {
- console.log(err);
- } else {
- console.log("Message sent: " + response.message);
- }
-}); 
-```

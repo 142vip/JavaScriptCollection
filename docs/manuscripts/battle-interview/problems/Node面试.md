@@ -5,12 +5,6 @@ permalink: /manuscripts/battle-interview/node.html
 
 # Node面试
 
-参考：<https://juejin.cn/post/6844904071501971469#heading-0>
-
-重要重要！！！
-
-js事件循环：<https://juejin.cn/post/6844903968292749319>
-
 **同步和异步关注的是消息通信机制。**
 
 - 同步：在发起一个调用后，在没有得到结果前，该调用不返回，知道调用返回，才往下执行，也就是说调用者等待被调用方返回结果。
@@ -303,4 +297,8 @@ let arr2 = [...new Set(arr)]
 - Array.isArray()：只能用于判断是否为数组
 - constructor
 
-参考：<https://www.jb51.net/article/190286.htm>
+## 参考资料
+
+- <https://juejin.cn/post/6844904071501971469#heading-0>
+- <https://juejin.cn/post/6844903968292749319>
+- <https://www.jb51.net/article/190286.htm>
