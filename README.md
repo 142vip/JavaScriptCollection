@@ -454,7 +454,11 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 感谢向仓库提交MR的所有开发者
 
-[![contributors](https://contrib.rocks/image?repo=142vip/JavaScriptCollection)](https://github.com/142vip/JavaScriptCollection/graphs/contributors)
+<div style="text-align: left;">
+<a href="https://github.com/142vip/JavaScriptCollection/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=142vip/JavaScriptCollection"  alt="JavaScriptCollection" title="感谢向仓库提交MR的所有开发者"/>
+</a>
+</div>
 
 ## 趋势
 
