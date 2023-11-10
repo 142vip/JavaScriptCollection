@@ -1,4 +1,4 @@
-export const eggSidebar = [
+export const EggSidebar = [
   {
     text: '使用教程',
     prefix: 'tutorial',
@@ -12,10 +12,6 @@ export const eggSidebar = [
         link: '快速入门.md'
       },
       {
-        text: '目录结构',
-        link: '目录结构.md'
-      },
-      {
         text: '框架对象',
         link: '框架对象.md'
       },
@@ -23,17 +19,22 @@ export const eggSidebar = [
         text: '配置和运行环境',
         link: '配置和运行环境.md'
       },
+
+      {
+        text: '控制器',
+        link: '控制器.md'
+      },
+      {
+        text: '服务',
+        link: '服务.md'
+      },
       {
         text: '中间件',
         link: '中间件.md'
       },
       {
-        text: '路由的使用',
-        link: '路由的使用.md'
-      },
-      {
-        text: '控制器和服务',
-        link: '控制器和服务.md'
+        text: '路由',
+        link: '路由.md'
       },
       {
         text: '定时任务',

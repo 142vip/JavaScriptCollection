@@ -1,4 +1,4 @@
-export const redisSidebar = [
+export const RedisSidebar = [
   {
     text: '使用教程',
     children: [

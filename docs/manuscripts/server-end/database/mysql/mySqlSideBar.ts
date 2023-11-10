@@ -1,4 +1,4 @@
-export const mySqlSideBar = [
+export const MySqlSideBar = [
   {
     text: '使用教程',
     children: [
