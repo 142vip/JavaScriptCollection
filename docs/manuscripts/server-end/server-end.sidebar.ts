@@ -43,11 +43,11 @@ export const ServerEndSidebar = [
     // },
       {
         text: 'Koa',
-        link: 'koa-learn.md'
+        link: 'koa-tutorial/base-introduce.html'
       },
       {
         text: 'Egg.js',
-        link: 'egg'
+        link: 'egg-tutorial/introduce.html'
       }
     // {
     //   text: 'Nest.js',

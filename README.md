@@ -2,7 +2,7 @@
 
 <div align="center">
   <img alt="JavaScriptCollection"  src="https://cdn.statically.io/gh/142vip/cdn_service@main/doc_book/jsc/jsc_logo.png" style="text-align: center;">
-<p style="font-size: 30px"><strong>✨【理论+实战】保姆级成长笔记✨</strong></p>
+<p style="font-size: 20px"><strong>✨【理论+实战】保姆级成长笔记✨</strong></p>
 </div>
 
 <div align="center">
