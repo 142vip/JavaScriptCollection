@@ -108,11 +108,11 @@ yarn run dev
 
 ### 在线浏览
 
-- 尝鲜版：<https://142vip.github.io/JavaScriptCollection>
 - 稳定版：<https://code.142vip.cn>
 
-网站无法访问时，建议通过科学上网访问备用网络
+> 网站无法访问时，合理使用魔法通过科学上网访问第三方托管平台
 
+- Github：<https://142vip.github.io/JavaScriptCollection>
 - Netlify： <https://js-collection.netlify.app>
 - Vercel： <https://js-collection.vercel.app>
 
