@@ -10,7 +10,6 @@ export const ServerEndSidebar = [
   },
   {
     text: 'ES6',
-    // collapsible: true,
     link: 'es6'
   },
   {

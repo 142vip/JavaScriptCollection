@@ -26,6 +26,7 @@ export const KoaSidebar = [
     ]
   },
   {
-    text: '最佳实践'
+    text: '最佳实践',
+    link: 'https://code.142vip.cn'
   }
 ]

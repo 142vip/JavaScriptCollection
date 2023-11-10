@@ -8,12 +8,12 @@ actions:
   - text: 快速开刷 →
     link: /quick-start.md
     type: primary
-  - text: 工作机会
+  - text: 工作机会💡
     link: /manuscripts/job-chance/job-poster-bytedance.md
     type: secondary
-  - text: 公众号文章💡
-    link: /manuscripts/wechat-list.md
-    type: secondary
+#  - text: 公众号文章💡
+#    link: /manuscripts/wechat-list.md
+#    type: secondary
 
 features:
   - title: 前端
@@ -34,12 +34,8 @@ features:
     details: 尝试尝试再尝试，等等我呀...
 ---
 
-
-
-
 [//]: # (<BiliBili bvid="BV1rd4y1V7tB"  />)
-
-[//]: # (<XiGua id="7191010629048716605" />)
+[//]: # (<XiGua id="7195198927220834868" />)
 
 ## 本地浏览【推荐】
 
