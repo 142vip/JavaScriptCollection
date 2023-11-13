@@ -1,17 +1,17 @@
 /*
- * @Description: 【较难】二叉树中和为某一值的路径
+ * @Description: 【中等】二叉树中和为某一值的路径(二)
  * @Version: Beta1.0
- * @Author: 【B站&公众号】储凡
+ * @Author: 微信公众号：储凡
  * @Date: 2021-05-12 22:01:00
- * @LastEditors: 【B站&公众号】储凡
+ * @LastEditors: 微信公众号：储凡
  * @LastEditTime: 2021-05-12 22:01:45
  */
 
-/* function TreeNode(x) {
-    this.val = x;
-    this.left = null;
-    this.right = null;
-} */
+function TreeNode(x) {
+  this.val = x
+  this.left = null
+  this.right = null
+}
 
 function FindPath(root, expectNumber) {
   const result = []

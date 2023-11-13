@@ -1,15 +1,17 @@
 ---
-title: 算法相关文档格式模版
+title: 链表中环的入口结点
 permalink: /manuscripts/solo-algorithm/sword-point/entry-loop-node.html
 ---
 
-# 算法相关文档格式模版
+# 链表中环的入口结点
 
 ## 题目链接
 
-- [牛客网]()
+- [牛客网](https://www.nowcoder.com/share/jump/8484115461699847061818)
 
 ## 题目描述
+
+![](../images/entryNodeOfLoop.png)
 
 ## 刷题思路
 

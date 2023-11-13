@@ -12,10 +12,10 @@ permalink: /manuscripts/solo-algorithm/shell/shell-1.html
 ## 题目描述
 
 描述
-编写一个shell脚本以输出一个文本文件nowcoder.txt中的行数
+编写一个shell脚本以输出一个文本文件`nowcoder.txt`中的行数
 
 示例:
-假设 nowcoder.txt 内容如下：
+假设 `nowcoder.txt` 内容如下：
 
 ```cpp
 #include <iostream>

@@ -1,0 +1,3 @@
+function VerifySequenceOfBST(sequence) {
+}
+

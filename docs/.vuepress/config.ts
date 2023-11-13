@@ -38,7 +38,6 @@ export default defineUserConfig({
         // todo 引入代码文件时的路径替换
         importCode: {
             handleImportPath: (str) => {
-                console.log(str,__dirname)
                 if (str.includes('@code')) {
                     return str.replace(/^@code/, path.resolve(__dirname, '../../code/'))
                 }

@@ -1,9 +1,9 @@
 /*
  * @Description: 【简单】二叉树的镜像
  * @Version: Beta1.0
- * @Author: 【B站&公众号】储凡
+ * @Author: 微信公众号：储凡
  * @Date: 2021-05-11 16:42:42
- * @LastEditors: 【B站&公众号】储凡
+ * @LastEditors: 微信公众号：储凡
  * @LastEditTime: 2021-05-11 16:43:17
  */
 

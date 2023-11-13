@@ -1,9 +1,9 @@
 /*
  * @Description: 【困难】对称的二叉树
  * @Version: Beta1.0
- * @Author: 【B站&公众号】储凡
+ * @Author: 微信公众号：储凡
  * @Date: 2021-05-11 17:52:52
- * @LastEditors: 【B站&公众号】储凡
+ * @LastEditors: 微信公众号：储凡
  * @LastEditTime: 2021-05-11 17:53:26
  */
 

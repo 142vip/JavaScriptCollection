@@ -5,20 +5,7 @@ permalink: /manuscripts/solo-algorithm/interview-top-101.html
 
 # 面试必刷Top101
 
-```mindmap
-root(面试必刷Top101)
-    (链表)
-    (二分查找/排序)
-    (二叉树)
-    (堆/栈/队列)
-    (哈希)
-    (递归/回溯)
-    (动态规划)
-    (字符串)
-    (双指针)
-    (贪心算法)
-    (模拟)
-```
+![](./images/101.png)
 
 ## 算法题
 

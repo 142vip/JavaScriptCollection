@@ -1,0 +1,2 @@
+function cutRopePro(number) {
+}
