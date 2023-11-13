@@ -7,7 +7,6 @@ permalink: /manuscripts/solo-algorithm/sword-point/duplicate.html
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/6fe361ede7e54db1b84adc81d09d8524)
-- [欢迎讨论](https://github.com/142vip/JavaScriptCollection/issues/19)
 
 ## 题目描述
 

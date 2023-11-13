@@ -1,9 +1,9 @@
 /*
  * @Description:第一个只出现一次的字符
  * @Version: Beta1.0
- * @Author: 【B站&公众号】储凡
+ * @Author: 微信公众号：储凡
  * @Date: 2021-04-28 22:23:51
- * @LastEditors: 【B站&公众号】储凡
+ * @LastEditors: 微信公众号：储凡
  * @LastEditTime: 2021-04-28 22:24:20
  */
 

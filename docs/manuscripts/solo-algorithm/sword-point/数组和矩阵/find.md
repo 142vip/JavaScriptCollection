@@ -8,7 +8,6 @@ permalink: /manuscripts/solo-algorithm/sword-point/find.html
 ## 题目链接
 
 - [牛客网](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)
-- [欢迎讨论](https://github.com/142vip/JavaScriptCollection/issues/20)
 
 ## 题目描述
 

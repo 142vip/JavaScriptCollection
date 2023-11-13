@@ -1,9 +1,9 @@
 /*
  * @Description: 【较难】删除链表中重复的结点
  * @Version: Beta1.0
- * @Author: 【B站&公众号】储凡
+ * @Author: 微信公众号：储凡
  * @Date: 2021-05-02 09:02:18
- * @LastEditors: 【B站&公众号】储凡
+ * @LastEditors: 微信公众号：储凡
  * @LastEditTime: 2021-05-02 09:15:24
  */
 

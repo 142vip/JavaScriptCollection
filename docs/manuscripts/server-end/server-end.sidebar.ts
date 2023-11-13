@@ -123,7 +123,7 @@ export const ServerEndSidebar = [
       },
       {
         text: '反向代理',
-        link: 'proxy.md'
+        link: 'nginx-proxy.md'
       },
       {
         text: '配置gzip',

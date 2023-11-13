@@ -6,9 +6,11 @@ permalink: /manuscripts/solo-algorithm/shell/shell-3.html
 
 ## 题目链接
 
-- [牛客网]()
+- [牛客网](https://www.nowcoder.com/share/jump/8484115461699866785693)
 
 ## 题目描述
+
+写一个 bash脚本以输出数字 0 到 500 中 7 的倍数(0 7 14 21...)的命令
 
 ## 刷题思路
 
