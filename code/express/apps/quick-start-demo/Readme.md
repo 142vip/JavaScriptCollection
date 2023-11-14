@@ -1,9 +1,9 @@
-
 # Express框架快速开始演示Demo
 
 ## 项目初始化
 
 ```bash
+## 初始化
 npm init
 ```
 
@@ -33,6 +33,12 @@ pwd
 node app.js
 ```
 
+或者使用`package.json`中的脚本，启动服务
+
+```bash
+npm run dev
+```
+
 服务运行，监听`3000`端口
 
 ## 调用服务
@@ -42,6 +48,11 @@ node app.js
 curl -i http://127.0.0.1:3000 
 ```
 
-接口返回：Hello World
+接口返回：`Hello World`
 
 ![](./images/hello-world.png)
+
+## 参考
+
+- <https://www.expressjs.com.cn/>
+- <https://www.npmjs.com/package/express>
