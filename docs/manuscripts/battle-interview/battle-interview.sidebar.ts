@@ -1,4 +1,4 @@
-export const battleInterviewSidebar = [
+export const BattleInterviewSidebar = [
   {
     text: '面经分享',
     prefix: 'problems',

@@ -1,4 +1,4 @@
-export const jobChanceSidebar = [
+export const JobChanceSidebar = [
   {
     text: '工作机会',
     children: [{

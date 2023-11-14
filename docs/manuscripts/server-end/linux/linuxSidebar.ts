@@ -1,4 +1,4 @@
-export const linuxSidebar = [{
+export const LinuxSidebar = [{
   text: 'Linux',
   children: [
     {

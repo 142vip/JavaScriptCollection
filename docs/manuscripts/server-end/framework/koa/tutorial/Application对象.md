@@ -212,7 +212,7 @@ app.on('error', (err, ctx) => {
 
 当应用级错误发生、`error`事件监听触发时，可以及时打印出错误信息
 
-### 更多
+## 更多
 
 `Application`对象的可用API还是非常多的，具体可以参考：[Application API](https://github.com/koajs/koa/blob/master/lib/application.js)
 
