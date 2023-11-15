@@ -30,9 +30,9 @@
       <img alt="repo size" src="https://img.shields.io/github/repo-size/142vip/JavaScriptCollection" style="padding: 5px">
     </div>
     <div id="repo-link">
-        <a href="https://github.com/142vip/408CSFamily" target="_blank" style="padding: 5px">GitHub</a>
+        <a href="https://github.com/142vip/JavaScriptCollection" target="_blank" style="padding: 5px">GitHub</a>
         |
-        <a href="https://gitee.com/chufan443/408CSFamily" target="_blank" style="padding: 5px">Gitee</a>
+        <a href="https://gitee.com/chufan443/JavaScriptCollection" target="_blank" style="padding: 5px">Gitee</a>
     </div>
 </div>
 <br>
