@@ -1,4 +1,4 @@
-export const microserviceSidebar = [
+export const MicroserviceSidebar = [
   {
     text: 'RPC远程服务',
     children: [

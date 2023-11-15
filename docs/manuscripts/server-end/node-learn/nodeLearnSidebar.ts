@@ -1,4 +1,4 @@
-export const nodeLearnSidebar = [{
+export const NodeLearnSidebar = [{
   text: 'Node基础',
   children: [
     {

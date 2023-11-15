@@ -1,17 +1,18 @@
 ---
 title: SequelizeORM
 permalink: /manuscripts/server-end/sequelize.html
+headerDepth: 2
 ---
-
 # SequelizeORM
 
 ## 快速入门
 
-Sequelize 是一个基于 promise 的 Node.js ORM, 目前支持 Postgres, MySQL, MariaDB, SQLite 以及 Microsoft SQL Server. 它具有强大的事务支持, 关联关系, 预读和延迟加载,读取复制等功能.
+Sequelize 是一个基于 Promise 的 Node.js ORM,
+目前支持 Postgres、MySQL、 MariaDB、SQLite 以及 Microsoft SQL Server. 它具有强大的事务支持, 关联关系, 预读和延迟加载,读取复制等功能.
 
 ## 安装
 
-`Sequelize` 的使用可以通过 npm (或 yarn)模块包管理器进行下载.
+`Sequelize` 的使用可以通过 `npm` (或 `yarn`)模块包管理器进行下载.
 
 ```bash
 ## 下载模块包，默认最新
@@ -67,7 +68,6 @@ try {
 } catch (error) {
   console.error('Unable to connect to the database:', error);
 }
-
 ```
 
 ## 关闭连接
@@ -382,7 +382,6 @@ DataTypes.BOOLEAN            // TINYINT(1)
 ### 数字
 
 ```js
-
 DataTypes.INTEGER            // INTEGER
 DataTypes.BIGINT             // BIGINT
 DataTypes.BIGINT(11)         // BIGINT(11)
@@ -410,11 +409,9 @@ DataTypes.DECIMAL(10, 2)     // DECIMAL(10,2)
 在 MySQL 和 MariaDB 中,可以将数据类型`INTEGER`, `BIGINT`, `FLOAT` 和 `DOUBLE` 设置为无符号或零填充(或两者),如下所示：
 
 ```js
-
 DataTypes.INTEGER.UNSIGNED
 DataTypes.INTEGER.ZEROFILL
 DataTypes.INTEGER.UNSIGNED.ZEROFILL
-
 ```
 
 - 可以指定大小,即INTEGER(10)而不是简单的INTEGER
@@ -575,15 +572,11 @@ console.log(user.name); // "Lisa"
 为了将这个实例真正保存(**即持久保存**)在数据库中,应使用 [`save`](https://sequelize.org/master/class/lib/model.js~Model.html#instance-method-save) 方法：
 
 ```js
-
 // 进行实例对象保存
 await user.save();
-
 ```
 
 **从`await` 用法来看,`save` 是一种异步方法. 实际上,几乎每个 Sequelize 方法都是异步的. `build` 是极少数例外之一.**
-
-### `create` 方法
 
 Sequelize提供了 [`create`](https://sequelize.org/master/class/lib/model.js~Model.html#static-method-create) 方法,该方法将上述的 `build` 方法和 `save` 方法合并为一个方法：
 
@@ -603,7 +596,6 @@ console.log(user.name); // "Lisa"
 因为 `Sequelize` 实例具有很多附加条件. 相反,可以使用 `.toJSON()` 方法(顺便说一句,它会自动保证实例被 `JSON.stringify` 编辑好).
 
 ```js
-
 const user = await User.create({ name: "Lisa" });
 
 // 不建议这样输出
@@ -631,7 +623,6 @@ console.log(user.favoriteColor); // "green"
 如果需要更改实例的某个字段的值,则再次调用 `save` 将相应地对其进行更新：
 
 ```js
-
 const user = await User.create({ name: "Lisa" });
 
 // 当前实例name字段的值
@@ -724,7 +715,8 @@ console.log(user.favoriteColor); // "green"
 
 ## 改变对save()的原有认知
 
-`save()`方法在内部进行了优化，只更新真正更改的字段。这意味着，如果不更改任何内容并调用`save()`方法，`Sequelize`将知道`save()`方法是多余的，并且不执行任何操作，即不会生成任何查询（仍返回一个Promise对象，但会立即解决）。
+`save()`方法在内部进行了优化，只更新真正更改的字段。这意味着，如果不更改任何内容并调用`save()`方法，
+`Sequelize`将知道`save()`方法是多余的，并且不执行任何操作，即不会生成任何查询（仍返回一个Promise对象，但会立即解决）。
 
 另外，如果在调用`save()`方法时只有几个属性发生了更改，那么在UPDATE操作时，将只发送这些更改字段，以提高性能
 
@@ -756,13 +748,12 @@ await user.increment({
   'age': 2,
   'cash': 100
 });
-
 // 如果值增加相同的数量,则也可以使用以下其他语法：
 await user.increment(['age', 'cash'], { by: 2 });
 ```
 
 **递减的工作原理完全相同.**
 
-### 参考资料
+## 参考资料
 
 - 官方api: <https://sequelize.org/master/class/lib/model.js~Model.html>

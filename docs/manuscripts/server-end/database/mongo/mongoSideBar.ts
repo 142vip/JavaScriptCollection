@@ -1,4 +1,4 @@
-export const mongoSideBar = [
+export const MongoSideBar = [
   {
     text: '使用教程',
     children: [
