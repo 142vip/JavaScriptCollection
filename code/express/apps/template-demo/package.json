@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "description": "Express框架模板项目，约定一些开发规范",
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "ejs": "~2.6.1",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "cookie-parser": "^1.4.4",
+    "debug": "^2.6.9",
+    "ejs": "^2.6.1",
+    "express": "^4.16.1",
+    "http-errors": "^1.6.3",
+    "morgan": "^1.9.1"
   },
   "scripts": {
     "dev": "node app.js"
