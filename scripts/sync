@@ -7,7 +7,7 @@
 
 
 # 远程仓库名称
-remoteList=("mmdapl" "chufan443" "lir0115")
+remoteList=("origin","mmdapl" "chufan443" "lir0115")
 # 获取当前分支名称
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 
