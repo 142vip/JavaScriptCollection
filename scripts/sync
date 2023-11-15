@@ -12,7 +12,7 @@ remoteList=("origin" "mmdapl" "chufan443" "lir0115")
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 
 
-# 判断分支名称
+# master分支同步
 if [ "$current_branch" = "master" ]; then
 
   # 合并next分支内容到master分之
@@ -21,9 +21,16 @@ if [ "$current_branch" = "master" ]; then
   # 推送到每个远程仓库
   for repoName in "${remoteList[@]}"
   do
-      echo "Pushing to $repoName..."
+      echo "-->Pushing to $repoName in master branch..."
       git push "$repoName" master
   done
+# next分支同步
+elif [ "$current_branch" = "next" ]; then
+    for repoName in "${remoteList[@]}"
+    do
+        echo "-->Pushing to $repoName in next branch..."
+        git push "$repoName" next
+    done
 else
-  echo "当前分支是：$current_branch ，只允许在master分支上操作，并推送到远程！！！"
+  echo "当前分支是：$current_branch ，只允许在master和next分支上操作，并推送到远程！！！"
 fi
