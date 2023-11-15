@@ -1,4 +1,4 @@
-export const readBooksSidebar = [
+export const ReadBooksSidebar = [
   {
     text: '技术类',
     prefix: 'cs-books',

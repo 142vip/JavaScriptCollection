@@ -1,9 +1,9 @@
 /*
  * @Description: 顺时针打印矩阵
  * @Version: Beta1.0
- * @Author: 【B站&公众号】储凡
+ * @Author: 微信公众号：储凡
  * @Date: 2021-04-27 14:22:13
- * @LastEditors: 【B站&公众号】储凡
+ * @LastEditors: 微信公众号：储凡
  * @LastEditTime: 2021-04-28 22:25:16
  */
 
@@ -89,7 +89,7 @@ function printMatrixTwo(matrix) {
     if (matrix.length === 0) break
     else seq.push(...matrix.pop().reverse())
 
-    // 左侧  从下网上aa'a's'd'fa's'da's'd'fa's'da's'd'fa's'd
+    // 左侧
     const leftResult = []
     for (const row of matrix) {
       leftResult.push(row.shift())

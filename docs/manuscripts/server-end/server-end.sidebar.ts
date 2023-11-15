@@ -36,10 +36,10 @@ export const ServerEndSidebar = [
     // collapsible: true,
     prefix: 'framework',
     children: [
-    // {
-    //   text: 'Express',
-    //   link: 'express-learn.md'
-    // },
+      {
+        text: 'Express',
+        link: 'express-tutorial/quick-start.html'
+      },
       {
         text: 'Koa',
         link: 'koa-tutorial/base-introduce.html'
@@ -123,7 +123,7 @@ export const ServerEndSidebar = [
       },
       {
         text: '反向代理',
-        link: 'proxy.md'
+        link: 'nginx-proxy.md'
       },
       {
         text: '配置gzip',

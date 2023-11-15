@@ -1,9 +1,9 @@
 /*
  * @Description: 【较难】树的子结构
  * @Version: Beta1.0
- * @Author: 【B站&公众号】储凡
+ * @Author: 微信公众号：储凡
  * @Date: 2021-05-11 16:07:54
- * @LastEditors: 【B站&公众号】储凡
+ * @LastEditors: 微信公众号：储凡
  * @LastEditTime: 2021-05-11 16:08:40
  */
 

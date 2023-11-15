@@ -3,9 +3,9 @@
 ###
 # @Description: binlog方式搭建一主一从mysql，主库初始化脚本
 # @Version: Beata1.0
-# @Author: 【B站&公众号】储凡
+# @Author: 微信公众号：储凡
 # @Date: 2020-09-03 22:35:07
-# @LastEditors: 【B站&公众号】储凡
+# @LastEditors: 微信公众号：储凡
 # @LastEditTime: 2020-09-03 22:35:43
 ###
 

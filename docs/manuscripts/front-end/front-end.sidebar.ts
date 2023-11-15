@@ -26,7 +26,7 @@ export const FrontEndSidebar = [
       },
       {
         text: 'Vuepress',
-        link: 'vuepress.md'
+        link: 'vuepress'
       },
       {
         text: 'JQuery',

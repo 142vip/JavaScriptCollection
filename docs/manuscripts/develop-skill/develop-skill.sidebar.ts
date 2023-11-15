@@ -1,4 +1,4 @@
-export const developSkillSidebar = [
+export const DevelopSkillSidebar = [
   {
     text: '软件安装',
     link: 'software-install.md'
