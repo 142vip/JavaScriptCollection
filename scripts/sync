@@ -1,0 +1,29 @@
+#!/bin/bash
+
+##
+## 同步分支脚本
+## 使用: ./scripts/sync
+##
+
+
+# 远程仓库名称
+remoteList=("origin" "mmdapl" "chufan443" "lir0115")
+# 获取当前分支名称
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+
+# 判断分支名称
+if [ "$current_branch" = "master" ]; then
+
+  # 合并next分支内容到master分之
+  git merge origin/next
+
+  # 推送到每个远程仓库
+  for repoName in "${remoteList[@]}"
+  do
+      echo "Pushing to $repoName..."
+      git push "$repoName" master
+  done
+else
+  echo "当前分支是：$current_branch ，只允许在master分支上操作，并推送到远程！！！"
+fi
