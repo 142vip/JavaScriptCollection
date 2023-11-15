@@ -10,6 +10,10 @@ export const ExpressSidebar = [
       {
         text: '模板项目',
         link: '模板项目.md'
+      },
+      {
+        text: '静态文件',
+        link: '静态文件.md'
       }
     ]
   }
