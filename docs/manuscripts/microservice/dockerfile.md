@@ -100,7 +100,7 @@ FROM node:12.6.0-alpine
 LABEL version="Beta1.0"
 LABEL description="基于egg框架实现的Oauth2统一认证登录"
 # 作者
-LABEL author="【Github&公众号】：Rong姐姐好可爱"
+LABEL author="微信公众号：储凡"
 LABEL email="mmdapl@163.com"
 # 创建项目空间
 RUN mkdir -p /web-project/node/oauth2-service

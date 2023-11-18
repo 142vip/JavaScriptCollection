@@ -16,22 +16,30 @@ actions:
 #    type: secondary
 
 features:
-  - title: 前端
-    details: 熟练前端基础知识、常用框架，总结提炼前端部署方案
-  - title: 后端&微服务
-    details: 基础扎实、熟练使用框架，有一定的封装能力。造轮子、定制化插件功能，保姆级前后端开发部署流程
   - title: SOLO算法
     details: 习题整理，代码通过记录，个人实际解题思路，助力刷题通关
+    link: /manuscripts/solo-algorithm
+  - title: Battle面试官
+    details: 校招社招八股文集合，分享面经与常见面试题，总结面试套路经验，对线、Battle面试官丝毫不慌
+    link: /manuscripts/battle-interview
+  - title: 前端
+    details: 熟练前端基础知识、常用框架，总结、提炼前端部署方案
+    link: /manuscripts/front-end
+  - title: 后端
+    details: 夯实基础、熟练使用框架，有一定封装能力。造轮子、定制化插件功能，保姆级开发、部署流程
+    link: /manuscripts/server-end
+  - title: 微服务
+    details: 网关、服务间调用、ELK、消息中间件等对开发有更高要求，技术永无止境
+    link: /manuscripts/microservice
   - title: 开发技巧
-    details: 习题整理，代码通过记录，总结刷题、解题思路，助力算法能力Up
-  - title: 面试求职
-    details: 校招社招八股文集合，分享面经与常见面试题，总结面试套路经验，对线Battle面试官有条不紊
+    details: 知识很重要，技巧不可缺。汇总日常软件安装、基础编译、代码管理等琐碎小技巧
+    link: /manuscripts/develop-skill
   - title: 读书写作
-    details: 代码虽好但读书提升更为重要，不可偏执一端。人文社科生活百态提升职场人生软技能
-  - title: 心路历程
-    details: 从小白一路磕磕绊绊，自认并无天赋，个中辛酸、冷暖自知; 做好当下，便是对自己的不辜负
+    details: 代码虽好，读书提升更为重要，不可偏执一端。人文社科、生活百态都是职场、人生的软技能
+    link: /manuscripts/read-books
   - title: 自媒体
-    details: 尝试尝试再尝试，等等我呀...
+    details: 尝试尝试再尝试，等等我呀。一路磕磕绊绊，自认并无天赋，辛酸、冷暖自知。 做好当下，便是不辜负自己
+    link: /manuscripts/wechat-list.html
 ---
 
 [//]: # (<BiliBili bvid="BV1rd4y1V7tB"  />)
@@ -110,7 +118,7 @@ yarn run dev
 
 - 稳定版：<https://code.142vip.cn>
 
-> 网站无法访问时，合理使用魔法通过科学上网访问第三方托管平台
+> 网站无法访问时，合理使用魔法、通过科学上网访问第三方托管平台
 
 - Github：<https://142vip.github.io/JavaScriptCollection>
 - Netlify： <https://js-collection.netlify.app>

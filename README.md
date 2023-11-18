@@ -48,7 +48,7 @@
 
 - 稳定版：<https://code.142vip.cn>
 
-> 网站无法访问时，合理使用魔法通过科学上网访问第三方托管平台
+> 网站无法访问时，合理使用魔法、通过科学上网访问第三方托管平台
 
 - Github：<https://142vip.github.io/JavaScriptCollection>
 - Netlify： <https://js-collection.netlify.app>
@@ -474,14 +474,14 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 <div style="text-align: center;margin: 10px" id="we-media-container">
     <div align="center" >
-            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg"
+            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/chu-fan-code-450x450.png"
                 width="200px"
                 style="margin:5px"
-                title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
+                title="欢迎关注微信公众号：储凡" alt="关注微信公众号：储凡"/>
             <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
                 width="200px"
                 style="margin:5px"
-                title="欢迎添加微信：chufan443 " alt="联系作者"/>
+                title="欢迎添加微信：chufan443 " alt="添加微信：chufan443，联系作者"/>
     </div>
     <div style="text-align: center;padding: 5px" align="center">
         <a
