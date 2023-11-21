@@ -2,7 +2,8 @@ import pluginsConfig from "./config/plugins.config";
 import themeConfig from "./config/theme.config";
 import {defineUserConfig, viteBundler} from "vuepress";
 import {fileURLToPath} from 'node:url'
-import {getDirname, path} from "@vuepress/utils";
+import { path} from "@vuepress/utils";
+import {name} from "../../package.json"
 // @ts-ignore
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -12,7 +13,7 @@ const PROXY_DOMAIN = process.env.PROXY_DOMAIN || false
 export default defineUserConfig({
     title: "凡是过往、皆为序章",
     description: "一本有趣的JavaScript合集",
-    base: PROXY_DOMAIN ? "/JavaScriptCollection/" : "/",
+    base: process.env.PROXY_DOMAIN ? `/${name}/` : `/`,
     port: 5000,
     head: [
         [

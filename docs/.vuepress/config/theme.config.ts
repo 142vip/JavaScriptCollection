@@ -13,9 +13,10 @@ export default {
   theme: hopeTheme({
     locales: langConfig,
     navbarIcon: false,
-    darkmode: "toggle",
+    // 禁用深色模式
+    darkmode: "disable",
     // 支持全屏
-    fullscreen: true,
+    // fullscreen: true,
     // 纯净模式
     // pure: true,
     print: false, // 打印按钮
