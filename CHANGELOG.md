@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.2-alpha.11](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.10...v0.0.2-alpha.11) (2023-11-21)
+
+
+### Features
+
+* **express:** 新增错误处理文档和demo代码 ([d3a774b](https://github.com/142vip/JavaScriptCollection/commit/d3a774b15d9ac2270c01ce951beb603fc0c099f2))
+* 更新忽略文件、链接地址 ([82053f2](https://github.com/142vip/JavaScriptCollection/commit/82053f2b455a659823fbf00393455eb9c81376c2))
+* 自媒体、二维码链接等样式修改,关闭全屏模式 ([9c79aa9](https://github.com/142vip/JavaScriptCollection/commit/9c79aa97a8d03c85a81e473e1cd8644315c765c4))
+
+
+### Bug Fixes
+
+* **镜像:** 修复标签信息异常 ([b068077](https://github.com/142vip/JavaScriptCollection/commit/b068077c87f621869465cdfa4b0561fa68f1a6d8))
+
+
+### Performance Improvements
+
+* **镜像:** 使用Layer缓存信息，提高Docker构建、打包速度 ([8c77d64](https://github.com/142vip/JavaScriptCollection/commit/8c77d6475a7b376c38e665db7d8701a95fa3e8f6))
+
 ## [0.0.2-alpha.10](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.9...v0.0.2-alpha.10) (2023-11-15)
 
 
