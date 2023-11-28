@@ -25,12 +25,11 @@ linux系统，主要分debian系和redhat系，还有其它自由的发布版本
 - 包管理工具 apt-get
 - 支持tar包
 
-## 安装方式
+## 包管理器
 
-#### yum
+### yum
 
 - 下载rpm安装包并自动安装
-
 - 一次性安装所有的依赖包
 
 ```bash
@@ -80,7 +79,6 @@ make && make install
 wget https://curl.haxx.se/download/curl-7.30.1.tar.gz
 ## 替换curl -o 保存本地
 curl -O https://curl.haxx.se/download/curl-7.30.1.tar.gz
-
 ```
 
 ## curl

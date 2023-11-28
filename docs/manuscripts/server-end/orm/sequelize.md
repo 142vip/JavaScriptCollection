@@ -3,11 +3,12 @@ title: SequelizeORM
 permalink: /manuscripts/server-end/sequelize.html
 headerDepth: 2
 ---
+
 # SequelizeORM
 
 ## 快速入门
 
-Sequelize 是一个基于 Promise 的 Node.js ORM,
+`Sequelize` 是一个基于 Promise 的 Node.js ORM,
 目前支持 Postgres、MySQL、 MariaDB、SQLite 以及 Microsoft SQL Server. 它具有强大的事务支持, 关联关系, 预读和延迟加载,读取复制等功能.
 
 ## 安装
@@ -32,10 +33,11 @@ $ npm install --save tedious # Microsoft SQL Server
 
 ## 数据库连接
 
-要连接到数据库,必须创建一个 `Sequelize` 实例. 这可以通过将连接参数分别传递到 `Sequelize` 构造函数或通过传递一个连接 `URI` 来完成：
+要连接到数据库,必须创建一个 `Sequelize` 实例. 这可以通过将连接参数分别传递到 `Sequelize`
+构造函数或通过传递一个连接 `URI` 来完成：
 
 ```js
-const { Sequelize } = require('sequelize');
+const {Sequelize} = require('sequelize');
 
 // 方法 1: 传递一个连接 URI
 const sequelize = new Sequelize('sqlite::memory:') // Sqlite 示例
@@ -72,11 +74,13 @@ try {
 
 ## 关闭连接
 
-默认情况下,`Sequelize` 将保持连接打开状态,并对所有查询使用相同的连接. 如果需要关闭连接,请调用 `sequelize.close()`(这方法异步的并返回一个 Promise对象).
+默认情况下,`Sequelize` 将保持连接打开状态,并对所有查询使用相同的连接. 如果需要关闭连接,请调用 `sequelize.close()`(
+这方法异步的并返回一个 Promise对象).
 
 ## 新旧数据库
 
-如果你是从0开始一个项目,且你的数据库尚不存在,那么一开始就可以使用 `Sequelize`,以便自动创建数据库中的每个表（糟糕的是，`egg-sequelize`插件由于加载的约束，只能连接存在的数据库）.
+如果你是从0开始一个项目,且你的数据库尚不存在,那么一开始就可以使用 `Sequelize`
+,以便自动创建数据库中的每个表（糟糕的是，`egg-sequelize`插件由于加载的约束，只能连接存在的数据库）.
 
 除此之外,如果你想使用 `Sequelize` 连接到已经充满了表和数据的数据库,那也可以正常工作！
 
@@ -84,7 +88,8 @@ try {
 
 ## 模型基础概念
 
-模型是通过官方文档中Model一词，直接翻译过来，在使用ORM框架去操作数据库的时候，**模型是 Sequelize 的本质. 模型是代表数据库中表的抽象. 在 Sequelize 中,它是一个 Model 的扩展类.** 模型往往和表字段是一一对应的，这样非常利于封装，类似于Java中的MyBatis。
+模型是通过官方文档中Model一词，直接翻译过来，在使用ORM框架去操作数据库的时候，**模型是 `Sequelize` 的本质. 模型是代表数据库中表的抽象.
+在 `Sequelize` 中,它是一个 Model 的扩展类.** 模型往往和表字段是一一对应的，这样非常利于封装，类似于Java中的MyBatis。
 
 这部分主要包含：
 
@@ -104,7 +109,8 @@ try {
 
 定义模型后,可通过其模型名称在 `sequelize.models` 中使用该模型.
 
-例如，创建一个代表用户的模型,该模型具有一个 `firstName` 和一个 `lastName`. 我们希望将模型称为 `User`,并将其表示的表在数据库中称为 `Users`.
+例如，创建一个代表用户的模型,该模型具有一个 `firstName` 和一个 `lastName`. 我们希望将模型称为 `User`
+,并将其表示的表在数据库中称为 `Users`.
 
 定义该模型的两种：
 
@@ -112,7 +118,7 @@ try {
 
 ```js
 // 直接使用sequelize缓存封装，方便举例
-const { Sequelize, DataTypes } = require('sequelize');
+const {Sequelize, DataTypes} = require('sequelize');
 const sequelize = new Sequelize('sqlite::memory:');
 
 const User = sequelize.define('User', {
@@ -136,10 +142,11 @@ console.log(User === sequelize.models.User); // true
 ## 扩展 `Model`
 
 ```js
-const { Sequelize, DataTypes, Model } = require('sequelize');
+const {Sequelize, DataTypes, Model} = require('sequelize');
 const sequelize = new Sequelize('sqlite::memory');
 
-class User extends Model {}
+class User extends Model {
+}
 
 User.init({
   // 在这里定义模型属性
@@ -167,7 +174,9 @@ console.log(User === sequelize.models.User); // true
 
 上面两种方法的模型定义中,都未明确定义表名(`Users`). 但是,给出了模型名称(`User`).
 
-默认情况下,当**未提供表名时,Sequelize 会自动将模型名复数并将其用作表名.** 这种复数是通过称为 [inflection](https://www.npmjs.com/package/inflection) 的库在后台完成的,因此可以正确计算不规则的复数(例如 `person -> people`).
+默认情况下,当**未提供表名时,Sequelize 会自动将模型名复数并将其用作表名.**
+这种复数是通过称为 [inflection](https://www.npmjs.com/package/inflection) 的库在后台完成的,因此可以正确计算不规则的复数(
+例如 `person -> people`).
 
 ### 强制表名称等于模型名称
 
@@ -229,9 +238,9 @@ sequelize.define('User', {
 
 ```js
 
-await User.sync({ force: true });
+await User.sync({force: true});
 
-await User.sync({force:false,alter:true})
+await User.sync({force: false, alter: true})
 
 ```
 
@@ -240,11 +249,12 @@ await User.sync({force:false,alter:true})
 可以使用 `sequelize.sync()` 自动同步所有模型. 示例：
 
 ```js
-await sequelize.sync({ force: true });
+await sequelize.sync({force: true});
 console.log("所有模型均已成功同步.");
 ```
 
-`sync({ force: true })` 和 `sync({ alter: true })` 可能是破坏性操作（**一旦输出数据库，只能通过数据库日志进行恢复**）. 因此,不建议将它们用于生产级环境中.
+`sync({ force: true })` 和 `sync({ alter: true })` 可能是破坏性操作（**一旦输出数据库，只能通过数据库日志进行恢复**）.
+因此,不建议将它们用于生产级环境中.
 
 ### 删除表
 
@@ -290,9 +300,11 @@ sequelize.define('User', {
 也可以只启用 `createdAt`/`updatedAt` 之一,并为这些列提供自定义名称：
 
 ```js
-class Foo extends Model {}
-Foo.init({ 
-   // ... (属性)
+class Foo extends Model {
+}
+
+Foo.init({
+  // ... (属性)
 }, {
   sequelize,
   // 这里时间戳必须启用true
@@ -317,7 +329,7 @@ sequelize.define('User', {
 });
 
 // 简写
-sequelize.define('User', { name: DataTypes.STRING });
+sequelize.define('User', {name: DataTypes.STRING});
 
 ```
 
@@ -350,13 +362,14 @@ sequelize.define('Foo', {
 
 ## 数据类型
 
-**在模型中定义的每一列都必须具有数据类型.** `Sequelize` 提供[很多内置数据类型](https://github.com/sequelize/sequelize/blob/master/lib/data-types.js).
+**在模型中定义的每一列都必须具有数据类型.** `Sequelize`
+提供[很多内置数据类型](https://github.com/sequelize/sequelize/blob/master/lib/data-types.js).
 
 要访问内置数据类型,必须导入 `DataTypes`：
 
 ```js
 // 引入模块，解构出 DataTypes
-const { DataTypes } = require("sequelize"); 
+const {DataTypes} = require("sequelize");
 
 ```
 
@@ -455,38 +468,40 @@ DataTypes.DATEONLY
 ```js
 
 // 引入模块并解构
-const { Model, DataTypes, Deferrable } = require("sequelize");
+const {Model, DataTypes, Deferrable} = require("sequelize");
 
-class Foo extends Model {}
+class Foo extends Model {
+}
+
 Foo.init({
   // 实例化将自动将 flag 设置为 true (如果未设置)
-  flag: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: true },
+  flag: {type: DataTypes.BOOLEAN, allowNull: false, defaultValue: true},
 
   // 日期的默认值 => 当前时间
-  myDate: { type: DataTypes.DATE, defaultValue: DataTypes.NOW },
+  myDate: {type: DataTypes.DATE, defaultValue: DataTypes.NOW},
 
   // 将 allowNull 设置为 false 将为该列添加 NOT NULL,
   // 这意味着如果该列为 null,则在执行查询时将从数据库引发错误.
   // 如果要在查询数据库之前检查值是否不为 null,请查看下面的验证部分.
-  title: { type: DataTypes.STRING, allowNull: false },
+  title: {type: DataTypes.STRING, allowNull: false},
 
   // 创建两个具有相同值的对象将引发错误.
   // unique 属性可以是布尔值或字符串.
   // 如果为多个列提供相同的字符串,则它们将形成一个复合唯一键.
-  uniqueOne: { type: DataTypes.STRING,  unique: 'compositeIndex' },
-  uniqueTwo: { type: DataTypes.INTEGER, unique: 'compositeIndex' },
+  uniqueOne: {type: DataTypes.STRING, unique: 'compositeIndex'},
+  uniqueTwo: {type: DataTypes.INTEGER, unique: 'compositeIndex'},
 
   // unique 属性是创建唯一约束的简写.
-  someUnique: { type: DataTypes.STRING, unique: true },
+  someUnique: {type: DataTypes.STRING, unique: true},
 
   // 继续阅读有关主键的更多信息
-  identifier: { type: DataTypes.STRING, primaryKey: true },
+  identifier: {type: DataTypes.STRING, primaryKey: true},
 
   // autoIncrement 可用于创建 auto_incrementing 整数列
-  incrementMe: { type: DataTypes.INTEGER, autoIncrement: true },
+  incrementMe: {type: DataTypes.INTEGER, autoIncrement: true},
 
   // 你可以通过 'field' 属性指定自定义列名称：
-  fieldWithUnderscores: { type: DataTypes.STRING, field: 'field_with_underscores' },
+  fieldWithUnderscores: {type: DataTypes.STRING, field: 'field_with_underscores'},
 
   // 可以创建外键：
   bar_id: {
@@ -518,7 +533,7 @@ Foo.init({
   modelName: 'foo',
 
   // 在上面的属性中使用 `unique: true` 与在模型的参数中创建索引完全相同：
-  indexes: [{ unique: true, fields: ['someUnique'] }]
+  indexes: [{unique: true, fields: ['someUnique']}]
 });
 ```
 
@@ -526,11 +541,12 @@ Foo.init({
 
 模型是 [ES6 类](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
 
-类的实例表示该模型中的一个对象(该对象映射到数据库中表的一行). 这样,模型实例就是 [DAOs](https://en.wikipedia.org/wiki/Data_access_object)
+类的实例表示该模型中的一个对象(该对象映射到数据库中表的一行).
+这样,模型实例就是 [DAOs](https://en.wikipedia.org/wiki/Data_access_object)
 
 ```js
 // 引入模块，解构
-const { Sequelize, Model, DataTypes } = require("sequelize");
+const {Sequelize, Model, DataTypes} = require("sequelize");
 // sqlite数据库
 const sequelize = new Sequelize("sqlite::memory:");
 
@@ -548,28 +564,31 @@ const User = sequelize.define("user", {
 
 (async () => {
   // 自动执行同步
-  await sequelize.sync({ force: true });
+  await sequelize.sync({force: true});
   // 这里是代码
 })();
 ```
 
 ## 创建实例
 
-尽管模型是一个类,不应该直接使用 `new` 运算符来创建实例. 相反,应该使用 [`build`](https://sequelize.org/master/class/lib/model.js~Model.html#static-method-build) 方法：
+尽管模型是一个类,不应该直接使用 `new` 运算符来创建实例.
+相反,应该使用 [`build`](https://sequelize.org/master/class/lib/model.js~Model.html#static-method-build) 方法：
 
 ```js
-const user = User.build({ name: "Lisa" });
+const user = User.build({name: "142vip.cn"});
 
 // 判断实例
 console.log(user instanceof User); // true
-console.log(user.name); // "Lisa"
+console.log(user.name); 
 ```
 
 **以上代码根本无法与数据库通信(请注意,它甚至不是异步的)！**
 
-因为 [`build`](https://sequelize.org/master/class/lib/model.js~Model.html#static-method-build) 方法仅创建一个对象,**表示可以映射到数据库的数据**.
+因为 [`build`](https://sequelize.org/master/class/lib/model.js~Model.html#static-method-build) 方法仅创建一个对象,*
+*表示可以映射到数据库的数据**.
 
-为了将这个实例真正保存(**即持久保存**)在数据库中,应使用 [`save`](https://sequelize.org/master/class/lib/model.js~Model.html#instance-method-save) 方法：
+为了将这个实例真正保存(**即持久保存**)
+在数据库中,应使用 [`save`](https://sequelize.org/master/class/lib/model.js~Model.html#instance-method-save) 方法：
 
 ```js
 // 进行实例对象保存
@@ -578,31 +597,33 @@ await user.save();
 
 **从`await` 用法来看,`save` 是一种异步方法. 实际上,几乎每个 Sequelize 方法都是异步的. `build` 是极少数例外之一.**
 
-Sequelize提供了 [`create`](https://sequelize.org/master/class/lib/model.js~Model.html#static-method-create) 方法,该方法将上述的 `build` 方法和 `save` 方法合并为一个方法：
+Sequelize提供了 [`create`](https://sequelize.org/master/class/lib/model.js~Model.html#static-method-create)
+方法,该方法将上述的 `build` 方法和 `save` 方法合并为一个方法：
 
 ```js
 // 创建持久化对象
-const user = await User.create({ name: "Lisa" });
+const user = await User.create({name: "142vip.cn"});
 
 // Lisa 现在存在于数据库中！
 console.log(user instanceof User); // true
-console.log(user.name); // "Lisa"
+console.log(user.name); 
 ```
 
 ## 实例记录
 
 将模型实例直接记录到控制台`console.log` 会产生很多问题
 
-因为 `Sequelize` 实例具有很多附加条件. 相反,可以使用 `.toJSON()` 方法(顺便说一句,它会自动保证实例被 `JSON.stringify` 编辑好).
+因为 `Sequelize` 实例具有很多附加条件. 相反,可以使用 `.toJSON()` 方法(顺便说一句,它会自动保证实例被 `JSON.stringify`
+编辑好).
 
 ```js
-const user = await User.create({ name: "Lisa" });
+const user = await User.create({name: "142vip.cn"});
 
 // 不建议这样输出
-console.log(user); 
+console.log(user);
 
 // 推荐转化为JSON字符串输出
-console.log(jane.toJSON()); 
+console.log(jane.toJSON());
 // 当然也推荐序列化后输出
 console.log(JSON.stringify(jane, null, 4)); 
 ```
@@ -612,7 +633,7 @@ console.log(JSON.stringify(jane, null, 4));
 当字段未赋值时，内置实例将自动获得默认值：
 
 ```js
-const user = User.build({ name: "Lisa" });
+const user = User.build({name: "142vip.cn"});
 
 // favoriteColor字段的默认值为：green
 console.log(user.favoriteColor); // "green"
@@ -623,14 +644,14 @@ console.log(user.favoriteColor); // "green"
 如果需要更改实例的某个字段的值,则再次调用 `save` 将相应地对其进行更新：
 
 ```js
-const user = await User.create({ name: "Lisa" });
+const user = await User.create({name: "142vip.cn"});
 
 // 当前实例name字段的值
-console.log(user.name); // "Lisa"
+console.log(user.name); 
 
 // 实例对象重新赋值
 user.name = "Tom";
-// 数据库中的名称仍然是 "Lisa"
+// 数据库中的名称仍然是 "142vip.cn"
 
 // 执行save()更新
 await user.save();
@@ -644,10 +665,10 @@ await user.save();
 
 ```js
 // 创建实例
-const user = await User.create({ name: "Lisa" });
+const user = await User.create({name: "142vip.cn"});
 
 // 获取实例对象属性
-console.log(user.name); // "Lisa"
+console.log(user.name); 
 
 // 删除实例，即：从数据库中删除数据
 await user.destroy();
@@ -656,22 +677,23 @@ await user.destroy();
 
 ## 实例重载
 
-可以通过调用 [`reload`](https://sequelize.org/master/class/lib/model.js~Model.html#instance-method-reload) 从数据库中重新加载实例:
+可以通过调用 [`reload`](https://sequelize.org/master/class/lib/model.js~Model.html#instance-method-reload)
+从数据库中重新加载实例:
 
 ```js
 // 创建实例
-const user = await User.create({ name: "Lisa" });
+const user = await User.create({name: "142vip.cn"});
 
 // 获取实例对象属性
-console.log(user.name); // "Lisa"
+console.log(user.name); 
 
 // 实例对象重新赋值
 user.name = "Tom";
-// 数据库中的名称依然是 "Lisa"
+// 数据库中的名称依然是 "142vip.cn"
 
 // 实例对象重载【不会save()更新数据库】
 await jane.reload();
-console.log(user.name); // "Lisa"
+console.log(user.name); 
 ```
 
 **注意：reload() 调用生成一个 `SELECT` 查询,以从数据库中获取最新数据.**
@@ -686,10 +708,10 @@ console.log(user.name); // "Lisa"
 
 ```js
 // 创建实例对象
-const user = await User.create({ name: "Lisa" });
+const user = await User.create({name: "142vip.cn"});
 
 // 获取实例属性
-console.log(user.name); // "Jane"
+console.log(user.name); 
 // 属性未初始化赋值，则采用默认值
 console.log(user.favoriteColor); // "green"
 
@@ -698,10 +720,10 @@ user.name = "Tom;
 user.favoriteColor = "blue";
 
 // 保存数据,只更新name属性
-await user.save({ fields: ['name'] });
+await user.save({fields: ['name']});
 
 // name属性已更新为Tom
-console.log(user.name); // "Tom"
+console.log(user.name); 
 // 显示为 "blue",因为本地对象将其设置为 "blue",在数据库中仍然是 "green"，该字段未作更新
 console.log(user.favoriteColor); // "blue"
 
@@ -709,7 +731,7 @@ console.log(user.favoriteColor); // "blue"
 await user.reload();
 
 // 检查到name属性已改为Tom 其他属性未作更改
-console.log(user.name); // "Tome"
+console.log(user.name); 
 console.log(user.favoriteColor); // "green"
 ```
 
@@ -722,34 +744,37 @@ console.log(user.favoriteColor); // "green"
 
 ## 递增和递减整数值
 
-为了`递增/递减`实例的值而不会遇到并发问题,`Sequelize`提供了 [`increment`](https://sequelize.org/master/class/lib/model.js~Model.html#instance-method-increment) 和 [`decrement`](https://sequelize.org/master/class/lib/model.js~Model.html#instance-method-decrement) 实例方法.
+为了`递增/递减`实例的值而不会遇到并发问题,`Sequelize`
+提供了 [`increment`](https://sequelize.org/master/class/lib/model.js~Model.html#instance-method-increment)
+和 [`decrement`](https://sequelize.org/master/class/lib/model.js~Model.html#instance-method-decrement) 实例方法.
 
 - `increment` 递增
 - `decrement` 递减
 
 ```js
 // 创建实例对象
-const user = await User.create({ name: "Lisa", age: 100 });
+const user = await User.create({name: "142vip.cn", age: 100});
 // age属性+1
-const incrementResult = await user.increment('age', { by: 2 });
+const incrementResult = await user.increment('age', {by: 2});
 ```
 
 **注意: 如只增加 1, 你可以省略 'by' 参数, 只需执行 `user.increment('age')`**
 
-- 在 PostgreSQL 中, 除非设置了 `{returning：false}` 参数(不然它将是 `undefined`), 否则 `incrementResult` 将是更新后的 user.
+- 在 PostgreSQL 中, 除非设置了 `{returning：false}` 参数(不然它将是 `undefined`), 否则 `incrementResult` 将是更新后的
+  user.
 - 在其它数据库方言中, `incrementResult` 将会是 `undefined`. 如果你需要更新的实例, 你需要调用 `user.reload()`.
 
 也可以一次递增多个字段：
 
 ```js
 // 创建实例对象
-const user = await User.create({ name: "Lisa", age: 100,cash: 5000 });
+const user = await User.create({name: "142vip.cn", age: 100, cash: 5000});
 await user.increment({
   'age': 2,
   'cash': 100
 });
 // 如果值增加相同的数量,则也可以使用以下其他语法：
-await user.increment(['age', 'cash'], { by: 2 });
+await user.increment(['age', 'cash'], {by: 2});
 ```
 
 **递减的工作原理完全相同.**

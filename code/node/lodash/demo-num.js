@@ -1,6 +1,5 @@
 /**
  * Lodash数字相关操作
- * @private
  */
 
 const _ = require('lodash')

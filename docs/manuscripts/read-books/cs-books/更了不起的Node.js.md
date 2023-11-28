@@ -302,7 +302,7 @@ app.listen(3000,()=>{
 
 ```
 
-http.request方法的返回值是http.ClientRequest，它继承自OutgoingMessage,所以：http.request方法的返回值和res是一致的
+http.request方法的返回值是http.ClientRequest，它继承自OutgoingMessage，所以：http.request方法的返回值和res是一致的
 
 > http.request==>http.ClientRequest==>OutgoingMessage==>Stream
 

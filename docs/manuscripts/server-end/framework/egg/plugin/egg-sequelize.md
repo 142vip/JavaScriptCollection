@@ -1,13 +1,13 @@
 ---
 title: egg-sequelize
+permalink: /manuscripts/server-end/framework/egg-plugin/egg-sequelize.html
 ---
 
-
+# egg-sequelize
 
 ## 安装
 
 ```bash
-
 ## egg-sequelize插件安装
 npm install egg-sequelize --save
 
@@ -19,15 +19,16 @@ npm install pg pg-hstore --save
 
 ## msSQL数据库，安装
 npm install tedious --save
-
 ```
 
 需要提示的是：
 
-- msSQL是微软的SQLServer数据库
-- egg-sequelize在处理mysql的业务中使用非常频繁
+- `MSSQL`是微软的`SQLServer`数据库
+- `egg-sequelize`在处理`MySQL`的业务中使用非常频繁
 
-另外，这里除了下载`egg-sequelize`插件外，至于需要下载其他什么数据库支撑模块(eg:mysql2/pg-hstore/tedious)是根据`config.js`文件中`dialect: 'mysql'`的配置来进行选择的。
+另外，这里除了下载`egg-sequelize`
+插件外，至于需要下载其他什么数据库支撑模块（例如：mysql2/pg-hstore/tedious）是根据`config.js`
+文件中`dialect: 'mysql'`的配置来进行选择的。
 
 ## 配置
 
@@ -36,11 +37,10 @@ npm install tedious --save
 ```js
 // config/plugin.js
 
-exports.sequelize={
-    enable:true,
-    package:'egg-sequelize'
+exports.sequelize = {
+  enable: true,
+  package: 'egg-sequelize'
 }
-
 ```
 
 ### 数据库配置
@@ -60,32 +60,29 @@ exports.sequelize = {
   delegate: 'myModel', // 【可选】加载所有的模型models到 `app[delegate]` and `ctx[delegate]`对象中，进行委托, 默认是model
   baseDir: 'my_model', // 【可选】加载 `app/${baseDir}`文件夹下的所有js文件作为models,默认为 `model`
   exclude: 'index.js', // 【可选】加载所有模型models时，忽略 `app/${baseDir}/index.js` 文件，支持文件路径和数组
-  
-  
   // 其他默认配置参数
 };
-
 ```
 
 除了上面列举的常用的`sequelize`配置参数，`egg-sequelize`插件还有一些默认的配置，如下：
 
 ```js
 module.exports = {
-    delegate: 'model',
-    baseDir:'model',
-    logging(...args) {
-      // if benchmark enabled, log used
-      const used = typeof args[1] === 'number' ? `[${args[1]}ms]` : '';
-      app.logger.info('[egg-sequelize]%s %s', used, args[0]);
-    },
-    host: 'localhost',
-    port: 3306,
-    username: 'root',
-    benchmark: true,
-    define: {
-      freezeTableName: false, // 表名是否和model的js文件名一致
-      underscored: true,
-    },
+  delegate: 'model',
+  baseDir: 'model',
+  logging(...args) {
+    // if benchmark enabled, log used
+    const used = typeof args[1] === 'number' ? `[${args[1]}ms]` : '';
+    app.logger.info('[egg-sequelize]%s %s', used, args[0]);
+  },
+  host: 'localhost',
+  port: 3306,
+  username: 'root',
+  benchmark: true,
+  define: {
+    freezeTableName: false, // 表名是否和model的js文件名一致
+    underscored: true,
+  },
 };
 ```
 
@@ -120,7 +117,7 @@ model文件 | 加载后类名 |
 
 module.exports = app => {
   // 字段数据类型
-  const { STRING, INTEGER, DATE } = app.Sequelize;
+  const {STRING, INTEGER, DATE} = app.Sequelize;
 
   // model定义
   const User = app.model.define('user', {
@@ -134,8 +131,8 @@ module.exports = app => {
   });
 
   // 定义findByLogin()方法，框架里一般放在service层
-  User.findByLogin = async function(login) {
-      // 注意this对象为当前model实例
+  User.findByLogin = async function (login) {
+    // 注意this对象为当前model实例
     return await this.findOne({
       where: {
         login: login
@@ -144,8 +141,8 @@ module.exports = app => {
   }
 
   //  不能使用箭头函数
-  User.prototype.logSignIn = async function() {
-    return await this.update({ last_sign_in_at: new Date() });
+  User.prototype.logSignIn = async function () {
+    return await this.update({last_sign_in_at: new Date()});
   }
 
   return User;
@@ -173,8 +170,6 @@ class UserController extends Controller {
     this.ctx.body = user;
   }
 }
-
-
 ```
 
 ### 关联
@@ -201,11 +196,10 @@ exports.sequelize = {
       baseDir: 'admin_model', // 从 `app/admin_model/*.js`中加载model文件
       database: 'admin',
       ...
-       // 关于sequelize的其他配置
+      // 关于sequelize的其他配置
     },
   ],
 };
-
 ```
 
 按照上面的示例，配置多数据源后，model可以像下面一样定义：
@@ -214,7 +208,7 @@ exports.sequelize = {
 
 // app/model/user.js 【对应model】
 module.exports = app => {
-  const { STRING, INTEGER, DATE } = app.Sequelize;
+  const {STRING, INTEGER, DATE} = app.Sequelize;
 
   const User = app.model.define('user', {
     login: STRING,
@@ -231,7 +225,7 @@ module.exports = app => {
 
 // app/admin_model/user.js 【对应adminModel】
 module.exports = app => {
-  const { STRING, INTEGER, DATE } = app.Sequelize;
+  const {STRING, INTEGER, DATE} = app.Sequelize;
 
   const User = app.adminModel.define('user', {
     login: STRING,
@@ -245,10 +239,10 @@ module.exports = app => {
 
   return User;
 };
-
 ```
 
-如果按照上面的配置，对不同的数据源定义了相同的model，相同的model文件将会在不同的数据库中执行多次，因此可以使用第二个参数去获取`sequelize`实例对象。
+如果按照上面的配置，对不同的数据源定义了相同的model，相同的model文件将会在不同的数据库中执行多次，因此可以使用第二个参数去获取`sequelize`
+实例对象。
 
 ```js
 
@@ -256,7 +250,7 @@ module.exports = app => {
 
 // 如果model下的js文件将在不同的数据源中被加载多次。可以使用第二个参数(app,model),去获取到sequelize实例 
 module.exports = (app, model) => {
-  const { STRING, INTEGER, DATE } = app.Sequelize;
+  const {STRING, INTEGER, DATE} = app.Sequelize;
 
   const User = model.define('user', {
     login: STRING,
@@ -275,7 +269,8 @@ module.exports = (app, model) => {
 
 ### 自定义sequelize
 
-默认情况下，`egg-sequelize`将会使用`sequelize@5`,也就是V5版本.可以通过配置`config.sequelize.Sequelize`来自定义`sequelize`的对象版本。
+默认情况下，`egg-sequelize`将会使用`sequelize@5`,也就是V5版本.可以通过配置`config.sequelize.Sequelize`来自定义`sequelize`
+的对象版本。
 
 ```js
 // config/config.default.js
@@ -284,7 +279,6 @@ exports.sequelize = {
   // require引入的是项目中自己下载的sequelize版本
   Sequelize: require('sequelize'),
 };
-
 ```
 
 ### 完整的示例
@@ -292,7 +286,7 @@ exports.sequelize = {
 ```js
 // app/model/post.js
 module.exports = app => {
-  const { STRING, INTEGER, DATE } = app.Sequelize;
+  const {STRING, INTEGER, DATE} = app.Sequelize;
 
   const Post = app.model.define('Post', {
     name: STRING(30),
@@ -302,8 +296,8 @@ module.exports = app => {
   });
 
   // 建立表之间的关联
-  Post.associate = function() {
-    app.model.Post.belongsTo(app.model.User, { as: 'user' });
+  Post.associate = function () {
+    app.model.Post.belongsTo(app.model.User, {as: 'user'});
   }
 
   return Post;
@@ -318,11 +312,11 @@ class PostController extends Controller {
   async index() {
     const posts = await this.ctx.model.Post.findAll({
       // 查询指定字段
-      attributes: [ 'id', 'user_id' ],
+      attributes: ['id', 'user_id'],
       // 关联查询
-      include: { model: this.ctx.model.User, as: 'user' },
+      include: {model: this.ctx.model.User, as: 'user'},
       // 条件查询
-      where: { status: 'publish' },
+      where: {status: 'publish'},
       // 排序
       order: 'id desc',
     });
@@ -341,10 +335,9 @@ class PostController extends Controller {
     // params路由传参
     const post = await this.ctx.model.Post.findByPk(this.params.id);
     await post.destroy();
-    this.ctx.body = { success: true };
+    this.ctx.body = {success: true};
   }
 }
-
 ```
 
 ### 同步model到数据库中
@@ -355,8 +348,12 @@ class PostController extends Controller {
 
 ### 迁移
 
-使用[sequelize-cli]可以帮助管理数据库，数据结构和原始数据，这个也是基于[sequelize-migrations](https://sequelize.org/master/manual/migrations.html)来的
+使用[sequelize-cli]
+可以帮助管理数据库，数据结构和原始数据，这个也是基于[sequelize-migrations](https://sequelize.org/master/manual/migrations.html)
+来的
 
 ### 扩展
 
-个人在[egg-sequelize](https://www.npmjs.com/package/egg-sequelize)插件的基础上，开发了[egg-sequelize-plus](https://www.npmjs.com/package/egg-sequelize-plus)插件，来解决生产环境中自动创建数据库的问题，同时优化sequelize对象加载；
+个人在[egg-sequelize](https://www.npmjs.com/package/egg-sequelize)
+插件的基础上，开发了[egg-sequelize-plus](https://www.npmjs.com/package/egg-sequelize-plus)
+插件，来解决生产环境中自动创建数据库的问题，同时优化sequelize对象加载；
