@@ -24,8 +24,12 @@ export const SequelizeOrmSidebar = [
         link: '数据类型.md'
       },
       {
-        text: '查询',
-        link: '查询.md'
+        text: '查询操作',
+        link: '查询操作.md'
+      },
+      {
+        text: 'OP运算符',
+        link: 'OP运算符.md'
       },
       {
         text: '钩子函数',
@@ -38,6 +42,16 @@ export const SequelizeOrmSidebar = [
       {
         text: '事物',
         link: '事物.md'
+      }
+    ]
+  },
+  {
+    text: '最佳实践',
+    prefix: 'practice',
+    children: [
+      {
+        text: 'CURD操作',
+        link: 'CURD操作.md'
       }
     ]
   }

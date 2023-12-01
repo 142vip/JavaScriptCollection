@@ -9,7 +9,8 @@ app.use(async(ctx, next) => {
   const middleRes1 = await next()
   console.log('middleware1===>', middleRes1)
   const rt = ctx.response.get('X-Response-Time')
-  console.log(`请求信息：${ctx.method}-${ctx.url} - ${rt}`)
+  const { method, url } = ctx
+  console.log(`请求信息：${method}-${url} - ${rt}`)
   return 'back middleware1 result'
 })
 

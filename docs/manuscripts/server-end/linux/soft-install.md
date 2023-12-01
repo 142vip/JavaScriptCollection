@@ -73,7 +73,7 @@ cd curl-7.30.1
 make && make install
 ```
 
-当然，如果没有`wget`可以用包管理器下载,也可以使用`curl`命令来代替下载
+当然，如果没有`wget`可以用包管理器下载，也可以使用`curl`命令来代替下载
 
 ```bash
 wget https://curl.haxx.se/download/curl-7.30.1.tar.gz
