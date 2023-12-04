@@ -292,7 +292,7 @@ function Father(name,age){
 
 // 子构造函数
 function Son(name,age){
-  // this指向子构造函数的对象实例,通过call后，父构造函数会指向子构造函数
+  // this指向子构造函数的对象实例，通过call后，父构造函数会指向子构造函数
   Father.call(this,name,age);
 }
 

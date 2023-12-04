@@ -54,6 +54,10 @@ export default defineUserConfig({
         // md doc formatter  headerDepth
         headers: {
             level: [2, 3, 4]
+        },
+        code:{
+            // 关闭代码行号
+            lineNumbers:false
         }
     },
     // 主题配置

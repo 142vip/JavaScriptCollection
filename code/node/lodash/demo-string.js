@@ -1,6 +1,5 @@
 /**
  * lodash字符串相关操作
- * @private
  */
 
 // const _ = require('lodash')

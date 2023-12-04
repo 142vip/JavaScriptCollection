@@ -10,7 +10,8 @@ permalink: /manuscripts/read-books/cs-books/better-nodejs.html
 《狼书（卷1）：更了不起的Node.js》以`Node.js`为主，讲解了`Node.js`的基础知识、开发调试方法、源码原理和应用场景，
 旨在向读者展示如何通过最新的`Node.js`和`npm`编写出更具前端特色、更具工程化优势的代码。
 
-`Node.js`开发简单，性能极好，一经发布便成了明星级项目。随着大前端领域的蓬勃发展，跨平台开发、`API`构建、`Web`应用开发等场景愈加常见，`Node.js`也成为大前端开发的必备“神器”。
+`Node.js`开发简单，性能极好，一经发布便成了明星级项目。随着大前端领域的蓬勃发展，跨平台开发、`API`构建、`Web`
+应用开发等场景愈加常见，`Node.js`也成为大前端开发的必备“神器”。
 
 ## Node.js初识
 
@@ -29,11 +30,12 @@ permalink: /manuscripts/read-books/cs-books/better-nodejs.html
 
 Atwood定律：
 
->任何能够用Javascript实现的应用系统，最终都必将用Javascript实现
+> 任何能够用Javascript实现的应用系统，最终都必将用Javascript实现
 
 ### Node.js早期架构
 
-- Chrome V8引擎：Google发布的开源Javascript引擎，采用`C/C++`编写，在Google的Chrome浏览器中被使用，Chrome V8引擎可以独立运行，也可以嵌入到`C/C++`应用程序中被执行。
+- Chrome V8引擎：Google发布的开源Javascript引擎，采用`C/C++`编写，在Google的Chrome浏览器中被使用，Chrome
+  V8引擎可以独立运行，也可以嵌入到`C/C++`应用程序中被执行。
 - Node.js内置了Chrome V8引擎，所以使用的Javascript语法
 - **Javascript语言的一大特点就是单线程**，即同一时间只能做一件事。单线程就意味着所有的任务都需要排队，前一个任务结束才会执行后一个任务。如果前一个任务耗时很久，后一个任务就不得不一直等待；
 - 一般情况下，排队的时候CPU总是闲着。其实CPU完全可以不管I/O设备而直接挂起处于等待中的任务，先运行排在后面的任务。
@@ -42,6 +44,7 @@ Atwood定律：
 - **只要有CPU资源，就应该尽力执行**，榨干硬件性能；
 
 ### Node.js特点
+
 >
 >Node.js是可扩展的适合用于构建高性能Web应用的最简单的解决方案（**适合构建Web应用、高性能、简单、可拓展**）
 
@@ -73,7 +76,8 @@ Atwood定律：
 
 ```
 
-- 构建RPC服务：Node.js是非常适合用于网络应用开发，其中Socket编程就是一种典型的网络应用开发场景，也就是说："Node.js一样适合用于Socket编程，使用Node.js开发RPC服务是非常合适的"
+- 构建RPC服务：Node.js是非常适合用于网络应用开发，其中Socket编程就是一种典型的网络应用开发场景，也就是说："
+  Node.js一样适合用于Socket编程，使用Node.js开发RPC服务是非常合适的"
 
 > RPC: Remote Procedure Call 远程过程调用，协议服务，常见的作法是将数据库访问返回的数据，以TCP形式传输给调用方；eg：Dubbo、gRPC
 
@@ -194,7 +198,8 @@ nrm -h
 
 ### Hello Node.js
 
-Node.js是基于CommonJS规范的实现，即每个文件都是一个模块，每个模块内代码的写法都必须遵守CommonJS规范，**多文件调用的核心基于模块对外暴露接口和相互引用；**
+Node.js是基于CommonJS规范的实现，即每个文件都是一个模块，每个模块内代码的写法都必须遵守CommonJS规范，*
+*多文件调用的核心基于模块对外暴露接口和相互引用；**
 
 - 使用module.exports定义模块
 - 通过require关键字引用模块
@@ -221,7 +226,7 @@ Node.js是基于CommonJS规范的实现，即每个文件都是一个模块，�
 
 - Model层：先定义模型层(Model)，数据库操作一般采用ORM库来简化操作，模型会和数据库里的表进行关联映射
 
-- DAO（Data　Access Object）：对单个模型进行操作，即：数据库的增删改查
+- DAO（Data Access Object）：对单个模型进行操作，即：数据库的增删改查
 
 - Service层就是业务逻辑层，通常组合多个DAO对象进行某项具体业务处理
 
@@ -302,7 +307,7 @@ app.listen(3000,()=>{
 
 ```
 
-http.request方法的返回值是http.ClientRequest，它继承自OutgoingMessage,所以：http.request方法的返回值和res是一致的
+http.request方法的返回值是http.ClientRequest，它继承自OutgoingMessage，所以：http.request方法的返回值和res是一致的
 
 > http.request==>http.ClientRequest==>OutgoingMessage==>Stream
 
@@ -330,7 +335,7 @@ http.request方法的返回值是http.ClientRequest，它继承自OutgoingMessag
 
 #### 面向过程
 
->Express框架就是典型的面向过程的代码，整个框架大体上感觉只需要用心、专注了解中间件，就可以无障碍的开发和编写了；
+> Express框架就是典型的面向过程的代码，整个框架大体上感觉只需要用心、专注了解中间件，就可以无障碍的开发和编写了；
 
 ```js
 // express模块
@@ -357,7 +362,8 @@ app.listen(3000,()=>{
 
 #### 面向对象
 
-> 在早期的node.js语法中，更多的时候面向过程，随着对Node.js学习和使用的深入，就会了解到ES6语法也借鉴了Java这种面向对象语言的特性，添加class和extends这些关键字，来实现类的封装和继承，这样就可以很简单的写面向对象的程序（当然也是有局限的）
+>
+在早期的node.js语法中，更多的时候面向过程，随着对Node.js学习和使用的深入，就会了解到ES6语法也借鉴了Java这种面向对象语言的特性，添加class和extends这些关键字，来实现类的封装和继承，这样就可以很简单的写面向对象的程序（当然也是有局限的）
 
 ```js
 // 定义学生类Student
@@ -452,7 +458,9 @@ app.user(ctx=>{
 app.listen(3000)
 ```
 
-在koa框架里面，我们可以很熟悉的使用`node app.js`来启动，然而按照这样的代码启动只能初始化一个Node.js进程，往往单进程很容易崩溃，当流量大了、服务过载单线程启动就存在问题，因此可以使用`uncaughtException`捕获异常
+在koa框架里面，我们可以很熟悉的使用`node app.js`
+来启动，然而按照这样的代码启动只能初始化一个Node.js进程，往往单进程很容易崩溃，当流量大了、服务过载单线程启动就存在问题，因此可以使用`uncaughtException`
+捕获异常
 
 ```js
 const fs=require('fs');
@@ -488,7 +496,8 @@ app.listen(3000)
 
 #### 特别注意
 
-- Node.js里约定，**同步代码才能捕获异常**，异步代码不能直接使用try/catch（当然也不是绝对，例如Promise实现的异步流程就可以使用resolve、reject来捕获异常，一般放在回调函数之后）
+- Node.js里约定，**同步代码才能捕获异常**
+  ，异步代码不能直接使用try/catch（当然也不是绝对，例如Promise实现的异步流程就可以使用resolve、reject来捕获异常，一般放在回调函数之后）
 
 - 频繁使用try/catch存在弊端。
 
@@ -574,7 +583,8 @@ console.log(process.cpuUsage(startUsage));
 
 2.事件循环机制：process.nextTick
 
-> process.nextTick() 方法将 callback 添加到下一个时间点的队列。 在 JavaScript 堆栈上的当前操作运行完成之后以及允许事件循环继续之前，此队列会被完全耗尽。 如果要递归地调用 process.nextTick()，则可以创建无限的循环。
+> process.nextTick() 方法将 callback 添加到下一个时间点的队列。 在 JavaScript 堆栈上的当前操作运行完成之后以及允许事件循环继续之前，此队列会被完全耗尽。
+> 如果要递归地调用 process.nextTick()，则可以创建无限的循环。
 
 在上述循环队列中，会设置到`nextTick`和`_tickCallback`两个方法
 
@@ -592,7 +602,7 @@ console.log('print me first')
 - nextTick的作用是把laterCallback放到下一个循环事件中去执行
 - _tickCallback则是一个非公开的方法，是在当前循环事件结束之后调用，以进行下一个事件循环的入口函数。
 
-**Node.js为事件循环维持了一个队列,nextTick负责入队列操作，_tickCallback负责出队列操作；**
+**Node.js为事件循环维持了一个队列，nextTick负责入队列操作，_tickCallback负责出队列操作；**
 
 3.uncaughtException事件
 
@@ -643,11 +653,14 @@ microtask(微任务)-->macrotask(宏任务)
 
 ### process.nextTick(callback)
 
-**process.nextTick(callback)是用于事件循环的下一次循环中调用回调函数的，即：控制入队列，和setTimeout(fn,0)函数的功能类似，但效率更高。**
+**process.nextTick(callback)是用于事件循环的下一次循环中调用回调函数的，即：控制入队列，和setTimeout(fn,0)函数的功能类似，但效率更高。
+**
 
 process.nextTick(callback)将一个函数推迟到代码执行的下一个同步方法执行完毕或异步事件回调函数开始执行时再执行
 
-> 原理： 可以基于Node.js的事件循环进行分析，每次循环就是一次tick,每次tick时，Chrome V8引擎都会从事件队列中取出所有事件依次进行处理，如果遇到nextTick()事件，则将其加入事件队尾，等待下一次tick到来时执行。这样直接导致nextTick()事件将会被延迟执行。
+> 原理： 可以基于Node.js的事件循环进行分析，每次循环就是一次tick，每次tick时，Chrome
+> V8引擎都会从事件队列中取出所有事件依次进行处理，如果遇到nextTick()
+> 事件，则将其加入事件队尾，等待下一次tick到来时执行。这样直接导致nextTick()事件将会被延迟执行。
 
 ## 模块与核心
 
@@ -704,11 +717,12 @@ Node.js对模块的定义非常简单，主要分为模块应用、模块定义�
 > 用来引用模块
 
 ##### export
+
 >
 > 用来导出模块，包括标识符(identifier)和模块内容(contents)
 
 - module.exports 对外导出的对象只能有一个
-- exports.XXX  对外导出的值可以有多个，并且两者同时存在时，exports无效，module.exports的优先级更高；
+- exports.XXX 对外导出的值可以有多个，并且两者同时存在时，exports无效，module.exports的优先级更高；
 
 #### 模块定义
 
@@ -924,7 +938,8 @@ log('something')
 
 #### ES模块
 
-> ES模块的新特性往往引人入胜，ES模块的目标是创建一个同时兼容CommonJS和AMD的格式，使语法更加的紧凑，通过编译时加载，在编译时就能够确定模块的依赖关系，比CommonJS模块的加载效率更高。而在异步加载和配置模块加载方面，从执行效率、灵活度来看都优于CommonJS语法
+>
+ES模块的新特性往往引人入胜，ES模块的目标是创建一个同时兼容CommonJS和AMD的格式，使语法更加的紧凑，通过编译时加载，在编译时就能够确定模块的依赖关系，比CommonJS模块的加载效率更高。而在异步加载和配置模块加载方面，从执行效率、灵活度来看都优于CommonJS语法
 
 ES模块的优势：
 
@@ -964,6 +979,7 @@ export {foot as foot_copy,bar} from 'XXXX'
 注意as的使用，有时候为了代码方便，别名是非常有必要的
 
 ###### 具名导出
+
 >
 > 导出对象的指定别名的过程叫做具名导出
 
@@ -1080,7 +1096,8 @@ export default (function(){});
 
 ## 异步写法与流程控制
 
-**流程控制是程序中的逻辑控制的统称，** Node.js中每个函数都是异步的，性能虽然会更好，但容易造成**callback hell（回调地狱）**，因此为了解决API级别的回调地狱问题，就需要使用的到流程控制的部分——异步流程控制
+**流程控制是程序中的逻辑控制的统称，** Node.js中每个函数都是异步的，性能虽然会更好，但容易造成**callback hell（回调地狱）**
+，因此为了解决API级别的回调地狱问题，就需要使用的到流程控制的部分——异步流程控制
 
 **可以这样说，掌握了Nodejs里的异步流程控制，就基本掌握了Nodejs一半以上的内容**
 
@@ -1115,13 +1132,16 @@ $.ajax({
 
 **Ajax的核心是XHR，即：XMLHttpRequest；Nodejs的核心是EventLoop，即：事件循环**，异步请求不需要取刷新页面就可以获取数据；
 
-EventLoop是维护一个回调函数的**队列**，当回调函数执行时，回调函数就会被放入到这个队列中。Javascript引擎直到异步函数执行完成后，才会开始处理EventLoop，也就是说Javascript代码不是多线程的，虽然表现出来的效果是跟多线程很相似的。**EventLoop维护的是先进先出（First in First out）的队列，说明回调函数在队列中是顺序执行的**；
+EventLoop是维护一个回调函数的**队列**
+，当回调函数执行时，回调函数就会被放入到这个队列中。Javascript引擎直到异步函数执行完成后，才会开始处理EventLoop，也就是说Javascript代码不是多线程的，虽然表现出来的效果是跟多线程很相似的。
+**EventLoop维护的是先进先出（First in First out）的队列，说明回调函数在队列中是顺序执行的**；
 
 EventLoop依赖libuv库，而libuv库采用的是异步和事件驱动的风格，主要功能是为开发人员提供一套基于I/O通知的回调函数；
 
 ### API介绍
 
-API:Application Programming Interface简称，异步的核心在于Nodejs SDK的API调用，然后交由EventLoop（libuv）去执行。**因此Nodejs的API操作非常重要**； [Nodejs Api官网](http://nodejs.cn/api/)
+API:Application Programming Interface简称，异步的核心在于Nodejs SDK的API调用，然后交由EventLoop（libuv）去执行。*
+*因此Nodejs的API操作非常重要**； [Nodejs Api官网](http://nodejs.cn/api/)
 
 ```js
 const fs=require('fs');
@@ -1173,7 +1193,9 @@ callback function采用错误优先(error-first)的回调方式，而EventEmitte
 
 错误优先回调方式的写法:
 
-- 回调函数的第一个参数返回的是error对象（程序出错抛出来的异常），如果发生错误，该对象会作为第一个参数返回，**如果正常执行，一般返回是null，方便在下文进行if(error)判错处理**（其实只要返回是的非ture，应该不影响后续判断，不过约定俗成吧~）
+- 回调函数的第一个参数返回的是error对象（程序出错抛出来的异常），如果发生错误，该对象会作为第一个参数返回，*
+  *如果正常执行，一般返回是null，方便在下文进行if(error)判错处理**
+  （其实只要返回是的非ture，应该不影响后续判断，不过约定俗成吧~）
 
 - 回调函数的第二个参数返回的是所有成功响应的结果数据，如果结果正常，则没有发生错误，参数err就会被设置成null，并在第二个参数处返回成功响应的结果；
 
@@ -1234,7 +1256,8 @@ function readJSON(filePath,callback){
 
 ### EventEmitter
 
-> 事件模块是Node.js内置的对观察者模式的实现，通过EventEmitter属性提供一个构造函数。该构造函数的实例中具有两个常用的方法，其中on方法可以用来监听指定事件，并触发回调函数，另外一个emit方法可以用来发布事件。可以通过发布订阅模型来理解；
+>
+事件模块是Node.js内置的对观察者模式的实现，通过EventEmitter属性提供一个构造函数。该构造函数的实例中具有两个常用的方法，其中on方法可以用来监听指定事件，并触发回调函数，另外一个emit方法可以用来发布事件。可以通过发布订阅模型来理解；
 
 ```state
 订阅-->发布
@@ -1349,7 +1372,8 @@ myEmitter.emit('test',10)
 
 ### Promise对象
 
-**每个Promise对象都有then()方法，也就是说，then()方法是定义在原型对象Promise.protype上的，作用是为Promise实例添加状态改变时的回调函数**
+**每个Promise对象都有then()方法，也就是说，then()方法是定义在原型对象Promise.protype上的，作用是为Promise实例添加状态改变时的回调函数
+**
 
 ```js
 Promise.protype.then=function(success,fail){
@@ -1383,9 +1407,11 @@ pending-->fulfilled
 pending-->rejected
 ```
 
-以上两种状态的转换都是单向的，而且fulfilled和rejected两个状态之间是不能互相转换的,最重要的是：**只有异步操作有结果的手，可能决定当前Promise处于那种状态，任何其他操作都没法改变这个状态**
+以上两种状态的转换都是单向的，而且fulfilled和rejected两个状态之间是不能互相转换的,最重要的是：*
+*只有异步操作有结果的手，可能决定当前Promise处于那种状态，任何其他操作都没法改变这个状态**
 
 ### Promise的API方法
+
 >
 > Promise规范非常简单，只包含一个构造函数和六个方法
 
@@ -1435,13 +1461,13 @@ Promise.resolve(1).then(ret=>{
 - Promise.protype.then()
 
 > 语法：
-p.then(onFilfilled,onRejected) 或者p.then(value=>{.............})。
-此处onRejected一般省略
+> p.then(onFilfilled,onRejected) 或者p.then(value=>{.............})。
+> 此处onRejected一般省略
 
 - Promise.protype.catch()
 
 > 语法：
-p.catch(onRejected) 或者p.catch(error=>{.............})
+> p.catch(onRejected) 或者p.catch(error=>{.............})
 
 - Promise.all()
 
@@ -1453,7 +1479,8 @@ p.catch(onRejected) 或者p.catch(error=>{.............})
 
 #### Promise化
 
-在Javascript中，不是所有的异步函数和库都支持开箱即用的Promise,在大多数情况下，必须将一个典型的基于回调的函数转换成一个返回Promise的函数，这个过程为**promisification**
+在Javascript中，不是所有的异步函数和库都支持开箱即用的Promise,在大多数情况下，必须将一个典型的基于回调的函数转换成一个返回Promise的函数，这个过程为
+**promisification**
 
 - promisefy
 - promisefyAll
@@ -1514,4 +1541,5 @@ obj.aAsync().then(obj.bAsync()).then(obj.cAsync()).catch(err=>{
 
 在Nodejs的世界里，http是最常用的模块，它简单且效率非常高，是被应用最广泛的模块。如果说http是Node.js的核心模块，那么Stream就是核心中的核心，是保证http高效的秘密武器。相比之下，events显得极为底层，是为核心模块服务的；
 
-**function* 这种声明方式(function关键字后跟一个星号）会定义一个生成器函数 (generator function)，它返回一个  Generator  对象。**
+**function* 这种声明方式(function关键字后跟一个星号）会定义一个生成器函数 (generator function)，它返回一个 Generator
+对象。**

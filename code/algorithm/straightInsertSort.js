@@ -1,6 +1,6 @@
 
 /**
- *  ++i 和 i++ 的区别： https://zhidao.baidu.com/question/40433825.html
+ * ++i 和 i++ 的区别： https://zhidao.baidu.com/question/40433825.html
  */
 
 function straightInsertSort(arr, len) {

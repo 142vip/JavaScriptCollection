@@ -1,4 +1,3 @@
-
 export const ServerEndSidebar = [
   {
     text: '基础知识',
@@ -16,18 +15,18 @@ export const ServerEndSidebar = [
     text: 'TypeScript',
     link: 'typescript/简介.md'
   },
-
   {
     text: 'ORM框架',
     // collapsible: true,
+    prefix: 'orm',
     children: [
       {
         text: 'Sequelize',
-        link: 'orm/sequelize'
+        link: 'sequelize/quick-start.html'
       },
       {
         text: 'TypeOrm',
-        link: 'orm/typeorm'
+        link: 'typeorm/quick-start.html'
       }
     ]
   },
@@ -48,14 +47,14 @@ export const ServerEndSidebar = [
         text: 'Egg.js',
         link: 'egg-tutorial/introduce.html'
       }
-    // {
-    //   text: 'Nest.js',
-    //   link: 'nest-learn.md'
-    // },
-    // {
-    //   text: 'Midway.js',
-    //   link: 'midway-learn.md'
-    // }
+      // {
+      //   text: 'Nest.js',
+      //   link: 'nest-learn.md'
+      // },
+      // {
+      //   text: 'Midway.js',
+      //   link: 'midway-learn.md'
+      // }
     ]
   },
   {
@@ -78,8 +77,16 @@ export const ServerEndSidebar = [
     ]
   },
   {
+    text: '设计模式',
+    link: 'design-patterns/Readme.md'
+  },
+  {
+    text: 'Linux系统',
+    link: 'linux/base-install.md'
+  },
+  {
     text: '服务部署',
-    // collapsible: true,
+    collapsible: true,
     prefix: 'server-deploy',
     children: [
       {
@@ -100,13 +107,10 @@ export const ServerEndSidebar = [
       }
     ]
   },
-  {
-    text: 'Linux操作',
-    link: 'linux/base-install.md'
-  },
+
   {
     text: '建站技能',
-    // collapsible: true,
+    collapsible: true,
     prefix: 'build-website',
     children: [
       {
@@ -131,5 +135,4 @@ export const ServerEndSidebar = [
       }
     ]
   }
-
 ]

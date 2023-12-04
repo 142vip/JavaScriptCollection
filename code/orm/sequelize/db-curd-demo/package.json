@@ -1,0 +1,16 @@
+{
+  "name": "db-curd-demo",
+  "version": "0.0.1",
+  "description": "SequelizeORM框架的一些增删改查操作",
+  "dependencies": {
+    "sequelize": "^6.35.1"
+  },
+  "scripts": {
+    "dev": "node app.js"
+  },
+  "author": {
+    "name": "微信公众号：储凡",
+    "email": "fairy_vip@2925.com"
+  },
+  "license": "MIT"
+}
