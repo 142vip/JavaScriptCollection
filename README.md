@@ -1,4 +1,3 @@
-
 <div align="center">
   <img
     alt="JavaScriptCollection"  
@@ -203,7 +202,8 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 ### Nest.js框架
 
-> `Nestjs`框架推崇`Typescript`语法，友好的兼容`Express`框架，因此在学习`Nestjs`框架之前，请务必熟悉`Express`框架、`Typescript`入门。
+> `Nestjs`框架推崇`Typescript`语法，友好的兼容`Express`框架，因此在学习`Nestjs`框架之前，请务必熟悉`Express`
+> 框架、`Typescript`入门。
 
 - [ ] [核心基础概念]()
 - [ ] [项目创建初始化入门]()
@@ -374,7 +374,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 ### Dubbo
 
-> Alibaba开发的一个RPC框架，远程接口基于Java Interface, 依托于Spring框架(**Java技术栈重点研究**)
+> Alibaba开发的一个RPC框架，远程接口基于Java Interface, 依托于`Spring`框架(**Java技术栈重点研究**)
 
 ### Thrift
 
@@ -389,6 +389,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 > 数据存储
 
 ### Logstash
+
 >
 > 数据收集
 
@@ -480,6 +481,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
   ...
 
 ### 非技术类
+
 >
 > 主要是跟计算机无关的一些书，在看完之后，会选择性的进行思维导图、经典词句整理，也可能添加个人思考
 
