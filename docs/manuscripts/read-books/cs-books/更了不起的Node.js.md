@@ -57,21 +57,31 @@ Atwood定律：
 // 常见接口返回格式：
 
 {
-    status:{
-        code:100,
-        message:'success'
-    },
-    response:{
-        ...result...
-    }
+  status:{
+    code:100,
+      message
+  :
+    'success'
+  }
+,
+  response:{
+  ...
+    result
+  ...
+  }
 }
 
 // 个人常用
 
 {
-    code:200,
-    message:'操作成功',
-    result:...result... // 常见false true [] {} 等结构
+  code:200,
+    message
+:
+  '操作成功',
+    result
+:...
+  result
+... // 常见false true [] {} 等结构
 }
 
 ```
@@ -261,48 +271,48 @@ Node.js是基于CommonJS规范的实现，即每个文件都是一个模块，�
 
 // 相关模块
 
-const http=require('http')
-const fs=require('fs')
+const http = require('http')
+const fs = require('fs')
 
 // 实例化对象
 
-const app=http.createServer((req,res)=>{
-    // 路由白名单
-    if('/remote'===req.url){
-        res.writeHead(200,{'Content-Type':'text/plain'});
-        return res.end('hello remote page')
-    }else{
-        // 代理
-        proxy(req,res)
-    }
+const app = http.createServer((req, res) => {
+  // 路由白名单
+  if ('/remote' === req.url) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    return res.end('hello remote page')
+  } else {
+    // 代理
+    proxy(req, res)
+  }
 })
 
-function proxy(req,res){
-    // 基础配置
-    let options={
-        host:req.host,
-        port:3000,
-        headers:req.headers,
-        path:'/remote',
-        agent:false,
-        method:'GET'
-    }
+function proxy(req, res) {
+  // 基础配置
+  let options = {
+    host: req.host,
+    port: 3000,
+    headers: req.headers,
+    path: '/remote',
+    agent: false,
+    method: 'GET'
+  }
 
-    // 初始化代理
-    let httpProxy=http.request(options,response=>{
-        // 将res放到response流里面，进行代理
-        response.pipe(res)
-    })
-    // 
-    req.pipe(httpProxy)
+  // 初始化代理
+  let httpProxy = http.request(options, response => {
+    // 将res放到response流里面，进行代理
+    response.pipe(res)
+  })
+  // 
+  req.pipe(httpProxy)
 }
 
 // 监听端口
 
-app.listen(3000,()=>{
-    // 获取端口
-    const port=app.address().port
-    console.log(`server is running at http://127.0.0.1:${port}`)
+app.listen(3000, () => {
+  // 获取端口
+  const port = app.address().port
+  console.log(`server is running at http://127.0.0.1:${port}`)
 })
 
 ```
@@ -339,26 +349,26 @@ http.request方法的返回值是http.ClientRequest，它继承自OutgoingMessag
 
 ```js
 // express模块
-const express =require('express')
+const express = require('express')
 // 实例化对象
-const app=express();
+const app = express();
 
 // 简单路由接口
 
-app.get('/index',(req,res)=>{
-    // 返回数据
-    res.send('hello express!!!')
+app.get('/index', (req, res) => {
+  // 返回数据
+  res.send('hello express!!!')
 })
 
 // 启动服务，监听端口
 
-app.listen(3000,()=>{
-    console.log('express server is running on port 3000')
+app.listen(3000, () => {
+  console.log('express server is running on port 3000')
 })
 
 ```
 
-如上，一个简单的web服务就跑起来了，当我在实习第一次接触到Node.js的时候，就被这种快速的方式所吸引，记得还感慨过Spring的那一套
+如上，一个简单的web服务就跑起来了，当我在实习第一次接触到Node.js的时候，就被这种快速的方式所吸引，记得还感慨过`Spring`的那一套
 
 #### 面向对象
 
@@ -367,35 +377,35 @@ app.listen(3000,()=>{
 
 ```js
 // 定义学生类Student
-class Student{
-    // 构造函数
-    constructor(name){
-        this.name=name
-    }
+class Student {
+  // 构造函数
+  constructor(name) {
+    this.name = name
+  }
 
-    // 定义函数
-    speak(){
-        console.log('my name is ',this.name)
-    }
+  // 定义函数
+  speak() {
+    console.log('my name is ', this.name)
+  }
 }
 
 // 实例化
 
-const student=new Student('Tom')
+const student = new Student('Tom')
 
 // 调用类方法
 student.speak()
 
 
 // 类的继承
-class Boy extends Student{
-    speak(){
-        console.log(this.name,'is good~')
-    }
+class Boy extends Student {
+  speak() {
+    console.log(this.name, 'is good~')
+  }
 }
 
 // 实例化
-const boy=new Boy('Tim')
+const boy = new Boy('Tim')
 ```
 
 对于了解Java那一套的开发者，看到这里的类、继承、static方法的时候，其实会感觉比较简单，对于控制反转、切面编程那些Javascript目前还不能实现，不过有TypeScript实现了类似的功能，值得学习；
@@ -406,13 +416,13 @@ const boy=new Boy('Tim')
 
 ```js
 // 类似箭头函数 可读性不强
-const map=fn=>array=>array.map(fn)
+const map = fn => array => array.map(fn)
 
 // 等价于
-const map=fn=>{
-    return array=>{
-        return array.map(fn)
-    }
+const map = fn => {
+  return array => {
+    return array.map(fn)
+  }
 }
 ```
 
@@ -440,18 +450,18 @@ const map=fn=>{
 常见单线程实例：
 
 ```js
-const fs=require('fs');
-const Koa=require('koa')
+const fs = require('fs');
+const Koa = require('koa')
 
 // 实例化koa对象
 
-const app=new Koa()
+const app = new Koa()
 
 
 // 中间件拦截
 
-app.user(ctx=>{
-    ctx.body='hello world'
+app.user(ctx => {
+  ctx.body = 'hello world'
 })
 
 // 监听端口
@@ -463,23 +473,23 @@ app.listen(3000)
 捕获异常
 
 ```js
-const fs=require('fs');
-const Koa=require('koa')
+const fs = require('fs');
+const Koa = require('koa')
 
 // 实例化koa对象
 
-const app=new Koa()
+const app = new Koa()
 
 
 // 中间件拦截
 
-app.user(ctx=>{
-    ctx.body='hello world'
+app.user(ctx => {
+  ctx.body = 'hello world'
 })
 
 // 代码优化 
-process.on('uncaughtException',err=>{
-    console.log('catch err :',err)
+process.on('uncaughtException', err => {
+  console.log('catch err :', err)
 })
 
 // 监听端口
@@ -574,7 +584,7 @@ const startUsage = process.cpuUsage();
 
 // 将 CPU 旋转 500 毫秒。
 const now = Date.now();
-while (Date.now() - now < 500);
+while (Date.now() - now < 500) ;
 
 console.log(process.cpuUsage(startUsage));
 // { user: 514883, system: 11226 }
@@ -590,8 +600,8 @@ console.log(process.cpuUsage(startUsage));
 
 ```js
 // 
-function lateCallback(){
-    console.log('print me later')
+function lateCallback() {
+  console.log('print me later')
 }
 
 process.nextTick(laterCallback)
@@ -609,9 +619,9 @@ console.log('print me first')
 > 当Nodejs发现一个没有被捕获的异常时候，会触发这个事件。如果这个事件中存在回调函数，Node.js不会强制结束进程。
 
 ```js
-process.on('uncaughtException',err=>{
-    // 处理错误
-    ....
+process.on('uncaughtException', err => {
+  // 处理错误
+....
 })
 ```
 
@@ -674,30 +684,30 @@ exports是一个特殊的对象，它的任何输出都将作为一个对外暴�
 ```js
 // 导出演示
 
-const PI=Math.PI
+const PI = Math.PI
 
-exports.PI=PI
+exports.PI = PI
 
 
 // 引入演示
 
-const PI=require('XXX')
+const PI = require('XXX')
 
 ```
 
 特别注意的是：当module.exports和exports对象同时存在时，以module.exports为准
 
 ```js
-exports=()=>{
-    return {
-        a:123
-    }
+exports = () => {
+  return {
+    a: 123
+  }
 }
 
-module.exports=()=>{
-    return {
-        a:123
-    }
+module.exports = () => {
+  return {
+    a: 123
+  }
 }
 
 // 此时，只有module.exports有效
@@ -729,12 +739,12 @@ Node.js对模块的定义非常简单，主要分为模块应用、模块定义�
 > 可以将关联代码封装到一个代码单元中，创建一个模块可以理解为全部有关联的函数放在一个文件中
 
 ```js
-const sayHelloEnglish=function(){
-    return 'hello'
+const sayHelloEnglish = function () {
+  return 'hello'
 }
 
-module.exports={
-    sayHelloEnglish
+module.exports = {
+  sayHelloEnglish
 }
 ```
 
@@ -751,29 +761,29 @@ module.exports-->exports
 ```js
 
 // 变量引用
-const exports=module.exports={}
+const exports = module.exports = {}
 
 ```
 
 ```js
-exports.sayHelloInChinese=()=>{
-    return '你好'
+exports.sayHelloInChinese = () => {
+  return '你好'
 }
 
 
-exports.sayHelloInEnglish=()=>{
-    return 'Hello'
+exports.sayHelloInEnglish = () => {
+  return 'Hello'
 }
 ```
 
 ```js  
-module.exports={
-    sayHelloInEnglish:()=>{
-        return 'Hello';
-    },
-    sayHelloInChinese:()=>{
-        return '你好'
-    }
+module.exports = {
+  sayHelloInEnglish: () => {
+    return 'Hello';
+  },
+  sayHelloInChinese: () => {
+    return '你好'
+  }
 }
 
 ```
@@ -793,17 +803,17 @@ module.exports不一定非要返回实例化对象
 
 ```js
 
-module.exports=1
-module.exports=NaN
+module.exports = 1
+module.exports = NaN
 // 导出字符串
-module.exports='foo'
+module.exports = 'foo'
 // 导出对象
-module.exports={foo:'bar'}
+module.exports = {foo: 'bar'}
 // 导出数组
-module.exports=['foot','bar']
+module.exports = ['foot', 'bar']
 // 导出函数方法
-module.exports=()=>{
-    
+module.exports = () => {
+
 }
 ...
 
@@ -817,12 +827,12 @@ module.exports=()=>{
 给module.exports添加属性类似给exports添加属性，exports可以看作是module.exports的一个引用；
 
 ```js
-module.exports.name=()=>{
-    console.log('My name is Lemmy Kilmister ')
+module.exports.name = () => {
+  console.log('My name is Lemmy Kilmister ')
 }
 
-exports.name=()=>{
-    console.log('My name is Lemmy Kilmister ')
+exports.name = () => {
+  console.log('My name is Lemmy Kilmister ')
 }
 ```
 
@@ -835,9 +845,9 @@ exports.name=()=>{
 推荐最佳写法
 
 ```js
-exports=module.exports=opts=>{
-    // 除了工具类用exports.xxxx 其他都建议用module.exports
-    ....
+exports = module.exports = opts => {
+  // 除了工具类用exports.xxxx 其他都建议用module.exports
+....
 }
 
 ```
@@ -916,12 +926,12 @@ Nodejs中的全局对象和Javascript里的普通对象是一样的，主要是�
 ```js
 
 // 扩展debug变量，并进行加载
-global.debug=true;
+global.debug = true;
 
 // 使用扩展的debug变量
-if(debug===true){
-    .....
-    
+if (debug === true) {
+.....
+
 }
 
 ```
@@ -930,7 +940,7 @@ if(debug===true){
 
 ```js
 // log方法扩展
-global.log=console.log
+global.log = console.log
 
 // 等价使用console.log('something')
 log('something')
@@ -972,7 +982,7 @@ import {readFile} from 'fs'
 export * from 'XXXXX'
 
 // 按照需要进行导出
-export {foot as foot_copy,bar} from 'XXXX'
+export {foot as foot_copy, bar} from 'XXXX'
 
 ```
 
@@ -984,7 +994,7 @@ export {foot as foot_copy,bar} from 'XXXX'
 > 导出对象的指定别名的过程叫做具名导出
 
 ```js
-export {MY_CONST as FOO,myFunc};
+export {MY_CONST as FOO, myFunc};
 
 export {foot as test}
 
@@ -1025,9 +1035,9 @@ export function* myGenFunc(){
 
 ```js
 
-export class MyClass{
-    // 类实现
-    ...
+export class MyClass {
+  // 类实现
+...
 }
 
 ```
@@ -1118,15 +1128,13 @@ export default (function(){});
 ```js
 //  存在于浏览器中的异步
 $.ajax({
-    url:'XXXXX',
-    type:'get',
-    data:{
-        
-    },
-    success:ret=>{
-        // 回调函数的方式，返回结果
-        console.log(ret)
-    }
+  url: 'XXXXX',
+  type: 'get',
+  data: {},
+  success: ret => {
+    // 回调函数的方式，返回结果
+    console.log(ret)
+  }
 })
 ```
 
@@ -1232,24 +1240,25 @@ module.exports=function(dragonName,callback){
 **只有同步代码才能使用try-catch，在回调函数中不能随意使用！**经典异常捕获方法：
 
 ```js
-const fs=require('fs');
-function readJSON(filePath,callback){
-    fs.readFile(filePath,function(err,data){
-        const parsedJSON;
-        // 错误处理
-        if(err){
-            return callback(err);
-        }
-        // 解析
-        try{
-            parsedJSON=JSON.parse(data)
-        }catch(exception){
-            return callback(exception)
-        }
-        
-        // 无异常，返回数据
-        return callback(null,parsedJSON)
-    })
+const fs = require('fs');
+
+function readJSON(filePath, callback) {
+  fs.readFile(filePath, function (err, data) {
+    const parsedJSON;
+    // 错误处理
+    if (err) {
+      return callback(err);
+    }
+    // 解析
+    try {
+      parsedJSON = JSON.parse(data)
+    } catch (exception) {
+      return callback(exception)
+    }
+
+    // 无异常，返回数据
+    return callback(null, parsedJSON)
+  })
 }
 
 ```
@@ -1300,8 +1309,8 @@ EventEmitter对象的事件触发和监听时同步的，这里和前端的事�
 ```js
 // jquery
 
-$('#footer').on('click',function(){
-    console.log('点击后的效果')
+$('#footer').on('click', function () {
+  console.log('点击后的效果')
 })
 
 // 此处的trigger类似于emit，事件的触发器
@@ -1310,8 +1319,8 @@ $('#footer').trigger('click');
 
 // click事件，也可以支持简写
 
-$('#footer').click(()=>{
-    console.log('点击后触发')
+$('#footer').click(() => {
+  console.log('点击后触发')
 })
 
 ```
@@ -1319,11 +1328,11 @@ $('#footer').click(()=>{
 emit()方法用于触发事件，on()方法用于注册事件。对于on()方法而言，默认情况下，Node.js允许同一个事件最多指定10个回调函数
 
 ```js
-event.on('someEvent',()=>{
-    console.log('event 1')
+event.on('someEvent', () => {
+  console.log('event 1')
 })
-event.on('someEvent',()=>{
-    console.log('event 2')
+event.on('someEvent', () => {
+  console.log('event 2')
 })
 
 ......// 更多
@@ -1341,17 +1350,18 @@ event.setMaxListeners(100)
 事件传参举例：
 
 ```js
-const eventEmitter=require('events')
-const myEmitter=new EventEmitter();
+const eventEmitter = require('events')
+const myEmitter = new EventEmitter();
 
-function testConnection(param){
-    console.log('传递的参数'，param)
+function testConnection(param) {
+  console.log('传递的参数'，param
+)
 }
 
-myEmitter.on('test',testConnection)
+myEmitter.on('test', testConnection)
 
 // 参数传递10
-myEmitter.emit('test',10)
+myEmitter.emit('test', 10)
 ```
 
 ### 事件
@@ -1376,11 +1386,11 @@ myEmitter.emit('test',10)
 **
 
 ```js
-Promise.protype.then=function(success,fail){
-    this.done(success);
-    this.fail(fail);
-    // 返回this
-    return this
+Promise.protype.then = function (success, fail) {
+  this.done(success);
+  this.fail(fail);
+  // 返回this
+  return this
 }
 ```
 
@@ -1437,14 +1447,14 @@ Promise.protype.catch()
 **特别值得注意的是：resolve相当于Promise.resolve的别名，reject相当于Promise.reject的别名**。
 
 ```js
-new Promise(resolve=>{
-    resolve(1)
-}).then(ret=>{
-    console.log('resolve传递值：',ret)
+new Promise(resolve => {
+  resolve(1)
+}).then(ret => {
+  console.log('resolve传递值：', ret)
 })
 // 类似于别名
-Promise.resolve(1).then(ret=>{
-    console.log('resolve传递值：',ret)
+Promise.resolve(1).then(ret => {
+  console.log('resolve传递值：', ret)
 })
 ```
 

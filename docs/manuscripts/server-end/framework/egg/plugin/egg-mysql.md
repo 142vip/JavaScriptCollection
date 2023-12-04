@@ -7,7 +7,7 @@ permalink: /manuscripts/server-end/framework/egg-plugin/egg-mysql.html
 
 时间：2020年10月27日
 
-从基础的Node.js开发开始，当你使用Egg框架后，框架一般都会值吃ORM来操作数据库，在`Egg.js`的世界里，操作`MySQL`可选的方案有：
+从基础的Node.js开发开始，当你使用`Egg`框架后，框架一般都会值吃ORM来操作数据库，在`Egg.js`的世界里，操作`MySQL`可选的方案有：
 
 - egg-mysql(**依赖ali-rds模块**)
 - egg-sequelize(依赖sequelize模块，非常推荐)
