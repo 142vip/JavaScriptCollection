@@ -17,6 +17,7 @@ import {KoaSidebar} from "../../manuscripts/server-end/framework/koa/koa.sidebar
 import {ExpressSidebar} from "../../manuscripts/server-end/framework/express/express.sidebar";
 import {DesignPatternsSidebar} from "../../manuscripts/server-end/design-patterns/designPatterns.sidebar";
 import {SequelizeOrmSidebar} from "../../manuscripts/server-end/orm/sequelize/sequelizeOrm.sidebar";
+import {TypeormSidebar} from "../../manuscripts/server-end/orm/typeorm/typeorm.sidebar";
 
 export default {
   "/manuscripts/front-end": FrontEndSidebar,
@@ -32,6 +33,7 @@ export default {
   "/manuscripts/server-end/base": BaseSidebar,
   "/manuscripts/server-end/node-learn": NodeLearnSidebar,
   "/manuscripts/server-end/orm/sequelize": SequelizeOrmSidebar,
+  "/manuscripts/server-end/orm/typeorm": TypeormSidebar,
   "/manuscripts/develop-skill": DevelopSkillSidebar,
   // "/manuscripts/solo-algorithm": soloAlgorithmSidebar,
   "/manuscripts/read-books": ReadBooksSidebar,
