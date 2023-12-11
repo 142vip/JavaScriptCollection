@@ -2,6 +2,7 @@
 title: 和为S的两个数字
 permalink: /manuscripts/solo-algorithm/sword-point/find-sum-nums.html
 ---
+
 # 和为S的两个数字
 
 ## 题目链接
@@ -16,8 +17,8 @@ permalink: /manuscripts/solo-algorithm/sword-point/find-sum-nums.html
 
 一些基本数学知识：
 
-- 根据`x+y=sum` 求`xy`最小  由于array是递增的，则`x` 、`y` 距离越远 xy值越小，x y距离越近xy值越大
-- x+y=(x+m)+(y-m)=sum  假设x是左边元素，y是右边元素 即：y>x
+- 根据`x+y=sum` 求`xy`最小 由于array是递增的，则`x` 、`y` 距离越远 xy值越小，x y距离越近xy值越大
+- x+y=(x+m)+(y-m)=sum 假设x是左边元素，y是右边元素 即：y>x
 - 可以理解乘积(x+m)(y-m)=xy-(y-x)*m-m^2 其中y-x>0 m^2
 - 所以m值越大，其实(x+m)(y-m)越小，也就是x与y间隔也大 xy越小 ，由于array是递增的，所以只需要找到第一个满足和为sum的即可
 
@@ -34,7 +35,7 @@ permalink: /manuscripts/solo-algorithm/sword-point/find-sum-nums.html
 
 方案三：
 
-- 利用Map存储已有元素
+- 利用`Map`存储已有元素
 
 方案四：
 
@@ -47,7 +48,7 @@ permalink: /manuscripts/solo-algorithm/sword-point/find-sum-nums.html
 ## 一些建议
 
 - 了解二分(折半)查找的原理
-- 熟练掌握Map数据结构的一些api方案
+- 熟练掌握`Map`数据结构的一些api方案
 - 有时候暴力方案比较直接，存在较大优化空间
 
 双指针模型：

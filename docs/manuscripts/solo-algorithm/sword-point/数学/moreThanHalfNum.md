@@ -31,8 +31,8 @@ permalink: /manuscripts/solo-algorithm/sword-point/more-than-half-num.html
 
 方案一：
 
-- 利用Map计数
-- 去重数组，减少循环次数。遍历Map获取出现次数超过一半的数字
+- 利用`Map`计数
+- 去重数组，减少循环次数。遍历`Map`获取出现次数超过一半的数字
 
 方案二：
 
@@ -51,4 +51,4 @@ permalink: /manuscripts/solo-algorithm/sword-point/more-than-half-num.html
 
 ## 一些建议
 
-- 理解Map数据结构，熟练使用api
+- 理解`Map`数据结构，熟练使用api

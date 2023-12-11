@@ -7,7 +7,8 @@ permalink: /manuscripts/server-end/node-learn/lodash.html
 
 - 官网：<https://www.lodashjs.com>
 
-Lodash 是一个一致性、模块化、高性能的 JavaScript 实用工具库， 通过降低 array、number、objects、string 等等的使用难度从而让 JavaScript 变得更简单。 Lodash 的模块化方法 非常适用于：
+Lodash 是一个一致性、模块化、高性能的 JavaScript 实用工具库， 通过降低 array、number、objects、string 等等的使用难度从而让
+JavaScript 变得更简单。 Lodash 的模块化方法 非常适用于：
 
 - 遍历 array、object 和 string
 - 对值进行操作和检测
@@ -37,7 +38,7 @@ npm install --save @types/lodash
 ```js
 // 支持import导入
 // import _ from 'lodash'
-const _ =require('lodash')
+const _ = require('lodash')
 
 console.log(_.chunk(['a', 'b', 'c', 'd'], 2))
 // => [['a', 'b'], ['c', 'd']]
@@ -90,7 +91,7 @@ console.log(_.chunk(['a', 'b', 'c', 'd'], 3))
 - assign：拷贝
 - merge:  深拷贝
 - at:  创建数组，值来源于对象路径相应的值
-- create: 创建对象，继承prototype
+- create: 创建对象，继承`prototype`
 - defaults: 分配来源对象的可枚举属性到目标对象所有解析为 undefined 的属性上【不覆盖】
 - findKey： 返回存在值对应的key
 - forIn: 迭代器遍历对象的自身和继承的可枚举属性
@@ -154,7 +155,7 @@ console.log(_.chunk(['a', 'b', 'c', 'd'], 3))
 - max: 最大值
 - mean: 求平均值
 - min: 最小值
-@[code js](@code/node/lodash/demo-num.js)
+  @[code js](@code/node/lodash/demo-num.js)
 
 ### 字符串
 

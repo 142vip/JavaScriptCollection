@@ -305,7 +305,7 @@ let arr2 = [...new Set(arr)]
 
 - `typeof`：可以判断出`string`,`number`,`boolean`,`undefined`,`symbol`
   但判断 typeof(null) 时值为 `object`; 判断数组和对象时值均为 `object`
-- `instanceof`：原理是 构造函数的 prototype 属性是否出现在对象的原型链中的任何位置
+- `instanceof`：原理是 构造函数的 `prototype` 属性是否出现在对象的原型链中的任何位置
 - `Object.prototype.toString.call()`：常用于判断浏览器内置对象,对于所有基本的数据类型都能进行判断
 - `Array.isArray()`：只能用于判断是否为数组
 - `constructor`构造函数
