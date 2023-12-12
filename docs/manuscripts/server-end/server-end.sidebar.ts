@@ -8,12 +8,31 @@ export const ServerEndSidebar = [
     link: 'node-learn/npm-package.md'
   },
   {
-    text: 'ES6',
-    link: 'es6'
+    text: 'ECMAScript版本',
+    prefix: 'es-version',
+    children: [
+      {
+        text: 'ES5-2009',
+        link: 'ES5-2009.md'
+      },
+
+      {
+        text: 'ES6-2015',
+        link: 'ES6-2015.md'
+      }
+      // {
+      //   text: 'ES7-2016',
+      //   link: 'ES7-2016.md'
+      // },
+      // {
+      //   text: 'ES8-2017',
+      //   link: 'ES8-2017.md'
+      // }
+    ]
   },
   {
     text: 'TypeScript',
-    link: 'typescript/简介.md'
+    link: 'typescript/quick-start.html'
   },
   {
     text: 'ORM框架',
@@ -31,7 +50,7 @@ export const ServerEndSidebar = [
     ]
   },
   {
-    text: '常用框架',
+    text: '后端框架',
     // collapsible: true,
     prefix: 'framework',
     children: [

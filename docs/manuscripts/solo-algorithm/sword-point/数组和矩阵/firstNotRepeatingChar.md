@@ -2,6 +2,7 @@
 title: 第一个只出现一次的字符
 permalink: /manuscripts/solo-algorithm/sword-point/first-not-repeating-char.html
 ---
+
 # 第一个只出现一次的字符
 
 ## 题目链接
@@ -19,7 +20,7 @@ permalink: /manuscripts/solo-algorithm/sword-point/first-not-repeating-char.html
 
 方法一：
 
-- 使用hashMap数据不重复特性，来标记字母出现的位置，存在则返回角标index
+- 使用hash`Map`数据不重复特性，来标记字母出现的位置，存在则返回角标index
 
 方案二：
 
@@ -32,4 +33,4 @@ permalink: /manuscripts/solo-algorithm/sword-point/first-not-repeating-char.html
 ## 一些建议
 
 - 熟练使用split、lastIndexOf、indexOf方法
-- 熟练操作Map对象
+- 熟练操作`Map`对象

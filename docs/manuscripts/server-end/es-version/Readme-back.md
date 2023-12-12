@@ -16,46 +16,41 @@
 - 具有暂时性死区【let声明，会和当前的块级进行绑定】
 
 ```js
-var num=10;
-if(true){
+var num = 10;
+if (true) {
   // 此时输出会出现无定义，只会在块级里面查找num是否定义，不会查找外面
   console.log(num)
-  let num=20;
+  let num = 20;
 }
-
 ```
 
-## let面试题
+块级作用域
 
 ```js
-var arr=[];
+var arr = [];
 
-for(var i=0;i<2;i++){
-  arr[i]=function(){
+for (var i = 0; i < 2; i++) {
+  arr[i] = function () {
     console.log(i)
   }
 }
 
 arr[0](); // 输出2 
 arr[1](); // 输出2
-
-
-
 ```
 
 ```js
-let arr=[];
+let arr = [];
 
 // 每次循环let都会产生块级作用域
-for(let i=0;i<2;i++){
-  arr[i]=function(){
+for (let i = 0; i < 2; i++) {
+  arr[i] = function () {
     console.log(i)
   }
 }
 
 arr[0](); // 输出0
 arr[1](); // 输出1
-
 ```
 
 ## const关键字
@@ -67,18 +62,18 @@ arr[1](); // 输出1
 - 常量赋值后，内存地址值不可以改
 
 ```js
-const PI=3.14
-PI=100 // 出错
+const PI = 3.14
+PI = 100 // 出错
 
-const arr=[10,11];
+const arr = [10, 11];
 
-arr[0]=12
-arr[1]=13
+arr[0] = 12
+arr[1] = 13
 
 console.log(arr) // 输出 [12,13]
 
 // 注意：这种修改不行，不要试图去修改内存地址
-arr=[12,13]
+arr = [12, 13]
 ```
 
 ## let const var的区别
@@ -94,23 +89,22 @@ arr=[12,13]
 ```js
 
 // 数组解构
-let [a,b,c]=[1,2,3]
-console.log(a,b,c) // 1,2,3
+let [a, b, c] = [1, 2, 3]
+console.log(a, b, c) // 1,2,3
 
 
 // 对象解构
 let person = {
-  name:'leo',
-  age:20
+  name: 'leo',
+  age: 20
 }
-let {name:name,age:age}=person  // 或者 let {name,age}=person
-console.log(name,age) // leo  20
+let {name: name, age: age} = person  // 或者 let {name,age}=person
+console.log(name, age) // leo  20
 
 
 // 解构并赋变量
-let {name:my_name,age:my_age}=person
-console.log(my_name,my_age); // leo 20
-
+let {name: my_name, age: my_age} = person
+console.log(my_name, my_age); // leo 20
 ```
 
 ## 箭头函数
@@ -118,14 +112,14 @@ console.log(my_name,my_age); // leo 20
 > 新增的定义函数的方式
 
 ```js
-()=>{}
-const fn=()=>{
+() => {
+}
+const fn = () => {
   console.log(123)
 }
 
-const sum =(a,b)=>a+b
-
-const sum = a=>a
+const sum = (a, b) => a + b
+const sum = a => a
 ```
 
 ## 箭头函数的this关键字
@@ -133,18 +127,18 @@ const sum = a=>a
 **箭头函数不绑定this关键字，箭头函数中的this，指向的是函数定义位置的上下文this**
 
 ```js
-const obj={name:'leo'}
+const obj = {name: 'leo'}
 
-function fn(){
-  console.log('fn-->:',this);
+function fn() {
+  console.log('fn-->:', this);
 
-  return ()=>{
-    console.log('箭头-->:',this)
+  return () => {
+    console.log('箭头-->:', this)
   }
 }
 
 // 注意call方法调用，将fn的this关键字指向obj对象
-const resFn=fn.call(obj)
+const resFn = fn.call(obj)
 
 resFn();
 
@@ -156,9 +150,9 @@ resFn();
 
 ```js
 
-let obj={
-  age:20,
-  say:()=>{
+let obj = {
+  age: 20,
+  say: () => {
     return this.age;
   }
 }
@@ -167,24 +161,22 @@ let obj={
 obj.say();
 
 // 定义一个age变量
-let age=30
+let age = 30
 // 此时this指向的是window中的age变量，所以为 30
 obj.say();
-
 ```
 
 ## 剩余参数
 
 ```js
-function sum(first,...args){
+function sum(first, ...args) {
   console.log(first);
   console.log(args);
 }
 
-const result=(...args)=>{
+const result = (...args) => {
   // ...
 }
-
 ```
 
 ## Array扩展方法
@@ -192,31 +184,30 @@ const result=(...args)=>{
 ```js
 
 // ## 扩展运算符合并数组 ##
-let arr1=[1,2,3];
-let arr2=[4,5,6];
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
 // 合并
-let arr3=[...arr1,...arr2]
-let arr4=arr1.push(...arr2)
+let arr3 = [...arr1, ...arr2]
+let arr4 = arr1.push(...arr2)
 
 
 // ## 构造函数方法：Array.from() 将类数组或可遍历对象转换为真正的数组 ##
 
 // 伪数组
-let arrayLike={
-  '0':1,
-  '1':2,
-  '2':3,
-  length:3
+let arrayLike = {
+  '0': 1,
+  '1': 2,
+  '2': 3,
+  length: 3
 }
 
 // 伪数组转换为数组
-let arr2=Array.from(arrayLike) // ['a',''b,'c']
+let arr2 = Array.from(arrayLike) // ['a',''b,'c']
 
 // 函数统一处理每一项
-let arr3=Array.from(arrayLike,item=>{
+let arr3 = Array.from(arrayLike, item => {
   return item + 100
 }) // 101,102,103 
-
 ```
 
 ## find()
@@ -232,10 +223,9 @@ let arr3=Array.from(arrayLike,item=>{
 表示某个数组是否包含给定的值，返回布尔值
 
 ```js
-[1,2,3].includes(2); // true
+[1, 2, 3].includes(2); // true
 
-[1,2,3].includes(4); // false
-
+[1, 2, 3].includes(4); // false
 ```
 
 ## startsWith()和endsWith()

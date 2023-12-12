@@ -2,6 +2,7 @@
 title: 数组中只出现一次的两个数字
 permalink: /manuscripts/solo-algorithm/sword-point/find-nums-appear-once.html
 ---
+
 # 数组中只出现一次的两个数字
 
 ## 题目链接
@@ -55,5 +56,5 @@ permalink: /manuscripts/solo-algorithm/sword-point/find-nums-appear-once.html
 ## 一些建议
 
 - 熟练使用基本数组排序
-- Map结构重要，常用api需要熟悉
+- `Map`结构重要，常用api需要熟悉
 - 位运算是数学问题，可以了解

@@ -2,6 +2,7 @@ export const DesignPatternsSidebar = [
   {
     text: '设计原则',
     prefix: '设计原则',
+    collapsible: true,
     children: [
       {
         text: '开闭原则',
@@ -36,6 +37,7 @@ export const DesignPatternsSidebar = [
   {
     text: '架构型模式',
     prefix: '架构型模式',
+    collapsible: true,
     children: [
       {
         text: 'MVC模式',
@@ -66,6 +68,7 @@ export const DesignPatternsSidebar = [
   {
     text: '技巧型模式',
     prefix: '技巧型模式',
+    collapsible: true,
     children: [
       {
         text: '委托模式',
@@ -111,7 +114,7 @@ export const DesignPatternsSidebar = [
     children: [
       {
         text: '创建型模式（5种）',
-        // collapsible: true,
+        collapsible: true,
         children: [
           {
             text: '单例模式',
@@ -141,7 +144,7 @@ export const DesignPatternsSidebar = [
       },
       {
         text: '行为型模式（7种）',
-        // collapsible: true,
+        collapsible: true,
         children: [
           {
             text: '桥接模式',
@@ -175,7 +178,7 @@ export const DesignPatternsSidebar = [
       },
       {
         text: '结构型模式（11种）',
-        // collapsible: true,
+        collapsible: true,
         children: [
           {
             text: '命令模式',

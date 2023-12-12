@@ -18,6 +18,7 @@ import {ExpressSidebar} from "../../manuscripts/server-end/framework/express/exp
 import {DesignPatternsSidebar} from "../../manuscripts/server-end/design-patterns/designPatterns.sidebar";
 import {SequelizeOrmSidebar} from "../../manuscripts/server-end/orm/sequelize/sequelizeOrm.sidebar";
 import {TypeormSidebar} from "../../manuscripts/server-end/orm/typeorm/typeorm.sidebar";
+import {TypescriptSidebar} from "../../manuscripts/server-end/typescript/typescript.sidebar";
 
 export default {
   "/manuscripts/front-end": FrontEndSidebar,
@@ -30,6 +31,7 @@ export default {
   "/manuscripts/server-end/database/mongo": MongoSideBar,
   "/manuscripts/server-end/linux": LinuxSidebar,
   "/manuscripts/server-end/design-patterns": DesignPatternsSidebar,
+  "/manuscripts/server-end/typescript": TypescriptSidebar,
   "/manuscripts/server-end/base": BaseSidebar,
   "/manuscripts/server-end/node-learn": NodeLearnSidebar,
   "/manuscripts/server-end/orm/sequelize": SequelizeOrmSidebar,
