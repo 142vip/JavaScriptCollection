@@ -186,12 +186,12 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 #### 插件使用
 
-- [egg-validate参数校验]()
-- [egg-view-ejs页面渲染]()
-- [egg-redis缓存]()
-- [egg-mysql]()
-- [egg-sequelize]()
-- [egg-socket.io即时通讯]()
+- [ ] [egg-validate参数校验]()
+- [ ] [egg-view-ejs页面渲染]()
+- [ ] [egg-redis缓存]()
+- [ ] [egg-mysql]()
+- [ ] [egg-sequelize]()
+- [ ] [egg-socket.io即时通讯]()
 
 #### 最佳实践
 
@@ -221,14 +221,14 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 - [ ] 索引
 - [ ] sql优化
 - [ ] [基于GTID主从复制的原理和基础配置]()
-- [MySQL日志类型把我难哭了，你学废了吗？]()
+- [ ] [MySQL日志类型把我难哭了，你学废了吗？]()
 
 ### Redis
 
-- [key命名规范与建议]()
-- [redis开发使用规范]()
-- [redis基础介绍]()
-- [redis的简单安装和部署](https://mp.weixin.qq.com/s/Xe-ZDf2kgUWfYSkuULAdlw)
+- [ ] [key命名规范与建议]()
+- [ ] [redis开发使用规范]()
+- [ ] [redis基础介绍]()
+- [ ] [redis的简单安装和部署](https://mp.weixin.qq.com/s/Xe-ZDf2kgUWfYSkuULAdlw)
 - [ ] 数据类型
 - [ ] [redis简单主从集群部署-docker方式]()
 - [ ] [memCache与Redis比较]()
@@ -349,7 +349,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 ### Nacos
 
-> 阿里巴巴出品，适用于微服务下的配置管理，支持Java、Nodejs等主流语言，目前生态良好，技术支持表现一般，属于Apollo替代产品|发、、
+> 阿里巴巴出品，适用于微服务下的配置管理，支持Java、Nodejs等主流语言，目前生态良好，技术支持表现一般，属于Apollo替代产品
 
 ## 消息中间件
 
@@ -364,13 +364,13 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 ### gRPC
 
 > gRPC 一开始由 google 开发，是一款语言中立、平台中立、开源的远程过程调用(RPC)系统，tensorflow分布式与tensorflow
-> serving底层通信都是是用的grpc。我自己基于JavaScript技术栈上较多的接触到gRPC，传送门:[基于js下各框架grpc的使用]()
+> serving底层通信都是是用的gRPC。我自己基于JavaScript技术栈上较多的接触到gRPC，传送门:[基于js下各框架gRPC的使用]()
 
-- [ ] nodejs下grpc的简单实用
-- [ ] grpc集成express框架
-- [ ] grpc集成koa框架
-- [ ] grpc在egg.js下的应用
-- [ ] grpc插件开发示例
+- [ ] nodejs下gRPC的简单实用
+- [ ] gRPC集成express框架
+- [ ] gRPC集成koa框架
+- [ ] gRPC在egg.js下的应用
+- [ ] gRPC插件开发示例
 
 ### Dubbo
 
@@ -390,7 +390,6 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 ### Logstash
 
->
 > 数据收集
 
 ### Kibana
@@ -398,8 +397,6 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 > 数据展示
 
 ## 监控工具
-
-> 常用工具：Prometheus 、Grafana、zabbix、lepus等
 
 ### Prometheus
 
@@ -458,8 +455,6 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 - [ ] Jmeter
 
 ### Redis集群
-
-> 持续整理中...
 
 #### 主从模式
 
