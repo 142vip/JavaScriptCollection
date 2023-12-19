@@ -139,7 +139,7 @@ jobs:
           release_name: v${{ steps.releaseVersion.outputs.version }}
           body: |
             Release ${{ steps.releaseVersion.outputs.version }}
-            
+
             ### Features
 
             ### Bug Fixes
@@ -154,8 +154,6 @@ jobs:
           asset_path: ./JavaScriptCollection.zip
           asset_name: JavaScriptCollection.zip
           asset_content_type: application/zip
-
-
 ```
 
 ## 参考资料

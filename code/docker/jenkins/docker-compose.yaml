@@ -1,0 +1,32 @@
+##
+## 支持服务：
+##    - Jenkins 端口映射  8080（连接端口）  50000（管理端口）
+##
+##
+## 运行指令：
+##    - 统一刷新启动   docker-compose up -d
+##    - 挂掉          docker-compose down
+##    - 重启          docker-compose restart
+##
+version: '3'
+services:
+  jenkins:
+    image: jenkins/jenkins
+    container_name: jenkins
+    hostname: jenkins_dev
+    restart: unless-stopped
+    ports:
+      - "6080:8080"
+      - "6081:50000"
+    ## 文件映射
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - $(pwd)/jenkins:/var/jenkins_home
+      ## 支持容器内使用Mac本机docker服务
+      ## - /usr/local/bin/docker:/usr/bin/docker
+      ## - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      JENKINS_OPTS: "--prefix=/jenkins"
+      JENKINS_ARGS: "--prefix=/jenkins"
+    # 用户名
+    user: root
