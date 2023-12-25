@@ -4,23 +4,22 @@ pipeline {
     stages {
         stage('下载依赖') {
             steps {
-                ls -l &&
-                bash ./scripts/ci
+                sh './scripts/ci'
             }
         }
         stage('代码检查') {
             steps {
-               bash ./scripts/lint --fix
+               sh './scripts/lint --fix'
             }
         }
         stage('本地编译') {
             steps {
-                bash ./scripts/bundle build
+                sh './scripts/bundle build'
             }
         }
         stage('打包镜像') {
             steps {
-                bash ./scripts/bundle image
+                sh './scripts/bundle image'
             }
         }
     }
