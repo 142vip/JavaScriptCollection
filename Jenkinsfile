@@ -2,19 +2,24 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('下载依赖') {
             steps {
-                echo 'Building..'
+                ./scripts/ci
             }
         }
-        stage('Test') {
+        stage('代码检查') {
             steps {
-                echo 'Testing..'
+                ./scripts/lint --fix
             }
         }
-        stage('Deploy') {
+        stage('本地编译') {
             steps {
-                echo 'Deploying....'
+                ./scripts/bundle build
+            }
+        }
+        stage('打包镜像') {
+            steps {
+                ./scripts/bundle image
             }
         }
     }
