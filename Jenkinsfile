@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    tools {nodejs "Node18.18.1"}
     stages {
         stage('下载依赖') {
             steps {
