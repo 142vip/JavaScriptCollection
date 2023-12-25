@@ -164,7 +164,12 @@ async function getScriptCommand() {
 
 
 ;(async() => {
-  const scriptCommand = await getScriptCommand()
-  await execShell(scriptCommand)
+  try{
+    const scriptCommand = await getScriptCommand()
+    await execShell(scriptCommand)
+  }catch (e) {
+    console.log('异常信息:',e)
+  }
+
 })()
 
