@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.2-alpha.12](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.11...v0.0.2-alpha.12) (2023-12-25)
+
+
+### Features
+
+* **Egg.js:** 修改教程文档 ([d8829ea](https://github.com/142vip/JavaScriptCollection/commit/d8829eae9801ec100ee36815a09a5bba3ef14002))
+* **ES6:** 新增2016新增特性和ts文档 ([6b33bf2](https://github.com/142vip/JavaScriptCollection/commit/6b33bf2da430459d004828aacc147d72f0d0734a))
+* **Jenkins:** 新增安装、部署配置，记录流程文档 ([5855015](https://github.com/142vip/JavaScriptCollection/commit/58550151394a1cd441c5b5d6446f5e1162dcdee5))
+* **ORM:** 新增Sequelize教程文档、代码 ([6849e0b](https://github.com/142vip/JavaScriptCollection/commit/6849e0ba9e7690c7355aea1731f30a832b7b0a8f))
+* **ORM:** 新增模型相关教程 ([7533864](https://github.com/142vip/JavaScriptCollection/commit/7533864beb52943fb9663b4ac1c95617a45df8b1))
+* 修改一些文档格式、排版，整理侧边导航栏 ([1519251](https://github.com/142vip/JavaScriptCollection/commit/1519251aa761191e95499acb619dd8762130e5c9))
+* 大幅新增设计模式、Linux命令、ORM框架教程文档 ([e6a7995](https://github.com/142vip/JavaScriptCollection/commit/e6a7995b51ebdad56db7e7a4289a7a10be61653f))
+* 新增ES5文档总结 ([4f754ba](https://github.com/142vip/JavaScriptCollection/commit/4f754ba085d747245c7bc72b66e39f134fc06875))
+
+
+### Bug Fixes
+
+* 修复URL地址信息安全告警 ([1c2e4e2](https://github.com/142vip/JavaScriptCollection/commit/1c2e4e242151e312cf91875890cbcb14bcd2101f))
+* 修复脚本日志多行打印问题 ([442a57b](https://github.com/142vip/JavaScriptCollection/commit/442a57bc253cb7a70d6045da3ef9ee7e224c44a5))
+* 添加npx配置修复release脚本异常 ([5715c6a](https://github.com/142vip/JavaScriptCollection/commit/5715c6ac97233af1eef49193a0917f865331e137))
+
+
+### Performance Improvements
+
+* **deps-dev:** bump vite from 4.4.11 to 4.4.12 ([311979e](https://github.com/142vip/JavaScriptCollection/commit/311979ec1297d095b0a5b9cb5d579d3073694381))
+* 依赖版本更新 ([2b5cd60](https://github.com/142vip/JavaScriptCollection/commit/2b5cd605db4f737faf881278acfc09df28e274f3))
+
 ## [0.0.2-alpha.11](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.10...v0.0.2-alpha.11) (2023-11-21)
 
 
