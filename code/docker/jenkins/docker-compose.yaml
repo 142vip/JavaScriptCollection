@@ -13,20 +13,20 @@ services:
   jenkins:
     image: jenkins/jenkins
     container_name: jenkins
+    ## 权限问题 使用root用户
+    user: root
+    privileged: true
     hostname: jenkins_dev
     restart: unless-stopped
     ports:
       - "6080:8080"
       - "6081:50000"
-    ## 文件映射
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - $(pwd)/jenkins:/var/jenkins_home
       ## 支持容器内使用Mac本机docker服务
-      ## - /usr/local/bin/docker:/usr/bin/docker
+      ## - /usr/bin/docker:/usr/bin/docker
       ## - /var/run/docker.sock:/var/run/docker.sock
     environment:
       JENKINS_OPTS: "--prefix=/jenkins"
       JENKINS_ARGS: "--prefix=/jenkins"
-    # 用户名
-    user: root
