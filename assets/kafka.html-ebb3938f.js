@@ -1,0 +1,1 @@
+import{_ as a}from"./plugin-vue_export-helper-c27b6911.js";import{o as t,c as o,a as e,b as r}from"./app-be253e4c.js";const c={},s=e("h1",{id:"kafka",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#kafka","aria-hidden":"true"},"#"),r(" Kafka")],-1),n=[s];function _(f,d){return t(),o("div",null,n)}const h=a(c,[["render",_],["__file","kafka.html.vue"]]);export{h as default};

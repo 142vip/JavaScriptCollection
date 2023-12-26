@@ -1,0 +1,1 @@
+import{_ as t}from"./plugin-vue_export-helper-c27b6911.js";import{o,c as r,a as e,b as a}from"./app-be253e4c.js";const n={},c=e("h1",{id:"反向代理",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#反向代理","aria-hidden":"true"},"#"),a(" 反向代理")],-1),s=[c];function _(i,d){return o(),r("div",null,s)}const f=t(n,[["render",_],["__file","nginx-proxy.html.vue"]]);export{f as default};

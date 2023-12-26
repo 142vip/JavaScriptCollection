@@ -1,0 +1,628 @@
+import{_ as c}from"./plugin-vue_export-helper-c27b6911.js";import{r as e,o as l,c as u,a,b as t,d as n,e as s}from"./app-be253e4c.js";const i="/JavaScriptCollection/assets/better-nodejs-75e8d3e8.png",r={},k=s('<h1 id="更了不起的node-js" tabindex="-1"><a class="header-anchor" href="#更了不起的node-js" aria-hidden="true">#</a> 更了不起的Node.js</h1><figure><img src="'+i+`" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure><p>《狼书（卷1）：更了不起的Node.js》以<code>Node.js</code>为主，讲解了<code>Node.js</code>的基础知识、开发调试方法、源码原理和应用场景， 旨在向读者展示如何通过最新的<code>Node.js</code>和<code>npm</code>编写出更具前端特色、更具工程化优势的代码。</p><p><code>Node.js</code>开发简单，性能极好，一经发布便成了明星级项目。随着大前端领域的蓬勃发展，跨平台开发、<code>API</code>构建、<code>Web</code> 应用开发等场景愈加常见，<code>Node.js</code>也成为大前端开发的必备“神器”。</p><h2 id="node-js初识" tabindex="-1"><a class="header-anchor" href="#node-js初识" aria-hidden="true">#</a> Node.js初识</h2><h3 id="核心命令" tabindex="-1"><a class="header-anchor" href="#核心命令" aria-hidden="true">#</a> 核心命令</h3><ul><li>npm run dev</li></ul><blockquote><p>利用Node.js编写的模块辅助开发命令，常用于本地开发，不会产生最终文件</p></blockquote><ul><li>npm run build</li></ul><blockquote><p>打包，生成最终可在浏览器中运行的代码</p></blockquote><p>最小功效原则：</p><blockquote><p>选择最合适的解决方案而不是最强的，语言的功效越弱，对于存储在该语言中的数据，我们能做的事情就越多</p></blockquote><p>Atwood定律：</p><blockquote><p>任何能够用Javascript实现的应用系统，最终都必将用Javascript实现</p></blockquote><h3 id="node-js早期架构" tabindex="-1"><a class="header-anchor" href="#node-js早期架构" aria-hidden="true">#</a> Node.js早期架构</h3><ul><li>Chrome V8引擎：Google发布的开源Javascript引擎，采用<code>C/C++</code>编写，在Google的Chrome浏览器中被使用，Chrome V8引擎可以独立运行，也可以嵌入到<code>C/C++</code>应用程序中被执行。</li><li>Node.js内置了Chrome V8引擎，所以使用的Javascript语法</li><li><strong>Javascript语言的一大特点就是单线程</strong>，即同一时间只能做一件事。单线程就意味着所有的任务都需要排队，前一个任务结束才会执行后一个任务。如果前一个任务耗时很久，后一个任务就不得不一直等待；</li><li>一般情况下，排队的时候CPU总是闲着。其实CPU完全可以不管I/O设备而直接挂起处于等待中的任务，先运行排在后面的任务。</li><li>将等待中的I/O任务放在事件循环中，<strong>事件由libuv提供</strong></li><li>事件循环负责将文件I/O任务放入到线程池中，线程池由libuv提供。网络I/O任务不通过线程池完成；</li><li><strong>只要有CPU资源，就应该尽力执行</strong>，榨干硬件性能；</li></ul><h3 id="node-js特点" tabindex="-1"><a class="header-anchor" href="#node-js特点" aria-hidden="true">#</a> Node.js特点</h3><blockquote><p>Node.js是可扩展的适合用于构建高性能Web应用的最简单的解决方案（<strong>适合构建Web应用、高性能、简单、可拓展</strong>）</p></blockquote><h5 id="适合构建web应用" tabindex="-1"><a class="header-anchor" href="#适合构建web应用" aria-hidden="true">#</a> 适合构建Web应用</h5><ul><li>构建网站：用Node.js做入门开发和传统的Java、PHP开发并没有什么区别。构建成功的应用是典型的单体式应用。</li><li>构建API：后端API接口开发用于数据库访问，将返回的数据进行包裹，以HTTP形式返回；API Proxy针对前端使用的API进行优化，使前端开发更人性化。</li></ul><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token comment">// 常见接口返回格式：</span>
+
+<span class="token punctuation">{</span>
+  <span class="token literal-property property">status</span><span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">code</span><span class="token operator">:</span><span class="token number">100</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">message</span>
+  <span class="token operator">:</span>
+    <span class="token string">&#39;success&#39;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">,</span>
+  <span class="token literal-property property">response</span><span class="token operator">:</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+    result
+  <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 个人常用</span>
+
+<span class="token punctuation">{</span>
+  <span class="token literal-property property">code</span><span class="token operator">:</span><span class="token number">200</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">message</span>
+<span class="token operator">:</span>
+  <span class="token string">&#39;操作成功&#39;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">result</span>
+<span class="token operator">:</span><span class="token operator">...</span>
+  result
+<span class="token operator">...</span> <span class="token comment">// 常见false true [] {} 等结构</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><ul><li>构建RPC服务：Node.js是非常适合用于网络应用开发，其中Socket编程就是一种典型的网络应用开发场景，也就是说：&quot; Node.js一样适合用于Socket编程，使用Node.js开发RPC服务是非常合适的&quot;</li></ul><blockquote><p>RPC: Remote Procedure Call 远程过程调用，协议服务，常见的作法是将数据库访问返回的数据，以TCP形式传输给调用方；eg：Dubbo、gRPC</p></blockquote><ul><li>前后端分离场景</li></ul><ol><li>前端页面静态化（Page Static）</li><li>前端页面服务化（PAAS，Page As Service）</li><li>服务端渲染（SSR，Server Side Render）</li><li>渐进式Web应用（PWA，Progressive Web App）</li></ol><ul><li>适用于Serverless---------&gt;istio</li></ul><h4 id="高性能" tabindex="-1"><a class="header-anchor" href="#高性能" aria-hidden="true">#</a> 高性能</h4><ul><li><p>执行速度快：构建在ChromeV8引擎之上，执行速度可能是动态语言运行时环境里最快的</p></li><li><p>天生异步：事件驱动和非阻塞I/O特性决定了Node.js必须采用异步机制，每个I/O任务都是异步的</p></li><li><p>适用于I/O密集的网络应用开发，不是很适合CPU密集型应用，合理的采用技术栈，利用Node.js的优势，不仅能够加快开发迭代的速度，对系统的稳定性也是非常有帮助的；</p></li></ul><h4 id="简单" tabindex="-1"><a class="header-anchor" href="#简单" aria-hidden="true">#</a> 简单</h4><ul><li><p>语法简单：Javascript简单易学，深入比较难</p></li><li><p>并发编程简单：完美应对实时及I/O密集型应用等高并发场景</p></li><li><p>部署运维简单：很简单的利用docker或者pm2甚至node指令即可部署</p></li><li><p>开发简单：遵寻“小而美”的设计哲学</p></li></ul><h4 id="可拓展" tabindex="-1"><a class="header-anchor" href="#可拓展" aria-hidden="true">#</a> 可拓展</h4><ul><li>npm上有大量模块可以使用</li><li>通过编写C/C++实现CPU密集型任务开发</li><li>可以轻松搭配Java、Rust等语言使用</li><li>架构互补：以业务边界来进行服务拆分，可以让合适的轮子出现在合适的位置上</li></ul><h3 id="应用场景" tabindex="-1"><a class="header-anchor" href="#应用场景" aria-hidden="true">#</a> 应用场景</h3><ul><li><p>网站： Express 、 Koa</p></li><li><p>API: Restify 、 Hapi</p></li><li><p>Api代理：Express、Koa</p></li><li><p>IM即时聊天：Socket.io、SockJS</p></li><li><p>反向代理：AnyProxy、node-http-proxy、hiproxy</p></li><li><p>前端构建工具：Grunt、Gulp、Bower、Webpack、FIS3、Ykit</p></li><li><p>命令行工具：Cordova、Shell.js</p></li><li><p>操作系统：NodeOS（能实现，估计不会有人用了，鸡肋）</p></li><li><p>跨平台打包工具：Electron、NW.js</p></li><li><p>P2P:WebTorrent、IPFS</p></li><li><p>编辑器：Electron</p></li><li><p>物联网硬件：Ruff、Rokid、Node-RED</p></li></ul><h2 id="nodejs安装与入门" tabindex="-1"><a class="header-anchor" href="#nodejs安装与入门" aria-hidden="true">#</a> Nodejs安装与入门</h2><p>3m安装Node.js</p><ul><li><p>nvm（node version manager）：用于开发阶段，解决多版本共存、切换、测试等问题；</p></li><li><p>npm（node package manager）：解决Node.js模块安装问题，自身也是个Node.js模块，每次安装都会内置某个版本的npm；</p></li><li><p>nrm（node registry manager）：解决npm镜像访问慢的问题，提供测速、切换下载源仓库（registry）功能；</p></li></ul><h3 id="npm" tabindex="-1"><a class="header-anchor" href="#npm" aria-hidden="true">#</a> npm</h3><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token comment">## node版本</span>
+<span class="token function">node</span> <span class="token parameter variable">-v</span>
+
+<span class="token comment">## npm版本</span>
+<span class="token function">npm</span> <span class="token parameter variable">-v</span>
+
+<span class="token comment">## 安装指定版本npm</span>
+<span class="token function">sudo</span> <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> npm@2.9
+
+<span class="token comment">## 安装在node_module下，不保存在package.json中</span>
+<span class="token function">npm</span> <span class="token function">install</span>  
+
+<span class="token comment">## 安装在node_module目录下，同时保存到package.json的dependencies，在安装模块时必须安装</span>
+<span class="token function">npm</span> <span class="token function">install</span> --save-prod 或 <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-P</span>
+
+<span class="token comment">## 安装在node_module下，保存在package的devDependencies中，供开发时使用</span>
+<span class="token function">npm</span> <span class="token function">install</span> --save-dev 或 <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span>
+
+<span class="token comment">## 安装的模块为全局模块，如果时命令行模块，会直接链接到环境变量中</span>
+<span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">--global</span> 或 <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> 
+</code></pre></div><h3 id="nrm" tabindex="-1"><a class="header-anchor" href="#nrm" aria-hidden="true">#</a> nrm</h3><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token comment">## 安装</span>
+<span class="token function">sudo</span> <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-global</span> nrm 或者 <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> nrm
+
+<span class="token comment">## 测速</span>
+nrm <span class="token builtin class-name">test</span>
+
+<span class="token comment">## 查看源</span>
+nrm <span class="token function">ls</span>
+
+<span class="token comment">## 切换源(cnpm 淘宝源)</span>
+nrm use cnpm
+
+<span class="token comment">## 查看nrm的帮助信息</span>
+nrm <span class="token parameter variable">-h</span>
+
+</code></pre></div><h3 id="hello-node-js" tabindex="-1"><a class="header-anchor" href="#hello-node-js" aria-hidden="true">#</a> Hello Node.js</h3><p>Node.js是基于CommonJS规范的实现，即每个文件都是一个模块，每个模块内代码的写法都必须遵守CommonJS规范，* <em>多文件调用的核心基于模块对外暴露接口和相互引用；</em>*</p><ul><li>使用module.exports定义模块</li><li>通过require关键字引用模块</li></ul><p><strong>编程的三等境界：</strong></p><ol><li>测试驱动开发，在写代码之前先写测试</li><li>断点调试，直观的跟踪代码执行逻辑、调用栈、变量等。</li><li>打日志；</li></ol><h2 id="更了不起的node-js-1" tabindex="-1"><a class="header-anchor" href="#更了不起的node-js-1" aria-hidden="true">#</a> 更了不起的Node.js</h2><p>这一章节我看完，主要是对于架构和技术演进的说明，对了解技术方向、扩展技术思路还是很有帮助的，建议直接看书或者pdf文档，这里只简单总结</p><h3 id="前后端分离" tabindex="-1"><a class="header-anchor" href="#前后端分离" aria-hidden="true">#</a> 前后端分离</h3><ul><li><p>表现层： 处理Http请求，直接返回HTML渲染，或者返回API结果。对于一个复杂的应用系统，表现层通常是代码中比较重要的部分</p></li><li><p>业务逻辑层：完成具体的业务逻辑， 是应用的核心组成部分。</p></li><li><p>数据访问层：访问基础数据，例如数据库、缓存和消息队列等</p></li></ul><p>看到这里就已经有MVC的味道了，而在Java后端中，这样的分层更加清晰：</p><ul><li><p>Model层：先定义模型层(Model)，数据库操作一般采用ORM库来简化操作，模型会和数据库里的表进行关联映射</p></li><li><p>DAO（Data Access Object）：对单个模型进行操作，即：数据库的增删改查</p></li><li><p>Service层就是业务逻辑层，通常组合多个DAO对象进行某项具体业务处理</p></li><li><p>Controller里组装了多个Service对象，可以是想具体功能。</p></li></ul><p>按照传统分类方式，表现层即前端，而业务层和数据访问层都属于后端。</p><p><strong>最常见的模式：前端+API+后端服务</strong></p><blockquote><p>处于负载均衡、请求转发、反向代理、静态资源托管、防跨域等原因，往往需要搭配Nginx做代理使用</p></blockquote><ul><li>请求---&gt;Nginx---&gt;前端</li><li>请求---&gt;Nginx---&gt;Nodejs（前端）</li></ul><p>其实Nodejs也可以实现反向代理这样的功能，例如vue中的proxy代理，其实依赖的就是http-proxy-middleware模块来实现的，我们自己在开发的时候，其实也可以利用该模块扩展更多的功能，不过这样就显得有些麻烦</p><ul><li>修改本地DNS解析配置</li><li>搭建Nginx服务，配置代理</li><li>使用脚手架提供好的proxy代理服务</li></ul><h3 id="贯穿开发全过程" tabindex="-1"><a class="header-anchor" href="#贯穿开发全过程" aria-hidden="true">#</a> 贯穿开发全过程</h3><blockquote><p>Node.js天生就是为了解决后端并发编程而生的，目前在前端应用中也越来越火了。能够优化各个开发环节，明显提高开发效率。</p></blockquote><h3 id="api网关" tabindex="-1"><a class="header-anchor" href="#api网关" aria-hidden="true">#</a> API网关</h3><blockquote><p>Node.js擅长I/O操作，其http模块和stream模块组合使用时非常适合作为代理软件，可以通过恨少的代码来实现一个功能强大的代理</p></blockquote><p>例如：</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>
+<span class="token comment">// 相关模块</span>
+
+<span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;http&#39;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;fs&#39;</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 实例化对象</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 路由白名单</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">&#39;/remote&#39;</span> <span class="token operator">===</span> req<span class="token punctuation">.</span>url<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string-property property">&#39;Content-Type&#39;</span><span class="token operator">:</span> <span class="token string">&#39;text/plain&#39;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">&#39;hello remote page&#39;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 代理</span>
+    <span class="token function">proxy</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> <span class="token function">proxy</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 基础配置</span>
+  <span class="token keyword">let</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">host</span><span class="token operator">:</span> req<span class="token punctuation">.</span>host<span class="token punctuation">,</span>
+    <span class="token literal-property property">port</span><span class="token operator">:</span> <span class="token number">3000</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">headers</span><span class="token operator">:</span> req<span class="token punctuation">.</span>headers<span class="token punctuation">,</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">&#39;/remote&#39;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">agent</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">&#39;GET&#39;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 初始化代理</span>
+  <span class="token keyword">let</span> httpProxy <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> <span class="token parameter">response</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 将res放到response流里面，进行代理</span>
+    response<span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token comment">// </span>
+  req<span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>httpProxy<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 监听端口</span>
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 获取端口</span>
+  <span class="token keyword">const</span> port <span class="token operator">=</span> app<span class="token punctuation">.</span><span class="token function">address</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>port
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">\`</span><span class="token string">server is running at http://127.0.0.1:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">\${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">\`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>http.request方法的返回值是http.ClientRequest，它继承自OutgoingMessage，所以：http.request方法的返回值和res是一致的</p><blockquote><p>http.request==&gt;http.ClientRequest==&gt;OutgoingMessage==&gt;Stream</p></blockquote><h3 id="关于学习" tabindex="-1"><a class="header-anchor" href="#关于学习" aria-hidden="true">#</a> 关于学习</h3><blockquote><p>这里其实书上有，但是我觉得讲的非常有道理，就单独拎出来，学习的三个层次</p></blockquote><ul><li><p>跟人学（最快）</p></li><li><p>跟书本和博客学</p></li><li><p>自悟（最慢）</p></li></ul><blockquote><p>牛人不容易遇到，遇到了也未必有精力教你 书本或者博客上的只是也有限 如果没有深厚的基础知识作为支撑，自我领悟的难度是相当大的</p></blockquote><p><strong>编程是没有捷径的，代码是一切的基础，能够做到每日精进自然是极好的</strong></p><p><strong>如果你能够在开源博客、论坛上坚持写博客和开源项目两年，一定能轻松进入BAT，不用你找他们，他们自然会找你</strong></p><h2 id="更好的node-js" tabindex="-1"><a class="header-anchor" href="#更好的node-js" aria-hidden="true">#</a> 更好的Node.js</h2><h3 id="选择" tabindex="-1"><a class="header-anchor" href="#选择" aria-hidden="true">#</a> 选择</h3><h4 id="面向过程" tabindex="-1"><a class="header-anchor" href="#面向过程" aria-hidden="true">#</a> 面向过程</h4><blockquote><p>Express框架就是典型的面向过程的代码，整个框架大体上感觉只需要用心、专注了解中间件，就可以无障碍的开发和编写了；</p></blockquote><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token comment">// express模块</span>
+<span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;express&#39;</span><span class="token punctuation">)</span>
+<span class="token comment">// 实例化对象</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 简单路由接口</span>
+
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&#39;/index&#39;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 返回数据</span>
+  res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">&#39;hello express!!!&#39;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 启动服务，监听端口</span>
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;express server is running on port 3000&#39;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>如上，一个简单的web服务就跑起来了，当我在实习第一次接触到Node.js的时候，就被这种快速的方式所吸引，记得还感慨过<code>Spring</code>的那一套</p><h4 id="面向对象" tabindex="-1"><a class="header-anchor" href="#面向对象" aria-hidden="true">#</a> 面向对象</h4><blockquote></blockquote><p>在早期的node.js语法中，更多的时候面向过程，随着对Node.js学习和使用的深入，就会了解到ES6语法也借鉴了Java这种面向对象语言的特性，添加<code>class</code> 和extends这些关键字，来实现类的封装和继承，这样就可以很简单的写面向对象的程序（当然也是有局限的）</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token comment">// 定义学生类Student</span>
+<span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 构造函数</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 定义函数</span>
+  <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;my name is &#39;</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 实例化</span>
+
+<span class="token keyword">const</span> student <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&#39;Tom&#39;</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 调用类方法</span>
+student<span class="token punctuation">.</span><span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">// 类的继承</span>
+<span class="token keyword">class</span> <span class="token class-name">Boy</span> <span class="token keyword">extends</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+  <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">,</span> <span class="token string">&#39;is good~&#39;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 实例化</span>
+<span class="token keyword">const</span> boy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Boy</span><span class="token punctuation">(</span><span class="token string">&#39;Tim&#39;</span><span class="token punctuation">)</span>
+</code></pre></div><p>对于了解Java那一套的开发者，看到这里的类、继承、static方法的时候，其实会感觉比较简单，对于控制反转、切面编程那些Javascript目前还不能实现，不过有TypeScript实现了类似的功能，值得学习；</p><h4 id="函数式编程" tabindex="-1"><a class="header-anchor" href="#函数式编程" aria-hidden="true">#</a> 函数式编程</h4><blockquote><p>Javascript式典型的多范式编程语言，而函数式编程的概念是从React框架流行起来的。</p></blockquote><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token comment">// 类似箭头函数 可读性不强</span>
+<span class="token keyword">const</span> <span class="token function-variable function">map</span> <span class="token operator">=</span> <span class="token parameter">fn</span> <span class="token operator">=&gt;</span> <span class="token parameter">array</span> <span class="token operator">=&gt;</span> array<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>fn<span class="token punctuation">)</span>
+
+<span class="token comment">// 等价于</span>
+<span class="token keyword">const</span> <span class="token function-variable function">map</span> <span class="token operator">=</span> <span class="token parameter">fn</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token parameter">array</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> array<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>fn<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>第一等公民式函数</li><li>函数柯里化（curry）:传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数</li><li>为了解决函数嵌套问题，代码中使用了“函数组合”</li></ul><h3 id="开发大型软件" tabindex="-1"><a class="header-anchor" href="#开发大型软件" aria-hidden="true">#</a> 开发大型软件</h3><ul><li>具备开发大型软件应用的基础</li><li>所有云计算公司都爱使用Node.js</li><li>名企（阿里、百度、Uber等）都在大量应用Node.js</li><li>生态完善，性能调优有node-clinic和ali-node助力</li></ul><h3 id="特定场景下的快速开发" tabindex="-1"><a class="header-anchor" href="#特定场景下的快速开发" aria-hidden="true">#</a> 特定场景下的快速开发</h3><ul><li>在写法上，可易可难，满足各类人群，是有助于团队成长的选择</li><li>可以开发大型软件，开源生态已相当成熟</li><li>可快可慢，可以满足特定场景下快速开发的需求</li></ul><h3 id="单线程" tabindex="-1"><a class="header-anchor" href="#单线程" aria-hidden="true">#</a> 单线程</h3><blockquote><p>Javascript是单线程的，但是Node.js由于事件循环和libuv的助理，能够以单线程来实现多线程的处理，因此Node.js本身是单线程的；</p></blockquote><p>常见单线程实例：</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;fs&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> Koa <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;koa&#39;</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 实例化koa对象</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Koa</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">// 中间件拦截</span>
+
+app<span class="token punctuation">.</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token parameter">ctx</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> <span class="token string">&#39;hello world&#39;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 监听端口</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span>
+</code></pre></div><p>在koa框架里面，我们可以很熟悉的使用<code>node app.js</code> 来启动，然而按照这样的代码启动只能初始化一个Node.js进程，往往单进程很容易崩溃，当流量大了、服务过载单线程启动就存在问题，因此可以使用<code>uncaughtException</code> 捕获异常</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;fs&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> Koa <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;koa&#39;</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 实例化koa对象</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Koa</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">// 中间件拦截</span>
+
+app<span class="token punctuation">.</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token parameter">ctx</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> <span class="token string">&#39;hello world&#39;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 代码优化 </span>
+process<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&#39;uncaughtException&#39;</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;catch err :&#39;</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 监听端口</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span>
+</code></pre></div><p>通过上面的process进行捕获后，就不会出现接口崩溃了</p><h3 id="异常捕获" tabindex="-1"><a class="header-anchor" href="#异常捕获" aria-hidden="true">#</a> 异常捕获</h3><blockquote><p>异常捕获是一中安全的分支处理技术，一旦应用程序出现状况来不及处理，程序会中断执行，从而产生异常。产生异常的语句以及之后的语句将不会执行。默认情况下会进行异常信息的输出，然后自动结束程序的执行。</p></blockquote><p>当时对于开发人员来说，有时候在及时程序出现异常的情况下，也要让程序执正常执行。<strong>错误和异常还是有明显区别的</strong></p><h4 id="特别注意" tabindex="-1"><a class="header-anchor" href="#特别注意" aria-hidden="true">#</a> 特别注意</h4><ul><li><p>Node.js里约定，<strong>同步代码才能捕获异常</strong> ，异步代码不能直接使用try/catch（当然也不是绝对，例如Promise实现的异步流程就可以使用resolve、reject来捕获异常，一般放在回调函数之后）</p></li><li><p>频繁使用try/catch存在弊端。</p></li><li><p>使用try/catch成本较高，除非需要，一般不建议使用，基本全局捕获统一处理就可以了</p></li></ul><h3 id="yarn-npm的替代品" tabindex="-1"><a class="header-anchor" href="#yarn-npm的替代品" aria-hidden="true">#</a> Yarn-npm的替代品</h3><blockquote><p>Yarn是开源的Javascript包管理器，FaceBook在使用npm进行内部扩展使用时遇到大小、性能、安全等方面的问题，就打造了Yarn，尽可能的适用于多人开发</p></blockquote><p>yarn的特点：</p><ul><li>本地缓存文件的性能更好</li><li>可以并执行一些操作，加速了对新模块的安装处理</li><li>使用lockfile，并且能够用确定的算法创建一个跨所有机器的一致文件</li><li>处于安全考虑，在安装进程里不允许编写包的开发者执行其他代码</li></ul><p>可以看到的是，Yarn和Ruby的Gem机制类似，都会生成lockfile，在提升速度上算是非常不错的改进，当然npm也有对应的提高模块下载速度的机制cnpm</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token comment">## 安装cnpm源</span>
+<span class="token function">npm</span> <span class="token function">install</span> cnpm <span class="token parameter variable">-g</span> <span class="token parameter variable">--registry</span><span class="token operator">=</span>https://registry.npm.taobao.org
+</code></pre></div><h4 id="安装yarn" tabindex="-1"><a class="header-anchor" href="#安装yarn" aria-hidden="true">#</a> 安装Yarn</h4><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token comment">## 脚本安装</span>
+<span class="token function">curl</span> -o- <span class="token parameter variable">-L</span> https://yarnpkg.com/install.sh <span class="token operator">|</span> <span class="token function">bash</span>
+
+<span class="token comment">## npm安装</span>
+<span class="token function">npm</span> <span class="token function">install</span> <span class="token function">yarn</span> <span class="token parameter variable">--global</span>
+
+<span class="token comment">## 初始化工程</span>
+<span class="token function">yarn</span> init
+
+<span class="token comment">## 添加依赖模块</span>
+<span class="token function">yarn</span> <span class="token function">add</span> <span class="token punctuation">[</span>package<span class="token punctuation">]</span>
+<span class="token function">yarn</span> <span class="token function">add</span> <span class="token punctuation">[</span>package<span class="token punctuation">]</span>@<span class="token punctuation">[</span>version<span class="token punctuation">]</span>
+<span class="token function">yarn</span> <span class="token function">add</span> <span class="token punctuation">[</span>package<span class="token punctuation">]</span>@<span class="token punctuation">[</span>tag<span class="token punctuation">]</span>
+
+<span class="token comment">## 依赖更新</span>
+<span class="token function">yarn</span> upgrade <span class="token punctuation">[</span>package<span class="token punctuation">]</span>
+<span class="token function">yarn</span> upgrade <span class="token punctuation">[</span>package<span class="token punctuation">]</span>@<span class="token punctuation">[</span>version<span class="token punctuation">]</span>
+<span class="token function">yarn</span> upgrade <span class="token punctuation">[</span>package<span class="token punctuation">]</span>@<span class="token punctuation">[</span>tag<span class="token punctuation">]</span>
+
+<span class="token comment">## 移除依赖</span>
+<span class="token function">yarn</span> remove <span class="token punctuation">[</span>package<span class="token punctuation">]</span>
+
+<span class="token comment">## 项目里安装</span>
+<span class="token function">yarn</span> 
+<span class="token comment">## 或者</span>
+<span class="token function">yarn</span> <span class="token function">install</span>
+</code></pre></div><p>看到上面的指令，使用过npm的应该会感觉很熟悉，至少我个人上手很快，但对于初学者推荐使用npm，因为npm是绕不开的核心</p><h2 id="node-js是如何执行的" tabindex="-1"><a class="header-anchor" href="#node-js是如何执行的" aria-hidden="true">#</a> Node.js是如何执行的</h2><p>这一章主要讲解Nodejs的执行流程、原理，建议看书，我这里只是总结认为重要且必须掌握的内容</p><ul><li>process的用法</li><li>宏任务和微任务</li></ul><h3 id="process的用法" tabindex="-1"><a class="header-anchor" href="#process的用法" aria-hidden="true">#</a> process的用法</h3><ol><li>统计信息(CPU、内存等)</li></ol>`,117),d={href:"http://nodejs.cn/api/process.html#process_process_cpuusage_previousvalue",target:"_blank",rel:"noopener noreferrer"},m=s(`<div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>
+<span class="token keyword">const</span> startUsage <span class="token operator">=</span> process<span class="token punctuation">.</span><span class="token function">cpuUsage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// { user: 38579, system: 6986 }</span>
+
+<span class="token comment">// 将 CPU 旋转 500 毫秒。</span>
+<span class="token keyword">const</span> now <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> now <span class="token operator">&lt;</span> <span class="token number">500</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span><span class="token function">cpuUsage</span><span class="token punctuation">(</span>startUsage<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// { user: 514883, system: 11226 }</span>
+
+</code></pre></div><p>2.事件循环机制：process.nextTick</p><blockquote><p>process.nextTick() 方法将 callback 添加到下一个时间点的队列。 在 JavaScript 堆栈上的当前操作运行完成之后以及允许事件循环继续之前，此队列会被完全耗尽。 如果要递归地调用 process.nextTick()，则可以创建无限的循环。</p></blockquote><p>在上述循环队列中，会设置到<code>nextTick</code>和<code>_tickCallback</code>两个方法</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token comment">// </span>
+<span class="token keyword">function</span> <span class="token function">lateCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;print me later&#39;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+process<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span>laterCallback<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;print me first&#39;</span><span class="token punctuation">)</span>
+
+</code></pre></div><ul><li>nextTick的作用是把laterCallback放到下一个循环事件中去执行</li><li>_tickCallback则是一个非公开的方法，是在当前循环事件结束之后调用，以进行下一个事件循环的入口函数。</li></ul><p><strong>Node.js为事件循环维持了一个队列，nextTick负责入队列操作，_tickCallback负责出队列操作；</strong></p><p>3.uncaughtException事件</p><blockquote><p>当Nodejs发现一个没有被捕获的异常时候，会触发这个事件。如果这个事件中存在回调函数，Node.js不会强制结束进程。</p></blockquote><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>process<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&#39;uncaughtException&#39;</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 处理错误</span>
+<span class="token operator">...</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>4.其他用途</p><ul><li>进程管理：exit、kill</li><li>I/O相关：stdout、stderr、stdin</li><li>路径处理：cwd、chdir等</li></ul><h3 id="宏任务和微任务" tabindex="-1"><a class="header-anchor" href="#宏任务和微任务" aria-hidden="true">#</a> 宏任务和微任务</h3><p>在<code>libuv</code>事件编程模型中，应用程序只负责监视特定的事件，并在事件发生后进行响应。</p><p>当前调用栈执行完毕时，会分两种情况进行处理。首先处理microtask(微任务)队列里的事件，然后再从macrotask(宏任务)里中取出一个执行事件并执行。</p><p><strong>在同一次事件循环中，微任务永远在宏任务前执行</strong></p>`,16),h=s(`<h4 id="microtask-微任务" tabindex="-1"><a class="header-anchor" href="#microtask-微任务" aria-hidden="true">#</a> microtask（微任务）</h4><ul><li><p>process.nextTick()</p></li><li><p>promise对象</p></li></ul><h4 id="macrotask-宏任务" tabindex="-1"><a class="header-anchor" href="#macrotask-宏任务" aria-hidden="true">#</a> macrotask（宏任务）</h4><ul><li><p>setTimeout()</p></li><li><p>setInterval()</p></li><li><p>setImmediate()</p></li><li><p>I/O操作</p></li></ul><h3 id="process-nexttick-callback" tabindex="-1"><a class="header-anchor" href="#process-nexttick-callback" aria-hidden="true">#</a> process.nextTick(callback)</h3><p>**process.nextTick(callback)是用于事件循环的下一次循环中调用回调函数的，即：控制入队列，和setTimeout(fn,0)函数的功能类似，但效率更高。 **</p><p>process.nextTick(callback)将一个函数推迟到代码执行的下一个同步方法执行完毕或异步事件回调函数开始执行时再执行</p><blockquote><p>原理： 可以基于Node.js的事件循环进行分析，每次循环就是一次tick，每次tick时，Chrome V8引擎都会从事件队列中取出所有事件依次进行处理，如果遇到nextTick() 事件，则将其加入事件队尾，等待下一次tick到来时执行。这样直接导致nextTick()事件将会被延迟执行。</p></blockquote><h2 id="模块与核心" tabindex="-1"><a class="header-anchor" href="#模块与核心" aria-hidden="true">#</a> 模块与核心</h2><p>Node.js和CommonJS的区别(主要体现在module.exports)：</p><ul><li>Node.js中，module.exports是真正的特殊对象，是真正的对外暴露出口，而exports只有一个变量，是被默认的module.exports版绑定的</li><li>CommonJS规范里灭有module.exports对象。</li></ul><p>exports是一个特殊的对象，它的任何输出都将作为一个对外暴露的公共API</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token comment">// 导出演示</span>
+
+<span class="token keyword">const</span> <span class="token constant">PI</span> <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span>
+
+exports<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">=</span> <span class="token constant">PI</span>
+
+
+<span class="token comment">// 引入演示</span>
+
+<span class="token keyword">const</span> <span class="token constant">PI</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;XXX&#39;</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>特别注意的是：当module.exports和exports对象同时存在时，以module.exports为准</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">123</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">123</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 此时，只有module.exports有效</span>
+
+</code></pre></div><p>总结来说，在CommonJs规范里面没有module.exports对象，一般用exports对象和required来处理模块的导出和引入</p><p>在Node.js中exports、module.exports、require是都存在的，exports对象和module.exports对象都能实现模块导出，但是module.exports优先级更高；模块的导入都用require进行处理；</p><h3 id="核心技术" tabindex="-1"><a class="header-anchor" href="#核心技术" aria-hidden="true">#</a> 核心技术</h3><p>Node.js对模块的定义非常简单，主要分为模块应用、模块定义和模块标识三个部分。</p><h5 id="require" tabindex="-1"><a class="header-anchor" href="#require" aria-hidden="true">#</a> require</h5><blockquote><p>用来引用模块</p></blockquote><h5 id="export" tabindex="-1"><a class="header-anchor" href="#export" aria-hidden="true">#</a> export</h5><blockquote><p>用来导出模块，包括标识符(identifier)和模块内容(contents)</p></blockquote><ul><li>module.exports 对外导出的对象只能有一个</li><li>exports.XXX 对外导出的值可以有多个，并且两者同时存在时，exports无效，module.exports的优先级更高；</li></ul><h4 id="模块定义" tabindex="-1"><a class="header-anchor" href="#模块定义" aria-hidden="true">#</a> 模块定义</h4><blockquote><p>可以将关联代码封装到一个代码单元中，创建一个模块可以理解为全部有关联的函数放在一个文件中</p></blockquote><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token function-variable function">sayHelloEnglish</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token string">&#39;hello&#39;</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  sayHelloEnglish
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="模块导出" tabindex="-1"><a class="header-anchor" href="#模块导出" aria-hidden="true">#</a> 模块导出</h4>`,28),g=s(`<p><strong>核心是module.exports，exports对象只是module.exports的一个引用</strong></p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>
+<span class="token comment">// 变量引用</span>
+<span class="token keyword">const</span> exports <span class="token operator">=</span> module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+</code></pre></div><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>exports<span class="token punctuation">.</span><span class="token function-variable function">sayHelloInChinese</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token string">&#39;你好&#39;</span>
+<span class="token punctuation">}</span>
+
+
+exports<span class="token punctuation">.</span><span class="token function-variable function">sayHelloInEnglish</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token string">&#39;Hello&#39;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">sayHelloInEnglish</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">&#39;Hello&#39;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">sayHelloInChinese</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">&#39;你好&#39;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>从上面可以看到:</p><ul><li>exports可以用飙血多个对外暴露的API工具类代码</li><li>module.exports用于比那些对外暴露同一个对象API的代码</li></ul><p><strong>核心是module.exports，exports对象只是module.exports的一个引用</strong></p><h4 id="模块引用" tabindex="-1"><a class="header-anchor" href="#模块引用" aria-hidden="true">#</a> 模块引用</h4><p>直接用require进行引用，对结果进行赋值，对于module.exports导出的结果对象，引用的时候可以解构赋值给新对象</p><p>module.exports不一定非要返回实例化对象</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token number">1</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token number">NaN</span>
+<span class="token comment">// 导出字符串</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token string">&#39;foo&#39;</span>
+<span class="token comment">// 导出对象</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">foo</span><span class="token operator">:</span> <span class="token string">&#39;bar&#39;</span><span class="token punctuation">}</span>
+<span class="token comment">// 导出数组</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&#39;foot&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;bar&#39;</span><span class="token punctuation">]</span>
+<span class="token comment">// 导出函数方法</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+<span class="token operator">...</span>
+
+</code></pre></div><p>这里总结一下：</p><ul><li>如果希望模块是一个特定的类型，可以用module.exports</li><li>如果希望模块是典型的实例化类型，可以用exports</li></ul><p>给module.exports添加属性类似给exports添加属性，exports可以看作是module.exports的一个引用；</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span><span class="token function-variable function">name</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;My name is Lemmy Kilmister &#39;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+exports<span class="token punctuation">.</span><span class="token function-variable function">name</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;My name is Lemmy Kilmister &#39;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>上面的结果并不相同</strong>，module.exports是真正的接口，exports只是module.exports的辅助辅助工具；</p><p>在默认情况下，module.exports的返回值是空对象，如果只是添加方法和属性，只要操作具体的exports即可；只有当你不希望返回值是对象就可以用module.exports对他的属性进行处理；</p><p><strong>exports是形参数，只能在作用域内改变，出了作用域就会被还原，所以想要覆盖对外导出返回值时需要使用module.exports</strong></p><p>推荐最佳写法</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>exports <span class="token operator">=</span> module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token parameter">opts</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 除了工具类用exports.xxxx 其他都建议用module.exports</span>
+<span class="token operator">...</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="理解模块的引用" tabindex="-1"><a class="header-anchor" href="#理解模块的引用" aria-hidden="true">#</a> 理解模块的引用</h4><p>Node.js模块分为：</p><ul><li>核心模块</li><li>文件模块</li></ul><p>引入模块，使用require()方法，它可以接受的参数有：</p><ul><li>像http、fs、path等Node.js的内置模块</li><li>./mod或者../file.js：类似采用相对路径的文件模块</li><li>/path/file.js: 类似采用绝对路劲引入的模块</li><li>mod ：非原生模块的文件模块</li></ul><h4 id="加载方式" tabindex="-1"><a class="header-anchor" href="#加载方式" aria-hidden="true">#</a> 加载方式</h4><ul><li>直接使用名字加载</li><li>查找node_module目录来加载</li><li>使用全局安装的模块来加载</li></ul><h3 id="全局对象" tabindex="-1"><a class="header-anchor" href="#全局对象" aria-hidden="true">#</a> 全局对象</h3><p>模块的两种写法：</p><ul><li>基于CommonJS规范来实现，也就是常说的module.exports</li><li>全局对象写法，不需要引入，直接通过全局对象进行使用；</li></ul><h4 id="内置对象" tabindex="-1"><a class="header-anchor" href="#内置对象" aria-hidden="true">#</a> 内置对象</h4><p>在Nodejs中有一批内置对象，无需安装即可使用的模块，不需要依赖global关键字</p><h5 id="为模块包装提供的全局对象" tabindex="-1"><a class="header-anchor" href="#为模块包装提供的全局对象" aria-hidden="true">#</a> 为模块包装提供的全局对象</h5><ul><li>exports： CommonJS关键字</li><li>require： CommonJS关键字</li><li>module： CommonJS关键字</li><li>_filename： 当前文件名称</li><li>_dirname：当前文件目录</li></ul><h5 id="内置process对象" tabindex="-1"><a class="header-anchor" href="#内置process对象" aria-hidden="true">#</a> 内置process对象</h5><blockquote><p>process为核心模块，可以在当前Nodejs的各种信息进行绑定,Java8中也有类似的思想</p></blockquote><h5 id="控制台console模块" tabindex="-1"><a class="header-anchor" href="#控制台console模块" aria-hidden="true">#</a> 控制台Console模块</h5><blockquote><p>比如：console.log(),console.info()... 跟JavaScript里面不一样的是，Nodejs里面的可以在终端中输出，而Javascript中的会在浏览器的控制台进行输出</p></blockquote><h5 id="event-loop相关api的实现" tabindex="-1"><a class="header-anchor" href="#event-loop相关api的实现" aria-hidden="true">#</a> Event Loop相关Api的实现</h5><ul><li><p>setImmediate(callback[,...args])</p></li><li><p>setInterval(callback,delay[,...args])</p></li><li><p>setTimeout(callback,delay[,...args])</p></li><li><p>clearImmediate(immediateObject)</p></li><li><p>clearInterval(intervalObject)</p></li><li><p>clearTimeout(timeoutObject)</p></li></ul><p>Event Loop用全局对象来实现是非常方便的;</p><h5 id="buffer对象" tabindex="-1"><a class="header-anchor" href="#buffer对象" aria-hidden="true">#</a> Buffer对象</h5><ul><li>new Buffer()</li><li>Buffer.from() ： 推荐使用</li><li>Buffer.alloc() ：推荐使用</li><li>Buffer.allocUnsafe()： 存在内存泄漏</li><li>Buffer.allocUnsafeSlow()： 存在内存泄漏</li></ul><p>Nodejs中的全局对象和Javascript里的普通对象是一样的，主要是用来拓展变量和方法的；</p><p>扩展变量：</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>
+<span class="token comment">// 扩展debug变量，并进行加载</span>
+global<span class="token punctuation">.</span>debug <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 使用扩展的debug变量</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>debug <span class="token operator">===</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token operator">...</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>扩展方法：</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token comment">// log方法扩展</span>
+global<span class="token punctuation">.</span>log <span class="token operator">=</span> console<span class="token punctuation">.</span>log
+
+<span class="token comment">// 等价使用console.log(&#39;something&#39;)</span>
+<span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;something&#39;</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="es模块" tabindex="-1"><a class="header-anchor" href="#es模块" aria-hidden="true">#</a> ES模块</h4><blockquote></blockquote><p>ES模块的新特性往往引人入胜，ES模块的目标是创建一个同时兼容CommonJS和AMD的格式，使语法更加的紧凑，通过编译时加载，在编译时就能够确定模块的依赖关系，比CommonJS模块的加载效率更高。而在异步加载和配置模块加载方面，从执行效率、灵活度来看都优于CommonJS语法</p><p>ES模块的优势：</p><ul><li><p>语法紧凑</p></li><li><p>解构更加适用于静态编译（例如：静态类型检查、优化）</p></li><li><p>对循环引用的支持更好</p></li><li><p>用法简单，不需要关注实现细节</p></li><li><p>采用声明式语法：模块中导入用import关键字，导出用export关键字，没有require关键字。</p></li><li><p>程式化加载API：可以设置模块如何加载，并按需加载</p></li></ul><h5 id="模块导入" tabindex="-1"><a class="header-anchor" href="#模块导入" aria-hidden="true">#</a> 模块导入</h5><div class="language-typescript" data-ext="ts"><pre class="language-typescript"><code><span class="token comment">// 直接导入，并取名fs 与CommonJS中的const fs=require(&#39;fs&#39;)类似</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> fs <span class="token keyword">from</span> <span class="token string">&#39;fs&#39;</span>
+
+<span class="token comment">// 按需导入</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>readFile<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;fs&#39;</span>
+
+</code></pre></div><p><strong>此时按需导入只加载readFile方法，不加载其他，这种加载叫做编译时加载或者静态加载能够让ES6在编译时完成模块加载，效率更高</strong></p><h5 id="模块导出-1" tabindex="-1"><a class="header-anchor" href="#模块导出-1" aria-hidden="true">#</a> 模块导出</h5><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>
+<span class="token comment">// 对所有内容进行导出</span>
+<span class="token keyword">export</span> <span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">&#39;XXXXX&#39;</span>
+
+<span class="token comment">// 按照需要进行导出</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span>foot <span class="token keyword">as</span> foot_copy<span class="token punctuation">,</span> bar<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;XXXX&#39;</span>
+
+</code></pre></div><p>注意as的使用，有时候为了代码方便，别名是非常有必要的</p><h6 id="具名导出" tabindex="-1"><a class="header-anchor" href="#具名导出" aria-hidden="true">#</a> 具名导出</h6><blockquote><p>导出对象的指定别名的过程叫做具名导出</p></blockquote><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token punctuation">{</span><span class="token constant">MY_CONST</span> <span class="token keyword">as</span> <span class="token constant">FOO</span><span class="token punctuation">,</span> myFunc<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token punctuation">{</span>foot <span class="token keyword">as</span> test<span class="token punctuation">}</span>
+
+</code></pre></div><h6 id="内联具名导出" tabindex="-1"><a class="header-anchor" href="#内联具名导出" aria-hidden="true">#</a> 内联具名导出</h6><blockquote><p>变量的声明有多种，在内联具名导出时不会受到限制</p></blockquote><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>
+<span class="token comment">// 导出var定义的foo变量</span>
+<span class="token keyword">export</span> <span class="token keyword">var</span> foo<span class="token punctuation">;</span>
+<span class="token comment">// 导出const定义的woo变量</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> woo<span class="token punctuation">;</span>
+<span class="token comment">// 导出let定义的test变量</span>
+<span class="token keyword">export</span> <span class="token keyword">let</span> test<span class="token punctuation">;</span>
+
+</code></pre></div><p>函数也可以类似变量进行导出</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">myFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 处理逻辑</span>
+    <span class="token operator">...</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">myGenFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 处理逻辑</span>
+    <span class="token operator">...</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// function* 这种声明方式(function关键字后跟一个星号）会定义一个</span>
+<span class="token comment">// 生成器函数 (generator function)，它返回一个  Generator  对象。</span>
+
+</code></pre></div><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 类实现</span>
+<span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h6 id="默认导出" tabindex="-1"><a class="header-anchor" href="#默认导出" aria-hidden="true">#</a> 默认导出</h6><blockquote><p>即用default关键字，在引用时默认返回导出对象</p><p>值得注意的是：</p></blockquote><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">myFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// </span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 默认导出生成器函数，返回generator函数</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">myGenFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span><span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// </span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 默认导出MyClass类</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span><span class="token punctuation">{</span>
+    <span class="token comment">// 类实现</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 默认导出匿名类</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span><span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">// 当然，其他的也是可以的</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> foo<span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token string">&#39;Hello World&#39;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token number">3</span><span class="token operator">*</span><span class="token number">7</span><span class="token punctuation">;</span>
+<span class="token comment">// 匿名函数</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="export-default和export的区别" tabindex="-1"><a class="header-anchor" href="#export-default和export的区别" aria-hidden="true">#</a> export default和export的区别</h3><ul><li><strong>export default 向外暴露的成员，可以使用任意的变量来接收</strong></li><li><strong>在一个模块中，export default 只允许向外暴露1次</strong></li><li>在一个模块中，可以同时使用 export default 和 export 向外暴露成员</li><li>使用 export 向外暴露的成员，只能使用 { } 的形式来接收;</li><li>export 可以向外暴露多个成员， 同时，如果某些成员，我们在 import 的时候，不需要，则可以 不在 {} 中定义</li><li>使用 export 导出的成员，必须严格按照导出时候的名称，来使用 {} 按需接收；</li><li>使用 export 导出的成员，如果就想换个名称来接收，可以使用 as 来起别名；</li></ul><h2 id="异步写法与流程控制" tabindex="-1"><a class="header-anchor" href="#异步写法与流程控制" aria-hidden="true">#</a> 异步写法与流程控制</h2><p><strong>流程控制是程序中的逻辑控制的统称，</strong> Node.js中每个函数都是异步的，性能虽然会更好，但容易造成<strong>callback hell（回调地狱）</strong> ，因此为了解决API级别的回调地狱问题，就需要使用的到流程控制的部分——异步流程控制</p><p><strong>可以这样说，掌握了Nodejs里的异步流程控制，就基本掌握了Nodejs一半以上的内容</strong></p><h3 id="异步与同步" tabindex="-1"><a class="header-anchor" href="#异步与同步" aria-hidden="true">#</a> 异步与同步</h3><blockquote><p>异步执行效率更高，但结果却不一定是我们想要的，异步执行的结果具有一定的不确定性</p></blockquote><ul><li>异步</li></ul><blockquote><p>在操作中，不需要等待服务器的回复，该忙什么忙什么，不耽误事件，合理利用时间高效做事，即：充分利用服务器执行并行操作；</p></blockquote><ul><li>同步</li></ul><blockquote><p>操作必须要等待回复后才能去做其他的事情，有种至死方休的感觉。每一步都需要等待上一步完成才能进行；</p></blockquote><p>例如JQuery中的ajax异步请求</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token comment">//  存在于浏览器中的异步</span>
+$<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">&#39;XXXXX&#39;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">&#39;get&#39;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token parameter">ret</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 回调函数的方式，返回结果</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>Ajax的核心是XHR，即：XMLHttpRequest；Nodejs的核心是EventLoop，即：事件循环</strong>，异步请求不需要取刷新页面就可以获取数据；</p><p>EventLoop是维护一个回调函数的<strong>队列</strong> ，当回调函数执行时，回调函数就会被放入到这个队列中。Javascript引擎直到异步函数执行完成后，才会开始处理EventLoop，也就是说Javascript代码不是多线程的，虽然表现出来的效果是跟多线程很相似的。 <strong>EventLoop维护的是先进先出（First in First out）的队列，说明回调函数在队列中是顺序执行的</strong>；</p><p>EventLoop依赖libuv库，而libuv库采用的是异步和事件驱动的风格，主要功能是为开发人员提供一套基于I/O通知的回调函数；</p><h3 id="api介绍" tabindex="-1"><a class="header-anchor" href="#api介绍" aria-hidden="true">#</a> API介绍</h3>`,88),f=a("em",null,"因此Nodejs的API操作非常重要",-1),v={href:"http://nodejs.cn/api/",target:"_blank",rel:"noopener noreferrer"},b=s(`<div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">const</span> fs<span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;fs&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 文件路劲</span>
+<span class="token keyword">const</span> path<span class="token operator">=</span><span class="token string">&#39;.&#39;</span>
+
+<span class="token comment">// 异步读取</span>
+
+fs<span class="token punctuation">.</span><span class="token function">readdir</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span><span class="token function">funtion</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span>files</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// 出现异常</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 读取结果</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>files<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 也可以转换为箭头函数</span>
+
+fs<span class="token punctuation">.</span><span class="token function">readdir</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span>files</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// 出现异常</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 读取结果</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>files<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">// 同步写法</span>
+
+<span class="token keyword">const</span> result<span class="token operator">=</span>fs<span class="token punctuation">.</span><span class="token function">readdirSync</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 输出结果</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+</code></pre></div><h4 id="同步和异步的简单区别" tabindex="-1"><a class="header-anchor" href="#同步和异步的简单区别" aria-hidden="true">#</a> 同步和异步的简单区别</h4><ul><li>同步方式更容易理解，但会造成线程阻塞，无法最大限度利用系统资源；</li><li>异步方式需要嵌套回调，即使代码编写得非常规范也不容易理解和维护，但它能够并行执行，同时处理更多的任务，<strong>效率更高</strong></li></ul><p><strong>Nodejs实现了高的效率，至于是如何提升可控性则是开发人员要解决的问题，也是Nodejs体系中最难的点</strong></p><h3 id="自带的异步写法" tabindex="-1"><a class="header-anchor" href="#自带的异步写法" aria-hidden="true">#</a> 自带的异步写法</h3><p>Nodejs中事件的处理方式：</p><ul><li>回调函数(callback function)</li><li>事件发射器(eventEmitter)</li></ul><p>callback function采用错误优先(error-first)的回调方式，而EventEmitter则是事件驱动里的事件发射器</p><p>错误优先回调方式的写法:</p><ul><li><p>回调函数的第一个参数返回的是error对象（程序出错抛出来的异常），如果发生错误，该对象会作为第一个参数返回，* <em>如果正常执行，一般返回是null，方便在下文进行if(error)判错处理</em>* （其实只要返回是的非ture，应该不影响后续判断，不过约定俗成吧~）</p></li><li><p>回调函数的第二个参数返回的是所有成功响应的结果数据，如果结果正常，则没有发生错误，参数err就会被设置成null，并在第二个参数处返回成功响应的结果；</p></li></ul><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token doc-comment comment">/**
+* err ：错误对象
+* data ： 成功时返回的数据
+*/</span>
+<span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span>data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// 存在错误</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 正常，则输出结果data</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>但从代码语义上来说，非空的err属于程序异常，而空的err相当于能够正常返回结果，不存在异常。</p><h5 id="api写法约定" tabindex="-1"><a class="header-anchor" href="#api写法约定" aria-hidden="true">#</a> API写法约定</h5><ul><li>模块应该暴露错误优先的回调接口</li></ul><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">dragonName<span class="token punctuation">,</span>callback</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 逻辑处理</span>
+    <span class="token keyword">const</span> dragon<span class="token operator">=</span><span class="token function">createDragon</span><span class="token punctuation">(</span>dragonName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// 注意第一个参数时error,如果没有错误，则它的默认值时null</span>
+    <span class="token keyword">return</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span>dragon<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>**只有同步代码才能使用try-catch，在回调函数中不能随意使用！**经典异常捕获方法：</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;fs&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">readJSON</span><span class="token punctuation">(</span><span class="token parameter">filePath<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> parsedJSON<span class="token punctuation">;</span>
+    <span class="token comment">// 错误处理</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token function">callback</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 解析</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      parsedJSON <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>exception<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token function">callback</span><span class="token punctuation">(</span>exception<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 无异常，返回数据</span>
+    <span class="token keyword">return</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> parsedJSON<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="eventemitter" tabindex="-1"><a class="header-anchor" href="#eventemitter" aria-hidden="true">#</a> EventEmitter</h3><blockquote></blockquote><p>事件模块是Node.js内置的对观察者模式的实现，通过EventEmitter属性提供一个构造函数。该构造函数的实例中具有两个常用的方法，其中on方法可以用来监听指定事件，并触发回调函数，另外一个emit方法可以用来发布事件。可以通过发布订阅模型来理解；</p>`,20),x=s(`<p>EventEmitter是Node.js的基础模块，通过EventEmitter属性建立了一个EventEmitter对象实例，即：消息中心</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">const</span> EventEmitter<span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;events&#39;</span><span class="token punctuation">)</span>
+<span class="token comment">// 初始化消息中心实例</span>
+<span class="token keyword">const</span> observer<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// 订阅</span>
+observer<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&#39;topic&#39;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;订阅执行的方法&#39;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 发布 可以传参</span>
+observer<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">&#39;topic&#39;</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 声明方法调用</span>
+
+<span class="token keyword">function</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;main() function start:&#39;</span><span class="token punctuation">)</span>
+    observer<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">&#39;topic&#39;</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;main() function ending&#39;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 执行</span>
+<span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>可以简单理解为“发布/订阅”模式，当observer调用emit方法时，所有通过on注册该topic事件的回调函数都会被调用；</p><p>EventEmitter对象的事件触发和监听时同步的，这里和前端的事件机制很类似,Vue的父组件传值，也有对应的$emit和$on的机制</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token comment">// jquery</span>
+
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&#39;#footer&#39;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&#39;click&#39;</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;点击后的效果&#39;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 此处的trigger类似于emit，事件的触发器</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&#39;#footer&#39;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">trigger</span><span class="token punctuation">(</span><span class="token string">&#39;click&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// click事件，也可以支持简写</span>
+
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&#39;#footer&#39;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;点击后触发&#39;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>emit()方法用于触发事件，on()方法用于注册事件。对于on()方法而言，默认情况下，Node.js允许同一个事件最多指定10个回调函数</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>event<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&#39;someEvent&#39;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;event 1&#39;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+event<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&#39;someEvent&#39;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;event 2&#39;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token operator">...</span><span class="token operator">...</span><span class="token comment">// 更多</span>
+
+</code></pre></div><p>当超过10个回调函数时会发出警告⚠，当然也可以通过<code>setMaxListeners</code>方法来改变</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>event<span class="token punctuation">.</span><span class="token function">setMaxListeners</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+</code></pre></div><p>也可以用<code>Infinity</code>来设置最大值（<strong>Infinity用来表示无穷大</strong>）</p><p>事件传参举例：</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">const</span> eventEmitter <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;events&#39;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> myEmitter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">testConnection</span><span class="token punctuation">(</span><span class="token parameter">param</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;传递的参数&#39;</span>，param
+<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+myEmitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&#39;test&#39;</span><span class="token punctuation">,</span> testConnection<span class="token punctuation">)</span>
+
+<span class="token comment">// 参数传递10</span>
+myEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">&#39;test&#39;</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="事件" tabindex="-1"><a class="header-anchor" href="#事件" aria-hidden="true">#</a> 事件</h3><ul><li>事件操作接口</li></ul><blockquote><p>常见有removeListener事件和newListener事件，用来移除和添加</p></blockquote><ul><li>once方法</li></ul><blockquote><p>类似于on()方法，<strong>但是对应的回调函数只能被调用一次</strong>，而on()中的回调函数会被触发多次；</p></blockquote><ul><li>获取监听器信息</li></ul><blockquote><p>利用EventEmitter对象中的listeners()方法</p></blockquote><ul><li>事件错误处理</li></ul><h3 id="promise对象" tabindex="-1"><a class="header-anchor" href="#promise对象" aria-hidden="true">#</a> Promise对象</h3><p>**每个Promise对象都有then()方法，也就是说，then()方法是定义在原型对象Promise.protype上的，作用是为Promise实例添加状态改变时的回调函数 **</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code>Promise<span class="token punctuation">.</span>protype<span class="token punctuation">.</span><span class="token function-variable function">then</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">success<span class="token punctuation">,</span> fail</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">done</span><span class="token punctuation">(</span>success<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">fail</span><span class="token punctuation">(</span>fail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 返回this</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>由于这里每个then都会<strong>返回this对象</strong>，因此可以一直then()下去，形成链式写法</p><ul><li>success: fulfilled状态的回调函数</li><li>fail:rejected状态的回调函数</li></ul><p>一般情况下，只需要传success回调函数即可，fail函数可选，使用catch来捕获异常比通过fail函数，请示更加好控制（这里越总结，越向jquery的ajax写法）</p><p><strong>任何Promise对象都必须处于pending、fulfilled、rejected其中之一的状态</strong></p><ul><li>pending：初始状态，独立于fulfilled和rejected的状态</li><li>fulfilled: 完成（成功）状态</li><li>rejected:拒绝（失败）状态</li></ul><h4 id="状态切换" tabindex="-1"><a class="header-anchor" href="#状态切换" aria-hidden="true">#</a> 状态切换</h4>`,29),y=s(`<p>以上两种状态的转换都是单向的，而且fulfilled和rejected两个状态之间是不能互相转换的,最重要的是：* <em>只有异步操作有结果的手，可能决定当前Promise处于那种状态，任何其他操作都没法改变这个状态</em>*</p><h3 id="promise的api方法" tabindex="-1"><a class="header-anchor" href="#promise的api方法" aria-hidden="true">#</a> Promise的API方法</h3><blockquote><p>Promise规范非常简单，只包含一个构造函数和六个方法</p></blockquote><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token comment">// 构造函数</span>
+<span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>reject</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 所有Promise都要通过这种方式创建， resolve和reject是唯一可以改变Promise对象状态的接口</span>
+</code></pre></div><ul><li>resolve可以让状态从pending切换到fulfilled</li><li>reject可以让状态从pending切换到rejected(当然，reject是可选参数)</li></ul><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token comment">// 捕获当前操作的resolve结果</span>
+Promise<span class="token punctuation">.</span>protype<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 捕获全局操作的reject异常</span>
+Promise<span class="token punctuation">.</span>protype<span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+</code></pre></div><p><strong>特别值得注意的是：resolve相当于Promise.resolve的别名，reject相当于Promise.reject的别名</strong>。</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">ret</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;resolve传递值：&#39;</span><span class="token punctuation">,</span> ret<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 类似于别名</span>
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">ret</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;resolve传递值：&#39;</span><span class="token punctuation">,</span> ret<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>总结一下，6个内置方法：</p><ul><li>Promise.resolve()</li></ul><blockquote><p>可以看作：Promise.protype.resolve(),方法后面可以跟then()方法</p></blockquote><ul><li>Promise.reject()</li></ul><blockquote><p>可以看作：Promise.protype.reject()，方法后面可以跟catch()方法</p></blockquote><ul><li>Promise.protype.then()</li></ul><blockquote><p>语法： p.then(onFilfilled,onRejected) 或者p.then(value=&gt;{.............})。 此处onRejected一般省略</p></blockquote><ul><li>Promise.protype.catch()</li></ul><blockquote><p>语法： p.catch(onRejected) 或者p.catch(error=&gt;{.............})</p></blockquote><ul><li>Promise.all()</li></ul><blockquote><p>在所有接收到的Promise对象都变为fulfilled或者rejected状态之后才会继续进行后面的处理【<strong>多个方法之间并行处理</strong>】</p></blockquote><ul><li>Promise.race()</li></ul><blockquote><p>只要有一个Promise对象进入fulfilled或者rejected状态，就会继续后面的处理【<strong>多个方法之间并行处理</strong>】</p></blockquote><h4 id="promise化" tabindex="-1"><a class="header-anchor" href="#promise化" aria-hidden="true">#</a> Promise化</h4><p>在Javascript中，不是所有的异步函数和库都支持开箱即用的Promise,在大多数情况下，必须将一个典型的基于回调的函数转换成一个返回Promise的函数，这个过程为 <strong>promisification</strong></p><ul><li>promisefy</li><li>promisefyAll</li></ul><p>以上两个api都是基于<code>bulebird</code>模块的</p><div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">const</span> Promise <span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;bluebird&#39;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> fs<span class="token operator">=</span>Promise<span class="token punctuation">.</span><span class="token function">promisifyAll</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;fs&#39;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> obj<span class="token operator">=</span><span class="token punctuation">{</span>
+    <span class="token function-variable function">a</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;function a&#39;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">b</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;function b&#39;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">c</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;function c&#39;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 全部转化为同步</span>
+
+Promise<span class="token punctuation">.</span><span class="token function">promisifyAll</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+
+<span class="token comment">// 调用</span>
+obj<span class="token punctuation">.</span><span class="token function">aAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span><span class="token function">bAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span><span class="token function">cAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// 处理</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>说一点：promisifyAll可能有性能问题</p><p><strong>当然，这里来源于<code>bluebird</code>模块的Promise对象，其实是具备Nodejs的Promise对象的所有构造函数和属性，兼容所有原生所有版本的</strong></p><h3 id="异常处理" tabindex="-1"><a class="header-anchor" href="#异常处理" aria-hidden="true">#</a> 异常处理</h3><p>异常处理是异步流程控制里最难的部分，异常主要分为两种，系统错误和程序员错误。系统错误有：</p><ul><li>请求超时</li><li>内存不足</li><li>连接远程服务失败等</li></ul><p>一般需要搭配系统监控等辅助软件解决。</p><p>程序员错误即程序的Bug，产生的原因很多，比如：</p><ul><li>在调用异步方法时没有使用回调</li><li>无法读取undefined的属性</li><li>在高并发的场景下使用了同步阻塞代码</li><li>没有及时处理异常</li><li>内存泄漏</li></ul><p>这类错误是可以避免的，应对的主要方法是启动服务，通过日志记录一切；</p><p>开发者都遵守一样的约定能够有效的降低沟通成本，写法越底层，使用者越有可发挥的空间；</p><p>在Nodejs的世界里，http是最常用的模块，它简单且效率非常高，是被应用最广泛的模块。如果说http是Node.js的核心模块，那么Stream就是核心中的核心，是保证http高效的秘密武器。相比之下，events显得极为底层，是为核心模块服务的；</p><p><em><em>function</em> 这种声明方式(function关键字后跟一个星号）会定义一个生成器函数 (generator function)，它返回一个 Generator 对象。</em>*</p>`,38);function j(w,q){const o=e("ExternalLinkIcon"),p=e("Mermaid");return l(),u("div",null,[k,a("blockquote",null,[a("p",null,[t("可以参考对应的"),a("a",d,[t("官方api文档"),n(o)])])]),m,n(p,{id:"mermaid-829",code:"eJwrLkksSXXJTEwvSszVLTPi4lJQyM1MLsovSSzO1ni6b92T3bufdi3U1NW1y02EC6/rhwpzcQEAVuUcJw=="}),h,n(p,{id:"mermaid-962",code:"eJwrLkksSXXJTEwvSszVLTPiUlBIrSjILyop1tW1y81PKc1J1YMKcAHlUEWASmByAI0IGUA="}),g,a("p",null,[t("API:Application Programming Interface简称，异步的核心在于Nodejs SDK的API调用，然后交由EventLoop（libuv）去执行。* "),f,t("*； "),a("a",v,[t("Nodejs Api官网"),n(o)])]),b,n(p,{id:"mermaid-1515",code:"eJwrLkksSXXJTEwvSszVLTPiUlB4sW7Ryxmturp2T/snPt3RDBTJzwPyUnMzS7gAvG0SaQ=="}),x,n(p,{id:"mermaid-1636",code:"eJwrLkksSXXJTEwvSszVLTPiUlAoSM1LycxL19W1SyvNScvMyUlN4QIAB5UNNA=="}),n(p,{id:"mermaid-1637",code:"eJwrLkksSXXJTEwvSszVLTPiUlAoSM1LycxL19W1K0rNSk0uSU3hAgD5uwzD"}),y])}const S=c(r,[["render",j],["__file","better-nodejs.html.vue"]]);export{S as default};

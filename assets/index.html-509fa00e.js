@@ -1,0 +1,1 @@
+import{_ as t}from"./plugin-vue_export-helper-c27b6911.js";import{o as a,c as o,a as e,b as r}from"./app-be253e4c.js";const c={},n=e("h1",{id:"egg框架",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#egg框架","aria-hidden":"true"},"#"),r(" Egg框架")],-1),s=[n];function _(d,i){return a(),o("div",null,s)}const f=t(c,[["render",_],["__file","index.html.vue"]]);export{f as default};

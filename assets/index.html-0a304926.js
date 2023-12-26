@@ -1,0 +1,1 @@
+import{_ as a}from"./plugin-vue_export-helper-c27b6911.js";import{o,c as t,a as e,b as r}from"./app-be253e4c.js";const c={},n=e("h1",{id:"koa框架",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#koa框架","aria-hidden":"true"},"#"),r(" Koa框架")],-1),s=[n];function _(d,i){return o(),t("div",null,s)}const f=a(c,[["render",_],["__file","index.html.vue"]]);export{f as default};

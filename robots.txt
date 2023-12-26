@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://142vip.cn/JavaScriptCollection/sitemap.xml

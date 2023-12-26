@@ -1,0 +1,1 @@
+import{_ as t}from"./plugin-vue_export-helper-c27b6911.js";import{o,c as s,a as e,b as a}from"./app-be253e4c.js";const i={},r=e("h1",{id:"istio",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#istio","aria-hidden":"true"},"#"),a(" Istio")],-1),c=[r];function n(_,d){return o(),s("div",null,c)}const f=t(i,[["render",n],["__file","istio.html.vue"]]);export{f as default};

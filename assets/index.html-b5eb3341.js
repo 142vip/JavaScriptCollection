@@ -1,0 +1,1 @@
+import{_ as a}from"./plugin-vue_export-helper-c27b6911.js";import{o as t,c as o,a as e,b as r}from"./app-be253e4c.js";const c={},d=e("h1",{id:"midway",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#midway","aria-hidden":"true"},"#"),r(" MidWay")],-1),n=[d];function s(i,_){return t(),o("div",null,n)}const m=a(c,[["render",s],["__file","index.html.vue"]]);export{m as default};

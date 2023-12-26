@@ -1,0 +1,1 @@
+import{_ as t}from"./plugin-vue_export-helper-c27b6911.js";import{o as a,c,a as e,b as r}from"./app-be253e4c.js";const o={},s=e("h1",{id:"面试技巧",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#面试技巧","aria-hidden":"true"},"#"),r(" 面试技巧")],-1),i=[s];function n(_,d){return a(),c("div",null,i)}const f=t(o,[["render",n],["__file","social-recruit.html.vue"]]);export{f as default};

@@ -1,0 +1,1 @@
+import{_ as t}from"./plugin-vue_export-helper-c27b6911.js";import{o as a,c as o,a as e,b as r}from"./app-be253e4c.js";const c={},s=e("h1",{id:"vue框架",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#vue框架","aria-hidden":"true"},"#"),r(" Vue框架")],-1),n=[s];function _(d,i){return a(),o("div",null,n)}const l=t(c,[["render",_],["__file","vue.html.vue"]]);export{l as default};
