@@ -17,9 +17,9 @@ pipeline {
                 sh './scripts/bundle build'
             }
         }
-        stage('打包镜像') {
+        stage('镜像打包并推送') {
             steps {
-                sh './scripts/bundle image'
+                sh './scripts/bundle image_faster'
             }
         }
     }
