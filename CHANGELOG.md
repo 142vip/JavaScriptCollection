@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.2-alpha.13](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.12...v0.0.2-alpha.13) (2024-04-17)
+
+
+### Features
+
+* 新增Jenkins流水线配置 ([#133](https://github.com/142vip/JavaScriptCollection/issues/133)) ([263e235](https://github.com/142vip/JavaScriptCollection/commit/263e2352463a4d7b82b935a6553a8fc48ecdfc2f))
+
+
+### Performance Improvements
+
+* 升级基础工具依赖 ([#134](https://github.com/142vip/JavaScriptCollection/issues/134)) ([7f1755c](https://github.com/142vip/JavaScriptCollection/commit/7f1755c29650617b30182a7c715782dc2eba700c))
+
 ## [0.0.2-alpha.12](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.11...v0.0.2-alpha.12) (2023-12-25)
 
 
