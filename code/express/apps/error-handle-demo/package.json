@@ -4,7 +4,7 @@
   "description": "基于Express框架的错误处理演示Demo",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "express": "^4.16.1",
+    "express": "^4.19.2",
     "method-override": "^3.0.0"
   },
   "scripts": {

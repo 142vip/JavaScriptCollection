@@ -3,10 +3,9 @@
   "version": "0.0.1",
   "description": "Express框架的API演示Demo",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.19.2"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "author": {
     "name": "微信公众号：储凡",
     "email": "fairy_vip@2925.com"
