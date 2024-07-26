@@ -1,5 +1,5 @@
 import {ThemeLocaleData} from "vuepress-theme-hope";
-import {NotFoundMsgList} from "./constant.config";
+import {NotFoundMsgList} from "./constant";
 
 /**
  * 支持中文
@@ -74,6 +74,6 @@ const localCN: ThemeLocaleData = {
 /**
  *   自定义语言，支持文案
  */
-export const langConfig = {
+export const i18n = {
     "/": localCN
 }

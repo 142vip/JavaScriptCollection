@@ -5,7 +5,7 @@ import {searchProPlugin} from "vuepress-plugin-search-pro";
  * 使用的插件配置
  */
 
-export default {
+export const pluginConfig= {
     plugins: [
         searchProPlugin({
             // 索引全部内容

@@ -1,4 +1,4 @@
-import {name, version, authorInfo} from "../../../package.json"
+import {name, version, authorInfo} from "../../package.json"
 
 export const FOOTER_HTML_INFO=`
 <div>
@@ -32,7 +32,7 @@ export const COPYRIGHT = `
 export const AUTHOR_INFO = {
   name: authorInfo.name,
   email: authorInfo.email,
-  url: authorInfo.homePages
+  url: authorInfo.homePage
 }
 
 

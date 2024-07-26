@@ -37,7 +37,6 @@ exports.execShell = async commands => {
     // await syncExec(command)
     const execResult = await exec(command)
     // 打印输出结果
-    // console.log(1111,execResult.stdout);
     console.log(`step${count}(ending): === \n`)
     // 指令异常，不执行后续指令，非0退出
     if (execResult.code !== 0) {

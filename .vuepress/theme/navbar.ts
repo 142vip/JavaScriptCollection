@@ -1,38 +1,37 @@
-import {soloAlgorithmSidebar} from "../../manuscripts/solo-algorithm/solo-algorithm.sidebar";
+import {soloAlgorithmSidebar} from "../../docs/manuscripts/solo-algorithm/solo-algorithm.sidebar";
 
-export default [
+export const navbar =[
   {
     text: "首页",
     link: "/",
   },
   {
     text: "SOLO算法",
-    // link: "/manuscripts/solo-algorithm",
     children: soloAlgorithmSidebar
   },
   {
     text: "Battle面试官",
-    link: "/manuscripts/battle-interview",
+    link: "/manuscripts/battle-interview/",
   },
   {
     text: "前端",
-    link: "/manuscripts/front-end",
+    link: "/manuscripts/front-end/",
   },
   {
     text: "Node后端",
-    link: "/manuscripts/server-end",
+    link: "/manuscripts/server-end/",
   },
   {
     text: '微服务',
-    link: "/manuscripts/microservice",
+    link: "/manuscripts/microservice/",
   },
   {
     text: "开发技巧",
-    link: "/manuscripts/develop-skill",
+    link: "/manuscripts/develop-skill/",
   },
   {
     text: "读书整理",
-    link: "/manuscripts/read-books",
+    link: "/manuscripts/read-books/",
   },
   {
     text: "了解更多",

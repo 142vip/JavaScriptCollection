@@ -45,7 +45,7 @@ express --no-view template-demo
 
 可以清晰地看见新创建了`template-demo`项目：
 
-![](../images/express-create.png)
+![](./images/express-create.png)
 
 ## 目录结构
 

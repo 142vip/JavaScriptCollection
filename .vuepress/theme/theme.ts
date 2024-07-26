@@ -1,18 +1,18 @@
-import navbar from "./navbar";
-import sidebar from "./sidebar";
-import {AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO} from "./constant.config";
+import {AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO} from "./constant";
 import {hopeTheme} from "vuepress-theme-hope";
-import {langConfig} from "./lang.config";
-import {path} from "@vuepress/utils";
+import {i18n} from "./i18n";
+// import {path} from "@vuepress/utils";
+import {navbar} from "./navbar";
+import {sidebar} from "./sidebar";
 
 /**
  * 主题相关配置
  * 参考主题：https://theme-hope.vuejs.press/zh/config/intro.html#%E9%85%8D%E7%BD%AE%E6%A6%82%E5%BF%B5
  */
-export default {
+export const themeConfig = {
   theme: hopeTheme({
-    locales: langConfig,
-    navbarIcon: false,
+    locales: i18n,
+    // navbarIcon: false,
     // 禁用深色模式
     darkmode: "disable",
     // 支持全屏
@@ -37,7 +37,7 @@ export default {
     // 主题布局选项
     docsRepo: "https://github.com/142vip/JavaScriptCollection",
     docsDir: "docs",
-    docsBranch: "master",
+    docsBranch: "main",
     repo: "https://github.com/142vip/JavaScriptCollection.git",
 
     // 博客配置
@@ -74,7 +74,7 @@ export default {
       blog: false,
       // 代码块
       mdEnhance: {
-        card:true,
+        // card:true,
         codetabs: true,
         tasklist: true, // 支持任务列表
         // 启用 figure
@@ -88,7 +88,7 @@ export default {
         playground: {
           presets: ["ts", "vue"],
         },
-        revealjs: ["highlight", "math", "search", "notes", "zoom"],
+        // revealjs: ["highlight", "math", "search", "notes", "zoom"],
         stylize: [
           {
             matcher: "Recommended",
@@ -110,7 +110,7 @@ export default {
         // 文件导入
         include: true,
         // 容器
-        container: true,
+        // container: true,
         // mermaid
         mermaid: true,
         // 自定义对齐
@@ -120,19 +120,16 @@ export default {
         showInMobile: true
       },
       // 不自动生成readme目录
-      autoCatalog: false,
+      // autoCatalog: false,
       // 参考：https://theme-hope.vuejs.press/zh/guide/markdown/components.html
       components: {
         components: [
-          "AudioPlayer",
           "Badge",
           "BiliBili",
           "CodePen",
           "PDF",
-          "Replit",
           "StackBlitz",
-          "VideoPlayer",
-          "YouTube",
+          "VidStack",
           "Share",
           "XiGua"
         ],
@@ -160,6 +157,7 @@ export default {
           // ],
         },
       },
+      searchPro:true
     }
   })
 }
