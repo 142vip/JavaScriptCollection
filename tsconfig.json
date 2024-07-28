@@ -1,8 +1,8 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "target": "es2018",
-    "module": "commonjs",
+    "target": "ES2020",
+    "module": "ESNext",
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
@@ -22,6 +22,7 @@
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": true,
     "baseUrl": ".",
+    "esModuleInterop": true,
     "paths": {
       "@theme/*": [
         ".vitepress/theme/*"
