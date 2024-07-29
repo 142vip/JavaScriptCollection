@@ -182,7 +182,7 @@ creatObj.prototype.test = function () {
 - 原型的本质： 对象，`prototype`也可以称为原型对象
 - 原型的作用是：共享方法
 
-### 对象原型__proto__
+### 对象原型**proto**
 
 **对象都会有一个属性`__proto__`指向构造函数的`prototype`原型对象**
 
@@ -206,7 +206,7 @@ console.log(obj.__proto__ === creatObj.prototype)
 
 ### 构造函数
 
-对象原型`__proto__`  和 构造函数`prototype`原型对象里面都有一个`constructor`属性，`constructor`称为构造函数，是直接指向构造函数本身的
+对象原型`__proto__` 和 构造函数`prototype`原型对象里面都有一个`constructor`属性，`constructor`称为构造函数，是直接指向构造函数本身的
 
 **用来记录该对象引用那个构造函数，可以让原型对象重新指向原来的构造函数**
 

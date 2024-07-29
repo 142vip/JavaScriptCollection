@@ -217,7 +217,7 @@ function throttle(func, wait) {
 
 > 原理就是：会从middleware数组中取第一个函数开始执行，中间件函数中调用next方法就会去取下一个中间件函数继续执行。
 > 每个中间件函数执行完毕后都会返回一个promise对象。
-(ps:调用next方法并不是表示当前中间件函数执行完毕了，调用next之后仍可以继续执行其他代码)
+> (ps:调用next方法并不是表示当前中间件函数执行完毕了，调用next之后仍可以继续执行其他代码)
 
 参考：<https://zhuanlan.zhihu.com/p/29455788>
 

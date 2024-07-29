@@ -2,6 +2,7 @@
 title: 从1到n整数中1出现的次数
 permalink: /solo-algorithm/sword-point/number-count-in-n.html
 ---
+
 # 从1到n整数中1出现的次数
 
 ## 题目链接
@@ -16,7 +17,7 @@ permalink: /solo-algorithm/sword-point/number-count-in-n.html
 注意：11 这种情况算两次
 
 数据范围：1≤n≤30000
-进阶：空间复杂度O(1)  ，时间复杂度O(lognn)
+进阶：空间复杂度O(1) ，时间复杂度O(lognn)
 
 ## 刷题思路
 

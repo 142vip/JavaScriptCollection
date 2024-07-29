@@ -16,7 +16,7 @@ expr [EXPRESSION | OPTION]
 ## 参数
 
 - `--help`: 输出帮助信息。
-- `--version`:  输出版本信息。
+- `--version`: 输出版本信息。
 
 ## 表达式
 

@@ -1,7 +1,7 @@
 # #
 # 服务名： JavaScriptCollection
 # IP范围： 172.30.0.200
-# #
+#
 version: '2'
 services:
   JavaScriptCollection:

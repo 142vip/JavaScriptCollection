@@ -2,6 +2,7 @@
 title: 买卖股票的最好时机
 permalink: /solo-algorithm/sword-point/max-profit.html
 ---
+
 # 买卖股票的最好时机
 
 ## 题目链接

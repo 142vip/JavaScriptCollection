@@ -26,6 +26,7 @@ permalink: /read-books/cs-books/better-nodejs.html
 > 打包，生成最终可在浏览器中运行的代码
 
 最小功效原则：
+
 > 选择最合适的解决方案而不是最强的，语言的功效越弱，对于存储在该语言中的数据，我们能做的事情就越多
 
 Atwood定律：
@@ -45,8 +46,7 @@ Atwood定律：
 
 ### Node.js特点
 
->
->Node.js是可扩展的适合用于构建高性能Web应用的最简单的解决方案（**适合构建Web应用、高性能、简单、可拓展**）
+> Node.js是可扩展的适合用于构建高性能Web应用的最简单的解决方案（**适合构建Web应用、高性能、简单、可拓展**）
 
 ##### 适合构建Web应用
 
@@ -208,8 +208,7 @@ nrm -h
 
 ### Hello Node.js
 
-Node.js是基于CommonJS规范的实现，即每个文件都是一个模块，每个模块内代码的写法都必须遵守CommonJS规范，*
-*多文件调用的核心基于模块对外暴露接口和相互引用；**
+Node.js是基于CommonJS规范的实现，即每个文件都是一个模块，每个模块内代码的写法都必须遵守CommonJS规范，\* \*多文件调用的核心基于模块对外暴露接口和相互引用；\*\*
 
 - 使用module.exports定义模块
 - 通过require关键字引用模块
@@ -370,9 +369,8 @@ app.listen(3000, () => {
 
 #### 面向对象
 
->
-在早期的node.js语法中，更多的时候面向过程，随着对Node.js学习和使用的深入，就会了解到ES6语法也借鉴了Java这种面向对象语言的特性，添加`class`
-和extends这些关键字，来实现类的封装和继承，这样就可以很简单的写面向对象的程序（当然也是有局限的）
+> 在早期的node.js语法中，更多的时候面向过程，随着对Node.js学习和使用的深入，就会了解到ES6语法也借鉴了Java这种面向对象语言的特性，添加`class`
+> 和extends这些关键字，来实现类的封装和继承，这样就可以很简单的写面向对象的程序（当然也是有局限的）
 
 ```js
 // 定义学生类Student
@@ -603,9 +601,9 @@ console.log('print me first')
 ```
 
 - nextTick的作用是把laterCallback放到下一个循环事件中去执行
-- _tickCallback则是一个非公开的方法，是在当前循环事件结束之后调用，以进行下一个事件循环的入口函数。
+- \_tickCallback则是一个非公开的方法，是在当前循环事件结束之后调用，以进行下一个事件循环的入口函数。
 
-**Node.js为事件循环维持了一个队列，nextTick负责入队列操作，_tickCallback负责出队列操作；**
+**Node.js为事件循环维持了一个队列，nextTick负责入队列操作，\_tickCallback负责出队列操作；**
 
 3.uncaughtException事件
 
@@ -719,7 +717,6 @@ Node.js对模块的定义非常简单，主要分为模块应用、模块定义�
 
 ##### export
 
->
 > 用来导出模块，包括标识符(identifier)和模块内容(contents)
 
 - module.exports 对外导出的对象只能有一个
@@ -875,8 +872,8 @@ Node.js模块分为：
 - exports： CommonJS关键字
 - require： CommonJS关键字
 - module： CommonJS关键字
-- _filename： 当前文件名称
-- _dirname：当前文件目录
+- \_filename： 当前文件名称
+- \_dirname：当前文件目录
 
 ##### 内置process对象
 
@@ -935,8 +932,7 @@ log('something')
 
 #### ES模块
 
->
-ES模块的新特性往往引人入胜，ES模块的目标是创建一个同时兼容CommonJS和AMD的格式，使语法更加的紧凑，通过编译时加载，在编译时就能够确定模块的依赖关系，比CommonJS模块的加载效率更高。而在异步加载和配置模块加载方面，从执行效率、灵活度来看都优于CommonJS语法
+> ES模块的新特性往往引人入胜，ES模块的目标是创建一个同时兼容CommonJS和AMD的格式，使语法更加的紧凑，通过编译时加载，在编译时就能够确定模块的依赖关系，比CommonJS模块的加载效率更高。而在异步加载和配置模块加载方面，从执行效率、灵活度来看都优于CommonJS语法
 
 ES模块的优势：
 
@@ -974,7 +970,6 @@ export { foot as foot_copy, bar } from 'XXXX'
 
 ###### 具名导出
 
->
 > 导出对象的指定别名的过程叫做具名导出
 
 ```js
@@ -1127,8 +1122,7 @@ EventLoop依赖libuv库，而libuv库采用的是异步和事件驱动的风格�
 
 ### API介绍
 
-API:Application Programming Interface简称，异步的核心在于Nodejs SDK的API调用，然后交由EventLoop（libuv）去执行。*
-*因此Nodejs的API操作非常重要**； [Nodejs Api官网](http://nodejs.cn/api/)
+API:Application Programming Interface简称，异步的核心在于Nodejs SDK的API调用，然后交由EventLoop（libuv）去执行。\* \*因此Nodejs的API操作非常重要\*\*； [Nodejs Api官网](http://nodejs.cn/api/)
 
 ```js
 const fs=require('fs');
@@ -1179,8 +1173,7 @@ callback function采用错误优先(error-first)的回调方式，而EventEmitte
 
 错误优先回调方式的写法:
 
-- 回调函数的第一个参数返回的是error对象（程序出错抛出来的异常），如果发生错误，该对象会作为第一个参数返回，*
-  *如果正常执行，一般返回是null，方便在下文进行if(error)判错处理**
+- 回调函数的第一个参数返回的是error对象（程序出错抛出来的异常），如果发生错误，该对象会作为第一个参数返回，\* \*如果正常执行，一般返回是null，方便在下文进行if(error)判错处理\*\*
   （其实只要返回是的非ture，应该不影响后续判断，不过约定俗成吧~）
 
 - 回调函数的第二个参数返回的是所有成功响应的结果数据，如果结果正常，则没有发生错误，参数err就会被设置成null，并在第二个参数处返回成功响应的结果；
@@ -1243,8 +1236,7 @@ function readJSON(filePath, callback) {
 
 ### EventEmitter
 
->
-事件模块是Node.js内置的对观察者模式的实现，通过EventEmitter属性提供一个构造函数。该构造函数的实例中具有两个常用的方法，其中on方法可以用来监听指定事件，并触发回调函数，另外一个emit方法可以用来发布事件。可以通过发布订阅模型来理解；
+> 事件模块是Node.js内置的对观察者模式的实现，通过EventEmitter属性提供一个构造函数。该构造函数的实例中具有两个常用的方法，其中on方法可以用来监听指定事件，并触发回调函数，另外一个emit方法可以用来发布事件。可以通过发布订阅模型来理解；
 
 ```state
 订阅-->发布
@@ -1391,12 +1383,10 @@ pending-->fulfilled
 pending-->rejected
 ```
 
-以上两种状态的转换都是单向的，而且fulfilled和rejected两个状态之间是不能互相转换的,最重要的是：*
-*只有异步操作有结果的手，可能决定当前Promise处于那种状态，任何其他操作都没法改变这个状态**
+以上两种状态的转换都是单向的，而且fulfilled和rejected两个状态之间是不能互相转换的,最重要的是：\* \*只有异步操作有结果的手，可能决定当前Promise处于那种状态，任何其他操作都没法改变这个状态\*\*
 
 ### Promise的API方法
 
->
 > Promise规范非常简单，只包含一个构造函数和六个方法
 
 ```js
@@ -1525,5 +1515,5 @@ obj.aAsync().then(obj.bAsync()).then(obj.cAsync()).catch((err) => {
 
 在Nodejs的世界里，http是最常用的模块，它简单且效率非常高，是被应用最广泛的模块。如果说http是Node.js的核心模块，那么Stream就是核心中的核心，是保证http高效的秘密武器。相比之下，events显得极为底层，是为核心模块服务的；
 
-**function* 这种声明方式(function关键字后跟一个星号）会定义一个生成器函数 (generator function)，它返回一个 Generator
+**function\* 这种声明方式(function关键字后跟一个星号）会定义一个生成器函数 (generator function)，它返回一个 Generator
 对象。**

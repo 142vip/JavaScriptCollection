@@ -2,6 +2,7 @@
 title: 左旋转字符串
 permalink: /solo-algorithm/sword-point/left-rotate-str.html
 ---
+
 # 左旋转字符串
 
 ## 题目链接

@@ -46,7 +46,7 @@ const SupportScripts = {
       `,
     // 镜像存在即删除
     `
-        if [ "$(docker images -q ${imageName} 2> /dev/null)" != "" ];then 
+        if [ "$(docker images -q ${imageName} 2> /dev/null)" != "" ];then
           docker rmi ${imageName}
           exit 0;
         else
@@ -66,9 +66,7 @@ const SupportScripts = {
   ]
 }
 
-
 const deployName = process.argv[2]
-
 
 function getDeployCommand() {
   let deployCommand = SupportScripts.Ali
@@ -83,12 +81,10 @@ function getDeployCommand() {
   return deployCommand
 }
 
-
 // 执行
-;(async() => {
+;(async () => {
   const deployCommand = getDeployCommand()
   // console.log(deployCommand)
   await execShell(deployCommand)
 })()
-
 ```

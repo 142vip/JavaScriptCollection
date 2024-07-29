@@ -2,6 +2,7 @@
 title: 序列化二叉树
 permalink: /solo-algorithm/sword-point/serialize-tree.html
 ---
+
 # 序列化二叉树
 
 ## 题目链接

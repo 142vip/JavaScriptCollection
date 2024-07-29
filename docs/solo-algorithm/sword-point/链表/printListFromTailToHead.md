@@ -2,6 +2,7 @@
 title: 从尾到头打印链表
 permalink: /solo-algorithm/sword-point/print-list.html
 ---
+
 # 从尾到头打印链表
 
 ## 题目链接

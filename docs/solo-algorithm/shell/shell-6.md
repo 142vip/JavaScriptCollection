@@ -2,6 +2,7 @@
 title: 算法相关文档格式模版
 permalink: /solo-algorithm/shell/shell-6.html
 ---
+
 # 算法相关文档格式模版
 
 ## 题目链接

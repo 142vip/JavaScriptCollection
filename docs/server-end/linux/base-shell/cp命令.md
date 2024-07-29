@@ -5,7 +5,7 @@ permalink: /server-end/linux/base-install/cp.html
 
 # cp命令
 
- `cp`命令主要用于复制文件或目录。
+`cp`命令主要用于复制文件或目录。
 
 ## 语法
 

@@ -2,6 +2,7 @@
 title: 读书整理
 permalink: /read-books
 ---
+
 # 读书整理
 
 > 赶稿中..
@@ -12,7 +13,7 @@ permalink: /read-books
 - 深入浅出的Node.js
 - 更了不起的Node.js - 狼书卷1
 - 分布式消息中间件实践
-...
+  ...
 
 ## 非技术类
 

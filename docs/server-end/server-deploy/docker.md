@@ -270,7 +270,7 @@ docker login --username=mmdapl registry.cn-hangzhou.aliyuncs.com
 sudo docker pull registry.cn-hangzhou.aliyuncs.com/142vip/docker-yapi:[镜像版本号]
 ```
 
-*注意:不同的仓库需要匹配镜像的版本*
+_注意:不同的仓库需要匹配镜像的版本_
 
 ### 镜像推送
 

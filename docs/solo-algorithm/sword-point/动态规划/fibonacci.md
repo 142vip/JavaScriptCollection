@@ -14,8 +14,8 @@ permalink: /solo-algorithm/sword-point/fibonacci.html
 大家都知道斐波那契数列，现在要求输入一个正整数 n ，请你输出斐波那契数列的第 n 项。
 斐波那契数列是一个满足:
 
-- x = 1,2时   fib(x) = 1
-- x > 2  时   fib(x) = fib(x−1) + fib(x−2)
+- x = 1,2时 fib(x) = 1
+- x > 2 时 fib(x) = fib(x−1) + fib(x−2)
 
 的数列
 数据范围： 1≤n≤40

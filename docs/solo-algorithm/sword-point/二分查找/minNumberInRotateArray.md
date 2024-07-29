@@ -2,6 +2,7 @@
 title: 旋转数组的最小数字
 permalink: /solo-algorithm/sword-point/min-rotate-number.html
 ---
+
 # 旋转数组的最小数字
 
 ## 题目链接

@@ -1923,7 +1923,7 @@ Math.hypot(-3) // 3
 
 #### 指数运算符
 
-ES2016 新增了一个指数运算符（**）。
+ES2016 新增了一个指数运算符（\*\*）。
 
 ```js
 2 ** 2 // 4
@@ -1939,7 +1939,7 @@ ES2016 新增了一个指数运算符（**）。
 // 512
 ```
 
-指数运算符可以与等号结合，形成一个新的赋值运算符（**=）。
+指数运算符可以与等号结合，形成一个新的赋值运算符（\*\*=）。
 
 ```js
 let a = 1.5
@@ -2048,8 +2048,7 @@ add() // undefined 5
 
 #### 参数默认值的位置
 
-通常情况下，定义了默认值的参数，应该是函数的尾参数。因为这样比较容易看出来，到底省略了哪些参数。*
-*如果非尾部的参数设置默认值，实际上这个参数是没法省略的。**
+通常情况下，定义了默认值的参数，应该是函数的尾参数。因为这样比较容易看出来，到底省略了哪些参数。\* \*如果非尾部的参数设置默认值，实际上这个参数是没法省略的。\*\*
 
 ```js
 // 存在默认值不是尾参数
@@ -2111,8 +2110,7 @@ test(undefined, null)
 
 #### 作用域
 
-一旦设置了参数的默认值，函数进行声明初始化时，参数会形成一个单独的作用域（context）。等到初始化结束，这个作用域就会消失。*
-*这种语法行为，在不设置参数默认值时，是不会出现的。**
+一旦设置了参数的默认值，函数进行声明初始化时，参数会形成一个单独的作用域（context）。等到初始化结束，这个作用域就会消失。\* \*这种语法行为，在不设置参数默认值时，是不会出现的。\*\*
 
 ```js
 const x = 1
@@ -2238,15 +2236,15 @@ add(2, 5, 3) // 10
 
 rest 参数代替arguments变量
 
- ```js
- // arguments变量的写法
+```js
+// arguments变量的写法
 function sortNumbers() {
-  return Array.prototype.slice.call(arguments).sort();
+ return Array.prototype.slice.call(arguments).sort();
 }
 
 // rest参数的写法
 const sortNumbers = (...numbers) => numbers.sort();
- ```
+```
 
 **rest 参数的写法更自然也更简洁。**
 
@@ -3288,8 +3286,8 @@ arr
 ES6 提供三个新的方法,用于遍历数组
 
 - `entries()` 对键值对的遍历。
-- `keys()`  对键名的遍历
-- `values()`  对键值的遍历
+- `keys()` 对键名的遍历
+- `values()` 对键值的遍历
 
 都返回一个遍历器对象【Iterator】，可以用`for...of`循环进行遍历
 
@@ -4594,11 +4592,11 @@ function shallowMerge(target, source) {
 }
 ```
 
-### __proto__属性，Object.setPrototypeOf()，Object.getPrototypeOf()
+### **proto**属性，Object.setPrototypeOf()，Object.getPrototypeOf()
 
 > JavaScript 语言的对象继承是通过原型链实现的。ES6 提供了更多原型对象的操作方法
 
-#### __proto__属性
+#### **proto**属性
 
 `__proto__`属性（前后各两个下划线），用来读取或设置当前对象的原型对象（`prototype`）。目前，所有浏览器（包括 `IE11`）都部署了这个属性。
 
@@ -4794,8 +4792,7 @@ Object.values(obj)
 
 - `Object.values`会过滤属性名为 Symbol 值的属性。
 
-- 如果参数不是对象，`Object.values`会先将其转为对象。*
-  *由于数值和布尔值的包装对象，都不会为实例添加非继承的属性。`Object.values`会返回空数组。**
+- 如果参数不是对象，`Object.values`会先将其转为对象。\* \*由于数值和布尔值的包装对象，都不会为实例添加非继承的属性。`Object.values`会返回空数组。\*\*
 
 #### Object.entries()
 

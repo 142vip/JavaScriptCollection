@@ -2,6 +2,7 @@
 title: BM12 单链表的排序
 permalink: /solo-algorithm/interview-101/sortInList.html
 ---
+
 # BM12 单链表的排序
 
 ## 题目链接

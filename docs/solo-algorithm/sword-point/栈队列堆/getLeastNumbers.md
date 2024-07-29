@@ -2,6 +2,7 @@
 title: 最小的k个数
 permalink: /solo-algorithm/sword-point/get-least-num.html
 ---
+
 # 最小的k个数
 
 ## 题目链接

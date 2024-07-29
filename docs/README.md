@@ -42,8 +42,8 @@ features:
     link: /wechat-list.html
 ---
 
-[//]: # (<BiliBili bvid="BV1rd4y1V7tB"  />)
-[//]: # (<XiGua id="7195198927220834868" />)
+[//]: # '<BiliBili bvid="BV1rd4y1V7tB"  />'
+[//]: # '<XiGua id="7195198927220834868" />'
 
 ## 本地浏览【推荐】
 
@@ -125,5 +125,6 @@ yarn run dev
 - Netlify： <https://js-collection.netlify.app>
 - Vercel： <https://js-collection.vercel.app>
 
-[//]: # (自动引入首页)
+[//]: # '自动引入首页'
+
 <!-- @include: ../README.md#we-media -->

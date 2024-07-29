@@ -2,6 +2,7 @@
 title: 跳台阶 要么跳一阶，要么跳两阶
 permalink: /solo-algorithm/sword-point/jump-floor.html
 ---
+
 # 跳台阶
 
 ## 题目链接
