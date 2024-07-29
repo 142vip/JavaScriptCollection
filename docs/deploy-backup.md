@@ -1,3 +1,6 @@
+# deploy脚本备份
+
+```js
 #!/usr/bin/env node
 /**
  *
@@ -31,8 +34,8 @@ const SupportScripts = {
         cd -
       `,
   Ali: [
-      // 容器存在即删除
-      `
+    // 容器存在即删除
+    `
         if docker inspect --format='{{.State.Running}}' ${dockerDeployInfo.containerName} >/dev/null 2>&1;then
           docker rm -f ${dockerDeployInfo.containerName}
           exit 0;
@@ -41,8 +44,8 @@ const SupportScripts = {
           exit 1;
         fi
       `,
-      // 镜像存在即删除
-      `
+    // 镜像存在即删除
+    `
         if [ "$(docker images -q ${imageName} 2> /dev/null)" != "" ];then 
           docker rmi ${imageName}
           exit 0;
@@ -51,8 +54,8 @@ const SupportScripts = {
           exit 1;
         fi
       `,
-      // 运行容器
-      `
+    // 运行容器
+    `
         docker run -d --name ${dockerDeployInfo.containerName} \
         -p 7100:80 \
         --network=${dockerDeployInfo.networkName}  \
@@ -87,3 +90,5 @@ function getDeployCommand() {
   // console.log(deployCommand)
   await execShell(deployCommand)
 })()
+
+```
