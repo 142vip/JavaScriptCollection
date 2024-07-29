@@ -17,8 +17,8 @@ on:
   # 手动触发部署
   workflow_dispatch:
 
-  schedule:
-    - cron: '0 0 1 * *'
+#  schedule:
+#    - cron: '0 0 1 * *'
 
 # 环境变量
 env:
