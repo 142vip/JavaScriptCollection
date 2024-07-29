@@ -47,7 +47,6 @@
     "markdownlint-cli": "^0.37.0",
     "markmap-cli": "^0.15.8",
     "mermaid": "^10.9.1",
-    "pnpm": "^9.6.0",
     "reveal.js": "^5.1.0",
     "shelljs": "^0.8.5",
     "typescript": "^5.5.4",

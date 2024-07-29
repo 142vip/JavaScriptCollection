@@ -56,9 +56,6 @@ importers:
       mermaid:
         specifier: ^10.9.1
         version: 10.9.1
-      pnpm:
-        specifier: ^9.6.0
-        version: 9.6.0
       reveal.js:
         specifier: ^5.1.0
         version: 5.1.0
@@ -4262,11 +4259,6 @@ packages:
   pngjs@5.0.0:
     resolution: {integrity: sha512-40QW5YalBNfQo5yRYmiw7Yz6TKKVr3h6970B2YE+3fQpsWcrbj1PzJgxeJ19DRQjhMbKPIuMY8rFaXc8moolVw==}
     engines: {node: '>=10.13.0'}
-
-  pnpm@9.6.0:
-    resolution: {integrity: sha512-ONxvuo26NbOTQLlwARLC/h4S8QsXE0cVpKqYzPe7A152/Zgc8Ls4TfqY+NavVIHCvvL0Jmokv6IMNOtxR84LXg==}
-    engines: {node: '>=18.12'}
-    hasBin: true
 
   postcss-load-config@6.0.1:
     resolution: {integrity: sha512-oPtTM4oerL+UXmx+93ytZVN82RrlY/wPUV8IeDxFrzIjXOLF1pN+EmKPLbubvKHT2HC20xXsCAH2Z+CKV6Oz/g==}
@@ -10096,8 +10088,6 @@ snapshots:
   pluralize@8.0.0: {}
 
   pngjs@5.0.0: {}
-
-  pnpm@9.6.0: {}
 
   postcss-load-config@6.0.1(jiti@1.21.6)(postcss@8.4.40)(yaml@2.4.5):
     dependencies:
