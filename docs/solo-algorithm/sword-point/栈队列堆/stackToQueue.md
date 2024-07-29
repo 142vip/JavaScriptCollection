@@ -2,6 +2,7 @@
 title: 两个栈实现队列
 permalink: /solo-algorithm/sword-point/stack-to-queue.html
 ---
+
 # 两个栈实现队列
 
 ## 题目链接

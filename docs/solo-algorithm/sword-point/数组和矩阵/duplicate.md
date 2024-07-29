@@ -2,6 +2,7 @@
 title: 数组中重复的数字
 permalink: /solo-algorithm/sword-point/duplicate.html
 ---
+
 # 数组中重复的数字
 
 ## 题目链接

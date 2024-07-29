@@ -56,7 +56,7 @@ show table status from database where name="tablename"
 - 日期类型：`Date`、`DateTime`、`TimeStamp`、`Time`、`Year`
 - 其他数据类型：`BINARY`、`VARBINARY`、`ENUM`、`SET`、`Geometry`、`Point`、`MultiPoint`、`LineString`、`MultiLineString`、`Polygon`、`GeometryCollection`等
 
-> BLOB和TEXT有什么区别？   **字符串类型是：`SET`、`BLOB`、`ENUM`、`CHAR`、`TEXT`、`VARCHAR`**
+> BLOB和TEXT有什么区别？ **字符串类型是：`SET`、`BLOB`、`ENUM`、`CHAR`、`TEXT`、`VARCHAR`**
 
 - BLOB是一个二进制对象，可以容纳可变数量的数据。有四种类型的BLOB：TINYBLOB、BLOB、MEDIUMBLO和 LONGBLOB
 - TEXT是一个不区分大小写的BLOB。四种TEXT类型：TINYTEXT、TEXT、MEDIUMTEXT 和 LONGTEXT。
@@ -376,7 +376,7 @@ hash 分发，好处在于说，可以平均分配每个库的数据量和请求
 
 > 为什么要分库?
 
-数据库集群环境后都是多台 slave，基本满足了读取操作;  但是写入或者说大数据、频繁的写入操作对master性能影响就比较大，这个时候，单库并不能解决大规模并发写入的问题，所以就会考虑分库。
+数据库集群环境后都是多台 slave，基本满足了读取操作; 但是写入或者说大数据、频繁的写入操作对master性能影响就比较大，这个时候，单库并不能解决大规模并发写入的问题，所以就会考虑分库。
 
 > 分库是什么？
 

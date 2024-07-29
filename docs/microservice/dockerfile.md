@@ -75,7 +75,7 @@ CMD指令和RUN指令格式相似，支持两种格式：
 
 - shell格式： CMD <命令>
 - exec 格式： CMD ["参数一" , "参数二" ,"...."]
-- 参数列表格式： CMD ["参数一" , "参数二" ,  "..."]，在指定了ENTRYPOINT指令后，用CMD指定具体的参数
+- 参数列表格式： CMD ["参数一" , "参数二" , "..."]，在指定了ENTRYPOINT指令后，用CMD指定具体的参数
 
 **注意：dockerfile中可以有多个CMD指令，但是只有最后一个会生效，CMD会被docker run之后的参数/bin/bash替换掉**
 

@@ -2,6 +2,7 @@
 title: 数组中的逆序对
 permalink: /solo-algorithm/sword-point/inverse-pairs.html
 ---
+
 # 数组中的逆序对
 
 ## 题目链接

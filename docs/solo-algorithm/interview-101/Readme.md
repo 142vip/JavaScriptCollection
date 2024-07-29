@@ -23,8 +23,8 @@ title: 面试必刷Top101
 - [ ] [11.链表相加(二) 【中等】](链表/addInList.md)
 - [ ] [12.单链表的排序 【中等】](链表/sortInList.md)
 - [ ] [13.判断一个链表是否为回文结构 【简单】](链表/isPail.md)
-- [ ] [14.链表的奇偶重排  【中等】](链表/oddEvenList.md)
-- [ ] [15.删除有序链表中重复的元素-I  【简单】](链表/deleteDuplicates-1.md)
+- [ ] [14.链表的奇偶重排 【中等】](链表/oddEvenList.md)
+- [ ] [15.删除有序链表中重复的元素-I 【简单】](链表/deleteDuplicates-1.md)
 - [ ] [16.删除有序链表中重复的元素-II 【中等】](链表/deleteDuplicates-2.md)
 
 ### 二分查找/排序

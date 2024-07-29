@@ -187,9 +187,9 @@ docker-compose build [options] [--build-arg key=val...] [SERVICE...]
 
 选项包括：
 
-- `–compress` :  通过gzip压缩构建上下环境
-- `–force-rm` :  删除构建过程中的临时容器
-- `–no-cache` :  构建镜像过程中不使用缓存
+- `–compress` : 通过gzip压缩构建上下环境
+- `–force-rm` : 删除构建过程中的临时容器
+- `–no-cache` : 构建镜像过程中不使用缓存
 - `–pull` : 始终尝试通过拉取操作来获取更新版本的镜像
 - `-m, –memory` : MEM为构建的容器设置内存大小
 - `- –build-arg key=val` : 为服务设置build-time变量
@@ -482,11 +482,11 @@ depends_on:
 
 - db
 - redis
-redis:
-image: redis
-db:
-image: postgres
-上述YAML文件定义的容器会先启动redis和db两个服务，最后才启动web 服务。
+  redis:
+  image: redis
+  db:
+  image: postgres
+  上述YAML文件定义的容器会先启动redis和db两个服务，最后才启动web 服务。
 
 #### pid
 
@@ -516,8 +516,8 @@ extra_hosts:
 - "otherhost:50.31.209.229"
   启动后查看容器内部hosts：
 
-162.242.195.82  somehost
-50.31.209.229   otherhost
+  162.242.195.82 somehost
+  50.31.209.229 otherhost
 
 #### volumes
 
@@ -548,8 +548,8 @@ volumes_from:
 
 - service_name
   - container_name
-      14、dns
-      自定义DNS服务器。可以是一个值，也可以是一个列表。
+    14、dns
+    自定义DNS服务器。可以是一个值，也可以是一个列表。
 
 dns：8.8.8.8
 dns：

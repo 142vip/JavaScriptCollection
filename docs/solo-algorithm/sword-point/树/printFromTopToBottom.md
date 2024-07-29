@@ -2,6 +2,7 @@
 title: 从上往下打印二叉树
 permalink: /solo-algorithm/sword-point/print-tree-top-bottom.html
 ---
+
 # 从上往下打印二叉树
 
 ## 题目链接

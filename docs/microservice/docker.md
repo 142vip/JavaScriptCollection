@@ -35,7 +35,7 @@ brew install --cask docker
 ```
 
 ### Linux
->
+
 > 以CentOS系统为例
 
 #### 使用Yum安装

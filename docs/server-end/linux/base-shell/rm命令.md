@@ -5,7 +5,7 @@ permalink: /server-end/linux/base-install/rm.html
 
 # rm命令
 
- `rm`命令用于删除一个文件或者目录。
+`rm`命令用于删除一个文件或者目录。
 
 ## 语法
 

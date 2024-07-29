@@ -2,6 +2,7 @@
 title: 圆圈中最后剩下的数 约瑟夫问题
 permalink: /solo-algorithm/sword-point/last-remaining.html
 ---
+
 # 圆圈中最后剩下的数 约瑟夫问题
 
 ## 题目链接
@@ -27,7 +28,7 @@ k-1对应n-2
 f(n,m)=(f(n-1,m)+m)%n;
 
 最终的递推关系式为
-f(1,m) = 0;                        (n=1)
+f(1,m) = 0; (n=1)
 f(n,m)=(f(n-1,m)+m)%n; （n>1）
 
 ## 刷题思路

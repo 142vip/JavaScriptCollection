@@ -3,8 +3,6 @@
  *
  * 将应用程序打包成可部署的包、文件、镜像
  * 例如：
- *   - ./scripts/bundle build              基础部署打包
- *   - ./scripts/bundle build_proxy        用于三方平台部署打包
  *   - ./scripts/bundle image              构建容器镜像
  *   - ./scripts/bundle image_faster       本地build，快速构建容器镜像
  *   - ./scripts/bundle xxx                其他参数，默认执行build命令
@@ -16,7 +14,7 @@ const { execSync } = require('child_process');
 const { Select } = require('enquirer')
 
 // 仓库地址
-const repoAddress = 'registry.cn-hangzhou.aliyuncs.com/142vip/doc_book'
+const repoAddress = 'registry.cn-hangzhou.aliyuncs.com/142vip/docs'
 
 const packageInfo=require('../package.json')
 const packageVersion = packageInfo.version
@@ -98,12 +96,6 @@ async function getBuildImageScript({ containerBuild, preBuild, needProxy = false
  * 支持的脚本命令
  */
 const SupportScripts = {
-  build: 'vuepress build docs',
-  build_proxy: 'PROXY_DOMAIN=true vuepress build docs',
-  image: getBuildImageScript({
-    containerBuild: true,
-    needProxy: false
-  }),
   image_proxy: getBuildImageScript({
     containerBuild: true,
     needProxy: true
@@ -127,16 +119,6 @@ async function getScriptCommand() {
       name: 'color',
       message: 'What script will you want to run ',
       choices: [
-        {
-          message: 'build',
-          name: SupportScripts.build,
-          value: '#00ffff'
-        },
-        {
-          message: 'build for fixing proxy',
-          name: SupportScripts.build_proxy,
-          value: '#000000'
-        },
         {
           message: 'build to docker image',
           name: SupportScripts.image,
@@ -170,6 +152,5 @@ async function getScriptCommand() {
   }catch (e) {
     console.log('异常信息:',e)
   }
-
 })()
 

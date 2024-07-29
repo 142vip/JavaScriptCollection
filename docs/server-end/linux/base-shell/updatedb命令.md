@@ -16,7 +16,7 @@ updatedb [OPTION]...
 ## 参数
 
 - `-f, --add-prunefs FS`: 将空格分隔的列表`FS`中的条目添加到`PRUNEFS`。
-- `-n, --add-prunenames NAMES`:  将空格分隔的列表名称中的条目添加到`pruneName`。
+- `-n, --add-prunenames NAMES`: 将空格分隔的列表名称中的条目添加到`pruneName`。
 - `-e, --add-prunepaths PATHS`: 将以空格分隔的列表`PATHS`中的条目添加到`PRUNEPATHS`。
 - `-U, --database-root PATH`: 仅存储扫描以生成的数据库路径为根的文件系统子树的结果，默认情况下会扫描整个文件系统即`/`，`locate`输出的条目作为绝对路径名，不包含符号链接，无论`PATH`的形式如何。
 - `-h, --help`: 显示帮助信息。

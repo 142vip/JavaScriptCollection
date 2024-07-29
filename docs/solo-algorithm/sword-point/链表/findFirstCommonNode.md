@@ -2,6 +2,7 @@
 title: 两个链表的第一个公共结点
 permalink: /solo-algorithm/sword-point/find-1st-common-node.html
 ---
+
 # 两个链表的第一个公共结点
 
 ## 题目链接

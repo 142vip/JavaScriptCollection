@@ -2,6 +2,7 @@
 title: 丑数
 permalink: /solo-algorithm/sword-point/get-ugly-num.html
 ---
+
 # 丑数
 
 ## 题目链接

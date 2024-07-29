@@ -10,9 +10,11 @@ on:
   pull_request:
     branches:
       - next
+      - refactor/dev
   push:
     branches:
       - next
+      - refactor/dev
 
   # 手动触发部署
   workflow_dispatch:
@@ -70,11 +72,11 @@ jobs:
 
       - name: Build Site
         run: |
-          ./scripts/bundle build
+          pnpm build
 
       - name: Build Site With Proxy
         run: |
-          ./scripts/bundle build_proxy
+          pnpm build:proxy
 
   Build-Docker-Image:
     name: 构建Docker镜像
@@ -115,7 +117,7 @@ jobs:
       # 构建，支持domain
       - name: Build To Dist
         run: |
-          ./scripts/bundle build
+          pnpm build
 
       # 快速构建并推送
       - name: Push Docker Image

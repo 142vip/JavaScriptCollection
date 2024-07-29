@@ -3,6 +3,7 @@ title: Git的使用
 permalink: /develop-skill/code-manager/git.html
 headerDepth: 2
 ---
+
 # Git的使用
 
 **到目前为止，当今世界上使用最广泛的现代版本控制系统是 Git**。Git 是一个成熟的、积极维护的开源项目，最初由 Linux 操作系统内核的著名创建者 Linus Torvalds 于 2005 年开发。
@@ -27,7 +28,7 @@ Git 区域理解:
 - `远程仓库区`：也就是我们代码最终提交的归宿，没啥好说的。
 
 - `远端分支本地副本`：这个其实主要储存了远程仓库各分支数据在本地的一个副本，
-你可以打开你 Git 项目下的 `.git` 文件，里面有个 `refs/remotes`，这里就主要存的就是远程仓库的分支信息，一般你执行 push 或者 pull、fetch 都会往这里进行更新。
+  你可以打开你 Git 项目下的 `.git` 文件，里面有个 `refs/remotes`，这里就主要存的就是远程仓库的分支信息，一般你执行 push 或者 pull、fetch 都会往这里进行更新。
 
 - `本地分支`：这里就是我们经常会打交道的区域，你在执行 commit 之后，本质上就是提交到了这个区域，你可以查看你的 `.git` 目录下的 `refs/heads` 目录，里面存的就是我们本地的分支代码信息。
 
@@ -223,7 +224,7 @@ git branch -m <old-branch-name> <new-branch-name>
 
 ### 上游优先
 
-- `master` 作为主分支  一般稳定版本
+- `master` 作为主分支 一般稳定版本
 - 其他分支皆从 `master` 分支`衍生`
 - 注意与传统分支策略区别
 
@@ -253,7 +254,7 @@ git branch -m <old-branch-name> <new-branch-name>
 - `test`： 测试用例修改
 - `chore`： 其他修改, 比如构建流程, 依赖管理.
 - `scope`： commit 影响的范围, 比如: route, component, utils, build...
-- `subject`： commit 的概述, 建议符合  50/72 formatting
+- `subject`： commit 的概述, 建议符合 50/72 formatting
 - `body`： commit 具体修改内容, 可以分为多行, 建议符合 50/72 formatting
 - `footer`： 一些备注, 通常是 BREAKING CHANGE 或修复的 bug 的链接.
 
@@ -275,7 +276,7 @@ Header部分只有一行，包括三个字段：type（必需）、scope（可�
 - **fix：修补bug**
 - **docs：修改文档**
 - **style： 格式化代码结构（不影响代码运行的变动）**
-- **refactor：重构（即不是新增功能，也不是修改bug的代码变动，比如重命名变量  ）**
+- **refactor：重构（即不是新增功能，也不是修改bug的代码变动，比如重命名变量 ）**
 - **chore：构建过程或辅助工具的变动（不会影响代码运行）**
 
 **scope**

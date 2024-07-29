@@ -9,6 +9,7 @@ on:
   push:
     branches:
       - next
+      - refactor/deploy
   workflow_dispatch:
 
 # 环境变量
@@ -17,12 +18,21 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
+# 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   # 部署到Github-Pages
   deploy-github:
     name: 部署到Github-Pages
-    if: github.repository == '142vip/JavaScriptCollection'
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    if: github.repository == '142vip/JavaScriptCollection'
 
     steps:
       - name: Checkout Code
@@ -52,43 +62,19 @@ jobs:
         run: |
           ./scripts/ci
 
-      # 运行构建脚本
-      - name: Build VuePress Site
-        run: |
-          ./scripts/bundle build_proxy
+      # 编译 打包成dist
+      - name: Build with VitePress
+        run: pnpm build:proxy
 
-      # 将README.md同步，利于github pages分支展示
-      - name: Add Readme.md To Dist
-        run: |
-          cp -f README.md docs/.vuepress/dist
-
-      - name: Check GitHub Pages status
-        uses: crazy-max/ghaction-github-status@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          pages_threshold: major_outage
+          path: docs/.vuepress/dist
 
-      # 获取Git提交信息
-      - name: Get Commit Info
-        id: gitInfo
-        run: |
-          echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
-          echo "author=$(git log -1 --pretty=%an)" >> $GITHUB_OUTPUT
-          echo "email=$(git log -1 --pretty=%ae)" >> $GITHUB_OUTPUT
-
-      # 参考：https://github.com/marketplace/actions/github-pages
-      - name: Deploy To GitHub Page
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: pages/github
-          build_dir: docs/.vuepress/dist
-          commit_message: |
-            chore(sync): v${{steps.gitInfo.outputs.version}}
-
-            部署地址: https://142vip.github.io/JavaScriptCollection
-          committer: ${{steps.gitInfo.outputs.author}}<${{steps.gitInfo.outputs.email}}>
-          author: Mr·Sync
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # 部署
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
   # 部署到vercel平台
   #  deploy-vercel:
@@ -133,13 +119,6 @@ jobs:
           persist-credentials: false
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
-
-      # ## 打成压缩包
-      - name: Create Zip Package
-        run: |
-          zip -r JavaScriptCollection.zip . \
-          -x "node_modules/*" \
-          -x "*.git*"
 
       # 安装PNPM
       - name: PNPM Install

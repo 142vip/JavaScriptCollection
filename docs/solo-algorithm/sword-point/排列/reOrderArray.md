@@ -2,6 +2,7 @@
 title: 调整数组顺序使奇数位于偶数前面
 permalink: /solo-algorithm/sword-point/reorder-array.html
 ---
+
 # 【中等】调整数组顺序使奇数位于偶数前面
 
 ## 题目链接

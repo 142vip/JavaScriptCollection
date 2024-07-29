@@ -19,7 +19,7 @@ permalink: /solo-algorithm/sword-point/find-sum-nums.html
 
 - 根据`x+y=sum` 求`xy`最小 由于array是递增的，则`x` 、`y` 距离越远 xy值越小，x y距离越近xy值越大
 - x+y=(x+m)+(y-m)=sum 假设x是左边元素，y是右边元素 即：y>x
-- 可以理解乘积(x+m)(y-m)=xy-(y-x)*m-m^2 其中y-x>0 m^2
+- 可以理解乘积(x+m)(y-m)=xy-(y-x)\*m-m^2 其中y-x>0 m^2
 - 所以m值越大，其实(x+m)(y-m)越小，也就是x与y间隔也大 xy越小 ，由于array是递增的，所以只需要找到第一个满足和为sum的即可
 
 基于这样的特性，有以下方案

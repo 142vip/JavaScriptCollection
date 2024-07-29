@@ -2,6 +2,7 @@
 title: JQuery
 permalink: /front-end/front-framework/jquery.html
 ---
+
 # jQuery
 
 > 不推荐学，直接看官方文档，操作api方法即可

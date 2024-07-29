@@ -1,11 +1,11 @@
 # #
 # 服务名： JavaScriptCollection
 # IP范围： 172.30.0.200
-# #
+#
 version: '2'
 services:
   JavaScriptCollection:
-    image: registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:JavaScriptCollection-0.0.1
+    image: registry.cn-hangzhou.aliyuncs.com/142vip/docs:JavaScriptCollection-0.0.1
     container_name: JavaScriptCollection
     hostname: JavaScriptCollection
     ports:

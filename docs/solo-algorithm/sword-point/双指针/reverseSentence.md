@@ -2,6 +2,7 @@
 title: 翻转单词顺序列
 permalink: /solo-algorithm/sword-point/reverse-sentence.html
 ---
+
 # 翻转单词顺序列
 
 ## 题目链接
