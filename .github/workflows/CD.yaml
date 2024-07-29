@@ -22,8 +22,11 @@ jobs:
   # 部署到Github-Pages
   deploy-github:
     name: 部署到Github-Pages
-    if: github.repository == '142vip/JavaScriptCollection'
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    if: github.repository == '142vip/JavaScriptCollection'
 
     steps:
       - name: Checkout Code
@@ -55,7 +58,7 @@ jobs:
 
       # 编译 打包成dist
       - name: Build with VitePress
-        run: pnpm build:docs
+        run: pnpm build:proxy
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

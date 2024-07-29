@@ -1,6 +1,4 @@
-
 # Docker脚本备份
-
 
 ```js
 #!/usr/bin/env node
@@ -14,7 +12,6 @@
  */
 const { execShell } = require('./.exec')
 const scriptName = process.argv[2]
-
 
 /**
  * 网络基础信息
@@ -66,8 +63,8 @@ const SupportScriptsInNetWork = {
   rm: [
     // 参数校验
     `
-      if test -z "${dockerNetworkInfo.defaultName}";then 
-        echo "参数错误 网络名称不能为空。脚本执行eg： bash xxx.sh rm  网络名称" 
+      if test -z "${dockerNetworkInfo.defaultName}";then
+        echo "参数错误 网络名称不能为空。脚本执行eg： bash xxx.sh rm  网络名称"
         exit 1;
       fi
     `,
@@ -90,7 +87,6 @@ const SupportScriptsInNetWork = {
     `
 }
 
-
 function getContainerCommand() {
   const name = process.argv[3]
 
@@ -110,7 +106,6 @@ function getImageCommand() {
   return SupportScriptsInImage.ps
 }
 
-
 function getNetworkCommand() {
   const name = process.argv[3]
   if (name in SupportScriptsInNetWork) {
@@ -118,7 +113,6 @@ function getNetworkCommand() {
   }
   return SupportScriptsInNetWork.ls
 }
-
 
 // 支持的命令
 const SupportScripts = {
@@ -139,8 +133,8 @@ const SupportScripts = {
   rm: [
     // 参数校验
     `
-      if test -z "${dockerNetworkInfo.defaultName}";then 
-        echo "参数错误 网络名称不能为空。脚本执行eg： bash xxx.sh rm  网络名称" 
+      if test -z "${dockerNetworkInfo.defaultName}";then
+        echo "参数错误 网络名称不能为空。脚本执行eg： bash xxx.sh rm  网络名称"
         exit 1;
       fi
     `,
@@ -175,9 +169,8 @@ function getCommand() {
   }
 }
 
-
 // 执行
-;(async() => {
+;(async () => {
   const command = getCommand(scriptName)
   await execShell(command)
 })()
