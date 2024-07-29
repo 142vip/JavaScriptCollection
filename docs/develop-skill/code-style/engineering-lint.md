@@ -132,8 +132,6 @@ pnpm install lint-staged -D
 
 在项目根目录中新建`.lintstagedrc.js`文件
 
-@[code js](~/.lintstagedrc.js)
-
 以上规则是：
 
 - 对js、ts、md文件进行ci校验
