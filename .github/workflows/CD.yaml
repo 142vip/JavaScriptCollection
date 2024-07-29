@@ -9,7 +9,6 @@ on:
   push:
     branches:
       - next
-      - refactor/deploy
   workflow_dispatch:
 
 # 环境变量

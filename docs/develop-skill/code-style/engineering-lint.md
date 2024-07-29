@@ -55,16 +55,12 @@ pnpm install markdownlint-cli  -D
 
 在项目根目录新建`.markdownlint.js`文件，配置markdown的一些规则，例如：
 
-@[code js](~/.markdownlint.js)
-
 ### 配置忽略
 
 由于`**/*.md`是匹配项目中所有markdown文档，很明显存在有些目录时不需要校验的，例如：`node_modules`目录，因此非常有必要配置`markdownlint-cli`
 的忽略文件`.markdownlintignore`，避免校验不必要的文档。
 
 在项目根目录新建`.markdownlintignore`文件，配置markdown的忽略规则，例如：
-
-@[code txt](~/.markdownlintignore)
 
 ### 使用
 

@@ -10,11 +10,9 @@ on:
   pull_request:
     branches:
       - next
-      - refactor/dev
   push:
     branches:
       - next
-      - refactor/dev
 
   # 手动触发部署
   workflow_dispatch:
