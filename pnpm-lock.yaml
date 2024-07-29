@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@142vip/common':
+        specifier: 0.0.1-alpha.5
+        version: 0.0.1-alpha.5
       '@142vip/release-version':
         specifier: 0.0.1-alpha.2
         version: 0.0.1-alpha.2
