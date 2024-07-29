@@ -2,6 +2,7 @@
 title: 构建乘积数组
 permalink: /solo-algorithm/sword-point/multiply.html
 ---
+
 # 构建乘积数组
 
 ## 题目链接

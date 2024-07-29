@@ -2,6 +2,7 @@
 title: 数据流中的中位数
 permalink: /solo-algorithm/sword-point/insert-get-median.html
 ---
+
 # 数据流中的中位数
 
 ## 题目链接

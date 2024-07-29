@@ -119,6 +119,7 @@ docker-compose start jenkins
 ## 使用
 
 当Jenkins服务正常启动后，Jenkins默认暴露`8080`和`50000`两个端口，在浏览器中访问<http://127.0.0.1:8080即可Jenkins网站>
+
 > 这里需要明白，Jenkins的端口也可以自定义或者进行端口映射
 
 ![浏览器访问Jenkins](images/jenkins-lock.png)

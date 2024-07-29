@@ -2,6 +2,7 @@
 title: 二叉搜索树的第k个节点
 permalink: /solo-algorithm/sword-point/bst-k-node.html
 ---
+
 # 二叉搜索树的第k个节点
 
 ## 题目链接

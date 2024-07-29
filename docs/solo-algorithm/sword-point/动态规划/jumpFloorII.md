@@ -2,6 +2,7 @@
 title: 变态跳台阶 找规律 可跳任意阶
 permalink: /solo-algorithm/sword-point/jump-floor-random.html
 ---
+
 # 跳台阶扩展问题
 
 ## 题目链接
@@ -17,16 +18,17 @@ permalink: /solo-algorithm/sword-point/jump-floor-random.html
 
 ## 刷题思路
 
-- 我tm跳1 还剩下n-1阶  记作 G(n-1) 可选
-- 我tm跳2 还剩下n-2阶  记作 G(n-2) 可选
+- 我tm跳1 还剩下n-1阶 记作 G(n-1) 可选
+- 我tm跳2 还剩下n-2阶 记作 G(n-2) 可选
 - ....
-- 我tm跳n-1 还剩下1阶  记作 G(1)   可选
+- 我tm跳n-1 还剩下1阶 记作 G(1) 可选
 
 - 归纳出：
+
   - G(n-1)=G(1)+G(2)+.....+G(n-2);
   - G(n)=G(1)+G(2)+.....+G(n-2)+G(n-1)
 
-- 两个相减  G(n)=2*G(n-1)   去递归有： G(1)=1  , G(2)=2 G(3)=2*G(2)=4
+- 两个相减 G(n)=2*G(n-1) 去递归有： G(1)=1 , G(2)=2 G(3)=2*G(2)=4
 
 总结：按照推论，结果为`2的n-1幂`
 

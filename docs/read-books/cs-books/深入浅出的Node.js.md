@@ -2,6 +2,7 @@
 title: 深入浅出Node.js
 permalink: /read-books/cs-books/base-nodejs.html
 ---
+
 # 深入浅出Node.js
 
 ![](../images/base-nodejs.png)
@@ -65,7 +66,7 @@ const fs = require('node:fs')
 
 当然，你用没有文件名后缀.js
 
-每个模块都有独立的空间，互相不干扰，通过require()  、exports对象进行导入、导出操作；**用户完全不用去考虑变量污染**，相比之下比命名空间方案要好；
+每个模块都有独立的空间，互相不干扰，通过require() 、exports对象进行导入、导出操作；**用户完全不用去考虑变量污染**，相比之下比命名空间方案要好；
 
 ### Node模块的实现
 
@@ -135,8 +136,8 @@ require()方法会将路径形式的标识符转化为真实路径，**并且用
 - exports
 - require
 - module对象
-- _filename
-- _dirname
+- \_filename
+- \_dirname
 
 在执行之后，模块的exports属性被返回给了调用方。exports属性上的任何方法和属性都是可以被外部用到，但是模块中的变量或属性则不可直接被调用；
 
@@ -184,7 +185,7 @@ Node就他妈很牛逼的提出：
 - read 最原始 性能最低 通过反复调用来检查I/O的状态完成完整数据的读取；
 - select 基于read进行改进的方案， 通过对文件描述符上的事件状态来进行判断 具有较弱的限制，采用1024长度的数组存储状态，最多同时检查1024个文件描述符
 - poll 基于select方案改进，**采用链表的方式避免数组长度的限制**，能避免不需要的检查，【当文件描述符较多时，性能十分低下】，与select相比性能要好
-- epoll   **Linux下效率最高的I/O事件通知机制**，在进入轮询的时候如果没有检查到I/O事件，将会**休眠**，直到事件发生将其唤醒 **真实利用了事件通知、执行回调，但不是遍历查询，不会浪费CPU、执行效率较高**
+- epoll **Linux下效率最高的I/O事件通知机制**，在进入轮询的时候如果没有检查到I/O事件，将会**休眠**，直到事件发生将其唤醒 **真实利用了事件通知、执行回调，但不是遍历查询，不会浪费CPU、执行效率较高**
 - kqueue 实现方式与epoll类似，只能在FreeBSD系统下实现；
 
 **注意：epoll利用事件来降低CPU的消耗，在休眠期间CPU几乎是闲置的，当前线程而言利用率不够，是一种浪费**
@@ -458,8 +459,8 @@ process.memoryUsage();
 
 在os模块中，提供：
 
-- totalmen()    总共内存空间
-- freemem()    空闲内存空间
+- totalmen() 总共内存空间
+- freemem() 空闲内存空间
 
 两个方法查看操作系统的内存使用情况，单位：字节
 
@@ -545,8 +546,8 @@ const set = function (key, value) {
 
 **stream模块是Node的原生模块，继承自EventEmitter，具备基本的自定义事件的功能，抽象出了标准的事件和方法**
 
-- fs.createReadStream()      创建文件的可读流
-- fs.createWriteStream()     创建文件的可写流
+- fs.createReadStream() 创建文件的可读流
+- fs.createWriteStream() 创建文件的可写流
 
 注意，大文件用流操作比较好，基于V8的内存限制，读取小文件的readFile()和writeFile()不能用于大文件操作
 
@@ -640,7 +641,7 @@ session的数据只保留在服务端，客户端无法修改，相比cookie数�
 
 ### RestFul
 
-> REST：Representational  State  Transfer 表现层状态转换
+> REST：Representational State Transfer 表现层状态转换
 
 我在项目中早期也是采用RESTful，分多种类型按照规范来约定接口，后来发现还是GET/POST类型好用，其他类型存在安全隐患；
 
@@ -758,7 +759,7 @@ childProcess.fork('./worker.js')
 Node中实现IPC通道的是管道（pipe）技术，具体细节由libuv提供
 
 - window下由命名管道实现
-- *nix系统下采用unix Domain Socket实现
+- \*nix系统下采用unix Domain Socket实现
 
 表现在**应用层**上的进程间通信只是简单的message事件和send()方法
 
@@ -976,7 +977,7 @@ JavaScript开发者需要转变观念，正视自己的代码，对自己产出�
 
 - 单一职责 职责解耦分离 目标明确
 - 接口抽象 针对接口进行测试
-- 层次分离  **是单一职责的一种实现**，例如MVC分层结构 逐层测试、逐层保证
+- 层次分离 **是单一职责的一种实现**，例如MVC分层结构 逐层测试、逐层保证
 
 ### 断言（assert）
 
@@ -1004,8 +1005,8 @@ assert.equal(Math.max(1, 100), 100)
 
 两者比较：
 
-- **关注点不同**  TDD关注所有功能是否被正确实现，每个功能都具有对应的测试用例；BDD关注整体行为是否符合预期，适合指定向下的设计方式
-- **表达方式不同**  TDD的表述方式偏向于功能说明书的风格；BDD的表述方式更加接近自然语言的习惯，以讲故事的风格；
+- **关注点不同** TDD关注所有功能是否被正确实现，每个功能都具有对应的测试用例；BDD关注整体行为是否符合预期，适合指定向下的设计方式
+- **表达方式不同** TDD的表述方式偏向于功能说明书的风格；BDD的表述方式更加接近自然语言的习惯，以讲故事的风格；
 
 ### 测试框架
 

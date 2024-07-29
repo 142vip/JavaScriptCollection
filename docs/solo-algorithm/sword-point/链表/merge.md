@@ -2,6 +2,7 @@
 title: 合并两个排序的链表
 permalink: /solo-algorithm/sword-point/merge-sort-link.html
 ---
+
 # 合并两个排序的链表
 
 ## 题目链接

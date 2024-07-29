@@ -1,6 +1,7 @@
 ---
 permalink: /solo-algorithm/interview-101/oddEventList.html
 ---
+
 # BM14 链表的奇偶重排
 
 ## 题目链接

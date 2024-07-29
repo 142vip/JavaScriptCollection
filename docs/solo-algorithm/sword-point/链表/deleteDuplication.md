@@ -2,6 +2,7 @@
 title: 删除链表中重复的结点
 permalink: /solo-algorithm/sword-point/delete-duplicate-node.html
 ---
+
 # 删除链表中重复的结点
 
 ## 题目链接

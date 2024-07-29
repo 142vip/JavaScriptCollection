@@ -1,6 +1,7 @@
 ---
 permalink: /solo-algorithm/interview-101/reverseGroup.html
 ---
+
 # BM3 链表中的节点每k个一组翻转
 
 ## 题目链接

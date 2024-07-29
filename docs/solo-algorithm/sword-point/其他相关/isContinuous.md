@@ -2,6 +2,7 @@
 title: 扑克牌顺子
 permalink: /solo-algorithm/sword-point/is-continuous.html
 ---
+
 # 扑克牌顺子
 
 ## 题目链接
@@ -20,3 +21,4 @@ permalink: /solo-algorithm/sword-point/is-continuous.html
 ``
 
 ## 一些建议
+```

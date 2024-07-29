@@ -2,6 +2,7 @@
 title: 对称的二叉树
 permalink: /solo-algorithm/sword-point/is-symmetrical.html
 ---
+
 # 对称的二叉树
 
 ## 题目链接

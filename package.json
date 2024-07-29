@@ -46,7 +46,6 @@
     "hls.js": "^1.5.13",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.7",
-    "markdownlint-cli": "^0.37.0",
     "markmap-cli": "^0.15.8",
     "mermaid": "^10.9.1",
     "reveal.js": "^5.1.0",

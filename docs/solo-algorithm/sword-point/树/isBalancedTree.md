@@ -2,6 +2,7 @@
 title: 判断是不是平衡二叉树
 permalink: /solo-algorithm/sword-point/is-balance-tree.html
 ---
+
 # 判断是不是平衡二叉树
 
 ## 题目链接

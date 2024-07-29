@@ -2,6 +2,7 @@
 title: 二叉搜索树的后序遍历序列
 permalink: /solo-algorithm/sword-point/verify-bst-sequence.html
 ---
+
 # 二叉搜索树的后序遍历序列
 
 ## 题目链接
