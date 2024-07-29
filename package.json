@@ -1,7 +1,7 @@
 {
   "name": "JavaScriptCollection",
   "description": "一本有趣的JavaScript合集",
-  "version": "0.0.2-alpha.13",
+  "version": "0.0.2-alpha.14",
   "authorInfo": {
     "name": "微信公众号：储凡",
     "email": "fairy_vip@2925.com",
@@ -47,6 +47,7 @@
     "markdownlint-cli": "^0.37.0",
     "markmap-cli": "^0.15.8",
     "mermaid": "^10.9.1",
+    "@142vip/release-version": "0.0.1-alpha.2",
     "reveal.js": "^5.1.0",
     "shelljs": "^0.8.5",
     "typescript": "^5.5.4",
