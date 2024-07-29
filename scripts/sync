@@ -13,7 +13,7 @@ current_branch=$(git rev-parse --abbrev-ref HEAD)
 
 
 # master分支同步
-if [ "$current_branch" = "master" ]; then
+if [ "$current_branch" = "main" ]; then
 
   # 合并next分支内容到master分之
   git merge origin/next
@@ -22,7 +22,7 @@ if [ "$current_branch" = "master" ]; then
   for repoName in "${remoteList[@]}"
   do
       echo "-->Pushing to $repoName in master branch..."
-      git push "$repoName" master
+      git push "$repoName" main
   done
 # next分支同步
 elif [ "$current_branch" = "next" ]; then
