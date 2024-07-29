@@ -141,38 +141,31 @@ jobs:
           -x "node_modules/*" \
           -x "*.git*"
 
-      # 提取版本号
-      - name: Get New Version Number
-        id: releaseVersion
+      # 安装PNPM
+      - name: PNPM Install
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.6.0
+
+      # 安装Node环境
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.16.0
+          # 淘宝镜像加速
+          registry-url: 'https://registry.npmmirror.com'
+          # 缓存
+          cache: pnpm
+
+      - name: Install Dependencies
         run: |
-          echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+          ./scripts/ci
 
-      # 创建发布版本
-      - name: Create New Release
-        id: createRelease
-        uses: actions/create-release@latest
+      # Github发布版本，并更新Release信息
+      - name: Release New Version
+        run: npx changelog
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ steps.releaseVersion.outputs.version }}
-          release_name: v${{ steps.releaseVersion.outputs.version }}
-          body: |
-            Release ${{ steps.releaseVersion.outputs.version }}
-
-            ### Features
-
-            ### Bug Fixes
-
-      # 更新资源
-      - name: Upload Resource Assets
-        uses: actions/upload-release-asset@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.createRelease.outputs.upload_url }}
-          asset_path: ./JavaScriptCollection.zip
-          asset_name: JavaScriptCollection.zip
-          asset_content_type: application/zip
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
 #  Deploy-ESC:
 #    name: "部署到ESC服务器"

@@ -15,7 +15,3 @@ node_modules/
 .next
 .nuxt
 dist
-.cache/
-.vuepress/.cache/
-.vuepress/.temp/
-.vuepress/dist/
