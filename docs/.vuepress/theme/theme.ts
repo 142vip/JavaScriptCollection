@@ -1,8 +1,8 @@
 import { hopeTheme } from 'vuepress-theme-hope'
 import { AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO } from './constant'
 import { i18n } from './i18n'
-import { navbar } from './navbar'
-import { sidebar } from './sidebar'
+import navbar from './navbar'
+import sidebar from './sidebar'
 
 /**
  * 主题相关配置

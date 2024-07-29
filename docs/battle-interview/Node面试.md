@@ -15,7 +15,7 @@ permalink: /battle-interview/node.html
 - `阻塞`：在等待调用结果时，线程挂起了，不往下执行
 - `非阻塞`：在等待调用结果时，当前线程继续往下执行
 
-![](../images/event-loop-info.png)
+![](images/event-loop-info.png)
 
 `Nodejs`事件循环中细分为这六个阶段，依次如下：
 
@@ -50,7 +50,7 @@ process.nextTick(() => {
 // nextTick=>nextTick=>nextTick=>timer1=>promise1
 ```
 
-![](../images/event-loop.png)
+![](images/event-loop.png)
 
 开发需要关系的阶段
 与我们开发相关的三个阶段分别是 Timers Poll Check

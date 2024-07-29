@@ -1,7 +1,7 @@
 export const BattleInterviewSidebar = [
   {
     text: '面经分享',
-    prefix: 'problems',
+    collapsible: true,
     children: [
       {
         text: '接口幂等',
@@ -30,7 +30,7 @@ export const BattleInterviewSidebar = [
     children: [
       {
         text: '前端常考',
-        link: 'problems/前端常考.md',
+        link: '前端常考.md',
       },
       // {
       //   text: '后端汇总',
@@ -40,6 +40,6 @@ export const BattleInterviewSidebar = [
   },
   {
     text: '面试技巧',
-    link: 'social-recruit',
+    link: '面试技巧.md',
   },
 ]

@@ -1,4 +1,4 @@
-import { FrontEndSidebar } from '../../front-end/front-end.sidebar'
+import { sidebar } from 'vuepress-theme-hope'
 import { ServerEndSidebar } from '../../server-end/server-end.sidebar'
 import { EggSidebar } from '../../server-end/framework/egg/eggSidebar'
 import { DevelopSkillSidebar } from '../../develop-skill/develop-skill.sidebar'
@@ -19,8 +19,12 @@ import { DesignPatternsSidebar } from '../../server-end/design-patterns/designPa
 import { SequelizeOrmSidebar } from '../../server-end/orm/sequelize/sequelizeOrm.sidebar'
 import { TypeormSidebar } from '../../server-end/orm/typeorm/typeorm.sidebar'
 import { TypescriptSidebar } from '../../server-end/typescript/typescript.sidebar'
+import { FrontEndSidebar } from '../../front-end/front-end.sidebar'
 
-export const sidebar = {
+/**
+ * 侧边栏
+ */
+export default sidebar({
   '/front-end': FrontEndSidebar,
   '/server-end': ServerEndSidebar,
   '/server-end/framework/egg': EggSidebar,
@@ -42,4 +46,4 @@ export const sidebar = {
   '/job-chance': JobChanceSidebar,
   '/microservice': MicroserviceSidebar,
   '/battle-interview': BattleInterviewSidebar,
-}
+})

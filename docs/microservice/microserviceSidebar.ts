@@ -58,19 +58,19 @@ export const MicroserviceSidebar = [
   },
   {
     text: '消息中间件',
-    prefix: 'mq',
+    // prefix: 'mq',
     children: [
       {
         text: 'RabbitMQ',
-        link: 'rabbitmq.md',
+        link: 'mq/rabbitmq',
       },
       {
         text: 'Kafka',
-        link: 'kafka.md',
+        link: 'mq/kafka.md',
       },
       {
         text: 'RocketMQ',
-        link: 'rocketmq.md',
+        link: 'mq/rocketmq.md',
       },
     ],
   },

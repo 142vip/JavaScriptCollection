@@ -1,6 +1,7 @@
+import { navbar } from 'vuepress-theme-hope'
 import { soloAlgorithmSidebar } from '../../solo-algorithm/solo-algorithm.sidebar'
 
-export const navbar = [
+export default navbar([
   {
     text: '首页',
     link: '/',
@@ -68,4 +69,4 @@ export const navbar = [
       },
     ],
   },
-]
+])
