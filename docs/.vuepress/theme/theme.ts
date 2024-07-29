@@ -119,8 +119,8 @@ export const themeConfig = {
       copyCode: {
         showInMobile: true,
       },
-      // 不自动生成readme目录
-      // autoCatalog: false,
+      // 不自动生成README目录
+      catalog: false,
       // 参考：https://theme-hope.vuejs.press/zh/guide/markdown/components.html
       components: {
         components: [
