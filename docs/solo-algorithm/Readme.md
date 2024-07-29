@@ -1,6 +1,6 @@
 ---
 title: SOLO算法
-permalink: /solo-algorithm.html
+permalink: /solo-algorithm
 ---
 # SOLO算法
 
