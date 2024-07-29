@@ -35,10 +35,10 @@ permalink: /server-end/framework/koa-tutorial/response.html
 在给客户端返回响应时，允许body为空并且设置不同的status区分，例如：
 
 ```js
-ctx.response.status = 200;
+ctx.response.status = 200
 
 // 其他状态码
-ctx.response.status = 500;
+ctx.response.status = 500
 ```
 
 ### response.message
@@ -89,10 +89,10 @@ ctx.response.status = 500;
 例如：
 
 ```js
-ctx.type = 'text/plain; charset=utf-8';
-ctx.type = 'image/png';
-ctx.type = '.png';
-ctx.type = 'png';
+ctx.type = 'text/plain; charset=utf-8'
+ctx.type = 'image/png'
+ctx.type = '.png'
+ctx.type = 'png'
 ```
 
 注意: 在适当的情况下选择 `charset`, 比如 `response.type = 'html'` 将默认是 `utf-8`.
@@ -103,10 +103,10 @@ ctx.type = 'png';
 执行302重定向到指定的URL地址，例如：
 
 ```js
-ctx.redirect('back');
-ctx.redirect('test', '/index.html');
-ctx.redirect('/login');
-ctx.redirect('https://code.142vip.cn');
+ctx.redirect('back')
+ctx.redirect('test', '/index.html')
+ctx.redirect('/login')
+ctx.redirect('https://code.142vip.cn')
 ```
 
 也可以使用ctx.status修改默认302状态码，在跳转之前指定状态码就行。

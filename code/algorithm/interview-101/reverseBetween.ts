@@ -1,6 +1,6 @@
 class ListNode {
   val: number
-  // eslint-disable-next-line no-use-before-define
+
   next: ListNode | null
 
   constructor(val?: number, next?: ListNode | null) {
@@ -44,7 +44,8 @@ export function reverseBetween(head: ListNode, m: number, n: number): ListNode {
     start = next
   }
   // 将起点前的节点与终点相连
-  if (pre == null) return end
+  if (pre == null)
+    return end
   pre.next = end
   return head
 }

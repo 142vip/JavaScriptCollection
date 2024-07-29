@@ -14,13 +14,13 @@ const sequelize = new Sequelize('database', null, null, {
   replication: {
     read: [
       { host: '192.168.125.100', username: 'root', password: 123456 },
-      { host: '192.168.125.101', username: 'root', password: 123456 }
+      { host: '192.168.125.101', username: 'root', password: 123456 },
     ],
-    write: { host: '192.168.125.101', username: 'root', password: 123456 }
+    write: { host: '192.168.125.101', username: 'root', password: 123456 },
   },
   // 配置连接池
   pool: {
     max: 20,
-    idle: 30000
-  }
+    idle: 30000,
+  },
 })

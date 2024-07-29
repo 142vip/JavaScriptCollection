@@ -47,7 +47,6 @@ function Power(base, exponent) {
   // 分数处理
   return 1 / result
 }
-
 ```
 
 ## 一些建议

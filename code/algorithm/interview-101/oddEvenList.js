@@ -13,5 +13,5 @@ function oddEvenList(head) {
   // write code here
 }
 module.exports = {
-  oddEvenList
+  oddEvenList,
 }

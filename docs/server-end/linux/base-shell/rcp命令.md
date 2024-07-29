@@ -2,7 +2,6 @@
 title: rcp命令
 permalink: /server-end/linux/base-install/rcp.html
 ---
-  
 
 # rcp命令
 

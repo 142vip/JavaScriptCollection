@@ -24,7 +24,7 @@ namespace LspDemoFather{
       return this.width * this.height
     }
   }
-  export function printArea(rectangle:Rectangle): void {
+  export function printArea(rectangle: Rectangle): void {
     rectangle.setWidth(4)
     rectangle.setHeight(5)
     console.log(`Area: ${rectangle.getArea()}`)
@@ -32,8 +32,8 @@ namespace LspDemoFather{
 }
 
 namespace LspDemo {
-  import Rectangle = LspDemoFather.Rectangle;
-  import printArea = LspDemoFather.printArea;
+  import Rectangle = LspDemoFather.Rectangle
+  import printArea = LspDemoFather.printArea
 
   class Square extends Rectangle {
     setWidth(width: number): void {
@@ -52,5 +52,3 @@ namespace LspDemo {
   printArea(rectangle)
   printArea(square)
 }
-
-

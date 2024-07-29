@@ -12,7 +12,6 @@ console.log(dayjs('2019-01-25').format('[YYYYescape] YYYY-MM-DDTHH:mm:ssZ[Z]'))
 // 'YYYYescape 2019-01-25T00:00:00-02:00Z'
 console.log(dayjs('2019-01-25').format('DD/MM/YYYY')) // '25/01/2019'
 
-
 // 时间戳 毫秒 13位
 console.log(dayjs('2022-01-25').valueOf())
 // 时间戳 秒 10位

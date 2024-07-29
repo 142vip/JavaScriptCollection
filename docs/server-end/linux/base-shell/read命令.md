@@ -2,7 +2,6 @@
 title: read命令
 permalink: /server-end/linux/base-install/read.html
 ---
-  
 
 # read命令
 

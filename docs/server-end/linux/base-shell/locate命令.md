@@ -2,7 +2,6 @@
 title: locate命令
 permalink: /server-end/linux/base-install/locate.html
 ---
-  
 
 # locate命令
 

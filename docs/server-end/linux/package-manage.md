@@ -13,36 +13,36 @@ apt-get 命令适用于 deb 包管理式的 Linux 操作系统（Debian、Ubuntu
 
 ```bash
 ## 普通安装
-apt-get install xxxx 
+apt-get install xxxx
 #安装指定包的指定版本
-apt-get install xxx=version     
+apt-get install xxx=version
 #重新安装
-apt-get --reinstall install xxx      
- 
+apt-get --reinstall install xxx
+
 # 安装源码包所需要的编译环境
-apt-get build-dep xxx                
+apt-get build-dep xxx
 #修复依赖关系
-apt-get -f install                          
+apt-get -f install
 #下载软件包的源码
-apt-get source xxx                  
+apt-get source xxx
 ```
 
 ### 卸载
 
 ```bash
 #删除软件包, 保留配置文件
-apt-get remove xxx              
+apt-get remove xxx
 #删除软件包, 同时删除配置文件
-apt-get --purge remove xxx      
+apt-get --purge remove xxx
 删除软件包, 同时删除配置文件
-apt-get purge xxx               
- 
+apt-get purge xxx
+
 删除软件包, 同时删除为满足依赖,而自动安装且不再使用的软件包
-apt-get autoremove xxx          
+apt-get autoremove xxx
 #删除软件包, 删除配置文件, 删除不再使用的依赖包
-apt-get --purge autoremove xxx  
+apt-get --purge autoremove xxx
 #清除 已下载的软件包 和 旧软件包
-apt-get clean && apt-get autoclean       
+apt-get clean && apt-get autoclean
 
 ```
 
@@ -50,11 +50,11 @@ apt-get clean && apt-get autoclean
 
 ```bash
 # 更新安装源（Source）
-apt-get update                   
+apt-get update
 #更新已安装的软件包
-apt-get upgrade                  
+apt-get upgrade
 #更新已安装的软件包（识别并处理依赖关系的改变）
-apt-get dist-upgrade            
+apt-get dist-upgrade
 ```
 
 ### 帮助命令
@@ -75,15 +75,15 @@ sudo vim /etc/apt/sources.list
 
 ## 3. 配置列表
 # 阿里镜像
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse 
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse 
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse 
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse 
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse 
+deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
 
 # 中科大
@@ -134,7 +134,6 @@ deb http://archive.ubuntu.com/ubuntu/ trusty-security main restricted universe m
 deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse
 deb http://archive.ubuntu.com/ubuntu/ trusty-proposed main restricted universe multiverse
 deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse
-
 
 ### 4. 更新
 apt-get update
@@ -240,16 +239,16 @@ Alpine使用apk进行包管理，通过apk --help命令查看完整的包管理�
 ```bash
 apk install xxx
 # 搜索软件包 支持正则
-apk search xxx 
+apk search xxx
 # 查看包的详细信息
-apk info xxx 
+apk info xxx
 #显示完整的软件包信息
-apk info -a zlib 
+apk info -a zlib
 #显示指定文件属于的包
-apk info --who-owns /sbin/lbu 
+apk info --who-owns /sbin/lbu
 
 # list local package
-apk show 
+apk show
 # 卸载并删除 包
 apk del openssh openntp vim
 
@@ -266,8 +265,8 @@ upgrade命令升级系统已安装的所以软件包（一般包括内核），�
 apk update
 # 升级软件
 apk upgrade
-# 指定升级部分软件包 
-apk add --upgrade busybox 
+# 指定升级部分软件包
+apk add --upgrade busybox
 ## 指定仓库
 apk add docker --update-cache --repository http://mirrors.ustc.edu.cn/alpine/v3.4/main/ --allow-untrusted
 ```

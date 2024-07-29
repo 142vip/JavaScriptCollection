@@ -5,8 +5,8 @@ export const TypeormSidebar = [
     children: [
       {
         text: '快速入门',
-        link: '快速入门.md'
-      }
-    ]
-  }
+        link: '快速入门.md',
+      },
+    ],
+  },
 ]

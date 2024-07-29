@@ -3,7 +3,7 @@
  */
 namespace DipDemo {
   interface IMessageSender {
-    sendMessage(message: string): void;
+    sendMessage(message: string): void
   }
 
   class EmailSender implements IMessageSender {

@@ -2,7 +2,6 @@
 title: mv命令
 permalink: /server-end/linux/base-install/mv.html
 ---
-  
 
 # mv命令
 

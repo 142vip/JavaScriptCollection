@@ -179,11 +179,10 @@ Options: (H) means HTTP/HTTPS only, (F) means FTP only
 ## 压缩包安装
 wget https://curl.haxx.se/download/curl-7.30.1.tar.gz
 #解压
-tar -xzvf  curl-7.30.1.tar.gz 
+tar -xzvf  curl-7.30.1.tar.gz
 cd curl-7.30.1
 ./configure
 make && make install
-
 
 ## 直接安装
 apt-get install curl -y
@@ -249,7 +248,6 @@ Location: https://www.142vip.cn/
 </body>
 </html>
 
-
 curl -I www.142vip.cn
 
 [root@fairy /]# curl -I www.142vip.cn
@@ -278,7 +276,7 @@ curl -v www.142vip.cn
 > User-Agent: curl/7.29.0
 > Host: www.142vip.cn
 > Accept: */*
-> 
+>
 < HTTP/1.1 307 Temporary Redirect
 < Server: nginx/1.23.0
 < Date: Wed, 15 Mar 2023 15:21:00 GMT
@@ -286,7 +284,7 @@ curl -v www.142vip.cn
 < Content-Length: 171
 < Connection: keep-alive
 < Location: https://www.142vip.cn/
-< 
+<
 <html>
 <head><title>307 Temporary Redirect</title></head>
 <body>
@@ -402,7 +400,7 @@ curl --user-agent "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTM
 > User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36
 > Host: www.142vip.cn
 > Accept: */*
-> 
+>
 < HTTP/1.1 307 Temporary Redirect
 < Server: nginx/1.23.0
 < Date: Wed, 15 Mar 2023 15:34:39 GMT
@@ -410,7 +408,7 @@ curl --user-agent "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTM
 < Content-Length: 171
 < Connection: keep-alive
 < Location: https://www.142vip.cn/
-< 
+<
 <html>
 <head><title>307 Temporary Redirect</title></head>
 <body>

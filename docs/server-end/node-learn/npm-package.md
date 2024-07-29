@@ -10,16 +10,17 @@ permalink: /server-end/node-learn/npm-package.html
 > 使用前，先安装GraphicsMagick或者ImageMagick，支持图片处理，添加水印、裁剪...
 
 ```js
-var fs = require('fs')
-  , gm = require('gm');
+const fs = require('node:fs')
+const gm = require('gm')
 
 // resize and remove EXIF profile data
 gm('/path/to/my/img.jpg')
-.resize(240, 240)
-.noProfile()
-.write('/path/to/resize.png', function (err) {
-  if (!err) console.log('done');
-});
+  .resize(240, 240)
+  .noProfile()
+  .write('/path/to/resize.png', (err) => {
+    if (!err)
+      console.log('done')
+  })
 ```
 
 实践：
@@ -56,13 +57,12 @@ moment(XXXXXX).format('YYYY-MM-DD HH:mm:ss')
 
 ```js
 const crypto = require('crypto.js')
-//a21cf00de4343af1b8b2087af07eb7b9
+// a21cf00de4343af1b8b2087af07eb7b9
 crypto.hmac('md5', '123456', 'sdfvkjfhd')
 
-
 // hashMac算法
-function hashMac(code,key){
-  return crypto.HmacSHA1(code,key).toString(crypto.enc.Base64)
+function hashMac(code, key) {
+  return crypto.HmacSHA1(code, key).toString(crypto.enc.Base64)
 }
 ```
 
@@ -97,10 +97,9 @@ path.sep
 ```js
 const fse = require('fs-extra')
 // 遍历某个目录下所有文件【常用方案】
-fse.readdirSync(path.join(_dirname),'XXXX')
-.filter()  // 文件过滤
-.forEach() // 遍历
-
+fse.readdirSync(path.join(_dirname), 'XXXX')
+  .filter() // 文件过滤
+  .forEach() // 遍历
 ```
 
 参考资料：
@@ -112,12 +111,12 @@ fse.readdirSync(path.join(_dirname),'XXXX')
 > 简单易用的二维码生成,模块[qrcode](https://www.npmjs.com/package/qrcode)也支持类似功能
 
 ```js
-const qr = require('qr-image');
- 
-const qr_svg = qr.image('I love QR!', { type: 'svg' });
-qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
- 
-const svg_string = qr.imageSync('I love QR!', { type: 'svg' });
+const qr = require('qr-image')
+
+const qr_svg = qr.image('I love QR!', { type: 'svg' })
+qr_svg.pipe(require('node:fs').createWriteStream('i_love_qr.svg'))
+
+const svg_string = qr.imageSync('I love QR!', { type: 'svg' })
 ```
 
 参考资料：
@@ -130,11 +129,9 @@ const svg_string = qr.imageSync('I love QR!', { type: 'svg' });
 
 ```js
 // Load the full build.
-const  _ = require('lodash');
+const _ = require('lodash')
 
 // 调用方法 提供了很多...
-
-
 ```
 
 参考资料：
@@ -149,11 +146,10 @@ const  _ = require('lodash');
 > 在async/await之前使用频率非常高的npm包，直接将回调函数转化为promise对象【配合wechat项目学习】
 
 ```js
-const fs=require('fs')
-const Promise = require("bluebird");
+const fs = require('node:fs')
+const Promise = require('bluebird')
 // 转化为async方法，原来是回调函数的形式
 const readFileAsync = Promise.promisify(fs.readFile)
-
 ```
 
 参考资料：

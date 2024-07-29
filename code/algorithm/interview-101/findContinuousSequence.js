@@ -9,11 +9,13 @@ function FindContinuousSequence(sum) {
     // 求和
     if (tempSum === sum) {
       tempSum -= left
-    } else if (tempSum < sum) {
+    }
+    else if (tempSum < sum) {
       // 向右
       tempSum -= left
       left++
-    } else if (tempSum > sum) {
+    }
+    else if (tempSum > sum) {
       // 向左
     }
   }

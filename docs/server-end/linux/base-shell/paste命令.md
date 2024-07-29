@@ -2,7 +2,6 @@
 title: paste命令
 permalink: /server-end/linux/base-install/paste.html
 ---
-  
 
 # paste命令
 

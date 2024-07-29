@@ -11,7 +11,8 @@ function quickSort(data, low, high) {
 
   if (pivot + 1 < high) {
     result.push(pivot + 1, high)
-  } else if (pivot > low + 1) {
+  }
+  else if (pivot > low + 1) {
     result.push(low, pivot - 1)
   }
   // 数组不为空
@@ -25,7 +26,8 @@ function quickSort(data, low, high) {
 
     if (tempPivot + 1 < high) {
       result.push(tempPivot + 1, tempHigh)
-    } else if (tempPivot - 1 > low) {
+    }
+    else if (tempPivot - 1 > low) {
       result.push(tempLow, tempPivot - 1)
     }
   }

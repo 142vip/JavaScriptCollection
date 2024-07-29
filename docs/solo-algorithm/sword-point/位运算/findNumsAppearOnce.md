@@ -26,7 +26,7 @@ permalink: /solo-algorithm/sword-point/find-nums-appear-once.html
 #返回值：
 [4,6]
 #说明：
-#返回的结果中较小的数排在前面    
+#返回的结果中较小的数排在前面
 ```
 
 ## 刷题思路

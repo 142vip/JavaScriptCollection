@@ -20,9 +20,9 @@ permalink: /solo-algorithm/sword-point/replace-space.html
 
 ```js
 // 输入：
-"We Are Happy"
+'We Are Happy'
 // 返回值：
-"We%20Are%20Happy"
+'We%20Are%20Happy'
 ```
 
 ## 刷题思路

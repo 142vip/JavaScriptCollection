@@ -2,7 +2,6 @@
 title: mktemp命令
 permalink: /server-end/linux/base-install/mktemp.html
 ---
-  
 
 # mktemp命令
 

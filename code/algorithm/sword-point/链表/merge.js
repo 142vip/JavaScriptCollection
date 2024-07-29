@@ -21,7 +21,8 @@ function Merge(pHead1, pHead2) {
       // 前者大，用后者
       result.next = pHead2
       pHead2 = pHead2.next
-    } else if (pHead1.val < pHead2.val) {
+    }
+    else if (pHead1.val < pHead2.val) {
       // 后者大，用前者
       result.next = pHead1
       pHead1 = pHead1.next

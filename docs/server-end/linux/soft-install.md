@@ -66,7 +66,7 @@ apt-get update
 ## 一般步骤：直接下载--->解压--->编译安装
 wget https://curl.haxx.se/download/curl-7.30.1.tar.gz
 #解压
-tar -xzvf  curl-7.30.1.tar.gz 
+tar -xzvf  curl-7.30.1.tar.gz
 cd curl-7.30.1
 ./configure
 ## 编译安装

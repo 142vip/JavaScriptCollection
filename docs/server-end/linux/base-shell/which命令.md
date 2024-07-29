@@ -2,7 +2,6 @@
 title: which命令
 permalink: /server-end/linux/base-install/which.html
 ---
-  
 
 # which命令
 

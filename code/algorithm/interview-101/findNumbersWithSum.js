@@ -1,4 +1,3 @@
-
 /**
  * 注意array是递增的
  * @param array
@@ -10,17 +9,19 @@ function FindNumbersWithSum(array, sum) {
 
   let sumResult = []
   // 定义无穷大Infinity 或者直接sum值的平方
-  let min = Math.pow(sum, 2)
+  let min = sum ** 2
   // let min=Infinity
   while (left < right) {
     const tempSum = array[left] + array[right]
     if (tempSum < sum) {
       // 向右
       left++
-    } else if (tempSum > sum) {
+    }
+    else if (tempSum > sum) {
       // 向左
       right--
-    } else if (tempSum === sum) {
+    }
+    else if (tempSum === sum) {
       // 已找到符合条件的元素，需要对齐进行乘积比较
       if (min > array[left] * array[right]) {
         // 假定为最小值

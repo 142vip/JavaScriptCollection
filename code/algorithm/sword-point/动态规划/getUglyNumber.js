@@ -29,4 +29,3 @@ function GetUglyNumberSolution(index) {
   console.log(result)
   return result[index - 1]
 }
-

@@ -2,7 +2,6 @@
 title: cp命令
 permalink: /server-end/linux/base-install/cp.html
 ---
-  
 
 # cp命令
 

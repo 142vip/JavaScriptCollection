@@ -6,5 +6,5 @@ function reverseList(pHead) {
   // write code here
 }
 module.exports = {
-  reverseList
+  reverseList,
 }

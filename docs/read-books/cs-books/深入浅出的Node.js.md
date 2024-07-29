@@ -52,7 +52,7 @@ Node是单线程的，没有提供对多线程的技术支持，但是可以充�
 #### 模块引入
 
 ```js
-const fs=require('fs')
+const fs = require('node:fs')
 ```
 
 在CommonJS规范中，存在require()方法，接收模块标识，引入一个模块的API到当前的上下文中；
@@ -122,12 +122,12 @@ require()方法会将路径形式的标识符转化为真实路径，**并且用
 
 ```js
 (function (exports, require, module, __filename, __dirname) {
-     // 实际JavaScript文件内容
-     var math = require('math');
-     exports.area = function (radius) {
-      return Math.PI * radius * radius;
-   };
-}); 
+  // 实际JavaScript文件内容
+  const math = require('math')
+  exports.area = function (radius) {
+    return Math.PI * radius * radius
+  }
+})
 ```
 
 在编译过程中，Node对js文件的内容进行头尾包装，让每个模块之间都进行了作用域隔离，同时还为每个模块提供常用变量：
@@ -146,14 +146,14 @@ require()方法会将路径形式的标识符转化为真实路径，**并且用
 
 ```js
 // AMD模块定义
-define(function() {
- var exports = {};
- exports.sayHello = function() {
- alert('Hello from module: ' + module.id);
- };
- // 内容通过返回实现导出
- return exports;
-}); 
+define(() => {
+  const exports = {}
+  exports.sayHello = function () {
+    alert(`Hello from module: ${module.id}`)
+  }
+  // 内容通过返回实现导出
+  return exports
+})
 ```
 
 AMD模块是使用define来明确定义一个模块，在Node实现中是隐式包装的，进行作用域隔离；避免变量污染和不小心地被修改
@@ -214,7 +214,7 @@ Nginx就是采用了和Node相同的时间驱动，摒弃了多线程的方式�
 
 ```js
 function test(x) {
-    return x;
+  return x
 }
 ```
 
@@ -222,10 +222,10 @@ function test(x) {
 
 ```js
 function test(x) {
-    // 返回函数
-    return function () {
-        return x;
-    }
+  // 返回函数
+  return function () {
+    return x
+  }
 }
 ```
 
@@ -233,9 +233,9 @@ function test(x) {
 
 ```js
 // 通过相同时间注册的不同的回调函数，可以很灵活的处理业务逻辑
-const emitter= new events.EventEmitter();
+const emitter = new events.EventEmitter()
 // 监听event_test事件
-emitter.on('event_test',function(){
+emitter.on('event_test', () => {
   // coding ...
 })
 ```
@@ -249,9 +249,9 @@ Node带来的最大特性是**基于事件驱动的非阻塞I/O模型**，可以
 Node在处理异常上预定**错误优先**，将异常作为回调函数的第一个实参传回，如果为空值，则表明异步调用没有异常抛出
 
 ```js
-async (function (err,data){
+async ((err, data) => {
   // 判断错误err是否为null
-  if(err){
+  if (err) {
     // coding....
   }
 })
@@ -271,14 +271,13 @@ Web Workers能够解决利用CPU和减少阻塞UI渲染，但是不能解决前�
 
 ```js
 // 事件发布
-emitter.emit('event_test',"this is an event message!")
+emitter.emit('event_test', 'this is an event message!')
 
 // 事件订阅
-emitter.on('event_test',function(message){
+emitter.on('event_test', (message) => {
   // message 事件信息
   console.log(message)
 })
-
 ```
 
 很明显，订阅事件是高阶函数的应用。事件发布/订阅模式可以实现一个事件与多个回调函数的关联，这些函数叫做**事件侦听器**
@@ -379,9 +378,9 @@ web服务器的会话实现一般通过内存来存储，**当访问量大的时
 
 ```js
 // test函数 local局部变量
-var test = function () {
-    var local = {}
-};
+const test = function () {
+  const local = {}
+}
 ```
 
 当test()函数被调用就会创建对应的作用域，函数执行结束后，作用域就会销毁。同时在作用域中声明的局部变量local会分配在该作用域上，随着作用域的销毁而销毁
@@ -419,16 +418,16 @@ Tips：同样，在非全局作用域中，想要主动释放变量引用的对�
 主要是通过高阶函数的特性（函数可以作为参数或者返回值）完成的
 
 ```js
-var foo=function (){
-  var bar=function (){
+const foo = function () {
+  const bar = function () {
     // 定义局部变量
-    var local='局部变量'
-    return function(){
+    const local = '局部变量'
+    return function () {
       return local
     }
   }
   // 使用bar方法
-  var baz=bar();
+  const baz = bar()
   console.log(baz())
 }
 ```
@@ -494,23 +493,23 @@ Node对内存泄露非常敏感，一旦线上项目应用拥有成千上万的�
 
 ```js
 // 例如利用cache全局对象来常驻老生代内存中
-var cache={};
+const cache = {}
 // 获取目标值
-var get = function (key){
-  if(cache[key]){
+const get = function (key) {
+  if (cache[key]) {
     // 内存中存在，即返回
     return cache[key]
-  }else{
+  }
+  else {
     // 去获取  to do coding...
   }
 }
 
 // 设置key/value值
-var set = function (key,value){
+const set = function (key, value) {
   // 设置
-  cache[key]=value
+  cache[key] = value
 }
-
 ```
 
 很明显，上面只是通过全局变量的形式实现，没有任何的过期策略，这就有可能到值常驻在内存老生代中，**使用的时候尝试添加过期策略**
@@ -552,8 +551,8 @@ var set = function (key,value){
 注意，大文件用流操作比较好，基于V8的内存限制，读取小文件的readFile()和writeFile()不能用于大文件操作
 
 ```js
-const reader=fs.createReadStream('xxx.txt');
-const writer=fs.createWriteStream('xxx.txt');
+const reader = fs.createReadStream('xxx.txt')
+const writer = fs.createWriteStream('xxx.txt')
 // pipe管道加工处理
 read.pipe(writer)
 ```
@@ -717,18 +716,18 @@ node中提供的child_process模块可以随机创建子进程，提供四个方
 
 ```js
 // 引入模块
-const childProcess=require('child_process');
+const childProcess = require('node:child_process')
 
 // 执行node worker.js命令创建子进程，没有回调函数
-childProcess.spawn('node',['worker.js']);
+childProcess.spawn('node', ['worker.js'])
 
-// 采用node命令，执行worker.js 创建子进程，采用错误优先的返回方式 
-childProcess.exec('node worker.js',function(err,stdout,stderr){
-   // to do coding...
+// 采用node命令，执行worker.js 创建子进程，采用错误优先的返回方式
+childProcess.exec('node worker.js', (err, stdout, stderr) => {
+  // to do coding...
 })
 
 // 执行可执行文件worker.js来创建子进程，回调函数，可以获取子进程的状况
-childProcess.execFile('worker.js',function(err,stdout,stderr){
+childProcess.execFile('worker.js', (err, stdout, stderr) => {
   // to do coding ...
 })
 
@@ -791,7 +790,7 @@ Node中实现IPC通道的是管道（pipe）技术，具体细节由libuv提供
 
 ```js
 // 除了发送数据message(消息)，还能发送句柄sendHandle
-child.send(message,[sendHandle])
+child.send(message, [sendHandle])
 ```
 
 > 什么是句柄？
@@ -806,39 +805,35 @@ child.send(message,[sendHandle])
 
 ```js
 //  引入模块,通过child.js创建子进程
-const childProcess=require('child_process').fork('child.js');
+const childProcess = require('node:child_process').fork('child.js')
 
 // 主进程效果【创建服务，监听端口，给工作进程发送句柄】
-const server=require('net').createServer();
+const server = require('node:net').createServer()
 
-server.on('connection',function(socket){
-  // 
-  socket.end('handled by parent_process\n');
+server.on('connection', (socket) => {
+  //
+  socket.end('handled by parent_process\n')
 })
 
 // 监听端口
-server.listen(1223,function(){
+server.listen(1223, () => {
   // 给子进程发送句柄
-  childProcess.send('server',server)
-  
+  childProcess.send('server', server)
+
   // 给工作进程发送完句柄后，可以关闭主进程【可选】
   // server.close()
 })
 
-
-
-
 // 子进程效果 【监听message消息】
-process.on('message',function (message,server){
-  if(message==='server'){
+process.on('message', (message, server) => {
+  if (message === 'server') {
     // 接收主进程的消息，server句柄
-    server.on('connection',function(socket){
+    server.on('connection', (socket) => {
       // socket来源于主进程，即：客户端的socket请求
-      socket.end('handled by child_process \n ');
+      socket.end('handled by child_process \n ')
     })
   }
 })
-
 ```
 
 上面这种方案，能够保证端口不冲突，但是socket请求过来后，请求会在主进程、工作进程上做处理，对于主进程而言，应该是做分发、管理子进程的，具体业务都是放在子进程上处理，因此还需要改造，很神奇的做法是：**
@@ -917,14 +912,14 @@ Node在v0.11中提供了新的负载均衡策略——Round-Robin（轮询调度
 // 启用Round-Robin
 cluster.schedulingPolicy = cluster.SCHED_RR
 // 不启用Round-Robin
-cluster.schedulingPolicy = cluster.SCHED_NONE 
+cluster.schedulingPolicy = cluster.SCHED_NONE
 ```
 
 当然，也可以在环境变量中配置`NODE_CLUSTER_SCHED_POLICY`的值
 
 ```js
 export NODE_CLUSTER_SCHED_POLICY=rr
-export NODE_CLUSTER_SCHED_POLICY=none 
+export NODE_CLUSTER_SCHED_POLICY=none
 ```
 
 **Round-Robin非常简单，可以避免CPU和I/O繁忙差异导致的负载不均衡，通过代理服务器实现，但是在服务器上消耗的文件描述符是平常方式的两倍**
@@ -934,31 +929,32 @@ export NODE_CLUSTER_SCHED_POLICY=none
 Node在V0.8版本中新增了cluster模块，可以用来解决CPU的利用率问题，提供了较为完善的API，往常都是用child_process模块实现多进程架构，但是需要去处理很多细节；
 
 ```js
-const cluster = require('cluster');
-const http = require('http');
-const numCPUs = require('os').cpus().length;
+const cluster = require('node:cluster')
+const http = require('node:http')
+const numCPUs = require('node:os').cpus().length
 
 // 创建子进程
 cluster.setupMaster({
- exec: "worker.js"
-}); 
+  exec: 'worker.js'
+})
 
 if (cluster.isMaster) {
- // Fork workers
- for (var i = 0; i < numCPUs; i++) {
-   cluster.fork();
- }
-   cluster.on('exit', function(worker, code, signal) {
-   console.log('worker ' + worker.process.pid + ' died');
- });
-} else {
- // Workers can share any TCP connection
- // In this case its a HTTP server
- http.createServer(function(req, res) {
-   res.writeHead(200);
-   res.end("hello world\n");
- }).listen(8000);
-} 
+  // Fork workers
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork()
+  }
+  cluster.on('exit', (worker, code, signal) => {
+    console.log(`worker ${worker.process.pid} died`)
+  })
+}
+else {
+  // Workers can share any TCP connection
+  // In this case its a HTTP server
+  http.createServer((req, res) => {
+    res.writeHead(200)
+    res.end('hello world\n')
+  }).listen(8000)
+}
 ```
 
 ### cluster模块原理
@@ -987,9 +983,9 @@ JavaScript开发者需要转变观念，正视自己的代码，对自己产出�
 > 在程序设计中，断言（assertion）是一种放在程序中的一阶逻辑，目的是为了标示程序开发者预期的结果——当程序运行到断言的位置时，对应的断言应该为真，不为真则程序会中止运行，并出现错误信息
 
 ```js
-const assert = require('assert');
+const assert = require('node:assert')
 // 判断是否相同
-assert.equal(Math.max(1, 100), 100); 
+assert.equal(Math.max(1, 100), 100)
 ```
 
 相关api还有：

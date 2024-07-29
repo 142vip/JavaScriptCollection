@@ -2,7 +2,6 @@
 title: mc命令
 permalink: /server-end/linux/base-install/mc.html
 ---
-  
 
 # mc命令
 

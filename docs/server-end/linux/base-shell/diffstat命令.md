@@ -2,7 +2,6 @@
 title: diffstat命令
 permalink: /server-end/linux/base-install/diffstat.html
 ---
-  
 
 # diffstat命令
 

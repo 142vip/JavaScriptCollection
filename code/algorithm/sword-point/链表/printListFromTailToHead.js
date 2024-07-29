@@ -34,7 +34,6 @@ function printListFromTailToHeadOne(head) {
   return result.reverse()
 }
 
-
 /**
  * 相比链表的头插，对数组array进行头插unshift()即可
  * @param head
@@ -50,7 +49,6 @@ function printListFromTailToHeadTwo(head) {
   }
   return result
 }
-
 
 /**
  * 先翻转链表【采用头插法】，再按序输出到数组中

@@ -2,7 +2,6 @@
 title: netstat命令
 permalink: /server-end/linux/base-install/netstat.html
 ---
-  
 
 # netstat命令
 
@@ -11,34 +10,34 @@ permalink: /server-end/linux/base-install/netstat.html
 ## 语法
 
 ```shell
-netstat [address_family_options] [--tcp|-t] [--udp|-u] [--raw|-w] 
-        [--listening|-l] [--all|-a] [--numeric|-n] [--numeric-hosts] 
-        [--numeric-ports] [--numeric-users] [--symbolic|-N] 
-        [--extend|-e[--extend|-e]] [--timers|-o] [--program|-p] 
+netstat [address_family_options] [--tcp|-t] [--udp|-u] [--raw|-w]
+        [--listening|-l] [--all|-a] [--numeric|-n] [--numeric-hosts]
+        [--numeric-ports] [--numeric-users] [--symbolic|-N]
+        [--extend|-e[--extend|-e]] [--timers|-o] [--program|-p]
         [--verbose|-v] [--continuous|-c]
 
-netstat {--route|-r} [address_family_options] [--extend|-e[--extend|-e]] 
-        [--verbose|-v] [--numeric|-n] [--numeric-hosts] [--numeric-ports] 
-        [--numeric-users] [--continuous|-c]
-        
-netstat {--interfaces|-i} [--all|-a] [--extend|-e[--extend|-e]] [--verbose|-v] 
-        [--program|-p] [--numeric|-n] [--numeric-hosts] [--numeric-ports] 
+netstat {--route|-r} [address_family_options] [--extend|-e[--extend|-e]]
+        [--verbose|-v] [--numeric|-n] [--numeric-hosts] [--numeric-ports]
         [--numeric-users] [--continuous|-c]
 
-netstat {--groups|-g} [--numeric|-n] [--numeric-hosts] [--numeric-ports] 
+netstat {--interfaces|-i} [--all|-a] [--extend|-e[--extend|-e]] [--verbose|-v]
+        [--program|-p] [--numeric|-n] [--numeric-hosts] [--numeric-ports]
         [--numeric-users] [--continuous|-c]
-        
-netstat {--masquerade|-M} [--extend|-e] [--numeric|-n] [--numeric-hosts] 
+
+netstat {--groups|-g} [--numeric|-n] [--numeric-hosts] [--numeric-ports]
+        [--numeric-users] [--continuous|-c]
+
+netstat {--masquerade|-M} [--extend|-e] [--numeric|-n] [--numeric-hosts]
         [--numeric-ports] [--numeric-users] [--continuous|-c]
-        
+
 netstat {--statistics|-s} [--tcp|-t] [--udp|-u] [--raw|-w]
 
 netstat {--version|-V}
 
 netstat {--help|-h}
 
-address_family_options may be any combination of the following options: 
-[-4] [-6] [--protocol={inet,unix,ipx,ax25,netrom,ddp}[,...]] [--unix|-x] 
+address_family_options may be any combination of the following options:
+[-4] [-6] [--protocol={inet,unix,ipx,ax25,netrom,ddp}[,...]] [--unix|-x]
 [--inet|--ip] [--ax25] [--ipx] [--netrom] [--ddp]
 ```
 

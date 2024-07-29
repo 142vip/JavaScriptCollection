@@ -2,7 +2,6 @@
 title: chattr命令
 permalink: /server-end/linux/base-install/chattr.html
 ---
-  
 
 # chattr命令
 

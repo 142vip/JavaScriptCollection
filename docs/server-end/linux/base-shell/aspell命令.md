@@ -2,7 +2,6 @@
 title: aspell命令
 permalink: /server-end/linux/base-install/aspell.html
 ---
-  
 
 # aspell命令
 

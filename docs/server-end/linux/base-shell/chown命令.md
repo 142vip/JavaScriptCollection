@@ -2,7 +2,6 @@
 title: chown命令
 permalink: /server-end/linux/base-install/chown.html
 ---
-  
 
 # chown命令
 

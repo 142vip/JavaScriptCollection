@@ -2,7 +2,6 @@
 title: journalctl命令
 permalink: /server-end/linux/base-install/journalctl.html
 ---
-  
 
 # journalctl命令
 

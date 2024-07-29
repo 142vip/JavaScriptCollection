@@ -52,4 +52,3 @@ function FindGreatestSumOfSubArray(array) {
 }
 console.log(FindGreatestSumOfSubArray01([1, -2, 3, 10, -4, 7, 2, -5]))
 console.log(FindGreatestSumOfSubArray([-2, -8, -1, -5, -9]))
-

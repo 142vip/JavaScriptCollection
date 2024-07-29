@@ -1,4 +1,3 @@
-
 /**
  * 基于Json序列化的深拷贝【不能处理函数】
  * @param target
@@ -9,7 +8,7 @@ function DeepCloneByJSON(target) {
 
 /**
  * 基于递归思想的深拷贝
-  * @param target
+ * @param target
  * @returns {{}|*}
  * @constructor
  */

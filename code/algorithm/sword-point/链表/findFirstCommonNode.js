@@ -41,5 +41,5 @@ function FindFirstCommonNode(pHead1, pHead2) {
   return p1
 }
 module.exports = {
-  FindFirstCommonNode
+  FindFirstCommonNode,
 }

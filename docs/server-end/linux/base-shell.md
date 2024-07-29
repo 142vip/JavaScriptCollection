@@ -124,12 +124,8 @@ cp -i ~/test /tmp/test
 mv [-fiu] source destination
 mv [options] source1 source2 source3 .... directory
 
-
 mv sourceDir targetDir
 mv -f sourceDir targetDir
-
-
-
 
 ```
 
@@ -159,7 +155,7 @@ head -n -10 running.log
 - `-f` ：表示持续侦测后面所接的文件名，按[ctrl]-c结束
 
 ```bash
-tail [-n number] 文件 
+tail [-n number] 文件
 
 ## 查看10行日志
 tail -n -10 running.log
@@ -184,10 +180,10 @@ cat config.js
 cat file1.txt file2.txt >newFile.txt
 
 ## 创建新的编辑文件
-cat >file.txt 
+cat >file.txt
 
 # 此处必须使用两个小于号，EOF表示结束标记，既读到EOF就结束
-cat >test.txt<<EOF 
+cat >test.txt<<EOF
 > hello world
 > linux centos
 > EOF
@@ -215,11 +211,11 @@ cat 1.txt
 
 ```bash
 # 直接输出文本
-echo hello 
+echo hello
 # 解压使用引号将内容括起来，单引号，双引号均可
 echo 'hello'
 #使用-e可以识别特殊字符
-echo -e "hello\tworld" 
+echo -e "hello\tworld"
 ```
 
 echo可以配合重定向符将内容输入到文件
@@ -233,7 +229,7 @@ echo "hello world" >>hello.txt #文件会被自动创建
 
 ## test.sh内容
 #!/bin/sh
-read name 
+read name
 echo "$name It is a test"
 
 ## 执行
@@ -291,8 +287,6 @@ ed是操作、过滤和转换文本内容的强大工具。sed的常用功能包
 ## 格式
 sed [选项] [sed内置命令字符] [输入文件]
 
-
-
 ```
 
 ## awk
@@ -314,8 +308,8 @@ awk [ -F fs ] [ -v var=value ] [ 'prog' | -f progfile ] [ file ... ]
 示例文件`example.txt`文件内容如下：
 
 ```text
-Bucks Milwaukee    60 22 0.732 
-Raptors Toronto    55 24 0.707 
+Bucks Milwaukee    60 22 0.732
+Raptors Toronto    55 24 0.707
 76ers Philadelphia 51 31 0.622
 Celtics Boston     33 33 0.598
 Pacers Indiana     30 34 0.585

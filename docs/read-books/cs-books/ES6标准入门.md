@@ -35,7 +35,7 @@ Babel 是一个广泛使用的 ES6 转码器，可以将 ES6 代码转为 ES5 �
 input.map(item => item + 1)
 
 // 转码后
-input.map(function (item) {
+input.map((item) => {
   return item + 1
 })
 ```
@@ -87,18 +87,17 @@ $ npm install --save-dev @babel/preset-react
 ES6 新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，**只在let命令所在的代码块内有效。**
 
 ```js
-
 // 函数内部定义变量
 function test() {
-  let a = 10
-  var b = 1
+  const a = 10
+  const b = 1
 }
 
-//输出报错，let块级作用域
+// 输出报错，let块级作用域
 console.log(a)
 
 // 输出1
-console.log(b) 
+console.log(b)
 ```
 
 不存在变量提升:
@@ -130,14 +129,14 @@ ES6 明确规定，如果区块中存在let和const命令，这个区块对这�
 // 在let命令声明变量tmp之前，都属于变量tmp的“死区”。
 if (true) {
   // TDZ开始
-  tmp = 'abc'; // ReferenceError
-  console.log(tmp); // ReferenceError
+  tmp = 'abc' // ReferenceError
+  console.log(tmp) // ReferenceError
 
-  let tmp; // TDZ结束
-  console.log(tmp); // undefined
+  let tmp // TDZ结束
+  console.log(tmp) // undefined
 
-  tmp = 123;
-  console.log(tmp); // 123
+  tmp = 123
+  console.log(tmp) // 123
 }
 ```
 
@@ -168,10 +167,9 @@ function func() {
 当然这样写是不报错的，但不建议
 
 ```js
-
 function func(arg) {
   {
-    let arg;
+    let arg
   }
 }
 
@@ -184,14 +182,14 @@ ES5 只有全局作用域和函数作用域，没有块级作用域，这带来�
 
 ```js
 // 循环结束后，变量i并没有消失，泄露成了全局变量。
-var s = 'hello';
+const s = 'hello'
 
 for (var i = 0; i < s.length; i++) {
-  console.log(s[i]);
+  console.log(s[i])
 }
 
 // 输出5
-console.log(i); 
+console.log(i)
 ```
 
 let为 JavaScript 新增了块级作用域。ES6 允许块级作用域的任意嵌套。
@@ -201,7 +199,7 @@ let为 JavaScript 新增了块级作用域。ES6 允许块级作用域的任意�
 {
   {
     {
-      let instance = 'test'
+      const instance = 'test'
     }
     // 此时并没有变量名instance,输出会报错
     console.log(instance)
@@ -211,10 +209,10 @@ let为 JavaScript 新增了块级作用域。ES6 允许块级作用域的任意�
 // 正常情况
 {
   {
-    let instance = 'test'
+    const instance = 'test'
     {
       // 与上面的instance互不影响
-      let instance = 'test'
+      const instance = 'test'
     }
   }
 }
@@ -257,7 +255,8 @@ try {
   function f() {
 
   }
-} catch (e) {
+}
+catch (e) {
   // ...
 }
 ```
@@ -314,10 +313,9 @@ function f() {
       console.log('inside')
     }
   }
-  f();
-}());
+  f()
+}())
 // Uncaught TypeError: f is not a function
-
 ```
 
 上面的代码在 ES6 浏览器中，都会报错。
@@ -339,15 +337,15 @@ function f() {
 }
 
 (function () {
-  var f = undefined;
+  const f = undefined
   if (false) {
     function f() {
       console.log('inside')
     }
   }
   // 执行函数
-  f();
-}());
+  f()
+}())
 // Uncaught TypeError: f is not a function
 ```
 
@@ -356,19 +354,19 @@ function f() {
 ```js
 // 块级作用域内部的函数声明语句，建议不要使用
 {
-  let a = 'secret';
+  const a = 'secret'
 
   function f() {
-    return a;
+    return a
   }
 }
 
 // 块级作用域内部，优先使用函数表达式
 {
-  let a = 'secret';
-  let f = function () {
-    return a;
-  };
+  const a = 'secret'
+  const f = function () {
+    return a
+  }
 }
 ```
 
@@ -444,7 +442,7 @@ const命令声明的常量也是不提升的，同样存在暂时性死区，**�
 if (true) {
   // 调用报错
   console.log(max)
-  const max = 34;
+  const max = 34
 }
 ```
 
@@ -483,7 +481,6 @@ student = {}
 对象值确保不变，可以考虑使用`Object.freeze()`函数将其冻结
 
 ```js
-
 const student = Object.freeze({})
 
 // 常规模式： 赋值不起作用
@@ -541,25 +538,25 @@ JavaScript 语言存在一个顶层对象，它提供全局环境（即全局作
 // 方法一
 (typeof window !== 'undefined'
   ? window
-  : (typeof process === 'object' &&
-    typeof require === 'function' &&
-    typeof global === 'object')
-    ? global
-    : this);
+  : (typeof process === 'object'
+  && typeof require === 'function'
+  && typeof global === 'object')
+      ? global
+      : this)
 
 // 方法二
-var getGlobal = function () {
+const getGlobal = function () {
   if (typeof self !== 'undefined') {
-    return self;
+    return self
   }
   if (typeof window !== 'undefined') {
-    return window;
+    return window
   }
   if (typeof global !== 'undefined') {
-    return global;
+    return global
   }
-  throw new Error('unable to locate global object');
-};
+  throw new Error('unable to locate global object')
+}
 ```
 
 ## 解构赋值
@@ -594,7 +591,6 @@ baz // 3
 let [, , third] = ["foo", "bar", "baz"];
 console.log(third) // "baz"
 
-
 let [x, , y] = [1, 2, 3];
 console.log(x) // 1
 console.log(y) // 3
@@ -614,15 +610,14 @@ console.log(z) // []
 
 ```js
 // 不完全解构, 只匹配部分
-let [x, y] = [1, 2, 3];
+const [x, y] = [1, 2, 3]
 x // 1
 y // 2
 
-let [a, [b], d] = [1, [2, 3], 4];
+const [a, [b], d] = [1, [2, 3], 4]
 a // 1
 b // 2
 d // 4
-
 ```
 
 如果等号的右边不是数组（正确的说：不属于可以遍历的结构）,就会报错
@@ -643,7 +638,7 @@ let [foo] = {};
 Set结构的数据明显存在递归迭代、遍历的接口，也是可以使用数组的解构赋值的
 
 ```js
-let [x, y, z] = new Set(['a', 'b', 'c']);
+const [x, y, z] = new Set(['a', 'b', 'c'])
 x // "a"
 ```
 
@@ -677,30 +672,27 @@ x // null
 **如果默认值是一个表达式，那么这个表达式是惰性求值的，即只有在用到的时候，才会求值。**
 
 ```js
-
 // 定义函数
 function f() {
-  console.log('aaa');
+  console.log('aaa')
 }
 
 // 解构赋值
-let [x = f()] = [1];
-
+const [x = f()] = [1]
 ```
 
 此时x明显可以拿到值，所以函数f()是不会执行的。
 
 ```js
-
-let x;
+let x
 
 // 数组[1]中的第一个元素，不严格等于undefined的时候，才会解构成功
 if ([1][0] === undefined) {
-  x = f();
-} else {
+  x = f()
+}
+else {
   x = [1][0]
 }
-
 ```
 
 默认值可以引用解构赋值的其他变量，但该变量必须已经声明
@@ -720,7 +712,7 @@ let [x = y, y = 1] = [];     // ReferenceError: y is not defined
 同样，解构赋值可以适用数组，也可以适用于对象
 
 ```js
-let {foo, bar} = {foo: 'aaa', bar: 'bbb'};
+const { foo, bar } = { foo: 'aaa', bar: 'bbb' }
 foo // "aaa"
 bar // "bbb"
 ```
@@ -728,31 +720,30 @@ bar // "bbb"
 **数组的元素是按次序排列的，变量的取值由它的位置决定；而对象的属性没有次序，变量必须与属性同名，才能取到正确的值。**
 
 ```js
-let {bar, foo} = {foo: 'aaa', bar: 'bbb'};
+const { bar, foo } = { foo: 'aaa', bar: 'bbb' }
 foo // "aaa"
 bar // "bbb"
 
 // 变量没有对应的同名属性，导致取不到值，最后等于undefined。
-let {baz} = {foo: 'aaa', bar: 'bbb'};
+const { baz } = { foo: 'aaa', bar: 'bbb' }
 baz // undefined
-
 ```
 
 如果变量名与属性名不一致
 
 ```js
-let {foo: baz} = {foo: 'aaa', bar: 'bbb'};
+const { foo: baz } = { foo: 'aaa', bar: 'bbb' }
 baz // "aaa"
 
-let obj = {first: 'hello', last: 'world'};
-let {first: f, last: l} = obj;
+const obj = { first: 'hello', last: 'world' }
+const { first: f, last: l } = obj
 f // 'hello'
 l // 'world'
 ```
 
 ```js
 // 对象的解构赋值是下面形式的简写
-let {foo: foo, bar: bar} = {foo: 'aaa', bar: 'bbb'};
+const { foo, bar } = { foo: 'aaa', bar: 'bbb' }
 
 // 对象的解构赋值的内部机制，是先找到同名属性，然后再赋给对应的变量。真正被赋值的是后者，而不是前者
 
@@ -762,35 +753,33 @@ let {foo: foo, bar: bar} = {foo: 'aaa', bar: 'bbb'};
 **与数组一样，解构也可以用于嵌套结构的对象**
 
 ```js
-let obj = {
+const obj = {
   p: [
     'Hello',
-    {y: 'World'}
+    { y: 'World' }
   ]
-};
+}
 
-let {p: [x, {y}]} = obj;
+const { p: [x, { y }] } = obj
 x // "Hello"
 y // "World"
-
 ```
 
 这时p是模式，不是变量，因此不会被赋值。如果p也要作为变量赋值，可以写成下面这样。
 
 ```js
-let obj = {
+const obj = {
   p: [
     'Hello',
-    {y: 'World'}
+    { y: 'World' }
   ]
-};
+}
 
 // 此时p作为了变量进行赋值
-let {p, p: [x, {y}]} = obj;
+const { p, p: [x, { y }] } = obj
 x // "Hello"
 y // "World"
 p // ["Hello", {y: "World"}]
-
 ```
 
 #### 默认值
@@ -798,22 +787,21 @@ p // ["Hello", {y: "World"}]
 同样，对象的解构也是可以指定默认值的
 
 ```js
-var {x = 3} = {};
+var { x = 3 } = {}
 x // 3
 
-var {x, y = 5} = {x: 1};
+var { x, y = 5 } = { x: 1 }
 x // 1
 y // 5
 
-var {x: y = 3} = {};
+var { x: y = 3 } = {}
 y // 3
 
-var {x: y = 3} = {x: 5};
+var { x: y = 3 } = { x: 5 }
 y // 5
 
-var {message: msg = 'Something went wrong'} = {};
+const { message: msg = 'Something went wrong' } = {}
 msg // "Something went wrong"
-
 ```
 
 **和数组的解构赋值一样，默认值生效的条件是，对象的属性值严格等于undefined**
@@ -857,15 +845,15 @@ x //1
 // 表达式虽然毫无意义，但是语法是合法的，可以执行
 ({} = [true, false]);
 ({} = 'abc');
-({} = []);
+({} = [])
 ```
 
 - 由于**数组本质是特殊的对象**，因此可以对数组进行对象属性的解构
 
 ```js
 // 注意将数组理解为特殊的对象
-let arr = [1, 2, 3];
-let {0: first, [arr.length - 1]: last} = arr;
+const arr = [1, 2, 3]
+const { 0: first, [arr.length - 1]: last } = arr
 first // 1
 last // 3
 ```
@@ -875,20 +863,19 @@ last // 3
 **字符串也可以解构赋值**。这是因为此时，字符串被转换成了一个类似数组的对象。
 
 ```js
-const [a, b, c, d, e] = 'hello';
+const [a, b, c, d, e] = 'hello'
 a // "h"
 b // "e"
 c // "l"
 d // "l"
 e // "o"
-
 ```
 
 类似数组的对象都有一个length属性，因此还可以对这个属性解构赋值。
 
 ```js
 // length长度属性
-let {length: len} = 'hello';
+const { length: len } = 'hello'
 len // 5
 ```
 
@@ -909,11 +896,9 @@ s === Boolean.prototype.toString // true
 解构赋值的规则是，**只要等号右边的值不是对象或数组，就先将其转为对象**。由于undefined和null无法转为对象，所以对它们进行解构赋值，都会报错。
 
 ```js
-
 // undefined和null无法转为对象
-let {prop: x} = undefined; // TypeError
-let {prop: y} = null; // TypeError
-
+const { prop: x } = undefined // TypeError
+const { prop: y } = null // TypeError
 ```
 
 ### 函数参数
@@ -922,11 +907,10 @@ let {prop: y} = null; // TypeError
 
 ```js
 function add([x, y]) {
-  return x + y;
+  return x + y
 }
 
-add([1, 2]); // 3
-
+add([1, 2]) // 3
 ```
 
 函数add的参数表面上是一个数组，但在传入参数的那一刻，数组参数就被解构成变量x和y。对于函数内部的代码来说，它们能感受到的参数就是x和y。
@@ -936,9 +920,8 @@ add([1, 2]); // 3
 // [ 3, 7 ]
 
 // undefined就会触发函数参数的默认值。
-[1, undefined, 3].map((x = 'yes') => x);
+[1, undefined, 3].map((x = 'yes') => x)
 // [ 1, 'yes', 3 ]
-
 ```
 
 #### 圆括号问题
@@ -995,7 +978,6 @@ function f([z, (x)]) {
   return x;
 }
 
-
 ```
 
 - 赋值语句的模式
@@ -1018,9 +1000,8 @@ function f([z, (x)]) {
 // 都是赋值语句，而不是声明语句
 // 圆括号都不属于模式的一部分
 [(b)] = [3]; // 正确
-({p: (d)} = {}); // 正确
-[(parseInt.prop)] = [3]; // 正确
-
+({ p: (d) } = {}); // 正确
+[(Number.parseInt.prop)] = [3] // 正确
 ```
 
 ### 实际用途
@@ -1030,12 +1011,11 @@ function f([z, (x)]) {
 > 这里简单易读，语义非常清晰
 
 ```js
-let x = 1;
+let x = 1
 let y = 2;
 
 // 两值交换
 [x, y] = [y, x]
-
 ```
 
 - 从函数返回多个值
@@ -1093,18 +1073,17 @@ f({z: 3, y: 2, x: 1});
 
 ```js
 // 定义数据
-let jsonData = {
+const jsonData = {
   id: 42,
-  status: "OK",
+  status: 'OK',
   data: [867, 5309]
-};
+}
 
 // 解构
-let {id, status, data: number} = jsonData;
+const { id, status, data: number } = jsonData
 
-console.log(id, status, number);
+console.log(id, status, number)
 // 42, "OK", [867, 5309]
-
 ```
 
 - 函数参数的默认值
@@ -1122,8 +1101,7 @@ jQuery.ajax = function (url, {
   // ... more config
 } = {}) {
   // ... do stuff
-};
-
+}
 ```
 
 避免了在函数体内部再写`var foo = config.foo || 'default foo'`;这样的语句。
@@ -1133,27 +1111,25 @@ jQuery.ajax = function (url, {
 > 任何部署了 Iterator 接口的对象，都可以用for...of循环遍历。`Map` 结构原生支持 Iterator 接口，配合变量的解构赋值，获取键名和键值就非常方便。
 
 ```js
+const map = new Map()
+map.set('first', 'hello')
+map.set('second', 'world')
 
-const map = new Map();
-map.set('first', 'hello');
-map.set('second', 'world');
-
-for (let [key, value] of map) {
-  console.log(key + " is " + value);
+for (const [key, value] of map) {
+  console.log(`${key} is ${value}`)
 }
 // first is hello
 // second is world
 
 // 获取键名
-for (let [key] of map) {
+for (const [key] of map) {
   // ...
 }
 
 // 获取键值 注意此处的逗号
-for (let [, value] of map) {
+for (const [, value] of map) {
   // ...
 }
-
 ```
 
 - 输入模块的指定方法
@@ -1161,10 +1137,8 @@ for (let [, value] of map) {
 > 加载模块时，往往需要指定输入哪些方法。解构赋值使得输入语句非常清晰。
 
 ```js
-
 // CommonJs写法
-const {SourceMapConsumer, SourceNode} = require("source-map");
-
+const { SourceMapConsumer, SourceNode } = require('source-map')
 ```
 
 ## 字符串
@@ -1175,10 +1149,9 @@ ES6 为字符串添加了遍历器接口,使得字符串可以被for...of循环�
 
 ```js
 // of遍历 依次输出
-for (let codePoint of 'foo') {
+for (const codePoint of 'foo') {
   console.log(codePoint)
 }
-
 ```
 
 ### 模板字符串
@@ -1188,11 +1161,11 @@ for (let codePoint of 'foo') {
 ```js
 // jquery 输出模板
 $('#result').append(
-  'There are <b>' + basket.count + '</b> ' +
-  'items in your basket, ' +
-  '<em>' + basket.onSale +
-  '</em> are on sale!'
-);
+  `There are <b>${basket.count}</b> `
+  + `items in your basket, `
+  + `<em>${basket.onSale
+  }</em> are on sale!`
+)
 ```
 
 非常明显，写法相当繁琐且不方便，我最开始写的时候，真的'和"傻傻分不清楚，总觉得多了一个或者少了一个;
@@ -1203,8 +1176,7 @@ $('#result').append(`
   There are <b>${basket.count}</b> items
    in your basket, <em>${basket.onSale}</em>
   are on sale!
-`);
-
+`)
 ```
 
 **模板字符串（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
@@ -1219,18 +1191,17 @@ $('#result').append(`
  not legal.`
 
 console.log(`string text line 1
-string text line 2`);
+string text line 2`)
 
 // 字符串中嵌入变量
-let name = "Bob", time = "today";
+const name = 'Bob'; const time = 'today';
 `Hello ${name}, how are you ${time}?`
-
 ```
 
 都是用反引号表示。**如果在模板字符串中需要使用反引号，则前面要用反斜杠转义。**
 
 ```js
-let greeting = `\`Yo\` World!`;
+const greeting = `\`Yo\` World!`
 ```
 
 如果使用模板字符串表示多行字符串，所有的空格和缩进都会被保留在输出之中。模板字符串的空格和换行，都是被保留的，如果不想要这个换行，可以使用trim方法消除它。
@@ -1256,17 +1227,17 @@ function authorize(user, action) {
       // + '.'
 
       // ES6模板语法
-      `User ${user.name} is not authorized to do ${action}.`);
+      `User ${user.name} is not authorized to do ${action}.`
+    )
   }
 }
-
 ```
 
 **大括号内部可以放入任意的 JavaScript 表达式，可以进行运算，以及引用对象属性。**
 
 ```js
-let x = 1;
-let y = 2;
+const x = 1
+const y = 2;
 
 `${x} + ${y} = ${x + y}`
 // "1 + 2 = 3"
@@ -1275,32 +1246,29 @@ let y = 2;
 // "1 + 4 = 5"
 
 // 定义对象
-let obj = {x: 1, y: 2};
+const obj = { x: 1, y: 2 };
 // 运算
 `${obj.x + obj.y}`
 // "3"
-
 ```
 
 在模板字符串中也是可以调用函数的：
 
 ```js
 function fn() {
-  return "Hello World";
+  return 'Hello World'
 }
 
 // 调用函数
 `foo ${fn()} bar`
 // foo Hello World bar
-
 ```
 
 **如果大括号中的值不是字符串，将按照一般的规则转为字符串。比如，大括号中是一个对象，将默认调用对象的toString方法。**
 
 ```js
 // 变量place没有声明,报错
-let msg = `Hello, ${place}`;
-
+const msg = `Hello, ${place}`
 ```
 
 由于模板字符串的大括号内部，就是执行 JavaScript 代码，因此如果大括号内部是一个字符串，将会原样输出。
@@ -1314,7 +1282,7 @@ let msg = `Hello, ${place}`;
 
 ```js
 // 函数定义，箭头函数
-let func = (name) => `Hello ${name}!`;
+const func = name => `Hello ${name}!`
 
 // 执行
 func('Jack')
@@ -1344,12 +1312,10 @@ ES5 提供`String.fromCharCode()`方法，用于从 Unicode 码点返回对应�
 方法的不足。在作用上，正好与下面的codePointAt()方法相反。**
 
 ```js
-
 String.fromCodePoint(0x20BB7)
 // 输出： "𠮷"
-String.fromCodePoint(0x78, 0x1f680, 0x79) === 'x\uD83D\uDE80y'
+String.fromCodePoint(0x78, 0x1F680, 0x79) === 'x\uD83D\uDE80y'
 // 输出： true
-
 ```
 
 **如果String.fromCodePoint方法有多个参数，则它们会被合并成一个字符串返回。**
@@ -1364,7 +1330,7 @@ raw方法返回一个斜杠都被转义（即斜杠前面再加一个斜杠）�
 String.raw`Hi\n${2 + 3}!`
 // 实际返回 "Hi\\n5!"，显示的是转义后的结果 "Hi\n5!"
 
-String.raw`Hi\u000A!`;
+String.raw`Hi\u000A!`
 // 实际返回 "Hi\\u000A!"，显示的是转义后的结果 "Hi\u000A!"
 ```
 
@@ -1374,8 +1340,7 @@ String.raw`Hi\u000A!`;
 String.raw`Hi\\n`
 // 返回 "Hi\\\\n"
 
-String.raw`Hi\\n` === "Hi\\\\n" // true
-
+String.raw`Hi\\n` === 'Hi\\\\n' // true
 ```
 
 - String.raw()方法可以作为处理模板字符串的基本方法，它会将所有变量替换，而且对斜杠进行转义，方便下一步作为字符串来使用。
@@ -1385,8 +1350,7 @@ String.raw`Hi\\n` === "Hi\\\\n" // true
 ```js
 // `foo${1 + 2}bar`
 // 等同于
-String.raw({raw: ['foo', 'bar']}, 1 + 2) // "foo3bar"
-
+String.raw({ raw: ['foo', 'bar'] }, 1 + 2) // "foo3bar"
 ```
 
 **String.raw()方法的第一个参数是一个对象，它的raw属性等同于原始的模板字符串解析后得到的数组。**
@@ -1396,17 +1360,16 @@ String.raw({raw: ['foo', 'bar']}, 1 + 2) // "foo3bar"
 ```js
 // 定义函数，绑定到raw属性上
 String.raw = function (strings, ...values) {
-  let output = '';
-  let index;
+  let output = ''
+  let index
   for (index = 0; index < values.length; index++) {
-    output += strings.raw[index] + values[index];
+    output += strings.raw[index] + values[index]
   }
 
   // 递归
   output += strings.raw[index]
-  return output;
+  return output
 }
-
 ```
 
 ### codePointAt()
@@ -1415,37 +1378,35 @@ JavaScript 内部，字符以 UTF-16 的格式储存，每个字符固定为2个
 码点大于0xFFFF的字符），JavaScript 会认为它们是两个字符。
 
 ```js
-let s = "𠮷";
+const s = '𠮷'
 
 s.length // 2
 s.charAt(0) // ''
 s.charAt(1) // ''
 s.charCodeAt(0) // 55362
 s.charCodeAt(1) // 57271
-
 ```
 
 ES6 提供了codePointAt()方法，能够正确处理 4 个字节储存的字符，返回一个字符的码点。
 
 ```js
-let s = '𠮷a';
+const s = '𠮷a'
 
 s.codePointAt(0) // 134071
 s.codePointAt(1) // 57271
 
 s.codePointAt(2) // 97
-
 ```
 
 **codePointAt()方法是测试一个字符由两个字节还是由四个字节组成的最简单方法。**
 
 ```js
 function is32Bit(c) {
-  return c.codePointAt(0) > 0xFFFF;
+  return c.codePointAt(0) > 0xFFFF
 }
 
-is32Bit("𠮷") // true
-is32Bit("a") // false
+is32Bit('𠮷') // true
+is32Bit('a') // false
 ```
 
 ### normalize()
@@ -1455,7 +1416,6 @@ ES6 提供字符串实例的normalize()方法，用来将字符的不同表示�
 ```js
 '\u01D1'.normalize() === '\u004F\u030C'.normalize()
 // true
-
 ```
 
 normalize方法可以接受一个参数来指定normalize的方式，参数的四个可选值如下。
@@ -1481,24 +1441,21 @@ ES6 又提供了三种新方法:
 例如：
 
 ```js
-
-let s = 'Hello world!';
+const s = 'Hello world!'
 
 s.startsWith('Hello') // true
 s.endsWith('!') // true
 s.includes('o') // true
-
 ```
 
 **这三个方法都支持第二个参数，表示开始搜索的位置。**
 
 ```js
-let s = 'Hello world!';
+const s = 'Hello world!'
 
 s.startsWith('world', 6) // true
 s.endsWith('Hello', 5) // true
 s.includes('Hello', 6) // false
-
 ```
 
 **使用第二个参数n时，endsWith的行为与其他两个方法有所不同。它针对前n个字符，而其他两个方法针对从第n个位置直到字符串结束。**
@@ -1508,11 +1465,9 @@ s.includes('Hello', 6) // false
 repeat方法返回一个新字符串，表示将原字符串重复n次。
 
 ```js
-
 'x'.repeat(3) // "xxx"
 'hello'.repeat(2) // "hellohello"
 'na'.repeat(0) // ""
-
 ```
 
 - 参数如果是小数，会被取整(向下取整)
@@ -1537,17 +1492,14 @@ repeat方法返回一个新字符串，表示将原字符串重复n次。
 'na'.repeat(-0.9) // ""
 
 // 参数NaN等同于 0。
-'na'.repeat(NaN) // ""
-
+'na'.repeat(Number.NaN) // ""
 ```
 
 - 如果repeat的参数是字符串，则会先转换成数字。
 
 ```js
-
 'na'.repeat('na') // ""
 'na'.repeat('3') // "nanana"
-
 ```
 
 ### padStart()、padEnd()
@@ -1565,7 +1517,6 @@ ES2017 引入了字符串补全长度的功能。如果某个字符串不够指�
 // 尾部补齐
 'x'.padEnd(5, 'ab') // 'xabab'
 'x'.padEnd(4, 'ab') // 'xaba'
-
 ```
 
 padStart()和padEnd()一共接受两个参数：
@@ -1581,7 +1532,6 @@ padStart()和padEnd()一共接受两个参数：
 ```js
 'xxx'.padStart(2, 'ab') // 'xxx'
 'xxx'.padEnd(2, 'ab') // 'xxx
-
 ```
 
 - **如果用来补全的字符串与原字符串，两者的长度之和超过了最大长度，则会截去超出位数的补全字符串。**
@@ -1594,7 +1544,6 @@ padStart()和padEnd()一共接受两个参数：
 - **如果省略第二个参数，默认使用空格补全长度。**
 
 ```js
-
 'x'.padStart(4) // '   x'
 'x'.padEnd(4) // 'x   '
 ```
@@ -1612,7 +1561,6 @@ padStart()和padEnd()一共接受两个参数：
 ```js
 '12'.padStart(10, 'YYYY-MM-DD') // "YYYY-MM-12"
 '09-12'.padStart(10, 'YYYY-MM-DD') // "YYYY-09-12
-
 ```
 
 ### trimStart()、trimEnd()
@@ -1626,15 +1574,14 @@ ES2019 对字符串实例新增了trimStart()和trimEnd()这两个方法。它�
 
 ```js
 // 定义
-const s = '  abc  ';
+const s = '  abc  '
 
 s.trim() // "abc"
 s.trimStart() // "abc  "
 s.trimEnd() // "  abc
 
 // 原始字符串不变
-console.log(s)  // "  abc  " 
-
+console.log(s) // "  abc  "
 ```
 
 **除了空格键，这两个方法对字符串头部（或尾部）的 tab 键、换行符等不可见的空白符号也有效。**
@@ -1655,7 +1602,6 @@ matchAll()方法返回一个正则表达式在当前字符串的**所有匹配**
 ```js
 'aabbcc'.replace('b', '_')
 // 'aa_bcc
-
 ```
 
 如果要替换所有的匹配，不得不使用正则表达式的g修饰符。
@@ -1678,7 +1624,6 @@ matchAll()方法返回一个正则表达式在当前字符串的**所有匹配**
 
 ```js
 String.prototype.replaceAll(searchValue, replacement)
-
 ```
 
 **`searchValue`是搜索模式，可以是一个字符串，也可以是一个全局的正则表达式（带有`g`修饰符）。
@@ -1689,7 +1634,7 @@ String.prototype.replaceAll(searchValue, replacement)
 'aabbcc'.replace(/b/, '_')
 
 // /b/不带有g修饰符，会导致replaceAll()报错。
-'aabbcc'.replaceAll(/b/, '_')
+'aabbcc'.replaceAll(/b/g, '_')
 ```
 
 **replaceAll()的第二个参数replacement是一个字符串，表示替换的文本，其中可以使用一些特殊字符串。**
@@ -1726,7 +1671,6 @@ String.prototype.replaceAll(searchValue, replacement)
 // $$ 指代 $
 'abc'.replaceAll('b', '$$')
 // 'a$c'
-
 ```
 
 **replaceAll()的第二个参数replacement也可以是一个函数，该函数的返回值将替换掉第一个参数searchValue匹配的文本。**
@@ -1744,17 +1688,15 @@ String.prototype.replaceAll(searchValue, replacement)
 - 最后还可以添加两个参数，倒数第二个参数是捕捉到的内容在整个字符串中的位置，最后一个参数是原字符串。
 
 ```js
-const str = '123abc456';
-const regex = /(\d+)([a-z]+)(\d+)/g;
+const str = '123abc456'
+const regex = /(\d+)([a-z]+)(\d+)/g
 
 function replacer(match, p1, p2, p3, offset, string) {
-  return [p1, p2, p3].join(' - ');
+  return [p1, p2, p3].join(' - ')
 }
 
 str.replaceAll(regex, replacer)
 // 123 - abc - 456
-
-
 ```
 
 上面例子中，正则表达式有三个组匹配，所以replacer()函数的第一个参数match是捕捉到的匹配内容（即字符串123abc456），后面三个参数p1、p2、p3则依次为三个组匹配。
@@ -1768,14 +1710,14 @@ ES6 在Number对象上，新提供了Number.isFinite()和Number.isNaN()两个方
 `Number.isFinite()`用来检查一个数值是否为有限的（`finite`），即不是Infinity。
 
 ```js
-Number.isFinite(15); // true
-Number.isFinite(0.8); // true
-Number.isFinite(NaN); // false
-Number.isFinite(Infinity); // false
-Number.isFinite(-Infinity); // false
-Number.isFinite('foo'); // false
-Number.isFinite('15'); // false
-Number.isFinite(true); // false
+Number.isFinite(15) // true
+Number.isFinite(0.8) // true
+Number.isFinite(Number.NaN) // false
+Number.isFinite(Infinity) // false
+Number.isFinite(-Infinity) // false
+Number.isFinite('foo') // false
+Number.isFinite('15') // false
+Number.isFinite(true) // false
 ```
 
 **如果参数类型不是数值，Number.isFinite一律返回false**
@@ -1783,11 +1725,11 @@ Number.isFinite(true); // false
 `Number.isNaN()`用来检查一个值是否为`NaN`(Not A Number)。
 
 ```js
-Number.isNaN(NaN) // true
+Number.isNaN(Number.NaN) // true
 Number.isNaN(15) // false
 Number.isNaN('15') // false
 Number.isNaN(true) // false
-Number.isNaN(9 / NaN) // true
+Number.isNaN(9 / Number.NaN) // true
 Number.isNaN('true' / 0) // true
 Number.isNaN('true' / 'true') // true
 ```
@@ -1801,18 +1743,16 @@ Number.isNaN('true' / 'true') // true
 > 只有对于NaN才返回true，非NaN一律返回false。
 
 ```js
-
 isFinite(25) // true
-isFinite("25") // true
+isFinite('25') // true
 Number.isFinite(25) // true
-Number.isFinite("25") // false
+Number.isFinite('25') // false
 
-isNaN(NaN) // true
-isNaN("NaN") // true
-Number.isNaN(NaN) // true
-Number.isNaN("NaN") // false
+isNaN(Number.NaN) // true
+isNaN('NaN') // true
+Number.isNaN(Number.NaN) // true
+Number.isNaN('NaN') // false
 Number.isNaN(1) // false
-
 ```
 
 ### Number.parseInt() VS Number.parseFloat()
@@ -1821,8 +1761,8 @@ ES6 将全局方法parseInt()和parseFloat()，移植到Number对象上面，行
 
 ```js
 // ES5的写法
-parseInt('12.34') // 12
-parseFloat('123.45#') // 123.45
+Number.parseInt('12.34') // 12
+Number.parseFloat('123.45#') // 123.45
 
 // ES6的写法
 Number.parseInt('12.34') // 12
@@ -1832,8 +1772,8 @@ Number.parseFloat('123.45#') // 123.45
 **逐步减少全局性方法，使得语言逐步模块化。**
 
 ```js
-Number.parseInt === parseInt // true
-Number.parseFloat === parseFloat // true
+Number.parseInt === Number.parseInt // true
+Number.parseFloat === Number.parseFloat // true
 ```
 
 ### Number.isInteger()
@@ -1878,7 +1818,7 @@ Math.trunc(-0.1234) // -0
 
 ```js
 Math.trunc('123.456') // 123
-Math.trunc(true) //1
+Math.trunc(true) // 1
 Math.trunc(false) // 0
 Math.trunc(null) // 0
 ```
@@ -1886,9 +1826,9 @@ Math.trunc(null) // 0
 对于空值和无法截取整数的值，返回`NaN`。
 
 ```js
-Math.trunc(NaN);      // NaN
-Math.trunc('foo');    // NaN
-Math.trunc();         // NaN
+Math.trunc(Number.NaN) // NaN
+Math.trunc('foo') // NaN
+Math.trunc() // NaN
 Math.trunc(undefined) // NaN
 ```
 
@@ -1896,9 +1836,8 @@ Math.trunc(undefined) // NaN
 
 ```js
 Math.trunc = Math.trunc || function (x) {
-  return x < 0 ? Math.ceil(x) : Math.floor(x);
-};
-
+  return x < 0 ? Math.ceil(x) : Math.floor(x)
+}
 ```
 
 #### Math.sign()
@@ -1914,14 +1853,14 @@ Math.sign方法用来判断一个数到底是正数、负数、还是零。对�
 如果参数是非数值，会自动转为数值。对于那些无法转为数值的值，会返回NaN。
 
 ```js
-Math.sign('')  // 0
-Math.sign(true)  // +1
-Math.sign(false)  // 0
-Math.sign(null)  // 0
-Math.sign('9')  // +1
-Math.sign('foo')  // NaN
-Math.sign()  // NaN
-Math.sign(undefined)  // NaN
+Math.sign('') // 0
+Math.sign(true) // +1
+Math.sign(false) // 0
+Math.sign(null) // 0
+Math.sign('9') // +1
+Math.sign('foo') // NaN
+Math.sign() // NaN
+Math.sign(undefined) // NaN
 ```
 
 Math.sign()的类似实现：
@@ -1929,12 +1868,12 @@ Math.sign()的类似实现：
 ```js
 // 判断正数、负数、还是零
 Math.sign = Math.sign || function (x) {
-  x = +x; // convert to a number
+  x = +x // convert to a number
   if (x === 0 || isNaN(x)) {
-    return x;
+    return x
   }
-  return x > 0 ? 1 : -1;
-};
+  return x > 0 ? 1 : -1
+}
 ```
 
 #### Math.cbrt()
@@ -1943,9 +1882,9 @@ Math.cbrt()方法用于计算一个数的立方根。
 
 ```js
 Math.cbrt(-1) // -1
-Math.cbrt(0)  // 0
-Math.cbrt(1)  // 1
-Math.cbrt(2)  // 1.2599210498948732
+Math.cbrt(0) // 0
+Math.cbrt(1) // 1
+Math.cbrt(2) // 1.2599210498948732
 ```
 
 对于非数值，Math.cbrt()方法内部也是先使用Number()方法将其转为数值。
@@ -1960,9 +1899,9 @@ Math.cbrt('hello') // NaN
 ```js
 // 计算一个数的立方根
 Math.cbrt = Math.cbrt || function (x) {
-  var y = Math.pow(Math.abs(x), 1 / 3);
-  return x < 0 ? -y : y;
-};
+  const y = Math.abs(x) ** (1 / 3)
+  return x < 0 ? -y : y
+}
 ```
 
 #### Math.hypot()
@@ -1970,15 +1909,14 @@ Math.cbrt = Math.cbrt || function (x) {
 Math.hypot方法返回所有参数的平方和的平方根。
 
 ```js
-
 // 3 的平方加上 4 的平方，等于 5 的平方。
-Math.hypot(3, 4);        // 5
-Math.hypot(3, 4, 5);     // 7.0710678118654755
-Math.hypot();            // 0
-Math.hypot(NaN);         // NaN
-Math.hypot(3, 4, 'foo'); // NaN
-Math.hypot(3, 4, '5');   // 7.0710678118654755
-Math.hypot(-3);          // 3
+Math.hypot(3, 4) // 5
+Math.hypot(3, 4, 5) // 7.0710678118654755
+Math.hypot() // 0
+Math.hypot(Number.NaN) // NaN
+Math.hypot(3, 4, 'foo') // NaN
+Math.hypot(3, 4, '5') // 7.0710678118654755
+Math.hypot(-3) // 3
 ```
 
 如果参数不是数值，Math.hypot方法会将其转为数值。只要有一个参数无法转为数值，就会返回 NaN。
@@ -1995,7 +1933,6 @@ ES2016 新增了一个指数运算符（**）。
 **这个运算符是右结合，而不是常见的左结合。多个指数运算符连用时，是从最右边开始计算的。**
 
 ```js
-
 // 首先计算的是第二个指数运算符，而不是第一个
 // 相当于 2 ** (3 ** 2)
 2 ** 3 ** 2
@@ -2005,12 +1942,12 @@ ES2016 新增了一个指数运算符（**）。
 指数运算符可以与等号结合，形成一个新的赋值运算符（**=）。
 
 ```js
-let a = 1.5;
-a **= 2;
+let a = 1.5
+a **= 2
 // 等同于 a = a * a;
 
-let b = 4;
-b **= 3;
+let b = 4
+b **= 3
 // 等同于 b = b * b * b;
 ```
 
@@ -2044,11 +1981,9 @@ log('Hello', '') // Hello
 通常需要先判断一下参数y是否被赋值，如果没有，再等于默认值。
 
 ```js
-
 if (typeof y === 'undefined') {
-  y = 'World';
+  y = 'World'
 }
-
 ```
 
 **参数变量是默认声明的，不能用let或const再次声明，否则会报错。**
@@ -2070,16 +2005,16 @@ function test(x, x, y = 1) {
 另外，参数默认值不是传值的，而是每次都重新计算默认值表达式的值。**也就是说，参数默认值是惰性求值的。**
 
 ```js
-let x = 99;
+let x = 99
 
 function add(p = x + 1) {
-  console.log(p);
+  console.log(p)
 }
 
 add() // 100
 
 // 修改变量值
-x = 100;
+x = 100
 add() // 101
 ```
 
@@ -2090,27 +2025,25 @@ add() // 101
 参数默认值可以与解构赋值的默认值，结合起来使用。
 
 ```js
-function add({x, y = 5}) {
-  console.log(x, y);
+function add({ x, y = 5 }) {
+  console.log(x, y)
 }
 
 add({}) // undefined 5
-add({x: 1}) // 1 5
-add({x: 1, y: 2}) // 1 2
+add({ x: 1 }) // 1 5
+add({ x: 1, y: 2 }) // 1 2
 add() // TypeError: Cannot read property 'x' of undefined
 ```
 
 如果函数`add`调用时没提供参数，变量x和y就不会生成，从而报错。通过提供函数参数的默认值，就可以避免这种情况。
 
 ```js
-
 // 提供默认值进行解构
-function add({x, y = 5} = {}) {
-  console.log(x, y);
+function add({ x, y = 5 } = {}) {
+  console.log(x, y)
 }
 
 add() // undefined 5
-
 ```
 
 #### 参数默认值的位置
@@ -2137,7 +2070,7 @@ test(undefined, 1) // [1, 1]
 
 ```js
 function test(x = 5, y = 6) {
-  console.log(x, y);
+  console.log(x, y)
 }
 
 test(undefined, null)
@@ -2149,14 +2082,12 @@ test(undefined, null)
 指定了默认值以后，函数的length属性，将返回没有指定默认值的参数个数。也就是说，指定了默认值后，length属性将失真。
 
 ```js
-
 (function (a) {
 }).length // 1
-  (function (a = 5) {
-  }).length // 0
-  (function (a, b, c = 5) {
-  }).length // 2
-
+((a = 5) => {
+}).length // 0
+((a, b, c = 5) => {
+}).length // 2
 ```
 
 `length`属性的返回值，等于函数的参数个数减去指定了默认值的参数个数。比如，上面最后一个函数，定义了 `3`
@@ -2174,8 +2105,8 @@ test(undefined, null)
 ```js
 (function (a = 0, b, c) {
 }).length // 0
-  (function (a, b = 1, c) {
-  }).length // 1
+((a, b = 1, c) => {
+}).length // 1
 ```
 
 #### 作用域
@@ -2184,11 +2115,11 @@ test(undefined, null)
 *这种语法行为，在不设置参数默认值时，是不会出现的。**
 
 ```js
-var x = 1;
+const x = 1
 
 function add(x, y = x) {
   // 默认值变量x指向第一个参数x，而不是全局变量x
-  console.log(y);
+  console.log(y)
 }
 
 add(2) // 2
@@ -2197,11 +2128,11 @@ add(2) // 2
 上面代码中，参数y的默认值等于变量x。调用函数f时，参数形成一个单独的作用域。在这个作用域里面，默认值变量x指向第一个参数x，而不是全局变量x，所以输出是2。
 
 ```js
-let x = 1;
+const x = 1
 
 function f(y = x) {
-  let x = 2;
-  console.log(y);
+  const x = 2
+  console.log(y)
 }
 
 f() // 1
@@ -2210,11 +2141,10 @@ f() // 1
 上面代码中，函数f调用时，参数y = x形成一个单独的作用域。这个作用域里面，变量x本身没有定义，所以指向外层的全局变量x。函数调用时，函数体内部的局部变量x影响不到默认值变量x。
 
 ```js
-
 // 此时全局变量x不存在，就会报错。
 function f(y = x) {
-  let x = 2;
-  console.log(y);
+  const x = 2
+  console.log(y)
 }
 
 f() // ReferenceError: x is not defined
@@ -2225,46 +2155,43 @@ f() // ReferenceError: x is not defined
 **如果参数的默认值是一个函数，该函数的作用域也遵守这个规则**
 
 ```js
-let foo = 'outer';
+const foo = 'outer'
 
 function bar(func = () => foo) {
-  let foo = 'inner';
-  console.log(func());
+  const foo = 'inner'
+  console.log(func())
 }
 
-bar(); // outer
+bar() // outer
 ```
 
 上面代码中，函数`bar`的参数`func`的默认值是一个匿名函数，返回值为变量`foo`
 。函数参数形成的单独作用域里面，并没有定义变量`foo`，所以`foo`指向外层的全局变量`foo`，因此输出`outer`。
 
 ```js
-
 function bar(func = () => foo) {
-  let foo = 'inner';
-  console.log(func());
+  const foo = 'inner'
+  console.log(func())
 }
 
 bar() // ReferenceError: foo is not defined
-
 ```
 
 上面代码中，匿名函数里面的`foo`指向函数外层，但是函数外层并没有声明变量`foo`，所以就报错了。
 
 ```js
-var x = 1;
+const x = 1
 
 function foo(x, y = function () {
-  x = 2;
+  x = 2
 }) {
-  var x = 3;
-  y();
-  console.log(x);
+  var x = 3
+  y()
+  console.log(x)
 }
 
 foo() // 3
 x // 1
-
 ```
 
 上面代码中，函数`foo`的参数形成一个单独作用域。这个作用域里面，首先声明了变量x，然后声明了变量`y`，`y`
@@ -2272,14 +2199,14 @@ x // 1
 ，该变量与第一个参数`x`由于不是同一个作用域，所以不是同一个变量，因此执行`y`后，内部变量`x`和外部全局变量x的值都没变。
 
 ```js
-var x = 1;
+const x = 1
 
 function foo(x, y = function () {
-  x = 2;
+  x = 2
 }) {
-  x = 3;
-  y();
-  console.log(x);
+  x = 3
+  y()
+  console.log(x)
 }
 
 foo() // 2
@@ -2297,13 +2224,13 @@ x // 1
 ```js
 // 利用 rest 参数，可以向该函数传入任意数目的参数。
 function add(...values) {
-  let sum = 0;
+  let sum = 0
 
-  for (var val of values) {
-    sum += val;
+  for (const val of values) {
+    sum += val
   }
 
-  return sum;
+  return sum
 }
 
 add(2, 5, 3) // 10
@@ -2327,28 +2254,26 @@ const sortNumbers = (...numbers) => numbers.sort();
 参数就不存在这个问题，它就是一个真正的数组，数组特有的方法都可以使用。
 
 ```js
-
 function push(array, ...items) {
-  items.forEach(function (item) {
-    array.push(item);
-    console.log(item);
-  });
+  items.forEach((item) => {
+    array.push(item)
+    console.log(item)
+  })
 }
 
-var a = [];
+const a = []
 push(a, 1, 2, 3)
-
 ```
 
 **注意，rest 参数之后不能再有其他参数（即只能是最后一个参数），否则会报错。**
 
 ```js
 (function (a) {
-}).length  // 1
-  (function (...a) {
-  }).length  // 0
-  (function (a, ...b) {
-  }).length  // 1
+}).length // 1
+((...a) => {
+}).length // 0
+((a, ...b) => {
+}).length // 1
 ```
 
 **函数的length属性，不包括 rest 参数。**
@@ -2359,7 +2284,7 @@ push(a, 1, 2, 3)
 
 ```js
 function doSomething(a, b) {
-  'use strict';
+  'use strict'
   // code  ES5中是被允许的
 }
 ```
@@ -2408,7 +2333,6 @@ function test() {
 }
 
 test.name // “test”
-
 ```
 
 ES6 对这个属性的行为做出了一些修改，如果将一个匿名函数赋值给一个变量：
@@ -2419,8 +2343,8 @@ ES6 对这个属性的行为做出了一些修改，如果将一个匿名函数�
 
 ```js
 // 匿名函数
-var f = function () {
-};
+const f = function () {
+}
 
 // ES5
 f.name // ""
@@ -2433,7 +2357,7 @@ f.name // "f"
 
 ```js
 const bar = function test() {
-};
+}
 
 // ES5
 bar.name // "test"
@@ -2445,7 +2369,7 @@ bar.name // "test"
 **Function构造函数返回的函数实例，name属性的值为anonymous。**
 
 ```js
-(new Function).name // "anonymous"
+(new Function()).name // "anonymous"
 ```
 
 bind返回的函数，name属性值会加上bound前缀。
@@ -2458,8 +2382,8 @@ function foo() {
 
 foo.bind({}).name // "bound foo"
 
-  (function () {
-  }).bind({}).name // "bound "
+(() => {
+}).bind({}).name // "bound "
 ```
 
 ### 箭头函数
@@ -2467,30 +2391,29 @@ foo.bind({}).name // "bound foo"
 ES6 允许使用“箭头”（=>）定义函数。
 
 ```js
-var f = v => v;
+var f = v => v
 
 // 等同于
 var f = function (v) {
-  return v;
-};
-
+  return v
+}
 ```
 
 如果箭头函数不需要参数或需要多个参数，就使用一个圆括号代表参数部分。
 
 ```js
-var f = () => 5;
+var f = () => 5
 
 // 等同于
 var f = function () {
   return 5
-};
+}
 
-var sum = (num1, num2) => num1 + num2;
+var sum = (num1, num2) => num1 + num2
 // 等同于
 var sum = function (num1, num2) {
-  return num1 + num2;
-};
+  return num1 + num2
+}
 ```
 
 由于**大括号被解释为代码块**，所以如果箭头函数直接返回一个对象，必须在对象外面加上括号，否则会报错。
@@ -2511,9 +2434,9 @@ let getItem = id => ({id: id, name: "tom"});
 下面是一种特殊情况，虽然可以运行，但会得到错误的结果。
 
 ```js
-let foo = () => {
+function foo() {
   a: 1
-};
+}
 foo() // undefined
 ```
 
@@ -2523,9 +2446,8 @@ foo() // undefined
 如果箭头函数只有一行语句，且不需要返回值，可以采用下面的写法，就不用写大括号了。
 
 ```js
-
 // void运算符
-let fn = () => void doesNotReturn();
+const fn = () => void doesNotReturn()
 ```
 
 **`void` 是一元运算符，它可以出现在任意类型的操作数之前执行操作数，却忽略操作数的返回值，返回一个 `undefined`**
@@ -2548,34 +2470,31 @@ const full = ({first, last}) => `${first}${last}`
 
 ```js
 // 正常函数写法
-[1, 2, 3].map(function (x) {
-  return x * x;
+[1, 2, 3].map((x) => {
+  return x * x
 });
 
 // 箭头函数写法
-[1, 2, 3].map(x => x * x);
-
+[1, 2, 3].map(x => x * x)
 
 // 正常函数写法
-var result = values.sort(function (a, b) {
-  return a - b;
-});
+var result = values.sort((a, b) => {
+  return a - b
+})
 
 // 箭头函数写法
-var result = values.sort((a, b) => a - b);
-
+var result = values.sort((a, b) => a - b)
 
 // rest 参数与箭头函数结合
-const numbers = (...nums) => nums;
+const numbers = (...nums) => nums
 
 numbers(1, 2, 3, 4, 5)
 // [1,2,3,4,5]
 
-const headAndTail = (head, ...tail) => [head, tail];
+const headAndTail = (head, ...tail) => [head, tail]
 
 headAndTail(1, 2, 3, 4, 5)
 // [1,[2,3,4,5]]
-
 ```
 
 箭头函数使用需要注意:
@@ -2593,14 +2512,14 @@ headAndTail(1, 2, 3, 4, 5)
 ```js
 function foo() {
   setTimeout(() => {
-    console.log('id:', this.id);
-  }, 100);
+    console.log('id:', this.id)
+  }, 100)
 }
 
-var id = 21;
+const id = 21
 
 // call()函数修改this指向
-foo.call({id: 42});
+foo.call({ id: 42 })
 // id: 42
 ```
 
@@ -2612,23 +2531,22 @@ foo.call({id: 42});
 
 ```js
 function Timer() {
-  this.s1 = 0;
-  this.s2 = 0;
+  this.s1 = 0
+  this.s2 = 0
   // 箭头函数
-  setInterval(() => this.s1++, 1000);
+  setInterval(() => this.s1++, 1000)
   // 普通函数
   setInterval(function () {
-    this.s2++;
-  }, 1000);
+    this.s2++
+  }, 1000)
 }
 
-var timer = new Timer();
+const timer = new Timer()
 
-setTimeout(() => console.log('s1: ', timer.s1), 3100);
-setTimeout(() => console.log('s2: ', timer.s2), 3100);
+setTimeout(() => console.log('s1: ', timer.s1), 3100)
+setTimeout(() => console.log('s2: ', timer.s2), 3100)
 // s1: 3
 // s2: 0
-
 ```
 
 `Timer`函数内部设置了两个定时器，分别使用了箭头函数和普通函数。前者的`this`绑定定义时所在的作用域（即`Timer`
@@ -2637,18 +2555,17 @@ setTimeout(() => console.log('s2: ', timer.s2), 3100);
 **箭头函数可以让this指向固定化，这种特性很有利于封装回调函数**
 
 ```js
-var handler = {
+const handler = {
   id: '123456',
 
-  init: function () {
-    document.addEventListener('click',
-      event => this.doSomething(event.type), false);
+  init() {
+    document.addEventListener('click', event => this.doSomething(event.type), false)
   },
 
-  doSomething: function (type) {
-    console.log('Handling ' + type + ' for ' + this.id);
+  doSomething(type) {
+    console.log(`Handling ${type} for ${this.id}`)
   }
-};
+}
 ```
 
 `init`方法中，使用了箭头函数，这导致这个箭头函数里面的this，总是指向handler对象。否则，回调函数运行时，this.doSomething这一行会报错，因为此时this指向document对象。
@@ -2661,18 +2578,17 @@ function foo() {
   return () => {
     return () => {
       return () => {
-        console.log('id:', this.id);
-      };
-    };
-  };
+        console.log('id:', this.id)
+      }
+    }
+  }
 }
 
-var f = foo.call({id: 1});
+const f = foo.call({ id: 1 })
 
-var t1 = f.call({id: 2})()(); // id: 1
-var t2 = f().call({id: 3})(); // id: 1
-var t3 = f()().call({id: 4}); // id: 1
-
+const t1 = f.call({ id: 2 })()() // id: 1
+const t2 = f().call({ id: 3 })() // id: 1
+const t3 = f()().call({ id: 4 }) // id: 1
 ```
 
 只有一个`this`，就是函数`foo`的`this`，所以`t1`、`t2`、`t3`
@@ -2687,8 +2603,8 @@ var t3 = f()().call({id: 4}); // id: 1
 ```js
 function foo() {
   setTimeout(() => {
-    console.log('args:', arguments);
-  }, 100);
+    console.log('args:', arguments)
+  }, 100)
 }
 
 foo(2, 4, 6, 8)
@@ -2705,9 +2621,9 @@ foo(2, 4, 6, 8)
 
 (function () {
   return [
-    (() => this.x).bind({x: 'inner'})()
-  ];
-}).call({x: 'outer'});
+    (() => this.x).bind({ x: 'inner' })()
+  ]
+}).call({ x: 'outer' })
 // ['outer']
 ```
 
@@ -2724,7 +2640,6 @@ function /* foo comment */ foo() {
 
 foo.toString()
 // function foo() {}
-
 ```
 
 函数`foo`的原始代码包含注释，函数名`foo`和圆括号之间有空格，但是`toString()`方法都把它们省略了。
@@ -2746,7 +2661,8 @@ JavaScript 语言的`try...catch`结构，以前明确要求`catch`命令后面�
 ```js
 try {
   // ...
-} catch (err) {
+}
+catch (err) {
   // 处理错误
 }
 ```
@@ -2757,10 +2673,10 @@ catch命令后面带有参数err。
 **
 
 ```js
-
 try {
   // ...
-} catch {
+}
+catch {
   // ...
 }
 ```
@@ -2784,16 +2700,15 @@ console.log(1, ...[2, 3, 4], 5)
 ```js
 // 将数组转化为逗号分隔的参数序列
 function push(array, ...items) {
-  array.push(...items);
+  array.push(...items)
 }
 
 function add(x, y) {
-  return x + y;
+  return x + y
 }
 
-const numbers = [4, 38];
+const numbers = [4, 38]
 add(...numbers) // 42
-
 ```
 
 扩展运算符与正常的函数参数可以结合使用，非常灵活。
@@ -2802,21 +2717,20 @@ add(...numbers) // 42
 function test(v, w, x, y, z) {
 }
 
-const args = [0, 1];
+const args = [0, 1]
 
 // 调用
-test(-1, ...args, 2, ...[3]);
+test(-1, ...args, 2, ...[3])
 ```
 
 扩展运算符后面还可以放置表达式。
 
 ```js
-
 // 结合三目运算
 const arr = [
   ...(x > 0 ? ['a'] : []),
   'b',
-];
+]
 ```
 
 **如果扩展运算符后面是一个空数组，则不产生任何效果。**
@@ -2838,7 +2752,6 @@ const arr = [
 console.log((...[1, 2]))
 // Uncaught SyntaxError: Unexpected number
 
-
 // 正常函数调用情况
 console.log(...[1, 2])
 // 1 2
@@ -2859,7 +2772,6 @@ function test(x, y, z) {
 var args = [0, 1, 2];
 test.apply(null, args);
 
-
 // ES6的写法
 function test(x, y, z) {
   // ...
@@ -2868,7 +2780,6 @@ function test(x, y, z) {
 // 实际调用
 let args = [0, 1, 2];
 test(...args);
-
 
 // 应用Math.max方法的简化应用
 
@@ -2896,7 +2807,6 @@ let arr1 = [0, 1, 2];
 let arr2 = [3, 4, 5];
 arr1.push(...arr2);
 
-
 // ES5
 new (Date.bind.apply(Date, [null, 2015, 1, 1]))
 // ES6
@@ -2917,11 +2827,10 @@ new Date(...[2015, 1, 1]);
 **数组是复合的数据类型，直接复制的话，只是复制了指向底层数据结构的指针，而不是克隆一个全新的数组**
 
 ```js
-const a1 = [1, 2];
-const a2 = a1;
+const a1 = [1, 2]
+const a2 = a1
 
-
-a2[0] = 2;
+a2[0] = 2
 a1 // [2, 2]
 ```
 
@@ -2929,12 +2838,11 @@ a2并不是a1的克隆，而是指向同一份数据的另一个指针。修改a
 
 ```js
 // ES5 只能用变通方法来复制数组。
-const a1 = [1, 2];
-const a2 = a1.concat();
+const a1 = [1, 2]
+const a2 = a1.concat()
 
-a2[0] = 2;
+a2[0] = 2
 a1 // [1, 2]
-
 ```
 
 a1会返回原数组的克隆，再修改a2就不会对a1产生影响。
@@ -2953,9 +2861,9 @@ const [...a2] = a1;
 扩展运算符提供了数组合并的新写法。
 
 ```js
-const arr1 = ['a', 'b'];
-const arr2 = ['c'];
-const arr3 = ['d', 'e'];
+const arr1 = ['a', 'b']
+const arr2 = ['c']
+const arr3 = ['d', 'e']
 
 // ES5 的合并数组
 arr1.concat(arr2, arr3);
@@ -2969,11 +2877,11 @@ arr1.concat(arr2, arr3);
 不过，这两种方法都是浅拷贝，使用的时候需要注意。
 
 ```js
-const a1 = [{foo: 1}];
-const a2 = [{bar: 2}];
+const a1 = [{ foo: 1 }]
+const a2 = [{ bar: 2 }]
 
-const a3 = a1.concat(a2);
-const a4 = [...a1, ...a2];
+const a3 = a1.concat(a2)
+const a4 = [...a1, ...a2]
 
 a3[0] === a1[0] // true
 a4[0] === a1[0] // true
@@ -3029,8 +2937,8 @@ const [first, ...middle, last] = [1, 2, 3, 4, 5];
 任何定义了遍历器（Iterator）接口的对象（参阅 Iterator 一章），都可以用扩展运算符转为真正的数组
 
 ```js
-let nodeList = document.querySelectorAll('div');
-let array = [...nodeList];
+const nodeList = document.querySelectorAll('div')
+const array = [...nodeList]
 ```
 
 `querySelectorAll`方法返回的是一个`NodeList`对象。**它不是数组，而是一个类似数组的对象**
@@ -3038,16 +2946,15 @@ let array = [...nodeList];
 
 ```js
 // arrayLike是一个类似数组的对象，但是没有部署 Iterator 接口
-let arrayLike = {
-  '0': 'a',
-  '1': 'b',
-  '2': 'c',
+const arrayLike = {
+  0: 'a',
+  1: 'b',
+  2: 'c',
   length: 3
-};
+}
 
 // TypeError: Cannot spread non-iterable object.
-let arr = [...arrayLike];
-
+const arr = [...arrayLike]
 ```
 
 对于那些没有部署 Iterator 接口的类似数组的对象，扩展运算符就无法将其转为真正的数组。
@@ -3057,22 +2964,22 @@ let arr = [...arrayLike];
 **扩展运算符内部调用的是数据结构的 Iterator 接口**，因此只要具有 Iterator 接口的对象，都可以使用扩展运算符，比如 `Map` 结构。
 
 ```js
-let map = new Map([
+const map = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
-]);
+])
 
-let arr = [...map.keys()]; // [1, 2, 3]
+const arr = [...map.keys()] // [1, 2, 3]
 ```
 
 **Generator 函数运行后，返回一个遍历器对象，因此也可以使用扩展运算符。**
 
 ```js
-const go = function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+const go = function () {
+  yield 1
+  yield 2
+  yield 3
 };
 
 [...go()] // [1, 2, 3]
@@ -3081,9 +2988,9 @@ const go = function* () {
 如果对没有 Iterator 接口的对象，使用扩展运算符，将会报错。
 
 ```js
-const obj = {a: 1, b: 2};
+const obj = { a: 1, b: 2 }
 // TypeError: Cannot spread non-iterable object
-let arr = [...obj]; 
+const arr = [...obj]
 ```
 
 ### Array.from()
@@ -3094,18 +3001,18 @@ let arr = [...obj];
 - 可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 `Map`）
 
 ```js
-let arrayLike = {
-  '0': 'a',
-  '1': 'b',
-  '2': 'c',
+const arrayLike = {
+  0: 'a',
+  1: 'b',
+  2: 'c',
   length: 3
-};
+}
 
 // ES5的写法
-var arr1 = [].slice.call(arrayLike); // ['a', 'b', 'c']
+const arr1 = [].slice.call(arrayLike) // ['a', 'b', 'c']
 
 // ES6的写法
-let arr2 = Array.from(arrayLike); // ['a', 'b', 'c']
+const arr2 = Array.from(arrayLike) // ['a', 'b', 'c']
 ```
 
 实际应用中，常见的类似数组的对象是 `DOM` 操作返回的 `NodeList` 集合，以及函数内部的`arguments`对象。`Array.from`
@@ -3113,18 +3020,17 @@ let arr2 = Array.from(arrayLike); // ['a', 'b', 'c']
 
 ```js
 // NodeList对象
-let ps = document.querySelectorAll('p');
-Array.from(ps).filter(p => {
-  return p.textContent.length > 100;
-});
+const ps = document.querySelectorAll('p')
+Array.from(ps).filter((p) => {
+  return p.textContent.length > 100
+})
 
 // arguments对象
 function foo() {
   // 转化成数组
-  var args = Array.from(arguments);
+  const args = Array.from(arguments)
   // ...
 }
-
 ```
 
 **只要是部署了 `Iterator` 接口的数据结构，`Array.from`都能将其转为数组。**
@@ -3134,7 +3040,7 @@ function foo() {
 Array.from('hello')
 // ['h', 'e', 'l', 'l', 'o']
 
-let namesSet = new Set(['a', 'b'])
+const namesSet = new Set(['a', 'b'])
 Array.from(namesSet) // ['a', 'b']
 ```
 
@@ -3151,16 +3057,15 @@ Array.from([1, 2, 3])
 // arguments对象
 function foo() {
   // 扩展运算符，效果和Array.from一样
-  const args = [...arguments];
+  const args = [...arguments]
 }
-
 ```
 
 **`Array.from`方法还支持类似数组的对象。所谓类似数组的对象，本质特征只有一点，即必须有`length`属性。因此，任何有`length`
 属性的对象，都可以通过`Array.from`方法转为数组，而此时扩展运算符就无法转换。**
 
 ```js
-Array.from({length: 3});
+Array.from({ length: 3 })
 // [ undefined, undefined, undefined ]
 ```
 
@@ -3169,21 +3074,20 @@ Array.from({length: 3});
 对于还没有部署该方法的浏览器，可以用`Array.prototype.slice`方法替代。
 
 ```js
-
 // 兼容存在Array.from情况
 const toArray = (() =>
-    Array.from ? Array.from : obj => [].slice.call(obj)
-)();
+  Array.from ? Array.from : obj => [].slice.call(obj)
+)()
 ```
 
 **`Array.from`还可以接受第二个参数，作用类似于数组的`map`方法，用来对每个元素进行处理，将处理后的值放入返回的数组。**
 
 ```js
-Array.from(arrayLike, x => x * x);
+Array.from(arrayLike, x => x * x)
 // 等同于
-Array.from(arrayLike).map(x => x * x);
+Array.from(arrayLike).map(x => x * x)
 
-Array.from([1, 2, 3], (x) => x * x)
+Array.from([1, 2, 3], x => x * x)
 // [1, 4, 9]
 ```
 
@@ -3191,7 +3095,7 @@ Array.from([1, 2, 3], (x) => x * x)
 功能。这实际上意味着，只要有一个原始的数据结构，你就可以先对它的值进行处理，然后转成规范的数组结构，进而就可以使用数量众多的数组方法。
 
 ```js
-Array.from({length: 2}, () => 'jack')
+Array.from({ length: 2 }, () => 'jack')
 // ['jack', 'jack']
 ```
 
@@ -3202,9 +3106,8 @@ JavaScript 将大于`\uFFFF`的 `Unicode` 字符，算作两个字符的 `bug`�
 
 ```js
 function countSymbols(string) {
-  return Array.from(string).length;
+  return Array.from(string).length
 }
-
 ```
 
 ### Array.of()
@@ -3246,7 +3149,7 @@ Array.of(1, 2) // [1, 2]
 ```js
 function ArrayOf() {
   // arguments 参数数组
-  return [].slice.call(arguments);
+  return [].slice.call(arguments)
 }
 ```
 
@@ -3298,12 +3201,12 @@ i32a.copyWithin(0, 2);
 的成员，然后返回该成员。如果没有符合条件的成员，则返回`undefined`。
 
 ```js
-[1, 4, -5, 10].find((n) => n < 0)
+[1, 4, -5, 10].find(n => n < 0)
 // -5
 
-  [1, 5, 10, 15].find(function (value, index, arr) {
-  return value > 9;
-}) // 10
+  [1, 5, 10, 15].find((value, index, arr) => {
+    return value > 9
+  }) // 10
 ```
 
 **find方法的回调函数可以接受三个参数，依次为当前的值、当前的位置和原数组。**
@@ -3313,8 +3216,8 @@ i32a.copyWithin(0, 2);
 
 ```js
 // 返回第一个符合条件的数组成员的位置
-[1, 5, 10, 15].findIndex(function (value, index, arr) {
-  return value > 9;
+[1, 5, 10, 15].findIndex((value, index, arr) => {
+  return value > 9
 }) // 2
 ```
 
@@ -3323,20 +3226,20 @@ i32a.copyWithin(0, 2);
 ```js
 // 回调函数中的this对象指向person对象。
 function f(v) {
-  return v > this.age;
+  return v > this.age
 }
 
-let person = {name: 'John', age: 20};
-[10, 12, 26, 15].find(f, person);    // 26
+const person = { name: 'John', age: 20 };
+[10, 12, 26, 15].find(f, person) // 26
 ```
 
 另外，两个方法都可以发现NaN，弥补了数组的indexOf方法的不足
 
 ```js
-[NaN].indexOf(NaN)
+[Number.NaN].indexOf(Number.NaN)
 // -1
 
-  [NaN].findIndex(y => Object.is(NaN, y))
+  [Number.NaN].findIndex(y => Object.is(Number.NaN, y))
 // 0
 ```
 
@@ -3350,9 +3253,8 @@ let person = {name: 'John', age: 20};
 ['a', 'b', 'c'].fill(7)
 // [7, 7, 7]
 
-new Array(3).fill(7)
+Array.from({ length: 3 }).fill(7)
 // [7, 7, 7]
-
 ```
 
 数组中已有的元素，会被全部抹去。
@@ -3392,20 +3294,20 @@ ES6 提供三个新的方法,用于遍历数组
 都返回一个遍历器对象【Iterator】，可以用`for...of`循环进行遍历
 
 ```js
-for (let index of ['a', 'b'].keys()) {
-  console.log(index);
+for (const index of ['a', 'b'].keys()) {
+  console.log(index)
 }
 // 0
 // 1
 
-for (let elem of ['a', 'b'].values()) {
-  console.log(elem);
+for (const elem of ['a', 'b'].values()) {
+  console.log(elem)
 }
 // 'a'
 // 'b'
 
-for (let [index, elem] of ['a', 'b'].entries()) {
-  console.log(index, elem);
+for (const [index, elem] of ['a', 'b'].entries()) {
+  console.log(index, elem)
 }
 // 0 "a"
 // 1 "b"
@@ -3414,11 +3316,11 @@ for (let [index, elem] of ['a', 'b'].entries()) {
 如果不使用for...of循环，可以手动调用遍历器对象的next方法，进行遍历。
 
 ```js
-let letter = ['a', 'b', 'c'];
-let entries = letter.entries();
-console.log(entries.next().value); // [0, 'a']
-console.log(entries.next().value); // [1, 'b']
-console.log(entries.next().value); // [2, 'c']
+const letter = ['a', 'b', 'c']
+const entries = letter.entries()
+console.log(entries.next().value) // [0, 'a']
+console.log(entries.next().value) // [1, 'b']
+console.log(entries.next().value) // [2, 'c']
 ```
 
 ### includes()
@@ -3426,18 +3328,16 @@ console.log(entries.next().value); // [2, 'c']
 `Array.prototype.includes`方法返回一个布尔值，表示某个数组是否包含给定的值.
 
 ```js
-[1, 2, 3].includes(2)     // true
-  [1, 2, 3].includes(4)     // false
-  [1, 2, NaN].includes(NaN) // true
+[1, 2, 3].includes(2) // true
+  [1, 2, 3].includes(4) // false
+  [1, 2, Number.NaN].includes(Number.NaN) // true
 ```
 
 与字符串的includes方法类似。ES2016 引入了该方法。
 
 ```js
-
-[1, 2, 3].includes(3, 3);  // false
-[1, 2, 3].includes(3, -1); // true
-
+[1, 2, 3].includes(3, 3); // false
+[1, 2, 3].includes(3, -1) // true
 ```
 
 **第二个参数表示搜索的起始位置，默认为0**。如果第二个参数为负数，则表示倒数的位置，如果这时它大于数组长度（比如第二个参数为-4，但数组长度为3），则会重置为从0开始。
@@ -3445,7 +3345,7 @@ console.log(entries.next().value); // [2, 'c']
 通常使用数组的`indexOf`法，也能检查是否包含某个值。
 
 ```js
-if (arr.indexOf(el) !== -1) {
+if (arr.includes(el)) {
   // ...
 }
 ```
@@ -3456,13 +3356,12 @@ if (arr.indexOf(el) !== -1) {
 - 内部使用严格相等运算符（`===`）进行判断，这会导致对NaN的误判。
 
 ```js
-
 // indexof存在NaN误判
-[NaN].indexOf(NaN)
+[Number.NaN].indexOf(Number.NaN)
 // -1
 
 // includes正常
-  [NaN].includes(NaN)
+  [Number.NaN].includes(Number.NaN)
 // true
 ```
 
@@ -3470,11 +3369,11 @@ if (arr.indexOf(el) !== -1) {
 
 ```js
 const contains = (() =>
-    Array.prototype.includes
-      ? (arr, value) => arr.includes(value)
-      : (arr, value) => arr.some(el => el === value)
-)();
-contains(['foo', 'bar'], 'baz'); // => false
+  Array.prototype.includes
+    ? (arr, value) => arr.includes(value)
+    : (arr, value) => arr.includes(value)
+)()
+contains(['foo', 'bar'], 'baz') // => false
 ```
 
 `Map` 和 `Set` 数据结构有一个`has`方法，需要注意与`includes`区分。
@@ -3488,7 +3387,6 @@ contains(['foo', 'bar'], 'baz'); // => false
 数组的成员有时还是数组，`Array.prototype.flat()`用于将嵌套的数组“拉平”，变成一维的数组。该方法返回一个新数组，对原数据没有影响。
 
 ```js
-
 // flat()方法将子数组的成员取出来，添加在原来的位置。
 [1, 2, [3, 4]].flat()
 // [1, 2, 3, 4]
@@ -3497,7 +3395,6 @@ contains(['foo', 'bar'], 'baz'); // => false
 **flat()默认只会“拉平”一层**，如果想要“拉平”多层的嵌套数组，可以将flat()方法的参数写成一个整数，表示想要拉平的层数，默认为1。
 
 ```js
-
 // 默认拉平一层
 [1, 2, [3, [4, 5]]].flat()
 // [1, 2, 3, [4, 5]]
@@ -3505,7 +3402,6 @@ contains(['foo', 'bar'], 'baz'); // => false
 // 拉平嵌套两层得嵌套数组
   [1, 2, [3, [4, 5]]].flat(2)
 // [1, 2, 3, 4, 5]
-
 ```
 
 如果不管有多少层嵌套，都要转成一维数组，可以用Infinity关键字作为参数。
@@ -3514,7 +3410,6 @@ contains(['foo', 'bar'], 'baz'); // => false
 // 不管有多少层嵌套，都要转成一维数组
 [1, [2, [3]]].flat(Infinity)
 // [1, 2, 3]
-
 ```
 
 如果原数组有空位，flat()方法会跳过空位。
@@ -3529,7 +3424,7 @@ contains(['foo', 'bar'], 'baz'); // => false
 
 ```js
 // 相当于 [[2, 4], [3, 6], [4, 8]].flat()
-[2, 3, 4].flatMap((x) => [x, x * 2])
+[2, 3, 4].flatMap(x => [x, x * 2])
 // [2, 4, 3, 6, 4, 8]
 ```
 
@@ -3590,20 +3485,18 @@ console.log(...[1, 2, 3])
 
 console.log(1, ...[2, 3, 4], 5)
 // 输出 1 2 3 4 5
-
 ```
 
 可以用在函数调用这样的场景下
 
 ```js
-
 function push(arr, ...items) {
   // 数组中添加元素
   arr.push(...items)
 }
 
 function add(x, y) {
-  return x + y;
+  return x + y
 }
 
 // 定于参数
@@ -3614,7 +3507,6 @@ const num = [4, 22]
 add(...num)
 
 // 输出26
-
 ```
 
 从上面的代码例子中可以看出，arr.push(...items)和add(...num)都是函数的调用，也都可以使用扩展运算符，**将数组变为参数序列**
@@ -3629,7 +3521,6 @@ const arr = [
 // 如上，扩展运算符是空数组，则不产生任何效果
 console.log([...[], 1])
 // [1]
-
 ```
 
 ### 替代数组的apply()方法
@@ -3637,7 +3528,6 @@ console.log([...[], 1])
 > apply()方法可以将数组转为函数的参数
 
 ```js
-
 // ES5
 function f(x, y, z) {
   // ...
@@ -3652,7 +3542,6 @@ f.apply(null, args)
 // 而ES6中可以
 
 f(...arg)
-
 ```
 
 类似的也可以
@@ -3662,13 +3551,12 @@ f(...arg)
 
 Math.max.apply(null, [1, 2, 3])
 
-// ES6 
+// ES6
 Math.max(...[1, 2, 3])
 
 // 上面个两个等价于
 
 Math.max(1, 2, 3)
-
 ```
 
 类似也可以实现元素添加数组到尾部
@@ -3735,17 +3623,16 @@ rest // [2,3,4,5]
 > 在Javascript中，函数只能返回一个值，如果需要返回多个值，就通过返回对象或者数组来实现，拓展运算符提供了相对应的变通方法
 
 ```js
-const fields = readDateFields(database);
+const fields = readDateFields(database)
 
 // 间数据构造传入构造函数Date(),获取新值
 const d = new Date(...fields)
-
 ```
 
 #### 字符串
 
 ```js
-[..."hello"]
+[...'hello']
 // ['h','e','l','l','o']
 ```
 
@@ -3781,7 +3668,6 @@ function test(x, y) {
 
 test(1, 2) // Object {x: 1, y: 2}
 
-
 const fc = {
   method() {
     return "Hello!";
@@ -3799,27 +3685,27 @@ const fc = {
 CommonJS 模块输出一组变量，就非常合适使用简洁写法。
 
 ```js
-let ms = {};
+let ms = {}
 
 function getItem(key) {
-  return key in ms ? ms[key] : null;
+  return key in ms ? ms[key] : null
 }
 
 function setItem(key, value) {
-  ms[key] = value;
+  ms[key] = value
 }
 
 function clear() {
-  ms = {};
+  ms = {}
 }
 
-module.exports = {getItem, setItem, clear};
+module.exports = { getItem, setItem, clear }
 // 等同于
 module.exports = {
-  getItem: getItem,
-  setItem: setItem,
-  clear: clear
-};
+  getItem,
+  setItem,
+  clear
+}
 ```
 
 属性的赋值器（setter）和取值器（getter），事实上也是采用这种写法。
@@ -3831,14 +3717,14 @@ const cart = {
 
   // 取值器
   get wheels() {
-    return this._wheels;
+    return this._wheels
   },
   // 赋值器
   set wheels(value) {
     if (value < this._wheels) {
-      throw new Error('数值太小了！');
+      throw new Error('数值太小了！')
     }
-    this._wheels = value;
+    this._wheels = value
   }
 }
 ```
@@ -3848,9 +3734,9 @@ const cart = {
 ```js
 const obj = {
   test() {
-    this.foo = 'bar';
+    this.foo = 'bar'
   }
-};
+}
 new obj.test() // 报错
 ```
 
@@ -3862,44 +3748,42 @@ JavaScript 定义对象属性的两种方法
 
 ```js
 // 方法一:直接用标识符作为属性名
-obj.foo = true;
+obj.foo = true
 
 // 方法二:用表达式作为属性名
-obj['a' + 'bc'] = 123;
-
+obj['a' + 'bc'] = 123
 ```
 
 如果使用字面量方式定义对象（使用大括号），在 ES5 中只能使用方法一（标识符）定义属性。
 
 ```js
-var obj = {
+const obj = {
   foo: true,
   abc: 123
-};
+}
 ```
 
 ES6 允许字面量定义对象时，用方法二（表达式）作为对象的属性名，即把表达式放在方括号内。
 
 ```js
-let propKey = 'foo';
+const propKey = 'foo'
 
-let obj = {
+const obj = {
   [propKey]: true,
   ['a' + 'bc']: 123
-};
+}
 ```
 
 **表达式还可以用于定义方法名。**
 
 ```js
-let obj = {
+const obj = {
   ['h' + 'ello']() {
-    return 'hi';
+    return 'hi'
   }
-};
+}
 
 obj.hello() // hi
-
 ```
 
 注意，属性名表达式与简洁表示法，不能同时使用，会报错。
@@ -3919,13 +3803,13 @@ const baz = {[foo]: 'abc'};
 注意，属性名表达式如果是一个对象，默认情况下会自动将对象转为字符串`[object Object]`
 
 ```js
-const keyA = {a: 1};
-const keyB = {b: 2};
+const keyA = { a: 1 }
+const keyB = { b: 2 }
 
 const myObject = {
   [keyA]: 'valueA',
   [keyB]: 'valueB'
-};
+}
 
 myObject // Object {[object Object]: "valueB"}
 ```
@@ -3937,12 +3821,12 @@ myObject // Object {[object Object]: "valueB"}
 ```js
 const person = {
   sayName() {
-    console.log('hello!');
+    console.log('hello!')
   },
-};
+}
 
 // 方法的name属性返回函数名（即方法名）
-person.sayName.name   // "sayName"
+person.sayName.name // "sayName"
 ```
 
 如果对象的方法使用了取值函数（`getter`）和存值函数（`setter`），则name属性不是在该方法上面，而是该方法的属性的描述对象的`get`
@@ -3954,13 +3838,12 @@ const obj = {
   },
   set foo(x) {
   }
-};
+}
 
 obj.foo.name
 // TypeError: Cannot read property 'name' of undefined
 
-
-const descriptor = Object.getOwnPropertyDescriptor(obj, 'foo');
+const descriptor = Object.getOwnPropertyDescriptor(obj, 'foo')
 
 descriptor.get.name // "get foo"
 descriptor.set.name // "set foo"
@@ -3977,28 +3860,27 @@ descriptor.set.name // "set foo"
 ```js
 (new Function()).name // "anonymous"
 
-var doSomething = function () {
+const doSomething = function () {
   // ...
-};
+}
 doSomething.bind().name // "bound doSomething"
 ```
 
 如果对象的方法是一个 `Symbol` 值，那么`name`属性返回的是这个 `Symbol` 值的描述。
 
 ```js
-const key1 = Symbol('description');
-const key2 = Symbol();
-let obj = {
+const key1 = Symbol('description')
+const key2 = Symbol()
+const obj = {
   [key1]() {
   },
   [key2]() {
   },
-};
+}
 obj[key1].name // "[description]"
 
 // 没有Symbol描述，为空字符串
 obj[key2].name // ""
-
 ```
 
 ### 属性的可枚举性和遍历
@@ -4008,7 +3890,7 @@ obj[key2].name // ""
 对象的每个属性都有一个描述对象（`Descriptor`），用来控制该属性的行为。`Object.getOwnPropertyDescriptor`方法可以获取该属性的描述对象。
 
 ```js
-let obj = {foo: 123};
+const obj = { foo: 123 }
 Object.getOwnPropertyDescriptor(obj, 'foo')
 //  {
 //    value: 123,
@@ -4016,7 +3898,6 @@ Object.getOwnPropertyDescriptor(obj, 'foo')
 //    enumerable: true,
 //    configurable: true
 //  }
-
 ```
 
 描述对象的`enumerable`属性，称为“可枚举性”，**如果该属性为`false`，就表示某些操作会忽略当前属性。**
@@ -4092,9 +3973,8 @@ ES6 一共有 5 种方法可以遍历对象的属性
 - 最后遍历所有 `Symbol` 键，按照加入时间升序排列。
 
 ```js
-
 // 排序规则：首先是数值属性2和10，其次是字符串属性b和a，最后是 Symbol 属性。
-Reflect.ownKeys({[Symbol()]: 0, b: 0, 10: 0, 2: 0, a: 0})
+Reflect.ownKeys({ [Symbol()]: 0, b: 0, 10: 0, 2: 0, a: 0 })
 // ['2', '10', 'b', 'a', Symbol()]
 ```
 
@@ -4103,24 +3983,21 @@ Reflect.ownKeys({[Symbol()]: 0, b: 0, 10: 0, 2: 0, a: 0})
 `this`关键字总是指向函数所在的当前对象，`ES6` 新增了另一个类似的关键字`super`，**指向当前对象的原型对象**。
 
 ```js
-
 const proto = {
   foo: 'hello'
-};
+}
 
 const obj = {
   foo: 'world',
   find() {
-    return super.foo;
+    return super.foo
   }
-};
+}
 
-
-Object.setPrototypeOf(obj, proto);
+Object.setPrototypeOf(obj, proto)
 
 // 对象obj.find()方法之中，通过super.foo引用了原型对象proto的foo属性。
 obj.find() // "hello"
-
 ```
 
 注意：Object.setPrototypeOf()，为现有对象设置原型，返回一个新对象，接收两个参数：
@@ -4160,18 +4037,18 @@ const obj = {
 const proto = {
   x: 'hello',
   foo() {
-    console.log(this.x);
+    console.log(this.x)
   },
-};
+}
 
 const obj = {
   x: 'world',
   foo() {
-    super.foo();
+    super.foo()
   }
 }
 
-Object.setPrototypeOf(obj, proto);
+Object.setPrototypeOf(obj, proto)
 
 obj.foo() // "world"
 ```
@@ -4205,7 +4082,7 @@ const fooValue = fooInput ? fooInput.value : undefined
 这样的层层判断非常麻烦,ES2020 引入了“链判断运算符”（optional chaining operator）`?.`，简化上面的写法。
 
 ```js
-const firstName = message?.body?.user?.firstName || 'default';
+const firstName = message?.body?.user?.firstName || 'default'
 const fooValue = myForm.querySelector('input[name=foo]')?.value
 ```
 
@@ -4281,8 +4158,8 @@ a == null ? undefined : delete a.b
 
 ```js
 (a?.b).c
-  // 等价于
-  (a == null ? undefined : a.b).c
+// 等价于
+(a == null ? undefined : a.b).c
 ```
 
 **一般来说，使用`?.`运算符的场合，不应该使用圆括号。**
@@ -4318,9 +4195,9 @@ a?.b = c
 读取对象属性的时候，如果某个属性的值是`null`或`undefined`，有时候需要为它们指定默认值。常见做法是通过`||`运算符指定默认值。
 
 ```js
-const headerText = response.settings.headerText || 'Hello, world!';
-const animationDuration = response.settings.animationDuration || 300;
-const showSplashScreen = response.settings.showSplashScreen || true;
+const headerText = response.settings.headerText || 'Hello, world!'
+const animationDuration = response.settings.animationDuration || 300
+const showSplashScreen = response.settings.showSplashScreen || true
 ```
 
 开发者的原意是，只要属性的值为null或undefined，默认值就会生效，**但是属性的值如果为空字符串或false或0，默认值也会生效。**
@@ -4332,17 +4209,16 @@ const showSplashScreen = response.settings.showSplashScreen || true;
 这个运算符的一个目的，就是跟链判断运算符?.配合使用，为null或undefined的值设置默认值。
 
 ```js
-const animationDuration = response.settings?.animationDuration ?? 300;
+const animationDuration = response.settings?.animationDuration ?? 300
 ```
 
 这个运算符很适合判断函数参数是否赋值。
 
 ```js
 function Component(props) {
-  const enable = props.enabled ?? true;
+  const enable = props.enabled ?? true
   // …
 }
-
 ```
 
 ## 对象新增方法
@@ -4378,31 +4254,30 @@ Object.is({}, {})
 - `Object.is()`的`NaN`等于自身
 
 ```js
-+0 === -0 //true
-NaN === NaN // false
++0 === -0 // true
+Number.NaN === Number.NaN // false
 
 Object.is(+0, -0) // false
-Object.is(NaN, NaN) // true
+Object.is(Number.NaN, Number.NaN) // true
 ```
 
 类似功能实现：
 
 ```js
-
 // 实现 Object.is()功能
 Object.defineProperty(Object, 'is', {
-  value: function (x, y) {
+  value(x, y) {
     if (x === y) {
       // 针对+0 不等于 -0的情况
-      return x !== 0 || 1 / x === 1 / y;
+      return x !== 0 || 1 / x === 1 / y
     }
     // 针对NaN的情况
-    return x !== x && y !== y;
+    return x !== x && y !== y
   },
   configurable: true,
   enumerable: false,
   writable: true
-});
+})
 ```
 
 ### `Object.assign()`
@@ -4410,12 +4285,12 @@ Object.defineProperty(Object, 'is', {
 `Object.assign()`方法用于对象的合并，将源对象（`source`）的所有可枚举属性，复制到目标对象（`target`）。
 
 ```js
-const target = {a: 1};
+const target = { a: 1 }
 
-const source1 = {b: 2};
-const source2 = {c: 3};
+const source1 = { b: 2 }
+const source2 = { c: 3 }
 
-Object.assign(target, source1, source2);
+Object.assign(target, source1, source2)
 target // {a:1, b:2, c:3}
 ```
 
@@ -4424,19 +4299,19 @@ target // {a:1, b:2, c:3}
 注意，如果目标对象与源对象有同名属性，或多个源对象有同名属性，则后面的属性会覆盖前面的属性。
 
 ```js
-const target = {a: 1, b: 1};
+const target = { a: 1, b: 1 }
 
-const source1 = {b: 2, c: 2};
-const source2 = {c: 3};
+const source1 = { b: 2, c: 2 }
+const source2 = { c: 3 }
 
-Object.assign(target, source1, source2);
+Object.assign(target, source1, source2)
 target // {a:1, b:2, c:3}
 ```
 
 如果只有一个参数，Object.assign()会直接返回该参数。
 
 ```js
-const obj = {a: 1};
+const obj = { a: 1 }
 Object.assign(obj) === obj // true
 ```
 
@@ -4457,7 +4332,7 @@ Object.assign(null) // 报错
 和`null`不在首参数，就不会报错。
 
 ```js
-let obj = {a: 1};
+const obj = { a: 1 }
 Object.assign(obj, undefined) === obj // true
 Object.assign(obj, null) === obj // true
 ```
@@ -4467,21 +4342,20 @@ Object.assign(obj, null) === obj // true
 除了字符串会以数组形式，拷贝入目标对象，其他值都不会产生效果。
 
 ```js
-const v1 = 'abc';
-const v2 = true;
-const v3 = 10;
+const v1 = 'abc'
+const v2 = true
+const v3 = 10
 
-const obj = Object.assign({}, v1, v2, v3);
-console.log(obj); // { "0": "a", "1": "b", "2": "c" }
+const obj = Object.assign({}, v1, v2, v3)
+console.log(obj) // { "0": "a", "1": "b", "2": "c" }
 ```
 
 只有字符串合入目标对象（以字符数组的形式），数值和布尔值都会被忽略。**因为只有字符串的包装对象，会产生可枚举属性。**
 
 ```js
 Object(true) // {[[PrimitiveValue]]: true}
-Object(10)  //  {[[PrimitiveValue]]: 10}
+Object(10) //  {[[PrimitiveValue]]: 10}
 Object('abc') // {0: "a", 1: "b", 2: "c", length: 3, [[PrimitiveValue]]: "abc"}
-
 ```
 
 `布尔值`、`数值`、`字符串`分别转成对应的包装对象，可以看到它们的原始值都在包装对象的内部属性`[[PrimitiveValue]]`
@@ -4494,13 +4368,10 @@ Object.assign()拷贝的属性是有限制的
 - 不拷贝不可枚举的属性（enumerable: false）。
 
 ```js
-
-Object.assign({b: 'c'},
-  Object.defineProperty({}, 'invisible', {
-    enumerable: false,
-    value: 'hello'
-  })
-)
+Object.assign({ b: 'c' }, Object.defineProperty({}, 'invisible', {
+  enumerable: false,
+  value: 'hello'
+}))
 
 // Object.assign()要拷贝的对象只有一个不可枚举属性invisible，这个属性没有被拷贝进去。
 // { b: 'c' }
@@ -4509,7 +4380,7 @@ Object.assign({b: 'c'},
 属性名为 Symbol 值的属性，也会被Object.assign()拷贝。
 
 ```js
-Object.assign({a: 'b'}, {[Symbol('c')]: 'd'})
+Object.assign({ a: 'b' }, { [Symbol('c')]: 'd' })
 // { a: 'b', Symbol(c): 'd' }
 ```
 
@@ -4521,11 +4392,11 @@ Object.assign({a: 'b'}, {[Symbol('c')]: 'd'})
 **如果源对象某个属性的值是对象，那么目标对象拷贝得到的是这个`对象的引用`。**
 
 ```js
-const obj1 = {a: {b: 1}};
-const obj2 = Object.assign({}, obj1);
+const obj1 = { a: { b: 1 } }
+const obj2 = Object.assign({}, obj1)
 
 // obj1.a.b的任何变化，都会反映到obj2.a.b上面。
-obj1.a.b = 2;
+obj1.a.b = 2
 obj2.a.b // 2
 ```
 
@@ -4540,10 +4411,8 @@ obj2.a.b // 2
 `Object.assign()`可以用来处理数组，但是会把数组视为对象。
 
 ```js
-
 Object.assign([1, 2, 3], [4, 5])
 // [4, 5, 3]
-
 ```
 
 上面代码中，`Object.assign()`把数组视为属性名为 0、1、2 的对象，因此源数组的 0 号属性4覆盖了目标数组的 0 号属性1。
@@ -4557,8 +4426,8 @@ const source = {
   get foo() {
     return 1
   }
-};
-const target = {};
+}
+const target = {}
 
 Object.assign(target, source)
 // { foo: 1 }
@@ -4574,7 +4443,7 @@ Object.assign(target, source)
 // 将x属性和y属性添加到Point类的对象实例。
 class Point {
   constructor(x, y) {
-    Object.assign(this, {x, y});
+    Object.assign(this, { x, y })
   }
 }
 ```
@@ -4604,7 +4473,7 @@ SomeClass.prototype.anotherMethod = function () {
 
 ```js
 function clone(origin) {
-  return Object.assign({}, origin);
+  return Object.assign({}, origin)
 }
 ```
 
@@ -4614,9 +4483,9 @@ function clone(origin) {
 
 ```js
 function clone(origin) {
-  let originProto = Object.getPrototypeOf(origin);
+  const originProto = Object.getPrototypeOf(origin)
 
-  return Object.assign(Object.create(originProto), origin);
+  return Object.assign(Object.create(originProto), origin)
 }
 ```
 
@@ -4640,11 +4509,11 @@ const merge =
 const DEFAULTS = {
   logLevel: 0,
   outputFormat: 'html'
-};
+}
 
 function processContent(options) {
-  options = Object.assign({}, DEFAULTS, options);
-  console.log(options);
+  options = Object.assign({}, DEFAULTS, options)
+  console.log(options)
   // ...
 }
 ```
@@ -4666,14 +4535,13 @@ function processContent(options) {
 `ES2017` 引入了`Object.getOwnPropertyDescriptors()`方法，返回指定对象所有自身属性（非继承属性）的描述对象。
 
 ```js
-
 // 相关实现
 function getOwnPropertyDescriptors(obj) {
-  const result = {};
-  for (let key of Reflect.ownKeys(obj)) {
-    result[key] = Object.getOwnPropertyDescriptor(obj, key);
+  const result = {}
+  for (const key of Reflect.ownKeys(obj)) {
+    result[key] = Object.getOwnPropertyDescriptor(obj, key)
   }
-  return result;
+  return result
 }
 ```
 
@@ -4682,12 +4550,12 @@ function getOwnPropertyDescriptors(obj) {
 ```js
 const source = {
   set foo(value) {
-    console.log(value);
+    console.log(value)
   }
-};
+}
 
-const target1 = {};
-Object.assign(target1, source);
+const target1 = {}
+Object.assign(target1, source)
 
 Object.getOwnPropertyDescriptor(target1, 'foo')
 // { value: undefined,
@@ -4705,23 +4573,25 @@ Object.getOwnPropertyDescriptor(target1, 'foo')
 ```js
 const source = {
   set foo(value) {
-    console.log(value);
+    console.log(value)
   }
-};
+}
 
-const target2 = {};
-Object.defineProperties(target2, Object.getOwnPropertyDescriptors(source));
+const target2 = {}
+Object.defineProperties(target2, Object.getOwnPropertyDescriptors(source))
 Object.getOwnPropertyDescriptor(target2, 'foo')
 // { get: undefined,
 //   set: [Function: set foo],
 //   enumerable: true,
 //   configurable: true }
 
-
 // 抽象成函数
-const shallowMerge = (target, source) => Object.defineProperties(
-  target, Object.getOwnPropertyDescriptors(source)
-);
+function shallowMerge(target, source) {
+  return Object.defineProperties(
+    target,
+    Object.getOwnPropertyDescriptors(source)
+  )
+}
 ```
 
 ### __proto__属性，Object.setPrototypeOf()，Object.getPrototypeOf()
@@ -4757,39 +4627,37 @@ obj.method = function () { ...
 实现上，`__proto__`调用的是`Object.prototype.__proto__`
 
 ```js
-
 Object.defineProperty(Object.prototype, '__proto__', {
   get() {
-    let _thisObj = Object(this);
-    return Object.getPrototypeOf(_thisObj);
+    const _thisObj = Object(this)
+    return Object.getPrototypeOf(_thisObj)
   },
   set(proto) {
     if (this === undefined || this === null) {
-      throw new TypeError();
+      throw new TypeError()
     }
     if (!isObject(this)) {
-      return undefined;
+      return undefined
     }
     if (!isObject(proto)) {
-      return undefined;
+      return undefined
     }
-    let status = Reflect.setPrototypeOf(this, proto);
+    const status = Reflect.setPrototypeOf(this, proto)
     if (!status) {
-      throw new TypeError();
+      throw new TypeError()
     }
   },
-});
+})
 
 function isObject(value) {
-  return Object(value) === value;
+  return Object(value) === value
 }
-
 ```
 
 如果一个对象本身部署了`__proto__`属性，该属性的值就是对象的原型。
 
 ```js
-Object.getPrototypeOf({__proto__: null})
+Object.getPrototypeOf({ __proto__: null })
 // null
 ```
 
@@ -4803,24 +4671,24 @@ Object.getPrototypeOf({__proto__: null})
 Object.setPrototypeOf(object, prototype)
 
 // 用法
-const o = Object.setPrototypeOf({}, null);
+const o = Object.setPrototypeOf({}, null)
 
 // 等同于
 function setPrototypeOf(obj, proto) {
-  obj.__proto__ = proto;
-  return obj;
+  obj.__proto__ = proto
+  return obj
 }
 ```
 
 很经典的例子：
 
 ```js
-let proto = {};
-let obj = {x: 10};
-Object.setPrototypeOf(obj, proto);
+const proto = {}
+const obj = { x: 10 }
+Object.setPrototypeOf(obj, proto)
 
-proto.y = 20;
-proto.z = 40;
+proto.y = 20
+proto.z = 40
 
 obj.x // 10
 obj.y // 20
@@ -4853,19 +4721,19 @@ Object.setPrototypeOf(null, {})
 
 ```js
 // 基本使用
-Object.getPrototypeOf(obj);
+Object.getPrototypeOf(obj)
 
 // 原型设置和获取
 function User() {
   // ...
 }
 
-const user = new User();
+const user = new User()
 
 Object.getPrototypeOf(user) === User.prototype
 // true
 
-Object.setPrototypeOf(user, Object.prototype);
+Object.setPrototypeOf(user, Object.prototype)
 Object.getPrototypeOf(user) === User.prototype
 // false
 ```
@@ -4907,7 +4775,7 @@ Object.getPrototypeOf(undefined)
 ES5 引入了`Object.keys`方法，返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键名。
 
 ```js
-const obj = {name: 'bob', age: 24};
+const obj = { name: 'bob', age: 24 }
 Object.keys(obj)
 // ["name", "age"]
 ```
@@ -4917,7 +4785,7 @@ Object.keys(obj)
 `Object.values`方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（`enumerable`）属性的键值。
 
 ```js
-const obj = {name: 'bob', age: 24};
+const obj = { name: 'bob', age: 24 }
 Object.values(obj)
 // ["bob", 24]
 ```
@@ -4936,11 +4804,11 @@ Object.values(obj)
 `Object.entries`的基本用途是遍历对象的属性。
 
 ```js
-let obj = {one: 1, two: 2};
-for (let [k, v] of Object.entries(obj)) {
+const obj = { one: 1, two: 2 }
+for (const [k, v] of Object.entries(obj)) {
   console.log(
     `${JSON.stringify(k)}: ${JSON.stringify(v)}`
-  );
+  )
 }
 // "one": 1
 // "two": 2
@@ -4949,8 +4817,8 @@ for (let [k, v] of Object.entries(obj)) {
 `Object.entries`方法的另一个用处是，将对象转为真正的`Map`结构。
 
 ```js
-const obj = {name: 'bob', age: 24};
-const map = new Map(Object.entries(obj));
+const obj = { name: 'bob', age: 24 }
+const map = new Map(Object.entries(obj))
 map // Map { name: "bob", age: 24 }
 ```
 
@@ -4958,7 +4826,7 @@ map // Map { name: "bob", age: 24 }
 
 ```js
 // Generator函数的版本
-function* entries(obj) {
+function entries(obj) {
   for (let key of Object.keys(obj)) {
     yield [key, obj[key]];
   }
@@ -4993,13 +4861,13 @@ Object.fromEntries([
 const entries = new Map([
   ['name', 'bob'],
   ['age', 24]
-]);
+])
 
 Object.fromEntries(entries)
 // { name: "bob", age: 24 }
 
 // 例二
-const map = new Map().set('foo', true).set('bar', false);
+const map = new Map().set('foo', true).set('bar', false)
 Object.fromEntries(map)
 // { foo: true, bar: false }
 ```
@@ -5007,9 +4875,8 @@ Object.fromEntries(map)
 该方法的一个用处是配合`URLSearchParams`对象，将查询字符串转为对象。
 
 ```js
-
 // url模块中获取URLSearchParams
-const {URLSearchParams} = require('url');
+const { URLSearchParams } = require('node:url')
 Object.fromEntries(new URLSearchParams('name=bob&age=24'))
 // { name: "bob", age: 24 }
 ```

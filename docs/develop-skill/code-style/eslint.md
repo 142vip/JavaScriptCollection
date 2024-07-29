@@ -22,11 +22,7 @@ pnpm i eslint -D
 ./node_modules/.bin/eslint --init
 ```
 
-会自动生成`.eslintrc.js`文件，例如：
-
-@[code js](~/.eslintrc.js)
-
-其中`rules`对象可以自定义规则
+会自动生成`.eslintrc.js`文件，其中`rules`对象可以自定义规则
 
 ### 配置eslint
 

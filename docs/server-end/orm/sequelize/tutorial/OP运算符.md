@@ -8,7 +8,7 @@ permalink: /server-end/orm/sequelize/op.html
 ## 使用
 
 ```js
-const {Op} = require("sequelize");
+const { Op } = require('sequelize')
 ```
 
 ## API关键字
@@ -16,16 +16,16 @@ const {Op} = require("sequelize");
 `Sequelize`框架提供了`Op`操作符来简化一些查询逻辑，例如
 
 ```js
-const {Op} = require("sequelize");
+const { Op } = require('sequelize')
 
 // 模型查询
 User.findAll({
   where: {
     // 且运算(a = 5) AND (b = 6)
-    [Op.and]: [{a: 5}, {b: 6}],
+    [Op.and]: [{ a: 5 }, { b: 6 }],
 
-    // 或运算 (a = 5) OR (b = 6)           
-    [Op.or]: [{a: 5}, {b: 6}],
+    // 或运算 (a = 5) OR (b = 6)
+    [Op.or]: [{ a: 5 }, { b: 6 }],
 
     // 等于
     [Op.eq]: 3,
@@ -54,7 +54,7 @@ User.findAll({
     // 不在范围内
     [Op.notBetween]: [11, 15],
 
-    // 
+    //
     [Op.all]: sequelize.literal('SELECT 1'), // > ALL (SELECT 1)
 
     // 在数组范围内
@@ -77,7 +77,7 @@ User.findAll({
     // 只支持PG数据库，模糊查询，以什么结束，和上面相反
     [Op.notILike]: '%142vip',
   }
-});
+})
 ```
 
 更多丰富的API关键字定义可以参考[源码类型声明](https://github.com/sequelize/sequelize/blob/main/packages/core/src/operators.ts)
@@ -89,31 +89,31 @@ User.findAll({
 > 仅限 Postgres数据库 的范围类型
 
 ```js
-const {Op} = require("sequelize");
+const { Op } = require('sequelize')
 
 // 仅限 Postgres数据库 的范围类型
 User.findAll({
   where: {
-    // @> '2'::integer  
+    // @> '2'::integer
     [Op.contains]: 2,
-    // @> [1, 2)      
+    // @> [1, 2)
     [Op.contains]: [1, 2],
-    // <@ [1, 2)        
+    // <@ [1, 2)
     [Op.contained]: [1, 2],
-    // && [1, 2)             
+    // && [1, 2)
     [Op.overlap]: [1, 2],
-    // -|- [1, 2)               
+    // -|- [1, 2)
     [Op.adjacent]: [1, 2],
-    // << [1, 2)             
+    // << [1, 2)
     [Op.strictLeft]: [1, 2],
-    // >> [1, 2)             
+    // >> [1, 2)
     [Op.strictRight]: [1, 2],
-    // &< [1, 2)       
+    // &< [1, 2)
     [Op.noExtendRight]: [1, 2],
-    // &> [1, 2)     
+    // &> [1, 2)
     [Op.noExtendLeft]: [1, 2],
   }
-});
+})
 ```
 
 详细信息，参考[Postgres的范围类型](https://sequelize.org/docs/v6/other-topics/other-data-types/#ranges-postgresql-only)
@@ -123,7 +123,7 @@ User.findAll({
 可以利用`Op.or`运算符实现查询条件的`或运算`，例如：
 
 ```js
-const {Op} = require("sequelize");
+const { Op } = require('sequelize')
 
 // 查询age小于18或者age等于30的用户
 User.findAll({
@@ -135,7 +135,7 @@ User.findAll({
       }
     },
   }
-});
+})
 ```
 
 ### 且条件
@@ -143,14 +143,14 @@ User.findAll({
 可以利用`Op.and`运算符实现查询条件的`且运算`，例如：
 
 ```js
-const {Op} = require("sequelize");
+const { Op } = require('sequelize')
 
 // 查询name为`142vip.cn`并且age为18的用户信息
 User.findAll({
   where: {
     [Op.and]: [
-      {name: '142vip.cn'},
-      {age: 18}
+      { name: '142vip.cn' },
+      { age: 18 }
     ]
   }
 })
@@ -161,7 +161,7 @@ User.findAll({
 对于查询条件中可能需要的数字比较查询，`Op`也提供了丰富的`API`运算符，例如：
 
 ```js
-const {Op} = require("sequelize");
+const { Op } = require('sequelize')
 
 // 查询age大于18的用户信息
 User.findAll({
@@ -177,7 +177,7 @@ User.findAll({
 还可以实现一些更为灵活的`比较查询`，相关`Op`运算符如下：
 
 ```js
-const {Op} = require("sequelize");
+const { Op } = require('sequelize')
 
 // 模糊查询 支持或运算
 User.findAll({
@@ -201,7 +201,7 @@ User.findAll({
 可以利用`Op.like`运算符实现模糊查询，例如：
 
 ```js
-const {Op} = require("sequelize");
+const { Op } = require('sequelize')
 
 // 对name字段进行模糊查询
 User.findAll({
@@ -216,7 +216,7 @@ User.findAll({
 还可以实现一些更为灵活的模糊查询，相关`Op`运算符如下：
 
 ```js
-const {Op} = require("sequelize");
+const { Op } = require('sequelize')
 
 User.findAll({
   where: {
@@ -245,14 +245,14 @@ User.findAll({
 在查询条件中，如果需要进行对一些字段做范围查询，Op也提供了类似 `Op.in` 、 `Op.between` 等运算符，例如：
 
 ```js
-const {Op} = require("sequelize");
+const { Op } = require('sequelize')
 
 // 查询id等于1或2或3的用户信息
 User.findAll({
   where: {
     id: [1, 2, 3]
   }
-});
+})
 ```
 
 上面的代码实现的是基于`id`的条件查询，需要`id`字段命中数组中的值，转换为`SQL`原生语句等价于：
@@ -264,7 +264,7 @@ SELECT * FROM tbl_user WHERE id" IN (1, 2, 3);
 除了在数组范围进行查询，支持 `between` 关键字进行查询，例如：
 
 ```js
-const {Op} = require("sequelize");
+const { Op } = require('sequelize')
 
 // 丰富的API运算符
 User.findAll({

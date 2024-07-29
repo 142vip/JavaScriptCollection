@@ -16,12 +16,12 @@ export const UserModel = {
   gender: {
     type: DataTypes.BOOLEAN,
     // 默认值
-    defaultValue: 1
+    defaultValue: 1,
   },
   /**
    * 出生日期
    */
   birth: {
-    type: DataTypes.DATE
-  }
+    type: DataTypes.DATE,
+  },
 }

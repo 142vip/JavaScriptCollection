@@ -25,10 +25,9 @@ permalink: /solo-algorithm/sword-point/print-list.html
 单链表比较直接的想法就是：顺讯访问、按照链表结点循环即可，比较好的模型：
 
 ```js
-
-while(head!=null){
-    // 结点向后
-    head=head.next
+while (head != null) {
+  // 结点向后
+  head = head.next
 }
 ```
 

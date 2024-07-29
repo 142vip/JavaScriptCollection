@@ -24,7 +24,7 @@ yum install docker-ce -y
 ### 后台自启动
 
 ```bash
-systemctl enable docker 
+systemctl enable docker
 ```
 
 ### 服务控制
@@ -47,7 +47,7 @@ service docker restart
 systemctl start docker
 
 ## 停止docker
-systemctl stop docker 
+systemctl stop docker
 
 ## 重启docker
 systemctl restart docker
@@ -128,7 +128,7 @@ docker image prune
 docker run xxx
 
 ## 列出正在运行的容器
-docker ps 
+docker ps
 
 ## 列出所有容器
 docker ps -a
@@ -152,7 +152,6 @@ docker rm 容器ID
 docker rm -f ${docker ps -a -q}
 docker ps -a -q | xargs docker rm
 
-
 ## 查看容器日志
 docker logs xxxx
 
@@ -161,8 +160,6 @@ docker top xxxx
 
 ## 查看容器详细信息
 docker inspect 容器ID
-
-
 
 ```
 

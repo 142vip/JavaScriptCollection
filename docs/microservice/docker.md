@@ -43,7 +43,7 @@ brew install --cask docker
 - 检查系统版本
 
 ```bash
-uname -r 
+uname -r
 ```
 
 - 移除旧Docker版本
@@ -111,7 +111,7 @@ sudo rm -rf /var/lib/docker
 systemctl start docker
 
 ## 停止docker
-systemctl stop docker 
+systemctl stop docker
 
 ## 重启docker
 systemctl restart docker
@@ -192,7 +192,7 @@ docker image prune
 docker run xxx
 
 ## 列出正在运行的容器
-docker ps 
+docker ps
 
 ## 列出所有容器
 docker ps -a
@@ -275,7 +275,7 @@ docker run -it xxxx
 
 ```bash
 ## 复制到容器中
-docker cp 当前主机待保存的路径 容器ID:容器中文件路径 
+docker cp 当前主机待保存的路径 容器ID:容器中文件路径
 
 ## 将容器中的文件复制到容器外
 docker cp 容器ID:容器中文件路径 当前主机待保存的路径

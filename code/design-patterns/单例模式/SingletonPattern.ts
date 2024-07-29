@@ -31,7 +31,6 @@ namespace LazySingleton {
   console.log(lazyInstance1 === lazyInstance2) // 输出: true
 }
 
-
 /**
  * 饿汉-单例
  */

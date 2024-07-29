@@ -7,8 +7,8 @@ const obj = {
   test: 'xxx',
   // 浅拷贝中，这一层只能拷贝引用
   msg: {
-    name: 'xxx'
-  }
+    name: 'xxx',
+  },
 }
 
 const obj_test = {
@@ -27,7 +27,5 @@ obj_test.msg.name = '2332'
 // 但是原来的obj对象中的msg属性对应的值也会变
 console.log(obj)
 
-
 // ES6中实现浅拷贝的语法糖  效果和上面一样
 Object.assign(obj_test, obj)
-

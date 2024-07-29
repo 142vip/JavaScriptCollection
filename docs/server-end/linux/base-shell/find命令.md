@@ -2,7 +2,6 @@
 title: find命令
 permalink: /server-end/linux/base-install/find.html
 ---
-  
 
 # find命令
 

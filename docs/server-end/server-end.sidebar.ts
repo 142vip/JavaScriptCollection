@@ -1,11 +1,11 @@
 export const ServerEndSidebar = [
   {
     text: '基础知识',
-    link: 'base/restful.html'
+    link: 'base/restful.html',
   },
   {
     text: 'Node.js',
-    link: 'node-learn/npm-package.md'
+    link: 'node-learn/npm-package.md',
   },
   {
     text: 'ECMAScript版本',
@@ -13,13 +13,13 @@ export const ServerEndSidebar = [
     children: [
       {
         text: 'ES5-2009',
-        link: 'ES5-2009.md'
+        link: 'ES5-2009.md',
       },
 
       {
         text: 'ES6-2015',
-        link: 'ES6-2015.md'
-      }
+        link: 'ES6-2015.md',
+      },
       // {
       //   text: 'ES7-2016',
       //   link: 'ES7-2016.md'
@@ -28,11 +28,11 @@ export const ServerEndSidebar = [
       //   text: 'ES8-2017',
       //   link: 'ES8-2017.md'
       // }
-    ]
+    ],
   },
   {
     text: 'TypeScript',
-    link: 'typescript/quick-start.html'
+    link: 'typescript/quick-start.html',
   },
   {
     text: 'ORM框架',
@@ -41,13 +41,13 @@ export const ServerEndSidebar = [
     children: [
       {
         text: 'Sequelize',
-        link: 'sequelize/quick-start.html'
+        link: 'sequelize/quick-start.html',
       },
       {
         text: 'TypeOrm',
-        link: 'typeorm/quick-start.html'
-      }
-    ]
+        link: 'typeorm/quick-start.html',
+      },
+    ],
   },
   {
     text: '后端框架',
@@ -56,16 +56,16 @@ export const ServerEndSidebar = [
     children: [
       {
         text: 'Express',
-        link: 'express-tutorial/quick-start.html'
+        link: 'express-tutorial/quick-start.html',
       },
       {
         text: 'Koa',
-        link: 'koa-tutorial/base-introduce.html'
+        link: 'koa-tutorial/base-introduce.html',
       },
       {
         text: 'Egg.js',
-        link: 'egg-tutorial/introduce.html'
-      }
+        link: 'egg-tutorial/introduce.html',
+      },
       // {
       //   text: 'Nest.js',
       //   link: 'nest-learn.md'
@@ -74,7 +74,7 @@ export const ServerEndSidebar = [
       //   text: 'Midway.js',
       //   link: 'midway-learn.md'
       // }
-    ]
+    ],
   },
   {
     text: '数据库',
@@ -83,25 +83,25 @@ export const ServerEndSidebar = [
     children: [
       {
         text: 'Redis',
-        link: 'redis/base-install.html'
+        link: 'redis/base-install.html',
       },
       {
         text: 'MySQL',
-        link: 'mysql/base-install.html'
+        link: 'mysql/base-install.html',
       },
       {
         text: 'MongoDB',
-        link: 'mongo/base-install.html'
-      }
-    ]
+        link: 'mongo/base-install.html',
+      },
+    ],
   },
   {
     text: '设计模式',
-    link: 'design-patterns/Readme.md'
+    link: 'design-patterns/Readme.md',
   },
   {
     text: 'Linux系统',
-    link: 'linux/base-install.md'
+    link: 'linux/base-install.md',
   },
   {
     text: '服务部署',
@@ -110,21 +110,21 @@ export const ServerEndSidebar = [
     children: [
       {
         text: '基础安装',
-        link: 'install.md'
+        link: 'install.md',
       },
       {
         text: 'PM2部署',
-        link: 'pm2.md'
+        link: 'pm2.md',
       },
       {
         text: 'Docker部署',
-        link: 'docker.md'
+        link: 'docker.md',
       },
       {
         text: '集群部署',
-        link: 'docker-compose.md'
-      }
-    ]
+        link: 'docker-compose.md',
+      },
+    ],
   },
 
   {
@@ -134,24 +134,24 @@ export const ServerEndSidebar = [
     children: [
       {
         text: 'SSL证书配置',
-        link: 'ssl-install.md'
+        link: 'ssl-install.md',
       },
       {
         text: '镜像托管',
-        link: 'store-image.md'
+        link: 'store-image.md',
       },
       {
         text: '二级域名',
-        link: 'web-domain.md'
+        link: 'web-domain.md',
       },
       {
         text: '反向代理',
-        link: 'nginx-proxy.md'
+        link: 'nginx-proxy.md',
       },
       {
         text: '配置gzip',
-        link: 'nginx-gzip.md'
-      }
-    ]
-  }
+        link: 'nginx-gzip.md',
+      },
+    ],
+  },
 ]

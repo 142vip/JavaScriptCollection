@@ -2,7 +2,6 @@
 title: expr命令
 permalink: /server-end/linux/base-install/expr.html
 ---
-  
 
 # expr命令
 
@@ -62,7 +61,7 @@ expr 12 \* 2
 
 ```shell
 echo "Enter two numbers"
-read x 
+read x
 read y
 sum=`expr $x + $y`
 echo "Sum = $sum"

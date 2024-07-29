@@ -3,7 +3,6 @@ title: 软件安装
 permalink: /develop-skill/software-install.html
 ---
 
-
 ## IDEA
 
 在官网下载官方依赖，选择符合系统的版本，然后安装

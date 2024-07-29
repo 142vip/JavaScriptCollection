@@ -2,7 +2,6 @@
 title: tr命令
 permalink: /server-end/linux/base-install/tr.html
 ---
-  
 
 # tr命令
 
@@ -77,7 +76,7 @@ cat file.txt | tr [:lower:] [:upper:]
 
 ```shell
 cat file.txt | tr [:space:] "\t"
-# Hello   World   
+# Hello   World
 ```
 
 删除所有`o`字符。

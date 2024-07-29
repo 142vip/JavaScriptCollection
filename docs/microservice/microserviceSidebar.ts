@@ -4,13 +4,13 @@ export const MicroserviceSidebar = [
     children: [
       {
         text: 'grpc',
-        link: 'grpc.md'
+        link: 'grpc.md',
       },
       {
         text: 'node-grpc',
-        link: 'node-grpc.md'
-      }
-    ]
+        link: 'node-grpc.md',
+      },
+    ],
   },
   {
     text: '服务注册|发现',
@@ -18,21 +18,21 @@ export const MicroserviceSidebar = [
     children: [
       {
         text: 'Apollo',
-        link: 'apollo.md'
+        link: 'apollo.md',
       },
       {
         text: 'Consul',
-        link: 'consul.md'
+        link: 'consul.md',
       },
       {
         text: 'Nacos',
-        link: 'nacos.md'
-      }
-    ]
+        link: 'nacos.md',
+      },
+    ],
   },
   {
     text: '网关',
-    link: 'gateway.md'
+    link: 'gateway.md',
   },
   {
     text: 'ELK',
@@ -40,39 +40,39 @@ export const MicroserviceSidebar = [
     children: [
       {
         text: 'Elasticsearch',
-        link: 'elasticsearch.md'
+        link: 'elasticsearch.md',
       },
       {
         text: 'Kibana',
-        link: 'kibana.md'
+        link: 'kibana.md',
       },
       {
         text: 'Logstash',
-        link: 'logstash.md'
+        link: 'logstash.md',
       },
       {
         text: 'Filebeat',
-        link: 'filebeat.md'
-      }
-    ]
+        link: 'filebeat.md',
+      },
+    ],
   },
   {
     text: '消息中间件',
-    prefix: 'mq',
+    // prefix: 'mq',
     children: [
       {
         text: 'RabbitMQ',
-        link: 'rabbitmq.md'
+        link: 'mq/rabbitmq',
       },
       {
         text: 'Kafka',
-        link: 'kafka.md'
+        link: 'mq/kafka.md',
       },
       {
         text: 'RocketMQ',
-        link: 'rocketmq.md'
-      }
-    ]
+        link: 'mq/rocketmq.md',
+      },
+    ],
   },
   {
     text: '容器相关',
@@ -80,19 +80,20 @@ export const MicroserviceSidebar = [
     children: [
       {
         text: 'Dockerfile',
-        link: 'dockerfile.md'
+        link: 'dockerfile.md',
       },
       {
         text: 'docker',
-        link: 'docker.md'
+        link: 'docker.md',
       },
       {
         text: 'docker-compose',
-        link: 'docker-compose.md'
+        link: 'docker-compose.md',
       },
       {
         text: 'k8s',
-        link: 'k8s.md'
-      }
-    ]
-  }]
+        link: 'k8s.md',
+      },
+    ],
+  },
+]

@@ -1,8 +1,8 @@
-import {AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO} from "./constant";
-import {hopeTheme} from "vuepress-theme-hope";
-import {i18n} from "./i18n";
-import {navbar} from "./navbar";
-import {sidebar} from "./sidebar";
+import { hopeTheme } from 'vuepress-theme-hope'
+import { AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO } from './constant'
+import { i18n } from './i18n'
+import navbar from './navbar'
+import sidebar from './sidebar'
 
 /**
  * 主题相关配置
@@ -13,7 +13,7 @@ export const themeConfig = {
     locales: i18n,
     // navbarIcon: false,
     // 禁用深色模式
-    darkmode: "disable",
+    darkmode: 'disable',
     // 支持全屏
     // fullscreen: true,
     // 纯净模式
@@ -21,23 +21,23 @@ export const themeConfig = {
     print: false, // 打印按钮
     hostname: 'https://142vip.cn',
     author: AUTHOR_INFO,
-    favicon: "/favicon.ico",
+    favicon: '/favicon.ico',
     // logo: "/assets/408_logo.png",
-    navbar: navbar,
+    navbar,
     // 导航栏布局
     navbarLayout: {
-      start: ["Brand"],
-      center: ["Links"],
-      end: ["Search", "Language", "Repo", "Outlook",]
+      start: ['Brand'],
+      center: ['Links'],
+      end: ['Search', 'Language', 'Repo', 'Outlook'],
     },
-    sidebar: sidebar,
+    sidebar,
 
-    pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
+    pageInfo: ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime'],
     // 主题布局选项
-    docsRepo: "https://github.com/142vip/JavaScriptCollection",
-    docsDir: "docs",
-    docsBranch: "main",
-    repo: "https://github.com/142vip/JavaScriptCollection.git",
+    docsRepo: 'https://github.com/142vip/JavaScriptCollection',
+    docsDir: 'docs',
+    docsBranch: 'main',
+    repo: 'https://github.com/142vip/JavaScriptCollection.git',
 
     // 博客配置
     // blog: {
@@ -66,7 +66,7 @@ export const themeConfig = {
       //   site:'JavaScriptCollection',
       // },
       readingTime: {
-        wordPerMinute: 100
+        wordPerMinute: 100,
       },
       copyright: false,
       // 开启博客功能
@@ -85,19 +85,20 @@ export const themeConfig = {
         // 启用图片大小
         imgSize: true,
         playground: {
-          presets: ["ts", "vue"],
+          presets: ['ts', 'vue'],
         },
         // revealjs: ["highlight", "math", "search", "notes", "zoom"],
         stylize: [
           {
-            matcher: "Recommended",
-            replacer: ({tag}) => {
-              if (tag === "em")
+            matcher: 'Recommended',
+            replacer: ({ tag }) => {
+              if (tag === 'em') {
                 return {
-                  tag: "Badge",
-                  attrs: {type: "tip"},
-                  content: "Recommended",
-                };
+                  tag: 'Badge',
+                  attrs: { type: 'tip' },
+                  content: 'Recommended',
+                }
+              }
             },
           },
         ],
@@ -116,21 +117,21 @@ export const themeConfig = {
         align: true,
       },
       copyCode: {
-        showInMobile: true
+        showInMobile: true,
       },
       // 不自动生成readme目录
       // autoCatalog: false,
       // 参考：https://theme-hope.vuejs.press/zh/guide/markdown/components.html
       components: {
         components: [
-          "Badge",
-          "BiliBili",
-          "CodePen",
-          "PDF",
-          "StackBlitz",
-          "VidStack",
-          "Share",
-          "XiGua"
+          'Badge',
+          'BiliBili',
+          'CodePen',
+          'PDF',
+          'StackBlitz',
+          'VidStack',
+          'Share',
+          'XiGua',
         ],
         rootComponents: {
           // 公告 参考：https://plugin-components.vuejs.press/zh/guide/notice.html
@@ -156,28 +157,30 @@ export const themeConfig = {
           // ],
         },
       },
-      searchPro:{
+      searchPro: {
         // 索引全部内容
         indexContent: true,
         // 为分类和标签添加索引
         customFields: [
           {
             getter: (page: any) => page.frontmatter.category,
-            formatter: "分类：$content",
+            formatter: '分类：$content',
           },
           {
-            getter: (page) => page.frontmatter.tag,
-            formatter: "标签：$content",
+            getter: page => page.frontmatter.tag,
+            formatter: '标签：$content',
           },
         ],
       },
+      // 代码高亮：https://theme-hope.vuejs.press/zh/guide/feature/code-block.html
       shiki: {
+        langs: ['ts', 'js', 'json', 'vue', 'json5', 'bash', 'diff', 'c', 'c++', 'dockerfile', 'nginx', 'proto'],
         // 你想要使用的主题
         themes: {
-          light: "one-light",
-          dark: "one-dark-pro",
+          light: 'one-light',
+          dark: 'one-dark-pro',
         },
       },
-    }
-  })
+    },
+  }),
 }

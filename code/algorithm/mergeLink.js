@@ -16,7 +16,8 @@ function Merge1(pHead1, pHead2) {
       // 左边小
       kk.next = p1
       p1 = p1.next
-    } else {
+    }
+    else {
       kk.next = p2
       p2 = p2.next
     }
@@ -44,7 +45,8 @@ function Merge(pHead1, pHead2) {
     if (pHead1.val <= pHead2.val) {
       cur.next = pHead1
       pHead1 = pHead1.next
-    } else {
+    }
+    else {
       cur.next = pHead2
       pHead2 = pHead2.next
     }
@@ -65,5 +67,5 @@ last.next.next = new ListNode(6)
 console.log('last:', last)
 console.log(Merge(pre, last))
 module.exports = {
-  Merge
+  Merge,
 }

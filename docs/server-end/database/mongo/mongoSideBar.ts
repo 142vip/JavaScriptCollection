@@ -4,8 +4,8 @@ export const MongoSideBar = [
     children: [
       {
         text: '基础安装',
-        link: '基础安装.md'
-      }
-    ]
-  }
+        link: '基础安装.md',
+      },
+    ],
+  },
 ]

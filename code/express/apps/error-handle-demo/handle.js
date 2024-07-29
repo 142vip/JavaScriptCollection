@@ -1,20 +1,21 @@
 const express = require('express')
+
 const app = express()
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
+
 const port = 4000
 app.use(bodyParser.urlencoded({
-  extended: true
+  extended: true,
 }))
 app.use(bodyParser.json())
 app.use(methodOverride())
-
 
 /**
  * 定义一些路由逻辑
  */
 
-app.get('/get', async(req, res) => {
+app.get('/get', async (req, res) => {
   console.log('处理业务逻辑')
 })
 

@@ -19,7 +19,7 @@ permalink: /server-end/orm/sequelize/db-curd.html
 // 插入1条数据
 await User.bulkCreate({
   name: '142vip.cn'
-},);
+},)
 ```
 
 ### 批量
@@ -30,9 +30,9 @@ Sequelize框架提供`bulkCreate()`方法来支持数据批量操作，`bulkCrea
 ```js
 // 批量插入2条数据
 await User.bulkCreate([
-  {name: '142vip.cn'},
-  {name: '微信公众号：储凡'}
-]);
+  { name: '142vip.cn' },
+  { name: '微信公众号：储凡' }
+])
 ```
 
 ## 更新数据
@@ -40,24 +40,24 @@ await User.bulkCreate([
 ### 按添加更新
 
 ```js
-// 
+//
 await User.update({
   age: 18
 }, {
   where: {
-    name: "142vip.cn"
+    name: '142vip.cn'
   }
-});
+})
 ```
 
 ### 递增&递减
 
 ```js
 // 递增，对满足条件的数组age字段加5
-await User.increment({age: 5}, {where: {id: 1}}) // Will increase age to 
+await User.increment({ age: 5 }, { where: { id: 1 } }) // Will increase age to
 
 // 递减，对满足条件的数组age字段减5
-await User.increment({age: -5}, {where: {id: 1}}) 
+await User.increment({ age: -5 }, { where: { id: 1 } })
 ```
 
 ## 删除数据
@@ -68,9 +68,9 @@ await User.increment({age: -5}, {where: {id: 1}})
 // 按条件删除用户
 await User.destroy({
   where: {
-    name: "微信公众号：储凡"
+    name: '微信公众号：储凡'
   }
-});
+})
 ```
 
 如果需要删除表中所有的数据，可以利用`truncate`参数，例如：
@@ -79,7 +79,7 @@ await User.destroy({
 // 删除表中所有数据
 await User.destroy({
   truncate: true
-});
+})
 ```
 
 ## 查询操作

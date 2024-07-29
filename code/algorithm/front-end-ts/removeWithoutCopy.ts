@@ -2,7 +2,7 @@
  * 移除数组 arr 中的所有值与 item 相等的元素
  * - 直接在给定的 arr 数组上进行操作，并将结果返回
  */
-function removeWithoutCopy(arr:number[], item:number) {
+function removeWithoutCopy(arr: number[], item: number) {
   // const result= arr.filter(value=>value!==item)
   // // 输出
   // return result;

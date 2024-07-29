@@ -3,11 +3,11 @@
  */
 namespace IspDemo {
   interface Animal {
-    eat(): void;
+    eat(): void
   }
 
   interface Flyable {
-    fly(): void;
+    fly(): void
   }
 
   class Bird implements Animal, Flyable {

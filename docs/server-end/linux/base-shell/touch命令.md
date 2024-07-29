@@ -2,7 +2,6 @@
 title: touch命令
 permalink: /server-end/linux/base-install/touch.html
 ---
-  
 
 # touch命令
 

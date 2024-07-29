@@ -15,7 +15,7 @@ permalink: /battle-interview/node.html
 - `阻塞`：在等待调用结果时，线程挂起了，不往下执行
 - `非阻塞`：在等待调用结果时，当前线程继续往下执行
 
-![](../images/event-loop-info.png)
+![](images/event-loop-info.png)
 
 `Nodejs`事件循环中细分为这六个阶段，依次如下：
 
@@ -30,7 +30,7 @@ permalink: /battle-interview/node.html
 对于需要立即执行的回调事件可以通过该方法将事件放置到微队列的起始位置。** 例如：
 
 ```js
-Promise.resolve().then(function () {
+Promise.resolve().then(() => {
   console.log('promise1')
 })
 process.nextTick(() => {
@@ -50,7 +50,7 @@ process.nextTick(() => {
 // nextTick=>nextTick=>nextTick=>timer1=>promise1
 ```
 
-![](../images/event-loop.png)
+![](images/event-loop.png)
 
 开发需要关系的阶段
 与我们开发相关的三个阶段分别是 Timers Poll Check
@@ -269,11 +269,11 @@ let arr = [1, 1, 2, 3, 4, 5, 5, 6];
 
 // 1. indexOf
 function newArr(array) {
-  //一个新的数组 
+  //一个新的数组
   var ar = [];
-  //遍历当前数组 
+  //遍历当前数组
   for (var i = 0; i < array.length; i++) {
-    //如果临时数组里没有当前数组的当前值，则把当前值push到新数组里面 
+    //如果临时数组里没有当前数组的当前值，则把当前值push到新数组里面
     // 判断是否包含，返回角标
     if (ar.indexOf(array[i]) == -1) {
       ar.push(array[i])

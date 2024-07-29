@@ -11,7 +11,7 @@ function count(str) {
     const value = arr[index]
     let count = 0
     if (value !== ' ') {
-      originArr.forEach(item => {
+      originArr.forEach((item) => {
         if (item === value) {
           count++
         }

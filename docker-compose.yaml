@@ -1,7 +1,7 @@
-##
-## 服务名： JavaScriptCollection
-## IP范围： 172.30.0.200
-##
+# #
+# 服务名： JavaScriptCollection
+# IP范围： 172.30.0.200
+# #
 version: '2'
 services:
   JavaScriptCollection:
@@ -9,14 +9,14 @@ services:
     container_name: JavaScriptCollection
     hostname: JavaScriptCollection
     ports:
-      - "7100:80"
+      - '7100:80'
     networks:
       net:
         ipv4_address: 172.30.0.200
 
-## 创建桥接网络
+# 创建桥接网络
 networks:
-  ## 桥接网络名称，配合文件前缀，最后为dev_test_env_net  参考：https://www.jianshu.com/p/d70c61d45364
+  # 桥接网络名称，配合文件前缀，最后为dev_test_env_net  参考：https://www.jianshu.com/p/d70c61d45364
   net:
     driver: bridge
     # external: true
@@ -24,5 +24,5 @@ networks:
       driver: default
       config:
         - subnet: 172.30.0.0/24
-          ## 网关
+          # 网关
           gateway: 172.30.0.1

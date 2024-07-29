@@ -2,7 +2,6 @@
 title: fmt命令
 permalink: /server-end/linux/base-install/fmt.html
 ---
-  
 
 # fmt命令
 
@@ -36,7 +35,7 @@ cat file.txt
 # everyone.
 # Have
 # a
-# nice 
+# nice
 # day.
 
 fmt file.txt
@@ -51,7 +50,7 @@ cat file.txt
 # everyone.
 # Have
 # a
-# nice 
+# nice
 # day.
 
 fmt -w 10 file.txt

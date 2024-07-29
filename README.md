@@ -1,6 +1,6 @@
 <div align="center">
   <img
-    alt="JavaScriptCollection"  
+    alt="JavaScriptCollection"
     src="https://cdn.statically.io/gh/142vip/cdn_service@main/doc_book/jsc/jsc_logo.png"
     style="text-align: center;border-radius: 5px"
   >

@@ -23,7 +23,7 @@ permalink: /solo-algorithm/sword-point/cut-rope.html
 #返回值：
 18
 #说明：
-8 = 2 +3 +3 , 2*3*3=18 
+8 = 2 +3 +3 , 2*3*3=18
 ```
 
 ## 刷题思路

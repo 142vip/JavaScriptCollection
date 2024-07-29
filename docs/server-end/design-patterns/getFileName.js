@@ -1,6 +1,6 @@
-const fs = require('fs')
-const path = require('path')
-
+const fs = require('node:fs')
+const path = require('node:path')
+const process = require('node:process')
 
 // // 快速生成目录
 // (() => {
@@ -21,7 +21,6 @@ const path = require('path')
 //       })))
 // })()
 
-
 /**
  * 批量生成URL链接
  */
@@ -32,7 +31,7 @@ function processMarkdownFiles() {
   console.log(currentPath)
   files
     // .filter(file => file.includes('test命令.md'))
-    .forEach(file => {
+    .forEach((file) => {
       console.log(file)
       if (path.extname(file) === '.md') {
         const filePath = path.join(currentPath, file)

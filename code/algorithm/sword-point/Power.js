@@ -14,7 +14,8 @@ function Power(base, exponent) {
       exponent--
     }
     return result
-  } else if (exponent < 0) {
+  }
+  else if (exponent < 0) {
     // 负数 取反 绝对值 abs
     let abs = Math.abs(exponent)
     while (abs > 0) {
@@ -22,7 +23,8 @@ function Power(base, exponent) {
       abs--
     }
     return 1 / result
-  } else {
+  }
+  else {
     // 0 返回1
     return result
   }

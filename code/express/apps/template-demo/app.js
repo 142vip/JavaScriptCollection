@@ -1,11 +1,12 @@
+const path = require('node:path')
+const http = require('node:http')
 const createError = require('http-errors')
 const express = require('express')
-const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
-const http = require('http')
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
+
 const app = express()
 const server = http.createServer(app)
 
@@ -25,14 +26,14 @@ app.use('/users', usersRouter)
 /**
  * 访问不存在的路由，直接抛出 404 错误
  */
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
   next(createError(404))
 })
 
 /**
  * 错误处理中间件
  */
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
   res.locals.message = err.message
   res.locals.error = req.app.get('env') === 'development' ? err : {}
 
@@ -41,28 +42,26 @@ app.use(function(err, req, res, next) {
   res.render('error')
 })
 
-
 // 启动服务，监听端口：3000
 server.listen(3000)
-server.on('error', error => {
+server.on('error', (error) => {
   if (error.syscall !== 'listen') {
     throw error
   }
 
   const addr = server.address()
   const bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port
-
+    ? `pipe ${addr}`
+    : `port ${addr.port}`
 
   // 分类输出错误信息
   switch (error.code) {
     case 'EACCES':
-      console.error(bind + ' requires elevated privileges')
+      console.error(`${bind} requires elevated privileges`)
       process.exit(1)
       break
     case 'EADDRINUSE':
-      console.error(bind + ' is already in use')
+      console.error(`${bind} is already in use`)
       process.exit(1)
       break
     default:
@@ -76,8 +75,8 @@ server.on('error', error => {
 server.on('listening', () => {
   const addr = server.address()
   const bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port
+    ? `pipe ${addr}`
+    : `port ${addr.port}`
 
   console.log('listening on:', bind)
 })

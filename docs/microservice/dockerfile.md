@@ -112,7 +112,7 @@ WORKDIR /web-project/node/oauth2-service
 RUN npm install --registry https://registry.npm.taobao.org
 # 暴露端口
 EXPOSE 8848
-# 项目启动 
+# 项目启动
 CMD ["npm","run","start"]
 
 ```

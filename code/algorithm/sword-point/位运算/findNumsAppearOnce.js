@@ -34,7 +34,8 @@ function findNumsAppearOnceTwo(array) {
   for (const value of array) {
     if (resMap.has(value)) {
       resMap.set(value, resMap.get(value) + 1)
-    } else {
+    }
+    else {
       resMap.set(value, 1)
     }
   }
@@ -65,7 +66,8 @@ function findNumsAppearOnceThree(array) {
   while ((k & temp) === 0) { k <<= 1 }
   for (let i = 0; i < array.length; i++) {
     // 遍历数组，对每个数分类
-    if ((k & array[i]) === 0) { res1 ^= array[i] } else { res2 ^= array[i] }
+    if ((k & array[i]) === 0) { res1 ^= array[i] }
+    else { res2 ^= array[i] }
   }
 
   // 升序

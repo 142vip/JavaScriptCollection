@@ -2,7 +2,6 @@
 title: whereis命令
 permalink: /server-end/linux/base-install/whereis.html
 ---
-  
 
 # whereis命令
 

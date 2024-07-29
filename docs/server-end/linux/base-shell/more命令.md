@@ -2,7 +2,6 @@
 title: more命令
 permalink: /server-end/linux/base-install/more.html
 ---
-  
 
 # more命令
 

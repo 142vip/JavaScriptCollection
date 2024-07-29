@@ -16,18 +16,18 @@
 - 具有暂时性死区【let声明，会和当前的块级进行绑定】
 
 ```js
-var num = 10;
+const num = 10
 if (true) {
   // 此时输出会出现无定义，只会在块级里面查找num是否定义，不会查找外面
-  console.log(num)
-  let num = 20;
+  // console.log(num)
+  const num = 20
 }
 ```
 
 块级作用域
 
 ```js
-var arr = [];
+const arr = []
 
 for (var i = 0; i < 2; i++) {
   arr[i] = function () {
@@ -35,12 +35,12 @@ for (var i = 0; i < 2; i++) {
   }
 }
 
-arr[0](); // 输出2 
-arr[1](); // 输出2
+arr[0]() // 输出2
+arr[1]() // 输出2
 ```
 
 ```js
-let arr = [];
+const arr = []
 
 // 每次循环let都会产生块级作用域
 for (let i = 0; i < 2; i++) {
@@ -49,8 +49,8 @@ for (let i = 0; i < 2; i++) {
   }
 }
 
-arr[0](); // 输出0
-arr[1](); // 输出1
+arr[0]() // 输出0
+arr[1]() // 输出1
 ```
 
 ## const关键字
@@ -65,7 +65,7 @@ arr[1](); // 输出1
 const PI = 3.14
 PI = 100 // 出错
 
-const arr = [10, 11];
+const arr = [10, 11]
 
 arr[0] = 12
 arr[1] = 13
@@ -87,24 +87,21 @@ arr = [12, 13]
 > 允许从数组中提取值，按照对应位置，对变量赋值。对象也可以实现解构
 
 ```js
-
 // 数组解构
-let [a, b, c] = [1, 2, 3]
+const [a, b, c] = [1, 2, 3]
 console.log(a, b, c) // 1,2,3
 
-
 // 对象解构
-let person = {
+const person = {
   name: 'leo',
   age: 20
 }
-let {name: name, age: age} = person  // 或者 let {name,age}=person
+const { name, age } = person // 或者 let {name,age}=person
 console.log(name, age) // leo  20
 
-
 // 解构并赋变量
-let {name: my_name, age: my_age} = person
-console.log(my_name, my_age); // leo 20
+const { name: my_name, age: my_age } = person
+console.log(my_name, my_age) // leo 20
 ```
 
 ## 箭头函数
@@ -127,10 +124,10 @@ const sum = a => a
 **箭头函数不绑定this关键字，箭头函数中的this，指向的是函数定义位置的上下文this**
 
 ```js
-const obj = {name: 'leo'}
+const obj = { name: 'leo' }
 
 function fn() {
-  console.log('fn-->:', this);
+  console.log('fn-->:', this)
 
   return () => {
     console.log('箭头-->:', this)
@@ -140,7 +137,7 @@ function fn() {
 // 注意call方法调用，将fn的this关键字指向obj对象
 const resFn = fn.call(obj)
 
-resFn();
+resFn()
 
 // fn--> {name:'leo'}
 // 箭头--> {name:'leo'}
@@ -149,32 +146,31 @@ resFn();
 ## 箭头函数面试题
 
 ```js
-
-let obj = {
+const obj = {
   age: 20,
   say: () => {
-    return this.age;
+    return this.age
   }
 }
 
 // 此时thi指向的是window，没有age定义，所以为undefined
-obj.say();
+obj.say()
 
 // 定义一个age变量
-let age = 30
+const age = 30
 // 此时this指向的是window中的age变量，所以为 30
-obj.say();
+obj.say()
 ```
 
 ## 剩余参数
 
 ```js
 function sum(first, ...args) {
-  console.log(first);
-  console.log(args);
+  console.log(first)
+  console.log(args)
 }
 
-const result = (...args) => {
+function result(...args) {
   // ...
 }
 ```
@@ -189,7 +185,6 @@ let arr2 = [4, 5, 6];
 // 合并
 let arr3 = [...arr1, ...arr2]
 let arr4 = arr1.push(...arr2)
-
 
 // ## 构造函数方法：Array.from() 将类数组或可遍历对象转换为真正的数组 ##
 
@@ -207,7 +202,7 @@ let arr2 = Array.from(arrayLike) // ['a',''b,'c']
 // 函数统一处理每一项
 let arr3 = Array.from(arrayLike, item => {
   return item + 100
-}) // 101,102,103 
+}) // 101,102,103
 ```
 
 ## find()
@@ -225,7 +220,7 @@ let arr3 = Array.from(arrayLike, item => {
 ```js
 [1, 2, 3].includes(2); // true
 
-[1, 2, 3].includes(4); // false
+[1, 2, 3].includes(4) // false
 ```
 
 ## startsWith()和endsWith()
@@ -234,9 +229,9 @@ let arr3 = Array.from(arrayLike, item => {
 - endsWith(): 表示参数字符串是否在原字符串的尾部，返回布尔值
 
 ```js
-let str = 'hello world!';
+const str = 'hello world!'
 
-str.startsWith('Hello'); // true
+str.startsWith('Hello') // true
 str.endsWith('!') // true
 ```
 

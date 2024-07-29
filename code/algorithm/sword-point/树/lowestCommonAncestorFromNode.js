@@ -1,4 +1,3 @@
-
 function TreeNode(x) {
   this.val = x
   this.left = null

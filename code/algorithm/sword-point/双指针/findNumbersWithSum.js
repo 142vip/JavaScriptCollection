@@ -2,7 +2,6 @@
  * 【中等】和为S的两个数字
  */
 
-
 /**
  * 利用双指针
  * @param array
@@ -15,10 +14,12 @@ function findNumbersWithSumOne(array, sum) {
     if (array[left] + array[right] === sum) {
       // 第一个就返回
       return [array[left], array[right]]
-    } else if (array[left] + array[right] > sum) {
+    }
+    else if (array[left] + array[right] > sum) {
       // 向左逼近
       right--
-    } else {
+    }
+    else {
       // 向右逼近
       left++
     }
@@ -49,10 +50,12 @@ function findNumbersWithSumTwo(array, sum) {
       }
       left++
       right--
-    } else if (array[left] + array[right] < sum) {
+    }
+    else if (array[left] + array[right] < sum) {
       // 左边向右逼近
       left++
-    } else {
+    }
+    else {
       // 右边向左逼近
       right--
     }

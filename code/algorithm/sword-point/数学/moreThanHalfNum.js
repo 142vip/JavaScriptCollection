@@ -2,7 +2,6 @@
  * 数组中出现次数超过一半的数字
  */
 
-
 /**
  * Map计数
  * @param numbers
@@ -11,10 +10,11 @@
 function moreThanHalfNumOne(numbers) {
   const resMap = new Map()
   // 计数
-  numbers.forEach(item => {
+  numbers.forEach((item) => {
     if (resMap.has(item)) {
       resMap.set(item, resMap.get(item) + 1)
-    } else {
+    }
+    else {
       resMap.set(item, 1)
     }
   })
@@ -23,14 +23,13 @@ function moreThanHalfNumOne(numbers) {
   const arr = [...new Set(numbers)]
   // 找出出现一半的数字
   let result = 0
-  arr.forEach(item => {
+  arr.forEach((item) => {
     if (2 * resMap.get(item) > numbers.length) {
       result = item
     }
   })
   return result
 }
-
 
 /**
  * 借助数组排序
@@ -71,8 +70,10 @@ function moreThanHalfNumThree(numbers) {
     if (cnt === 0) {
       cond = numbers[i]
       ++cnt
-    } else {
-      if (cond === numbers[i]) ++cnt
+    }
+    else {
+      if (cond === numbers[i])
+        ++cnt
       else --cnt
     }
   }
@@ -80,12 +81,13 @@ function moreThanHalfNumThree(numbers) {
 
   // 计数
   for (const k of numbers) {
-    if (cond === k) ++cnt
+    if (cond === k)
+      ++cnt
   }
-  if (cnt > numbers.length / 2) return cond
+  if (cnt > numbers.length / 2)
+    return cond
   return 0
 }
-
 
 console.log(moreThanHalfNumOne([1, 2, 3, 2, 2, 2, 5, 4, 2]))
 console.log(moreThanHalfNumTwo([1, 2, 3, 2, 2, 2, 5, 4, 2]))

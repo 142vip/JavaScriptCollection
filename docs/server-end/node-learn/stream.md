@@ -46,17 +46,17 @@ permalink: /server-end/node-learn/stream.html
 **服务端**
 
 ```typescript
-import express from "express";
-import fs, { read } from 'fs';
-const app=express()
+import fs, { read } from 'node:fs'
+import express from 'express'
+const app = express()
 
-app.post('/',(req, res) => {  // node中req res本身也是流
-    const writerStream = fs.createWriteStream('./output.txt');
-    req.pipe(writerStream)   // 管道传输 
-    req.on('end', () => {
-        res.write('结束');
-        res.end();
-    });
+app.post('/', (req, res) => { // node中req res本身也是流
+  const writerStream = fs.createWriteStream('./output.txt')
+  req.pipe(writerStream) // 管道传输
+  req.on('end', () => {
+    res.write('结束')
+    res.end()
+  })
 })
 
 app.listen(8081)
@@ -65,20 +65,20 @@ app.listen(8081)
 **客户端发送请求**
 
 ```typescript
-import axios from "axios";
-import fs from 'fs'
+import fs from 'node:fs'
+import axios from 'axios'
 
-const file = fs.createReadStream('./input.txt');
-const url= "http://localhost:8081/"
+const file = fs.createReadStream('./input.txt')
+const url = 'http://localhost:8081/'
 
 axios({
-    method:'post',
-    data:file,
-    url:url,
-    headers: {
-        'Content-Type': 'application/octet-stream',
-      },
-}).then(res=>{
-    console.log(res.data)
+  method: 'post',
+  data: file,
+  url,
+  headers: {
+    'Content-Type': 'application/octet-stream',
+  },
+}).then((res) => {
+  console.log(res.data)
 })
 ```

@@ -2,7 +2,6 @@
 title: ps命令
 permalink: /server-end/linux/base-install/ps.html
 ---
-  
 
 # ps命令
 

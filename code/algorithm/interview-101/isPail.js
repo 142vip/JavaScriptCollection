@@ -13,5 +13,5 @@ function isPail(head) {
   // write code here
 }
 module.exports = {
-  isPail
+  isPail,
 }

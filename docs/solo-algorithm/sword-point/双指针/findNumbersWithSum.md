@@ -55,17 +55,19 @@ permalink: /solo-algorithm/sword-point/find-sum-nums.html
 
 ```js
 function FindNumbersWithSum(array, sum) {
-    let left = 0;
-    let right = array.length - 1;
-    while (left < right) {
-        if (array[left] + array[right] > sum) {
-            right--;
-        } else if (array[left] + array[right] < sum) {
-            left++;
-        } else {
-            return [array[left], array[right]];
-        }
+  let left = 0
+  let right = array.length - 1
+  while (left < right) {
+    if (array[left] + array[right] > sum) {
+      right--
     }
-    return [];
+    else if (array[left] + array[right] < sum) {
+      left++
+    }
+    else {
+      return [array[left], array[right]]
+    }
+  }
+  return []
 }
 ```

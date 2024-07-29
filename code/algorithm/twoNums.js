@@ -10,7 +10,7 @@ function captureThreeNumbers(str) {
 
   for (let index = 0; index < arr.length - 1; index++) {
     if (num.includes(arr[index]) && num.includes(arr[index + 1]) && num.includes(arr[index + 2])) {
-      return parseInt(`${arr[index]}${arr[index + 1]}${arr[index + 2]}`)
+      return Number.parseInt(`${arr[index]}${arr[index + 1]}${arr[index + 2]}`)
     }
   }
   return false

@@ -12,7 +12,7 @@ Express框架主要提供了`express对象`、`application对象`、`request对�
 
 ```js
 // 引入express模块
-const express=require('express')
+const express = require('express')
 ```
 
 因为，这些API方法都来源`express`模块，针对不用的应用场景做的一些封装
@@ -73,19 +73,19 @@ Express框架内置中间件
 这里要重点提一下JSON.parse()的用法，例如：
 
 ```js
-JSON.parse("{}"); // {}
-JSON.parse("true"); // true
-JSON.parse('"foo"'); // "foo"
-JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
-JSON.parse("null"); // null
+JSON.parse('{}') // {}
+JSON.parse('true') // true
+JSON.parse('"foo"') // "foo"
+JSON.parse('[1, 5, "false"]') // [1, 5, "false"]
+JSON.parse('null') // null
 
 JSON.parse(
   '{"p": 5}',
   (key, value) =>
-    typeof value === "number"
+    typeof value === 'number'
       ? value * 2 // return value * 2 for numbers
       : value, // return everything else unchanged
-);
+)
 // { p: 10 }
 ```
 

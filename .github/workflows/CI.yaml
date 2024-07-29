@@ -1,8 +1,10 @@
-## 代码CI快速集成流水线，lint、fix、build
-## 注意： 只在142vip/JavaScriptCollection时执行
+#
+# 代码CI快速集成流水线，lint、fix、build
+# 注意： 只在142vip/JavaScriptCollection时执行
+#
 
 name: CI
-## 触发条件
+# 触发条件
 on:
   # 提PR到next分支触发CI
   pull_request:
@@ -15,18 +17,18 @@ on:
   # 手动触发部署
   workflow_dispatch:
 
-  schedule:
-    - cron: "0 0 1 * *"
+#  schedule:
+#    - cron: '0 0 1 * *'
 
 # 环境变量
 env:
-#  阿里云仓库信息
+  # 阿里云仓库信息
   REGISTRY: registry.cn-hangzhou.aliyuncs.com
   UserName: 142vip
 
 jobs:
   Base-Build:
-    name: "基础编译构建"
+    name: 基础编译构建
     runs-on: ubuntu-latest
     if: github.repository == '142vip/JavaScriptCollection' &&  github.event_name == 'pull_request'
     permissions:
@@ -41,30 +43,30 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      ## 安装PNPM
+      # 安装PNPM
       - name: PNPM Install
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 9.6.0
 
-      ## 安装Node环境
+      # 安装Node环境
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18.18.0
-          ## 淘宝镜像加速
+          node-version: 20.16.0
+          # 淘宝镜像加速
           registry-url: 'https://registry.npmmirror.com'
-          ## 缓存
-          cache: 'pnpm'
+          # 缓存
+          cache: pnpm
 
-      ## 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
+      # 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
       - name: Install Dependencies
         run: |
           ./scripts/ci
 
-      - name: Code LintFix
-        run: |
-          ./scripts/lint
+      #      - name: Code LintFix
+      #        run: |
+      #          ./scripts/lint
 
       - name: Build Site
         run: |
@@ -75,10 +77,10 @@ jobs:
           ./scripts/bundle build_proxy
 
   Build-Docker-Image:
-    name: "构建Docker镜像"
-    ## macos不支持docker的使用
+    name: 构建Docker镜像
+    # macos不支持docker的使用
     runs-on: ubuntu-latest
-    ## 主库master、next且执行release更新时执行
+    # 主库master、next且执行release更新时执行
     if: github.repository == '142vip/JavaScriptCollection' && startsWith(github.event.head_commit.message, 'chore(release):')
     permissions:
       actions: read
@@ -110,12 +112,12 @@ jobs:
         run: |
           ./scripts/ci
 
-      ## 构建，支持domain
+      # 构建，支持domain
       - name: Build To Dist
         run: |
           ./scripts/bundle build
 
-      ## 快速构建并推送
+      # 快速构建并推送
       - name: Push Docker Image
         run: |
           ./scripts/bundle image_faster

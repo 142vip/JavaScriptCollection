@@ -2,7 +2,6 @@
 title: lsattr命令
 permalink: /server-end/linux/base-install/lsattr.html
 ---
-  
 
 # lsattr命令
 

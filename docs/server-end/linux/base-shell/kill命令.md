@@ -2,7 +2,6 @@
 title: kill命令
 permalink: /server-end/linux/base-install/kill.html
 ---
-  
 
 # kill命令
 
@@ -127,11 +126,11 @@ kill -9 111
 暂停进程，对于暂停信号进程自身不能忽略该信号。
 
 ```shell
-kill -19 111 
+kill -19 111
 ```
 
 激活进程，对于激活信号必须发送到已暂停的进程才有效。
 
 ```shell
-kill -18 111 
+kill -18 111
 ```

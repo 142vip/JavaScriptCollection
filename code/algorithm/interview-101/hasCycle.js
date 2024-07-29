@@ -7,5 +7,5 @@ function hasCycle(head) {
   // write code here
 }
 module.exports = {
-  hasCycle
+  hasCycle,
 }

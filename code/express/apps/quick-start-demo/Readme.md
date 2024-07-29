@@ -45,7 +45,7 @@ npm run dev
 
 ```bash
 ## 调用API接口
-curl -i http://127.0.0.1:3000 
+curl -i http://127.0.0.1:3000
 ```
 
 接口返回：`Hello World`

@@ -45,7 +45,6 @@ function rectCover(number) {
   }
   return result
 }
-
 ```
 
 ## 一些建议

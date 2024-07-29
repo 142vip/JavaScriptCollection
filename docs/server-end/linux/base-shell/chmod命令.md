@@ -2,7 +2,6 @@
 title: chmod命令
 permalink: /server-end/linux/base-install/chmod.html
 ---
-  
 
 # chmod命令
 

@@ -22,9 +22,9 @@ arch -arm64 brew install jenkins-lts
 
 ## 启动
 brew services start jenkins-lts
-## 重启 
+## 重启
 brew services restart jenkins-lts
-## 手动更新 
+## 手动更新
 brew upgrade jenkins-lts
 ```
 
@@ -38,7 +38,7 @@ sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
-  
+
 ## 软件更新
 sudo apt-get update
 ## 安装jenkins

@@ -2,7 +2,6 @@
 title: od命令
 permalink: /server-end/linux/base-install/od.html
 ---
-  
 
 # od命令
 

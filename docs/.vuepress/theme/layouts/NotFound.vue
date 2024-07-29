@@ -1,15 +1,16 @@
-<!--自定义404页面-->
+<!-- 自定义404页面 -->
 
 <script lang="ts" setup>
-import {useRouteLocale} from '@vuepress/client'
-import {useThemeLocaleData} from '@vuepress/theme-default/lib/client/components'
+import { useRouteLocale } from '@vuepress/client'
+import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/components'
 
 const routeLocale = useRouteLocale()
 const themeLocale = useThemeLocaleData()
 
 const messages = themeLocale.value.notFound ?? ['Not Found']
-const getMsg = (): string =>
-    messages[Math.floor(Math.random() * messages.length)]
+function getMsg(): string {
+  return messages[Math.floor(Math.random() * messages.length)]
+}
 const homeLink = themeLocale.value.home ?? routeLocale.value
 const homeText = themeLocale.value.backToHome ?? 'Back to home'
 </script>
@@ -22,9 +23,10 @@ const homeText = themeLocale.value.backToHome ?? 'Back to home'
 
         <blockquote>{{ getMsg() }}</blockquote>
 
-        <RouterLink :to="homeLink">{{ homeText }}</RouterLink>
+        <RouterLink :to="homeLink">
+          {{ homeText }}
+        </RouterLink>
       </div>
     </main>
   </div>
 </template>
-

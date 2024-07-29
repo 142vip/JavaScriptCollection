@@ -21,7 +21,8 @@ function deleteDuplication(pHead) {
     if (map.has(pHead.val)) {
       // 存在
       map.set(pHead.val, map.get(pHead.val) + 1)
-    } else {
+    }
+    else {
       // 不存在
       map.set(pHead.val, 1)
     }
@@ -62,7 +63,8 @@ function deleteDuplication01(head) {
     }
     // 过滤掉值相同的，递归
     return deleteDuplication01(nextNode)
-  } else {
+  }
+  else {
     // 值不同,将头结点的下一个位置指向
     head.next = deleteDuplication01(head.next)
     // 返回头结点

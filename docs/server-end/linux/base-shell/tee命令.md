@@ -2,7 +2,6 @@
 title: tee命令
 permalink: /server-end/linux/base-install/tee.html
 ---
-  
 
 # tee命令
 
@@ -35,13 +34,13 @@ tee [OPTION]... [FILE]...
 将用户输入的数据同时保存到文件`file1.txt`和`file2.txt`中，输入文件信息后回车即可得到输出反馈。
 
 ```shell
-tee file1.txt file2.txt 
+tee file1.txt file2.txt
 ```
 
 将用户输入的数据追加到`file1.txt`文件。
 
 ```shell
-tee -a file1.txt  
+tee -a file1.txt
 ```
 
 `ls`列出当前目录中所有文件扩展名为`.txt`的所有文件，每行一个文件名，将输出通过管道传输到`wc`，将行进行计数并输出数字，输出通过管道传输到`tee`，将输出写入终端，并将信息写入文件`count.txt`，即写入文件扩展名为`.txt`的所有文件的数量。

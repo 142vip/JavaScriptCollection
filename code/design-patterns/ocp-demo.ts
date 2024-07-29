@@ -3,7 +3,7 @@
  */
 namespace OcpDemo{
   interface Shape {
-    calculateArea(): number;
+    calculateArea(): number
   }
 
   class Rectangle implements Shape {

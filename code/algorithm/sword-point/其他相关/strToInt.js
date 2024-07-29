@@ -4,11 +4,15 @@
  * @returns {number|number|number}
  */
 function StrToInt(str) {
-  if (!str) return 0
+  if (!str)
+    return 0
   let bool = false; const firstLetter = str[0]
-  if (firstLetter === '-') bool = true
-  if (firstLetter === '-' || firstLetter === '+') str = str.substring(1)
+  if (firstLetter === '-')
+    bool = true
+  if (firstLetter === '-' || firstLetter === '+')
+    str = str.substring(1)
   const n = Number(str)
-  if (n === 0) return 0
+  if (n === 0)
+    return 0
   return bool ? -n : n
 }

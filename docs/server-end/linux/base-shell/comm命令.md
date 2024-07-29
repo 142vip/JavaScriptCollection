@@ -2,7 +2,6 @@
 title: comm命令
 permalink: /server-end/linux/base-install/comm.html
 ---
-  
 
 # comm命令
 

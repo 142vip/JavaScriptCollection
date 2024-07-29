@@ -1,4 +1,3 @@
-
 // 注意是连续递增数列，间距为1 那么可以将序列开始、结束元素看做 a 、 b
 // 按照数列求和公式sum=（首项+尾项）* 项数 /2 即可
 function FindContinuousSequence(sum) {
@@ -22,10 +21,12 @@ function FindContinuousSequence(sum) {
       result.push(tempArr)
       // 向前寻找
       left++
-    } else if (2 * sum > tempSum) {
+    }
+    else if (2 * sum > tempSum) {
       // 右边向右
       right++
-    } else {
+    }
+    else {
       // 左边向右
       left++
     }

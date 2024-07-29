@@ -26,13 +26,15 @@ function isSymmetrical(pRoot) {
 function isSameTree(leftTree, rightTree) {
   if (leftTree === null && rightTree === null) {
     return true
-  } else if (leftTree !== null && rightTree !== null) {
+  }
+  else if (leftTree !== null && rightTree !== null) {
     // 左右子树不为空，则分别比对左右子树
     if (leftTree.val === rightTree.val) {
       // 根结点相同，比对左右子树
       return isSameTree(leftTree.left, rightTree.right) && isSameTree(rightTree.left, leftTree.right)
     }
-  } else {
+  }
+  else {
     return false
   }
 }

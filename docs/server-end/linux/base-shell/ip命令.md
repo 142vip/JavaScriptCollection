@@ -2,7 +2,6 @@
 title: ip命令
 permalink: /server-end/linux/base-install/ip.html
 ---
-  
 
 # ip命令
 

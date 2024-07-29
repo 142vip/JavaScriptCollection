@@ -2,7 +2,6 @@
 title: top命令
 permalink: /server-end/linux/base-install/top.html
 ---
-  
 
 # top命令
 

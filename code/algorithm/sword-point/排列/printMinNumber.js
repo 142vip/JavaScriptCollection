@@ -8,7 +8,7 @@ function PrintMinNumber(numbers) {
   // 冒泡每次都将最小的放在最前面
   while (len > 0) {
     for (let index = 0; index < numbers.length - 1; index++) {
-      if (parseInt(`${numbers[index]}${numbers[index + 1]}`) >= parseInt(`${numbers[index + 1]}${numbers[index]}`)) {
+      if (Number.parseInt(`${numbers[index]}${numbers[index + 1]}`) >= Number.parseInt(`${numbers[index + 1]}${numbers[index]}`)) {
         // 元素交换
         [numbers[index], numbers[index + 1]] = [numbers[index + 1], numbers[index]]
       }

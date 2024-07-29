@@ -2,7 +2,6 @@
 title: updatedb命令
 permalink: /server-end/linux/base-install/updatedb.html
 ---
-  
 
 # updatedb命令
 

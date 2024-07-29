@@ -2,7 +2,6 @@
 title: patch命令
 permalink: /server-end/linux/base-install/patch.html
 ---
-  
 
 # patch命令
 

@@ -2,7 +2,6 @@
 title: col命令
 permalink: /server-end/linux/base-install/col.html
 ---
-  
 
 # col命令
 

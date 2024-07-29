@@ -44,7 +44,7 @@ app.use(express.static('public'))
 使用绝对路径设置
 
 ```js
-const path = require('path')
+const path = require('node:path')
 // 设置静态资源托管的根目录
 express.static(path.join(__dirname, 'public'))
 ```
