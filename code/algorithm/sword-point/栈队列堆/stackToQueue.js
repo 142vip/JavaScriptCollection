@@ -29,6 +29,5 @@ function pop() {
   return result.shift()
 }
 
-
 console.log(push(1), push(2))
 console.log(pop(), pop())

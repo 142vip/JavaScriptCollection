@@ -1,11 +1,13 @@
-
 # 好的想法
 
 ### 网站置灰
 
 ```css
 /* -webkit-filter css滤镜 */
-html.gray-mode { filter: grayscale(.95); -webkit-filter: grayscale(.95); }
+html.gray-mode {
+  filter: grayscale(0.95);
+  -webkit-filter: grayscale(0.95);
+}
 ```
 
 - blur 模糊-webkit-filter:blur(2px);

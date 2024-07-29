@@ -13,7 +13,8 @@ function getLongestPalindrome(str, len) {
       if (currentStr === reverseStr) {
         // 可以
         max = Math.max(max, j - i + 1)
-      } else {
+      }
+      else {
         // 不可能是回文
         break
       }

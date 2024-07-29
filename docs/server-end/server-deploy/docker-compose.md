@@ -36,7 +36,7 @@ Docker-Compose项目由Python编写，调用Docker服务提供的API来对容器
 ```bash
 
 ## 下载并安装
-curl -L https://github.com/docker/compose/releases/download/1.23.0-rc3/docker-compose-`uname -s`-`uname -m` \ 
+curl -L https://github.com/docker/compose/releases/download/1.23.0-rc3/docker-compose-`uname -s`-`uname -m` \
 -o /usr/local/bin/docker-compose
 ## 设置权限
 chmod +x /usr/local/bin/docker-compose
@@ -145,7 +145,7 @@ docker-compose ps
 docker-compose stop [options] [SERVICE...]
 
 ## 停止正在运行的容器，再次启动
-docker-compose start 
+docker-compose start
 ```
 
 选项包括：
@@ -380,19 +380,19 @@ Docker-Compose标准模板文件应该包含version、services、networks 三大
 ```yaml
 version: '2'
 services:
-  web: 
+  web:
     image: dockercloud/hello-world
     ports:
       - 8080
     networks:
-    - front-tier
-    - back-tier
+      - front-tier
+      - back-tier
   redis:
     image: redis
     links:
       - web
     networks:
-    - back-tier
+      - back-tier
   lb:
     image: dockercloud/haproxy
     ports:
@@ -625,6 +625,6 @@ devices:
 
 ```yaml
 expose:
-  - "3000"
-  - "8000"
+  - '3000'
+  - '8000'
 ```

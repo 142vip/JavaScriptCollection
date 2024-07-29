@@ -3,7 +3,6 @@ title: dayjs
 permalink: /server-end/node-learn/dayjs.html
 ---
 
-
 # dayjs
 
 Day.js 是一个轻量的处理时间和日期的 JavaScript 库，和 Moment.js 的 API 设计保持完全一样
@@ -13,7 +12,7 @@ Day.js 是一个轻量的处理时间和日期的 JavaScript 库，和 Moment.js
 ## 安装
 
 ```bash
-pnpm install dayjs 
+pnpm install dayjs
 npm install dayjs
 ```
 

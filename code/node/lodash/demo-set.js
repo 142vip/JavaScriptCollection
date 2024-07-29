@@ -11,25 +11,23 @@ console.log(_.countBy([6.1, 4.2, 6.3], Math.floor))
 console.log(_.countBy(['one', 'two', 'three'], 'length'))
 // => { '3': 2, '5': 1 }
 
-
 // each: 遍历
 // forEach: 遍历
-_([1, 2]).forEach(function(value) {
+_([1, 2]).forEach((value) => {
   console.log(value)
 })
 // => Logs `1` then `2`.
-_.forEach({ a: 1, b: 2 }, function(value, key) {
+_.forEach({ a: 1, b: 2 }, (value, key) => {
   console.log(key)
 })
 // => Logs 'a' then 'b' (iteration order is not guaranteed).
-
 
 // every:断言，返回true|false
 _.every([true, 1, null, 'yes'], Boolean)
 // => false
 const users = [
   { user: 'barney', age: 36, active: false },
-  { user: 'fred', age: 40, active: false }
+  { user: 'fred', age: 40, active: false },
 ]
 // The `_.matches` iteratee shorthand.
 console.log(_.every(users, { user: 'barney', active: false }))
@@ -41,13 +39,12 @@ console.log(_.every(users, ['active', false]))
 console.log(_.every(users, 'active'))
 // => false
 
-
 // filter: 过滤
 const userList = [
   { user: 'barney', age: 36, active: true },
-  { user: 'fred', age: 40, active: false }
+  { user: 'fred', age: 40, active: false },
 ]
-console.log(_.filter(userList, function(o) { return !o.active }))
+console.log(_.filter(userList, (o) => { return !o.active }))
 // => objects for ['fred']
 // The `_.matches` iteratee shorthand.
 console.log(_.filter(userList, { age: 36, active: true }))
@@ -60,7 +57,6 @@ console.log(_.filter(userList, 'active'))
 // => objects for ['barney']
 
 // reject: filter反方法，过滤非真值
-
 
 // find: 查询
 // groupBy : 分组

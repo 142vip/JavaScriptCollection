@@ -157,7 +157,7 @@ git add .
 
 ```bash
 # 提交暂存的更改，会新开编辑器进行编辑
-git commit 
+git commit
 
 # 提交暂存的更改，并记录下备注
 git commit -m "just coding"
@@ -172,7 +172,7 @@ git commit --amend
 ### git pull
 
 ```bash
-# 从远程仓库拉取代码并合并到本地，可简写为 git pull 等同于 git fetch && git merge 
+# 从远程仓库拉取代码并合并到本地，可简写为 git pull 等同于 git fetch && git merge
 git pull <远程主机名> <远程分支名>:<本地分支名>
 
 # 使用rebase的模式进行合并
@@ -195,7 +195,7 @@ git fetch --all
 
 ```bash
 # 新建本地分支，但不切换
-git branch <branch-name> 
+git branch <branch-name>
 
 # 查看本地分支
 git branch
@@ -290,8 +290,8 @@ subject是 commit 目的的简短描述，不超过50个字符。
 Body 部分是对本次 commit 的详细描述，可以分成多行，每行尽量不超过72个字符。例如：
 
 ```text
-More detailed explanatory text, if necessary.  Wrap it to 
-about 72 characters or so. 
+More detailed explanatory text, if necessary.  Wrap it to
+about 72 characters or so.
 
 Further paragraphs come after blank lines.
 
@@ -320,7 +320,7 @@ Closes #123, #245, #992
 
 ## 配置用户名和邮箱
 
-```bash
+```shell
 ## 项目级配置
 git config  user.name "142vip"
 git config  user.email "fairy_vip@2925.com"
@@ -388,7 +388,7 @@ git fetch origin --prune
 git push origin --tags
 
 #推送指定本地tag到远程
-git push origin 
+git push origin
 ```
 
 ## 参考资料

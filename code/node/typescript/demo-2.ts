@@ -1,17 +1,17 @@
 /**
  * 变量声明
  */
-
 export default {}
 
-const a:number = 1
+const a: number = 1
 
 // 函数内部定义
-function test():number {
+function test(): number {
   const a = 1
   return a + 2
 }
 
+console.log(a, test())
 
 // 块级作用域
 function testResult(input: boolean) {
@@ -26,12 +26,13 @@ function testResult(input: boolean) {
   // Error: 'b' doesn't exist here
   // return b;
 }
+// 调用
+testResult(false)
 
 // 数组解构构
 const result = [1, 2]
 const [resultA, resultB] = result
 console.log(resultA, resultB)
-
 
 const res = [1, 3, 4, 5, 6]
 const [resA, ...rest] = res
@@ -41,7 +42,7 @@ console.log(resA, rest)
 const boy = {
   name: 'chufan',
   gender: 'man',
-  age: 14
+  age: 14,
 }
 const { name, age } = boy
 console.log(name, age)
@@ -49,34 +50,33 @@ const { gender, ...restBoy } = boy
 console.log(gender, restBoy)
 
 const { defaultA, defaultB = 1001 } = { defaultA: 100 }
-
+console.log(defaultA, defaultB)
 
 // 接口的函数类型
-interface SearchFunc{
-  say:(name:string, age:number)=>string;
-  sex:boolean;
+interface SearchFunc {
+  say: (name: string, age: number) => string
+  sex: boolean
 }
 
-const searchTest:SearchFunc = {
+const searchTest: SearchFunc = {
   sex: true,
-  say: (name:string, age:number) => {
+  say: (name: string, age: number) => {
     return name
-  }
+  },
 }
 console.log(searchTest)
 
-interface myFunc{
-  (name:string):string
+interface myFunc {
+  (name: string): string
 }
-const func:myFunc = (name:string) => {
+const func: myFunc = (name: string) => {
   return name
 }
 console.log(func('储凡'))
 
-
 interface StrArray {
   // 索引为number类型，值为字符串类型
-  [index: number]: string;
+  [index: number]: string
 }
 
 let myArray: StrArray
@@ -87,10 +87,9 @@ const myStr: string = myArray[0]
 
 console.log(myStr)
 
-
-interface myInter{
-  name:string
-  sayHello():string
+interface myInter {
+  name: string
+  sayHello: () => string
 }
 
 class Inter implements myInter {
@@ -101,10 +100,12 @@ class Inter implements myInter {
   }
 }
 
+console.log(Inter)
+
 // 直接将属性定义在构造函数中
 class StudentA {
-  name:string
-  age:number
+  name: string
+  age: number
   constructor(name: string, age: number) {
     this.name = name
     this.age = age
@@ -124,8 +125,8 @@ console.log(stuA)
 
 // 等价于
 class StudentB {
-  public readonly name:string
-  public readonly age:number
+  public readonly name: string
+  public readonly age: number
 
   constructor(name, age) {
     this.name = name
@@ -141,11 +142,12 @@ class StudentB {
   }
 }
 
+console.log(StudentB)
 
 // 类类型
-interface Plan{
-  food:string
-  eat:(something:string)=>boolean
+interface Plan {
+  food: string
+  eat: (something: string) => boolean
 
 }
 
@@ -156,42 +158,42 @@ class PlanA implements Plan {
   }
 }
 
-interface FairyA{
-  name:string
+console.log(PlanA)
+
+interface FairyA {
+  name: string
 }
 
-interface FairyB{
-  age:number
+interface FairyB {
+  age: number
 }
 
-interface Fairy extends FairyA, FairyB{
-  gender:number
+interface Fairy extends FairyA, FairyB {
+  gender: number
 }
-const fairy:Fairy = {
+const fairy: Fairy = {
   name: '储凡',
   age: 18,
-  gender: 0
+  gender: 0,
 }
 
 console.log(fairy)
 
-
 class Dog {
-  age:number
+  age: number
 }
 
 class DogA extends Dog {
-  name:string
+  name: string
 }
 
 const dogA = new DogA()
 dogA.name = 'dogA'
 dogA.age = 4
 
-
 class DogB extends Dog {
-  private _gender:number
-  get gender():number {
+  private _gender: number
+  get gender(): number {
     return this._gender
   }
 
@@ -200,13 +202,12 @@ class DogB extends Dog {
   //   this._gender = gender
   // }
 
-
   // 等价于
-  public getGender():number {
+  public getGender(): number {
     return this._gender
   }
 
-  public setGender(gender:number):void {
+  public setGender(gender: number): void {
     this._gender = gender
   }
 }
@@ -227,48 +228,47 @@ class TestStatic {
 console.log(TestStatic.age)
 console.log(TestStatic.test())
 
-
 class PointXY {
   x: number
   y: number
 }
 
-interface PointXYZ extends PointXY {}
+// 继承
+export interface PointXYZ extends PointXY {}
 
-
-type PointX={
-  x:number
+interface PointX {
+  x: number
 }
 
-type PointY={
-  y:number
+interface PointY {
+  y: number
 }
 
-type PointZ={
-  z:number
+interface PointZ {
+  z: number
 }
 
-type PointXYZ3 =PointX & PointY & PointZ
-const pointXYZ:PointXYZ3 = {
+type PointXYZ3 = PointX & PointY & PointZ
+const pointXYZ: PointXYZ3 = {
   x: 1,
   y: 2,
-  z: 3
+  z: 3,
 }
 console.log(pointXYZ)
 
-type typeString=string
-type typeNumber=number
+type typeString = string
+type typeNumber = number
 
-type newType=typeString | typeNumber
+export type newType = typeString | typeNumber
 
 interface Bird {
-  fly();
-  layEggs();
+  fly: () => any
+  layEggs: () => any
 }
 
 interface Fish {
-  swim();
-  layEggs();
+  swim: () => any
+  layEggs: () => any
 }
 
 function getAnimal(): Fish | Bird {
@@ -278,7 +278,7 @@ function getAnimal(): Fish | Bird {
     swim() {
     },
     layEggs() {
-    }
+    },
   }
 }
 
@@ -295,5 +295,3 @@ if ((<Bird>animal).fly != null) {
 if ((<Fish>animal).swim != null) {
   (<Fish>animal).swim()
 }
-
-

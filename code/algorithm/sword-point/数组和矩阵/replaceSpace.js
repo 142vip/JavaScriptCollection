@@ -1,4 +1,3 @@
-
 /**
  * 先转化为数组，再进行拼接
  * @param s
@@ -21,7 +20,6 @@ function replaceSpaceTwo(s) {
   }
   return str.slice(3)
 }
-
 
 console.log(replaceSpaceOne('We Are Happy'))
 console.log(replaceSpaceTwo('We Are Happy'))

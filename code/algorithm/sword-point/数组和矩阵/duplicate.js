@@ -30,7 +30,8 @@ function duplicateTwo(numbers) {
     // 这部分依赖的是排序后，如果不重复理想情况下：numbers[index]===index的情况
     if (!arr[numbers[i]]) {
       arr[numbers[i]] = 1
-    } else {
+    }
+    else {
       // 存在则重复
       return numbers[i]
     }

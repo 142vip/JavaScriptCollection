@@ -2,7 +2,6 @@
 title: route命令
 permalink: /server-end/linux/base-install/route.html
 ---
-  
 
 # route命令
 
@@ -12,10 +11,10 @@ permalink: /server-end/linux/base-install/route.html
 
 ```shell
 route [-CFvnee]
-route [-v] [-A family] add [-net|-host] target [netmask Nm] [gw Gw] 
-      [metric N] i [mss M] [window W] [irtt m] [reject] [mod] [dyn] 
+route [-v] [-A family] add [-net|-host] target [netmask Nm] [gw Gw]
+      [metric N] i [mss M] [window W] [irtt m] [reject] [mod] [dyn]
       [reinstate] [[dev] If]
-route [-v] [-A family] del [-net|-host] target [gw Gw] [netmask Nm] 
+route [-v] [-A family] del [-net|-host] target [gw Gw] [netmask Nm]
       [metric N] [[dev] If]
 route [-V] [--version] [-h] [--help]
 ```

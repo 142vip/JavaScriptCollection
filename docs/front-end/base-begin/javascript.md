@@ -56,7 +56,7 @@ headerDepth: 2
 class Star {
   // 构造器传参
   constructor(name) {
-    this.name = name;
+    this.name = name
   }
 
   // 定义类的方法 支持传参
@@ -66,9 +66,9 @@ class Star {
 }
 
 // 创建类对象
-let star = new Star('xxx');
+const star = new Star('xxx')
 // 调用类方法
-star.say();
+star.say()
 ```
 
 ## 类的继承(extends)
@@ -78,7 +78,6 @@ star.say();
 ```js
 // 定义父类
 class Father {
-
   // 父类中方法
   money() {
 
@@ -87,12 +86,11 @@ class Father {
 
 // 定义子类继承父类
 class Son extends Father {
-
   // 子类中也定义和父类相同的方法
   money() {
     // 利用super关键字，调用父类的普通函数
     // 注意：super关键字可以访问和调用对象父类上的函数，也可以调用父类的构造函数，也可以调用父类的普通函数
-    return super.money();
+    return super.money()
   }
 
   // 子类自定义方法
@@ -103,11 +101,11 @@ class Son extends Father {
 
 // 实例化子类的对象
 
-let son = new Son();
+const son = new Son()
 
 // son类继承了money对象对象，直接使用
 
-son.money();
+son.money()
 ```
 
 **子类在构造函数中使用super关键字，必须放在this前面，必须先调用父类的构造方法，再使用子类构造方法**
@@ -217,7 +215,7 @@ creatObj.prototype = {
   // 如果修改了原来的原型对象，给原型对象赋值的是一个对象，则必须手动的利用`constructor`指回原来的构造函数
   constructor: creatObj,
   // 方法
-  test: function () {
+  test() {
     // ...
   }
 }
@@ -258,12 +256,12 @@ creatObj.prototype = {
 ```js
 // 定义函数
 function fn(x, y) {
-  console.log('xxxx');
-  console.log(this);
+  console.log('xxxx')
+  console.log(this)
   console.log(x, y)
 }
 
-let result = {
+const result = {
   name: 'test'
 }
 // 1. call() 可以调用函数
@@ -280,18 +278,18 @@ let result = {
 ```js
 // 父构造函数
 function Father(name, age) {
-  this.name = name;
-  this.age = age;
+  this.name = name
+  this.age = age
 }
 
 // 子构造函数
 function Son(name, age) {
   // this指向子构造函数的对象实例，通过call后，父构造函数会指向子构造函数
-  Father.call(this, name, age);
+  Father.call(this, name, age)
 }
 
 // 实例化对象
-let son = new Son('xxx', 18);
+const son = new Son('xxx', 18)
 // 输出： {name:'xx',age:18}
 console.log(son)
 ```
@@ -338,24 +336,24 @@ function fn() {
   // ...
 }
 
-fn();
-fn.call();
+fn()
+fn.call()
 
 // 对象的方法
-let obj = {
-  test: function () {
-    //..
+const obj = {
+  test() {
+    // ..
   }
 }
 
-obj.test();
+obj.test()
 
 // 构造函数
 function Fn() {
   // ...
 }
 
-new Fn();
+new Fn()
 
 // 绑定事件函数(例如：按钮点击事件)
 button.onclick = function () {
@@ -363,14 +361,14 @@ button.onclick = function () {
 }
 
 // 定时器函数(延时执行)
-setInterval(function () {
+setInterval(() => {
   // ....
 }, 1000)
 
-  // 立即执行函数（自动调用）
-  (function () {
-    // .....
-  })()
+// 立即执行函数（自动调用）
+(() => {
+  // .....
+})()
 ```
 
 ### 内部的this指向
@@ -393,7 +391,7 @@ setInterval(function () {
 调用函数`fn.call()` ，改变this指向
 
 ```js
-let obj = {
+const obj = {
   name: 'xxx'
 }
 
@@ -438,7 +436,7 @@ let max = Math.max.apply(Math, arr)
 - 返回由指定的this值和初始化参数改造的**原函数拷贝**
 
 ```js
-let obj = {
+const obj = {
   name: 'xxx'
 }
 
@@ -448,9 +446,9 @@ function fn() {
 }
 
 // 不会调用，只是生成一个fn的新函数
-let f = fn.bind(obj)
+const f = fn.bind(obj)
 // 此时，fn函数中的this指向obj对象
-f();
+f()
 ```
 
 注意：
@@ -508,7 +506,6 @@ fn(function () {
   alert('hi')
 })
 
-
 function fn() {
   return function () {
   }
@@ -525,11 +522,11 @@ fn();
 
 ```js
 function fn() {
-  var num = 10;
+  const num = 10
 
   // 函数内部定义函数
   function fun() {
-    console.log(num);
+    console.log(num)
   }
 
   // 简单调用
@@ -537,22 +534,22 @@ function fn() {
 }
 
 // 调用fn()形成闭包
-fn();
+fn()
 ```
 
 **闭包的作用：外面的作用域可以访问函数内部的局部变量**
 
 ```js
 function fn() {
-  var num = 10;
+  const num = 10
 
   // 函数内部定义函数
   function fun() {
-    console.log(num);
+    console.log(num)
   }
 
   // 返回函数
-  return fun;
+  return fun
 
 //  等价于匿名函数
   // return function(){
@@ -561,7 +558,7 @@ function fn() {
 }
 
 // 执行fn拿到fun函数
-let fun1 = fn();
+const fun1 = fn()
 // 执行fun1函数，就可以访问fn函数内部的变量num
 fun1()
 ```
@@ -612,21 +609,21 @@ arr = [...temp]
 - `clear()`: 清除所有成员，没有返回值
 
 ```js
-let set = new Set();
-set.add(1).add(2).add(3);
+const set = new Set()
+set.add(1).add(2).add(3)
 set.delete(2)
-set.has(1);
-set.clear();
+set.has(1)
+set.clear()
 ```
 
 `Set`结构的实例与数组是一样的，也拥有`forEach()`方法，用于对每个成员执行某种操作，没有返回值
 
 ```js
-let set = new Set();
+const set = new Set()
 
-set.forEach(value => {
-  console.log(value);
-  return value;
+set.forEach((value) => {
+  console.log(value)
+  return value
 })
 ```
 
@@ -637,13 +634,13 @@ set.forEach(value => {
 使用给定的连接字符把数组转换成字符串，默认的是逗号`,`，例如：
 
 ```js
-var arr = [1, 2, 3];
+const arr = [1, 2, 3]
 // 输出：1,2,3
-console.log(arr.join());
+console.log(arr.join())
 // 输出：1-2-3
-console.log(arr.join("-"));
+console.log(arr.join('-'))
 // 输出：[1, 2, 3]  原数组不变
-console.log(arr); 
+console.log(arr)
 ```
 
 ### push()
@@ -651,12 +648,12 @@ console.log(arr);
 把里面的内容添加到数组末尾，并返回修改后的长度，例如：
 
 ```js
-var arr = ["Lisa", "Tom"];
-var count = arr.push("142vip.cn");
+const arr = ['Lisa', 'Tom']
+const count = arr.push('142vip.cn')
 // 输出 3
-console.log(count);
+console.log(count)
 // 输出 ["Lisa", "Tom", "142vip.cn"]
-console.log(arr);
+console.log(arr)
 ```
 
 ### pop()
@@ -664,13 +661,13 @@ console.log(arr);
 移除数组最后一项，返回移除的那个值，减少数组的length，例如：
 
 ```js
-var arr = ["Lisa", "Tom", "142vip.cn"];
-var item = arr.pop();
+const arr = ['Lisa', 'Tom', '142vip.cn']
+const item = arr.pop()
 
 // 输出 142vip.cn
-console.log(item);
+console.log(item)
 // 输出 ["Lisa", "Tom"]
-console.log(arr);
+console.log(arr)
 ```
 
 ### shift()
@@ -678,12 +675,12 @@ console.log(arr);
 删除原数组第一项，并返回删除元素的值，如果数组为空则返回`undefined`，例如：
 
 ```js
-var arr = ["142vip.cn", "Lisa", "Tom"];
-var item = arr.shift();
+const arr = ['142vip.cn', 'Lisa', 'Tom']
+const item = arr.shift()
 // 输出 142vip.cn
-console.log(item);
+console.log(item)
 // 输出 ["Lisa", "Tom"]
-console.log(arr);
+console.log(arr)
 ```
 
 ### unshift()
@@ -691,12 +688,12 @@ console.log(arr);
 将参数添加到原数组开头，并返回数组的长度，例如：
 
 ```js
-var arr = ["Lisa", "Tom"];
-var count = arr.unshift("142vip.cn");
+const arr = ['Lisa', 'Tom']
+const count = arr.unshift('142vip.cn')
 // 输出 3
-console.log(count);
+console.log(count)
 // 输出 ["142vip.cn", "Lisa", "Tom"]
-console.log(arr);
+console.log(arr)
 ```
 
 ### sort()
@@ -704,20 +701,20 @@ console.log(arr);
 将数组里的项从小到大排序，例如：
 
 ```js
-var arr1 = ["a", "d", "c", "b"];
+const arr1 = ['a', 'd', 'c', 'b']
 
 // 输出 ["a", "b", "c", "d"]
-console.log(arr1.sort());
+console.log(arr1.sort())
 
 function sortNumber(a, b) {
   return a - b
 }
 
-arr = [13, 24, 51, 3];
-// 输出 [13, 24, 3, 51] 
-console.log(arr.sort());
+arr = [13, 24, 51, 3]
+// 输出 [13, 24, 3, 51]
+console.log(arr.sort())
 // 输出 [3, 13, 24, 51] 数组被改变
-console.log(arr.sort(sortNumber));
+console.log(arr.sort(sortNumber))
 ```
 
 `sort()`方法比较的是字符串，没有按照数值的大小对数字进行排序，要实现这一点，就必须使用一个排序函数
@@ -727,11 +724,11 @@ console.log(arr.sort(sortNumber));
 反转数组项的顺序。例如：
 
 ```js
-var arr = [13, 24, 51, 3];
+const arr = [13, 24, 51, 3]
 // 输出：[3, 51, 24, 13]
-console.log(arr.reverse());
+console.log(arr.reverse())
 // 输出：[3, 51, 24, 13] 原数组改变
-console.log(arr);
+console.log(arr)
 ```
 
 ### concat()
@@ -741,13 +738,13 @@ console.log(arr);
 在没有给`concat()`方法传递参数的情况下，它只是复制当前数组并返回副本。
 
 ```js
-var arr = [1, 3, 5, 7];
-var arrCopy = arr.concat(9, [11, 13]);
+const arr = [1, 3, 5, 7]
+const arrCopy = arr.concat(9, [11, 13])
 
 // 输出：[1, 3, 5, 7, 9, 11, 13]
-console.log(arrCopy);
+console.log(arrCopy)
 // 输出：[1, 3, 5, 7] 原数组未被修改
-console.log(arr);
+console.log(arr)
 ```
 
 ### slice()
@@ -758,16 +755,16 @@ console.log(arr);
 该方法返回起始和结束位置之间的项——但不包括结束位置的项。例如：
 
 ```js
-var arr = [1, 3, 5, 7, 9, 11];
-var arrCopy = arr.slice(1);
-var arrCopy2 = arr.slice(1, 4);
-var arrCopy3 = arr.slice(1, -2);
-var arrCopy4 = arr.slice(-4, -1);
-console.log(arr); 　　　　　　　　　　　　　　//[1, 3, 5, 7, 9, 11](原数组没变)
-console.log(arrCopy); 　　　　　　　　　　　 //[3, 5, 7, 9, 11]
-console.log(arrCopy2); 　　　　　　　　　　　//[3, 5, 7]
-console.log(arrCopy3); 　　　　　　　　　　　//[3, 5, 7]
-console.log(arrCopy4); 　　　　　　　　　　　//[5, 7, 9]
+const arr = [1, 3, 5, 7, 9, 11]
+const arrCopy = arr.slice(1)
+const arrCopy2 = arr.slice(1, 4)
+const arrCopy3 = arr.slice(1, -2)
+const arrCopy4 = arr.slice(-4, -1)
+console.log(arr) 　　　　　　　　　　　　　　// [1, 3, 5, 7, 9, 11](原数组没变)
+console.log(arrCopy) 　　　　　　　　　　　 // [3, 5, 7, 9, 11]
+console.log(arrCopy2) 　　　　　　　　　　　// [3, 5, 7]
+console.log(arrCopy3) 　　　　　　　　　　　// [3, 5, 7]
+console.log(arrCopy4) 　　　　　　　　　　　// [5, 7, 9]
 ```
 
 - arrCopy只设置了一个参数，也就是起始下标为1，所以返回的数组为下标1（包括下标1）开始到数组最后。
@@ -784,17 +781,16 @@ console.log(arrCopy4); 　　　　　　　　　　　//[5, 7, 9]
 - 替换：可以向指定位置插入任意数量的项，且同时删除任意数量的项，只需指定 3 个参数：起始位置、要删除的项数和要插入的任意数量的项。插入的项数不必与删除的项数相等。
 
 ```js
-
-var arr = [1, 3, 5, 7, 9, 11];
-var arrRemoved = arr.splice(0, 2);
-console.log(arr);
-console.log(arrRemoved);
-var arrRemoved2 = arr.splice(2, 0, 4, 6);
-console.log(arr);
-console.log(arrRemoved2);
-var arrRemoved3 = arr.splice(1, 1, 2, 4);
-console.log(arr);
-console.log(arrRemoved3);
+const arr = [1, 3, 5, 7, 9, 11]
+const arrRemoved = arr.splice(0, 2)
+console.log(arr)
+console.log(arrRemoved)
+const arrRemoved2 = arr.splice(2, 0, 4, 6)
+console.log(arr)
+console.log(arrRemoved2)
+const arrRemoved3 = arr.splice(1, 1, 2, 4)
+console.log(arr)
+console.log(arrRemoved3)
 ```
 
 ### indexOf()
@@ -802,13 +798,13 @@ console.log(arrRemoved3);
 接收两个参数：要查找的项和（可选的）表示查找起点位置的索引。其中， 从数组的开头（位置 0）开始向后查找，例如：
 
 ```js
-var arr = [1, 3, 5, 7, 7, 5, 3, 1];
+const arr = [1, 3, 5, 7, 7, 5, 3, 1]
 // 输出 2
-console.log(arr.indexOf(5));
+console.log(arr.indexOf(5))
 // 输出 2
-console.log(arr.indexOf(5, 2));
+console.log(arr.indexOf(5, 2))
 // 输出 -1
-console.log(arr.indexOf("5"));
+console.log(arr.indexOf('5'))
 ```
 
 ### lastIndexOf()
@@ -816,11 +812,11 @@ console.log(arr.indexOf("5"));
 接收两个参数：要查找的项和（可选的）表示查找起点位置的索引。其中， 从数组的末尾开始向前查找，例如：
 
 ```js
-var arr = [1, 3, 5, 7, 7, 5, 3, 1];
+const arr = [1, 3, 5, 7, 7, 5, 3, 1]
 // 输出 5
-console.log(arr.lastIndexOf(5));
+console.log(arr.lastIndexOf(5))
 // 输出 2
-console.log(arr.lastIndexOf(5, 4));
+console.log(arr.lastIndexOf(5, 4))
 ```
 
 ### forEach()
@@ -831,10 +827,10 @@ console.log(arr.lastIndexOf(5, 4));
 参数分别为：遍历的数组内容；第对应的数组索引，数组本身。
 
 ```js
-var arr = [1, 2, 3, 4, 5];
-arr.forEach(function (x, index, a) {
-  console.log(x + '|' + index + '|' + (a === arr));
-});
+const arr = [1, 2, 3, 4, 5]
+arr.forEach((x, index, a) => {
+  console.log(`${x}|${index}|${a === arr}`)
+})
 ```
 
 ### map()
@@ -842,12 +838,12 @@ arr.forEach(function (x, index, a) {
 “映射”，对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组，例如：
 
 ```js
-var arr = [1, 2, 3, 4, 5];
-var arr2 = arr.map(function (item) {
-  return item * item;
-});
+const arr = [1, 2, 3, 4, 5]
+const arr2 = arr.map((item) => {
+  return item * item
+})
 // 输出[1, 4, 9, 16, 25]
-console.log(arr2);
+console.log(arr2)
 ```
 
 ### filter()
@@ -855,13 +851,13 @@ console.log(arr2);
 “过滤”功能，数组中的每一项运行给定函数，返回满足过滤条件组成的数组，例如：
 
 ```js
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var arr2 = arr.filter(function (x, index) {
-  return index % 3 === 0 || x >= 8;
-});
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const arr2 = arr.filter((x, index) => {
+  return index % 3 === 0 || x >= 8
+})
 
 // 输出数组 [1, 4, 7, 8, 9, 10]
-console.log(arr2);
+console.log(arr2)
 ```
 
 ### every()
@@ -869,17 +865,17 @@ console.log(arr2);
 判断数组中每一项都是否满足条件，只有所有项都满足条件，才会返回`true`，例如：
 
 ```js
-var arr = [1, 2, 3, 4, 5];
-var arr2 = arr.every(function (x) {
-  return x < 10;
-});
+const arr = [1, 2, 3, 4, 5]
+const arr2 = arr.every((x) => {
+  return x < 10
+})
 // 输出true
-console.log(arr2);
-var arr3 = arr.every(function (x) {
-  return x < 3;
-});
+console.log(arr2)
+const arr3 = arr.every((x) => {
+  return x < 3
+})
 // 输出false
-console.log(arr3);
+console.log(arr3)
 ```
 
 ### some()
@@ -887,15 +883,15 @@ console.log(arr3);
 判断数组中是否存在满足条件的项，只要有一项满足条件，就会返回true，例如：
 
 ```js
-var arr = [1, 2, 3, 4, 5];
-var arr2 = arr.some(function (x) {
-  return x < 3;
-});
+const arr = [1, 2, 3, 4, 5]
+const arr2 = arr.some((x) => {
+  return x < 3
+})
 // 输出true
-console.log(arr2);
-var arr3 = arr.some(function (x) {
-  return x < 1;
-});
+console.log(arr2)
+const arr3 = arr.some((x) => {
+  return x < 1
+})
 // 输出false
-console.log(arr3);
+console.log(arr3)
 ```

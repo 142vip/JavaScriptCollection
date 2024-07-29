@@ -1,4 +1,5 @@
-const { Sequelize, Model, DataTypes } = require('sequelize')
+const { Sequelize, DataTypes } = require('sequelize')
+
 const sequelize = new Sequelize('postgres://user:pass@142vip.cn:5432/142vip')
 
 /**
@@ -9,16 +10,16 @@ const User = sequelize.define('user', {
   favoriteColor: {
     type: DataTypes.TEXT,
     // 默认值
-    defaultValue: 'green'
+    defaultValue: 'green',
   },
   age: DataTypes.INTEGER,
-  cash: DataTypes.INTEGER
-});
+  cash: DataTypes.INTEGER,
+})
+
+console.log('User对象：', User)
 
 /**
  * 将模型结构同步到数据库表中
+ * - 强制同步
  */
-(async() => {
-  // 强制同步
-  await sequelize.sync({ force: true })
-})()
+sequelize.sync({ force: true })

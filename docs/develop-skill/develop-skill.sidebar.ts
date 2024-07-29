@@ -1,15 +1,15 @@
 export const DevelopSkillSidebar = [
   {
     text: '软件安装',
-    link: 'software-install.md'
+    link: 'software-install.md',
   },
   {
     text: 'npm&pnpm&yarn',
-    link: 'package-manager.md'
+    link: 'package-manager.md',
   },
   {
     text: 'monorepo',
-    link: 'monorepo.md'
+    link: 'monorepo.md',
   },
   {
     text: '编译工具',
@@ -18,13 +18,13 @@ export const DevelopSkillSidebar = [
     children: [
       {
         text: 'webpack',
-        link: 'webpack.md'
+        link: 'webpack.md',
       },
       {
         text: 'vite',
-        link: 'vite.md'
-      }
-    ]
+        link: 'vite.md',
+      },
+    ],
   },
   {
     text: '代码管理',
@@ -32,25 +32,25 @@ export const DevelopSkillSidebar = [
     children: [
       {
         text: 'GIT',
-        link: 'git.md'
+        link: 'git.md',
       },
       {
         text: '托管平台',
-        link: 'github.md'
+        link: 'github.md',
       },
       {
         text: '流水线',
-        link: 'github-actions.md'
+        link: 'github-actions.md',
       },
       {
         text: 'CI & CD',
-        link: 'CI-CD.md'
+        link: 'CI-CD.md',
       },
       {
         text: 'Jenkins',
-        link: 'jenkins.md'
-      }
-    ]
+        link: 'jenkins.md',
+      },
+    ],
   },
   {
     text: '代码风格',
@@ -59,17 +59,17 @@ export const DevelopSkillSidebar = [
     children: [
       {
         text: 'Eslint',
-        link: 'eslint.md'
+        link: 'eslint.md',
       },
       {
         text: 'Prettier',
-        link: 'prettier.md'
+        link: 'prettier.md',
       },
       {
         text: '工程化规范',
-        link: 'engineering-lint.md'
-      }
-    ]
-  }
+        link: 'engineering-lint.md',
+      },
+    ],
+  },
 
 ]

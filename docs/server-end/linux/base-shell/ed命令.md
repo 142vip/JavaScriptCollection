@@ -2,7 +2,6 @@
 title: ed命令
 permalink: /server-end/linux/base-install/ed.html
 ---
-  
 
 # ed命令
 
@@ -46,31 +45,31 @@ i
 I am 24.
 .
 c
-I am 24 years old. 
+I am 24 years old.
 .
 w readme.txt
 q
 ```
 
 ```text
-ed                          # 激活 ed 命令 
-a                           # 告诉 ed 我要编辑新文件 
-My name is Titan.           # 输入第一行内容 
-And I love Perl very much.  # 输入第二行内容 
-.                           # 返回 ed 的命令行状态 
-i                           # 告诉 ed 我要在最后一行之前插入内容 
-I am 24.                    # 将 I am 24. 插入 My name is Titan. 和 And I love Perl very much. 之间 
-.                           # 返回 ed 的命令行状态 
-c                           # 告诉 ed 我要替换最后一行输入内容 
+ed                          # 激活 ed 命令
+a                           # 告诉 ed 我要编辑新文件
+My name is Titan.           # 输入第一行内容
+And I love Perl very much.  # 输入第二行内容
+.                           # 返回 ed 的命令行状态
+i                           # 告诉 ed 我要在最后一行之前插入内容
+I am 24.                    # 将 I am 24. 插入 My name is Titan. 和 And I love Perl very much. 之间
+.                           # 返回 ed 的命令行状态
+c                           # 告诉 ed 我要替换最后一行输入内容
 I am 24 years old.          # 将 I am 24. 替换成 I am 24 years old. ，这里替换的是最后输的内容
-.                           # 返回 ed 的命令行状态 
+.                           # 返回 ed 的命令行状态
 w readme.txt                # 将文件命名为 readme.txt 并保存，如果是编辑已经存在的文件，只需要敲入 w 即可
-q                           # 完全退出 ed 编辑器 
+q                           # 完全退出 ed 编辑器
 ```
 
 ```text
 cat readme.txt
 # My name is Titan.
-# I am 24 years old. 
+# I am 24 years old.
 # And I love Perl very much.
 ```

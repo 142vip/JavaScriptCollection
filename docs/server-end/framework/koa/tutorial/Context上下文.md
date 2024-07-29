@@ -11,7 +11,7 @@ request对象、response对象进行封装。为编写Web应用程序、API时�
 对于每个客户端请求，`Koa`框架都会创建一个`Context`上下文对象，在请求的处理流程中，作为中间件的参数引用，一般用ctx表示，例如:
 
 ```js
-app.use(ctx => {
+app.use((ctx) => {
   // Context对象
   console.log(ctx)
   // Koa的Request对象
@@ -47,7 +47,7 @@ Node的request对象，包含客户端请求的详细信息
 例如：
 
 ```js
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   ctx.body = 'hello world'
   ctx.status = 200
   ctx.res.statusCode = 500
@@ -60,9 +60,9 @@ app.use(async(ctx, next) => {
 
 ```js
 // 从DB中查询用户信息
-const userInfo=await User.findAll()
+const userInfo = await User.findAll()
 // 将用户信息绑在state上
-ctx.state.userInfo=userInfo
+ctx.state.userInfo = userInfo
 ```
 
 ### ctx.app
@@ -70,9 +70,9 @@ ctx.state.userInfo=userInfo
 上下文中的app对象，是对应用程序实例的引用，例如：
 
 ```js
-const app=new Koa()
+const app = new Koa()
 
-app.use(ctx=>{
+app.use((ctx) => {
   // ctx.app是对app的引用，返回true
   console.log(ctx.app === app)
 })
@@ -89,17 +89,17 @@ app.use(ctx=>{
 设置Cookie信息
 
 ```js
-ctx.cookies.set('name',"142vip")
+ctx.cookies.set('name', '142vip')
 // 支持options可选参数
-ctx.cookies.set('web',"142vip.cn",{})
+ctx.cookies.set('web', '142vip.cn', {})
 ```
 
 获取Cookie信息
 
 ```js
-const name =ctx.cookies.set('name')
+const name = ctx.cookies.set('name')
 // 支持options可选参数
-const webInfo=ctx.cookies.set('web',{})
+const webInfo = ctx.cookies.set('web', {})
 ```
 
 实质上是基于cookies模块实现的，可以查看[Cookies API](https://github.com/pillarjs/cookies)
@@ -113,19 +113,19 @@ const webInfo=ctx.cookies.set('web',{})
 
 ```js
 ctx.throw(400)
-ctx.throw(400, '参数错误');
-ctx.throw(400, '参数错误', { message:'缺少必要参数' });
+ctx.throw(400, '参数错误')
+ctx.throw(400, '参数错误', { message: '缺少必要参数' })
 ```
 
 `ctx.throw`其实是对`http-errors`模块的一层封装，当你使用`ctx.throw(400, '参数错误')`时，等价于:
 
 ```js
 // 定义错误信息
-const error = new Error('参数错误');
-error.status = 400;
-error.expose = true;
+const error = new Error('参数错误')
+error.status = 400
+error.expose = true
 // 抛错
-throw error;
+throw error
 ```
 
 注意，这是**用户级错误**，并用 `err.expose` 标记，这意味着消息适用于客户端响应。
@@ -137,7 +137,7 @@ throw error;
 
 ```js
 // 断言ctx.state.user是否为空
-ctx.assert(ctx.state.user, 401, 'User not found. Please login!');
+ctx.assert(ctx.state.user, 401, 'User not found. Please login!')
 ```
 
 语法格式如下：

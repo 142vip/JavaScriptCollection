@@ -23,8 +23,8 @@ gunzip就是gzip的[硬连接](https://baike.baidu.com/item/硬连接/3923435)�
 
 ```nginx
  ## 不允许谷歌浏览器访问 如果是谷歌浏览器返回500
-  if ($http_user_agent ~ Chrome) {   
-        return 500;  
+  if ($http_user_agent ~ Chrome) {
+        return 500;
     }
 ```
 
@@ -34,9 +34,9 @@ gunzip就是gzip的[硬连接](https://baike.baidu.com/item/硬连接/3923435)�
 
 ```nginx
 # 如果访问的ip地址为192.168.9.115,则返回403
-if  ($remote_addr = 192.168.9.115) {  
-     return 403;  
-} 
+if  ($remote_addr = 192.168.9.115) {
+     return 403;
+}
 ```
 
 ## Nginx配置高可用
@@ -82,11 +82,11 @@ proxy_read_timeout 1s;
 
 ```nginx
 ## 哪个服务器的响应速度快，就将请求分配到那个服务器上
-upstream backserver { 
- server server1; 
- server server2; 
- fair; 
-} 
+upstream backserver {
+ server server1;
+ server server2;
+ fair;
+}
 ```
 
 ### Url_Hash（第三方插件）
@@ -96,12 +96,12 @@ upstream backserver {
 > 按访问url的hash结果来分配请求，每个url定向到同一个后端服务器，可以进一步提高后端缓存服务器的效率
 
 ```nginx
-upstream backserver { 
- server squid1:3128; 
- server squid2:3128; 
- hash $request_uri; 
- hash_method crc32; 
-} 
+upstream backserver {
+ server squid1:3128;
+ server squid2:3128;
+ hash $request_uri;
+ hash_method crc32;
+}
 ```
 
 ## 为什么要做动静分离？
@@ -153,9 +153,9 @@ upstream backserver {
 limit_req_zone $binary_remote_addr zone=one:10m rate=1r/m;
 #绑定限流维度
 server{
-  
+
  location/seckill.html{
-  limit_req zone=zone; 
+  limit_req zone=zone;
   proxy_pass http://lj_seckill;
  }
 }
@@ -219,7 +219,7 @@ location指令的作用是根据用户请求的URI来执行不同的应用,即�
 │   ├── fastcgi.conf                 # fastcgi相关参数的配置文件
 │   ├── fastcgi.conf.default         # fastcgi.conf的原始备份文件
 │   ├── fastcgi_params               # fastcgi的参数文件
-│   ├── fastcgi_params.default       
+│   ├── fastcgi_params.default
 │   ├── koi-utf
 │   ├── koi-win
 │   ├── mime.types                   # 媒体类型
@@ -227,7 +227,7 @@ location指令的作用是根据用户请求的URI来执行不同的应用,即�
 │   ├── nginx.conf                   # Nginx主配置文件
 │   ├── nginx.conf.default
 │   ├── scgi_params                  # scgi相关参数文件
-│   ├── scgi_params.default  
+│   ├── scgi_params.default
 │   ├── uwsgi_params                 # uwsgi相关参数文件
 │   ├── uwsgi_params.default
 │   └── win-utf
@@ -270,7 +270,7 @@ http {                                    # HTTP区块开始
         location = /50x.html {              # location区块开始，访问50x.html
             root   html；             # 指定对应的站点目录为html
         }
-    }  
+    }
     ......
 ```
 
@@ -333,50 +333,50 @@ http {                                    # HTTP区块开始
 
 ```bash
 #重启Nginx
-nginx -s reopen 
+nginx -s reopen
 
 #重新加载Nginx配置文件，然后以优雅的方式重启Nginx
-nginx -s reload 
+nginx -s reload
 
 #强制停止Nginx服务
-nginx -s stop 
+nginx -s stop
 
 #优雅地停止Nginx服务（即处理完所有请求后再停止服务）
-nginx -s quit 
+nginx -s quit
 
 #检测配置文件是否有语法错误，然后退出
-nginx -t 
+nginx -t
 
 #打开帮助信息
-nginx -?,-h 
+nginx -?,-h
 
 #显示版本信息并退出
-nginx -v 
+nginx -v
 
 #显示版本和配置选项信息，然后退出
-nginx -V 
+nginx -V
 
 #检测配置文件是否有语法错误，然后退出
 nginx -t
 
 #检测配置文件是否有语法错误，转储并退出
-nginx -T 
+nginx -T
 
 #在检测配置文件期间屏蔽非错误信息
-nginx -q 
+nginx -q
 
 #设置前缀路径(默认是:/usr/share/nginx/)
-nginx -p prefix 
+nginx -p prefix
 
 #设置配置文件(默认是:/etc/nginx/nginx.conf)
 nginx -c filename
 
 #设置配置文件外的全局指令
-nginx -g directives 
+nginx -g directives
 
 #杀死所有nginx进程
-killall nginx 
+killall nginx
 
 # 退出某个进程
-kill -quit 61333 
+kill -quit 61333
 ```

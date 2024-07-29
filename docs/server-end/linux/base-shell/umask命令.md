@@ -2,7 +2,6 @@
 title: umask命令
 permalink: /server-end/linux/base-install/umask.html
 ---
-  
 
 # umask命令
 
@@ -26,7 +25,7 @@ umask [-S] [mask]
 ```shell
 drwxr-xr-x 12 linuxize users 4.0K Apr  8 20:51 dirname
 |[-][-][-]    [------] [---]
-| |  |  |        |       |       
+| |  |  |        |       |
 | |  |  |        |       +-----------> Group
 | |  |  |        +-------------------> Owner
 | |  |  +----------------------------> Others Permissions
@@ -68,7 +67,7 @@ drwxr-xr-x 12 linuxize users 4.0K Apr  8 20:51 dirname
 
 ```shell
 umask
-# 0022 
+# 0022
 ```
 
 以符号表示形式表示当前系统权限掩码。

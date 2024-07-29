@@ -1,4 +1,3 @@
-
 /**
  * 【简单】跳台阶  递归，要么跳一阶，要么跳两阶
  * 思路： 对于第number台阶，只能从第number-1或者number-2上跳上来
@@ -9,7 +8,7 @@
 
 /**
  * 递归实现
-  * @param number
+ * @param number
  * @returns {*}
  */
 function jumpFloorOne(number) {
@@ -37,4 +36,3 @@ function jumpFloorTwo(number) {
 
 console.log(jumpFloorOne(7))
 console.log(jumpFloorTwo(7))
-

@@ -44,46 +44,43 @@ const axios = require('docs/server-end/node-learn/axios').default
 ### 发送请求
 
 ```js
-
 // 发送基础post请求
 axios.post('/user', {
-    firstName: 'Fred',
-    lastName: 'Flintstone'
-}).then(function (response) {
-    console.log(response);
-}).catch(function (error) {
-    console.log(error);
-});
-
+  firstName: 'Fred',
+  lastName: 'Flintstone'
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+})
 
 // 在 node.js 用GET请求获取远程图片
 axios({
-    method: 'get',
-    url: 'http://bit.ly/2mTM3nY',
-    responseType: 'stream'
-}).then(function (response) {
-    response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
-});
+  method: 'get',
+  url: 'http://bit.ly/2mTM3nY',
+  responseType: 'stream'
+}).then((response) => {
+  response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
+})
 ```
 
 ### 并发请求
 
 ```js
-
 function getUserAccount() {
-  return axios.get('/user/12345');
+  return axios.get('/user/12345')
 }
 
 function getUserPermissions() {
-  return axios.get('/user/12345/permissions');
+  return axios.get('/user/12345/permissions')
 }
 
 // 并发请求
 Promise.all([getUserAccount(), getUserPermissions()])
-  .then(function (results) {
-    const acct = results[0];
-    const perm = results[1];
-  });
+  .then((results) => {
+    const acct = results[0]
+    const perm = results[1]
+  })
 ```
 
 ## 取消请求
@@ -91,13 +88,13 @@ Promise.all([getUserAccount(), getUserPermissions()])
 axios从`v0.22.0` 开始支持以fetch api的方式：AbortController取消请求
 
 ```js
-const controller = new AbortController();
+const controller = new AbortController()
 
 axios.get('/foo/bar', {
-   signal: controller.signal
-}).then(function(response) {
-   //...
-});
+  signal: controller.signal
+}).then((response) => {
+  // ...
+})
 // 取消请求
 controller.abort()
 ```
@@ -124,8 +121,8 @@ controller.abort()
 const instance = axios.create({
   baseURL: 'https://142vip.cn/api/',
   timeout: 1000,
-  headers: {'X-Custom-Header': 'foobar'}
-});
+  headers: { 'X-Custom-Header': 'foobar' }
+})
 ```
 
 #### 配置
@@ -133,23 +130,23 @@ const instance = axios.create({
 **全局默认配置，将作用于每个请求**
 
 ```js
-axios.defaults.baseURL = 'https://api.example.com';
-axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+axios.defaults.baseURL = 'https://api.example.com'
+axios.defaults.headers.common.Authorization = AUTH_TOKEN
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 ```
 
 实例对象创建后，支持对默认值进行修改、覆盖
 
 ```js
 // 创建实例后修改默认值
-instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+instance.defaults.headers.common.Authorization = AUTH_TOKEN
 ```
 
 ## 请求配置
 
 **只有 url 是必需的。如果没有指定 method，请求将默认使用 GET 方法。**
 
-```js
+```text
 {
   // `url` 是用于请求的服务器 URL
   url: '/user',
@@ -202,7 +199,7 @@ instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
   data: {
     firstName: 'Fred'
   },
-  
+
   // 发送请求体数据的可选语法
   // 请求方式 post
   // 只有 value 会被发送，key 则不会
@@ -304,8 +301,8 @@ instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
   cancelToken: new CancelToken(function (cancel) {
   }),
 
-  // `decompress` indicates whether or not the response body should be decompressed 
-  // automatically. If set to `true` will also remove the 'content-encoding' header 
+  // `decompress` indicates whether or not the response body should be decompressed
+  // automatically. If set to `true` will also remove the 'content-encoding' header
   // from the responses objects of all decompressed responses
   // - Node only (XHR cannot turn off decompression)
   decompress: true // 默认值
@@ -315,7 +312,7 @@ instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 
 ## 响应结构
 
-```js
+```text
 {
   // `data` 由服务器提供的响应
   data: {},
@@ -347,37 +344,35 @@ instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 
 ```js
 // 添加请求拦截器
-axios.interceptors.request.use(function (config) {
-    // 在发送请求之前做些什么
-    return config;
-}, function (error) {
-    // 对请求错误做些什么
-    return Promise.reject(error);
-});
-
+axios.interceptors.request.use((config) => {
+  // 在发送请求之前做些什么
+  return config
+}, (error) => {
+  // 对请求错误做些什么
+  return Promise.reject(error)
+})
 ```
 
 ### 响应拦截器
 
 ```js
-
 // 添加响应拦截器
-axios.interceptors.response.use(function (response) {
-    // 2xx 范围内的状态码都会触发该函数。
-    // 对响应数据做点什么
-    return response;
-}, function (error) {
-    // 超出 2xx 范围的状态码都会触发该函数。
-    // 对响应错误做点什么
-    return Promise.reject(error);
-});
+axios.interceptors.response.use((response) => {
+  // 2xx 范围内的状态码都会触发该函数。
+  // 对响应数据做点什么
+  return response
+}, (error) => {
+  // 超出 2xx 范围的状态码都会触发该函数。
+  // 对响应错误做点什么
+  return Promise.reject(error)
+})
 ```
 
 ### 自定义
 
 ```js
-const instance = axios.create();
-instance.interceptors.request.use(function () {/*...*/});
+const instance = axios.create()
+instance.interceptors.request.use(() => { /* ... */ })
 ```
 
 ### 移除
@@ -385,34 +380,36 @@ instance.interceptors.request.use(function () {/*...*/});
 使用`eject`方法
 
 ```js
-const myInterceptor = axios.interceptors.request.use(function () {/*...*/});
-axios.interceptors.request.eject(myInterceptor);
+const myInterceptor = axios.interceptors.request.use(() => { /* ... */ })
+axios.interceptors.request.eject(myInterceptor)
 ```
 
 ### 错误处理
 
 ```js
 axios.get('/user/12345')
-  .catch(function (error) {
+  .catch((error) => {
     if (error.response) {
       // 请求成功发出且服务器也响应了状态码，但状态代码超出了 2xx 的范围
-      console.log(error.response.data);
-      console.log(error.response.status);
-      console.log(error.response.headers);
-    } else if (error.request) {
+      console.log(error.response.data)
+      console.log(error.response.status)
+      console.log(error.response.headers)
+    }
+    else if (error.request) {
       // 请求已经成功发起，但没有收到响应
       // `error.request` 在浏览器中是 XMLHttpRequest 的实例，
       // 而在node.js中是 http.ClientRequest 的实例
-      console.log(error.request);
-    } else {
-      // 发送请求时出了点问题
-      console.log('Error', error.message);
+      console.log(error.request)
     }
-    console.log(error.config);
-    
+    else {
+      // 发送请求时出了点问题
+      console.log('Error', error.message)
+    }
+    console.log(error.config)
+
     // 使用 toJSON 可以获取更多关于HTTP错误的信息
-    console.log(error.toJSON());
-  });
+    console.log(error.toJSON())
+  })
 ```
 
 ## 最佳实践
@@ -422,51 +419,48 @@ axios.get('/user/12345')
 以application/x-www-form-urlencoded格式发送数据时，可以做如下处理：
 
 ```js
-
 // 在浏览器中
-const params = new URLSearchParams();
-params.append('param1', 'value1');
-params.append('param2', 'value2');
-axios.post('/foo', params);
+// 推荐直接使用qs模块处理
+import qs from 'qs'
 
+const params = new URLSearchParams()
+params.append('param1', 'value1')
+params.append('param2', 'value2')
+axios.post('/foo', params)
 
 // 在Node.js
-const url = require('url');
-const params = new url.URLSearchParams({ foo: 'bar' });
-axios.post('http://something.com/', params.toString());
-
-// 推荐直接使用qs模块处理
-import qs from 'qs';
-const data = { 'bar': 123 };
+const url = require('node:url')
+const urlSearchParams = new url.URLSearchParams({ foo: 'bar' })
+axios.post('http://something.com/', urlSearchParams.toString())
+const data = { bar: 123 }
 const options = {
-    method: 'POST',
-    headers: { 'content-type': 'application/x-www-form-urlencoded' },
-    data: qs.stringify(data),
-    url,
-};
-axios(options);
-
+  method: 'POST',
+  headers: { 'content-type': 'application/x-www-form-urlencoded' },
+  data: qs.stringify(data),
+  url,
+}
+axios(options)
 ```
 
 以Form data格式发送数据时，可以做如下处理：
 
 ```js
-const FormData = require('form-data');
- 
-const form = new FormData();
-form.append('my_field', 'my value');
-form.append('my_buffer', new Buffer(10));
-form.append('my_file', fs.createReadStream('/foo/bar.jpg'));
+const FormData = require('form-data')
+
+const form = new FormData()
+form.append('my_field', 'my value')
+form.append('my_buffer', Buffer.alloc(10))
+form.append('my_file', fs.createReadStream('/foo/bar.jpg'))
 
 axios.post('https://example.com', form, { headers: form.getHeaders() })
 
 // 或者在拦截器中进行数据拷贝
-axios.interceptors.request.use(config => {
-    if (config.data instanceof FormData) {
-        Object.assign(config.headers, config.data.getHeaders());
-    }
-    return config;
-});
+axios.interceptors.request.use((config) => {
+  if (config.data instanceof FormData) {
+    Object.assign(config.headers, config.data.getHeaders())
+  }
+  return config
+})
 ```
 
 另外在实际使用axios时，会结合项目开发对axios进行全局封装处理，区分环境切换不同的配置。一般采用`process.env`来区分环境

@@ -2,7 +2,6 @@
 title: look命令
 permalink: /server-end/linux/base-install/look.html
 ---
-  
 
 # look命令
 
@@ -43,9 +42,9 @@ look ab
 
 ```text
 # file.txt
-HELLO LINUX!  
-Linux is a free unix-type opterating system.  
-This is a linux testfile!  
+HELLO LINUX!
+Linux is a free unix-type opterating system.
+This is a linux testfile!
 ```
 
 ```text

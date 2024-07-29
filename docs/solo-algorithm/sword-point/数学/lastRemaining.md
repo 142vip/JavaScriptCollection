@@ -37,7 +37,6 @@ f(n,m)=(f(n-1,m)+m)%n; （n>1）
 @[code js](@algorithm/sword-point/数学/lastRemaining.js)
 
 ```js
-
 /*
  * @Description: 【中等】圆圈中最后剩下的数 约瑟夫问题
  * @Version: Beta1.0
@@ -46,8 +45,6 @@ f(n,m)=(f(n-1,m)+m)%n; （n>1）
  * @LastEditors: 微信公众号：储凡
  * @LastEditTime: 2021-05-05 15:11:02
  */
-
-
 
 function LastRemainingSolution(n, m) {
   // 递推公式： f(0)=-1  f(1)=0 f(i)={f(i-1)+m}%i
@@ -84,7 +81,6 @@ function LastRemainingSSolution01(n, m) {
   // 返回
   return result
 }
-
 ```
 
 ## 一些建议

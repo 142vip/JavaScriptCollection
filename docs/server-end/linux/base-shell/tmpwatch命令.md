@@ -2,7 +2,6 @@
 title: tmpwatch命令
 permalink: /server-end/linux/base-install/tmpwatch.html
 ---
-  
 
 # tmpwatch命令
 

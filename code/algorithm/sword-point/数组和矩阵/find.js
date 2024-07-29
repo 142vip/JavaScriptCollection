@@ -85,26 +85,26 @@ function findTwo(target, array) {
  * @param array
  */
 function findThree(target, array) {
-  return array.some(arr => arr.some(item => item === target))
+  return array.some(arr => arr.includes(target))
 }
 
 console.log(findOne(19, [
   [1, 2, 8, 9],
   [2, 4, 9, 12],
   [4, 7, 10, 13],
-  [6, 8, 11, 15]
+  [6, 8, 11, 15],
 ]))
 
 console.log(findTwo(19, [
   [1, 2, 8, 9],
   [2, 4, 9, 12],
   [4, 7, 10, 13],
-  [6, 8, 11, 15]
+  [6, 8, 11, 15],
 ]))
 
 console.log(findThree(19, [
   [1, 2, 8, 9],
   [2, 4, 9, 12],
   [4, 7, 10, 13],
-  [6, 8, 11, 15]
+  [6, 8, 11, 15],
 ]))

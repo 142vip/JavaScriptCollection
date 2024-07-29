@@ -1,6 +1,7 @@
 const express = require('express')
+
 const app = express()
-const path = require('path')
+const path = require('node:path')
 // 服务启动端口
 const port = 3000
 
@@ -12,7 +13,6 @@ app.use('/static', express.static('public'))
 
 // 使用绝对路径
 app.use('/static-back', express.static(path.join(__dirname, 'public')))
-
 
 /**
  * 服务启动，监听端口

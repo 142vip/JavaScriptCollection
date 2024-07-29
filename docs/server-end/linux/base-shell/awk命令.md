@@ -2,7 +2,6 @@
 title: awk命令
 permalink: /server-end/linux/base-install/awk.html
 ---
-  
 
 # awk命令
 
@@ -27,8 +26,8 @@ awk [ -F fs ] [ -v var=value ] [ 'prog' | -f progfile ] [ file ... ]
 示例文件`example.txt`文件内容如下：
 
 ```text
-Bucks Milwaukee    60 22 0.732 
-Raptors Toronto    55 24 0.707 
+Bucks Milwaukee    60 22 0.732
+Raptors Toronto    55 24 0.707
 76ers Philadelphia 51 31 0.622
 Celtics Boston     33 33 0.598
 Pacers Indiana     30 34 0.585

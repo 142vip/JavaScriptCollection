@@ -2,7 +2,6 @@
 title: diff命令
 permalink: /server-end/linux/base-install/diff.html
 ---
-  
 
 # diff命令
 
@@ -61,7 +60,7 @@ diff file.txt file2.txt
 比较`file.txt`与`file2.txt`文件的差异，并排输出全部内容，`|`表示前后`2`个文件内容有不同，`<`表示后面文件比前面文件少了`1`行内容，`>`表示后面文件比前面文件多了`1`行内容。
 
 ```shell
-diff -y file.txt file2.txt 
+diff -y file.txt file2.txt
 ```
 
 比较`file.txt`与自定义输入内容的差异，输入内容后按`Ctrl+D`输出`EOF`标识后结束输入。

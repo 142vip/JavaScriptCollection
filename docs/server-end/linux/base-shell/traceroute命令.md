@@ -2,7 +2,6 @@
 title: traceroute命令
 permalink: /server-end/linux/base-install/traceroute.html
 ---
-  
 
 # traceroute命令
 
@@ -11,10 +10,10 @@ permalink: /server-end/linux/base-install/traceroute.html
 ## 语法
 
 ```shell
-traceroute [-46dFITUnreAV] [-f first_ttl] [-g gate,...] [-i device] 
-           [-m max_ttl] [-p port] [-s src_addr] [-q nqueries] 
-           [-N squeries] [-t tos] [-l flow_label] [-w waittime] 
-           [-z sendwait] [-UL] [-D] [-P proto] [--sport=port] [-M method] 
+traceroute [-46dFITUnreAV] [-f first_ttl] [-g gate,...] [-i device]
+           [-m max_ttl] [-p port] [-s src_addr] [-q nqueries]
+           [-N squeries] [-t tos] [-l flow_label] [-w waittime]
+           [-z sendwait] [-UL] [-D] [-P proto] [--sport=port] [-M method]
            [-O mod_options] [--mtu] [--back] host [packet_len]
 ```
 

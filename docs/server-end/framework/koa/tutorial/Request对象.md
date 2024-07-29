@@ -14,7 +14,7 @@ permalink: /server-end/framework/koa-tutorial/request.html
 请求头对象信息，也支持设置请求头对象信息
 
 ```js
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   // 获取
   console.log(ctx.request.header)
   // 设置
@@ -83,7 +83,7 @@ console.log(ctx.request.href)
 console.log(ctx.request.querystring)
 
 // 设置
-ctx.request.querystring='?a=1&b=2'
+ctx.request.querystring = '?a=1&b=2'
 ```
 
 ### request.search
@@ -111,7 +111,7 @@ ctx.request.querystring='?a=1&b=2'
 存在时获取请求字符集，不存在则返回`undefined`,例如：
 
 ```js
-ctx.request.charset;
+ctx.request.charset
 // => "utf-8"
 ```
 
@@ -125,10 +125,9 @@ ctx.request.charset;
 // 获取查询字符串
 console.log(ctx.request.query)
 // 输出对象： {color:"blue",size:'small'}
- 
-// 设置查询字符串
-ctx.query = { next: '/login' };
 
+// 设置查询字符串
+ctx.query = { next: '/login' }
 ```
 
 ### request.ip

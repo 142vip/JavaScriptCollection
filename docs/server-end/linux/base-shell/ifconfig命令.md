@@ -2,7 +2,6 @@
 title: ifconfig命令
 permalink: /server-end/linux/base-install/ifconfig.html
 ---
-  
 
 # ifconfig命令
 
@@ -108,5 +107,5 @@ ifconfig eth0 -arp
 设置最大传输单元`MTU`。
 
 ```shell
-ifconfig eth0 mtu 1500 
+ifconfig eth0 mtu 1500
 ```

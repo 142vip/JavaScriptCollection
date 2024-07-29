@@ -2,7 +2,6 @@
 title: fold命令
 permalink: /server-end/linux/base-install/fold.html
 ---
-  
 
 # fold命令
 

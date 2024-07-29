@@ -1,4 +1,5 @@
 const express = require('express')
+
 const app = express()
 
 express.raw({
@@ -14,7 +15,7 @@ express.raw({
   // 可选参数，函数包含req、res、buffer、encoding四个参数
   // 提供原始的请求正文Buffer数据、编码等信息，可以通过抛错来终止解析
   verify(req, res, buf, encoding) {
-  }
+  },
 })
 
 express.json({
@@ -29,7 +30,7 @@ express.json({
   // 参考JSON.parse()的API：
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Example.3A_Using_the_reviver_parameter
   reviver(key, value) {
-  }
+  },
 })
 
 express.text({
@@ -37,7 +38,7 @@ express.text({
 
   // 可选参数，字符串
   // 如果请求的header中没有指定Content-Type类型，指定文本内容的编码类型， 默认utf-8
-  defaultCharset: undefined
+  defaultCharset: undefined,
 })
 
 express.urlencoded({
@@ -51,7 +52,5 @@ express.urlencoded({
   // 可选参数，数字类型
   // 允许URL地址中传递的参数最大字段个数，默认为1000
   // 当参数个数超出时，返回客户端 413 状态码，表示请求体过大
-  parameterLimit: undefined
+  parameterLimit: undefined,
 })
-
-

@@ -62,7 +62,6 @@ function reverseStr(str) {
   return result.join('')
 }
 console.log(LeftRotateString('', 6))
-
 ```
 
 ## 一些建议

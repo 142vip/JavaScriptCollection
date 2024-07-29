@@ -2,7 +2,6 @@
 title: rm命令
 permalink: /server-end/linux/base-install/rm.html
 ---
-  
 
 # rm命令
 

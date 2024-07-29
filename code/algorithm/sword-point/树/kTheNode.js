@@ -1,4 +1,3 @@
-
 /**
  * 链表结点
  * @param x
@@ -15,7 +14,7 @@ const root = {
   left: {
     val: 6,
     left: { val: 5, left: null, right: null },
-    right: { val: 7, left: null, right: null }
+    right: { val: 7, left: null, right: null },
   },
   right: {
     val: 10,
@@ -26,10 +25,10 @@ const root = {
       right: {
         val: 12,
         left: null,
-        right: null
-      }
-    }
-  }
+        right: null,
+      },
+    },
+  },
 }
 
 function TreeNode(x) {

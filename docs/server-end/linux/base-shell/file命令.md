@@ -2,7 +2,6 @@
 title: file命令
 permalink: /server-end/linux/base-install/file.html
 ---
-  
 
 # file命令
 

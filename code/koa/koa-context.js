@@ -1,6 +1,7 @@
 const Koa = require('koa')
+
 const app = new Koa()
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   // Context对象
   console.log(ctx)
   // Koa的Request对象
@@ -11,7 +12,7 @@ app.use(async(ctx, next) => {
   await next()
 })
 
-app.use(ctx => {
+app.use((ctx) => {
   // ctx.app是对app的引用
   console.log(ctx.app === app)
   ctx.cookies.set()
@@ -22,13 +23,11 @@ app.use(ctx => {
   ctx.assert()
 })
 
-
-app.use(async(ctx, next) => {
+app.use(async (ctx, _next) => {
   ctx.body = 'hello world'
   ctx.status = 200
   ctx.res.statusCode = 500
 })
-
 
 app.listen(8000)
 console.log('listening on port 8000')

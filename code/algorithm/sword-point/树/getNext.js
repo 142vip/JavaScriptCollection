@@ -27,7 +27,8 @@ function GetNext(pNode) {
     }
     // 跳出循环的时候，right_node.left==null；即:right_node为叶子结点
     return rightNode
-  } else {
+  }
+  else {
     // 右子树为空,则向上找
     while (pNode.next !== null) {
       const parentNode = pNode.next

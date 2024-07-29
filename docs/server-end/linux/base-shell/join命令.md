@@ -2,7 +2,6 @@
 title: join命令
 permalink: /server-end/linux/base-install/join.html
 ---
-  
 
 # join命令
 
@@ -84,7 +83,7 @@ join file1.txt file2.txt -v 1
 ```shell
 `file1.txt`与`file2.txt`文件内容如下：
 # file1.txt
-AAYUSH 1 
+AAYUSH 1
 APAAR 2
 HEMANT 3
 KARTIK 4

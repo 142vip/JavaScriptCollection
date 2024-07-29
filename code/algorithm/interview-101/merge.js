@@ -7,5 +7,5 @@ function merge(pHead1, pHead2) {
   // write code here
 }
 module.exports = {
-  merge
+  merge,
 }

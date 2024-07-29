@@ -62,7 +62,7 @@ express --no-view template-demo
 
 ```bash
 ## 下载依赖
-npm ci 
+npm ci
 
 ## 启动项目
 npm run dev

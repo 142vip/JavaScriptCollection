@@ -174,7 +174,7 @@ npm -v
 sudo npm install -g npm@2.9
 
 ## 安装在node_module下，不保存在package.json中
-npm install  
+npm install
 
 ## 安装在node_module目录下，同时保存到package.json的dependencies，在安装模块时必须安装
 npm install --save-prod 或 npm install -P
@@ -183,7 +183,7 @@ npm install --save-prod 或 npm install -P
 npm install --save-dev 或 npm install -D
 
 ## 安装的模块为全局模块，如果时命令行模块，会直接链接到环境变量中
-npm install --global 或 npm install -g 
+npm install --global 或 npm install -g
 ```
 
 ### nrm
@@ -268,20 +268,20 @@ Node.js是基于CommonJS规范的实现，即每个文件都是一个模块，�
 例如：
 
 ```js
-
 // 相关模块
 
-const http = require('http')
-const fs = require('fs')
+const http = require('node:http')
+const fs = require('node:fs')
 
 // 实例化对象
 
 const app = http.createServer((req, res) => {
   // 路由白名单
-  if ('/remote' === req.url) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
+  if (req.url === '/remote') {
+    res.writeHead(200, { 'Content-Type': 'text/plain' })
     return res.end('hello remote page')
-  } else {
+  }
+  else {
     // 代理
     proxy(req, res)
   }
@@ -289,7 +289,7 @@ const app = http.createServer((req, res) => {
 
 function proxy(req, res) {
   // 基础配置
-  let options = {
+  const options = {
     host: req.host,
     port: 3000,
     headers: req.headers,
@@ -299,11 +299,11 @@ function proxy(req, res) {
   }
 
   // 初始化代理
-  let httpProxy = http.request(options, response => {
+  const httpProxy = http.request(options, (response) => {
     // 将res放到response流里面，进行代理
     response.pipe(res)
   })
-  // 
+  //
   req.pipe(httpProxy)
 }
 
@@ -314,7 +314,6 @@ app.listen(3000, () => {
   const port = app.address().port
   console.log(`server is running at http://127.0.0.1:${port}`)
 })
-
 ```
 
 http.request方法的返回值是http.ClientRequest，它继承自OutgoingMessage，所以：http.request方法的返回值和res是一致的
@@ -351,7 +350,7 @@ http.request方法的返回值是http.ClientRequest，它继承自OutgoingMessag
 // express模块
 const express = require('express')
 // 实例化对象
-const app = express();
+const app = express()
 
 // 简单路由接口
 
@@ -365,7 +364,6 @@ app.get('/index', (req, res) => {
 app.listen(3000, () => {
   console.log('express server is running on port 3000')
 })
-
 ```
 
 如上，一个简单的web服务就跑起来了，当我在实习第一次接触到Node.js的时候，就被这种快速的方式所吸引，记得还感慨过`Spring`的那一套
@@ -396,7 +394,6 @@ const student = new Student('Tom')
 
 // 调用类方法
 student.speak()
-
 
 // 类的继承
 class Boy extends Student {
@@ -451,17 +448,16 @@ const map = fn => {
 常见单线程实例：
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 const Koa = require('koa')
 
 // 实例化koa对象
 
 const app = new Koa()
 
-
 // 中间件拦截
 
-app.user(ctx => {
+app.user((ctx) => {
   ctx.body = 'hello world'
 })
 
@@ -474,22 +470,21 @@ app.listen(3000)
 捕获异常
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 const Koa = require('koa')
 
 // 实例化koa对象
 
 const app = new Koa()
 
-
 // 中间件拦截
 
-app.user(ctx => {
+app.user((ctx) => {
   ctx.body = 'hello world'
 })
 
-// 代码优化 
-process.on('uncaughtException', err => {
+// 代码优化
+process.on('uncaughtException', (err) => {
   console.log('catch err :', err)
 })
 
@@ -558,7 +553,7 @@ yarn upgrade [package]@[tag]
 yarn remove [package]
 
 ## 项目里安装
-yarn 
+yarn
 ## 或者
 yarn install
 ```
@@ -579,17 +574,15 @@ yarn install
 > 可以参考对应的[官方api文档](http://nodejs.cn/api/process.html#process_process_cpuusage_previousvalue)
 
 ```js
-
-const startUsage = process.cpuUsage();
+const startUsage = process.cpuUsage()
 // { user: 38579, system: 6986 }
 
 // 将 CPU 旋转 500 毫秒。
-const now = Date.now();
+const now = Date.now()
 while (Date.now() - now < 500) ;
 
-console.log(process.cpuUsage(startUsage));
+console.log(process.cpuUsage(startUsage))
 // { user: 514883, system: 11226 }
-
 ```
 
 2.事件循环机制：process.nextTick
@@ -600,14 +593,13 @@ console.log(process.cpuUsage(startUsage));
 在上述循环队列中，会设置到`nextTick`和`_tickCallback`两个方法
 
 ```js
-// 
+//
 function lateCallback() {
   console.log('print me later')
 }
 
 process.nextTick(laterCallback)
 console.log('print me first')
-
 ```
 
 - nextTick的作用是把laterCallback放到下一个循环事件中去执行
@@ -689,7 +681,6 @@ const PI = Math.PI
 
 exports.PI = PI
 
-
 // 引入演示
 
 const PI = require('XXX')
@@ -712,7 +703,6 @@ module.exports = () => {
 }
 
 // 此时，只有module.exports有效
-
 ```
 
 总结来说，在CommonJs规范里面没有module.exports对象，一般用exports对象和required来处理模块的导出和引入
@@ -760,10 +750,8 @@ module.exports-->exports
 **核心是module.exports，exports对象只是module.exports的一个引用**
 
 ```js
-
 // 变量引用
 const exports = module.exports = {}
-
 ```
 
 ```js
@@ -771,22 +759,20 @@ exports.sayHelloInChinese = () => {
   return '你好'
 }
 
-
 exports.sayHelloInEnglish = () => {
   return 'Hello'
 }
 ```
 
-```js  
+```js
 module.exports = {
   sayHelloInEnglish: () => {
-    return 'Hello';
+    return 'Hello'
   },
   sayHelloInChinese: () => {
     return '你好'
   }
 }
-
 ```
 
 从上面可以看到:
@@ -966,11 +952,10 @@ ES模块的优势：
 
 ```ts
 // 直接导入，并取名fs 与CommonJS中的const fs=require('fs')类似
-import * as fs from 'fs'
+import * as fs from 'node:fs'
 
 // 按需导入
-import {readFile} from 'fs'
-
+import { readFile } from 'node:fs'
 ```
 
 **此时按需导入只加载readFile方法，不加载其他，这种加载叫做编译时加载或者静态加载能够让ES6在编译时完成模块加载，效率更高**
@@ -978,13 +963,11 @@ import {readFile} from 'fs'
 ##### 模块导出
 
 ```js
-
 // 对所有内容进行导出
 export * from 'XXXXX'
 
 // 按照需要进行导出
-export {foot as foot_copy, bar} from 'XXXX'
-
+export { foot as foot_copy, bar } from 'XXXX'
 ```
 
 注意as的使用，有时候为了代码方便，别名是非常有必要的
@@ -1021,12 +1004,12 @@ export let test;
 ```js
 export function myFunc(){
     // 处理逻辑
-    ....
+    ...
 }
 
-export function* myGenFunc(){
+export function myGenFunc(){
     // 处理逻辑
-    ....
+    ...
 }
 
 // function* 这种声明方式(function关键字后跟一个星号）会定义一个
@@ -1052,38 +1035,33 @@ export class MyClass {
 ```js
 
 export default function myFunc(){
-    // 
-    ...
-}
-
-export default function(){
     //
     ...
 }
 
+export default function(){
+    // ...
+}
+
 // 默认导出生成器函数，返回generator函数
 export default function* myGenFunc(){
-    
-    ...
+    // ...
 }
 
 export default function* (){
-    // 
-    ...
+    // ...
 }
 
 // 默认导出MyClass类
 export default class MyClass{
     // 类实现
-    ...
+    // ...
 }
 
 // 默认导出匿名类
 export default class{
-    //
-    ...
+    // ...
 }
-
 
 // 当然，其他的也是可以的
 
@@ -1132,7 +1110,7 @@ $.ajax({
   url: 'XXXXX',
   type: 'get',
   data: {},
-  success: ret => {
+  success: (ret) => {
     // 回调函数的方式，返回结果
     console.log(ret)
   }
@@ -1175,7 +1153,6 @@ fs.readdir(path,(err,files)=>{
     // 读取结果
     console.log(files)
 })
-
 
 // 同步写法
 
@@ -1229,12 +1206,12 @@ function (err,data){
 - 模块应该暴露错误优先的回调接口
 
 ```js
-module.exports=function(dragonName,callback){
-    // 逻辑处理
-    const dragon=createDragon(dragonName);
-    
-    // 注意第一个参数时error,如果没有错误，则它的默认值时null
-    return callback(null,dragon);
+module.exports = function (dragonName, callback) {
+  // 逻辑处理
+  const dragon = createDragon(dragonName)
+
+  // 注意第一个参数时error,如果没有错误，则它的默认值时null
+  return callback(null, dragon)
 }
 ```
 
@@ -1277,14 +1254,13 @@ on-->emit
 EventEmitter是Node.js的基础模块，通过EventEmitter属性建立了一个EventEmitter对象实例，即：消息中心
 
 ```js
-const EventEmitter=require('events')
+const EventEmitter = require('node:events')
 // 初始化消息中心实例
-const observer=new EventEmitter();
-
+const observer = new EventEmitter()
 
 // 订阅
-observer.on('topic',()=>{
-    console.log('订阅执行的方法')
+observer.on('topic', () => {
+  console.log('订阅执行的方法')
 })
 
 // 发布 可以传参
@@ -1292,15 +1268,14 @@ observer.emit('topic')
 
 // 声明方法调用
 
-function main(){
-    console.log('main() function start:')
-    observer.emit('topic')
-    console.log('main() function ending')
+function main() {
+  console.log('main() function start:')
+  observer.emit('topic')
+  console.log('main() function ending')
 }
 
 // 执行
 main()
-
 ```
 
 可以简单理解为“发布/订阅”模式，当observer调用emit方法时，所有通过on注册该topic事件的回调函数都会被调用；
@@ -1310,20 +1285,18 @@ EventEmitter对象的事件触发和监听时同步的，这里和前端的事�
 ```js
 // jquery
 
-$('#footer').on('click', function () {
+$('#footer').on('click', () => {
   console.log('点击后的效果')
 })
 
 // 此处的trigger类似于emit，事件的触发器
-$('#footer').trigger('click');
-
+$('#footer').trigger('click')
 
 // click事件，也可以支持简写
 
 $('#footer').click(() => {
   console.log('点击后触发')
 })
-
 ```
 
 emit()方法用于触发事件，on()方法用于注册事件。对于on()方法而言，默认情况下，Node.js允许同一个事件最多指定10个回调函数
@@ -1388,8 +1361,8 @@ myEmitter.emit('test', 10)
 
 ```js
 Promise.protype.then = function (success, fail) {
-  this.done(success);
-  this.fail(fail);
+  this.done(success)
+  this.fail(fail)
   // 返回this
   return this
 }
@@ -1428,8 +1401,8 @@ pending-->rejected
 
 ```js
 // 构造函数
-new Promise((resolve,reject)=>{
-    
+new Promise((resolve, reject) => {
+
 })
 // 所有Promise都要通过这种方式创建， resolve和reject是唯一可以改变Promise对象状态的接口
 ```
@@ -1442,19 +1415,19 @@ new Promise((resolve,reject)=>{
 Promise.protype.then()
 
 // 捕获全局操作的reject异常
-Promise.protype.catch() 
+Promise.protype.catch()
 ```
 
 **特别值得注意的是：resolve相当于Promise.resolve的别名，reject相当于Promise.reject的别名**。
 
 ```js
-new Promise(resolve => {
+new Promise((resolve) => {
   resolve(1)
-}).then(ret => {
+}).then((ret) => {
   console.log('resolve传递值：', ret)
 })
 // 类似于别名
-Promise.resolve(1).then(ret => {
+Promise.resolve(1).then((ret) => {
   console.log('resolve传递值：', ret)
 })
 ```
@@ -1499,28 +1472,28 @@ Promise.resolve(1).then(ret => {
 以上两个api都是基于`bulebird`模块的
 
 ```js
-const Promise =require('bluebird')
+const Promise = require('bluebird')
 
-const fs=Promise.promisifyAll(require('fs'))
+const fs = Promise.promisifyAll(require('node:fs'))
 
-const obj={
-    a:()=>{
-        console.log('function a')
-    },
-    b:()=>{
-        console.log('function b')
-    },
-    c:()=>{
-        console.log('function c')
-    }
+const obj = {
+  a: () => {
+    console.log('function a')
+  },
+  b: () => {
+    console.log('function b')
+  },
+  c: () => {
+    console.log('function c')
+  }
 }
 // 全部转化为同步
 
 Promise.promisifyAll(obj)
 
 // 调用
-obj.aAsync().then(obj.bAsync()).then(obj.cAsync()).catch(err=>{
-    // 处理
+obj.aAsync().then(obj.bAsync()).then(obj.cAsync()).catch((err) => {
+  // 处理
 })
 ```
 

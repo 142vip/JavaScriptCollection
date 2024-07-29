@@ -6,9 +6,9 @@ namespace MVCPattern {
 
   // 模型（Model）
   interface Todo {
-    id: number;
-    title: string;
-    completed: boolean;
+    id: number
+    title: string
+    completed: boolean
   }
 
   class TodoModel {
@@ -23,7 +23,7 @@ namespace MVCPattern {
     }
 
     updateTodoStatus(id: number, completed: boolean) {
-      const todo = this.todos.find((todo) => todo.id === id)
+      const todo = this.todos.find(todo => todo.id === id)
       if (todo) {
         todo.completed = completed
       }

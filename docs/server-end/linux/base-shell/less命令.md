@@ -2,7 +2,6 @@
 title: less命令
 permalink: /server-end/linux/base-install/less.html
 ---
-  
 
 # less命令
 
@@ -77,6 +76,6 @@ ps -ef | less
 查看`file.txt`文件并检索向后检索`1`字符串。
 
 ```shell
-less file.txt 
+less file.txt
 /1
 ```

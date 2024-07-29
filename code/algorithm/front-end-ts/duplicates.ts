@@ -1,7 +1,7 @@
 /**
  * 找出数组 arr 中重复出现过的元素
  */
-function duplicates(arr:number[]) {
+function duplicates(arr: number[]) {
   const sortArr = arr.sort()
   const result = []
   const len = sortArr.length

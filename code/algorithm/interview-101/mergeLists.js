@@ -7,5 +7,5 @@ function mergeKLists(lists) {
 
 }
 module.exports = {
-  mergeKLists
+  mergeKLists,
 }

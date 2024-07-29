@@ -2,7 +2,6 @@
 title: ln命令
 permalink: /server-end/linux/base-install/ln.html
 ---
-  
 
 # ln命令
 

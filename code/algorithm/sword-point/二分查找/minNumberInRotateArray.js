@@ -15,4 +15,3 @@ function minNumberInRotateArray(rotateArray) {
   }
   return rotateArray[0]
 }
-

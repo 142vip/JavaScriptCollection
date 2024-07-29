@@ -2,7 +2,6 @@
 title: pico命令
 permalink: /server-end/linux/base-install/pico.html
 ---
-  
 
 # pico命令
 

@@ -1,11 +1,12 @@
 const Koa = require('koa')
+
 const app = new Koa()
 
 /**
  * logger
  * 第一个中间件，记录日志
  */
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   const middleRes1 = await next()
   console.log('middleware1===>', middleRes1)
   const rt = ctx.response.get('X-Response-Time')
@@ -20,7 +21,7 @@ app.use(async(ctx, next) => {
  * 第二个中间件，记录响应时间
  */
 
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   const start = Date.now()
   const middleRes2 = await next()
   console.log('middleware2===>', middleRes2)
@@ -33,7 +34,7 @@ app.use(async(ctx, next) => {
  * response
  * 最后一个中间件，处理响应
  */
-app.use(async ctx => {
+app.use(async (ctx) => {
   ctx.body = 'Hello World'
   console.log('middleware3===>')
 

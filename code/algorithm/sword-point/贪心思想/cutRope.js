@@ -11,5 +11,4 @@ function cutRope(number) {
   return max
 }
 
-
 console.log(cutRope(8))

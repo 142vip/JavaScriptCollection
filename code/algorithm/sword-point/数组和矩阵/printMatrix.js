@@ -7,7 +7,6 @@
  * @LastEditTime: 2021-04-28 22:25:16
  */
 
-
 /**
  * 没有技巧，按照方向转
  * @param matrix
@@ -75,7 +74,8 @@ function printMatrixOne(matrix) {
  */
 function printMatrixTwo(matrix) {
   const len = matrix.length
-  if (len === 1) return [...matrix[0]]
+  if (len === 1)
+    return [...matrix[0]]
 
   let seq = []
   for (let i = 0; i < matrix.length / 2; i++) {
@@ -86,7 +86,8 @@ function printMatrixTwo(matrix) {
       seq.push(row.pop())
     }
 
-    if (matrix.length === 0) break
+    if (matrix.length === 0)
+      break
     else seq.push(...matrix.pop().reverse())
 
     // 左侧
@@ -105,13 +106,14 @@ console.log(printMatrixOne([
   [1, 2, 3, 4],
   [5, 6, 7, 8],
   [9, 10, 11, 12],
-  [13, 14, 15, 16]]
+  [13, 14, 15, 16],
+],
 ))
 
 console.log(printMatrixTwo([
   [1, 2, 3, 4],
   [5, 6, 7, 8],
   [9, 10, 11, 12],
-  [13, 14, 15, 16]]
+  [13, 14, 15, 16],
+],
 ))
-

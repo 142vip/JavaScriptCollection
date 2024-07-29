@@ -35,7 +35,7 @@ npm install egg-mysql --save
 exports.mysql = {
   enable: true,
   package: 'egg-mysql',
-};
+}
 ```
 
 在开启插件的同时，项目中使用外部数据库就需要进行相关的连接参数配置，值得一提的是：`egg-mysql` 和 `egg-sequelize`
@@ -62,22 +62,20 @@ exports.mysql = {
   app: true,
   // 加载到agent对象中，默认关闭
   agent: false,
-};
+}
 ```
 
 获取mysql对象：
 
 ```js
-
 // 通过app对象获取mysql单个默认实例【前提：mysql加载到app对象中，即配置中app:true】
 // 执行自定义sql语句
-app.mysql.query(sql, values);
+app.mysql.query(sql, values)
 ```
 
 ### 连接多个数据库
 
 ```js
-
 // config/xxxx.js
 exports.mysql = {
   clients: {
@@ -102,20 +100,20 @@ exports.mysql = {
   app: true,
   // 加载到agent对象中，默认关闭
   agent: false,
-};
+}
 ```
 
 获取mysql对象：
 
 ```js
 // 获取mysql_salve_01 实例
-const mysqlSlaveClient01 = app.mysql.get('mysql_slave_01');
+const mysqlSlaveClient01 = app.mysql.get('mysql_slave_01')
 // 执行自定义sql语句
-mysqlSlaveClient01.query(sql, values);
+mysqlSlaveClient01.query(sql, values)
 
 // 获取mysql_salve_02 实例
-const mysqlSlaveClient02 = app.mysql.get('mysql_slave_02');
-mysqlSlaveClient02.query(sql, values);
+const mysqlSlaveClient02 = app.mysql.get('mysql_slave_02')
+mysqlSlaveClient02.query(sql, values)
 ```
 
 ## 操作教程
@@ -147,19 +145,20 @@ mysqlSlaveClient02.query(sql, values);
 
 ```js
 // 创建事务对象
-const tran = await db.beginTransaction();
+const tran = await db.beginTransaction()
 
 try {
   // 同步执行，异步无法捕获
-  await tran.insert(table, insert_data);
-  await tran.update(table, update_data);
+  await tran.insert(table, insert_data)
+  await tran.update(table, update_data)
   // 提交事务
-  await tran.commit();
-} catch (err) {
+  await tran.commit()
+}
+catch (err) {
   // 出现错误进行捕获、操作回滚
-  await tran.rollback();
+  await tran.rollback()
   // 抛出异常，供外部捕获
-  throw err;
+  throw err
 }
 ```
 
@@ -173,7 +172,7 @@ try {
 这用到的是beginTransactionScope(scope)分布式事务，自动提交、自动回滚操作；
 
 ```js
-const result = await db.beginTransactionScope(function* (conn) {
+const result = await db.beginTransactionScope((conn) {
   // 不需要手动进行事务的提交和回滚
   await conn.insert(table, row1);
   await conn.update(table, row2);
@@ -194,8 +193,8 @@ const result = await db.beginTransactionScope(function* (conn) {
  * @param {Object|Array|String..} data 参数
  *
  **/
-async function* foo(ctx, data) {
-  return await db.beginTransactionScope(function* (conn) {
+async function foo(ctx, data) {
+  return await db.beginTransactionScope(async (conn) {
     await conn.insert('user', data);
     return {success: true};
   }, ctx);
@@ -207,8 +206,8 @@ async function* foo(ctx, data) {
  * @param {Object|Array|String..} data 参数
  *
  **/
-async function* bar(ctx, data) {
-  return await db.beginTransactionScope(function* (conn) {
+async function bar(ctx, data) {
+  return await db.beginTransactionScope(async  (conn) {
     // 使用相同的transaction scope执行foo设置
     await foo(ctx, {foo: 'bar'});
     // 数据插入
@@ -268,18 +267,17 @@ async function* bar(ctx, data) {
 ### 添加（insert）
 
 ```js
-
 // user表中插入单条数据，
-const result = await app.mysql.insert('user', {name: 'tom'});
+const result = await app.mysql.insert('user', { name: 'tom' })
 
 // 判断插入结果
-const insertSuccess = result.affectedRows === 1;
+const insertSuccess = result.affectedRows === 1
 ```
 
 从上面可以看到，利用的`insert`的操作，当然也是能够支持多条数据同时添加的
 
 ```js
-const users = [{name: 'dog'}, {name: 'cat'}]
+const users = [{ name: 'dog' }, { name: 'cat' }]
 
 const result = await app.mysql.insert('user', users)
 ```
@@ -291,20 +289,19 @@ const result = await app.mysql.insert('user', users)
 ```js
 // 插入单条数据
 
-let row = {
+const row = {
   name: 'fengmk2',
   otherField: 'other field value',
   createdAt: db.literals.now, // `now()` on db server
   // ...
-};
-let result = await db.insert('user', row);
+}
+const result = await db.insert('user', row)
 //  打印结果
-console.log(result);
-
+console.log(result)
 
 // 插入多条示例
 
-let rows = [
+const rows = [
   {
     name: 'tom',
     otherField: 'other field value',
@@ -318,12 +315,12 @@ let rows = [
     // ...
   },
   // ...
-];
+]
 
-let results = await db.insert('user', rows);
+const results = await db.insert('user', rows)
 
 // 插入结果
-console.log(result);
+console.log(result)
 ```
 
 ### 查询（select）
@@ -335,7 +332,7 @@ console.log(result);
 
 ```js
 // 根据查询对象，类似sequelize的findOne()
-let row = await db.get('user', {name: 'tom'});
+const row = await db.get('user', { name: 'tom' })
 ```
 
 转化成SQL是：
@@ -373,16 +370,16 @@ SELECT`author`, `title` FROM`user` WHERE`type` = 'javascript' ORDER BY`id` DESC
 ### 删除（delete）
 
 ```js
-
 // 根据查询条件删除
-let result = await db.delete('user', {
+const result = await db.delete('user', {
   name: 'tom'
-});
+})
+```
 
-=>
-DELETE
-FROM`user`
-WHERE`name` = 'tom'
+转换为SQL：
+
+```text
+DELETE FROM `user` WHERE `name` = 'tom'
 ```
 
 ### 更新（update）
@@ -393,32 +390,31 @@ WHERE`name` = 'tom'
 
 ```js
 // 单行数据
-let row = {
+const row = {
   id: 123,
   name: 'tom',
   otherField: 'other field value',
   modifiedAt: db.literals.now, // 对应数据库中的now()函数
-};
+}
 
 // 根据主键id更新一行数据row
-let result = await db.update('user', row);
+const result = await db.update('user', row)
 ```
 
 #### 根据特定条件和指定字段列更新一行数据
 
 ```js
 // 单行数据
-let row = {
+const row = {
   name: 'tom',
   otherField: 'other field value',
   modifiedAt: db.literals.now, // 对应数据库中的now()函数
-};
+}
 // 满足where条件，更新columns指定理额
-let result = await db.update('user', row, {
-  where: {name: row.name},
+const result = await db.update('user', row, {
+  where: { name: row.name },
   columns: ['otherField', 'modifiedAt']
-});
-
+})
 ```
 
 ### 根据主键更新多行数据
@@ -427,7 +423,7 @@ let result = await db.update('user', row, {
 
 ```js
 // 多行数据
-let options = [{
+const options = [{
   id: 123,
   name: 'tom',
   email: 'tom@161.com',
@@ -442,7 +438,7 @@ let options = [{
 }]
 
 // 更新多行
-let result = await db.updateRows('user', options);
+const result = await db.updateRows('user', options)
 
 // 返回结果
 ```
@@ -509,7 +505,7 @@ WHERE`type` = 'javascript';
 ```js
 // 将数组中的数据与 ? 进行匹配替换
 const querySql = 'update posts set hits = (hits + ?) where id = ?'
-const results = await app.mysql.query(querySql, [1, postId]);
+const results = await app.mysql.query(querySql, [1, postId])
 ```
 
 ### 表达式(Literal)
@@ -536,15 +532,15 @@ VALUES(NOW())
 调用mysql内置的CONCAT(s1, ...sn)函数，做字符串拼接。
 
 ```js
-const Literal = app.mysql.literals.Literal;
-const first_name = 'lisa';
-const last_name = 'marry';
+const Literal = app.mysql.literals.Literal
+const first_name = 'lisa'
+const last_name = 'marry'
 
 // 添加数据
 await app.mysql.insert(table, {
   id: 123,
   full_name: new Literal(`CONCAT("${first_name}", "${last_name}"`),
-});
+})
 
 // INSERT INTO `$table`(`id`, `full_name`) VALUES(123, CONCAT("lisa", "marry"))
 ```

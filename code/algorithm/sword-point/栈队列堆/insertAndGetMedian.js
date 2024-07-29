@@ -21,7 +21,8 @@ function GetMedian() {
   // 奇数
   if (len % 2 !== 0) {
     return result[Math.floor((len - 1) / 2)]
-  } else {
+  }
+  else {
     // 分别获取低位 和高位
     const low = result[Math.floor((len - 2) / 2)]
     const high = result[Math.floor((len) / 2)]

@@ -1,3 +1,4 @@
+import process from 'node:process'
 import { defineUserConfig } from '@vuepress/cli'
 import { getDirname, path } from '@vuepress/utils'
 import { viteBundler } from '@vuepress/bundler-vite'
@@ -5,16 +6,14 @@ import { name } from './package.json'
 import { headers } from './docs/.vuepress/theme/headers'
 import { themeConfig } from './docs/.vuepress/theme/theme'
 // import {pluginConfig} from "./theme/plugins";
-import process from 'node:process'
 
 // 当前目录名
 const __dirname = getDirname(import.meta.url)
 
-
 /**
  * 用于区分base路径，是否nginx代理
  */
-function getSiteBase():'/' | `/${string}/` {
+function getSiteBase(): '/' | `/${string}/` {
   // 用于区分base路径，是否nginx代理
   const PROXY_DOMAIN = process.env.PROXY_DOMAIN || false
   return PROXY_DOMAIN ? `/${name}/` : '/'
@@ -41,12 +40,12 @@ export default defineUserConfig({
           return str.replace(/^~/, path.resolve(__dirname, ''))
         }
         return str
-      }
+      },
     },
     // md doc formatter  headerDepth
     headers: {
-      level: [2, 3, 4]
-    }
+      level: [2, 3, 4],
+    },
   },
   // 主题配置
   ...themeConfig,
@@ -55,8 +54,7 @@ export default defineUserConfig({
   // 编译
   bundler: viteBundler({
     viteOptions: {},
-    vuePluginOptions: {}
+    vuePluginOptions: {},
   }),
-  shouldPrefetch: false
+  shouldPrefetch: false,
 })
-

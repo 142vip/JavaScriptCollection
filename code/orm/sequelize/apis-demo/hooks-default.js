@@ -6,16 +6,16 @@ const sequelize = new Sequelize({
   define: {
     hooks: {
       beforeCreate() {
-      }
-    }
-  }
+      },
+    },
+  },
 })
 const User = sequelize.define('User', {})
 const Space = sequelize.define('Space', {}, {
   hooks: {
     beforeCreate() {
-    }
-  }
+    },
+  },
 })
 // 运行默认钩子函数
 await User.create({})

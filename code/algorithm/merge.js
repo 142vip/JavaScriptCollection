@@ -10,7 +10,8 @@ function merge(A, m, B, n) {
     if (A[pre] < B[next]) {
       result.push(A[pre])
       pre++
-    } else if (A[pre] >= B[next]) {
+    }
+    else if (A[pre] >= B[next]) {
       result.push(B[next])
       next++
     }

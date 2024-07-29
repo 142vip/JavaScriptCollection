@@ -1,9 +1,10 @@
 const Koa = require('koa')
+
 const app = new Koa()
 
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   ctx.request.header = {
-    reference: 'https://code.142vip.cn'
+    reference: 'https://code.142vip.cn',
   }
   await next()
 })

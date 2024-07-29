@@ -30,10 +30,12 @@ function rightBinarySearch(data, target) {
 
     if (target === data[mid]) {
       left = mid + 1
-    } else if (target < data[mid]) {
+    }
+    else if (target < data[mid]) {
       // 左侧
       right = mid - 1
-    } else if (target > data[mid]) {
+    }
+    else if (target > data[mid]) {
       // 右侧；
       left = mid + 1
     }
@@ -60,10 +62,12 @@ function leftBinarySearch(data, target) {
     if (target === data[mid]) {
       // 左侧收缩
       right = mid - 1
-    } else if (target < data[mid]) {
+    }
+    else if (target < data[mid]) {
       // 左侧
       right = mid - 1
-    } else if (target > data[mid]) {
+    }
+    else if (target > data[mid]) {
       // 右侧；
       left = mid + 1
     }

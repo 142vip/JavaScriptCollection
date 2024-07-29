@@ -2,7 +2,6 @@
 title: ex命令
 permalink: /server-end/linux/base-install/ex.html
 ---
-  
 
 # ex命令
 
@@ -11,7 +10,7 @@ permalink: /server-end/linux/base-install/ex.html
 ## 语法
 
 ```shell
-ex [ -| -s ] [ -l ] [ -L ] [ -R ] [ -r [ file ] ] [ -t tag ] [ -v ] [ -V ] 
+ex [ -| -s ] [ -l ] [ -L ] [ -R ] [ -r [ file ] ] [ -t tag ] [ -v ] [ -V ]
    [ -x ] [ -wn ] [ -C ] [ +command | -c command ] file
 ```
 

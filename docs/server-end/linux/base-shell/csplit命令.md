@@ -2,7 +2,6 @@
 title: csplit命令
 permalink: /server-end/linux/base-install/csplit.html
 ---
-  
 
 # csplit命令
 

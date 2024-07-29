@@ -1,12 +1,4 @@
-/**
- * 钩子函数
- */
-
-const {
-  Model,
-  Sequelize,
-  DataTypes
-} = require('sequelize')
+const { Model, Sequelize, DataTypes } = require('sequelize')
 
 // 创建连接实例
 const sequelize = new Sequelize('postgres://user:pass@142vip.cn:5432/142vip')
@@ -22,35 +14,36 @@ User.init({
   username: DataTypes.STRING,
   mood: {
     type: DataTypes.ENUM,
-    values: ['happy', 'sad']
-  }
+    values: ['happy', 'sad'],
+  },
 }, {
   hooks: {
-    beforeValidate: (user, options) => {
+    beforeValidate: (user, _options) => {
       user.mood = 'happy'
     },
     afterValidate: (user, options) => {
       user.username = 'Toni'
-    }
+    },
   },
-  sequelize
+  sequelize,
 })
 
 // 方法二：使用addHook()方法
-User.addHook('beforeValidate', (user, options) => {
+User.addHook('beforeValidate', (user, _options) => {
   user.mood = 'happy'
 })
 
 User.addHook('afterValidate', 'mood', (user, options) => {
+  console.log(user, options)
   return Promise.reject(new Error('参数错误'))
 })
 
 /**
  * 方法三：直接使用绑在实例类上的钩子方法
  */
-User.beforeCreate(async(user, options) => {
+User.beforeCreate(async (user, _options) => {
   user.password = '123456'
 })
-User.afterValidate('userName', (user, options) => {
+User.afterValidate('userName', (user, _options) => {
   user.username = '142vip.cn'
 })

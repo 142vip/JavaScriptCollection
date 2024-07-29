@@ -2,7 +2,6 @@
 title: scp命令
 permalink: /server-end/linux/base-install/scp.html
 ---
-  
 
 # scp命令
 

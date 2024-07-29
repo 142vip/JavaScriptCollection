@@ -25,6 +25,5 @@ function fibonacciTwo(n) {
   return result
 }
 
-
 console.log(fibonacciOne(4))
 console.log(fibonacciTwo(4))

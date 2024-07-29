@@ -18,7 +18,6 @@ function numberOf1Between1AndNOne(n) {
   return count
 }
 
-
 /**
  * 数学方法
  * @param n
@@ -39,11 +38,13 @@ function numberOf1Between1AndNTwo(n) {
       // cur=0时，高位需要减去一位用于低位进行计算
       // 相当于 count = (high - 1) * bitNum + (99 + 1)
       count += Math.imul(high, bitNum)
-    } else if (cur === 1) {
+    }
+    else if (cur === 1) {
       // case 2: cur == 1
       // 相当于高位+低位计算结果，即(high * bitNum) + (low + 1)
       count += (high * bitNum + low + 1)
-    } else {
+    }
+    else {
       // case3: cur > 1
       // 相对于cur=0的情况，就不需要高位减去一位来计算低位的结果数了
       // 相当于(high * bitNum) + (低位数结果数)
@@ -63,4 +64,3 @@ function numberOf1Between1AndNTwo(n) {
 
 console.log(numberOf1Between1AndNOne(13))
 console.log(numberOf1Between1AndNTwo(13))
-

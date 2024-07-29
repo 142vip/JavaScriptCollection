@@ -6,9 +6,9 @@ class Book extends Model {
 
 // Book实例类初始化
 Book.init({
-  title: DataTypes.STRING
+  title: DataTypes.STRING,
 }, {
-  sequelize
+  sequelize,
 })
 
 /**
@@ -19,7 +19,6 @@ Book.addHook('afterCreate', 'username', (book, options) => {
   // ...
 })
 Book.removeHook('afterCreate', 'username')
-
 
 /**
  * 为Book实例移除afterCreate类型上所有的钩子函数

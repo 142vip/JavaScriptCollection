@@ -20,7 +20,6 @@ console.log(_.inRange(5.2, 4))
 console.log(_.inRange(-3, -2, -6))
 // => true
 
-
 // random: 返回指定范围随机值
 console.log(_.random(0, 5))
 // => an integer between 0 and 5
@@ -35,16 +34,13 @@ console.log(_.random(1.2, 5.2))
 console.log(_.add(6, 4))
 // => 10
 
-
 // divide: 相除
 console.log(_.divide(6, 4))
 // => 1.5
 
-
 // multiply: 相乘
 console.log(_.multiply(6, 4))
 // => 24
-
 
 // subtract: 相减
 _.subtract(6, 4)
@@ -53,7 +49,6 @@ _.subtract(6, 4)
 // sum:  求和
 _.sum([4, 2, 8, 6])
 // => 20
-
 
 // ceil:  向上取整
 console.log(_.ceil(4.006))
@@ -71,7 +66,6 @@ console.log(_.floor(0.046, 2))
 console.log(_.floor(4060, -2))
 // => 4000
 
-
 // round: 四舍五入
 console.log(_.round(4.006))
 // => 4
@@ -80,18 +74,15 @@ console.log(_.round(4.006, 2))
 console.log(_.round(4060, -2))
 // => 4100
 
-
 // max: 最大值
 console.log(_.max([4, 2, 8, 6]))
 // => 8
 console.log(_.max([]))
 // => undefined
 
-
 // mean: 求平均值
 console.log(_.mean([4, 2, 8, 6]))
 // => 5
-
 
 // min: 最小值
 console.log(_.min([4, 2, 8, 6]))

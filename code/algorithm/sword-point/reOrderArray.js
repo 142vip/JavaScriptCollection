@@ -20,7 +20,8 @@ function reOrderArray(array) {
     if (array[index] % 2 !== 0) {
       // 奇数
       oddArr.push(array[index])
-    } else {
+    }
+    else {
       // 偶数
       evenArr.push(array[index])
     }

@@ -29,7 +29,7 @@ CPython version: 3.6.8
 OpenSSL version: OpenSSL 1.1.0j  20 Nov 2018
 另外，docker-compose的操作和docker非常类似，可以简单记忆：
 ## 服务启动，默认Dockerfile  -d:后台启动，不加为前台启动
-docker-compose up -d 
+docker-compose up -d
 
 ## 服务down 相当于kill
 docker-compose down

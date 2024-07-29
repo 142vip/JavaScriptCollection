@@ -70,7 +70,7 @@ pnpm install markdownlint-cli  -D
 
 ```bash
 ## 校验markdown文档
-markdownlint '**/*.md'  -c .markdownlint.js -p .markdownlintignore 
+markdownlint '**/*.md'  -c .markdownlint.js -p .markdownlintignore
 
 ## 添加--fix参数，可以做到自动修正
 markdownlint '**/*.md'  -c .markdownlint.js -p .markdownlintignore --fix

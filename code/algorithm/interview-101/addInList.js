@@ -14,5 +14,5 @@ function addInList(head1, head2) {
   // write code here
 }
 module.exports = {
-  addInList
+  addInList,
 }

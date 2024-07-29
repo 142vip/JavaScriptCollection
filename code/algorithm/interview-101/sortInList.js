@@ -12,5 +12,5 @@ function sortInList(head) {
   // write code here
 }
 module.exports = {
-  sortInList
+  sortInList,
 }

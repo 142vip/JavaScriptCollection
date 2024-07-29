@@ -2,7 +2,6 @@
 title: cut命令
 permalink: /server-end/linux/base-install/cut.html
 ---
-  
 
 # cut命令
 

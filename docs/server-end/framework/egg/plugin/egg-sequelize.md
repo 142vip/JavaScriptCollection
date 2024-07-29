@@ -53,15 +53,15 @@ exports.sequelize = {
 exports.sequelize = {
   dialect: 'mysql', // 支持 mysql, mariadb, postgres, mssql等数据库
   database: 'test', // 数据库名称
-  host: 'localhost',    // 服务主机地址
-  port: 3306,   // 端口
+  host: 'localhost', // 服务主机地址
+  port: 3306, // 端口
   username: 'root', // 用户名
   password: '', // 密码
   delegate: 'myModel', // 【可选】加载所有的模型models到 `app[delegate]` and `ctx[delegate]`对象中，进行委托, 默认是model
   baseDir: 'my_model', // 【可选】加载 `app/${baseDir}`文件夹下的所有js文件作为models,默认为 `model`
   exclude: 'index.js', // 【可选】加载所有模型models时，忽略 `app/${baseDir}/index.js` 文件，支持文件路径和数组
   // 其他默认配置参数
-};
+}
 ```
 
 除了上面列举的常用的`sequelize`配置参数，`egg-sequelize`插件还有一些默认的配置，如下：
@@ -72,8 +72,8 @@ module.exports = {
   baseDir: 'model',
   logging(...args) {
     // if benchmark enabled, log used
-    const used = typeof args[1] === 'number' ? `[${args[1]}ms]` : '';
-    app.logger.info('[egg-sequelize]%s %s', used, args[0]);
+    const used = typeof args[1] === 'number' ? `[${args[1]}ms]` : ''
+    app.logger.info('[egg-sequelize]%s %s', used, args[0])
   },
   host: 'localhost',
   port: 3306,
@@ -83,7 +83,7 @@ module.exports = {
     freezeTableName: false, // 表名是否和model的js文件名一致
     underscored: true,
   },
-};
+}
 ```
 
 ## 模板文件
@@ -115,9 +115,9 @@ model文件 | 加载后类名 |
 ```js
 // app/model/user.js
 
-module.exports = app => {
+module.exports = (app) => {
   // 字段数据类型
-  const {STRING, INTEGER, DATE} = app.Sequelize;
+  const { STRING, INTEGER, DATE } = app.Sequelize
 
   // model定义
   const User = app.model.define('user', {
@@ -128,25 +128,25 @@ module.exports = app => {
     last_sign_in_at: DATE,
     created_at: DATE,
     updated_at: DATE,
-  });
+  })
 
   // 定义findByLogin()方法，框架里一般放在service层
   User.findByLogin = async function (login) {
     // 注意this对象为当前model实例
     return await this.findOne({
       where: {
-        login: login
+        login
       }
-    });
+    })
   }
 
   //  不能使用箭头函数
   User.prototype.logSignIn = async function () {
-    return await this.update({last_sign_in_at: new Date()});
+    return await this.update({ last_sign_in_at: new Date() })
   }
 
-  return User;
-};
+  return User
+}
 ```
 
 由于在默认配置`options.delegate`设置的是`model`进行委托，所以`app.model`对象就是一个`sequelize`实例，可以很轻松的使用其内置函数，例如：
@@ -160,14 +160,14 @@ module.exports = app => {
 // app/controller/user.js
 class UserController extends Controller {
   async index() {
-    const users = await this.ctx.model.User.findAll();
-    this.ctx.body = users;
+    const users = await this.ctx.model.User.findAll()
+    this.ctx.body = users
   }
 
   async show() {
-    const user = await this.ctx.model.User.findByLogin(this.ctx.params.login);
-    await user.logSignIn();
-    this.ctx.body = user;
+    const user = await this.ctx.model.User.findByLogin(this.ctx.params.login)
+    await user.logSignIn()
+    this.ctx.body = user
   }
 }
 ```
@@ -205,10 +205,9 @@ exports.sequelize = {
 按照上面的示例，配置多数据源后，model可以像下面一样定义：
 
 ```js
-
 // app/model/user.js 【对应model】
-module.exports = app => {
-  const {STRING, INTEGER, DATE} = app.Sequelize;
+module.exports = (app) => {
+  const { STRING, INTEGER, DATE } = app.Sequelize
 
   const User = app.model.define('user', {
     login: STRING,
@@ -218,14 +217,14 @@ module.exports = app => {
     last_sign_in_at: DATE,
     created_at: DATE,
     updated_at: DATE,
-  });
+  })
 
-  return User;
-};
+  return User
+}
 
 // app/admin_model/user.js 【对应adminModel】
-module.exports = app => {
-  const {STRING, INTEGER, DATE} = app.Sequelize;
+module.exports = (app) => {
+  const { STRING, INTEGER, DATE } = app.Sequelize
 
   const User = app.adminModel.define('user', {
     login: STRING,
@@ -235,22 +234,21 @@ module.exports = app => {
     last_sign_in_at: DATE,
     created_at: DATE,
     updated_at: DATE,
-  });
+  })
 
-  return User;
-};
+  return User
+}
 ```
 
 如果按照上面的配置，对不同的数据源定义了相同的model，相同的model文件将会在不同的数据库中执行多次，因此可以使用第二个参数去获取`sequelize`
 实例对象。
 
 ```js
-
 // app/model/user.js
 
-// 如果model下的js文件将在不同的数据源中被加载多次。可以使用第二个参数(app,model),去获取到sequelize实例 
+// 如果model下的js文件将在不同的数据源中被加载多次。可以使用第二个参数(app,model),去获取到sequelize实例
 module.exports = (app, model) => {
-  const {STRING, INTEGER, DATE} = app.Sequelize;
+  const { STRING, INTEGER, DATE } = app.Sequelize
 
   const User = model.define('user', {
     login: STRING,
@@ -260,11 +258,10 @@ module.exports = (app, model) => {
     last_sign_in_at: DATE,
     created_at: DATE,
     updated_at: DATE,
-  });
+  })
 
-  return User;
-};
-
+  return User
+}
 ```
 
 ### 自定义sequelize
@@ -278,30 +275,30 @@ exports.sequelize = {
 
   // require引入的是项目中自己下载的sequelize版本
   Sequelize: require('sequelize'),
-};
+}
 ```
 
 ### 完整的示例
 
 ```js
 // app/model/post.js
-module.exports = app => {
-  const {STRING, INTEGER, DATE} = app.Sequelize;
+module.exports = (app) => {
+  const { STRING, INTEGER, DATE } = app.Sequelize
 
   const Post = app.model.define('Post', {
     name: STRING(30),
     user_id: INTEGER,
     created_at: DATE,
     updated_at: DATE,
-  });
+  })
 
   // 建立表之间的关联
   Post.associate = function () {
-    app.model.Post.belongsTo(app.model.User, {as: 'user'});
+    app.model.Post.belongsTo(app.model.User, { as: 'user' })
   }
 
-  return Post;
-};
+  return Post
+}
 ```
 
 在`controller`层中使用model，来操作数据库
@@ -314,28 +311,28 @@ class PostController extends Controller {
       // 查询指定字段
       attributes: ['id', 'user_id'],
       // 关联查询
-      include: {model: this.ctx.model.User, as: 'user'},
+      include: { model: this.ctx.model.User, as: 'user' },
       // 条件查询
-      where: {status: 'publish'},
+      where: { status: 'publish' },
       // 排序
       order: 'id desc',
-    });
+    })
 
-    this.ctx.body = posts;
+    this.ctx.body = posts
   }
 
   async show() {
-    const post = await this.ctx.model.Post.findByPk(this.params.id);
-    const user = await post.getUser();
-    post.setDataValue('user', user);
-    this.ctx.body = post;
+    const post = await this.ctx.model.Post.findByPk(this.params.id)
+    const user = await post.getUser()
+    post.setDataValue('user', user)
+    this.ctx.body = post
   }
 
   async destroy() {
     // params路由传参
-    const post = await this.ctx.model.Post.findByPk(this.params.id);
-    await post.destroy();
-    this.ctx.body = {success: true};
+    const post = await this.ctx.model.Post.findByPk(this.params.id)
+    await post.destroy()
+    this.ctx.body = { success: true }
   }
 }
 ```

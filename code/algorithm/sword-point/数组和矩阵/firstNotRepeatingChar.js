@@ -22,7 +22,6 @@ function firstNotRepeatingCharOne(str) {
   return -1
 }
 
-
 /**
  * 数组按字母查找
  * @param str
@@ -33,13 +32,12 @@ function firstNotRepeatingCharTwo(str) {
   for (let index = 0; index < len - 1; index++) {
     const s = str.slice(index, index + 1)
     const remainStr = `${str.slice(0, index)}${str.slice(index + 1)}`
-    if (remainStr.indexOf(s) === -1) {
+    if (!remainStr.includes(s)) {
       return index
     }
   }
   return -1
 }
-
 
 /**
  * 使用Map结构计数
@@ -54,7 +52,8 @@ function firstNotRepeatingCharThree(str) {
   resArr.forEach((r, index) => {
     if (resMap.has(r)) {
       resMap.set(r, resMap.get(r) + 1)
-    } else {
+    }
+    else {
       resMap.set(r, 1)
     }
   })
@@ -66,7 +65,6 @@ function firstNotRepeatingCharThree(str) {
   }
   return -1
 }
-
 
 console.log(firstNotRepeatingCharOne('google'))
 console.log(firstNotRepeatingCharTwo('google'))

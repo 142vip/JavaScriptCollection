@@ -2,7 +2,6 @@
 title: sort命令
 permalink: /server-end/linux/base-install/sort.html
 ---
-  
 
 # sort命令
 

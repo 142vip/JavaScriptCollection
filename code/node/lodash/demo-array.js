@@ -4,13 +4,11 @@
 
 const _ = require('lodash')
 
-
 // chunk: 分片 ，指定长度切割
 console.log(_.chunk(['a', 'b', 'c', 'd'], 2))
 // => [['a', 'b'], ['c', 'd']]
 console.log(_.chunk(['a', 'b', 'c', 'd'], 3))
 // => [['a', 'b', 'c'], ['d']]
-
 
 // compact: 过滤假值（false, null,0, "", undefined，NaN）
 // concat: 拼接

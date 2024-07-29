@@ -4,7 +4,7 @@
  */
 const studentAgeMap = new Map([
   ['Tom', 20],
-  ['Lisa', 18]
+  ['Lisa', 18],
 ])
 
 /**
@@ -17,12 +17,10 @@ studentAgeMap.set('fairy', 24)
  */
 const age = studentAgeMap.get('fairy')
 
-
 /**
  * 返回集合中元素个数
  */
 const size = studentAgeMap.size
-
 
 /**
  * 根据键删除映射关系
@@ -64,7 +62,6 @@ studentAgeMap.keys()
  * 获取所有的键、值
  */
 studentAgeMap.entries()
-
 
 /**
  * 获取所有的值

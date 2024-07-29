@@ -4,7 +4,6 @@ const Koa = require('koa')
 const app1 = new Koa({ proxy: true })
 console.log(app1)
 
-
 // 定义创建完动态修改属性
 const app2 = new Koa()
 app2.proxy = true

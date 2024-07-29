@@ -4,7 +4,7 @@
  */
 namespace SimpleFactoryPattern {
   interface Product {
-    operation(): void;
+    operation(): void
   }
 
   class ConcreteProductA implements Product {
@@ -23,9 +23,11 @@ namespace SimpleFactoryPattern {
     createProduct(type: string): Product {
       if (type === 'A') {
         return new ConcreteProductA()
-      } else if (type === 'B') {
+      }
+      else if (type === 'B') {
         return new ConcreteProductB()
-      } else {
+      }
+      else {
         throw new Error('Invalid product type.')
       }
     }

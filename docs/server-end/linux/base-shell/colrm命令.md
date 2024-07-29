@@ -2,7 +2,6 @@
 title: colrm命令
 permalink: /server-end/linux/base-install/colrm.html
 ---
-  
 
 # colrm命令
 

@@ -5,7 +5,6 @@
 
 const dayjs = require('dayjs')
 
-
 // 是否在一个日期之前
 console.log(dayjs().isBefore(dayjs('2021-01-01')))
 // 比较年份

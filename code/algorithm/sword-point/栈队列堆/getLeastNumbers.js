@@ -21,7 +21,7 @@ function getLeastNumbersOne(input, k) {
 
 /**
  * 基于冒泡排序，跑K趟即可
-  * @param input
+ * @param input
  * @param k
  * @returns {*[]|*}
  */
@@ -69,7 +69,6 @@ function getLeastNumbersThree(input, k) {
   return input.slice(0, k)
 }
 
-
 /**
  * 基于堆排序
  * @param input
@@ -78,7 +77,6 @@ function getLeastNumbersThree(input, k) {
 function getLeastNumbersFour(input, k) {
   // todo 构建树 维护小根堆
 }
-
 
 console.log(getLeastNumbersOne([4, 5, 1, 6, 2, 7, 3, 8], 4))
 console.log(getLeastNumbersTwo([4, 5, 1, 6, 2, 7, 3, 8], 4))

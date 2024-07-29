@@ -33,7 +33,6 @@ function addTwo(num1, num2) {
   return num2 ? addTwo(num1 ^ num2, (num1 & num2) << 1) : num1
 }
 
-
 /**
  * 【简单】不用加减乘除做加法
  * - 利用位运算【循环】

@@ -2,7 +2,6 @@
 title: cmp命令
 permalink: /server-end/linux/base-install/cmp.html
 ---
-  
 
 # cmp命令
 

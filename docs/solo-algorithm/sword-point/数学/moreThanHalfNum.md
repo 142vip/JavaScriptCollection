@@ -21,7 +21,7 @@ permalink: /solo-algorithm/sword-point/more-than-half-num.html
 
 ```js
 // 输入：
-[1,2,3,2,2,2,5,4,2]
+[1, 2, 3, 2, 2, 2, 5, 4, 2]
 
 // 返回值：
 2

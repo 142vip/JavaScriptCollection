@@ -55,10 +55,10 @@ flowchart TD
 在使用koa时，一般是利用Koa模块new一个app对象
 
 ```js
-const Koa = require('koa');
+const Koa = require('koa')
 
 // 构造函数创建对象
-const app = new Koa({ proxy: true });
+const app = new Koa({ proxy: true })
 ```
 
 通过Koa的构造函数源码，可以看到options支持的一些参数:
@@ -73,15 +73,14 @@ const app = new Koa({ proxy: true });
 - `app.maxIpsCount` 从代理 ip 消息头读取的最大 ips, 默认为 0 (代表无限)
 
 ```js
-const Koa = require('koa');
+const Koa = require('koa')
 
 // 利用构造函数修改属性
-const app1 = new Koa({ proxy: true });
-
+const app1 = new Koa({ proxy: true })
 
 // 定义创建完动态修改属性
-const app2 = new Koa();
-app2.proxy = true;
+const app2 = new Koa()
+app2.proxy = true
 ```
 
 ## app.listen
@@ -91,10 +90,10 @@ app2.proxy = true;
 创建并返回 HTTP 服务器，将给定的参数传递给 Server#listen()，例如：
 
 ```js
-const Koa = require('koa');
-const app = new Koa();
+const Koa = require('koa')
+const app = new Koa()
 // 监听3000端口
-app.listen(3000);
+app.listen(3000)
 ```
 
 那么利用`app.listen`函数到底做了什么呢？不妨查看下`koa`源码，点击`listen`即可：
@@ -104,9 +103,9 @@ app.listen(3000);
 其实可以理解app.listen就是语法糖，调用时利用`http.createServer`创建服务端，即等价于：
 
 ```js
-const http = require('http');
-const Koa = require('koa');
-const app = new Koa();
+const http = require('node:http')
+const Koa = require('koa')
+const app = new Koa()
 const server = http.createServer(app.callback())
 // 监听端口
 server.listen(3000)
@@ -115,12 +114,12 @@ server.listen(3000)
 当然，如果你需要将程序作为`Https`或者多个地址，`http`、`https`、`koa`模块都能很好的支持,例如：
 
 ```js
-const http = require('http')
+const http = require('node:http')
 const server = http.createServer(app.callback())
 // 监听端口
 server.listen(3000)
 
-const https = require('https')
+const https = require('node:https')
 const httpsServer = https.createServer(app.callback())
 httpsServer.listen(6000)
 ```
@@ -172,10 +171,10 @@ app
 
 ```js
 // 初始化context中的database变量
-app.context.database=initDataBase();
+app.context.database = initDataBase()
 
 // 执行中间件，打印ctx的database变量
-app.use(ctx=>{
+app.use((ctx) => {
   console.log(ctx.database)
 })
 ```
@@ -191,9 +190,9 @@ app.use(ctx=>{
 常见的操作如下：
 
 ```js
-app.on('error', err => {
+app.on('error', (err) => {
   console.error('server error', err)
-});
+})
 ```
 
 监听`error`事件
@@ -207,7 +206,7 @@ app.on('error', err => {
 // 监听error事件
 app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)
-});
+})
 ```
 
 当应用级错误发生、`error`事件监听触发时，可以及时打印出错误信息

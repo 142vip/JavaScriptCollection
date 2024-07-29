@@ -5,29 +5,29 @@ export const NodeLearnSidebar = [
       {
         text: '常用模块包',
         collapsible: true,
-        link: 'npm-package.md'
+        link: 'npm-package.md',
       },
       {
         text: 'stream',
         collapsible: true,
-        link: 'stream.md'
+        link: 'stream.md',
       },
       {
         text: 'dayjs',
-        link: 'dayjs.md'
+        link: 'dayjs.md',
       },
       {
         text: 'lodash',
-        link: 'lodash.md'
+        link: 'lodash.md',
       },
       {
         text: 'rxjs',
-        link: 'rxjs.md'
+        link: 'rxjs.md',
       },
       {
         text: 'axios',
-        link: 'axios.md'
-      }
-    ]
-  }
+        link: 'axios.md',
+      },
+    ],
+  },
 ]

@@ -28,11 +28,11 @@ namespace SrpDemo{
   }
 
   interface UserService {
-    getUserById(userId: string): User;
+    getUserById(userId: string): User
   }
 
   interface EmailService {
-    sendEmail(user: User, message: string): void;
+    sendEmail(user: User, message: string): void
   }
 
   class DatabaseUserService implements UserService {

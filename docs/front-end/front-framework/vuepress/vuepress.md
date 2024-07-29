@@ -113,9 +113,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  ## 部署到Github-Pages
+  # 部署到Github-Pages
   deploy-github:
-    name: "部署到Github-Pages"
+    name: 部署到Github-Pages
     if: github.repository == '142vip/JavaScriptCollection'
     runs-on: macos-latest
 
@@ -132,10 +132,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.18.0
-          ## 淘宝镜像加速
+          # 淘宝镜像加速
           registry-url: 'https://registry.npmmirror.com'
 
-      ## 下载依赖
+      # 下载依赖
       - name: Install Dependencies
         run: |
           ./scripts/ci
@@ -145,7 +145,7 @@ jobs:
         run: |
           ./scripts/bundle build_proxy
 
-      ## 部署到Github Pages
+      # 部署到Github Pages
       - name: Deploy To GitHub Page
         uses: crazy-max/ghaction-github-pages@v3
         with:
@@ -153,7 +153,6 @@ jobs:
           build_dir: docs/.vuepress/dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 ```
 
 ### Vercel

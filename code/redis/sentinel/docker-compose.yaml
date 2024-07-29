@@ -1,10 +1,10 @@
-##
-## 功能：redis主从集群 1主2从
-## 使用：
-##   - docker-compose up -d
-## 默认密码：123456
-##
-## 参考链接：https://blog.51cto.com/u_15127508/4395149
+# #
+# 功能：redis主从集群 1主2从
+# 使用：
+#   - docker-compose up -d
+# 默认密码：123456
+# #
+# 参考链接：https://blog.51cto.com/u_15127508/4395149
 
 version: '2'
 services:
@@ -14,7 +14,7 @@ services:
     restart: always
     command: redis-server --port 6380 --requirepass 123456  --appendonly yes
     ports:
-      - "6380:6380"
+      - '6380:6380'
     networks:
       net:
         ipv4_address: 172.19.0.3
@@ -25,7 +25,7 @@ services:
     restart: always
     command: redis-server --slaveof redis-master-6380 6380 --port 6381  --requirepass 123456 --masterauth 123456  --appendonly yes
     ports:
-      - "6381:6381"
+      - '6381:6381'
     networks:
       net:
         ipv4_address: 172.19.0.4
@@ -36,17 +36,16 @@ services:
     restart: always
     command: redis-server --slaveof redis-master-6380 6380 --port 6382  --requirepass 123456 --masterauth 123456 --appendonly yes
     ports:
-      - "6382:6382"
+      - '6382:6382'
     networks:
       net:
         ipv4_address: 172.19.0.5
-
 
   redis-sentinel-26380:
     image: redis:latest
     container_name: redis-sentinel-26380
     ports:
-      - "26380:26379"
+      - '26380:26379'
     command: redis-sentinel /usr/local/etc/redis/sentinel.conf
     volumes:
       - ./conf/redis-sentinel-26380.conf:/usr/local/etc/redis/sentinel.conf
@@ -58,7 +57,7 @@ services:
     image: redis:latest
     container_name: redis-sentinel-26381
     ports:
-      - "26381:26379"
+      - '26381:26379'
     command: redis-sentinel /usr/local/etc/redis/sentinel.conf
     volumes:
       - ./conf/redis-sentinel-26381.conf:/usr/local/etc/redis/sentinel.conf
@@ -70,16 +69,16 @@ services:
     image: redis:latest
     container_name: redis-sentinel-26382
     ports:
-      - "26382:26379"
+      - '26382:26379'
     command: redis-sentinel /usr/local/etc/redis/sentinel.conf
     volumes:
       - ./conf/redis-sentinel-26382.conf:/usr/local/etc/redis/sentinel.conf
     networks:
       net:
         ipv4_address: 172.19.0.13
-## 创建桥接网络
+# 创建桥接网络
 networks:
-  ## 桥接网络名称，配合文件前缀，最后为dev_test_env_net  参考：https://www.jianshu.com/p/d70c61d45364
+  # 桥接网络名称，配合文件前缀，最后为dev_test_env_net  参考：https://www.jianshu.com/p/d70c61d45364
   net:
     driver: bridge
     # external: true
@@ -87,5 +86,5 @@ networks:
       driver: default
       config:
         - subnet: 172.19.0.0/24
-          ## 网关
+          # 网关
           gateway: 172.19.0.1

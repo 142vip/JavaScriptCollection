@@ -2,7 +2,6 @@
 title: cat命令
 permalink: /server-end/linux/base-install/cat.html
 ---
-  
 
 # cat命令
 

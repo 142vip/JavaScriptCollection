@@ -1,5 +1,5 @@
-const fs = require('fs')
-const path = require('path')
+const fs = require('node:fs')
+const path = require('node:path')
 
 /**
  * 递归遍历目录并重命名所有遇到的Readme.md文件为README.md
@@ -11,7 +11,7 @@ function renameReadmeFiles(dirPath) {
       console.error(`Error reading directory: ${dirPath}`, err)
       return
     }
-    files.forEach(file => {
+    files.forEach((file) => {
       const filePath = path.join(dirPath, file)
       fs.stat(filePath, (err, stats) => {
         if (err) {
@@ -21,13 +21,15 @@ function renameReadmeFiles(dirPath) {
         if (stats.isDirectory()) {
           // 如果是目录，则递归调用
           renameReadmeFiles(filePath)
-        } else if (file.toLowerCase() === 'readme.md') {
+        }
+        else if (file.toLowerCase() === 'readme.md') {
           // 如果是Readme.md文件，则重命名
           const newFilePath = path.join(dirPath, 'README.md')
-          fs.rename(filePath, newFilePath, err => {
+          fs.rename(filePath, newFilePath, (err) => {
             if (err) {
               console.error(`Error renaming: ${filePath}`, err)
-            } else {
+            }
+            else {
               console.log(`Renamed: ${filePath} to ${newFilePath}`)
             }
           })

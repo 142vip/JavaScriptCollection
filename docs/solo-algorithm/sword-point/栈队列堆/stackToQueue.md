@@ -26,7 +26,7 @@ permalink: /solo-algorithm/sword-point/stack-to-queue.html
 #"PSH1":代表将1插入队列尾部
 #"PSH2":代表将2插入队列尾部
 #"POP“:代表删除一个元素，先进先出=>返回1
-#"POP“:代表删除一个元素，先进先出=>返回2   
+#"POP“:代表删除一个元素，先进先出=>返回2
 ```
 
 ## 刷题思路

@@ -2,7 +2,6 @@
 title: split命令
 permalink: /server-end/linux/base-install/split.html
 ---
-  
 
 # split命令
 

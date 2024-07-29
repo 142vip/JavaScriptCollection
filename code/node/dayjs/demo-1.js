@@ -50,4 +50,3 @@ console.log(dayjs('2022-01-33').isValid())
 // true, parsed to 2022-02-02
 console.log(dayjs('some invalid string').isValid())
 // false
-

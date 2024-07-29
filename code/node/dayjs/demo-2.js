@@ -27,7 +27,6 @@ console.log(dayjs().date(10))
 console.log(dayjs().day())
 console.log(dayjs().day(3))
 
-
 // 获取或设置月份
 console.log(dayjs().month())
 console.log(dayjs().month(0))

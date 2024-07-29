@@ -53,8 +53,7 @@ pnpm install  ## 类比： npm install
 pnpm add <pkg-name> ## 类比：npm install <pkg-name> 或者 npm i <pkg-name>
 
 ## 运行script脚本指令 eg: pnpm dev
-pnpm <cmd>  ## 类比：npm run <cmd> 
-
+pnpm <cmd>  ## 类比：npm run <cmd>
 
 ```
 
@@ -229,11 +228,10 @@ npm install npm@latest -g
 ## 安装模块
 npm install xxx
 npm install xxx -D
-npm install xxx -S 
-npm install xxx -g 
+npm install xxx -S
+npm install xxx -g
 npm install xxx@3.0.0
 npm install xxx -save
-
 
 ## 更新模块
 npm update xxx
@@ -253,23 +251,23 @@ npm publish --tag xx
 安装软件包以及其依赖的任何软件包。 默认情况下，任何新添加的软件包都将作为**生产依赖项**。
 
 ```bash
-## 保存到 dependencies 配置项下 
-pnpm add <pkg> 
+## 保存到 dependencies 配置项下
+pnpm add <pkg>
 
 ## 保存到 devDependencies 配置项下
-pnpm add -D <pkg> 
+pnpm add -D <pkg>
 
 ## 保存到 optionalDependencies 配置项下
-pnpm add -O <pkg> 
+pnpm add -O <pkg>
 
 ##安装软件包到全局环境中
-pnpm add -g <pkg> 
+pnpm add -g <pkg>
 
 ##安装标记为 next 的版本
-pnpm add <pkg>@next 
+pnpm add <pkg>@next
 
 ## 安装指定版本 3.0.0
-pnpm add <pkg>@3.0.0 
+pnpm add <pkg>@3.0.0
 
 ```
 
