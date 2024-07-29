@@ -14,7 +14,7 @@ const { execSync } = require('child_process');
 const { Select } = require('enquirer')
 
 // 仓库地址
-const repoAddress = 'registry.cn-hangzhou.aliyuncs.com/142vip/doc_book'
+const repoAddress = 'registry.cn-hangzhou.aliyuncs.com/142vip/docs'
 
 const packageInfo=require('../package.json')
 const packageVersion = packageInfo.version
