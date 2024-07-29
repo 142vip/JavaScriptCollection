@@ -172,7 +172,9 @@ export const themeConfig = {
           },
         ],
       },
+      // 代码高亮：https://theme-hope.vuejs.press/zh/guide/feature/code-block.html
       shiki: {
+        langs: ['ts', 'js', 'json', 'vue', 'json5', 'bash', 'diff', 'c', 'c++', 'dockerfile', 'nginx', 'proto'],
         // 你想要使用的主题
         themes: {
           light: 'one-light',
