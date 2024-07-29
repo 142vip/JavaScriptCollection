@@ -8,7 +8,7 @@
     "url": "https://github.com/142vip",
     "homePage": "https://code.142vip.cn"
   },
-  "packageManager": "pnpm@8.9.2",
+  "packageManager": "pnpm@9.6.0",
   "engines": {
     "node": ">=18.x",
     "pnpm": "9"
