@@ -76,48 +76,47 @@ jobs:
         run: |
           pnpm build:proxy
 
-  Build-Docker-Image:
-    name: 构建Docker镜像
-    # macos不支持docker的使用
-    runs-on: ubuntu-latest
-    # 主库master、next且执行release更新时执行
-    if: github.repository == '142vip/JavaScriptCollection' && startsWith(github.event.head_commit.message, 'chore(release):')
-    permissions:
-      actions: read
-      pull-requests: read
-
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-        with:
-          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-          fetch-depth: 0
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login Docker
-        run: |
-          docker version
-          echo "-----------Docker Login-----------"
-          docker login \
-          --username=${{ env.UserName }} \
-          --password=${{ secrets.DOCKER_PASSWORD }} \
-          ${{env.REGISTRY}}
-
-      - name: Install Dependencies
-        run: |
-          ./scripts/ci
-
-      # 构建，支持domain
-      - name: Build To Dist
-        run: |
-          pnpm build
-
-      # 快速构建并推送
-      - name: Push Docker Image
-        run: |
-          ./scripts/bundle image_faster
+#  Build-Docker-Image:
+#    name: 构建Docker镜像
+#    # macos不支持docker的使用
+#    runs-on: ubuntu-latest
+#    # 主库master、next且执行release更新时执行
+#    if: github.repository == '142vip/JavaScriptCollection' && startsWith(github.event.head_commit.message, 'chore(release):')
+#    permissions:
+#      actions: read
+#      pull-requests: read
+#
+#    steps:
+#      - name: Checkout Code
+#        uses: actions/checkout@v4
+#        with:
+#          fetch-depth: 0
+#
+#      - name: Set up QEMU
+#        uses: docker/setup-qemu-action@v3
+#
+#      - name: Set up Docker Buildx
+#        uses: docker/setup-buildx-action@v3
+#
+#      - name: Login Docker
+#        run: |
+#          docker version
+#          echo "-----------Docker Login-----------"
+#          docker login \
+#          --username=${{ env.UserName }} \
+#          --password=${{ secrets.DOCKER_PASSWORD }} \
+#          ${{env.REGISTRY}}
+#
+#      - name: Install Dependencies
+#        run: |
+#          ./scripts/ci
+#
+#      # 构建，支持domain
+#      - name: Build To Dist
+#        run: |
+#          pnpm build
+#
+#      # 快速构建并推送
+#      - name: Push Docker Image
+#        run: |
+#          ./scripts/bundle image_faster
