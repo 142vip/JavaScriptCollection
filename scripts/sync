@@ -21,14 +21,14 @@ if [ "$current_branch" = "main" ]; then
   # 推送到每个远程仓库
   for repoName in "${remoteList[@]}"
   do
-      echo "-->Pushing to $repoName in master branch..."
+      echo "-->Pushing to $repoName in $current_branch branch..."
       git push "$repoName" main
   done
 # next分支同步
 elif [ "$current_branch" = "next" ]; then
     for repoName in "${remoteList[@]}"
     do
-        echo "-->Pushing to $repoName in next branch..."
+        echo "-->Pushing to $repoName in $current_branch branch..."
         git push "$repoName" next
     done
 else
