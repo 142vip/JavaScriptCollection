@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.15 (2024-07-31)
+
+### 🐛 Bug Fixes
+
+- **Github Actions**:
+  - 修复Release流水线异常 &nbsp;-&nbsp; by **chufan** [<samp>(d5226)</samp>](https://github.com/142vip/JavaScriptCollection/commit/d5226de)
+  - 关闭Docker镜像构建 &nbsp;-&nbsp; by **chufan** [<samp>(74884)</samp>](https://github.com/142vip/JavaScriptCollection/commit/7488413)
+
+**Release New Version v0.0.2-alpha.15 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.14...v0.0.2-alpha.15)**
+
 ## v0.0.2-alpha.14 (2024-07-30)
 
 ### ✨ Features
