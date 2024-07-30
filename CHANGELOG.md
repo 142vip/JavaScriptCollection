@@ -4,6 +4,35 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.14 (2024-07-30)
+
+### ✨ Features
+
+- 关闭自动生成README目录配置，避免构建时覆盖和路径导航问题 &nbsp;-&nbsp; by **chufan** [<samp>(b3549)</samp>](https://github.com/142vip/JavaScriptCollection/commit/b3549ff)
+- 更新release脚本，使用bumpx命令生成CHANGELOG文档 &nbsp;-&nbsp; by **chufan** [<samp>(54f7b)</samp>](https://github.com/142vip/JavaScriptCollection/commit/54f7b51)
+- 删除dev脚本，脚本逻辑 &nbsp;-&nbsp; by **chufan** [<samp>(78795)</samp>](https://github.com/142vip/JavaScriptCollection/commit/78795c3)
+- 删除deploy和docker脚本，备份对应逻辑 &nbsp;-&nbsp; by **chufan** [<samp>(2cdc5)</samp>](https://github.com/142vip/JavaScriptCollection/commit/2cdc560)
+- 更换阿里云镜像地址 &nbsp;-&nbsp; by **chufan** [<samp>(be2e5)</samp>](https://github.com/142vip/JavaScriptCollection/commit/be2e584)
+- 移除markdown-cli模块，采用prettier校验文档格式 &nbsp;-&nbsp; by **chufan** [<samp>(5a2b2)</samp>](https://github.com/142vip/JavaScriptCollection/commit/5a2b23c)
+- 更换github pages部署方式，支持actions部署 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/144 [<samp>(7afb3)</samp>](https://github.com/142vip/JavaScriptCollection/commit/7afb312)
+
+### 🔥 Performance
+
+- 升级@142vip/release-version依赖，支持新版本 &nbsp;-&nbsp; by **chufan** [<samp>(cd095)</samp>](https://github.com/142vip/JavaScriptCollection/commit/cd09516)
+
+### 🐛 Bug Fixes
+
+- 修复Express版本过低告警 &nbsp;-&nbsp; by **142vip.cn** [<samp>(930eb)</samp>](https://github.com/142vip/JavaScriptCollection/commit/930eb8e)
+- 修复文档引入异常，优化流水线触发条件 &nbsp;-&nbsp; by **chufan** [<samp>(7d5ae)</samp>](https://github.com/142vip/JavaScriptCollection/commit/7d5aebb)
+- 修复sync脚本同步异常，支持main作为默认分支 &nbsp;-&nbsp; by **chufan** [<samp>(acaa3)</samp>](https://github.com/142vip/JavaScriptCollection/commit/acaa3de)
+
+### 💅 Refactors
+
+- 升级vuepress相关版本，优化项目结构 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/137 [<samp>(c0f2d)</samp>](https://github.com/142vip/JavaScriptCollection/commit/c0f2d19)
+- 替换eslint规则，使用antfu/eslint模块 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/138 [<samp>(a3cca)</samp>](https://github.com/142vip/JavaScriptCollection/commit/a3ccae0)
+
+**Release New Version v0.0.2-alpha.14 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.13...v0.0.2-alpha.14)**
+
 ## [0.0.2-alpha.13](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.12...v0.0.2-alpha.13) (2024-04-17)
 
 
