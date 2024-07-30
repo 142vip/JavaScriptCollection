@@ -12,8 +12,8 @@ importers:
         specifier: 0.0.1-alpha.5
         version: 0.0.1-alpha.5
       '@142vip/release-version':
-        specifier: 0.0.1-alpha.2
-        version: 0.0.1-alpha.2
+        specifier: 0.0.1-alpha.3
+        version: 0.0.1-alpha.3
       '@antfu/eslint-config':
         specifier: ^2.24.0
         version: 2.24.0(@vue/compiler-sfc@3.4.34)(eslint-plugin-format@0.1.2(eslint@8.57.0))(eslint@8.57.0)(typescript@5.5.4)
@@ -110,8 +110,8 @@ packages:
     resolution: {integrity: sha512-ifqOhFhy1EUJg4FL5cPH9OdNEuOcLatNsfZpL2UmVPjEIqEj9oboorTeZnoi9QIH+u6g0Xgu3U86Bqe2FX2wRg==}
     engines: {node: '>=16.0.0'}
 
-  '@142vip/release-version@0.0.1-alpha.2':
-    resolution: {integrity: sha512-T9fE3/AwMor+ZIsScR0Xg9D5Ev/PvzdDbQijcWlW+mfeS17RTbm1IiaaDwHvkGsZXIxjXWtl1DJp7fyGF2B/SA==}
+  '@142vip/release-version@0.0.1-alpha.3':
+    resolution: {integrity: sha512-Gbf4JPpA1w/zqvrSDLG8gvHE68QpaIbWbWn8wVaX0+S7tPlh7f8ousIxUBkOHeOW/rjAZS8Dot8w7lxRGWRRxA==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -5554,7 +5554,7 @@ snapshots:
       string-random: 0.1.3
       uuid: 8.3.2
 
-  '@142vip/release-version@0.0.1-alpha.2':
+  '@142vip/release-version@0.0.1-alpha.3':
     dependencies:
       '@142vip/changelog': 0.0.1-alpha.1
       '@142vip/common': 0.0.1-alpha.5
