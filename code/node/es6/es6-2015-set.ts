@@ -14,11 +14,11 @@ studentSet.add(3)
 /**
  * 列出集合中所有值
  */
-let result = ''
+let res = ''
 studentSet.forEach((value) => {
-  result += value
+  res += value
 })
-console.log(result)
+console.log(res)
 
 /**
  * Set集合中没有Key的概念

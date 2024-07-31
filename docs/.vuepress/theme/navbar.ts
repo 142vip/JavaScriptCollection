@@ -15,11 +15,11 @@ export default navbar([
     link: '/battle-interview/',
   },
   {
-    text: '前端',
+    text: '前端工程化',
     link: '/front-end/',
   },
   {
-    text: 'Node后端',
+    text: '后端开发',
     link: '/server-end/',
   },
   {

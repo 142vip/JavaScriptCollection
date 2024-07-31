@@ -105,7 +105,7 @@ LABEL email="mmdapl@163.com"
 # 创建项目空间
 RUN mkdir -p /web-project/node/oauth2-service
 # 将当前代码文件复制到工作区域
-COPY . /web-project/node/oauth2-service
+COPY .. /web-project/node/oauth2-service
 # 进入 vendors
 WORKDIR /web-project/node/oauth2-service
 # 指定npm仓库

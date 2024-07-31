@@ -1,6 +1,7 @@
 export const MicroserviceSidebar = [
   {
     text: 'RPC远程服务',
+    prefix: 'rpc',
     children: [
       {
         text: 'grpc',
@@ -80,15 +81,15 @@ export const MicroserviceSidebar = [
     children: [
       {
         text: 'Dockerfile',
-        link: 'dockerfile.md',
+        link: 'docker/dockerfile.md',
       },
       {
         text: 'docker',
-        link: 'docker.md',
+        link: 'docker/docker.md',
       },
       {
         text: 'docker-compose',
-        link: 'docker-compose.md',
+        link: 'docker/docker-compose.md',
       },
       {
         text: 'k8s',

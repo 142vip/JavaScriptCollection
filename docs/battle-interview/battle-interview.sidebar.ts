@@ -27,6 +27,7 @@ export const BattleInterviewSidebar = [
   },
   {
     text: '面试题整理',
+    collapsible: true,
     children: [
       {
         text: '前端常考',

@@ -8,8 +8,9 @@
  *  - ./scripts/deploy ali
  *  - ./scripts/deploy github
  */
-const { execShell } = require('./.exec')
+
 const packageVersion = require('../package.json').version
+const { execShell } = require('./.exec')
 
 const dockerDeployInfo = {
   repoAddress: 'registry.cn-hangzhou.aliyuncs.com/142vip/doc_book',

@@ -760,11 +760,16 @@ const arrCopy = arr.slice(1)
 const arrCopy2 = arr.slice(1, 4)
 const arrCopy3 = arr.slice(1, -2)
 const arrCopy4 = arr.slice(-4, -1)
-console.log(arr) 　　　　　　　　　　　　　　// [1, 3, 5, 7, 9, 11](原数组没变)
-console.log(arrCopy) 　　　　　　　　　　　 // [3, 5, 7, 9, 11]
-console.log(arrCopy2) 　　　　　　　　　　　// [3, 5, 7]
-console.log(arrCopy3) 　　　　　　　　　　　// [3, 5, 7]
-console.log(arrCopy4) 　　　　　　　　　　　// [5, 7, 9]
+// [1, 3, 5, 7, 9, 11](原数组没变)
+console.log(arr)
+// [3, 5, 7, 9, 11]
+console.log(arrCopy)
+// [3, 5, 7]
+console.log(arrCopy2)
+// [3, 5, 7]
+console.log(arrCopy3)
+// [5, 7, 9]
+console.log(arrCopy4)
 ```
 
 - arrCopy只设置了一个参数，也就是起始下标为1，所以返回的数组为下标1（包括下标1）开始到数组最后。

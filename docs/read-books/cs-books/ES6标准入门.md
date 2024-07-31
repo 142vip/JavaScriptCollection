@@ -6,7 +6,7 @@ headerDepth: 2
 
 # ES6标准入门
 
-![](../images/es6-standard.png)
+![](./images/es6-standard.png)
 
 ES6是下一代JavaScript语言标准的统称，每年6月发布一次修订版，迄今为止已经发布了3个版本，分别是ES2015、ES2016、ES2017。
 本书根据ES2017标准，详尽介绍了所有新增的语法，对基本概念、设计目的和用法进行了清晰的讲解，给出了大量简单易懂的示例。
