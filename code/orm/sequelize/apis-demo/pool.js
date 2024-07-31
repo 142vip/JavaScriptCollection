@@ -10,3 +10,5 @@ const sequelize = new Sequelize({
     idle: 10000,
   },
 })
+
+console.log(sequelize)

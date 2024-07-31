@@ -5,7 +5,7 @@ permalink: /read-books/cs-books/better-nodejs.html
 
 # 更了不起的Node.js
 
-![](../images/better-nodejs.png)
+![](./images/better-nodejs.png)
 
 《狼书（卷1）：更了不起的Node.js》以`Node.js`为主，讲解了`Node.js`的基础知识、开发调试方法、源码原理和应用场景，
 旨在向读者展示如何通过最新的`Node.js`和`npm`编写出更具前端特色、更具工程化优势的代码。
@@ -27,7 +27,7 @@ permalink: /read-books/cs-books/better-nodejs.html
 
 最小功效原则：
 
-> 选择最合适的解决方案而不是最强的，语言的功效越弱，对于存储在该语言中的数据，我们能做的事情就越多
+> 选择最合适地解决方案而不是最强的，语言的功效越弱，对于存储在该语言中的数据，我们能做的事情就越多
 
 Atwood定律：
 

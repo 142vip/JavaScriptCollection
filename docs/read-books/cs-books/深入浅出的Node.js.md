@@ -5,7 +5,7 @@ permalink: /read-books/cs-books/base-nodejs.html
 
 # 深入浅出Node.js
 
-![](../images/base-nodejs.png)
+![](./images/base-nodejs.png)
 
 从不同的视角介绍了 Node 内在的特点和结构，很经典、非常推荐阅读
 

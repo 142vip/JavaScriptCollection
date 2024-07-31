@@ -22,13 +22,14 @@ export const themeConfig = {
     hostname: 'https://142vip.cn',
     author: AUTHOR_INFO,
     favicon: '/favicon.ico',
-    // logo: "/assets/408_logo.png",
+    logo: '/favicon.icon',
+
     navbar,
     // 导航栏布局
     navbarLayout: {
       start: ['Brand'],
-      center: ['Links'],
-      end: ['Search', 'Language', 'Repo', 'Outlook'],
+      center: [],
+      end: ['Links', 'Language', 'Outlook', 'Search', 'Repo'],
     },
     sidebar,
 
