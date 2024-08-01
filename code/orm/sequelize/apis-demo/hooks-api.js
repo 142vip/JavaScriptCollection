@@ -15,7 +15,7 @@ Book.init({
  * 为Book实例移除afterCreate类型的userName的钩子函数
  * - 按照名称
  */
-Book.addHook('afterCreate', 'username', (book, options) => {
+Book.addHook('afterCreate', 'username', (_book, _options) => {
   // ...
 })
 Book.removeHook('afterCreate', 'username')

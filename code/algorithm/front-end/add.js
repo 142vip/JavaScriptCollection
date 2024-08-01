@@ -1,12 +1,11 @@
 /**
  * 累加
  */
-function add() {
-  const args = Array.prototype.slice.call(arguments)
+function add(...inputs) {
+  const args = Array.prototype.slice.call(inputs)
   const _add = function () {
-    console.log('add', arguments)
-    args.push(...arguments)
-
+    console.log('add', inputs)
+    args.push(...inputs)
     // 返回函数
     return _add
   }

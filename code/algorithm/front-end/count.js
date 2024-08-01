@@ -22,3 +22,7 @@ function count(str) {
   }
   return result
 }
+
+// 调用
+const result = count('abTT')
+console.log(result)

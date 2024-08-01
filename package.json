@@ -2,6 +2,7 @@
   "name": "JavaScriptCollection",
   "description": "一本有趣的JavaScript合集",
   "version": "0.0.2-alpha.15",
+  "type": "module",
   "authorInfo": {
     "name": "微信公众号：储凡",
     "email": "fairy_vip@2925.com",
@@ -42,7 +43,7 @@
     "commit-and-tag-version": "^11.3.0",
     "dashjs": "^4.7.4",
     "enquirer": "^2.4.1",
-    "eslint": "^8.57.0",
+    "eslint": "^8.55.0",
     "hls.js": "^1.5.13",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.7",
