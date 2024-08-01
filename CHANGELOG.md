@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.16 (2024-08-01)
+
+### ✨ Features
+
+- 调整导航栏，对文档排版和显示做了些优化 &nbsp;-&nbsp; by **chufan** [<samp>(842f3)</samp>](https://github.com/142vip/JavaScriptCollection/commit/842f3d1)
+- 全局搜索框支持中文提示 &nbsp;-&nbsp; by **chufan** [<samp>(4a883)</samp>](https://github.com/142vip/JavaScriptCollection/commit/4a883ac)
+- Eslint回退到8.55.0版本，增加monorepo配置管理code模块中的依赖。 &nbsp;-&nbsp; by **chufan** [<samp>(28873)</samp>](https://github.com/142vip/JavaScriptCollection/commit/28873aa)
+
+### 🐛 Bug Fixes
+
+- 修复sync脚本日志异常 &nbsp;-&nbsp; by **chufan** [<samp>(bc086)</samp>](https://github.com/142vip/JavaScriptCollection/commit/bc086c2)
+- 修复变更记录页面异常，增加文档固定链接 &nbsp;-&nbsp; by **chufan** [<samp>(303a8)</samp>](https://github.com/142vip/JavaScriptCollection/commit/303a8a0)
+
+**Release New Version v0.0.2-alpha.16 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.15...v0.0.2-alpha.16)**
+
 ## v0.0.2-alpha.15 (2024-07-31)
 
 ### 🐛 Bug Fixes
