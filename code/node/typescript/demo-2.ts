@@ -26,6 +26,7 @@ function testResult(input: boolean) {
   // Error: 'b' doesn't exist here
   // return b;
 }
+
 // 调用
 testResult(false)
 
@@ -60,7 +61,7 @@ interface SearchFunc {
 
 const searchTest: SearchFunc = {
   sex: true,
-  say: (name: string, age: number) => {
+  say: (name: string, _age: number) => {
     return name
   },
 }
@@ -69,6 +70,7 @@ console.log(searchTest)
 interface myFunc {
   (name: string): string
 }
+
 const func: myFunc = (name: string) => {
   return name
 }
@@ -106,6 +108,7 @@ console.log(Inter)
 class StudentA {
   name: string
   age: number
+
   constructor(name: string, age: number) {
     this.name = name
     this.age = age
@@ -153,7 +156,9 @@ interface Plan {
 
 class PlanA implements Plan {
   food: string
+
   eat(something: string): boolean {
+    console.log(something)
     return false
   }
 }
@@ -171,6 +176,7 @@ interface FairyB {
 interface Fairy extends FairyA, FairyB {
   gender: number
 }
+
 const fairy: Fairy = {
   name: '储凡',
   age: 18,
@@ -220,6 +226,7 @@ console.log(dogB.gender)
 
 class TestStatic {
   public static age = 18
+
   public static async test() {
     return 'this is using static function'
   }
@@ -234,7 +241,8 @@ class PointXY {
 }
 
 // 继承
-export interface PointXYZ extends PointXY {}
+export interface PointXYZ extends PointXY {
+}
 
 interface PointX {
   x: number
