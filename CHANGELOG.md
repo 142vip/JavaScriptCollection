@@ -43,7 +43,7 @@ All notable changes to this project will be documented in this file. See [Conven
 
 **Release New Version v0.0.2-alpha.14 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.13...v0.0.2-alpha.14)**
 
-## [0.0.2-alpha.13](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.12...v0.0.2-alpha.13) (2024-04-17)
+## [v0.0.2-alpha.13](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.12...v0.0.2-alpha.13) (2024-04-17)
 
 
 ### Features
@@ -55,7 +55,7 @@ All notable changes to this project will be documented in this file. See [Conven
 
 * 升级基础工具依赖 ([#134](https://github.com/142vip/JavaScriptCollection/issues/134)) ([7f1755c](https://github.com/142vip/JavaScriptCollection/commit/7f1755c29650617b30182a7c715782dc2eba700c))
 
-## [0.0.2-alpha.12](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.11...v0.0.2-alpha.12) (2023-12-25)
+## [v0.0.2-alpha.12](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.11...v0.0.2-alpha.12) (2023-12-25)
 
 
 ### Features
@@ -82,7 +82,7 @@ All notable changes to this project will be documented in this file. See [Conven
 * **deps-dev:** bump vite from 4.4.11 to 4.4.12 ([311979e](https://github.com/142vip/JavaScriptCollection/commit/311979ec1297d095b0a5b9cb5d579d3073694381))
 * 依赖版本更新 ([2b5cd60](https://github.com/142vip/JavaScriptCollection/commit/2b5cd605db4f737faf881278acfc09df28e274f3))
 
-## [0.0.2-alpha.11](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.10...v0.0.2-alpha.11) (2023-11-21)
+## [v0.0.2-alpha.11](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.10...v0.0.2-alpha.11) (2023-11-21)
 
 
 ### Features
@@ -101,7 +101,7 @@ All notable changes to this project will be documented in this file. See [Conven
 
 * **镜像:** 使用Layer缓存信息，提高Docker构建、打包速度 ([8c77d64](https://github.com/142vip/JavaScriptCollection/commit/8c77d6475a7b376c38e665db7d8701a95fa3e8f6))
 
-## [0.0.2-alpha.10](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.9...v0.0.2-alpha.10) (2023-11-15)
+## [v0.0.2-alpha.10](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.9...v0.0.2-alpha.10) (2023-11-15)
 
 
 ### Features
@@ -132,7 +132,7 @@ All notable changes to this project will be documented in this file. See [Conven
 
 * **express:** 升级模板项目依赖版本 ([2f1367b](https://github.com/142vip/JavaScriptCollection/commit/2f1367bfd1e4bb61573320ef959e17760ac5492e))
 
-## [0.0.2-alpha.9](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.8...v0.0.2-alpha.9) (2023-11-08)
+## [v0.0.2-alpha.9](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.8...v0.0.2-alpha.9) (2023-11-08)
 
 
 ### Features
@@ -151,7 +151,7 @@ All notable changes to this project will be documented in this file. See [Conven
 
 * **lint:**  修复提交自动格式化,改良lint-staged配置 ([#96](https://github.com/142vip/JavaScriptCollection/issues/96)) ([16c924a](https://github.com/142vip/JavaScriptCollection/commit/16c924ad8f4f4f078fb282f0ac26dcf7653fe59c))
 
-## [0.0.2-alpha.8](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.7...v0.0.2-alpha.8) (2023-11-05)
+## [v0.0.2-alpha.8](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.7...v0.0.2-alpha.8) (2023-11-05)
 
 
 ### Features
@@ -169,7 +169,7 @@ All notable changes to this project will be documented in this file. See [Conven
 * 修复缺少.husky目录导致dockerfile构建异常 ([2f357a4](https://github.com/142vip/JavaScriptCollection/commit/2f357a4d102937390269b2763885588f968c61b0))
 * 引入lint-staged格式化提交内容，修复git提交前hooks执行异常 ([#91](https://github.com/142vip/JavaScriptCollection/issues/91)) ([97689ab](https://github.com/142vip/JavaScriptCollection/commit/97689ab5ed8cecdcb2d8e0f65ed203a149961bcf))
 
-## [0.0.2-alpha.7](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.6...v0.0.2-alpha.7) (2023-10-30)
+## [v0.0.2-alpha.7](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.6...v0.0.2-alpha.7) (2023-10-30)
 
 ### Features
 
@@ -186,7 +186,7 @@ All notable changes to this project will be documented in this file. See [Conven
 
 - **scripts:** 修改lint脚本，优化markdown文档格式化配置 ([#85](https://github.com/142vip/JavaScriptCollection/issues/85)) ([2bac047](https://github.com/142vip/JavaScriptCollection/commit/2bac0478b77db619ea25f5b4c16f2fcc2a6b9914))
 
-## [0.0.2-alpha.6](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.5...v0.0.2-alpha.6) (2023-10-28)
+## [v0.0.2-alpha.6](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.5...v0.0.2-alpha.6) (2023-10-28)
 
 ### Features
 
@@ -208,7 +208,7 @@ All notable changes to this project will be documented in this file. See [Conven
 - **CI:** 简化流水线校验流程 ([30007d8](https://github.com/142vip/JavaScriptCollection/commit/30007d8476d1edc1713034ac54c81c85cb7e52ed))
 - **Dockerfile:** 支持node18.18.0-alpine ([f9f1702](https://github.com/142vip/JavaScriptCollection/commit/f9f17026a9a45650ebf37283820ac89abc83d8d3))
 
-## [0.0.2-alpha.5](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.4...v0.0.2-alpha.5) (2023-10-25)
+## [v0.0.2-alpha.5](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.4...v0.0.2-alpha.5) (2023-10-25)
 
 ### Bug Fixes
 
@@ -220,7 +220,7 @@ All notable changes to this project will be documented in this file. See [Conven
 - **pnpm:** CI支持PNPM8 ([d17baf7](https://github.com/142vip/JavaScriptCollection/commit/d17baf7642ee91709ea2e83dd51d95089dffe89e))
 - vue、eslint模块依赖更新 ([b29225e](https://github.com/142vip/JavaScriptCollection/commit/b29225e8ef0e3763cfee8d4fbdc36ea6595626de))
 
-## [0.0.2-alpha.4](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.3...v0.0.2-alpha.4) (2023-10-25)
+## [v0.0.2-alpha.4](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.3...v0.0.2-alpha.4) (2023-10-25)
 
 ### Features
 
@@ -240,7 +240,7 @@ All notable changes to this project will be documented in this file. See [Conven
 - CI脚本添加pnpm下载，导航栏配置文件优化 ([0e6034a](https://github.com/142vip/JavaScriptCollection/commit/0e6034a286cb3c5362df4440562cf1d0ddf03d06))
 - 更新依赖，升级webpack ([9779c79](https://github.com/142vip/JavaScriptCollection/commit/9779c79b9b6869fc8d8d2b03e8b3e3599f46868a))
 
-## [0.0.2-alpha.3](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.2...v0.0.2-alpha.3) (2023-10-13)
+## [v0.0.2-alpha.3](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.2...v0.0.2-alpha.3) (2023-10-13)
 
 ### Features
 
@@ -257,7 +257,7 @@ All notable changes to this project will be documented in this file. See [Conven
 - 流水线支持国内依赖源，规范CI/CD流程 ([bc36957](https://github.com/142vip/JavaScriptCollection/commit/bc369576e9f08d25139cbe1d118b052f5da4faf9))
 - 锁定版本Node>18，scripts钩子分配权限 ([09089fb](https://github.com/142vip/JavaScriptCollection/commit/09089fb6d022c50034129a77e772da284c513b03))
 
-## [0.0.2-alpha.2](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.1...v0.0.2-alpha.2) (2023-09-12)
+## [v0.0.2-alpha.2](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.1...v0.0.2-alpha.2) (2023-09-12)
 
 ### Features
 
@@ -268,7 +268,7 @@ All notable changes to this project will be documented in this file. See [Conven
 
 - update package version ([1ee2370](https://github.com/142vip/JavaScriptCollection/commit/1ee2370107265b68ef39b3571f9cb1f5a9f33c68))
 
-## 0.0.2-alpha.1 (2023-09-09)
+## [v0.0.2-alpha.1](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.0...v0.0.2-alpha.1) (2023-09-09)
 
 ### Features
 
