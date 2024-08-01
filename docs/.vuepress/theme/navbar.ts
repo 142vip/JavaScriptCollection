@@ -39,18 +39,18 @@ export default navbar([
     children: [
       {
         text: '变更记录',
-        link: '/changelog.md',
+        link: '/changelog',
       },
       {
         text: '网站动态',
-        link: '/big-event-history.md',
+        link: '/big-event-history',
       },
       {
         text: '自媒体',
         children: [
           {
             text: '公众号文章',
-            link: '/wechat-list.md',
+            link: '/wechat-list',
           },
         ],
       },
@@ -59,7 +59,7 @@ export default navbar([
         children: [
           {
             text: '常用网站',
-            link: '/frequent-site-link.md',
+            link: '/frequent-site-link',
           },
           {
             text: 'RoadMap计划',
