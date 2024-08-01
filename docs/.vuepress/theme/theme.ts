@@ -1,6 +1,6 @@
 import { hopeTheme } from 'vuepress-theme-hope'
 import { AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO } from './constant'
-import { i18n } from './i18n'
+import { i18n, searchProCNLocals } from './i18n'
 import navbar from './navbar'
 import sidebar from './sidebar'
 
@@ -159,19 +159,10 @@ export const themeConfig = {
         },
       },
       searchPro: {
-        // 索引全部内容
-        indexContent: true,
-        // 为分类和标签添加索引
-        customFields: [
-          {
-            getter: (page: any) => page.frontmatter.category,
-            formatter: '分类：$content',
-          },
-          {
-            getter: page => page.frontmatter.tag,
-            formatter: '标签：$content',
-          },
-        ],
+        // 参考：https://plugin-search-pro.vuejs.press/zh/config.html#locales
+        locales: {
+          '/': searchProCNLocals,
+        },
       },
       // 代码高亮：https://theme-hope.vuejs.press/zh/guide/feature/code-block.html
       shiki: {
