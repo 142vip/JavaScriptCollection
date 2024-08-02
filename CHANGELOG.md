@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.17 (2024-08-02)
+
+### 🐛 Bug Fixes
+
+- 修复依赖异常，支持eslint校验 &nbsp;-&nbsp; by **chufan** [<samp>(6daed)</samp>](https://github.com/142vip/JavaScriptCollection/commit/6daed76)
+
+**Release New Version v0.0.2-alpha.17 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.16...v0.0.2-alpha.17)**
+
 ## v0.0.2-alpha.16 (2024-08-01)
 
 ### ✨ Features
