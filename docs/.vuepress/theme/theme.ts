@@ -1,6 +1,6 @@
-import { hopeTheme } from 'vuepress-theme-hope'
-import { AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO } from './constant'
-import { i18n, searchProCNLocals } from './i18n'
+import {hopeTheme} from 'vuepress-theme-hope'
+import {AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO} from './constant'
+import {i18n, searchProCNLocals} from './i18n'
 import navbar from './navbar'
 import sidebar from './sidebar'
 
@@ -32,7 +32,6 @@ export const themeConfig = {
       end: ['Links', 'Language', 'Outlook', 'Search', 'Repo'],
     },
     sidebar,
-
     pageInfo: ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime'],
     // 主题布局选项
     docsRepo: 'https://github.com/142vip/JavaScriptCollection',
@@ -59,6 +58,9 @@ export const themeConfig = {
     copyright: COPYRIGHT,
     // 主题色选择器
     themeColor: true,
+
+    // 是否显示外部链接图标
+    externalLinkIcon: false,
 
     plugins: {
       // comment:{
@@ -92,11 +94,11 @@ export const themeConfig = {
         stylize: [
           {
             matcher: 'Recommended',
-            replacer: ({ tag }) => {
+            replacer: ({tag}) => {
               if (tag === 'em') {
                 return {
                   tag: 'Badge',
-                  attrs: { type: 'tip' },
+                  attrs: {type: 'tip'},
                   content: 'Recommended',
                 }
               }
