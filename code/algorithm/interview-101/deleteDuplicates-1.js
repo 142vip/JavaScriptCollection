@@ -10,5 +10,8 @@
  * @return ListNode类
  */
 function deleteDuplicatesOne(head) {
-  // write code here
+  console.log(head)
 }
+
+// 测试用例
+console.log(deleteDuplicatesOne(1))

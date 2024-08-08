@@ -3,8 +3,9 @@
     this.next = null;
 } */
 function reverseList(pHead) {
-  // write code here
+  console.log(pHead)
 }
+
 module.exports = {
   reverseList,
 }

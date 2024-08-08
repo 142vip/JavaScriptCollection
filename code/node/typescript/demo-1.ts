@@ -2,9 +2,7 @@
  * 基础类型
  */
 
-export default {
-
-}
+export default {}
 
 // 布尔类型
 const isSuccess: boolean = true
@@ -36,6 +34,7 @@ enum COLOR {
   GREEN = 1,
   BLUE = 3,
 }
+
 enum NAME {
   zhangSan = 'zhangSan',
   liSi = 'liSi',
@@ -43,11 +42,17 @@ enum NAME {
 
 console.log(COLOR.BLUE, NAME.zhangSan)
 
-/* void */
-// 函数返回值为空
-function testVoid(a: number): void {
+/**
+ * 函数返回值为空
+ * @param a
+ */
+function testVoid(a: number) {
   console.log(a)
 }
-const aVoid: void = null
-const bVoid: void = undefined
+
+const aVoid = null
+const bVoid = undefined
 console.log(aVoid, bVoid)
+
+// 调用
+testVoid(11)

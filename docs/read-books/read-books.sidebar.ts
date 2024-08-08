@@ -1,6 +1,7 @@
 export const ReadBooksSidebar = [
   {
     text: '技术类',
+    collapsible: true,
     prefix: 'cs-books',
     children: [
       {
@@ -27,6 +28,7 @@ export const ReadBooksSidebar = [
   },
   {
     text: '非技术类',
+    collapsible: true,
     prefix: 'not-cs-book',
     children: [
       {

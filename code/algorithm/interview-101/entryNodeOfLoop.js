@@ -9,8 +9,9 @@
  * @constructor
  */
 function entryNodeOfLoop(pHead) {
-  // write code here
+  console.log(pHead)
 }
+
 module.exports = {
   entryNodeOfLoop,
 }

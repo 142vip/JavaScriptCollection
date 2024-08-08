@@ -311,14 +311,18 @@ console.log(son)
 function fn() {
 
 }
+```
 
+```js
 // 匿名函数
-let fn = function () {
+const fn = function () {
 
 }
+```
 
+```js
 // 利用Function构造函数 【所有函数都是Function的实例】
-let fn = new Function('a', 'b', 'return a+b')
+const fn = new Function('a', 'b', 'return a+b')
 ```
 
 ### 调用方式
@@ -552,9 +556,9 @@ function fn() {
   return fun
 
 //  等价于匿名函数
-  // return function(){
-  //   console.log(num)
-  // }
+// return function(){
+//   console.log(num)
+// }
 }
 
 // 执行fn拿到fun函数

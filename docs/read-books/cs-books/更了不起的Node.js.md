@@ -463,7 +463,7 @@ app.user((ctx) => {
 app.listen(3000)
 ```
 
-在koa框架里面，我们可以很熟悉的使用`node app.js`
+在Koa框架里面，我们可以很熟悉的使用`node app.js`
 来启动，然而按照这样的代码启动只能初始化一个Node.js进程，往往单进程很容易崩溃，当流量大了、服务过载单线程启动就存在问题，因此可以使用`uncaughtException`
 捕获异常
 

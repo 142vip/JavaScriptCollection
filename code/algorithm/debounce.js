@@ -9,6 +9,7 @@ function debounce(func, time) {
     clearTimeout(timeout)
     timeout = setTimeout(() => {
       // 执行函数
+      // eslint-disable-next-line prefer-rest-params
       func.apply(this, arguments)
       // func()
     }, time)

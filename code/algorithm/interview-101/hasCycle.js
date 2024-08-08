@@ -4,8 +4,9 @@
  * @return bool布尔型
  */
 function hasCycle(head) {
-  // write code here
+  console.log(head)
 }
+
 module.exports = {
   hasCycle,
 }

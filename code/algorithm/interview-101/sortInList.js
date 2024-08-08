@@ -9,8 +9,9 @@
  * @return ListNode类
  */
 function sortInList(head) {
-  // write code here
+  console.log(head)
 }
+
 module.exports = {
   sortInList,
 }

@@ -22,3 +22,6 @@ function getLongestPalindrome(str, len) {
   }
   return max
 }
+
+// 测试用例
+console.log(getLongestPalindrome('sbcc', 2))

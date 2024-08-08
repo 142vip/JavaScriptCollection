@@ -108,9 +108,11 @@ console.log(my_name, my_age) // leo 20
 
 > 新增的定义函数的方式
 
+```text
+() => {}
+```
+
 ```js
-() => {
-}
 const fn = () => {
   console.log(123)
 }

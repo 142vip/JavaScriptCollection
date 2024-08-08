@@ -172,48 +172,47 @@ catch (err) {
 这用到的是beginTransactionScope(scope)分布式事务，自动提交、自动回滚操作；
 
 ```js
-const result = await db.beginTransactionScope((conn) {
+const result = await db.beginTransactionScope(async (conn) => {
   // 不需要手动进行事务的提交和回滚
-  await conn.insert(table, row1);
-  await conn.update(table, row2);
-  return {success: true};
-});
+  await conn.insert(table, row1)
+  await conn.update(table, row2)
+  return { success: true }
+})
 // 如果在scope里抛出异常，将会自动进行回滚
 ```
 
 #### Koa中开启事务
 
-**在koa框架中使用Transaction事务，但需要确保在koa的context上下文对象中，仅仅存在一个活跃的transaction对象；**
+**在`Koa`框架中使用`Transaction`事务，但需要确保在Koa的context上下文对象中，仅仅存在一个活跃的transaction对象；**
 
 ```js
-
 /**
  * @description
- * @param {Object} ctx context上下文
+ * @param {object} ctx context上下文
  * @param {Object|Array|String..} data 参数
  *
- **/
+ */
 async function foo(ctx, data) {
-  return await db.beginTransactionScope(async (conn) {
-    await conn.insert('user', data);
-    return {success: true};
-  }, ctx);
+  return await db.beginTransactionScope(async (conn) => {
+    await conn.insert('user', data)
+    return { success: true }
+  }, ctx)
 }
 
 /**
  * @description
- * @param {Object} ctx context上下文
+ * @param {object} ctx context上下文
  * @param {Object|Array|String..} data 参数
  *
- **/
+ */
 async function bar(ctx, data) {
-  return await db.beginTransactionScope(async  (conn) {
+  return await db.beginTransactionScope(async (conn) => {
     // 使用相同的transaction scope执行foo设置
-    await foo(ctx, {foo: 'bar'});
+    await foo(ctx, { foo: 'bar' })
     // 数据插入
-    await conn.insert('post', data);
-    return {success: true};
-  }, ctx);
+    await conn.insert('post', data)
+    return { success: true }
+  }, ctx)
 }
 ```
 
@@ -332,7 +331,9 @@ console.log(result)
 
 ```js
 // 根据查询对象，类似sequelize的findOne()
-const row = await db.get('user', { name: 'tom' })
+const row = await db.get('user', {
+  name: 'tom'
+})
 ```
 
 转化成SQL是：
@@ -347,7 +348,7 @@ SELECT * FROM `user` WHERE `name` = 'tom'
 //  查询user表中所有数据
 const rows = await db.select('user')
 
-  == > SELECT * FROM`user`
+// 转化SQL为：SELECT * FROM`user`
 
 // 查询user表中符合查询条件的所有数据
 let rows = await db.select('user', {
@@ -362,7 +363,7 @@ let rows = await db.select('user', {
 转化为SQL是：
 
 ```text
-SELECT`author`, `title` FROM`user` WHERE`type` = 'javascript' ORDER BY`id` DESC
+SELECT `author`, `title` FROM `user` WHERE `type` = 'javascript' ORDER BY `id` DESC
 ```
 
 上面可以在where对象中通过特定的key来指定匹配条件，`columns`指定获取的数据列，`orders`指定排序方式。
@@ -410,6 +411,7 @@ const row = {
   otherField: 'other field value',
   modifiedAt: db.literals.now, // 对应数据库中的now()函数
 }
+
 // 满足where条件，更新columns指定理额
 const result = await db.update('user', row, {
   where: { name: row.name },
@@ -439,8 +441,6 @@ const options = [{
 
 // 更新多行
 const result = await db.updateRows('user', options)
-
-// 返回结果
 ```
 
 ### 根据row和where属性更新多行
@@ -473,7 +473,6 @@ let options = [{
 // 更新多行
 let result = yield db.updateRows('user', options);
 
-// 返回结果
 ```
 
 这里需要补充一句：**虽然这里列举了四种常见的更新方法，但实际情况基本的update()
@@ -487,17 +486,10 @@ let result = yield db.updateRows('user', options);
 // 查询数量
 const count = await db.count('user', {
   type: 'javascript'
-});
+})
 
-// sql语句
-=>
-SELECT
-COUNT( *
-)
-AS
-count
-FROM`user`
-WHERE`type` = 'javascript';
+// sql转化
+// SELECT COUNT(*) AS count FROM `user` WHERE `type` = 'javascript';
 ```
 
 ### 自定义SQL拼接
@@ -519,12 +511,9 @@ const results = await app.mysql.query(querySql, [1, postId])
 ```js
 await app.mysql.insert(table, {
   create_time: app.mysql.literals.now
-});
+})
 
-===>
-INSERT
-INTO`$table`(`create_time`)
-VALUES(NOW())
+// INSERT INTO `$table` (`create_time`) VALUES (NOW())
 ```
 
 #### 自定义表达式
@@ -556,5 +545,4 @@ await app.mysql.insert(table, {
 ## 参考文档
 
 - `egg-mysql插件文档`:<https://www.npmjs.com/package/egg-mysql>
-
 - `ali-rds模块文档`:<https://github.com/ali-sdk/ali-rds#io-queries>)

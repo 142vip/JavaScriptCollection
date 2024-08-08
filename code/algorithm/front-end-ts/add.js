@@ -2,9 +2,12 @@
  * 累加
  */
 function add() {
+  // eslint-disable-next-line prefer-rest-params
   const args = Array.prototype.slice.call(arguments)
   const _add = function () {
+    // eslint-disable-next-line prefer-rest-params
     console.log('add', arguments)
+    // eslint-disable-next-line prefer-rest-params
     args.push(...arguments)
 
     // 返回函数

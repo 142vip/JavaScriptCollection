@@ -11,8 +11,9 @@
  * @return ListNode类
  */
 function addInList(head1, head2) {
-  // write code here
+  console.log(head1, head2)
 }
+
 module.exports = {
   addInList,
 }

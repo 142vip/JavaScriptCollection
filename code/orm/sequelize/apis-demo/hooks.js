@@ -21,7 +21,7 @@ User.init({
     beforeValidate: (user, _options) => {
       user.mood = 'happy'
     },
-    afterValidate: (user, options) => {
+    afterValidate: (user, _options) => {
       user.username = 'Toni'
     },
   },

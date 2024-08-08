@@ -3,7 +3,7 @@ import { authorInfo, name, version } from '../../../package.json'
 export const FOOTER_HTML_INFO = `
 <div>
     All Rights Reserved
-    <a href="https://github.com/142vip" target="_blank">142vip</a> Repo.
+    <a href="https://github.com/142vip" target="_blank">@142vip</a> .
     ${name}@v${version} 
     &nbsp;&nbsp;
 </div>
