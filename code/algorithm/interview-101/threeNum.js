@@ -11,7 +11,6 @@ function threeSum(num) {
     // 查找左边
     for (let left = 0; left < mid; left++) {
       // 查找右边
-
       for (let right = mid + 1; right < len; right++) {
         if (num[left] + num[mid] + num[right] === 0) {
           result.push([num[left], num[mid], num[right]])
@@ -19,6 +18,8 @@ function threeSum(num) {
       }
     }
   }
+
   return result
 }
+
 console.log(threeSum([-2, 0, 1, 1, 2]))

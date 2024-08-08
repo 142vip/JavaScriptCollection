@@ -19,7 +19,8 @@ const search = function (nums, target) {
  * @param target
  */
 function binarySearch(nums, target) {
-  let left = 0; let right = nums.length
+  let left = 0
+  let right = nums.length
   while (left < right) {
     // 注意js取整问题；
     const mid = left + Number.parseInt((right - left) / 2)
@@ -45,7 +46,8 @@ function binarySearch(nums, target) {
  * @param target
  */
 function leftBound(nums, target) {
-  let left = 0; let right = nums.length - 1
+  let left = 0
+  let right = nums.length - 1
 
   // [left,right]
   while (left <= right) {
@@ -74,7 +76,9 @@ function leftBound(nums, target) {
  * @param target
  */
 function rightBound(nums, target) {
-  let left = 0; let right = nums.length
+  let left = 0
+  let right = nums.length
+
   // [left,right) 情况
   while (left < right) {
     const mid = left + Math.floor((right - left) / 2)
@@ -97,9 +101,8 @@ function rightBound(nums, target) {
   return nums[left - 1] === target ? left - 1 : -1
 }
 
-// console.log(search([-1,0,3,5,9,12],9))
-
-// console.log(search([5,7,7,8,8,8,10],8))
-
-// console.log(left_bound([5,7,7,8,8,8,10],8))
-console.log(rightBound([5, 7, 7, 8, 8, 8, 10], 8))
+const nums = [5, 7, 7, 8, 8, 8, 10]
+const target = 8
+console.log(search(nums, target))
+console.log(leftBound(nums, target))
+console.log(rightBound(nums, target))

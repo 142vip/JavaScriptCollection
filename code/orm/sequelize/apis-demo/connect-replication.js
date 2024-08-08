@@ -1,6 +1,5 @@
 /**
  * 配置读写分离
- * @type {Sequelize}
  */
 const { Sequelize } = require('sequelize')
 
@@ -24,3 +23,5 @@ const sequelize = new Sequelize('database', null, null, {
     idle: 30000,
   },
 })
+
+console.log(sequelize)

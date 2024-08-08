@@ -51,6 +51,7 @@ function getPivot(arr, low, high) {
     arr[high] = arr[low]
   }
   arr[low] = pivot
+
   return low
 }
 

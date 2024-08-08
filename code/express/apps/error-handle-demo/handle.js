@@ -15,7 +15,7 @@ app.use(methodOverride())
  * 定义一些路由逻辑
  */
 
-app.get('/get', async (req, res) => {
+app.get('/get', async (_req, _res) => {
   console.log('处理业务逻辑')
 })
 
@@ -23,7 +23,7 @@ app.get('/get', async (req, res) => {
  * 最后自定义错误处理
  *
  */
-app.use((err, req, res, next) => {
+app.use((err, _req, _res, _next) => {
   console.log('捕获到的错误信息')
   console.log(err)
 })

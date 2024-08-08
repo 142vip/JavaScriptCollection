@@ -38,20 +38,20 @@ permalink: /solo-algorithm/sword-point/number-count-in-n.html
 - 需要特别注意Math的一些操作方法
 
 ```js
-// 取整，丢弃小数部分,保留整数部分
-Number.parseInt(5 / 2)　　// 2
+// 取整，丢弃小数部分,保留整数部分，输出2
+Number.parseInt(5 / 2)
 
-// 向上取整,有小数就整数部分加1
-Math.ceil(5 / 2)　　// 3
+// 向上取整,有小数就整数部分加1，输出3
+Math.ceil(5 / 2)
 
-// 向下取整,丢弃小数部分
-Math.floor(5 / 2)　　// 2
+// 向下取整,丢弃小数部分，输出2
+Math.floor(5 / 2)
 
-// 四舍五入
-Math.round(5 / 2)　　// 3
+// 四舍五入，输出3
+Math.round(5 / 2)
 
-// 取余
-6 % 4　　// 2
+// 取余，输出2
+6 % 4
 ```
 
 - 参考： <https://es6.ruanyifeng.com/#docs/number>

@@ -8,9 +8,6 @@ function DeepCloneByJSON(target) {
 
 /**
  * 基于递归思想的深拷贝
- * @param target
- * @returns {{}|*}
- * @constructor
  */
 function DeepClone(target) {
   let result
@@ -41,3 +38,7 @@ function checkType(target) {
   // typeof -instanceof -toString.call()  -Array.isArray()
   return Object.prototype.toString.call(target).slice(8, -1)
 }
+
+// 深拷贝
+console.log(DeepCloneByJSON)
+console.log(DeepClone)

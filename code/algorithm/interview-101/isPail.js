@@ -10,8 +10,9 @@
  * @return bool布尔型
  */
 function isPail(head) {
-  // write code here
+  console.log(head)
 }
+
 module.exports = {
   isPail,
 }

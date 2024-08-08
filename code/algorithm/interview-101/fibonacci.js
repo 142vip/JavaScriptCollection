@@ -18,12 +18,14 @@ function fibonacciTwo(n) {
   let secondValue = 1
 
   let result = 1
+
   for (let index = 3; index <= n; index++) {
     result = firstValue + secondValue
     // 前面两列重新赋值
     firstValue = secondValue
     secondValue = result
   }
+
   return result
 }
 

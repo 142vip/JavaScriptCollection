@@ -32,7 +32,6 @@ function twoSumByMap(numbers, target) {
     if (map.has(target - numbers[left]) && map.get(target - numbers[left]) !== (left + 1)) {
       // 则在左边找到元素
       const right = map.get(target - numbers[left])
-      console.log(map)
       return [right, left + 1]
     }
     // 有点倒排索引的意思

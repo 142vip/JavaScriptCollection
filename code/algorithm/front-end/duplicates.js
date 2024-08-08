@@ -1,7 +1,5 @@
 /**
  * 找出数组 arr 中重复出现过的元素
- * @param arr
- * @returns {*[]}
  */
 function duplicates(arr) {
   const sortArr = arr.sort()

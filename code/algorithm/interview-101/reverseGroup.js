@@ -4,5 +4,8 @@
  * @return ListNode类
  */
 function reverseGroup(head, k) {
-  // write code here
+  console.log(head, k)
 }
+
+// 测试用例
+console.log(reverseGroup(11, 11))

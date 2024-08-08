@@ -4,8 +4,9 @@
  * @return ListNode类
  */
 function mergeKLists(lists) {
-
+  console.log(lists)
 }
+
 module.exports = {
   mergeKLists,
 }

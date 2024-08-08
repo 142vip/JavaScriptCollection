@@ -1,6 +1,7 @@
 const express = require('express')
 
 const app = express()
+console.log(app)
 
 express.raw({
   // 可选参数，布尔类型
@@ -15,6 +16,7 @@ express.raw({
   // 可选参数，函数包含req、res、buffer、encoding四个参数
   // 提供原始的请求正文Buffer数据、编码等信息，可以通过抛错来终止解析
   verify(req, res, buf, encoding) {
+    console.log(req, res, buf, encoding)
   },
 })
 
@@ -30,6 +32,7 @@ express.json({
   // 参考JSON.parse()的API：
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Example.3A_Using_the_reviver_parameter
   reviver(key, value) {
+    console.log(key, value)
   },
 })
 

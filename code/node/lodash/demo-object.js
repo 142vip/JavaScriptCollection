@@ -29,3 +29,5 @@ const _ = require('lodash')
 // toPairs:  创建可枚举属性的对象键值数组（二维），与fromPairs操作相反
 // transform: reduce替代方法，值、键转换
 // values:  创建对象可枚举属性值的数组
+
+console.log(_.values({ a: 1, b: 2, c: 3 }))

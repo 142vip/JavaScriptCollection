@@ -1,10 +1,12 @@
 /**
  * 链表结点
  */
+// eslint-disable-next-line no-unused-vars,unused-imports/no-unused-vars
 function ListNode(x) {
   this.val = x
   this.next = null
 }
+
 /**
  *【简单】 链表中倒数最后k个结点
  * @param pHead ListNode类

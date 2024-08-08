@@ -11,7 +11,7 @@ router.use(async (req, res, next) => {
 })
 
 // 设置该路由管理的路径
-router.get('/get-request', async (req, res, next) => {
+router.get('/get-request', async (req, res, _next) => {
   console.log('完成接口的一些业务逻辑')
 
   res.json({

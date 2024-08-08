@@ -17,11 +17,13 @@ function FindNumbersWithSum(array, sum) {
       // 向右
       left++
     }
-    else if (tempSum > sum) {
+
+    if (tempSum > sum) {
       // 向左
       right--
     }
-    else if (tempSum === sum) {
+
+    if (tempSum === sum) {
       // 已找到符合条件的元素，需要对齐进行乘积比较
       if (min > array[left] * array[right]) {
         // 假定为最小值
@@ -34,6 +36,7 @@ function FindNumbersWithSum(array, sum) {
       right--
     }
   }
+
   // left===right 退出
   return sumResult
 }

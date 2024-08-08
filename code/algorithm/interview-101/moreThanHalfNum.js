@@ -1,3 +1,9 @@
+/**
+ *
+ * @param numbers
+ * @returns {number}
+ * @constructor
+ */
 function MoreThanHalfNumSolution(numbers) {
   const map = new Map()
   numbers.forEach((item) => {
@@ -17,3 +23,6 @@ function MoreThanHalfNumSolution(numbers) {
   })
   return result
 }
+
+// 测试用例
+console.log(MoreThanHalfNumSolution(11))

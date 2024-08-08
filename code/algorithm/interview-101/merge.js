@@ -4,8 +4,9 @@
  * @return ListNode类
  */
 function merge(pHead1, pHead2) {
-  // write code here
+  console.log(pHead1, pHead2)
 }
+
 module.exports = {
   merge,
 }

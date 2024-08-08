@@ -40,8 +40,9 @@ jQuery是一个轻量级的JavaScript框架，简化JavaScript编程，适合Js�
 
 ```js
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+// 采用min文件，加速访问
+// <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 ```
 
 ## 参考资料

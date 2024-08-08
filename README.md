@@ -368,7 +368,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 - [ ] nodejs下gRPC的简单实用
 - [ ] gRPC集成express框架
-- [ ] gRPC集成koa框架
+- [ ] gRPC集成Koa框架
 - [ ] gRPC在egg.js下的应用
 - [ ] gRPC插件开发示例
 
