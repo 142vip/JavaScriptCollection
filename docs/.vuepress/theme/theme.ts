@@ -1,6 +1,6 @@
-import {hopeTheme} from 'vuepress-theme-hope'
-import {AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO} from './constant'
-import {i18n, searchProCNLocals} from './i18n'
+import { hopeTheme } from 'vuepress-theme-hope'
+import { AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO } from './constant'
+import { i18n, searchProCNLocals } from './i18n'
 import navbar from './navbar'
 import sidebar from './sidebar'
 
@@ -94,11 +94,11 @@ export const themeConfig = {
         stylize: [
           {
             matcher: 'Recommended',
-            replacer: ({tag}) => {
+            replacer: ({ tag }) => {
               if (tag === 'em') {
                 return {
                   tag: 'Badge',
-                  attrs: {type: 'tip'},
+                  attrs: { type: 'tip' },
                   content: 'Recommended',
                 }
               }
