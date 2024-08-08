@@ -1,10 +1,9 @@
 #!/bin/bash
 
-##
-## 同步分支脚本
-## 使用: ./scripts/sync
-##
-
+#
+# 同步分支脚本
+# 使用: ./scripts/sync
+#
 
 # 远程仓库名称
 remoteList=("origin" "mmdapl" "chufan443" "lir0115")
