@@ -8,15 +8,15 @@ importers:
 
   .:
     devDependencies:
-      '@142vip/common':
-        specifier: ^0.0.1-alpha.5
-        version: 0.0.1-alpha.5
       '@142vip/fairy-cli':
         specifier: ^0.0.3-alpha.10
         version: 0.0.3-alpha.10
       '@142vip/release-version':
         specifier: ^0.0.1-alpha.4
         version: 0.0.1-alpha.4
+      '@142vip/utils':
+        specifier: 0.0.1-alpha.2
+        version: 0.0.1-alpha.2
       '@antfu/eslint-config':
         specifier: ^2.24.0
         version: 2.24.1(@vue/compiler-sfc@3.4.35)(eslint-plugin-format@0.1.2(eslint@8.55.0))(eslint@8.55.0)(typescript@5.5.4)
