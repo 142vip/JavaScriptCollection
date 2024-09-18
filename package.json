@@ -12,24 +12,16 @@
   "packageManager": "pnpm@9.6.0",
   "engines": {
     "node": ">=18.x",
-    "pnpm": "9"
+    "pnpm": "9.6.0"
   },
   "scripts": {
-    "preinstall": "chmod +x ./scripts/*",
+    "preinstall": "npx only-allow pnpm && chmod +x ./scripts/*",
     "prepare": "husky install",
     "clean": "npx fa clean --ignore-tips --dist --vite --all",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs --clean-temp --clean-cache",
     "build:proxy": "PROXY_DOMAIN=true vuepress build docs --clean-temp --clean-cache",
     "deploy:vercel": "vercel --prod"
-  },
-  "scripts-info": {
-    "preinstall": "在安装依赖前分配脚本权限",
-    "postinstall": "在安装依赖后编译markdown文档转化为思维导图",
-    "prepare": "安装依赖预执行脚本",
-    "build:mark-map": "./scripts/mark-map",
-    "dev": "本地启动项目",
-    "clean": "快速删除本地依赖"
   },
   "devDependencies": {
     "@142vip/common": "^0.0.1-alpha.5",
