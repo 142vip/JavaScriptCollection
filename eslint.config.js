@@ -4,17 +4,9 @@ import antFu from '@antfu/eslint-config'
 
 export default antFu({
   ignores: [
-    '**/node_modules/**',
-    'dist',
-    '**/dist/**',
-    '.nuxt',
-    '**/.nuxt/**',
-    'typings/',
-    '**/typings/**/',
-    '.output',
-    '**/.output/**',
-    '**/*/CHANGELOG.md',
+    '**/CHANGELOG.md',
   ],
+  gitignore: true,
   typescript: true,
   vue: true,
   jsonc: false,
@@ -33,7 +25,5 @@ export default antFu({
         message: 'Unexpected property on console object was called',
       },
     ],
-    // 用于在模块构建后基于dist导出时找不到文件，忽略校验
-    'antfu/no-import-dist': 1,
   },
 })

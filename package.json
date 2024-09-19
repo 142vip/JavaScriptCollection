@@ -19,6 +19,8 @@
     "prepare": "husky install",
     "clean": "npx fa clean --ignore-tips --dist --vite --all",
     "dev": "vuepress dev docs",
+    "lint": "npx fa lint",
+    "lint:fix": "npx fa lint --fix",
     "build": "vuepress build docs --clean-temp --clean-cache",
     "build:proxy": "PROXY_DOMAIN=true vuepress build docs --clean-temp --clean-cache",
     "deploy:vercel": "vercel --prod"
@@ -27,7 +29,7 @@
     "@142vip/fairy-cli": "^0.0.3-alpha.10",
     "@142vip/release-version": "^0.0.1-alpha.4",
     "@142vip/utils": "0.0.1-alpha.2",
-    "@antfu/eslint-config": "^2.24.0",
+    "@antfu/eslint-config": "^2.27.3",
     "@commitlint/cli": "^18.6.1",
     "@commitlint/config-conventional": "^18.6.3",
     "@vue/repl": "^4.3.1",

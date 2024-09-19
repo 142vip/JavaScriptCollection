@@ -540,8 +540,8 @@ JavaScript 语言存在一个顶层对象，它提供全局环境（即全局作
 (typeof window !== 'undefined'
   ? window
   : (typeof process === 'object'
-  && typeof require === 'function'
-  && typeof global === 'object')
+    && typeof require === 'function'
+    && typeof global === 'object')
       ? global
       : this)
 
@@ -1166,7 +1166,7 @@ $('#result').append(`
 `In JavaScript '\n' is a line-feed.`
 
 // 多行字符串
-  `In JavaScript this is
+`In JavaScript this is
  not legal.`
 
 console.log(`string text line 1
@@ -1222,7 +1222,7 @@ const y = 2;
 `${x} + ${y} = ${x + y}`
 // "1 + 2 = 3"
 
-  `${x} + ${y * 2} = ${x + y * 2}`
+`${x} + ${y * 2} = ${x + y * 2}`
 // "1 + 4 = 5"
 
 // 定义对象
