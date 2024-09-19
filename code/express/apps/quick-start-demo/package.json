@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "express框架快速开始演示demo",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.21.0"
   },
   "scripts": {
     "dev": "node app.js"
