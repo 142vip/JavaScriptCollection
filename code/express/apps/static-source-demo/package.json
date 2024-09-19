@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Express框架前端静态资源托管服务演示Demo",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.21.0"
   },
   "scripts": {
     "dev": "node app.js"

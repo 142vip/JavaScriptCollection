@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Express框架的API演示Demo",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.21.0"
   },
   "scripts": {},
   "author": {
