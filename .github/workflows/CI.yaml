@@ -64,7 +64,7 @@ jobs:
 
       #      - name: Code LintFix
       #        run: |
-      #          ./scripts/lint
+      #          pnpm lint
 
       - name: Build Site
         run: |
