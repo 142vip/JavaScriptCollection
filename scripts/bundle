@@ -9,39 +9,18 @@
  *   - ./scripts/bundle                    交互式选择执行的命令
  */
 
-const { execShell } = require('./.exec')
-const { execSync } = require('child_process');
-const { Select } = require('enquirer')
+import {execShell, promptList, getLogInfo} from '@142vip/utils'
+import {name, version} from '../package.json'
+
+const packageVersion = version
+const projectName = name
 
 // 仓库地址
 const repoAddress = 'registry.cn-hangzhou.aliyuncs.com/142vip/docs'
 
-const packageInfo=require('../package.json')
-const packageVersion = packageInfo.version
-const projectName = packageInfo.name
-
 // 镜像地址
 const imageName = `${repoAddress}:${projectName}-${packageVersion}`
 
-
-/**
- * 获取最近一次Git提交信息
- * - 短哈希值
- * - 提交信息
- */
-async function getGitInfo(){
-  // 执行 git log 命令获取最新一次提交的哈希值和消息
-  const gitLog = execSync('git log --no-merges -1 --pretty=format:"%h %s"').toString();
-
-  // 分割输出字符串以获取哈希值和消息
-  const [commitHash, ...commitMessage] = gitLog.trim().split(' ');
-
-  // 输出最近一次提交的信息
-  return {
-    gitHash: commitHash,
-    gitMessage: commitMessage.join(' ')
-  }
-}
 
 /**
  * 获取构建镜像的脚本
@@ -49,7 +28,7 @@ async function getGitInfo(){
  * @param preBuild        是否预编译
  * @param needProxy       是否配置代理路径
  */
-async function getBuildImageScript({ containerBuild, preBuild, needProxy = false }) {
+async function getBuildImageScript({containerBuild, preBuild, needProxy = false}) {
   // 基础构建脚本
   let baseBuildScript = ''
 
@@ -57,11 +36,11 @@ async function getBuildImageScript({ containerBuild, preBuild, needProxy = false
     baseBuildScript = needProxy ? './scripts/bundle build_proxy' : './scripts/bundle build'
   }
 
-  const {gitHash,gitMessage}=await getGitInfo()
+  const {gitHash, gitMessage} = await getLogInfo()
 
   return [
-      // 构建镜像
-      `
+    // 构建镜像
+    `
         ${baseBuildScript} 
         docker build \
         --build-arg CONTAINER_BUILD=${containerBuild} \
@@ -75,8 +54,8 @@ async function getBuildImageScript({ containerBuild, preBuild, needProxy = false
         --build-arg GIT_MESSAGE="${gitMessage}" \
         -t ${imageName}  .
       `,
-      // 推送镜像
-      `
+    // 推送镜像
+    `
         if [ "$(docker images -q  ${imageName} 2> /dev/null)" != "" ];then
           ## 推送
           docker push ${imageName}
@@ -113,44 +92,40 @@ async function getScriptCommand() {
   let scriptCommand = SupportScripts.build
 
   if (scriptName == null) {
-    const prompt = new Select({
-      header: '======================== JavaScriptCollection Cli For Building ========================',
-      footer: '======================== JavaScriptCollection Cli For Building ========================',
-      name: 'color',
-      message: 'What script will you want to run ',
-      choices: [
-        {
-          message: 'build to docker image',
-          name: SupportScripts.image,
-          value: '#0000ff'
-        },
-        {
-          message: 'build to docker image with proxy',
-          name: SupportScripts.image_proxy,
-          value: '#0000ff'
-        },
-        {
-          message: 'build to docker image faster',
-          name: SupportScripts.image_faster,
-          value: '#0000ff'
-        }
-      ]
-    })
+    const prompt = await promptList([
+      {
+        message: 'build to docker image',
+        name: SupportScripts.image,
+        value: '#0000ff'
+      },
+      {
+        message: 'build to docker image with proxy',
+        name: SupportScripts.image_proxy,
+        value: '#0000ff'
+      },
+      {
+        message: 'build to docker image faster',
+        name: SupportScripts.image_faster,
+        value: '#0000ff'
+      }
+    ], 'What script will you want to run ')
     scriptCommand = await prompt.run()
   } else {
     // 命中支持的脚本
-    if (Object.keys(SupportScripts).includes(scriptName)) { scriptCommand = SupportScripts[scriptName] }
+    if (Object.keys(SupportScripts).includes(scriptName)) {
+      scriptCommand = SupportScripts[scriptName]
+    }
   }
   return scriptCommand
 }
 
 
-;(async() => {
-  try{
+;(async () => {
+  try {
     const scriptCommand = await getScriptCommand()
     await execShell(scriptCommand)
-  }catch (e) {
-    console.log('异常信息:',e)
+  } catch (e) {
+    console.log('异常信息:', e)
   }
 })()
 
