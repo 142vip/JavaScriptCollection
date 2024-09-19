@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.18 (2024-09-19)
+
+### ✨ Features
+
+- 增加externalLinkIcon配置，不显示外部链接图标 &nbsp;-&nbsp; by **chufan** [<samp>(b1602)</samp>](https://github.com/142vip/JavaScriptCollection/commit/b160234)
+- 移除bumpp等用于发布功能的模块，简化release脚本 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/JavaScriptCollection/issues/153 [<samp>(2e64d)</samp>](https://github.com/142vip/JavaScriptCollection/commit/2e64d8c)
+- 使用`@142vip/fairy-cli`模块，优化`clean`命令 &nbsp;-&nbsp; by **chufan** [<samp>(2027b)</samp>](https://github.com/142vip/JavaScriptCollection/commit/2027b1a)
+- `pnpm`版本锁定`9.6.0`，增加`only-allow`配置约束`pnpm` &nbsp;-&nbsp; by **chufan** [<samp>(038f1)</samp>](https://github.com/142vip/JavaScriptCollection/commit/038f1b7)
+- 升级`@antfu/eslint-config`到最新版本，新增`lint`相关命令，删除重复的`lint`脚本 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/JavaScriptCollection/issues/159 [<samp>(c45a0)</samp>](https://github.com/142vip/JavaScriptCollection/commit/c45a087)
+- 配置`release`命令,升级`@142vip/fairy-cli`模块，打通整个发布工作流 &nbsp;-&nbsp; by **chufan** [<samp>(4a7de)</samp>](https://github.com/142vip/JavaScriptCollection/commit/4a7def8)
+- 移除`exec`脚本执行器，修改`bundle`脚本逻辑 &nbsp;-&nbsp; by **chufan** [<samp>(05f7f)</samp>](https://github.com/142vip/JavaScriptCollection/commit/05f7fa1)
+- **Github Actions**:
+  - 移除流水线下载依赖时的`registry-url`配置 &nbsp;-&nbsp; by **chufan** [<samp>(a0dd6)</samp>](https://github.com/142vip/JavaScriptCollection/commit/a0dd623)
+
+### 🔥 Performance
+
+- 优化`scripts`脚本，`ci`命令统一`npm`配置 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/156 [<samp>(c5a55)</samp>](https://github.com/142vip/JavaScriptCollection/commit/c5a558d)
+- 移除`@142vip/common`模块，使用`@142vip/utils`替换 &nbsp;-&nbsp; by **chufan** [<samp>(da164)</samp>](https://github.com/142vip/JavaScriptCollection/commit/da164f3)
+
+### 🐛 Bug Fixes
+
+- 使用eslint@8.55.0版本，修复IDEA校验规则报错 &nbsp;-&nbsp; by **chufan** [<samp>(3983a)</samp>](https://github.com/142vip/JavaScriptCollection/commit/3983aa5)
+- 修复文档、代码的Eslint校验错误 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/JavaScriptCollection/issues/154 [<samp>(7e54c)</samp>](https://github.com/142vip/JavaScriptCollection/commit/7e54cfd)
+- 升级`express`模块到`4.21.0`版本，解决模块安全告警 &nbsp;-&nbsp; by **chufan** [<samp>(5720d)</samp>](https://github.com/142vip/JavaScriptCollection/commit/5720dbb)
+
+**Release New Version v0.0.2-alpha.18 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.17...v0.0.2-alpha.18)**
+
 ## v0.0.2-alpha.17 (2024-08-02)
 
 ### 🐛 Bug Fixes
