@@ -24,8 +24,7 @@
     "build": "vuepress build docs --clean-temp --clean-cache",
     "build:proxy": "PROXY_DOMAIN=true vuepress build docs --clean-temp --clean-cache",
     "deploy:vercel": "vercel --prod",
-    "release": "npx fa release --vip",
-    "go": "node scripts/bundle"
+    "release": "npx fa release --vip"
   },
   "devDependencies": {
     "@142vip/fairy-cli": "^0.0.3-alpha.11",
