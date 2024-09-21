@@ -6,7 +6,7 @@
 ##
 
 
-NPM_REGISTRY="https://registry.npmmirror.com"
+NPM_REGISTRY="https://mirrors.tencent.com/npm/"
 
 ## 获取所有参数
 echo "运行命令: COREPACK_NPM_REGISTRY=$NPM_REGISTRY corepack enable pnpm && pnpm i --registry $NPM_REGISTRY --frozen-lockfile $*"
