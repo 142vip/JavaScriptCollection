@@ -1,6 +1,7 @@
 ---
 permalink: /changelog.html
 headerDepth: 1
+sidebar: false
 ---
 
 # 变更记录
@@ -28,6 +29,7 @@ headerDepth: 1
 
 ::: tip
 
-对于发布早于 0.0.1 的历史版本，详见[Github 仓库](https://github.com/142vip/JavaScriptCollection/blob/master/CHANGELOG.md) 。
+对于发布早于 0.0.1
+的历史版本，详见[Github 仓库](https://github.com/142vip/JavaScriptCollection/blob/master/CHANGELOG.md) 。
 
 :::

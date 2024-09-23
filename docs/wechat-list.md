@@ -1,6 +1,7 @@
 ---
 title: 公众号文章
 permalink: /wechat-list.html
+sidebar: false
 ---
 
 # 公众号文章

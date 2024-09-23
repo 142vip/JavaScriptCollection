@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # 接入Artalk评论系统
 
 ```bash

@@ -11,7 +11,7 @@ title: 面试必刷Top101
 ### 链表
 
 - [x] [1.反转链表【简单】](链表/reverseList.md)
-- [ ] [2.链表内指定区间反转 【中等】](链表/reverseBetween.md)
+- [x] [2.链表内指定区间反转 【中等】](链表/reverseBetween.md)
 - [ ] [3.链表中的节点每k个一组翻转 【中等】](链表/reverseGroup.md)
 - [ ] [4.合并两个排序的链表 【简单】](链表/merge.md)
 - [ ] [5.合并k个已排序的链表 【较难】](链表/mergeKLists.md)

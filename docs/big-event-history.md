@@ -1,6 +1,7 @@
 ---
 title: 大事记
 permalink: /big-event-history.html
+sidebar: false
 ---
 
 # 大事记

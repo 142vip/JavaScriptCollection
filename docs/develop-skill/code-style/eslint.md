@@ -29,15 +29,17 @@ pnpm i eslint -D
 
 相关`eslint`包`package.json`文件如下：
 
-```package.json
-"@typescript-eslint/eslint-plugin": "^5.53.0",
-"@typescript-eslint/parser": "^5.53.0",
-"eslint": "^8.34.0",
-"eslint-config-standard": "^17.0.0",
-"eslint-plugin-import": "^2.25.2",
-"eslint-plugin-n": "^15.0.0",
-"eslint-plugin-promise": "^6.0.0",
-"eslint-plugin-vue": "^9.9.0",
+```json5
+{
+  "@typescript-eslint/eslint-plugin": "^5.53.0",
+  "@typescript-eslint/parser": "^5.53.0",
+  "eslint": "^8.34.0",
+  "eslint-config-standard": "^17.0.0",
+  "eslint-plugin-import": "^2.25.2",
+  "eslint-plugin-n": "^15.0.0",
+  "eslint-plugin-promise": "^6.0.0",
+  "eslint-plugin-vue": "^9.9.0",
+}
 ```
 
 ## 参考资料
