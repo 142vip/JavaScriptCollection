@@ -52,6 +52,13 @@ export default defineUserConfig({
   // // 插件配置
   // ...pluginConfig,
   // 编译
-  bundler: viteBundler(),
+  bundler: viteBundler({
+    viteOptions: {
+      build: {
+        chunkSizeWarningLimit: 4096,
+      },
+    },
+    vuePluginOptions: {},
+  }),
   shouldPrefetch: false,
 })
