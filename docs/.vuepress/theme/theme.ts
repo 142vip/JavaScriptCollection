@@ -1,4 +1,5 @@
 import { hopeTheme } from 'vuepress-theme-hope'
+import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
 import { AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO } from './constant'
 import { i18n, searchProCNLocals } from './i18n'
 import navbar from './navbar'
@@ -74,19 +75,23 @@ export const themeConfig = {
       copyright: false,
       // 开启博客功能
       blog: false,
+      // 图片增强，参考：https://ecosystem.vuejs.press/zh/plugins/markdown/markdown-image.html
+      markdownImage: markdownImagePlugin({
+        // 启用 figure
+        figure: true,
+        // 启用图片懒加载
+        lazyload: true,
+        // 启用图片标记
+        mark: true,
+        // 启用图片大小
+        size: true,
+      }),
       // 代码块
       mdEnhance: {
         // card:true,
         codetabs: true,
-        tasklist: true, // 支持任务列表
-        // 启用 figure
-        figure: true,
-        // 启用图片懒加载
-        imgLazyload: true,
-        // 启用图片标记
-        imgMark: true,
-        // 启用图片大小
-        imgSize: true,
+        // 支持任务列表
+        tasklist: true,
         playground: {
           presets: ['ts', 'vue'],
         },
@@ -168,13 +173,48 @@ export const themeConfig = {
       },
       // 代码高亮：https://theme-hope.vuejs.press/zh/guide/feature/code-block.html
       shiki: {
-        langs: ['ts', 'js', 'json', 'vue', 'json5', 'bash', 'diff', 'c', 'c++', 'dockerfile', 'nginx', 'proto'],
+        langs: ['ts', 'js', 'json', 'vue', 'json5', 'bash', 'diff', 'c', 'c++', 'dockerfile', 'nginx', 'proto', 'java', 'javascript', 'typescript'],
         // 你想要使用的主题
         themes: {
           light: 'one-light',
           dark: 'one-dark-pro',
         },
       },
+      // shiki: shikiPlugin({
+      //   // 配置项
+      //   langs: [
+      //     'java',
+      //     'javascript',
+      //     'typescript',
+      //     'html',
+      //     'css',
+      //     'json',
+      //     'yaml',
+      //     'markdown',
+      //     'xml',
+      //     'bat',
+      //     'shell',
+      //     'powershell',
+      //     'sql',
+      //     'properties',
+      //     'md',
+      //     'vue',
+      //     'tsx',
+      //     'jsx',
+      //     'scss',
+      //     'less',
+      //     'sass',
+      //     'vue-html',
+      //     'nginx',
+      //     'tex',
+      //   ],
+      //   themes: {
+      //     // light: 'one-light',
+      //     // dark: 'one-dark-pro',
+      //     dark: 'dark-plus',
+      //     light: 'light-plus',
+      //   },
+      // }),
     },
   }),
 }

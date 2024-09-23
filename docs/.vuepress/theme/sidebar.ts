@@ -2,7 +2,7 @@ import { sidebar } from 'vuepress-theme-hope'
 import { ServerEndSidebar } from '../../server-end/server-end.sidebar'
 import { EggSidebar } from '../../server-end/framework/egg/eggSidebar'
 import { DevelopSkillSidebar } from '../../develop-skill/develop-skill.sidebar'
-// import {soloAlgorithmSidebar} from "../../solo-algorithm/solo-algorithm.sidebar";
+import { soloAlgorithmSidebar } from '../../solo-algorithm/solo-algorithm.sidebar'
 import { JobChanceSidebar } from '../../job-chance/job-chance.sidebar'
 import { ReadBooksSidebar } from '../../read-books/read-books.sidebar'
 import { MicroserviceSidebar } from '../../microservice/microserviceSidebar'
@@ -41,7 +41,7 @@ export default sidebar({
   '/server-end/orm/sequelize': SequelizeOrmSidebar,
   '/server-end/orm/typeorm': TypeormSidebar,
   '/develop-skill': DevelopSkillSidebar,
-  // "/solo-algorithm": soloAlgorithmSidebar,
+  '/solo-algorithm': soloAlgorithmSidebar,
   '/read-books': ReadBooksSidebar,
   '/job-chance': JobChanceSidebar,
   '/microservice': MicroserviceSidebar,
