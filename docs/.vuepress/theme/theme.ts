@@ -1,6 +1,6 @@
 import { hopeTheme } from 'vuepress-theme-hope'
 import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
-import { AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO } from './constant'
+import { AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO, RepoAddress } from './constant'
 import { i18n, searchProCNLocals } from './i18n'
 import navbar from './navbar'
 import sidebar from './sidebar'
@@ -14,7 +14,7 @@ export const themeConfig = {
     locales: i18n,
     // navbarIcon: false,
     // 禁用深色模式
-    darkmode: 'disable',
+    darkmode: 'toggle',
     // 支持全屏
     // fullscreen: true,
     // 纯净模式
@@ -30,16 +30,26 @@ export const themeConfig = {
     navbarLayout: {
       start: ['Brand'],
       center: [],
-      end: ['Links', 'Language', 'Outlook', 'Search', 'Repo'],
+      end: ['Links', 'Language', 'Search', 'Outlook', 'Repo'],
     },
     sidebar,
     pageInfo: ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime'],
     // 主题布局选项
-    docsRepo: 'https://github.com/142vip/JavaScriptCollection',
+    docsRepo: RepoAddress,
     docsDir: 'docs',
-    docsBranch: 'main',
-    repo: 'https://github.com/142vip/JavaScriptCollection.git',
-
+    docsBranch: 'next',
+    repo: '142vip/JavaScriptCollection',
+    repoLabel: 'GitHub',
+    // 是否在导航栏内显示仓库链接，默认为 `true`
+    repoDisplay: true,
+    // 设置页脚
+    displayFooter: true,
+    footer: FOOTER_HTML_INFO,
+    copyright: COPYRIGHT,
+    // 主题色选择器
+    themeColor: true,
+    // 是否显示外部链接图标
+    externalLinkIcon: false,
     // 博客配置
     // blog: {
     //     name: '测试',
@@ -53,22 +63,33 @@ export const themeConfig = {
     //         "BiliBili": "https://space.bilibili.com/350937042?spm_id_from=333.1007.0.0"
     //     }
     // },
-    // 设置页脚
-    displayFooter: true,
-    footer: FOOTER_HTML_INFO,
-    copyright: COPYRIGHT,
-    // 主题色选择器
-    themeColor: true,
-
-    // 是否显示外部链接图标
-    externalLinkIcon: false,
-
     plugins: {
       // comment:{
       //   provider: "Artalk",
       //   server:"https://test.142vip.cn/",
       //   site:'JavaScriptCollection',
       // },
+      // 公告 参考：https://theme-hope.vuejs.press/zh/guide/feature/notice.html
+      // notice: [
+      //   {
+      //     path: '/',
+      //     title: '在线浏览',
+      //     content: '网站无法访问时，建议通过科学上网访问备用网络',
+      //     actions: [
+      //       {
+      //         text: '尝鲜版',
+      //         link: 'https://142vip.github.io/JavaScriptCollection',
+      //         type: 'default',
+      //       },
+      //       {
+      //         text: '稳定版',
+      //         link: 'https://code.142vip.cn',
+      //         type: 'primary',
+      //       },
+      //     ],
+      //     fullscreen: false,
+      //   },
+      // ],
       readingTime: {
         wordPerMinute: 100,
       },
@@ -117,8 +138,6 @@ export const themeConfig = {
         vuePlayground: true,
         // 文件导入，配置别名
         include: true,
-        // 容器
-        // container: true,
         // mermaid
         mermaid: true,
         // 自定义对齐
@@ -141,29 +160,6 @@ export const themeConfig = {
           'Share',
           'XiGua',
         ],
-        rootComponents: {
-          // 公告 参考：https://plugin-components.vuejs.press/zh/guide/notice.html
-          // notice: [
-          //     {
-          //         path: "/",
-          //         title: "在线浏览",
-          //         content: "网站无法访问时，建议通过科学上网访问备用网络",
-          //         actions: [
-          //             {
-          //                 text: "尝鲜版",
-          //                 link: "https://142vip.github.io/JavaScriptCollection",
-          //                 type: "default",
-          //             },
-          //             {
-          //                 text: "稳定版",
-          //                 link: "https://code.142vip.cn",
-          //                 type: "primary",
-          //             },
-          //         ],
-          //         fullscreen: false,
-          //     },
-          // ],
-        },
       },
       searchPro: {
         // 参考：https://plugin-search-pro.vuejs.press/zh/config.html#locales

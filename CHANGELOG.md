@@ -8,14 +8,14 @@ All notable changes to this project will be documented in this file. See [Conven
 
 ### ✨ Features
 
-- 增加externalLinkIcon配置，不显示外部链接图标 &nbsp;-&nbsp; by **chufan** [<samp>(b1602)</samp>](https://github.com/142vip/JavaScriptCollection/commit/b160234)
-- 移除bumpp等用于发布功能的模块，简化release脚本 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/JavaScriptCollection/issues/153 [<samp>(2e64d)</samp>](https://github.com/142vip/JavaScriptCollection/commit/2e64d8c)
+- 增加`externalLinkIcon`配置，不显示外部链接图标 &nbsp;-&nbsp; by **chufan** [<samp>(b1602)</samp>](https://github.com/142vip/JavaScriptCollection/commit/b160234)
+- 移除`bumpp`等用于发布功能的模块，简化`release`脚本 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/JavaScriptCollection/issues/153 [<samp>(2e64d)</samp>](https://github.com/142vip/JavaScriptCollection/commit/2e64d8c)
 - 使用`@142vip/fairy-cli`模块，优化`clean`命令 &nbsp;-&nbsp; by **chufan** [<samp>(2027b)</samp>](https://github.com/142vip/JavaScriptCollection/commit/2027b1a)
 - `pnpm`版本锁定`9.6.0`，增加`only-allow`配置约束`pnpm` &nbsp;-&nbsp; by **chufan** [<samp>(038f1)</samp>](https://github.com/142vip/JavaScriptCollection/commit/038f1b7)
 - 升级`@antfu/eslint-config`到最新版本，新增`lint`相关命令，删除重复的`lint`脚本 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/JavaScriptCollection/issues/159 [<samp>(c45a0)</samp>](https://github.com/142vip/JavaScriptCollection/commit/c45a087)
 - 配置`release`命令,升级`@142vip/fairy-cli`模块，打通整个发布工作流 &nbsp;-&nbsp; by **chufan** [<samp>(4a7de)</samp>](https://github.com/142vip/JavaScriptCollection/commit/4a7def8)
 - 移除`exec`脚本执行器，修改`bundle`脚本逻辑 &nbsp;-&nbsp; by **chufan** [<samp>(05f7f)</samp>](https://github.com/142vip/JavaScriptCollection/commit/05f7fa1)
-- **Github Actions**:
+- **GitHub Actions**:
   - 移除流水线下载依赖时的`registry-url`配置 &nbsp;-&nbsp; by **chufan** [<samp>(a0dd6)</samp>](https://github.com/142vip/JavaScriptCollection/commit/a0dd623)
 
 ### 🔥 Performance
@@ -25,8 +25,8 @@ All notable changes to this project will be documented in this file. See [Conven
 
 ### 🐛 Bug Fixes
 
-- 使用eslint@8.55.0版本，修复IDEA校验规则报错 &nbsp;-&nbsp; by **chufan** [<samp>(3983a)</samp>](https://github.com/142vip/JavaScriptCollection/commit/3983aa5)
-- 修复文档、代码的Eslint校验错误 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/JavaScriptCollection/issues/154 [<samp>(7e54c)</samp>](https://github.com/142vip/JavaScriptCollection/commit/7e54cfd)
+- 使用`eslint@8.55.0`版本，修复`IDEA`校验规则报错 &nbsp;-&nbsp; by **chufan** [<samp>(3983a)</samp>](https://github.com/142vip/JavaScriptCollection/commit/3983aa5)
+- 修复文档、代码的`Eslint`校验错误 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/JavaScriptCollection/issues/154 [<samp>(7e54c)</samp>](https://github.com/142vip/JavaScriptCollection/commit/7e54cfd)
 - 升级`express`模块到`4.21.0`版本，解决模块安全告警 &nbsp;-&nbsp; by **chufan** [<samp>(5720d)</samp>](https://github.com/142vip/JavaScriptCollection/commit/5720dbb)
 
 **Release New Version v0.0.2-alpha.18 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.17...v0.0.2-alpha.18)**
@@ -35,7 +35,7 @@ All notable changes to this project will be documented in this file. See [Conven
 
 ### 🐛 Bug Fixes
 
-- 修复依赖异常，支持eslint校验 &nbsp;-&nbsp; by **chufan** [<samp>(6daed)</samp>](https://github.com/142vip/JavaScriptCollection/commit/6daed76)
+- 修复依赖异常，支持`eslint`校验 &nbsp;-&nbsp; by **chufan** [<samp>(6daed)</samp>](https://github.com/142vip/JavaScriptCollection/commit/6daed76)
 
 **Release New Version v0.0.2-alpha.17 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.16...v0.0.2-alpha.17)**
 
@@ -45,7 +45,7 @@ All notable changes to this project will be documented in this file. See [Conven
 
 - 调整导航栏，对文档排版和显示做了些优化 &nbsp;-&nbsp; by **chufan** [<samp>(842f3)</samp>](https://github.com/142vip/JavaScriptCollection/commit/842f3d1)
 - 全局搜索框支持中文提示 &nbsp;-&nbsp; by **chufan** [<samp>(4a883)</samp>](https://github.com/142vip/JavaScriptCollection/commit/4a883ac)
-- Eslint回退到8.55.0版本，增加monorepo配置管理code模块中的依赖。 &nbsp;-&nbsp; by **chufan** [<samp>(28873)</samp>](https://github.com/142vip/JavaScriptCollection/commit/28873aa)
+- `Eslint`回退到`8.55.0`版本，增加`monorepo`配置管理`code`模块中的依赖。 &nbsp;-&nbsp; by **chufan** [<samp>(28873)</samp>](https://github.com/142vip/JavaScriptCollection/commit/28873aa)
 
 ### 🐛 Bug Fixes
 
@@ -59,8 +59,8 @@ All notable changes to this project will be documented in this file. See [Conven
 ### 🐛 Bug Fixes
 
 - **Github Actions**:
-  - 修复Release流水线异常 &nbsp;-&nbsp; by **chufan** [<samp>(d5226)</samp>](https://github.com/142vip/JavaScriptCollection/commit/d5226de)
-  - 关闭Docker镜像构建 &nbsp;-&nbsp; by **chufan** [<samp>(74884)</samp>](https://github.com/142vip/JavaScriptCollection/commit/7488413)
+  - 修复`Release`流水线异常 &nbsp;-&nbsp; by **chufan** [<samp>(d5226)</samp>](https://github.com/142vip/JavaScriptCollection/commit/d5226de)
+  - 关闭`Docker`镜像构建 &nbsp;-&nbsp; by **chufan** [<samp>(74884)</samp>](https://github.com/142vip/JavaScriptCollection/commit/7488413)
 
 **Release New Version v0.0.2-alpha.15 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.14...v0.0.2-alpha.15)**
 
@@ -69,12 +69,12 @@ All notable changes to this project will be documented in this file. See [Conven
 ### ✨ Features
 
 - 关闭自动生成README目录配置，避免构建时覆盖和路径导航问题 &nbsp;-&nbsp; by **chufan** [<samp>(b3549)</samp>](https://github.com/142vip/JavaScriptCollection/commit/b3549ff)
-- 更新release脚本，使用bumpx命令生成CHANGELOG文档 &nbsp;-&nbsp; by **chufan** [<samp>(54f7b)</samp>](https://github.com/142vip/JavaScriptCollection/commit/54f7b51)
-- 删除dev脚本，脚本逻辑 &nbsp;-&nbsp; by **chufan** [<samp>(78795)</samp>](https://github.com/142vip/JavaScriptCollection/commit/78795c3)
-- 删除deploy和docker脚本，备份对应逻辑 &nbsp;-&nbsp; by **chufan** [<samp>(2cdc5)</samp>](https://github.com/142vip/JavaScriptCollection/commit/2cdc560)
+- 更新`release`脚本，使用`bumpx`命令生成`CHANGELOG`文档 &nbsp;-&nbsp; by **chufan** [<samp>(54f7b)</samp>](https://github.com/142vip/JavaScriptCollection/commit/54f7b51)
+- 删除`dev`脚本，脚本逻辑 &nbsp;-&nbsp; by **chufan** [<samp>(78795)</samp>](https://github.com/142vip/JavaScriptCollection/commit/78795c3)
+- 删除`deploy`和`docker`脚本，备份对应逻辑 &nbsp;-&nbsp; by **chufan** [<samp>(2cdc5)</samp>](https://github.com/142vip/JavaScriptCollection/commit/2cdc560)
 - 更换阿里云镜像地址 &nbsp;-&nbsp; by **chufan** [<samp>(be2e5)</samp>](https://github.com/142vip/JavaScriptCollection/commit/be2e584)
-- 移除markdown-cli模块，采用prettier校验文档格式 &nbsp;-&nbsp; by **chufan** [<samp>(5a2b2)</samp>](https://github.com/142vip/JavaScriptCollection/commit/5a2b23c)
-- 更换github pages部署方式，支持actions部署 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/144 [<samp>(7afb3)</samp>](https://github.com/142vip/JavaScriptCollection/commit/7afb312)
+- 移除`markdown-cli`模块，采用`prettier`校验文档格式 &nbsp;-&nbsp; by **chufan** [<samp>(5a2b2)</samp>](https://github.com/142vip/JavaScriptCollection/commit/5a2b23c)
+- 更换`github pages`部署方式，支持`actions`部署 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/144 [<samp>(7afb3)</samp>](https://github.com/142vip/JavaScriptCollection/commit/7afb312)
 
 ### 🔥 Performance
 

@@ -1,72 +1,78 @@
 import { navbar } from 'vuepress-theme-hope'
 import { soloAlgorithmSidebar } from '../../solo-algorithm/solo-algorithm.sidebar'
+import { RepoAddress } from './constant'
 
 export default navbar([
   {
-    text: '首页',
+    text: '🌐 首页',
     link: '/',
   },
   {
-    text: 'SOLO算法',
+    text: '🧠 SOLO算法',
     children: soloAlgorithmSidebar,
   },
   {
-    text: 'Battle面试官',
+    text: '💡 Battle面试官',
     link: '/battle-interview/',
   },
   {
-    text: '前端工程化',
-    link: '/front-end/',
+    text: '💻 全栈开发',
+    children: [
+      {
+        text: '👩🏻‍💻 前端',
+        link: '/front-end/',
+      },
+      {
+        text: '👨🏻‍💻 后端',
+        link: '/server-end/',
+      },
+      {
+        text: '💫 开发技巧',
+        link: '/develop-skill/',
+      },
+      {
+        text: '🕸️ 微服务架构',
+        link: '/microservice/',
+      },
+    ],
   },
   {
-    text: '后端开发',
-    link: '/server-end/',
-  },
-  {
-    text: '微服务',
-    link: '/microservice/',
-  },
-  {
-    text: '开发技巧',
-    link: '/develop-skill/',
-  },
-  {
-    text: '读书整理',
+    text: '📖 读书整理',
     link: '/read-books/',
   },
   {
-    text: '了解更多',
+    text: '👉 了解更多',
     children: [
       {
-        text: '变更记录',
+        text: '📄 更新日志',
         link: '/changelog',
       },
       {
-        text: '网站动态',
+        text: '📣 网站动态',
         link: '/big-event-history',
-      },
-      {
-        text: '自媒体',
-        children: [
-          {
-            text: '公众号文章',
-            link: '/wechat-list',
-          },
-        ],
       },
       {
         text: '外链',
         children: [
           {
-            text: '常用网站',
+            text: '🎉 历史版本',
+            link: `${RepoAddress}/releases`,
+          },
+          {
+            text: '🎯 开发计划',
+            link: 'https://142vip-cn.feishu.cn/share/base/view/shrcnxtFKV2JfBZbqFh0GUxzTOg',
+          },
+          {
+            text: '🔗 技术&平台',
             link: '/frequent-site-link',
           },
           {
-            text: 'RoadMap计划',
-            link: 'https://142vip-cn.feishu.cn/share/base/view/shrcnxtFKV2JfBZbqFh0GUxzTOg',
+            text: '💥 公众号文章',
+            link: '/wechat-list',
           },
         ],
       },
+
     ],
   },
 ])
