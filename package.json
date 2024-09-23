@@ -21,7 +21,7 @@
     "dev": "vuepress dev docs",
     "lint": "npx fa lint",
     "lint:fix": "npx fa lint --fix",
-    "build": "npx vuepress build docs --clean-temp --clean-cache",
+    "build": "vuepress build docs --clean-temp --clean-cache",
     "build:proxy": "PROXY_DOMAIN=true vuepress build docs --clean-temp --clean-cache",
     "deploy:vercel": "vercel --prod",
     "release": "npx fa release --vip"
@@ -36,25 +36,18 @@
     "@vue/repl": "^4.3.1",
     "@vuepress/bundler-vite": "2.0.0-rc.15",
     "@vuepress/plugin-markdown-image": "2.0.0-rc.30",
-    "dashjs": "^4.7.4",
-    "enquirer": "^2.4.1",
     "eslint": "8.55.0",
-    "eslint-plugin-format": "^0.1.2",
     "hls.js": "^1.5.13",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.7",
-    "markmap-cli": "^0.15.8",
     "mermaid": "^10.9.1",
     "reveal.js": "^5.1.0",
-    "sass-embedded": "^1.79.3",
-    "shelljs": "^0.8.5",
     "typescript": "^5.5.4",
     "vercel": "^32.7.2",
     "vidstack": "^1.11.30",
+    "vue": "^3.5.8",
     "vuepress": "2.0.0-rc.15",
     "vuepress-plugin-search-pro": "2.0.0-rc.53",
-    "vuepress-theme-hope": "2.0.0-rc.53",
-    "webpack": "^5.93.0",
-    "xmind-embed-viewer": "^1.2.0"
+    "vuepress-theme-hope": "2.0.0-rc.53"
   }
 }
