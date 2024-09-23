@@ -2,13 +2,13 @@
   "name": "apis-demo",
   "version": "0.0.1",
   "description": "Express框架的API演示Demo",
-  "dependencies": {
-    "express": "^4.21.0"
-  },
-  "scripts": {},
   "author": {
     "name": "微信公众号：储凡",
     "email": "fairy_vip@2925.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {
+    "express": "^4.21.0"
+  }
 }

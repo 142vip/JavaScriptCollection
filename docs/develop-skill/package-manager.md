@@ -93,14 +93,12 @@ npm  install  包名@1.x  #  安装指定版本
 package.json文件
 
 ```json
-
 {
-    "name": "orderlee",
-    "dependencies": {
-        "argv": "0.0.2"
-    }
+  "name": "orderlee",
+  "dependencies": {
+    "argv": "0.0.2"
+  }
 }
-
 ```
 
 ### 卸载模块

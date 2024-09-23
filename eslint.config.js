@@ -1,7 +1,6 @@
 import antFu from '@antfu/eslint-config'
 
 // 参考：https://github.com/antfu/eslint-config
-
 export default antFu({
   ignores: [
     '**/CHANGELOG.md',
@@ -9,7 +8,7 @@ export default antFu({
   gitignore: true,
   typescript: true,
   vue: true,
-  jsonc: false,
+  jsonc: true,
   yaml: true,
   formatters: {
     css: true,

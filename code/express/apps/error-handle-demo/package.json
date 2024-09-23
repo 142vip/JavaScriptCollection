@@ -2,17 +2,17 @@
   "name": "error-handle-demo",
   "version": "0.0.1",
   "description": "基于Express框架的错误处理演示Demo",
-  "dependencies": {
-    "body-parser": "^1.20.2",
-    "express": "^4.21.0",
-    "method-override": "^3.0.0"
-  },
-  "scripts": {
-    "dev": "node app.js"
-  },
   "author": {
     "name": "微信公众号：储凡",
     "email": "fairy_vip@2925.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.21.0",
+    "method-override": "^3.0.0"
+  }
 }

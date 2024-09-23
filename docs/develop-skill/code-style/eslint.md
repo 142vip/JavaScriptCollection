@@ -38,7 +38,7 @@ pnpm i eslint -D
   "eslint-plugin-import": "^2.25.2",
   "eslint-plugin-n": "^15.0.0",
   "eslint-plugin-promise": "^6.0.0",
-  "eslint-plugin-vue": "^9.9.0",
+  "eslint-plugin-vue": "^9.9.0"
 }
 ```
 
