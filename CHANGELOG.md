@@ -4,6 +4,31 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.19 (2024-09-23)
+
+### ✨ Features
+
+- `pnpm`包下载源改为：`https://mirrors.tencent.com/npm/` &nbsp;-&nbsp; by **chufan** [<samp>(1d124)</samp>](https://github.com/142vip/JavaScriptCollection/commit/1d124c4)
+- 移除无用`pnpm`模块，优化`bundler`编译配置 &nbsp;-&nbsp; by **chufan** [<samp>(742ee)</samp>](https://github.com/142vip/JavaScriptCollection/commit/742eeb7)
+- 移除`husky`模块，使用`simple-git-hooks`来配置钩子函数，规范仓库内容 &nbsp;-&nbsp; by **chufan** [<samp>(0298f)</samp>](https://github.com/142vip/JavaScriptCollection/commit/0298f3b)
+- 修改导航栏配置，支持图标，完善文档内容 &nbsp;-&nbsp; by **chufan** [<samp>(94128)</samp>](https://github.com/142vip/JavaScriptCollection/commit/9412880)
+
+### 🔥 Performance
+
+- 优化`bundle`脚本，支持`Dockerfile`构建 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/JavaScriptCollection/issues/165 [<samp>(23155)</samp>](https://github.com/142vip/JavaScriptCollection/commit/2315590)
+- 升级`vuepress`相关版本依赖，修改新版本模块配置 &nbsp;-&nbsp; by **chufan** [<samp>(be055)</samp>](https://github.com/142vip/JavaScriptCollection/commit/be05540)
+
+### 🐛 Bug Fixes
+
+- 修复`corepack`下载源在`Dockerfile`中使用异常，统一为:`https://mirrors.tencent.com/npm/` &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/168 [<samp>(df0db)</samp>](https://github.com/142vip/JavaScriptCollection/commit/df0db7b)
+- 基于`Eslint`规则修复一些文档格式问题 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/JavaScriptCollection/issues/170 [<samp>(9e4d7)</samp>](https://github.com/142vip/JavaScriptCollection/commit/9e4d75f)
+
+### 📖 Documentation
+
+- 更新文档 &nbsp;-&nbsp; by **chufan** [<samp>(bc13b)</samp>](https://github.com/142vip/JavaScriptCollection/commit/bc13bd8)
+
+**Release New Version v0.0.2-alpha.19 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.18...v0.0.2-alpha.19)**
+
 ## v0.0.2-alpha.18 (2024-09-19)
 
 ### ✨ Features
