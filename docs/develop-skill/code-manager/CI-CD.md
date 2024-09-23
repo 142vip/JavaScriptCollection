@@ -58,8 +58,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.18.0
-          # 淘宝镜像加速
-          registry-url: 'https://registry.npmmirror.com'
           # 缓存
           cache: pnpm
 
