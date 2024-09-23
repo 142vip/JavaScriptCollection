@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # deploy脚本备份
 
 ```js
