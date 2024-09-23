@@ -4,7 +4,7 @@ const app = express()
 const port = 4000
 const appName = require('./package.json').name
 
-app.get('/', async (req, res) => {
+app.get('/', async (_req, _res) => {
   console.log('请求进来了...')
   throw new Error('手动抛错了！！')
 })

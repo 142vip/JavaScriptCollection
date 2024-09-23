@@ -44,7 +44,9 @@ const userList = [
   { user: 'barney', age: 36, active: true },
   { user: 'fred', age: 40, active: false },
 ]
-console.log(_.filter(userList, (o) => { return !o.active }))
+console.log(_.filter(userList, (o) => {
+  return !o.active
+}))
 // => objects for ['fred']
 // The `_.matches` iteratee shorthand.
 console.log(_.filter(userList, { age: 36, active: true }))

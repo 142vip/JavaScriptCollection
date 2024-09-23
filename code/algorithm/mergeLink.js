@@ -66,6 +66,4 @@ last.next = new ListNode(4)
 last.next.next = new ListNode(6)
 console.log('last:', last)
 console.log(Merge(pre, last))
-module.exports = {
-  Merge,
-}
+console.log(Merge1(pre, last))

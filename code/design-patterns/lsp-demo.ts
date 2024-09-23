@@ -2,7 +2,8 @@
  * 里氏替换原则Demo
  */
 
-namespace LspDemoFather{
+// eslint-disable-next-line ts/no-namespace
+namespace LspDemoFather {
   export class Rectangle {
     protected width: number
     protected height: number
@@ -24,6 +25,7 @@ namespace LspDemoFather{
       return this.width * this.height
     }
   }
+
   export function printArea(rectangle: Rectangle): void {
     rectangle.setWidth(4)
     rectangle.setHeight(5)
@@ -31,6 +33,7 @@ namespace LspDemoFather{
   }
 }
 
+// eslint-disable-next-line unused-imports/no-unused-vars,ts/no-namespace
 namespace LspDemo {
   import Rectangle = LspDemoFather.Rectangle
   import printArea = LspDemoFather.printArea

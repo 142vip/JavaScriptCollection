@@ -63,7 +63,8 @@ arr[1]() // 输出1
 
 ```js
 const PI = 3.14
-PI = 100 // 出错
+// 出错
+// PI = 100
 
 const arr = [10, 11]
 
@@ -73,7 +74,7 @@ arr[1] = 13
 console.log(arr) // 输出 [12,13]
 
 // 注意：这种修改不行，不要试图去修改内存地址
-arr = [12, 13]
+// arr = [12, 13]
 ```
 
 ## let const var的区别
@@ -113,12 +114,12 @@ console.log(my_name, my_age) // leo 20
 ```
 
 ```js
-const fn = () => {
+function fn() {
   console.log(123)
 }
 
-const sum = (a, b) => a + b
-const sum = a => a
+const sum1 = (a, b) => a + b
+const sum2 = a => a
 ```
 
 ## 箭头函数的this关键字
@@ -200,6 +201,7 @@ let arrayLike = {
 
 // 伪数组转换为数组
 let arr2 = Array.from(arrayLike) // ['a',''b,'c']
+console.log(arr2)
 
 // 函数统一处理每一项
 let arr3 = Array.from(arrayLike, item => {

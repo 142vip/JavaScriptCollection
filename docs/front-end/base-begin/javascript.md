@@ -129,24 +129,24 @@ son.money()
 
 ```js
 // 利用new Object() 创建对象
-let obj = new Object();
+const obj1 = new Object()
 
 // 利用对象字面量创建对象
-let obj = {}
+const obj2 = {}
 
 // 利用构造函数创建对象
-function creatObj(name, sex) {
-  this.name = name;
-  this.sex = sex;
+function CreatObj(name, sex) {
+  this.name = name
+  this.sex = sex
   this.test = function () {
     console.log('xxxx')
   }
 }
 
 // 创建
-let obj = new creatObj('xxx', 'xx');
+const obj = new CreatObj('xxx', 'xx')
 // 使用
-obj.test();
+obj.test()
 ```
 
 **构造函数是一种特殊的函数，主要用来初始化对象，即为对象成员变量赋初始值，总是与new一起使用。
@@ -201,7 +201,7 @@ creatObj.prototype.test = function () {
 
 ```js
 // 实例化对象中的_proto对象原型 和 构造函数中的原型对象prototype是等价的  输出结构为:true;
-console.log(obj.__proto__ === creatObj.prototype)
+// console.log(obj.__proto__ === creatObj.prototype)
 ```
 
 ### 构造函数
@@ -323,6 +323,7 @@ const fn = function () {
 ```js
 // 利用Function构造函数 【所有函数都是Function的实例】
 const fn = new Function('a', 'b', 'return a+b')
+console.log(fn)
 ```
 
 ### 调用方式
@@ -357,7 +358,9 @@ function Fn() {
   // ...
 }
 
-new Fn()
+const fn = new Fn()
+
+console.log(fn)
 
 // 绑定事件函数(例如：按钮点击事件)
 button.onclick = function () {
@@ -369,10 +372,10 @@ setInterval(() => {
   // ....
 }, 1000)
 
-// 立即执行函数（自动调用）
-(() => {
-  // .....
-})()
+  // 立即执行函数（自动调用）
+  (() => {
+    // .....
+  })()
 ```
 
 ### 内部的this指向
@@ -546,6 +549,7 @@ fn()
 ```js
 function fn() {
   const num = 10
+  console.log(num)
 
   // 函数内部定义函数
   function fun() {

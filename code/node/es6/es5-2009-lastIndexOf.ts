@@ -1,4 +1,4 @@
-const stu = ['Tom', 'Lisa', '142vip']
+const stu: string[] = ['Tom', 'Lisa', '142vip']
 
 // 输出 2，数组中角标为2对应的就是142vip
 console.log(stu.lastIndexOf('142vip'))

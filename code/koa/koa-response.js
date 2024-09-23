@@ -12,6 +12,7 @@ app.use(async (ctx, next) => {
   if (!body || body.pipe)
     return
 
+  // eslint-disable-next-line node/prefer-global/buffer
   if (Buffer.isBuffer(body))
     body = body.toString()
   ctx.body = minify(body)

@@ -188,18 +188,18 @@ exports.sequelize = {
       delegate: 'model', // 加载所有的model文件到ctx.model和app.model中进行委托
       baseDir: 'model', // 从 `app/model/*.js`中加载model文件
       database: 'biz',
-      ...
+      // ...
       // 关于sequelize的其他配置
     },
     {
       delegate: 'admninModel', // 加载所有的model文件到ctx.admninModel和app.admninModel中进行委托
       baseDir: 'admin_model', // 从 `app/admin_model/*.js`中加载model文件
       database: 'admin',
-      ...
+      // ...
       // 关于sequelize的其他配置
     },
   ],
-};
+}
 ```
 
 按照上面的示例，配置多数据源后，model可以像下面一样定义：
