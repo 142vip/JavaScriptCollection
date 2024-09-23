@@ -12,7 +12,7 @@ NPM_REGISTRY="https://mirrors.tencent.com/npm/"
 echo "运行命令: COREPACK_NPM_REGISTRY=$NPM_REGISTRY corepack enable pnpm && pnpm i --registry $NPM_REGISTRY --frozen-lockfile $*"
 
 # 安装pnpm版本
-COREPACK_NPM_REGISTRY=$NPM_REGISTRY corepack enable pnpm
+export COREPACK_NPM_REGISTRY=$NPM_REGISTRY &&  corepack enable pnpm
 
 
 # 安装项目依赖 -w -F @142vip/fairy-cli
