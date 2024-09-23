@@ -5,10 +5,10 @@ heroAlt: 屈身守份 以待天时
 heroText: JavaScriptCollection
 tagline: 【理论+实战】保姆级成长笔记，持续更新...
 actions:
-  - text: 快速开刷 →
+  - text: 快速开刷 🔥
     link: /quick-start.md
     type: primary
-  - text: 工作机会💡
+  - text: 工作机会 🏆
     link: /job-chance/job-poster-bytedance.md
     type: secondary
 #  - text: 公众号文章💡
@@ -49,8 +49,10 @@ features:
 
 由于平台、网络等原因，在线浏览容易出现加载面、加载不出来等常见问题，因此非常建议在本地进行浏览、学习。
 
-- \*下面指令默认你已经安装[Git](https://git-scm.com/download)、[NPM](https://www.npmjs.com/)、[PNPM](https://www.pnpm.cn/)、[Yarn](https://yarn.bootcss.com/)、[Node](http://nodejs.cn)
-  等环境，并对此有一定了解!\*\*
+-
+
+\*下面指令默认你已经安装[Git](https://git-scm.com/download)、[NPM](https://www.npmjs.com/)、[PNPM](https://www.pnpm.cn/)、[Yarn](https://yarn.bootcss.com/)、[Node](http://nodejs.cn)
+等环境，并对此有一定了解!\*\*
 
 ::: code-tabs#shell
 @tab PNPM（推荐）

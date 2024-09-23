@@ -91,3 +91,5 @@ export const NotFoundMsgList = [
   '天灰灰会不会，让我忘了你是谁，累不累睡不睡，单影无人相依偎，夜越黑梦违背，有谁肯安慰，我的世界将被摧毁也许颓废也是另一种美。',
   '我知道你我都没有错，只是忘了怎么退后，信誓旦旦给的承诺，全被时间扑了空。我知道我们都没有错，只是放手会比较好过，最美的爱情回忆里待续。',
 ]
+
+export const RepoAddress = 'https://github.com/142vip/JavaScriptCollection'
