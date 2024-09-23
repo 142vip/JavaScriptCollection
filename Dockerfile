@@ -16,7 +16,7 @@ ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
 ## corepack 环境变量
-ENV COREPACK_NPM_REGISTRY=https://mirrors.tencent.com/npm/
+#ENV COREPACK_NPM_REGISTRY=https://mirrors.tencent.com/npm/
 
 WORKDIR /apps
 COPY . .
