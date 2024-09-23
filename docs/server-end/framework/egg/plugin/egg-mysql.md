@@ -346,18 +346,19 @@ SELECT * FROM `user` WHERE `name` = 'tom'
 
 ```js
 //  查询user表中所有数据
-const rows = await db.select('user')
+const rows1 = await db.select('user')
 
 // 转化SQL为：SELECT * FROM`user`
 
 // 查询user表中符合查询条件的所有数据
-let rows = await db.select('user', {
+const rows2 = await db.select('user', {
   where: {
     type: 'javascript'
   },
   columns: ['author', 'title'],
   orders: [['id', 'desc']]
-});
+})
+console.log(row1, row2)
 ```
 
 转化为SQL是：
@@ -472,7 +473,7 @@ let options = [{
 
 // 更新多行
 let result = yield db.updateRows('user', options);
-
+console.log(result)
 ```
 
 这里需要补充一句：**虽然这里列举了四种常见的更新方法，但实际情况基本的update()
@@ -487,6 +488,7 @@ let result = yield db.updateRows('user', options);
 const count = await db.count('user', {
   type: 'javascript'
 })
+console.log(count)
 
 // sql转化
 // SELECT COUNT(*) AS count FROM `user` WHERE `type` = 'javascript';

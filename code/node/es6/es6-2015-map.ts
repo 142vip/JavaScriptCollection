@@ -16,11 +16,14 @@ studentAgeMap.set('fairy', 24)
  * 根据映射关键字获取值
  */
 const age = studentAgeMap.get('fairy')
+// 打印
+console.log(age)
 
 /**
  * 返回集合中元素个数
  */
 const size = studentAgeMap.size
+console.log(size)
 
 /**
  * 根据键删除映射关系
@@ -40,11 +43,15 @@ studentAgeMap.clear()
  * 判断类型，返回对象object
  */
 const mapType = typeof studentAgeMap
+// 打印
+console.log(mapType)
 
 /**
  * 判断实例，返回true
  */
 const isMap = studentAgeMap instanceof Map
+// 打印
+console.log(isMap)
 
 /**
  * 循环处理

@@ -3,6 +3,9 @@
  */
 const stuSet = new Set([1, 2, 3])
 
+// 打印
+console.log(stuSet)
+
 /**
  * 利用add()方法创建Set集合
  */

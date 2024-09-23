@@ -2,12 +2,13 @@ const fs = require('node:fs')
 const path = require('node:path')
 
 // 快速生成目录
+// eslint-disable-next-line no-unexpected-multiline
 (() => {
   function getCurrentDirectoryFiles() {
+    // eslint-disable-next-line node/prefer-global/process
     const currentPath = process.cwd()
-    const files = fs.readdirSync(currentPath)
 
-    return files
+    return fs.readdirSync(currentPath)
   }
 
   // 用法示例：
@@ -25,6 +26,7 @@ const path = require('node:path')
  * 批量生成URL链接
  */
 function processMarkdownFiles() {
+  // eslint-disable-next-line node/prefer-global/process
   const currentPath = process.cwd()
   const files = fs.readdirSync(currentPath)
 

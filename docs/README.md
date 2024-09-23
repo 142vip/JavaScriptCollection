@@ -18,25 +18,25 @@ actions:
 features:
   - title: SOLO算法
     details: 习题整理，代码通过记录，个人实际解题思路，助力刷题通关
-    link: /solo-algorithm
+    link: /solo-algorithm/
   - title: Battle面试官
     details: 校招社招八股文集合，分享面经与常见面试题，总结面试套路、经验，对线、Battle面试官丝毫不慌
-    link: /battle-interview
+    link: /battle-interview/
   - title: 前端
     details: 熟练前端基础知识、常用框架，总结、提炼前端部署方案
-    link: /front-end
+    link: /front-end/
   - title: 后端
     details: 夯实基础、熟练使用框架，有一定封装能力。造轮子、定制化插件功能，保姆级开发、部署流程
-    link: /server-end
+    link: /server-end/
   - title: 微服务
     details: 网关、服务间调用、ELK、消息中间件等对开发有更高要求，学习技术无止境
-    link: /microservice
+    link: /microservice/
   - title: 开发技巧
     details: 知识很重要，技巧不可缺。汇总日常软件安装、基础编译、代码管理等琐碎小技巧
-    link: /develop-skill
+    link: /develop-skill/
   - title: 读书写作
     details: 代码虽好，读书提升更为重要，不可偏执一端。人文社科、生活百态都是职场、人生的软技能
-    link: /read-books
+    link: /read-books/
   - title: 自媒体
     details: 尝试尝试再尝试，等等我呀。一路磕磕绊绊，自认并无天赋，辛酸、冷暖自知。 做好当下，便是不辜负自己
     link: /wechat-list.html
@@ -48,7 +48,9 @@ features:
 ## 本地浏览【推荐】
 
 由于平台、网络等原因，在线浏览容易出现加载面、加载不出来等常见问题，因此非常建议在本地进行浏览、学习。
-**下面指令默认你已经安装[Git](https://git-scm.com/download)、[NPM](https://www.npmjs.com/)、[PNPM](https://www.pnpm.cn/)、[Yarn](https://yarn.bootcss.com/)、[Node](http://nodejs.cn)等环境，并对此有一定了解!**
+
+- \*下面指令默认你已经安装[Git](https://git-scm.com/download)、[NPM](https://www.npmjs.com/)、[PNPM](https://www.pnpm.cn/)、[Yarn](https://yarn.bootcss.com/)、[Node](http://nodejs.cn)
+  等环境，并对此有一定了解!\*\*
 
 ::: code-tabs#shell
 @tab PNPM（推荐）

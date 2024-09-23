@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 /**
  * 错误处理中间件
  */
-app.use((err, req, res, next) => {
+app.use((err, req, res, _next) => {
   res.locals.message = err.message
   res.locals.error = req.app.get('env') === 'development' ? err : {}
 
@@ -58,10 +58,12 @@ server.on('error', (error) => {
   switch (error.code) {
     case 'EACCES':
       console.error(`${bind} requires elevated privileges`)
+      // eslint-disable-next-line node/prefer-global/process
       process.exit(1)
       break
     case 'EADDRINUSE':
       console.error(`${bind} is already in use`)
+      // eslint-disable-next-line node/prefer-global/process
       process.exit(1)
       break
     default:

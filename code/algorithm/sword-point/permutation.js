@@ -1,4 +1,4 @@
-function Permutation(str) {
+export function Permutation(str) {
   const result = []
   const i = 0
   while (i < str.length) {

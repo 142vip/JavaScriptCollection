@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/order
 const Koa = require('koa')
 
 const app = new Koa()
