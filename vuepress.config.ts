@@ -20,9 +20,9 @@ function getSiteBase(): '/' | `/${string}/` {
 }
 
 export default defineUserConfig({
+  base: getSiteBase(),
   title: '凡是过往、皆为序章',
   description: '一本有趣的JavaScript合集',
-  base: getSiteBase(),
   port: 5000,
   head: headers,
   source: '',
@@ -52,9 +52,6 @@ export default defineUserConfig({
   // // 插件配置
   // ...pluginConfig,
   // 编译
-  bundler: viteBundler({
-    viteOptions: {},
-    vuePluginOptions: {},
-  }),
+  bundler: viteBundler(),
   shouldPrefetch: false,
 })
