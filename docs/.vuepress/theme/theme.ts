@@ -93,6 +93,13 @@ export const themeConfig = {
       readingTime: {
         wordPerMinute: 100,
       },
+      // 水印
+      // watermark: {
+      //   enabled: true,
+      //   watermarkOptions: {
+      //     content: '微信公众号：储凡',
+      //   },
+      // },
       copyright: false,
       // 开启博客功能
       blog: false,
