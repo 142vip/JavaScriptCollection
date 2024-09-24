@@ -41,6 +41,7 @@ import {
         ['HOME_PAGE', pkg.authorInfo.homePage],
         ['GIT_HASH', gitHash],
       ],
+      memory:20000,
       push: true,
       delete: true,
       logger: true,
