@@ -60,7 +60,7 @@ export default navbar([
           },
           {
             text: '🎯 开发计划',
-            link: 'https://142vip-cn.feishu.cn/share/base/view/shrcnxtFKV2JfBZbqFh0GUxzTOg',
+            link: 'https://142vip-cn.feishu.cn/share/base/view/shrcnuuRDWBoHLmYaknXWFuhR4d',
           },
           {
             text: '🔗 技术&平台',
