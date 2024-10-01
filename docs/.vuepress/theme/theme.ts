@@ -13,13 +13,14 @@ export const themeConfig = {
   theme: hopeTheme({
     locales: i18n,
     // navbarIcon: false,
-    // 禁用深色模式
+    // 在深色模式和浅色模式之间切换
     darkmode: 'toggle',
     // 支持全屏
     // fullscreen: true,
     // 纯净模式
     // pure: true,
-    print: false, // 打印按钮
+    // 打印按钮
+    print: false,
     hostname: 'https://142vip.cn',
     author: AUTHOR_INFO,
     favicon: '/favicon.ico',
@@ -176,7 +177,24 @@ export const themeConfig = {
       },
       // 代码高亮：https://theme-hope.vuejs.press/zh/guide/feature/code-block.html
       shiki: {
-        langs: ['ts', 'js', 'json', 'vue', 'json5', 'bash', 'diff', 'c', 'c++', 'dockerfile', 'nginx', 'proto', 'java', 'javascript', 'typescript'],
+        langs: [
+          'ts',
+          'js',
+          'json',
+          'vue',
+          'json5',
+          'bash',
+          'diff',
+          'c',
+          'c++',
+          'dockerfile',
+          'nginx',
+          'proto',
+          'java',
+          'javascript',
+          'typescript',
+          'yaml',
+        ],
         // 你想要使用的主题
         themes: {
           light: 'one-light',
