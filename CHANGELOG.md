@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.20 (2024-10-01)
+
+### ✨ Features
+
+- 增加文档内容，优化站点主页，新增`icon`图标、超链接 &nbsp;-&nbsp; by **chufan** [<samp>(be4d8)</samp>](https://github.com/142vip/JavaScriptCollection/commit/be4d82a)
+- 移除`@142vip/release-version`模块，升级依赖。替换`CD`流水线上的`changelog`命令 &nbsp;-&nbsp; by **chufan** [<samp>(4ddd2)</samp>](https://github.com/142vip/JavaScriptCollection/commit/4ddd232)
+- 移除`antfu/eslint-config`模块，使用`@142vip/eslint-config`替换，修复配置异常 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/JavaScriptCollection/issues/177 [<samp>(4f7d2)</samp>](https://github.com/142vip/JavaScriptCollection/commit/4f7d214)
+
+### 🔥 Performance
+
+- 升级`@142vip/utils`依赖版本，引入`only-allow`严格校验`pnpm`使用 &nbsp;-&nbsp; by **chufan** [<samp>(57229)</samp>](https://github.com/142vip/JavaScriptCollection/commit/5722988)
+
+### 🐛 Bug Fixes
+
+- 修复`Dockerfile`构建异常，增加`git`国内下载 &nbsp;-&nbsp; by **chufan** [<samp>(0f686)</samp>](https://github.com/142vip/JavaScriptCollection/commit/0f686f3)
+
+**Release New Version v0.0.2-alpha.20 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.19...v0.0.2-alpha.20)**
+
 ## v0.0.2-alpha.19 (2024-09-23)
 
 ### ✨ Features
