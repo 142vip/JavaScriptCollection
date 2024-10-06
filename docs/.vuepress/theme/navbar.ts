@@ -1,6 +1,6 @@
 import { navbar } from 'vuepress-theme-hope'
+import { RepoAddress } from '@142vip/vuepress'
 import { soloAlgorithmSidebar } from '../../solo-algorithm/solo-algorithm.sidebar'
-import { RepoAddress } from './constant'
 
 export default navbar([
   {

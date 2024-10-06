@@ -1,7 +1,5 @@
 import { hopeTheme } from 'vuepress-theme-hope'
 import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
-import { AUTHOR_INFO, COPYRIGHT, FOOTER_HTML_INFO, RepoAddress } from './constant'
-import { i18n, searchProCNLocals } from './i18n'
 import navbar from './navbar'
 import sidebar from './sidebar'
 
@@ -11,7 +9,7 @@ import sidebar from './sidebar'
  */
 export const themeConfig = {
   theme: hopeTheme({
-    locales: i18n,
+    // locales: i18n,
     // navbarIcon: false,
     // 在深色模式和浅色模式之间切换
     darkmode: 'toggle',
@@ -22,7 +20,7 @@ export const themeConfig = {
     // 打印按钮
     print: false,
     hostname: 'https://142vip.cn',
-    author: AUTHOR_INFO,
+    // author: AUTHOR_INFO,
     favicon: '/favicon.ico',
     logo: '/favicon.icon',
 
@@ -36,7 +34,7 @@ export const themeConfig = {
     sidebar,
     pageInfo: ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime'],
     // 主题布局选项
-    docsRepo: RepoAddress,
+    // docsRepo: RepoAddress,
     docsDir: 'docs',
     docsBranch: 'next',
     repo: '142vip/JavaScriptCollection',
@@ -45,8 +43,8 @@ export const themeConfig = {
     repoDisplay: true,
     // 设置页脚
     displayFooter: true,
-    footer: FOOTER_HTML_INFO,
-    copyright: COPYRIGHT,
+    // footer: FOOTER_HTML_INFO,
+    // copyright: COPYRIGHT,
     // 主题色选择器
     themeColor: true,
     // 是否显示外部链接图标
@@ -169,12 +167,12 @@ export const themeConfig = {
           'XiGua',
         ],
       },
-      searchPro: {
-        // 参考：https://plugin-search-pro.vuejs.press/zh/config.html#locales
-        locales: {
-          '/': searchProCNLocals,
-        },
-      },
+      // searchPro: {
+      //   // 参考：https://plugin-search-pro.vuejs.press/zh/config.html#locales
+      //   locales: {
+      //     '/': searchProCNLocals,
+      //   },
+      // },
       // 代码高亮：https://theme-hope.vuejs.press/zh/guide/feature/code-block.html
       shiki: {
         langs: [
