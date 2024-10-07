@@ -1,11 +1,138 @@
-import { hopeTheme } from 'vuepress-theme-hope'
+import { hopeTheme, navbar, sidebar } from 'vuepress-theme-hope'
 import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
-import navbar from './navbar'
-import sidebar from './sidebar'
+import { OPEN_SOURCE_ADDRESS } from '@142vip/utils'
+import { soloAlgorithmSidebar } from './solo-algorithm/solo-algorithm.sidebar'
+import { FrontEndSidebar } from './front-end/front-end.sidebar'
+import { DevelopSkillSidebar } from './develop-skill/develop-skill.sidebar'
+import { ReadBooksSidebar } from './read-books/read-books.sidebar'
+import { JobChanceSidebar } from './job-chance/job-chance.sidebar'
+import { MicroserviceSidebar } from './microservice/microserviceSidebar'
+import { BattleInterviewSidebar } from './battle-interview/battle-interview.sidebar'
+import {
+  BaseSidebar,
+  DesignPatternsSidebar,
+  EggSidebar,
+  ExpressSidebar,
+  KoaSidebar,
+  LinuxSidebar,
+  MongoSideBar,
+  MySqlSideBar,
+  NodeLearnSidebar,
+  RedisSidebar,
+  SequelizeOrmSidebar,
+  ServerEndSidebar,
+  TypeormSidebar,
+  TypescriptSidebar,
+} from './server-end'
 
 /**
- * 主题相关配置
- * 参考主题：https://theme-hope.vuejs.press/zh/config/intro.html#%E9%85%8D%E7%BD%AE%E6%A6%82%E5%BF%B5
+ * 导航栏
+ */
+export const navbarConfig = navbar([
+  {
+    text: '🌐 首页',
+    link: '/',
+  },
+  {
+    text: '🧠 SOLO算法',
+    children: soloAlgorithmSidebar,
+  },
+  {
+    text: '💡 Battle面试官',
+    link: '/battle-interview/',
+  },
+  {
+    text: '💻 全栈开发',
+    children: [
+      {
+        text: '👩🏻‍💻 前端',
+        link: '/front-end/',
+      },
+      {
+        text: '👨🏻‍💻 后端',
+        link: '/server-end/',
+      },
+      {
+        text: '💫 开发技巧',
+        link: '/develop-skill/',
+      },
+      {
+        text: '🕸️ 微服务架构',
+        link: '/microservice/',
+      },
+    ],
+  },
+  {
+    text: '📖 读书整理',
+    link: '/read-books/',
+  },
+  {
+    text: '👉 了解更多',
+    children: [
+      {
+        text: '📄 更新日志',
+        link: '/changelog',
+      },
+      {
+        text: '📣 网站动态',
+        link: '/big-event-history',
+      },
+      {
+        text: '外链',
+        children: [
+          {
+            text: '🎉 历史版本',
+            link: `${OPEN_SOURCE_ADDRESS.GITHUB_REPO_JSC}/releases`,
+          },
+          {
+            text: '🎯 开发计划',
+            link: 'https://142vip-cn.feishu.cn/share/base/view/shrcnuuRDWBoHLmYaknXWFuhR4d',
+          },
+          {
+            text: '🔗 技术&平台',
+            link: '/frequent-site-link',
+          },
+          {
+            text: '💥 公众号文章',
+            link: '/wechat-list',
+          },
+        ],
+      },
+
+    ],
+  },
+])
+
+/**
+ * 侧边栏
+ */
+export const sidebarConfig = sidebar({
+  '/front-end': FrontEndSidebar,
+  '/server-end': ServerEndSidebar,
+  '/server-end/framework/egg-tutorial': EggSidebar,
+  '/server-end/framework/koa-tutorial': KoaSidebar,
+  '/server-end/framework/express-tutorial': ExpressSidebar,
+  '/server-end/database/redis': RedisSidebar,
+  '/server-end/database/mysql': MySqlSideBar,
+  '/server-end/database/mongo': MongoSideBar,
+  '/server-end/linux': LinuxSidebar,
+  '/server-end/design-patterns': DesignPatternsSidebar,
+  '/server-end/typescript': TypescriptSidebar,
+  '/server-end/base': BaseSidebar,
+  '/server-end/node-learn': NodeLearnSidebar,
+  '/server-end/orm/sequelize': SequelizeOrmSidebar,
+  '/server-end/orm/typeorm': TypeormSidebar,
+  '/develop-skill': DevelopSkillSidebar,
+  '/solo-algorithm': soloAlgorithmSidebar,
+  '/read-books': ReadBooksSidebar,
+  '/job-chance': JobChanceSidebar,
+  '/microservice': MicroserviceSidebar,
+  '/battle-interview': BattleInterviewSidebar,
+})
+
+/**
+ * 主题相关配置【备份】
+ * 参考：https://theme-hope.vuejs.press/zh/config/intro.html#%E9%85%8D%E7%BD%AE%E6%A6%82%E5%BF%B5
  */
 export const themeConfig = {
   theme: hopeTheme({
@@ -24,14 +151,16 @@ export const themeConfig = {
     favicon: '/favicon.ico',
     logo: '/favicon.icon',
 
-    navbar,
+    // 导航栏
+    navbar: navbarConfig,
     // 导航栏布局
     navbarLayout: {
       start: ['Brand'],
       center: [],
       end: ['Links', 'Language', 'Search', 'Outlook', 'Repo'],
     },
-    sidebar,
+    // 侧边栏
+    sidebar: sidebarConfig,
     pageInfo: ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime'],
     // 主题布局选项
     // docsRepo: RepoAddress,
@@ -116,7 +245,8 @@ export const themeConfig = {
       // 代码块
       mdEnhance: {
         // card:true,
-        codetabs: true,
+        // codetabs: true,
+        // tabs: true,
         // 支持任务列表
         tasklist: true,
         playground: {
@@ -139,7 +269,6 @@ export const themeConfig = {
         ],
         sub: true,
         sup: true,
-        tabs: true,
         vPre: true,
         vuePlayground: true,
         // 文件导入，配置别名

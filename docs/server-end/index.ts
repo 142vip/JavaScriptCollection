@@ -1,3 +1,20 @@
+export * from './framework/egg/eggSidebar'
+export * from './framework/koa/koa.sidebar'
+export * from './framework/express/express.sidebar'
+export * from './database/redis/redisSidebar'
+export * from './database/mysql/mySqlSideBar'
+export * from './database/mongo/mongoSideBar'
+export * from './linux/linuxSidebar'
+export * from './design-patterns/designPatterns.sidebar'
+export * from './typescript/typescript.sidebar'
+export * from './base/base.sidebar'
+export * from './node-learn/nodeLearnSidebar'
+export * from './orm/sequelize/sequelizeOrm.sidebar'
+export * from './orm/typeorm/typeorm.sidebar'
+
+/**
+ * 后端服务-侧边栏
+ */
 export const ServerEndSidebar = [
   {
     text: '基础知识',

@@ -1,3 +1,6 @@
+export * from '../battle-interview/battle-interview.sidebar'
+export * from '../develop-skill/develop-skill.sidebar'
+
 export const FrontEndSidebar = [
   {
     text: 'HTML',
