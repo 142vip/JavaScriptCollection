@@ -29,10 +29,10 @@
   "devDependencies": {
     "@142vip/eslint-config": "^0.0.1-alpha.2",
     "@142vip/fairy-cli": "^0.0.3-alpha.13",
-    "@142vip/utils": "0.0.1-alpha.6",
-    "@142vip/vuepress": "0.0.1-alpha.3",
+    "@142vip/utils": "^0.0.1-alpha.6",
+    "@142vip/vuepress": "^0.0.1-alpha.4",
     "@vue/repl": "^4.4.2",
-    "@vuepress/bundler-vite": "2.0.0-rc.17",
+    "@vuepress/bundler-vite": "^2.0.0-rc.17",
     "eslint": "8.55.0",
     "mermaid": "^11.3.0",
     "only-allow": "^1.2.1",
@@ -41,9 +41,9 @@
     "typescript": "^5.5.4",
     "vercel": "^32.7.2",
     "vue": "^3.5.8",
-    "vuepress": "2.0.0-rc.17",
-    "vuepress-plugin-search-pro": "2.0.0-rc.57",
-    "vuepress-theme-hope": "2.0.0-rc.58"
+    "vuepress": "^2.0.0-rc.17",
+    "vuepress-plugin-search-pro": "^2.0.0-rc.57",
+    "vuepress-theme-hope": "^2.0.0-rc.58"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint",

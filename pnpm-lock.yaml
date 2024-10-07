@@ -15,16 +15,16 @@ importers:
         specifier: ^0.0.3-alpha.13
         version: 0.0.3-alpha.13
       '@142vip/utils':
-        specifier: 0.0.1-alpha.6
+        specifier: ^0.0.1-alpha.6
         version: 0.0.1-alpha.6
       '@142vip/vuepress':
-        specifier: 0.0.1-alpha.3
-        version: 0.0.1-alpha.3
+        specifier: ^0.0.1-alpha.4
+        version: 0.0.1-alpha.4
       '@vue/repl':
         specifier: ^4.4.2
         version: 4.4.2
       '@vuepress/bundler-vite':
-        specifier: 2.0.0-rc.17
+        specifier: ^2.0.0-rc.17
         version: 2.0.0-rc.17(@types/node@14.18.33)(jiti@1.21.6)(sass-embedded@1.79.4)(typescript@5.6.2)(yaml@2.5.1)
       eslint:
         specifier: 8.55.0
@@ -51,13 +51,13 @@ importers:
         specifier: ^3.5.8
         version: 3.5.11(typescript@5.6.2)
       vuepress:
-        specifier: 2.0.0-rc.17
+        specifier: ^2.0.0-rc.17
         version: 2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.17(@types/node@14.18.33)(jiti@1.21.6)(sass-embedded@1.79.4)(typescript@5.6.2)(yaml@2.5.1))(typescript@5.6.2)(vue@3.5.11(typescript@5.6.2))
       vuepress-plugin-search-pro:
-        specifier: 2.0.0-rc.57
+        specifier: ^2.0.0-rc.57
         version: 2.0.0-rc.57(sass-embedded@1.79.4)(typescript@5.6.2)(vuepress@2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.17(@types/node@14.18.33)(jiti@1.21.6)(sass-embedded@1.79.4)(typescript@5.6.2)(yaml@2.5.1))(typescript@5.6.2)(vue@3.5.11(typescript@5.6.2)))
       vuepress-theme-hope:
-        specifier: 2.0.0-rc.58
+        specifier: ^2.0.0-rc.58
         version: 2.0.0-rc.58(@vue/repl@4.4.2)(katex@0.16.11)(markdown-it@14.1.0)(mermaid@11.3.0)(sass-embedded@1.79.4)(typescript@5.6.2)(vuepress-plugin-search-pro@2.0.0-rc.57(sass-embedded@1.79.4)(typescript@5.6.2)(vuepress@2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.17(@types/node@14.18.33)(jiti@1.21.6)(sass-embedded@1.79.4)(typescript@5.6.2)(yaml@2.5.1))(typescript@5.6.2)(vue@3.5.11(typescript@5.6.2))))(vuepress@2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.17(@types/node@14.18.33)(jiti@1.21.6)(sass-embedded@1.79.4)(typescript@5.6.2)(yaml@2.5.1))(typescript@5.6.2)(vue@3.5.11(typescript@5.6.2)))
 
   code/express/apps/apis-demo:
@@ -161,8 +161,8 @@ packages:
     resolution: {integrity: sha512-zTPNPFYxbVdRTb/V8Fu0tzZM1vfCwXI2TzS+KdoP14ZoF+QN1sHS6sIp4hVfetr2oOgwb6vE3ccjR4VTyevLgg==}
     engines: {node: '>=16.0.0'}
 
-  '@142vip/vuepress@0.0.1-alpha.3':
-    resolution: {integrity: sha512-hPjXMeeb7qiIBcbMP1rwAS6R/uN0FkwZkdymvTfou1miz7bx6JXr+qbXA6XYfcALIcooSOgWsESbNw5EtMxh/A==}
+  '@142vip/vuepress@0.0.1-alpha.4':
+    resolution: {integrity: sha512-+6yas53pFIlpTymCu8FjY8D8QoAIZrdVpam2533cY8w7MGBGsD/zJdv4F84GXZZUkm2kXTmd0CUBu5zgwbq/TA==}
 
   '@antfu/eslint-config@2.27.3':
     resolution: {integrity: sha512-Y2Vh/LvPAaYoyLwCiZHJ7p76LEIGg6debeUA4Qs+KOrlGuXLQWRmdZlC6SB33UDNzXqkFeaXAlEcYUqvYoiMKA==}
@@ -5387,7 +5387,7 @@ snapshots:
       inquirer: 7.3.3
       qs: 6.13.0
 
-  '@142vip/vuepress@0.0.1-alpha.3': {}
+  '@142vip/vuepress@0.0.1-alpha.4': {}
 
   '@antfu/eslint-config@2.27.3(@typescript-eslint/utils@8.8.0(eslint@8.55.0)(typescript@5.6.2))(@vue/compiler-sfc@3.5.11)(eslint@8.55.0)(typescript@5.6.2)(vitest@2.1.2(@edge-runtime/vm@3.1.7)(@types/node@14.18.33)(sass-embedded@1.79.4))':
     dependencies:
@@ -6214,7 +6214,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 22.7.4
 
   '@types/trusted-types@2.0.7': {}
 
