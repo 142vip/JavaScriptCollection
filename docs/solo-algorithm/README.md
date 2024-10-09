@@ -1,8 +1,3 @@
----
-title: SOLO算法
-permalink: /solo-algorithm
----
-
 # SOLO算法
 
 > 未打钩✅的题目代表未同步到公众号

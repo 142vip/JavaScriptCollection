@@ -10,7 +10,7 @@
 import {createRequire} from 'node:module'
 import process from 'node:process'
 import {
-  VipDockerAddress,
+  OPEN_SOURCE_ADDRESS,
   buildImage,
   getRecentGitCommit,
 } from '@142vip/utils'
@@ -22,7 +22,7 @@ import {
     const pkg = createRequire(import.meta.url)('../package.json')
 
     // 镜像地址
-    const imageName = `${VipDockerAddress}/docs:${pkg.name}-${pkg.version}`
+    const imageName = `${OPEN_SOURCE_ADDRESS.DOCKER_ALIYUNCS_VIP}/docs:${pkg.name}-${pkg.version}`
 
     // 最近一次提交信息
     const {hash: gitHash} = await getRecentGitCommit()

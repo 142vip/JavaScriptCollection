@@ -1,35 +1,36 @@
-import process from 'node:process'
 import { defineUserConfig } from '@vuepress/cli'
 import { getDirname, path } from '@vuepress/utils'
 import { viteBundler } from '@vuepress/bundler-vite'
-import { name } from './package.json'
-import { headers } from './docs/.vuepress/theme/headers'
-import { themeConfig } from './docs/.vuepress/theme/theme'
-// import {pluginConfig} from "./theme/plugins";
-
-// 当前目录名
-const __dirname = getDirname(import.meta.url)
-
-/**
- * 用于区分base路径，是否nginx代理
- */
-function getSiteBase(): '/' | `/${string}/` {
-  // 用于区分base路径，是否nginx代理
-  const PROXY_DOMAIN = process.env.PROXY_DOMAIN || false
-  return PROXY_DOMAIN ? `/${name}/` : '/'
-}
+import { hopeTheme } from 'vuepress-theme-hope'
+import {
+  JSCHeaders,
+  getCopyRightText,
+  getFooterHtml,
+  getThemeConfig,
+  getViteBundler,
+} from '@142vip/vuepress'
+import {
+  OPEN_SOURCE_ADDRESS,
+  OPEN_SOURCE_AUTHOR,
+  getDocSiteBase,
+} from '@142vip/utils'
+import pkg from './package.json'
+import { navbarConfig, sidebarConfig } from './docs/theme.config'
 
 export default defineUserConfig({
-  base: getSiteBase(),
+  base: getDocSiteBase(pkg.name),
   title: '凡是过往、皆为序章',
-  description: '一本有趣的JavaScript合集',
+  description: pkg.description,
   port: 5000,
-  head: headers,
+  head: JSCHeaders,
   source: '',
   markdown: {
     // todo 引入代码文件时的路径替换 https://vuejs.press/zh/guide/markdown.html#%E5%AF%BC%E5%85%A5%E4%BB%A3%E7%A0%81%E5%9D%97
     importCode: {
       handleImportPath: (str) => {
+        // 当前目录名
+        const __dirname = getDirname(import.meta.url)
+
         if (str.includes('@code')) {
           return str.replace(/^@code/, path.resolve(__dirname, 'code/'))
         }
@@ -48,17 +49,45 @@ export default defineUserConfig({
     },
   },
   // 主题配置
-  ...themeConfig,
-  // // 插件配置
-  // ...pluginConfig,
-  // 编译
-  bundler: viteBundler({
-    viteOptions: {
-      build: {
-        chunkSizeWarningLimit: 4096,
+  theme: hopeTheme({
+    ...getThemeConfig({
+      // 导航栏
+      navbar: navbarConfig,
+      // 侧边栏
+      sidebar: sidebarConfig,
+      // 页脚
+      footer: getFooterHtml({
+        name: pkg.name,
+        version: pkg.version,
+      }),
+      // 版权
+      copyright: getCopyRightText(OPEN_SOURCE_AUTHOR.name),
+      // 仓库
+      repo: '142vip/JavaScriptCollection',
+      repoLabel: 'GitHub',
+
+      // 作者信息
+      author: OPEN_SOURCE_AUTHOR,
+
+      // 文档路径，开启编辑功能
+      docsDir: 'docs',
+      docsBranch: 'next',
+      // 主题布局选项
+      docsRepo: OPEN_SOURCE_ADDRESS.GITHUB_REPO_JSC,
+
+      // 插件
+      plugins: {
+        // 水印
+        watermark: {
+          enabled: false,
+          watermarkOptions: {
+            content: OPEN_SOURCE_AUTHOR.name,
+          },
+        },
       },
-    },
-    vuePluginOptions: {},
+    }),
   }),
+  // 编译
+  bundler: viteBundler(getViteBundler()),
   shouldPrefetch: false,
 })
