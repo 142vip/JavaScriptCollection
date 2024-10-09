@@ -18,7 +18,7 @@ import pkg from './package.json'
 import { navbarConfig, sidebarConfig } from './docs/theme.config'
 
 export default defineUserConfig({
-  base: getDocSiteBase(''),
+  base: getDocSiteBase('JavaScriptCollection'),
   title: '凡是过往、皆为序章',
   description: pkg.description,
   port: 5000,
@@ -49,42 +49,44 @@ export default defineUserConfig({
     },
   },
   // 主题配置
-  theme: hopeTheme(getThemeConfig({
-    // 导航栏
-    navbar: navbarConfig,
-    // 侧边栏
-    sidebar: sidebarConfig,
-    // 页脚
-    footer: getFooterHtml({
-      name: pkg.name,
-      version: pkg.version,
-    }),
-    // 版权
-    copyright: getCopyRightText(OPEN_SOURCE_AUTHOR.name),
-    // 仓库
-    repo: '142vip/JavaScriptCollection',
-    repoLabel: 'GitHub',
+  theme: hopeTheme({
+    ...getThemeConfig({
+      // 导航栏
+      navbar: navbarConfig,
+      // 侧边栏
+      sidebar: sidebarConfig,
+      // 页脚
+      footer: getFooterHtml({
+        name: pkg.name,
+        version: pkg.version,
+      }),
+      // 版权
+      copyright: getCopyRightText(OPEN_SOURCE_AUTHOR.name),
+      // 仓库
+      repo: '142vip/JavaScriptCollection',
+      repoLabel: 'GitHub',
 
-    // 作者信息
-    author: OPEN_SOURCE_AUTHOR,
+      // 作者信息
+      author: OPEN_SOURCE_AUTHOR,
 
-    // 文档路径，开启编辑功能
-    docsDir: 'docs',
-    docsBranch: 'next',
-    // 主题布局选项
-    docsRepo: OPEN_SOURCE_ADDRESS.GITHUB_REPO_JSC,
+      // 文档路径，开启编辑功能
+      docsDir: 'docs',
+      docsBranch: 'next',
+      // 主题布局选项
+      docsRepo: OPEN_SOURCE_ADDRESS.GITHUB_REPO_JSC,
 
-    // 插件
-    plugins: {
-      // 水印
-      watermark: {
-        enabled: false,
-        watermarkOptions: {
-          content: OPEN_SOURCE_AUTHOR.name,
+      // 插件
+      plugins: {
+        // 水印
+        watermark: {
+          enabled: false,
+          watermarkOptions: {
+            content: OPEN_SOURCE_AUTHOR.name,
+          },
         },
       },
-    },
-  })),
+    }),
+  }),
   // 编译
   bundler: viteBundler(getViteBundler()),
   shouldPrefetch: false,
