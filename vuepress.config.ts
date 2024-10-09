@@ -18,7 +18,7 @@ import pkg from './package.json'
 import { navbarConfig, sidebarConfig } from './docs/theme.config'
 
 export default defineUserConfig({
-  base: getDocSiteBase('JavaScriptCollection'),
+  base: getDocSiteBase(pkg.name),
   title: '凡是过往、皆为序章',
   description: pkg.description,
   port: 5000,
