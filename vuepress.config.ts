@@ -6,16 +6,19 @@ import {
   JSCHeaders,
   getCopyRightText,
   getFooterHtml,
-  getSiteBase,
   getThemeConfig,
   getViteBundler,
 } from '@142vip/vuepress'
-import { OPEN_SOURCE_ADDRESS, OPEN_SOURCE_AUTHOR } from '@142vip/utils'
+import {
+  OPEN_SOURCE_ADDRESS,
+  OPEN_SOURCE_AUTHOR,
+  getDocSiteBase,
+} from '@142vip/utils'
 import pkg from './package.json'
 import { navbarConfig, sidebarConfig } from './docs/theme.config'
 
 export default defineUserConfig({
-  base: getSiteBase(),
+  base: getDocSiteBase(''),
   title: '凡是过往、皆为序章',
   description: pkg.description,
   port: 5000,

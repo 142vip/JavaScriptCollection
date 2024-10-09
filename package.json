@@ -29,8 +29,8 @@
   "devDependencies": {
     "@142vip/eslint-config": "^0.0.1-alpha.2",
     "@142vip/fairy-cli": "^0.0.3-alpha.13",
-    "@142vip/utils": "^0.0.1-alpha.6",
-    "@142vip/vuepress": "^0.0.1-alpha.4",
+    "@142vip/utils": "^0.0.1-alpha.7",
+    "@142vip/vuepress": "^0.0.1-alpha.5",
     "@vue/repl": "^4.4.2",
     "@vuepress/bundler-vite": "^2.0.0-rc.17",
     "eslint": "8.55.0",
