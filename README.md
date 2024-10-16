@@ -20,7 +20,7 @@
         <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status">
        </a>
        <a href="https://js-collection.vercel.app" target="_blank" style="padding: 5px">
-        <img alt="Vercel" src="https://therealsujitk-vercel-badge.vercel.app/?app=408">
+        <img src="https://deploy-badge.vercel.app/vercel/js-collection" alt="JavaScriptCollection Deploy"></img>
        </a>
     </div>
     <div >
