@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.21 (2024-10-16)
+
+### ✨ Features
+
+- 移除`vercel`模块和流水线同步，采用官方基于`Git`仓库同步策略进行部署 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/JavaScriptCollection/issues/179 [<samp>(38ffb)</samp>](https://github.com/142vip/JavaScriptCollection/commit/38ffb58)
+
+### 💅 Refactors
+
+- 站点改造，引入`@142vip/vuepress`模块，简化站点结构，删除冗余配置文件 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/178 [<samp>(b180f)</samp>](https://github.com/142vip/JavaScriptCollection/commit/b180f0c)
+
+**Release New Version v0.0.2-alpha.21 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.20...v0.0.2-alpha.21)**
+
 ## v0.0.2-alpha.20 (2024-10-01)
 
 ### ✨ Features
