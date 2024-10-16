@@ -73,35 +73,6 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  # 部署到vercel平台
-  #  deploy-vercel:
-  #    name: "部署到Vercel平台"
-  #    needs: install-init
-  #    runs-on: ubuntu-latest
-  #    if: github.repository == '142vip/JavaScriptCollection'
-  #    steps:
-  #      - name: Checkout Code
-  #        uses: actions/checkout@v3
-  #        with:
-  #          fetch-depth: 0
-  #
-  #      - name: Restore Dependencies From Cache
-  #        uses: actions/cache@v3
-  #        with:
-  #          path: |
-  #            node_modules
-  #          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
-  #
-  #      - name: Pull Vercel Environment Information
-  #        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-  #
-  #      ## 注意：安装pnpm
-  #      - name: Build Project Artifacts
-  #        run: npm i pnpm@7 -g && vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-  #
-  #      - name: Deploy Project Artifacts to Vercel
-  #        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
-
   # 版本发布
   release:
     name: 创建Github发布
