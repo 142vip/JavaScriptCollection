@@ -445,6 +445,7 @@ axios(options)
 以Form data格式发送数据时，可以做如下处理：
 
 ```js
+const Buffer = require('node:buffer')
 const FormData = require('form-data')
 
 const form = new FormData()

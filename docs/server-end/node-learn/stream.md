@@ -32,15 +32,17 @@ permalink: /server-end/node-learn/stream.html
 **依赖**
 
 ```json
+{
   "dependencies": {
     "@types/axios": "^0.14.0",
     "axios": "^1.2.2",
-    "express": "^4.18.2",
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.15",
-    "@types/node": "^18.11.18",
+    "@types/node": "^18.11.18"
   }
+}
 ```
 
 **服务端**
