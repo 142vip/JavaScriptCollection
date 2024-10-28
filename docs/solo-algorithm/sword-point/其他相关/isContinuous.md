@@ -17,8 +17,4 @@ permalink: /solo-algorithm/sword-point/is-continuous.html
 
 @[code js](@algorithm/sword-point/其他相关/isContinuous.js)
 
-```js
-``
-
 ## 一些建议
-```

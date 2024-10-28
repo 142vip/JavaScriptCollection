@@ -53,37 +53,29 @@ Atwood定律：
 - 构建网站：用Node.js做入门开发和传统的Java、PHP开发并没有什么区别。构建成功的应用是典型的单体式应用。
 - 构建API：后端API接口开发用于数据库访问，将返回的数据进行包裹，以HTTP形式返回；API Proxy针对前端使用的API进行优化，使前端开发更人性化。
 
-```js
+```json5
 // 常见接口返回格式：
-
 {
-  status:{
-    code:100,
-      message
-  :
-    'success'
-  }
-,
-  response:{
-  ...
-    result
-  ...
+  "status": {
+    "code": 100,
+    "message": "success"
+  },
+  "response": {
+    //  ...
+    "result": []
+    //  ...
   }
 }
+```
 
+```json5
 // 个人常用
 
 {
-  code:200,
-    message
-:
-  '操作成功',
-    result
-:...
-  result
-... // 常见false true [] {} 等结构
+  "code": 200,
+  "message": "操作成功",
+  "result": [] // 常见false true [] {} 等结构
 }
-
 ```
 
 - 构建RPC服务：Node.js是非常适合用于网络应用开发，其中Socket编程就是一种典型的网络应用开发场景，也就是说："
@@ -601,18 +593,17 @@ console.log('print me first')
 ```
 
 - nextTick的作用是把laterCallback放到下一个循环事件中去执行
-- \_tickCallback则是一个非公开的方法，是在当前循环事件结束之后调用，以进行下一个事件循环的入口函数。
+- `_tickCallback`则是一个非公开的方法，是在当前循环事件结束之后调用，以进行下一个事件循环的入口函数。
 
-**Node.js为事件循环维持了一个队列，nextTick负责入队列操作，\_tickCallback负责出队列操作；**
+**`Node.js`为事件循环维持了一个队列，nextTick负责入队列操作，`_tickCallback`负责出队列操作；**
 
 3.uncaughtException事件
 
 > 当Nodejs发现一个没有被捕获的异常时候，会触发这个事件。如果这个事件中存在回调函数，Node.js不会强制结束进程。
 
 ```js
-process.on('uncaughtException', err => {
+process.on('uncaughtException', (err) => {
   // 处理错误
-....
 })
 ```
 
@@ -672,7 +663,7 @@ Node.js和CommonJS的区别(主要体现在module.exports)：
 
 exports是一个特殊的对象，它的任何输出都将作为一个对外暴露的公共API
 
-```js
+```textmate
 // 导出演示
 
 const PI = Math.PI
@@ -682,7 +673,6 @@ exports.PI = PI
 // 引入演示
 
 const PI = require('XXX')
-
 ```
 
 特别注意的是：当module.exports和exports对象同时存在时，以module.exports为准
@@ -786,21 +776,18 @@ module.exports = {
 module.exports不一定非要返回实例化对象
 
 ```js
-
 module.exports = 1
-module.exports = NaN
+module.exports = Number.NaN
 // 导出字符串
 module.exports = 'foo'
 // 导出对象
-module.exports = {foo: 'bar'}
+module.exports = { foo: 'bar' }
 // 导出数组
 module.exports = ['foot', 'bar']
 // 导出函数方法
 module.exports = () => {
 
 }
-...
-
 ```
 
 这里总结一下：
@@ -829,11 +816,9 @@ exports.name = () => {
 推荐最佳写法
 
 ```js
-exports = module.exports = opts => {
+exports = module.exports = (opts) => {
   // 除了工具类用exports.xxxx 其他都建议用module.exports
-....
 }
-
 ```
 
 #### 理解模块的引用
@@ -869,11 +854,11 @@ Node.js模块分为：
 
 ##### 为模块包装提供的全局对象
 
-- exports： CommonJS关键字
-- require： CommonJS关键字
-- module： CommonJS关键字
-- \_filename： 当前文件名称
-- \_dirname：当前文件目录
+- `exports`： CommonJS关键字
+- `require`： CommonJS关键字
+- `module`： CommonJS关键字
+- `_filename`： 当前文件名称
+- `_dirname`：当前文件目录
 
 ##### 内置process对象
 
@@ -908,16 +893,12 @@ Nodejs中的全局对象和Javascript里的普通对象是一样的，主要是�
 扩展变量：
 
 ```js
-
 // 扩展debug变量，并进行加载
-global.debug = true;
+global.debug = true
 
 // 使用扩展的debug变量
 if (debug === true) {
-.....
-
 }
-
 ```
 
 扩展方法：
@@ -958,7 +939,7 @@ import { readFile } from 'node:fs'
 
 ##### 模块导出
 
-```js
+```textmate
 // 对所有内容进行导出
 export * from 'XXXXX'
 
@@ -972,11 +953,10 @@ export { foot as foot_copy, bar } from 'XXXX'
 
 > 导出对象的指定别名的过程叫做具名导出
 
-```js
+```textmate
 export {MY_CONST as FOO, myFunc};
 
 export {foot as test}
-
 ```
 
 ###### 内联具名导出
@@ -984,41 +964,35 @@ export {foot as test}
 > 变量的声明有多种，在内联具名导出时不会受到限制
 
 ```js
-
 // 导出var定义的foo变量
 export var foo;
 // 导出const定义的woo变量
 export const woo;
 // 导出let定义的test变量
 export let test;
-
 ```
 
 函数也可以类似变量进行导出
 
 ```js
-export function myFunc(){
-    // 处理逻辑
-    ...
+export function myFunc() {
+  // 处理逻辑
+  // ...
 }
 
-export function myGenFunc(){
-    // 处理逻辑
-    ...
+export function myGenFunc() {
+  // 处理逻辑
+  // ...
 }
 
 // function* 这种声明方式(function关键字后跟一个星号）会定义一个
 // 生成器函数 (generator function)，它返回一个  Generator  对象。
-
 ```
 
 ```js
-
 export class MyClass {
   // 类实现
-...
 }
-
 ```
 
 ###### 默认导出
@@ -1030,17 +1004,13 @@ export class MyClass {
 ```js
 
 export default function myFunc(){
-    //
-    ...
 }
 
 export default function(){
-    // ...
 }
 
 // 默认导出生成器函数，返回generator函数
 export default function* myGenFunc(){
-    // ...
 }
 
 export default function* (){
@@ -1050,12 +1020,10 @@ export default function* (){
 // 默认导出MyClass类
 export default class MyClass{
     // 类实现
-    // ...
 }
 
 // 默认导出匿名类
 export default class{
-    // ...
 }
 
 // 当然，其他的也是可以的
@@ -1065,7 +1033,6 @@ export default 'Hello World';
 export default 3*7;
 // 匿名函数
 export default (function(){});
-
 ```
 
 ### export default和export的区别
@@ -1095,7 +1062,7 @@ export default (function(){});
 
 - 同步
 
-> 操作必须要等待回复后才能去做其他的事情，有种至死方休的感觉。每一步都需要等待上一步完成才能进行；
+> 操作必须等待回复后才能去做其他的事情，有种至死方休的感觉。每一步都需要等待上一步完成才能进行；
 
 例如JQuery中的ajax异步请求
 
@@ -1125,32 +1092,32 @@ EventLoop依赖libuv库，而libuv库采用的是异步和事件驱动的风格�
 API:Application Programming Interface简称，异步的核心在于Nodejs SDK的API调用，然后交由EventLoop（libuv）去执行。\* \*因此Nodejs的API操作非常重要\*\*； [Nodejs Api官网](http://nodejs.cn/api/)
 
 ```js
-const fs=require('fs');
+const fs = require('node:fs')
 // 文件路劲
-const path='.'
+const path = '.'
 
 // 异步读取
 
-fs.readdir(path,funtion(err,files){
-    if(err){
-        // 出现异常
-    }
-    // 读取结果
-    console.log(files)
+fs.readdir(path, (err, files) => {
+  if (err) {
+    // 出现异常
+  }
+  // 读取结果
+  console.log(files)
 })
 // 也可以转换为箭头函数
 
-fs.readdir(path,(err,files)=>{
-    if(err){
-        // 出现异常
-    }
-    // 读取结果
-    console.log(files)
+fs.readdir(path, (err, files) => {
+  if (err) {
+    // 出现异常
+  }
+  // 读取结果
+  console.log(files)
 })
 
 // 同步写法
 
-const result=fs.readdirSync(path);
+const result = fs.readdirSync(path)
 // 输出结果
 console.log(result)
 ```
@@ -1180,19 +1147,19 @@ callback function采用错误优先(error-first)的回调方式，而EventEmitte
 
 ```js
 /**
-* err ：错误对象
-* data ： 成功时返回的数据
-*/
-function (err,data){
-    if(err){
-        // 存在错误
-    }
-    // 正常，则输出结果data
-    console.log(data)
+ * err ：错误对象
+ * data ： 成功时返回的数据
+ */
+function test(err, data) {
+  if (err) {
+    // 存在错误
+  }
+  // 正常，则输出结果data
+  console.log(data)
 }
 ```
 
-但从代码语义上来说，非空的err属于程序异常，而空的err相当于能够正常返回结果，不存在异常。
+但从代码语义上说，非空的err属于程序异常，而空的err相当于能够正常返回结果，不存在异常。
 
 ##### API写法约定
 
@@ -1301,8 +1268,7 @@ event.on('someEvent', () => {
   console.log('event 2')
 })
 
-......// 更多
-
+// 更多 ......
 ```
 
 当超过10个回调函数时会发出警告⚠，当然也可以通过`setMaxListeners`方法来改变
@@ -1316,12 +1282,11 @@ event.setMaxListeners(100)
 事件传参举例：
 
 ```js
-const eventEmitter = require('events')
-const myEmitter = new EventEmitter();
+const eventEmitter = require('node:events')
+const myEmitter = new EventEmitter()
 
 function testConnection(param) {
-  console.log('传递的参数'，param
-)
+  console.log('传递的参数', param)
 }
 
 myEmitter.on('test', testConnection)
@@ -1515,5 +1480,5 @@ obj.aAsync().then(obj.bAsync()).then(obj.cAsync()).catch((err) => {
 
 在Nodejs的世界里，http是最常用的模块，它简单且效率非常高，是被应用最广泛的模块。如果说http是Node.js的核心模块，那么Stream就是核心中的核心，是保证http高效的秘密武器。相比之下，events显得极为底层，是为核心模块服务的；
 
-**function\* 这种声明方式(function关键字后跟一个星号）会定义一个生成器函数 (generator function)，它返回一个 Generator
+**`function` 这种声明方式(function关键字后跟一个星号）会定义一个生成器函数 (generator function)，它返回一个 Generator
 对象。**

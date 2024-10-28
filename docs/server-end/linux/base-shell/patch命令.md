@@ -28,7 +28,7 @@ patch [OPTION]... [ORIGFILE [PATCHFILE]]
 - `-i<patchfile>, --input=<patchfile>`: 读取指定的修补文件。
 - `-l, --ignore-whitespace`: 忽略修补数据与输入数据的跳格，空格字符。
 - `-n, --normal`: 把修补数据解译成一般性的差异。
-- `-N, --forward`: 忽略修补的数据较原始文件的版本更旧，或该版本的修补数据已使　用过。
+- `-N, --forward`: 忽略修补的数据较原始文件的版本更旧，或该版本的修补数据已使用过。
 - `-o<outfile>, --output=<outfile>`: 设置输出文件的名称，修补过的文件会以该名称存放。
 - `-p<num>, --strip=<num>`: 设置欲剥离几层路径名称。
 - `-f<rejectfile>, --reject-file=<rejectfile>`: 设置保存拒绝修补相关信息的文件名称，预设的文件名称为`.rej`。
