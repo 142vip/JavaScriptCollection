@@ -5,7 +5,7 @@
   "packageManager": "pnpm@9.6.0",
   "description": "一本有趣的JavaScript合集",
   "authorInfo": {
-    "name": "微信公众号：储凡",
+    "name": "微信公众号：储凡211212",
     "email": "fairy_vip@2925.com",
     "url": "https://github.com/142vip",
     "homePage": "https://code.142vip.cn"
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm && chmod +x ./scripts/*",
-    "postinstall": "simple-git-hooks",
+    "postinstall": "rm -rf .git/hooks && npx simple-git-hooks",
     "clean": "npx fa clean --ignore-tips --dist --vite --all",
     "lint": "npx fa lint",
     "lint:fix": "npx fa lint --fix",
