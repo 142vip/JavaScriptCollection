@@ -21,7 +21,6 @@ function add(...inputs) {
   return _add
 }
 
-const str = add(1, 6)(2)(3)
-console.log(str)
-console.log(add(1)(2)(3))
-console.log(add(1)(2, 3, 4))
+add(1, 6)(2)(3)
+add(1)(2)(3)
+add(1)(2, 3, 4)

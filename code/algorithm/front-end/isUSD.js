@@ -33,4 +33,4 @@ function isUSD(str) {
   return true
 }
 
-console.log(isUSD('$20,933,209.93'))
+isUSD('$20,933,209.93')

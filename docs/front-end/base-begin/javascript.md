@@ -322,6 +322,7 @@ const fn = function () {
 
 ```js
 // 利用Function构造函数 【所有函数都是Function的实例】
+// eslint-disable-next-line
 const fn = new Function('a', 'b', 'return a+b')
 console.log(fn)
 ```
@@ -357,7 +358,7 @@ obj.test()
 function Fn() {
   // ...
 }
-
+// eslint-disable-next-line
 const fn = new Fn()
 
 console.log(fn)
@@ -427,9 +428,9 @@ fn.call(obj, 1, 2)
 ```js
 // 求数组中的最大值
 
-let arr = [1, 4, 23, 78, 25];
-let max = Math.max.apply(null, arr)
-let max = Math.max.apply(Math, arr)
+const arr = [1, 4, 23, 78, 25]
+const max1 = Math.max.apply(null, arr)
+const max2 = Math.max.apply(Math, arr)
 ```
 
 #### bind()方法
@@ -512,7 +513,7 @@ function fn(callback) {
 fn(function () {
   alert('hi')
 })
-
+// eslint-disable-next-line
 function fn() {
   return function () {
   }
@@ -600,12 +601,12 @@ fun1()
 
 ```js
 // 定义set集合
-const set = new Set();
+const setData1 = new Set()
 // 可以接收数组作为参数，用来初始化
-const set = new Set([1, 2, 3, 4, 5])
+const setData2 = new Set([1, 2, 3, 4, 5])
 // 例如数组去重
 let arr = [1, 2, 2, 3, 3, 4, 5, 6]
-let temp = new Set(arr);
+const temp = new Set(arr)
 arr = [...temp]
 ```
 

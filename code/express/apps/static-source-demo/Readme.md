@@ -73,7 +73,7 @@ app.use('/static', express.static('public'))
 
 服务启动后，在浏览器中访问：
 
-```textmate
+```text
 http://localhost:3000/static/css/style.css
 http://localhost:3000/static/js/app.js
 http://localhost:3000/static/images/bg.png

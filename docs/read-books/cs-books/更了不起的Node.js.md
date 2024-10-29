@@ -663,7 +663,7 @@ Node.js和CommonJS的区别(主要体现在module.exports)：
 
 exports是一个特殊的对象，它的任何输出都将作为一个对外暴露的公共API
 
-```textmate
+```text
 // 导出演示
 
 const PI = Math.PI
@@ -939,7 +939,7 @@ import { readFile } from 'node:fs'
 
 ##### 模块导出
 
-```textmate
+```text
 // 对所有内容进行导出
 export * from 'XXXXX'
 
@@ -953,7 +953,7 @@ export { foot as foot_copy, bar } from 'XXXX'
 
 > 导出对象的指定别名的过程叫做具名导出
 
-```textmate
+```text
 export {MY_CONST as FOO, myFunc};
 
 export {foot as test}

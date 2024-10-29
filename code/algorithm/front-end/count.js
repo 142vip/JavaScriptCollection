@@ -1,6 +1,5 @@
 /**
  * 计数
- * @param str
  */
 function count(str) {
   // 转换为数组后去重
@@ -24,5 +23,4 @@ function count(str) {
 }
 
 // 调用
-const result = count('abTT')
-console.log(result)
+count('abTT')
