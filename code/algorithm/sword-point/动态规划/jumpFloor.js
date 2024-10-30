@@ -8,8 +8,6 @@
 
 /**
  * 递归实现
- * @param number
- * @returns {*}
  */
 function jumpFloorOne(number) {
   // 递归，要么跳一阶，要么跳两阶
@@ -18,8 +16,6 @@ function jumpFloorOne(number) {
 
 /**
  * 非递归调用
- * @param number
- * @returns {number|*}
  */
 function jumpFloorTwo(number) {
   let a = 1

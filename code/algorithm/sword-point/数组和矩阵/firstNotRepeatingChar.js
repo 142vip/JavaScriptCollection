@@ -9,8 +9,6 @@
 
 /**
  * 利用indexOf和lastIndexOf角标不一致
- * @param str
- * @returns {number}
  */
 function firstNotRepeatingCharOne(str) {
   const arr = str.split('')
@@ -24,8 +22,6 @@ function firstNotRepeatingCharOne(str) {
 
 /**
  * 数组按字母查找
- * @param str
- * @returns {number}
  */
 function firstNotRepeatingCharTwo(str) {
   const len = str.length
@@ -41,15 +37,13 @@ function firstNotRepeatingCharTwo(str) {
 
 /**
  * 使用Map结构计数
- * @param str
- * @returns {number|*}
  */
 function firstNotRepeatingCharThree(str) {
   const resMap = new Map()
   const resArr = str.split('')
 
   // 计数操作
-  resArr.forEach((r, index) => {
+  resArr.forEach((r) => {
     if (resMap.has(r)) {
       resMap.set(r, resMap.get(r) + 1)
     }

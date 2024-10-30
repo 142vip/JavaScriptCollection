@@ -2,10 +2,6 @@
     this.val = x;
     this.next = null;
 } */
-function reverseList(pHead) {
+export function reverseList(pHead) {
   console.log(pHead)
-}
-
-module.exports = {
-  reverseList,
 }

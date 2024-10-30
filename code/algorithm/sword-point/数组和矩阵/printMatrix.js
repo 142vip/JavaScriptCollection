@@ -69,8 +69,6 @@ function printMatrixOne(matrix) {
 
 /**
  * 利用一些特性和api
- * @param matrix
- * @returns {*[]}
  */
 function printMatrixTwo(matrix) {
   const len = matrix.length
@@ -102,18 +100,13 @@ function printMatrixTwo(matrix) {
   return seq.filter(x => x != null)
 }
 
-console.log(printMatrixOne([
+const matrix = [
   [1, 2, 3, 4],
   [5, 6, 7, 8],
   [9, 10, 11, 12],
   [13, 14, 15, 16],
-],
-))
+]
 
-console.log(printMatrixTwo([
-  [1, 2, 3, 4],
-  [5, 6, 7, 8],
-  [9, 10, 11, 12],
-  [13, 14, 15, 16],
-],
-))
+console.log(printMatrixOne(matrix))
+
+console.log(printMatrixTwo(matrix))

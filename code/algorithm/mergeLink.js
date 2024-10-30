@@ -3,7 +3,7 @@ function ListNode(x) {
   this.next = null
 }
 
-function Merge1(pHead1, pHead2) {
+export function Merge1(pHead1, pHead2) {
   // 单调不减 可以理解 等于或者大于递增
   let p1 = pHead1
   let p2 = pHead2
@@ -38,9 +38,9 @@ function Merge1(pHead1, pHead2) {
   return result.next
 }
 
-function Merge(pHead1, pHead2) {
-  const vhead = {}
-  let cur = vhead
+export function Merge(pHead1, pHead2) {
+  const vHead = {}
+  let cur = vHead
   while (pHead1 && pHead2) {
     if (pHead1.val <= pHead2.val) {
       cur.next = pHead1
@@ -53,7 +53,7 @@ function Merge(pHead1, pHead2) {
     cur = cur.next
   }
   cur.next = pHead1 || pHead2
-  return vhead.next
+  return vHead.next
 }
 
 const pre = new ListNode(1)

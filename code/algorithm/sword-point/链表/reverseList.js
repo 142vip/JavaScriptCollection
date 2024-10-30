@@ -7,13 +7,13 @@
  * @LastEditTime: 2021-05-02 16:36:52
  */
 
-function ListNode(x) {
+export function ListNode(x) {
   this.val = x
   this.next = null
 }
 
 // 头插法
-function ReverseList(pHead) {
+export function ReverseList(pHead) {
   // 定义反转后链表
   let result = null
   //     let result=new ListNode(-1)
@@ -29,8 +29,10 @@ function ReverseList(pHead) {
   return result
 }
 
-// 递归
-function ReverseList01(pHead) {
+/**
+ * 递归
+ */
+export function ReverseList01(pHead) {
   if (pHead === null || pHead.next === null) {
     return pHead
   }

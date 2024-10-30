@@ -2,8 +2,10 @@
  * 【较难】把数组排成最小的数
  */
 
-// 比较s1,s2的时候，注意比较s1+s2<s2+s1的拼接大小
-function PrintMinNumber(numbers) {
+/**
+ * 比较s1,s2的时候，注意比较s1+s2<s2+s1的拼接大小
+ */
+export function PrintMinNumber(numbers) {
   let len = numbers.length
   // 冒泡每次都将最小的放在最前面
   while (len > 0) {

@@ -8,10 +8,6 @@
  * @param pHead
  * @constructor
  */
-function entryNodeOfLoop(pHead) {
+export function entryNodeOfLoop(pHead) {
   console.log(pHead)
-}
-
-module.exports = {
-  entryNodeOfLoop,
 }

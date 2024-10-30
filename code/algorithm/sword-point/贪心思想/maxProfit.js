@@ -8,9 +8,8 @@
  */
 /**
  * 暴力
- * @param prices int整型一维数组
  */
-function maxProfit(prices) {
+export function maxProfit(prices) {
   // 最低点买入，最高点卖出，收益最大 实际求的是一个子序列，最大和最小的差值 最小在前，最大在后
 
   // 最大收益为0 其他都不算收益
@@ -29,26 +28,24 @@ function maxProfit(prices) {
 
 /**
  * 处理买点，卖点
- * @param prices
- * @returns {number}
  */
-function maxProfitCount(prices) {
+export function maxProfitCount(prices) {
   // 最大收益为0 其他都不算收益
   let max = 0
   // 定义最小的值为买入
   let minPrice = Infinity
   for (let index = 0; index < prices.length; index++) {
     const start = prices[index]
+
     // 处理买点
     if (start < minPrice) {
       minPrice = start
     }
-    // 处理卖点
+    // 处理卖点，获取最大收益
     if (start - minPrice > max) {
-      // 获取最大收益
       max = start - minPrice
     }
   }
 
   return max
-};
+}

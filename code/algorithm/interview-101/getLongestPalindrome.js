@@ -1,7 +1,5 @@
 /**
  * 求给定字符的最大回文字符串
- * @param str
- * @param len
  */
 function getLongestPalindrome(str, len) {
   let max = 0

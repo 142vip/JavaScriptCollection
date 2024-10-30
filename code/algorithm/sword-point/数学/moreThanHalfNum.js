@@ -4,8 +4,6 @@
 
 /**
  * Map计数
- * @param numbers
- * @returns {number}
  */
 function moreThanHalfNumOne(numbers) {
   const resMap = new Map()
@@ -33,8 +31,6 @@ function moreThanHalfNumOne(numbers) {
 
 /**
  * 借助数组排序
- * @param numbers
- * @returns {*}
  */
 function moreThanHalfNumTwo(numbers) {
   // 排序 升序或降序都行
@@ -59,8 +55,6 @@ function moreThanHalfNumTwo(numbers) {
 
 /**
  * 选举出重复最多，再判断是否超过半数
- * @param numbers
- * @returns {number|*}
  */
 function moreThanHalfNumThree(numbers) {
   let cond = -1

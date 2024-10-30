@@ -11,8 +11,6 @@ const result = []
 
 /**
  * 模拟进队列操作
- * @param node
- * @returns {*[]}
  */
 function push(node) {
   // 尾部进栈
@@ -22,7 +20,6 @@ function push(node) {
 
 /**
  * 模拟出队列操作
- * @returns {*}
  */
 function pop() {
   // 队列 先进先出 头部出去

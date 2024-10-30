@@ -6,7 +6,7 @@ interface IMessageSender {
   sendMessage: (message: string) => void
 }
 
-class EmailSender implements IMessageSender {
+export class EmailSender implements IMessageSender {
   sendMessage(message: string): void {
     console.log(`Sending email: ${message}`)
   }

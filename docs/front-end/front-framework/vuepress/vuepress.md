@@ -22,7 +22,6 @@ pnpm vuepress dev
 
 # 构建静态文件
 pnpm vuepress build
-
 ```
 
 这样在本地就可以生成一个静态网站

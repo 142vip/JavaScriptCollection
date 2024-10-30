@@ -1,10 +1,8 @@
 /**
  * 数字在排序数组中出现的次数
  * 难度：中等
- * @param data
- * @param k
  */
-function GetNumberOfK(data, k) {
+export function GetNumberOfK(data, k) {
   // 分两次二分查找，知道重复元素首次和最后一次出现位置，相减就能拿到重复次数了.
 
   // 左侧二分查找，重复元素第一次出现的索引位置
@@ -17,7 +15,9 @@ function GetNumberOfK(data, k) {
   return left === -1 && right === -1 ? 0 : right - left + 1
 }
 
-// 右侧二分查找
+/**
+ * 右侧二分查找
+ */
 function rightBinarySearch(data, target) {
   if (!data.length) {
     return -1
@@ -48,7 +48,9 @@ function rightBinarySearch(data, target) {
   return right
 }
 
-// 左侧二分查找
+/**
+ * 左侧二分查找
+ */
 function leftBinarySearch(data, target) {
   if (!data.length) {
     return -1

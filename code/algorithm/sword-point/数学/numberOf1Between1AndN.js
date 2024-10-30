@@ -4,8 +4,6 @@
 
 /**
  * 转化为字符串，切割成数组后计数
- * @param n
- * @returns {number}
  */
 function numberOf1Between1AndNOne(n) {
   let count = 0
@@ -20,8 +18,6 @@ function numberOf1Between1AndNOne(n) {
 
 /**
  * 数学方法
- * @param n
- * @returns {number}
  */
 function numberOf1Between1AndNTwo(n) {
   let count = 0
@@ -61,6 +57,5 @@ function numberOf1Between1AndNTwo(n) {
   }
   return count
 }
-
-console.log(numberOf1Between1AndNOne(13))
-console.log(numberOf1Between1AndNTwo(13))
+numberOf1Between1AndNOne(13)
+numberOf1Between1AndNTwo(13)

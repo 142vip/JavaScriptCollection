@@ -1,8 +1,5 @@
 /**
  * 非递归实现快速排序
- * @param data
- * @param low
- * @param high
  */
 function quickSort(data, low, high) {
   console.log(data, low, high)
@@ -37,9 +34,6 @@ function quickSort(data, low, high) {
 
 /**
  * 严版获取快排pivot
- * @param data
- * @param low
- * @param high
  */
 function partition(data, low, high) {
   const pivot = data[low]

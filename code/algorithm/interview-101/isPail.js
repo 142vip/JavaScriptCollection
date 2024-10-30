@@ -9,10 +9,6 @@
  * @param head ListNode类 the head
  * @return bool布尔型
  */
-function isPail(head) {
+export function isPail(head) {
   console.log(head)
-}
-
-module.exports = {
-  isPail,
 }

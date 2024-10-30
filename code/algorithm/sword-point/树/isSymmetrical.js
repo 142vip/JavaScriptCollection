@@ -12,7 +12,7 @@
     this.left = null;
     this.right = null;
 } */
-function isSymmetrical(pRoot) {
+export function isSymmetrical(pRoot) {
   if (pRoot === null) {
     // 子树为空，判断子树为对称
     return true
@@ -22,8 +22,10 @@ function isSymmetrical(pRoot) {
   return isSameTree(pRoot.left, pRoot.right)
 }
 
-// 判断左右子树是是否对称
-function isSameTree(leftTree, rightTree) {
+/**
+ * 判断左右子树是是否对称
+ */
+export function isSameTree(leftTree, rightTree) {
   if (leftTree === null && rightTree === null) {
     return true
   }

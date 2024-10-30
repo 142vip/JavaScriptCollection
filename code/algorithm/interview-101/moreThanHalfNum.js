@@ -1,9 +1,3 @@
-/**
- *
- * @param numbers
- * @returns {number}
- * @constructor
- */
 function MoreThanHalfNumSolution(numbers) {
   const map = new Map()
   numbers.forEach((item) => {
@@ -14,8 +8,11 @@ function MoreThanHalfNumSolution(numbers) {
       map.set(item, 1)
     }
   })
+  // 去重
   const arr = [...new Set(numbers)]
+
   let result = 0
+
   arr.forEach((item) => {
     if (2 * map.get(item) > numbers.length) {
       result = item

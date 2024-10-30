@@ -2,8 +2,10 @@
  * 翻转单词顺序列
  */
 
-// 偷懒做法
-function ReverseSentence(str) {
+/**
+ * 偷懒做法
+ */
+export function ReverseSentence(str) {
   return str.split(' ').reverse().join(' ')
 }
 

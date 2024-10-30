@@ -3,7 +3,7 @@
  * @param k int整型
  * @return ListNode类
  */
-function reverseGroup(head, k) {
+export function reverseGroup(head, k) {
   console.log(head, k)
 }
 

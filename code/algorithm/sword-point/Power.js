@@ -1,10 +1,8 @@
 /**
  * Math.power(base,exponent)
  * 保证base和exponent不同时为0。不得使用库函数，同时不需要考虑大数问题，也不用考虑小数点后面0的位数。
- * @param {double} base
- * @param {int} exponent
  */
-function Power(base, exponent) {
+export function Power(base, exponent) {
   let result = 1
 
   if (exponent > 0) {
@@ -30,4 +28,4 @@ function Power(base, exponent) {
   }
 }
 
-console.log(Power(2.10000, 3))
+Power(2.10000, 3)

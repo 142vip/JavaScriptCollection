@@ -9,10 +9,6 @@
 
 /**
  * 先排序，后截取（偷懒做法）
- *
- * @param input
- * @param k
- * @returns {*}
  */
 function getLeastNumbersOne(input, k) {
   // 直接基于快排，最快速的拿到排序结果也行
@@ -21,9 +17,6 @@ function getLeastNumbersOne(input, k) {
 
 /**
  * 基于冒泡排序，跑K趟即可
- * @param input
- * @param k
- * @returns {*[]|*}
  */
 function getLeastNumbersTwo(input, k) {
   const len = input.length
@@ -50,8 +43,6 @@ function getLeastNumbersTwo(input, k) {
 
 /**
  * 基于选择排序
- * @param input
- * @param k
  */
 function getLeastNumbersThree(input, k) {
   const len = input.length
@@ -71,13 +62,13 @@ function getLeastNumbersThree(input, k) {
 
 /**
  * 基于堆排序
- * @param input
- * @param k
  */
-function getLeastNumbersFour(input, k) {
+export function getLeastNumbersFour(input, k) {
   // todo 构建树 维护小根堆
 }
 
-console.log(getLeastNumbersOne([4, 5, 1, 6, 2, 7, 3, 8], 4))
-console.log(getLeastNumbersTwo([4, 5, 1, 6, 2, 7, 3, 8], 4))
-console.log(getLeastNumbersThree([4, 5, 1, 6, 2, 7, 3, 8], 4))
+const testArr = [4, 5, 1, 6, 2, 7, 3, 8]
+
+console.log(getLeastNumbersOne(testArr, 4))
+console.log(getLeastNumbersTwo(testArr, 4))
+console.log(getLeastNumbersThree(testArr, 4))

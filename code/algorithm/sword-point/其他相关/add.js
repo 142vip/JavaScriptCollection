@@ -1,8 +1,6 @@
 /**
  * 【简单】不用加减乘除做加法
  * - 利用自增
- * @param num1
- * @param num2
  */
 function addOne(num1, num2) {
   // 整数递增
@@ -26,8 +24,6 @@ function addOne(num1, num2) {
 /**
  * 【简单】不用加减乘除做加法
  * - 利用位运算【递归】
- * @param num1
- * @param num2
  */
 function addTwo(num1, num2) {
   return num2 ? addTwo(num1 ^ num2, (num1 & num2) << 1) : num1
@@ -36,9 +32,6 @@ function addTwo(num1, num2) {
 /**
  * 【简单】不用加减乘除做加法
  * - 利用位运算【循环】
- * @param num1
- * @param num2
- * @returns {number}
  */
 function addThree(num1, num2) {
   let result = 0

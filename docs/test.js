@@ -3,7 +3,6 @@ const path = require('node:path')
 
 /**
  * 递归遍历目录并重命名所有遇到的Readme.md文件为README.md
- * @param {string} dirPath 目录路径
  */
 function renameReadmeFiles(dirPath) {
   fs.readdir(dirPath, (err, files) => {

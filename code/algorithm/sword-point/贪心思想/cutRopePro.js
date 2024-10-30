@@ -1,2 +1,3 @@
-function cutRopePro(number) {
+export function cutRopePro(number) {
+  console.log(number)
 }

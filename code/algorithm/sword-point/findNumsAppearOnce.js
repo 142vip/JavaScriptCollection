@@ -1,15 +1,43 @@
 /**
- * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
- * @param array int整型一维数组
- * @return int整型一维数组
+ * 快排
  */
-function FindNumsAppearOnce(array) {
+function quickSort(arr, left, right) {
+  if (left < right) {
+    const pivot = partition(arr, left, right)
+    // 左侧
+    quickSort(arr, left, pivot - 1)
+
+    // 右侧
+    quickSort(arr, pivot + 1, right)
+  }
+
+  return arr
+}
+
+/**
+ * 区间切割
+ */
+function partition(arr, left, right) {
+  const pivot = arr[left]
+  while (left < right) {
+    while (left < right && pivot <= arr[right]) --right
+    arr[left] = arr[right]
+
+    while (left < right && pivot >= arr[left]) ++left
+    arr[right] = arr[left]
+  }
+
+  arr[left] = pivot
+
+  return left
+}
+
+export function FindNumsAppearOnce(array) {
   // 数组中元素要么出现一次，要么出现两次，可以先对元素进行排序 Math.sort((a,b)=>a-b) 从小到大  有点偷懒的样子
 
   array = quickSort(array, 0, array.length - 1)
 
   // 此时的 数组已经进过排序
-
   const result = []
   // 出现一次的元素，在中间
   for (let index = 1; index < array.length - 1; index++) {
@@ -31,34 +59,6 @@ function FindNumsAppearOnce(array) {
 
   // 过滤掉只出现一次的元素， 进行排序从小到大；
   return result.sort((a, b) => a - b)
-}
-
-function quickSort(arr, left, right) {
-  if (left < right) {
-    const pivot = partition(arr, left, right)
-    // 左侧
-    quickSort(arr, left, pivot - 1)
-
-    // 右侧
-    quickSort(arr, pivot + 1, right)
-  }
-
-  return arr
-}
-
-function partition(arr, left, right) {
-  const pivot = arr[left]
-  while (left < right) {
-    while (left < right && pivot <= arr[right]) --right
-    arr[left] = arr[right]
-
-    while (left < right && pivot >= arr[left]) ++left
-    arr[right] = arr[left]
-  }
-
-  arr[left] = pivot
-
-  return left
 }
 
 console.log(FindNumsAppearOnce([1, 4, 1, 6, 7]))

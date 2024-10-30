@@ -1,9 +1,17 @@
-function TreeNode(x) {
+export function TreeNode(x) {
   this.val = x
   this.left = null
   this.right = null
 }
-function Serialize(pRoot) {
+export function Serialize(pRoot) {
+  console.log(pRoot)
 }
-function Deserialize(s) {
+
+/**
+ *
+ * @param s
+ * @constructor
+ */
+export function Deserialize(s) {
+  console.log(s)
 }

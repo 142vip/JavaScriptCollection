@@ -16,6 +16,6 @@ permalink: /solo-algorithm/interview-101/reverseBetween.html
 
 ## 代码实现
 
-@[code js](@algorithm/interview-101/reverseBetween.ts)
+@[code js](@algorithm/interview-101/reverseBetween.js)
 
 ## 一些建议

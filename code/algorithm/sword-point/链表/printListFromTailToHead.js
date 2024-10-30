@@ -9,8 +9,6 @@
 
 /**
  * 单链表数据结构
- * @param x
- * @constructor
  */
 function ListNode(x) {
   this.val = x
@@ -20,10 +18,8 @@ function ListNode(x) {
 /**
  * 从头出链表，按序放入数组，最后翻转数组
  * 偷懒写法
- * @param head
- * @returns {*[]}
  */
-function printListFromTailToHeadOne(head) {
+export function printListFromTailToHeadOne(head) {
   const result = []
   while (head !== null) {
     result.push(head.val)
@@ -36,10 +32,8 @@ function printListFromTailToHeadOne(head) {
 
 /**
  * 相比链表的头插，对数组array进行头插unshift()即可
- * @param head
- * @returns {*[]}
  */
-function printListFromTailToHeadTwo(head) {
+export function printListFromTailToHeadTwo(head) {
   const result = []
   while (head !== null) {
     // 头插
@@ -52,10 +46,8 @@ function printListFromTailToHeadTwo(head) {
 
 /**
  * 先翻转链表【采用头插法】，再按序输出到数组中
- * @param head
- * @returns {*[]}
  */
-function printListFromTailToHeadThree(head) {
+export function printListFromTailToHeadThree(head) {
   let reverseHead = new ListNode(-1)
   // 翻转链表
   while (head !== null) {

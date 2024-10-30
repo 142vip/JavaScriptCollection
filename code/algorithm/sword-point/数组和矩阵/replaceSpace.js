@@ -1,7 +1,5 @@
 /**
  * 先转化为数组，再进行拼接
- * @param s
- * @returns {*}
  */
 function replaceSpaceOne(s) {
   return s.split(' ').join('%20')
@@ -9,8 +7,6 @@ function replaceSpaceOne(s) {
 
 /**
  * 利用循环拼接，然后slice剪切多余部分
- * @param s
- * @returns {string}
  */
 function replaceSpaceTwo(s) {
   const arr = s.split(' ')

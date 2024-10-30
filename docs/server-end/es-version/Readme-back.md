@@ -29,7 +29,6 @@ if (true) {
 ```js
 const arr = []
 
-// eslint-disable-next-line
 for (var i = 0; i < 2; i++) {
   arr[i] = function () {
     console.log(i)

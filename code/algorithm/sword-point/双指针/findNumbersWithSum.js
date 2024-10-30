@@ -4,12 +4,10 @@
 
 /**
  * 利用双指针
- * @param array
- * @param sum
- * @returns {*[]}
  */
 function findNumbersWithSumOne(array, sum) {
-  let left = 0; let right = array.length - 1
+  let left = 0
+  let right = array.length - 1
   while (left < right) {
     if (array[left] + array[right] === sum) {
       // 第一个就返回
@@ -30,9 +28,6 @@ function findNumbersWithSumOne(array, sum) {
 /**
  * 注意数组array是递增的
  * 利用二分查找
- * @param array
- * @param sum
- * @returns {*[]}
  */
 function findNumbersWithSumTwo(array, sum) {
   let left = 0
@@ -65,8 +60,6 @@ function findNumbersWithSumTwo(array, sum) {
 
 /**
  * 利用map来存放数据，便于查找
- * @param array
- * @param sum
  */
 function findNumbersWithSumThree(array, sum) {
   const resultMap = new Map()
@@ -83,8 +76,6 @@ function findNumbersWithSumThree(array, sum) {
 
 /**
  * 暴力方案
- * @param array
- * @param sum
  */
 function findNumbersWithSumFour(array, sum) {
   const len = array.length
@@ -99,7 +90,9 @@ function findNumbersWithSumFour(array, sum) {
   return []
 }
 
-console.log(findNumbersWithSumOne([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 21))
-console.log(findNumbersWithSumTwo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 21))
-console.log(findNumbersWithSumThree([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 21))
-console.log(findNumbersWithSumFour([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 21))
+const testArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+console.log(findNumbersWithSumOne(testArr, 21))
+console.log(findNumbersWithSumTwo(testArr, 21))
+console.log(findNumbersWithSumThree(testArr, 21))
+console.log(findNumbersWithSumFour(testArr, 21))

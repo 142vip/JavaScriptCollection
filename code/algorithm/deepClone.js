@@ -1,15 +1,21 @@
 /**
- * 基于Json序列化的深拷贝【不能处理函数】
- * @param target
+ * 判断数据类型
  */
-function DeepCloneByJSON(target) {
+function checkType(target) {
+  // typeof -instanceof -toString.call()  -Array.isArray()
+  return Object.prototype.toString.call(target).slice(8, -1)
+}
+/**
+ * 基于Json序列化的深拷贝【不能处理函数】
+ */
+export function DeepCloneByJSON(target) {
   return JSON.parse(JSON.stringify(target))
 }
 
 /**
  * 基于递归思想的深拷贝
  */
-function DeepClone(target) {
+export function DeepClone(target) {
   let result
   const targetType = checkType(target)
   if (targetType === 'object') {
@@ -29,16 +35,3 @@ function DeepClone(target) {
   }
   return result
 }
-
-/**
- * 判断数据类型
- * @param target
- */
-function checkType(target) {
-  // typeof -instanceof -toString.call()  -Array.isArray()
-  return Object.prototype.toString.call(target).slice(8, -1)
-}
-
-// 深拷贝
-console.log(DeepCloneByJSON)
-console.log(DeepClone)

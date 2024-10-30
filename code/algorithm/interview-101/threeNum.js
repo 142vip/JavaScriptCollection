@@ -1,6 +1,5 @@
 /**
  * 暴力枚举，无法通过
- * @param num
  */
 function threeSum(num) {
   // 从小排序
@@ -18,7 +17,6 @@ function threeSum(num) {
       }
     }
   }
-
   return result
 }
 

@@ -9,16 +9,16 @@
 
 // Init module if you need
 let result
-function Init() {
+export function Init() {
   result = ''
 }
 // Insert one char from stringstream
-function Insert(ch) {
+export function Insert(ch) {
   result += ch
   return result
 }
 // return the first appearence once char in current stringstream
-function FirstAppearingOnce() {
+export function FirstAppearingOnce() {
   for (let index = 0; index < result.length; index++) {
     //
     const str = result[index]
@@ -28,7 +28,6 @@ function FirstAppearingOnce() {
       return str
     }
   }
-
   // 没有返回
   return '#'
 }

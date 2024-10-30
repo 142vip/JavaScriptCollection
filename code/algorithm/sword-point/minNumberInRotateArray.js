@@ -1,9 +1,7 @@
 /**
  * 数组中最小的
- * @param rotateArray
- * @returns {number}
  */
-function minNumberInRotateArray(rotateArray) {
+export function minNumberInRotateArray(rotateArray) {
   const len = rotateArray.length
   if (rotateArray.length < 0) {
     return 0
@@ -18,10 +16,8 @@ function minNumberInRotateArray(rotateArray) {
 
 /**
  * 排序数组
- * @param arr
- * @returns {boolean}
  */
-function isSortArr(arr) {
+export function isSortArr(arr) {
   for (let index = 0; index < arr.length - 1; index++) {
     if (arr[index] > arr[index + 1]) {
       return true
@@ -30,4 +26,4 @@ function isSortArr(arr) {
   return false
 }
 
-console.log(minNumberInRotateArray([3, 4, 5, 1, 2]))
+minNumberInRotateArray([3, 4, 5, 1, 2])
