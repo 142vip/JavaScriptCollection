@@ -3,10 +3,6 @@
  * @param lists ListNode类一维数组
  * @return ListNode类
  */
-function mergeKLists(lists) {
+export function mergeKLists(lists) {
   console.log(lists)
-}
-
-module.exports = {
-  mergeKLists,
 }

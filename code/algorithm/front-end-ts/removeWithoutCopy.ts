@@ -3,10 +3,12 @@
  * - 直接在给定的 arr 数组上进行操作，并将结果返回
  */
 function removeWithoutCopy(arr: number[], item: number) {
+  // 第一种方法： filter过滤
   // const result= arr.filter(value=>value!==item)
-  // // 输出
+  // 输出
   // return result;
-  // 每次都和arr中的首个元素去比较
+
+  // 第二种方法：循环遍历，每次都和arr中的首个元素去比较
   const len = arr.length
   for (let index = 0; index < len; index++) {
     if (arr[0] !== item) {
@@ -19,5 +21,4 @@ function removeWithoutCopy(arr: number[], item: number) {
   return arr
 }
 
-const test = [1, 2, 2, 3, 4, 2, 2]
-console.log(removeWithoutCopy(test, 2))
+removeWithoutCopy([1, 2, 2, 3, 4, 2, 2], 2)

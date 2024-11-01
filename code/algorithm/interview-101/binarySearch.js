@@ -2,8 +2,6 @@
 
 /**
  *
- * @param nums
- * @param target
  */
 const search = function (nums, target) {
   // 投机
@@ -15,8 +13,6 @@ const search = function (nums, target) {
 
 /**
  * 二分查找
- * @param nums
- * @param target
  */
 function binarySearch(nums, target) {
   let left = 0
@@ -42,8 +38,6 @@ function binarySearch(nums, target) {
 
 /**
  * 左侧部分【第一个相同元素】
- * @param nums
- * @param target
  */
 function leftBound(nums, target) {
   let left = 0
@@ -72,8 +66,6 @@ function leftBound(nums, target) {
 
 /**
  * 右侧部分【最后一个相同元素】，[left,right) 情况
- * @param nums
- * @param target
  */
 function rightBound(nums, target) {
   let left = 0
@@ -103,6 +95,6 @@ function rightBound(nums, target) {
 
 const nums = [5, 7, 7, 8, 8, 8, 10]
 const target = 8
-console.log(search(nums, target))
-console.log(leftBound(nums, target))
-console.log(rightBound(nums, target))
+search(nums, target)
+leftBound(nums, target)
+rightBound(nums, target)

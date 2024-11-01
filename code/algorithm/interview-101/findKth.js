@@ -31,9 +31,6 @@ function quickSort(arr, low, high) {
 
 /**
  * 获取节点
- * @param arr
- * @param low
- * @param high
  */
 function getPivot(arr, low, high) {
   const pivot = arr[low]

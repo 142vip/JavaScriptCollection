@@ -1,3 +1,6 @@
+/**
+ * 递归实现全排列
+ */
 export function Permutation(str) {
   const result = []
   const i = 0

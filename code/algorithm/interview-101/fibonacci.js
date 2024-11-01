@@ -1,8 +1,6 @@
 /**
  * 斐波那契数列，递归调用
  * 难度：入门
- * @param n
- * @returns {*}
  */
 function fibonacciOne(n) {
   return n < 2 ? n : fibonacciOne(n - 1) + fibonacciOne(n - 2)

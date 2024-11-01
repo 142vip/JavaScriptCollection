@@ -7,13 +7,15 @@
  * @LastEditTime: 2021-05-02 17:30:18
  */
 
-function ListNode(x) {
+export function ListNode(x) {
   this.val = x
   this.next = null
 }
 
-// 注意 两个链表都是单调递增
-function Merge(pHead1, pHead2) {
+/**
+ * 注意 两个链表都是单调递增
+ */
+export function Merge(pHead1, pHead2) {
   const pre = new ListNode(-1)
   let result = pre
   while (pHead1 !== null && pHead2 !== null) {
@@ -43,8 +45,10 @@ function Merge(pHead1, pHead2) {
   return pre.next
 }
 
-// 思考递归的做法 没有上面迭代好理解
-function Merge01(pHead1, pHead2) {
+/**
+ * 思考递归的做法 没有上面迭代好理解
+ */
+export function Merge01(pHead1, pHead2) {
   if (pHead1 === null) {
     return pHead2
   }

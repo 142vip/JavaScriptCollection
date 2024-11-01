@@ -1,4 +1,4 @@
-function Power(base, exponent) {
+export function Power(base, exponent) {
   let result = 1
   if (exponent === 0) {
     return result
@@ -23,7 +23,7 @@ function Power(base, exponent) {
   return 1 / result
 }
 
-function PowerOne(base: number, exponent: number): number {
+export function PowerOne(base: number, exponent: number): number {
   let result = 1
   if (exponent === 0) {
     return result

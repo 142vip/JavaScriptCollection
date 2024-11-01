@@ -1,6 +1,5 @@
 /**
  * 检测是否为USD字符
- * @param str
  */
 function isUSD(str: string) {
   if (!str.startsWith('$')) {
@@ -33,4 +32,4 @@ function isUSD(str: string) {
   return true
 }
 
-console.log(isUSD('$20,933,209.93'))
+isUSD('$20,933,209.93')

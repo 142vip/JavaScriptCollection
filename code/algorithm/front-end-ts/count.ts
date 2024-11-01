@@ -1,6 +1,5 @@
 /**
  * 计数
- * @param str
  */
 function count(str: string) {
   // 转换为数组后去重
@@ -22,3 +21,5 @@ function count(str: string) {
   }
   return result
 }
+
+count('12321')

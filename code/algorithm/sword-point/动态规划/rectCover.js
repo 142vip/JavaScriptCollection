@@ -1,9 +1,7 @@
 /**
  * 【中等】矩形覆盖
- * @param number
- * @returns {number|*}
  */
-function rectCover(number) {
+export function rectCover(number) {
   // 应该也是个递归  斐波拉契变形
   // n=1 ---> 1
   // n=2 ---> 2

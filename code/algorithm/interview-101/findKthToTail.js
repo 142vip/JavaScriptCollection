@@ -1,7 +1,6 @@
 /**
  * 链表结点
  */
-// eslint-disable-next-line no-unused-vars,unused-imports/no-unused-vars
 function ListNode(x) {
   this.val = x
   this.next = null

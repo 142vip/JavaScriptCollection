@@ -181,30 +181,29 @@ function result(...args) {
 ## Array扩展方法
 
 ```js
-
 // ## 扩展运算符合并数组 ##
-let arr1 = [1, 2, 3];
-let arr2 = [4, 5, 6];
+const arr1 = [1, 2, 3]
+const arr2 = [4, 5, 6]
 // 合并
-let arr3 = [...arr1, ...arr2]
-let arr4 = arr1.push(...arr2)
+const arr3 = [...arr1, ...arr2]
+const arr4 = arr1.push(...arr2)
 
 // ## 构造函数方法：Array.from() 将类数组或可遍历对象转换为真正的数组 ##
 
 // 伪数组
-let arrayLike = {
-  '0': 1,
-  '1': 2,
-  '2': 3,
+const arrayLike = {
+  0: 1,
+  1: 2,
+  2: 3,
   length: 3
 }
 
 // 伪数组转换为数组
-let arr2 = Array.from(arrayLike) // ['a',''b,'c']
+const arr5 = Array.from(arrayLike) // ['a',''b,'c']
 console.log(arr2)
 
 // 函数统一处理每一项
-let arr3 = Array.from(arrayLike, item => {
+const arr6 = Array.from(arrayLike, (item) => {
   return item + 100
 }) // 101,102,103
 ```

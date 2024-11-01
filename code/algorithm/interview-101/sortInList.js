@@ -8,10 +8,6 @@
  * @param head ListNode类 the head node
  * @return ListNode类
  */
-function sortInList(head) {
+export function sortInList(head) {
   console.log(head)
-}
-
-module.exports = {
-  sortInList,
 }

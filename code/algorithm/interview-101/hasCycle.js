@@ -3,10 +3,6 @@
  * @param head ListNode类
  * @return bool布尔型
  */
-function hasCycle(head) {
+export function hasCycle(head) {
   console.log(head)
-}
-
-module.exports = {
-  hasCycle,
 }

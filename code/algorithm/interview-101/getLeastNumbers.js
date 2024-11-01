@@ -4,10 +4,9 @@
  * - 数组元素是4,5,1,6,2,7,3,8这8个数字，则最小的4个数字是1,2,3,4。
  * - 如果K>数组的长度，那么返回一个空的数组
  */
+
 /**
  * 基于冒泡排序
- * @param input
- * @param k
  */
 function GetLeastNumbersSolution(input, k) {
   const len = input.length
@@ -32,8 +31,6 @@ function GetLeastNumbersSolution(input, k) {
 
 /**
  * 基于简单选择排序
- * @param input
- * @param k
  */
 function GetLeastNumbersSolution02(input, k) {
   const len = input.length
@@ -58,8 +55,6 @@ function GetLeastNumbersSolution02(input, k) {
 
 /**
  * 基于sort函数
- * @param input
- * @param k
  */
 function GetLeastNumbersSolution03(input, k) {
   // if (k > input.length) return []

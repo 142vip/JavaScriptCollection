@@ -1,7 +1,5 @@
 /**
  * 防抖
- * @param func
- * @param time
  */
 function debounce(func, time) {
   let timeout

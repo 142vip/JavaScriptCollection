@@ -14,18 +14,12 @@ function ListNode(x) {
 
 // 注意是排序的结点
 // 这种先遍历，再借用临时变量 也可以考虑用递归
-function deleteDuplication(pHead) {
+export function deleteDuplication(pHead) {
   // 定义map
   const map = new Map()
   while (pHead) {
-    if (map.has(pHead.val)) {
-      // 存在
-      map.set(pHead.val, map.get(pHead.val) + 1)
-    }
-    else {
-      // 不存在
-      map.set(pHead.val, 1)
-    }
+    const value = map.has(pHead.val) ? map.get(pHead.val) + 1 : 1
+    map.set(pHead.val, value)
 
     // 下一个元素
     pHead = pHead.next
@@ -37,7 +31,6 @@ function deleteDuplication(pHead) {
     const [key, count] = m
     // 尾插法
     if (count === 1) {
-      //             console.log(key)
       result.next = new ListNode(key)
 
       // 指针后移
@@ -48,8 +41,10 @@ function deleteDuplication(pHead) {
   return pre.next
 }
 
-// 基于递归
-function deleteDuplication01(head) {
+/**
+ * 基于递归
+ */
+export function deleteDuplication01(head) {
   if (head === null || head.next === null) {
     return head
   }

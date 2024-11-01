@@ -7,11 +7,10 @@
 /**
  *
  * @param head ListNode类
- * @return ListNode类
  */
 function deleteDuplicatesOne(head) {
   console.log(head)
 }
 
 // 测试用例
-console.log(deleteDuplicatesOne(1))
+deleteDuplicatesOne(1)

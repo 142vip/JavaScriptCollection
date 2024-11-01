@@ -12,7 +12,7 @@
     this.left = null;
     this.right = null;
 } */
-function HasSubTree(pRoot1, pRoot2) {
+export function HasSubTree(pRoot1, pRoot2) {
   // 空树的情况
   if (pRoot1 === null || pRoot2 === null) {
     return false
@@ -27,8 +27,10 @@ function HasSubTree(pRoot1, pRoot2) {
   return isRoot || inLeft || inRight
 }
 
-// 判断root2是否为root1的子集【递归实现】
-function isSubTreeWithRoot(root1, root2) {
+/**
+ * 判断root2是否为root1的子集【递归实现】
+ */
+export function isSubTreeWithRoot(root1, root2) {
   // root2 自己为叶子结点,此时递归来看,就是子集
   if (root2 === null) {
     return true

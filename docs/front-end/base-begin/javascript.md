@@ -28,7 +28,7 @@ headerDepth: 2
 - 抽象对象共用的属性和行为 封装成一个类（模板）
 - 对类进行实例化，获取类的对象
 
-在JavaScript中，对象是一组无序的相关属性和方法的结合，所有的事务都是对象，例如：字符串、数组、数值、函数等。
+在`JavaScript`中，对象是一组无序的相关属性和方法的结合，所有的事务都是对象，例如：字符串、数组、数值、函数等。
 
 对象由属性和方法组成：
 
@@ -228,7 +228,7 @@ creatObj.prototype = {
 - 构造函数的原型对象里面的`__proto__`原型指向父类 `Object.prototype`
 - `Object.prototype`原型对象里面的`__proto__`原型，指向为null
 
-**这里的Object就好像提供的最高级父类，后面的对象类似继承，通过原型链链接**
+**这里的`Object`就好像提供的最高级父类，后面的对象类似继承，通过原型链链接**
 
 #### 成员查找机制（规则）
 
@@ -296,7 +296,7 @@ console.log(son)
 
 类本质上其实还是一个函数，可以简单的认为，**类就是构造函数的另一种写法**
 
-**ES6中的类其实就是语法糖，可以理解为ES5中的构造函数实现的简单写法**
+**`ES6`中的类其实就是语法糖，可以理解为`ES5`中的构造函数实现的简单写法**
 
 ## 函数进阶
 
@@ -357,7 +357,6 @@ obj.test()
 function Fn() {
   // ...
 }
-
 const fn = new Fn()
 
 console.log(fn)
@@ -416,20 +415,20 @@ fn.call(obj, 1, 2)
 
 `apply()`方法调用一个函数，简单理解为调用函数的方式，但是它可以改变函数的`this`指向。
 
-函数格式：fun.apply(thisArg,[argsArray])
+函数格式：`fun.apply(thisArg,[argsArray])`
 
 - `thisArg`: 在fun函数运行时指定的this值
 - `argsArray`: 传递的值，必须包含在数组里面
 - 返回值就是函数的返回值，本质是调用函数
 
-**apply()参数传数组**
+**`apply()`参数传数组**
 
 ```js
 // 求数组中的最大值
 
-let arr = [1, 4, 23, 78, 25];
-let max = Math.max.apply(null, arr)
-let max = Math.max.apply(Math, arr)
+const arr = [1, 4, 23, 78, 25]
+const max1 = Math.max.apply(null, arr)
+const max2 = Math.max.apply(Math, arr)
 ```
 
 #### bind()方法
@@ -512,7 +511,6 @@ function fn(callback) {
 fn(function () {
   alert('hi')
 })
-
 function fn() {
   return function () {
   }
@@ -596,16 +594,16 @@ fun1()
 
 > 类似于数组，但是成员的值都是唯一的，**没有重复的值**；
 
-**Set本身是一个构造函数，用来生成Set数据结构**
+**Set本身是一个构造函数，用来生成`Set`数据结构**
 
 ```js
 // 定义set集合
-const set = new Set();
+const setData1 = new Set()
 // 可以接收数组作为参数，用来初始化
-const set = new Set([1, 2, 3, 4, 5])
+const setData2 = new Set([1, 2, 3, 4, 5])
 // 例如数组去重
 let arr = [1, 2, 2, 3, 3, 4, 5, 6]
-let temp = new Set(arr);
+const temp = new Set(arr)
 arr = [...temp]
 ```
 
@@ -780,10 +778,10 @@ console.log(arrCopy3)
 console.log(arrCopy4)
 ```
 
-- arrCopy只设置了一个参数，也就是起始下标为1，所以返回的数组为下标1（包括下标1）开始到数组最后。
-- arrCopy2设置了两个参数，返回起始下标（包括1）开始到终止下标（不包括4）的子数组。
-- arrCopy3设置了两个参数，终止下标为负数，当出现负数时，将负数加上数组长度的值（6）来替换该位置的数，因此就是从1开始到4（不包括）的子数组。
-- arrCopy4中两个参数都是负数，所以都加上数组长度6转换成正数，因此相当于slice(2,5)。
+- `arrCopy`只设置了一个参数，也就是起始下标为1，所以返回的数组为下标1（包括下标1）开始到数组最后。
+- `arrCopy2`设置了两个参数，返回起始下标（包括1）开始到终止下标（不包括4）的子数组。
+- `arrCopy3`设置了两个参数，终止下标为负数，当出现负数时，将负数加上数组长度的值（6）来替换该位置的数，因此就是从1开始到4（不包括）的子数组。
+- `arrCopy4`中两个参数都是负数，所以都加上数组长度6转换成正数，因此相当于slice(2,5)。
 
 ### splice()
 
@@ -836,7 +834,7 @@ console.log(arr.lastIndexOf(5, 4))
 
 对数组进行遍历循环，对数组中的每一项运行给定函数。这个方法没有返回值。
 
-参数都是function类型，默认有传参，
+参数都是`function`类型，默认有传参，
 参数分别为：遍历的数组内容；第对应的数组索引，数组本身。
 
 ```js
@@ -848,7 +846,7 @@ arr.forEach((x, index, a) => {
 
 ### map()
 
-“映射”，对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组，例如：
+`映射`，对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组，例如：
 
 ```js
 const arr = [1, 2, 3, 4, 5]
@@ -861,7 +859,7 @@ console.log(arr2)
 
 ### filter()
 
-“过滤”功能，数组中的每一项运行给定函数，返回满足过滤条件组成的数组，例如：
+`过滤`功能，数组中的每一项运行给定函数，返回满足过滤条件组成的数组，例如：
 
 ```js
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

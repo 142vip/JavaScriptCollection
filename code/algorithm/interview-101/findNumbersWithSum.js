@@ -1,7 +1,5 @@
 /**
  * 注意array是递增的
- * @param array
- * @param sum
  */
 function FindNumbersWithSum(array, sum) {
   let left = 0
@@ -41,4 +39,4 @@ function FindNumbersWithSum(array, sum) {
   return sumResult
 }
 
-console.log(FindNumbersWithSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 21))
+FindNumbersWithSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 21)

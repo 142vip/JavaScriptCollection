@@ -19,5 +19,4 @@ function removeWithoutCopy(arr, item) {
   return arr
 }
 
-const test = [1, 2, 2, 3, 4, 2, 2]
-console.log(removeWithoutCopy(test, 2))
+removeWithoutCopy([1, 2, 2, 3, 4, 2, 2], 2)

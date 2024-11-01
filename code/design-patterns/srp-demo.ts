@@ -1,7 +1,7 @@
 /**
  * 单一职责原则Demo
  */
-class User {
+export class User {
   private readonly id: string
   private readonly name: string
   private readonly email: string

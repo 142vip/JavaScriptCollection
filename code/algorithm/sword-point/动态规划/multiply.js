@@ -12,9 +12,12 @@ function multiply(array) {
     //       .reduce((res, item) => res * item, 1) * array.slice(index + 1)
     //       .reduce((res, item) => res * item, 1)
     //   )
-    result.push([...array.slice(0, index), ...array.slice(index + 1)].reduce((res, item) => {
-      return res * item
-    }, 1)) // 给res的初始值为1
+    result.push(
+      [
+        ...array.slice(0, index),
+        ...array.slice(index + 1),
+      ].reduce((res, item) => res * item, 1),
+    ) // 给res的初始值为1
   }
   return result
 }

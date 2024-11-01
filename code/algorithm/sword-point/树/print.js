@@ -7,12 +7,12 @@
  * @LastEditTime: 2021-05-12 21:40:15
  */
 
-/* function TreeNode(x) {
-    this.val = x;
-    this.left = null;
-    this.right = null;
-} */
-function Print(pRoot) {
+export function TreeNode(x) {
+  this.val = x
+  this.left = null
+  this.right = null
+}
+export function Print(pRoot) {
   // 层序遍历的 进阶
 
   // 处理空树的情况

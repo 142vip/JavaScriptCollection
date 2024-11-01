@@ -1,7 +1,6 @@
 /**
  * 【中等】左旋转字符串
  */
-
 function LeftRotateString(str, n) {
   // 临界条件
   if (!str || str.length < n) {
@@ -15,20 +14,21 @@ function LeftRotateString(str, n) {
   return reverseStr(`${reverseStr(firstStr)}${reverseStr(secondStr)}`)
 }
 
-// 偷懒做法
-function LeftRotateString01(str, n) {
+/**
+ * 偷懒做法
+ */
+export function LeftRotateString01(str, n) {
   // 两两翻转后，在统一翻转
   return `${str.slice(0, n).split('').reverse().join('')}${str.slice(n).split('').reverse().join('')}`.split('').reverse().join('')
 }
 
 /**
  * 旋转数组，交换
- * @param {string} str
- * @returns
  */
 function reverseStr(str) {
   const result = str.split('')
-  let left = 0; let right = result.length - 1
+  let left = 0
+  let right = result.length - 1
   while (left <= right) {
     // 临时值 元素交换
     [result[left], result[right]] = [result[right], result[left]]
@@ -37,4 +37,5 @@ function reverseStr(str) {
   }
   return result.join('')
 }
-console.log(LeftRotateString('', 6))
+
+LeftRotateString('', 6)

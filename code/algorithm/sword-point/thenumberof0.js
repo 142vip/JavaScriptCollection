@@ -1,3 +1,6 @@
+/**
+ * 计算数字钟的个数
+ */
 function theNumberOf0(n) {
   let result = 1
   let count = 0
@@ -12,4 +15,5 @@ function theNumberOf0(n) {
 
   return count
 }
-console.log(theNumberOf0(10000000))
+
+theNumberOf0(10000000)

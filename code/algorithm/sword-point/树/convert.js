@@ -1,7 +1,9 @@
-function TreeNode(x) {
+export function TreeNode(x) {
   this.val = x
   this.left = null
   this.right = null
 }
-function Convert(pRootOfTree) {
+
+export function Convert(pRootOfTree) {
+  console.log(pRootOfTree)
 }

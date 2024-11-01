@@ -13,7 +13,7 @@
     this.right = null;
     this.next = null;
 } */
-function GetNext(pNode) {
+function getNext(pNode) {
   // 中序遍历 ---> 左-根(pNode)-右
   // 所以这里pNode的下一个结点，要么是pNode右子树的第一个最左结点（左边的叶子结点）
   // 但是如果pNode的右子树为空，则pNode的下个结点，则为第一个左子树指向pNode的祖先结点

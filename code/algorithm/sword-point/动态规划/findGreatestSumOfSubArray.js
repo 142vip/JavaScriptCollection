@@ -1,9 +1,6 @@
 /**
  * 连续子数组的最大和 时间复杂度O(n)
  * 难度：简单
- * @param array
- * @returns {number|*}
- * @constructor
  */
 
 function FindGreatestSumOfSubArray01(array) {
@@ -26,6 +23,9 @@ function FindGreatestSumOfSubArray01(array) {
   return max
 }
 
+/**
+ * 连续子数组的最大和
+ */
 function FindGreatestSumOfSubArray(array) {
   // 首位指针
   let i = 0

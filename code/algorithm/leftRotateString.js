@@ -13,7 +13,9 @@ function LeftRotateString(str, n) {
   return reverse(arr, 0, arr.length - 1).join('')
 }
 
-// 数组中翻转
+/**
+ * 数组中翻转
+ */
 function reverse(arr, left, right) {
   while (left < right) {
     // 元素交换

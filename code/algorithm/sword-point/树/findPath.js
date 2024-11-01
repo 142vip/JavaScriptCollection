@@ -7,13 +7,13 @@
  * @LastEditTime: 2021-05-12 22:01:45
  */
 
-function TreeNode(x) {
+export function TreeNode(x) {
   this.val = x
   this.left = null
   this.right = null
 }
 
-function FindPath(root, expectNumber) {
+export function findPath(root, expectNumber) {
   const result = []
   function dfs(root, target, tempRes) {
     // 处理空树

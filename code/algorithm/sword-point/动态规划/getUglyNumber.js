@@ -2,13 +2,16 @@
  * 丑数
  * 难度:比较难
  */
-function GetUglyNumberSolution(index) {
+export function GetUglyNumberSolution(index) {
   // 由于丑数只包含因子 2 3 5 且，下一个丑数是通过上一个丑数，去x2 x3 或 x5  取最小得到的，要保证丑数的顺序递增的
 
   // 定义存放丑数的数组，且第一个丑数为1=2^0 * 3^0 * 5^0
   const result = [1]
+
   // 定义丑数对应的因子个数  即 丑数= 2^f2 * 3^f3 * 5^f5
-  let f2 = 0; let f3 = 0; let f5 = 0
+  let f2
+  let f3
+  let f5 = 0
 
   // 基于丑数的上下关系，可以去动态规划来做
 
@@ -26,6 +29,5 @@ function GetUglyNumberSolution(index) {
       f5++
     }
   }
-  console.log(result)
   return result[index - 1]
 }

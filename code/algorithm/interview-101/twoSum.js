@@ -4,8 +4,6 @@
 
 /**
  * 利用左右双指针
- * @param numbers
- * @param target
  */
 function twoSum(numbers, target) {
   const len = numbers.length
@@ -21,8 +19,6 @@ function twoSum(numbers, target) {
 
 /**
  * 利用map对象来存储已经遍历的数据
- * @param numbers
- * @param target
  */
 function twoSumByMap(numbers, target) {
   // 从左到右循环，进入map

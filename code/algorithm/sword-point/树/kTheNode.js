@@ -1,9 +1,7 @@
 /**
  * 链表结点
- * @param x
- * @constructor
  */
-function ListNode(x) {
+export function ListNode(x) {
   this.val = x
   this.left = null
   this.right = null
@@ -31,26 +29,19 @@ const root = {
   },
 }
 
-function TreeNode(x) {
-  this.val = x
-  this.left = null
-  this.right = null
-}
+console.log(root)
 
 /**
  * 注意，是返回结点
- * @param pRoot
- * @param k
  */
-function KTheNode(pRoot, k) {
+export function KTheNode(pRoot, k) {
   return inOrder(pRoot)[k - 1]
 }
 
 /**
  * 中序遍历
- * @param root
  */
-function inOrder(root) {
+export function inOrder(root) {
   if (root === null) {
     return []
   }

@@ -1,9 +1,7 @@
 /**
  * 【中等】扑克牌顺子
- * @param numbers
- * @returns {boolean}
  */
-function IsContinuous(numbers) {
+export function IsContinuous(numbers) {
   numbers = numbers.sort((a, b) => a - b)
 
   // 判断0的个数
@@ -31,8 +29,5 @@ function IsContinuous(numbers) {
     }
   }
 
-  if (count === 0) {
-    return true
-  }
-  return false
+  return count === 0
 }

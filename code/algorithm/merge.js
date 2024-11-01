@@ -1,8 +1,4 @@
-/**
- * @param A int整型一维数组
- * @param B int整型一维数组
- */
-function merge(A, m, B, n) {
+export function merge(A, m, B, n) {
   let pre = 0
   let next = 0
   let result = []
@@ -27,4 +23,5 @@ function merge(A, m, B, n) {
   }
   return result
 }
-console.log(merge([], 0, [1], 1))
+
+merge([], 0, [1], 1)

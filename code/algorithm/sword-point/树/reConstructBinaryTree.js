@@ -9,7 +9,6 @@
 
 /**
  * 二叉树结点定义
- * @param x
  */
 function TreeNode(x) {
   this.val = x
@@ -19,11 +18,8 @@ function TreeNode(x) {
 
 /**
  * 重建二叉树
- * @param pre
- * @param vin
- * @returns {TreeNode|null}
  */
-function reConstructBinaryTree(pre, vin) {
+export function reConstructBinaryTree(pre, vin) {
   if (pre.length === 0) {
     return null
   }

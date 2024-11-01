@@ -14,4 +14,4 @@ function duplicates(arr) {
   return [...new Set(result)]
 }
 
-console.log(duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3]))
+duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3])
