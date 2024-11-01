@@ -322,7 +322,6 @@ const fn = function () {
 
 ```js
 // 利用Function构造函数 【所有函数都是Function的实例】
-// eslint-disable-next-line
 const fn = new Function('a', 'b', 'return a+b')
 console.log(fn)
 ```
@@ -358,7 +357,6 @@ obj.test()
 function Fn() {
   // ...
 }
-// eslint-disable-next-line
 const fn = new Fn()
 
 console.log(fn)
@@ -513,7 +511,6 @@ function fn(callback) {
 fn(function () {
   alert('hi')
 })
-// eslint-disable-next-line
 function fn() {
   return function () {
   }

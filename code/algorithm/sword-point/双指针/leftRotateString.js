@@ -17,7 +17,7 @@ function LeftRotateString(str, n) {
 /**
  * 偷懒做法
  */
-function LeftRotateString01(str, n) {
+export function LeftRotateString01(str, n) {
   // 两两翻转后，在统一翻转
   return `${str.slice(0, n).split('').reverse().join('')}${str.slice(n).split('').reverse().join('')}`.split('').reverse().join('')
 }
@@ -37,4 +37,5 @@ function reverseStr(str) {
   }
   return result.join('')
 }
-console.log(LeftRotateString('', 6))
+
+LeftRotateString('', 6)

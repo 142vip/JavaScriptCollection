@@ -65,10 +65,11 @@ function getLeastNumbersThree(input, k) {
  */
 export function getLeastNumbersFour(input, k) {
   // todo 构建树 维护小根堆
+  console.log(input, k)
 }
 
 const testArr = [4, 5, 1, 6, 2, 7, 3, 8]
 
-console.log(getLeastNumbersOne(testArr, 4))
-console.log(getLeastNumbersTwo(testArr, 4))
-console.log(getLeastNumbersThree(testArr, 4))
+getLeastNumbersOne(testArr, 4)
+getLeastNumbersTwo(testArr, 4)
+getLeastNumbersThree(testArr, 4)

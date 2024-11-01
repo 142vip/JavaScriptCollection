@@ -472,7 +472,6 @@ let options = [{
 }]
 
 // 更新多行
-// eslint-disable-next-line
 let result = yield db.updateRows('user', options);
 console.log(result)
 ```
