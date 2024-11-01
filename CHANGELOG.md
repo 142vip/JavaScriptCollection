@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.22 (2024-11-01)
+
+### 🔥 Performance
+
+- Update `@142vip/vuepress` deps &nbsp;-&nbsp; by **chufan** [<samp>(66188)</samp>](https://github.com/142vip/JavaScriptCollection/commit/6618885)
+
+### 🐛 Bug Fixes
+
+- 修复`simple-git-hooks`钩子函数触发异常 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/181 [<samp>(cf3f0)</samp>](https://github.com/142vip/JavaScriptCollection/commit/cf3f012)
+- 修复`Docker`构建`OOM`异常，使用增加`OOM`限制的`node:20.17.0-alpine`基础镜像 &nbsp;-&nbsp; by **chufan** [<samp>(d78e0)</samp>](https://github.com/142vip/JavaScriptCollection/commit/d78e081)
+
+### 📖 Documentation
+
+- Update README &nbsp;-&nbsp; by **chufan** [<samp>(91c7c)</samp>](https://github.com/142vip/JavaScriptCollection/commit/91c7ce6)
+
+**Release New Version v0.0.2-alpha.22 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.21...v0.0.2-alpha.22)**
+
 ## v0.0.2-alpha.21 (2024-10-16)
 
 ### ✨ Features
