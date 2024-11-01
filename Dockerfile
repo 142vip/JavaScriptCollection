@@ -11,7 +11,7 @@ FROM registry.cn-hangzhou.aliyuncs.com/142vip/node:20.17.0-alpine AS build_base
 # 是否配置代理
 ARG NEED_PROXY=false
 
-## 设置环境变量，支持容器构建时使用layer缓存，参考：https://pnpm.io/zh/docker
+# 设置环境变量，支持容器构建时使用layer缓存，参考：https://pnpm.io/zh/docker
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
@@ -21,10 +21,7 @@ ENV PATH="$PNPM_HOME:$PATH"
 WORKDIR /apps
 COPY . .
 
-## 安装git，博客编译需要使用git信息
-RUN apk add --no-cache git --repository http://mirrors.aliyun.com/alpine/v3.14/main/
-
-## 基于容器自动构建
+# 基于容器自动构建
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store sh ./scripts/ci &&  \
   if [ "$NEED_PROXY" = "false" ];  \
     then \
@@ -33,11 +30,9 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store sh ./scripts/ci &&  \
        pnpm build:proxy; \
   fi;
 
+FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.27.0-alpine
 
-FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.23.0-alpine
-
-
-## 自定义镜像的Label信息
+# 自定义镜像的Label信息
 ARG APP_NAME
 ARG APP_VERSION
 ARG APP_DESCRIPTION
