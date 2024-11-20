@@ -24,6 +24,7 @@ import {
   TypeormSidebar,
   TypescriptSidebar,
 } from './server-end'
+import { architectSidebar } from './architect/architect.sidebar'
 
 /**
  * 导航栏
@@ -41,6 +42,7 @@ export const navbarConfig = navbar([
       { text: '🕸️ 微服务架构', link: '/microservice/' },
     ],
   },
+  { text: '📖 架构设计师', link: '/architect/' },
   { text: '📖 读书整理', link: '/read-books/' },
   {
     text: '👉 了解更多',
@@ -86,6 +88,7 @@ export const sidebarConfig = sidebar({
   '/job-chance': JobChanceSidebar,
   '/microservice': MicroserviceSidebar,
   '/battle-interview': BattleInterviewSidebar,
+  '/architect/': architectSidebar,
 })
 
 /**
