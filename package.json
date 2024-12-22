@@ -2,7 +2,7 @@
   "name": "JavaScriptCollection",
   "type": "module",
   "version": "0.0.2-alpha.22",
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.15.1",
   "description": "一本有趣的JavaScript合集",
   "authorInfo": {
     "name": "微信公众号：储凡",
@@ -12,7 +12,7 @@
   },
   "engines": {
     "node": ">=18.x",
-    "pnpm": "9.6.0"
+    "pnpm": "9.15.1"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm && chmod +x ./scripts/*",
