@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.426.2-jdk17
+FROM jenkins/jenkins:2.479.2-jdk17
 
 ## 设置管理用户
 USER root
