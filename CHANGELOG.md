@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.23 (2025-02-04)
+
+### ✨ Features
+
+- 支持`renovate`自动升级依赖版本 &nbsp;-&nbsp; by **chufan** [<samp>(6363d)</samp>](https://github.com/142vip/JavaScriptCollection/commit/6363d48)
+- Lock sequelize version &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/208 [<samp>(7be22)</samp>](https://github.com/142vip/JavaScriptCollection/commit/7be2229)
+- 增加`clean:hooks`命令 &nbsp;-&nbsp; by **chufan** [<samp>(927b2)</samp>](https://github.com/142vip/JavaScriptCollection/commit/927b22f)
+- Lock deps version &nbsp;-&nbsp; by **chufan** [<samp>(4d27d)</samp>](https://github.com/142vip/JavaScriptCollection/commit/4d27dda)
+
+### 🐛 Bug Fixes
+
+- 修复`clean`命令移除`node_modules`模块 &nbsp;-&nbsp; by **chufan** [<samp>(8ff39)</samp>](https://github.com/142vip/JavaScriptCollection/commit/8ff3965)
+- **deps**:
+  - Update dependency http-errors to v2 &nbsp;-&nbsp; by **renovate[bot]** in https://github.com/142vip/JavaScriptCollection/issues/203 [<samp>(0b889)</samp>](https://github.com/142vip/JavaScriptCollection/commit/0b889a2)
+  - Update dependency express to v4.21.2 &nbsp;-&nbsp; by **renovate[bot]** in https://github.com/142vip/JavaScriptCollection/issues/194 [<samp>(abce3)</samp>](https://github.com/142vip/JavaScriptCollection/commit/abce39c)
+  - Update dependency debug to v4 &nbsp;-&nbsp; by **renovate[bot]** in https://github.com/142vip/JavaScriptCollection/issues/202 [<samp>(6dbb4)</samp>](https://github.com/142vip/JavaScriptCollection/commit/6dbb4c8)
+
+**Release New Version v0.0.2-alpha.23 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.22...v0.0.2-alpha.23)**
+
 ## v0.0.2-alpha.22 (2024-11-01)
 
 ### 🔥 Performance
