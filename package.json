@@ -18,6 +18,7 @@
     "preinstall": "npx only-allow pnpm && chmod +x ./scripts/*",
     "postinstall": "rm -rf .git/hooks && npx simple-git-hooks",
     "clean": "npx fa clean --dist --deps --vite --all --ignore-tips",
+    "clean:hooks": "rm -rf .git/hooks",
     "lint": "npx fa lint",
     "lint:fix": "npx fa lint --fix",
     "dev": "npx vuepress dev docs",
