@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.24 (2025-02-06)
+
+### 🐛 Bug Fixes
+
+- 修复`bundle`脚本异常 &nbsp;-&nbsp; by **chufan** [<samp>(a6091)</samp>](https://github.com/142vip/JavaScriptCollection/commit/a609139)
+- **deps**:
+  - Update dependency koa to v2.15.3 &nbsp;-&nbsp; by **renovate[bot]** in https://github.com/142vip/JavaScriptCollection/issues/212 [<samp>(050f0)</samp>](https://github.com/142vip/JavaScriptCollection/commit/050f04f)
+  - Update dependency sequelize to v6.37.5 &nbsp;-&nbsp; by **renovate[bot]** in https://github.com/142vip/JavaScriptCollection/issues/213 [<samp>(ca914)</samp>](https://github.com/142vip/JavaScriptCollection/commit/ca914b3)
+
+**Release New Version v0.0.2-alpha.24 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.23...v0.0.2-alpha.24)**
+
 ## v0.0.2-alpha.23 (2025-02-04)
 
 ### ✨ Features
