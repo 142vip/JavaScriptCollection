@@ -3,6 +3,6 @@
   "version": "0.0.1",
   "main": "index.js",
   "dependencies": {
-    "koa": "2.15.3"
+    "koa": "2.15.4"
   }
 }
