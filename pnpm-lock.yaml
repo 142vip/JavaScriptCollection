@@ -15,8 +15,8 @@ importers:
         specifier: 0.0.3-alpha.20
         version: 0.0.3-alpha.20
       '@142vip/utils':
-        specifier: 0.0.1-alpha.14
-        version: 0.0.1-alpha.14
+        specifier: 0.0.1-alpha.19
+        version: 0.0.1-alpha.19
       '@142vip/vuepress':
         specifier: 0.0.1-alpha.10
         version: 0.0.1-alpha.10(54xyizqayh47jrcbyci2lyxhsy)
@@ -132,6 +132,9 @@ packages:
 
   '@142vip/utils@0.0.1-alpha.18':
     resolution: {integrity: sha512-Z5ysjUb9pKE2RsN+Lwgo3qPsljhd2Vfxs0VjnF/2VzpQrC9xwyME+E58kYPO4Y+Z3ljFv16E1Sdl+4Kd+bsuzA==}
+
+  '@142vip/utils@0.0.1-alpha.19':
+    resolution: {integrity: sha512-wyFyGwYG55l+ZNiHqsv3suhZZj5ap7AmZ5g1/vniDxSxJkWIhEDmS/vN+lmYsghVCaDFQ1fp9FG7W6mQ2ZKeRA==}
 
   '@142vip/vuepress@0.0.1-alpha.10':
     resolution: {integrity: sha512-wg2OVn2rIgo3DfzuA/+aGvZl3Xe0AO1SlFR0c+pi4GuqCogA35XGkU3ujvcJljut79NwrD4TmC/6QKMwthYWMQ==}
@@ -4687,7 +4690,7 @@ snapshots:
       changelogen: 0.5.5
       convert-gitmoji: 0.1.5
       ofetch: 1.4.1
-      semver: 7.7.0
+      semver: 7.7.1
     transitivePeerDependencies:
       - magicast
 
@@ -4737,7 +4740,7 @@ snapshots:
       fast-glob: 3.3.3
       js-yaml: 4.1.0
       prompts: 2.4.2
-      semver: 7.7.0
+      semver: 7.7.1
     transitivePeerDependencies:
       - magicast
 
@@ -4760,6 +4763,18 @@ snapshots:
       qs: 6.13.1
 
   '@142vip/utils@0.0.1-alpha.18':
+    dependencies:
+      ansi-colors: 4.1.3
+      commander: 12.1.0
+      dayjs: 1.11.13
+      inquirer: 7.3.3
+      klona: 2.0.6
+      lodash: 4.17.21
+      nanoid: 3.3.8
+      qs: 6.13.1
+      semver: 7.7.1
+
+  '@142vip/utils@0.0.1-alpha.19':
     dependencies:
       ansi-colors: 4.1.3
       commander: 12.1.0
@@ -5591,7 +5606,7 @@ snapshots:
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.0
+      semver: 7.7.1
       ts-api-utils: 1.3.0(typescript@5.6.3)
     optionalDependencies:
       typescript: 5.6.3
@@ -6394,7 +6409,7 @@ snapshots:
       pathe: 1.1.2
       pkg-types: 1.3.1
       scule: 1.3.0
-      semver: 7.7.0
+      semver: 7.7.1
       std-env: 3.8.0
       yaml: 2.7.0
     transitivePeerDependencies:
@@ -7003,7 +7018,7 @@ snapshots:
   eslint-compat-utils@0.5.1(eslint@8.55.0):
     dependencies:
       eslint: 8.55.0
-      semver: 7.7.0
+      semver: 7.7.1
 
   eslint-config-flat-gitignore@0.1.8:
     dependencies:
@@ -7054,7 +7069,7 @@ snapshots:
       get-tsconfig: 4.8.1
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.0
+      semver: 7.7.1
       stable-hash: 0.0.4
       tslib: 2.8.1
     transitivePeerDependencies:
@@ -7072,7 +7087,7 @@ snapshots:
       espree: 10.2.0
       esquery: 1.6.0
       parse-imports: 2.2.1
-      semver: 7.7.0
+      semver: 7.7.1
       spdx-expression-parse: 4.0.0
       synckit: 0.9.2
     transitivePeerDependencies:
@@ -7106,7 +7121,7 @@ snapshots:
       globals: 15.11.0
       ignore: 5.3.2
       minimatch: 9.0.5
-      semver: 7.7.0
+      semver: 7.7.1
 
   eslint-plugin-no-only-tests@3.3.0: {}
 
@@ -7161,7 +7176,7 @@ snapshots:
       read-pkg-up: 7.0.1
       regexp-tree: 0.1.27
       regjsparser: 0.10.0
-      semver: 7.7.0
+      semver: 7.7.1
       strip-indent: 3.0.0
 
   eslint-plugin-unused-imports@4.1.4(@typescript-eslint/eslint-plugin@8.11.0(@typescript-eslint/parser@8.11.0(eslint@8.55.0)(typescript@5.6.3))(eslint@8.55.0)(typescript@5.6.3))(eslint@8.55.0):
@@ -7178,7 +7193,7 @@ snapshots:
       natural-compare: 1.4.0
       nth-check: 2.1.1
       postcss-selector-parser: 6.1.2
-      semver: 7.7.0
+      semver: 7.7.1
       vue-eslint-parser: 9.4.3(eslint@8.55.0)
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
@@ -7829,7 +7844,7 @@ snapshots:
       acorn: 8.14.0
       eslint-visitor-keys: 3.4.3
       espree: 9.6.1
-      semver: 7.7.0
+      semver: 7.7.1
 
   jsonfile@6.1.0:
     dependencies:
@@ -9344,7 +9359,7 @@ snapshots:
       espree: 9.6.1
       esquery: 1.6.0
       lodash: 4.17.21
-      semver: 7.7.0
+      semver: 7.7.1
     transitivePeerDependencies:
       - supports-color
 
