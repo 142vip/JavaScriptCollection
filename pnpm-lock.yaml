@@ -15,8 +15,8 @@ importers:
         specifier: 0.0.3-alpha.20
         version: 0.0.3-alpha.20
       '@142vip/utils':
-        specifier: 0.0.1-alpha.19
-        version: 0.0.1-alpha.19
+        specifier: 0.0.1-alpha.20
+        version: 0.0.1-alpha.20
       '@142vip/vuepress':
         specifier: 0.0.1-alpha.10
         version: 0.0.1-alpha.10(54xyizqayh47jrcbyci2lyxhsy)
@@ -133,8 +133,8 @@ packages:
   '@142vip/utils@0.0.1-alpha.18':
     resolution: {integrity: sha512-Z5ysjUb9pKE2RsN+Lwgo3qPsljhd2Vfxs0VjnF/2VzpQrC9xwyME+E58kYPO4Y+Z3ljFv16E1Sdl+4Kd+bsuzA==}
 
-  '@142vip/utils@0.0.1-alpha.19':
-    resolution: {integrity: sha512-wyFyGwYG55l+ZNiHqsv3suhZZj5ap7AmZ5g1/vniDxSxJkWIhEDmS/vN+lmYsghVCaDFQ1fp9FG7W6mQ2ZKeRA==}
+  '@142vip/utils@0.0.1-alpha.20':
+    resolution: {integrity: sha512-cQ4h+6N/jz7pGTVNWAPenIsySjAvBvWSCoJ6kx70c4X7nuxN1b7HGpCat6Laq4dZNGrySu2R2qp1Lbo8nt0dNQ==}
 
   '@142vip/vuepress@0.0.1-alpha.10':
     resolution: {integrity: sha512-wg2OVn2rIgo3DfzuA/+aGvZl3Xe0AO1SlFR0c+pi4GuqCogA35XGkU3ujvcJljut79NwrD4TmC/6QKMwthYWMQ==}
@@ -4774,7 +4774,7 @@ snapshots:
       qs: 6.13.1
       semver: 7.7.1
 
-  '@142vip/utils@0.0.1-alpha.19':
+  '@142vip/utils@0.0.1-alpha.20':
     dependencies:
       ansi-colors: 4.1.3
       commander: 12.1.0
