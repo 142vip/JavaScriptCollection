@@ -7,46 +7,47 @@
  *  - ./scripts/bundle --proxy
  */
 
-import {createRequire} from 'node:module'
-import process from 'node:process'
 import {
   OPEN_SOURCE_ADDRESS,
-  VipGit,
+  OPEN_SOURCE_AUTHOR,
   VipDocker,
+  VipGit,
+  VipNodeJS,
+  VipPackageJSON,
 } from '@142vip/utils'
-
 
 (async () => {
   try {
     // 获取package.json文件
-    const pkg = createRequire(import.meta.url)('../package.json')
+    const { name, version, description } = VipPackageJSON.getPackageJSON()
 
     // 镜像地址
-    const imageName = `${OPEN_SOURCE_ADDRESS.DOCKER_ALIYUNCS_VIP}/docs:${pkg.name}-${pkg.version}`
+    const imageName = `${OPEN_SOURCE_ADDRESS.DOCKER_ALIYUNCS_VIP}/docs:${name}-${version}`
 
     // 最近一次提交信息
-    const {hash: gitHash} = await VipGit.getRecentGitCommit()
+    const gitHash = VipGit.getFirstCommitHash()
 
     // 构建镜像
     await VipDocker.buildImage({
       imageName,
       buildArgs: [
         // 参数中是否包含 --proxy
-        ['NEED_PROXY', process.argv.includes('--proxy')],
-        ['APP_NAME', pkg.name],
-        ['APP_VERSION', pkg.version],
-        ['APP_DESCRIPTION', pkg.description],
-        ['AUTHOR', pkg.authorInfo.name],
-        ['EMAIL', pkg.authorInfo.email],
-        ['HOME_PAGE', pkg.authorInfo.homePage],
+        ['NEED_PROXY', VipNodeJS.getProcessArgv().includes('--proxy')],
+        ['APP_NAME', name],
+        ['APP_VERSION', version],
+        ['APP_DESCRIPTION', description],
+        ['AUTHOR', OPEN_SOURCE_AUTHOR.name],
+        ['EMAIL', OPEN_SOURCE_AUTHOR.email],
+        ['HOME_PAGE', OPEN_SOURCE_AUTHOR.homePage],
         ['GIT_HASH', gitHash],
       ],
-      memory:20000,
+      memory: 20000,
       push: true,
       delete: true,
       logger: true,
     })
-  } catch (e) {
+  }
+  catch (e) {
     console.log('异常信息:', e)
   }
 })()
