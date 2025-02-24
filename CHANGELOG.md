@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.25 (2025-02-24)
+
+### ✨ Features
+
+- **deps**:
+  - Update pnpm to v9.15.0 &nbsp;-&nbsp; by **chufan** [<samp>(06652)</samp>](https://github.com/142vip/JavaScriptCollection/commit/066524b)
+  - Lock the version, use a fixed version number &nbsp;-&nbsp; by **chufan** [<samp>(9b1be)</samp>](https://github.com/142vip/JavaScriptCollection/commit/9b1beaa)
+
+### 🐛 Bug Fixes
+
+- 修复`bundle`命令构建异常 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/222 [<samp>(9f173)</samp>](https://github.com/142vip/JavaScriptCollection/commit/9f17322)
+- **deps**:
+  - Update dependency koa to v2.15.4 [security] &nbsp;-&nbsp; by **renovate[bot]** in https://github.com/142vip/JavaScriptCollection/issues/220 [<samp>(48a02)</samp>](https://github.com/142vip/JavaScriptCollection/commit/48a02e7)
+
+**Release New Version v0.0.2-alpha.25 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.24...v0.0.2-alpha.25)**
+
 ## v0.0.2-alpha.24 (2025-02-06)
 
 ### 🐛 Bug Fixes
