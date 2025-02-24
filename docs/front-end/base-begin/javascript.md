@@ -315,7 +315,7 @@ function fn() {
 
 ```js
 // 匿名函数
-const fn = function () {
+function fn() {
 
 }
 ```

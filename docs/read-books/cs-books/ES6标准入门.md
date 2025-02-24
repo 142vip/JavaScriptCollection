@@ -544,7 +544,7 @@ function objectConstant(obj) {
       : this)
 
 // 方法二
-const getGlobal = function () {
+function getGlobal() {
   if (typeof self !== 'undefined') {
     return self
   }
@@ -2315,7 +2315,7 @@ ES6 对这个属性的行为做出了一些修改，如果将一个匿名函数�
 
 ```js
 // 匿名函数
-const f = function () {
+function f() {
 }
 
 // ES5
@@ -2328,7 +2328,7 @@ f.name // "f"
 如果将一个具名函数赋值给一个变量，则 ES5 和 ES6 的name属性都返回这个具名函数原本的名字。
 
 ```js
-const bar = function test() {
+function bar() {
 }
 
 // ES5
@@ -3094,9 +3094,9 @@ Array.of(3).length // 1
 弥补数组构造函数`Array()`的不足。因为参数个数的不同，会导致`Array()`的行为有差异。
 
 ```js
-Array() // []
-Array(3) // [, , ,]
-Array(3, 11, 8) // [3, 11, 8]
+new Array() // []
+Array.from({ length: 3 }) // [, , ,]
+new Array(3, 11, 8) // [3, 11, 8]
 ```
 
 `Array()`方法没有参数、一个参数、三个参数时，返回的结果都不一样。
@@ -3430,7 +3430,7 @@ arr.flatMap(function callback(currentValue[, index[, array]]) {
 
 ```js
 // 返回具有 3 个空位的数组。
-Array(3) // [, , ,]
+Array.from({ length: 3 }) // [, , ,]
 ```
 
 空位不是`undefined`，一个位置的值等于`undefined`，依然是有值的。**空位是没有任何值**，in运算符可以说明这一点。
@@ -3833,7 +3833,7 @@ descriptor.set.name // "set foo"
 ```js
 (new Function()).name // "anonymous"
 
-const doSomething = function () {
+function doSomething() {
   // ...
 }
 doSomething.bind().name // "bound doSomething"
@@ -4328,9 +4328,9 @@ console.log(obj) // { "0": "a", "1": "b", "2": "c" }
 只有字符串合入目标对象（以字符数组的形式），数值和布尔值都会被忽略。**因为只有字符串的包装对象，会产生可枚举属性。**
 
 ```js
-Object(true) // {[[PrimitiveValue]]: true}
-Object(10) //  {[[PrimitiveValue]]: 10}
-Object('abc') // {0: "a", 1: "b", 2: "c", length: 3, [[PrimitiveValue]]: "abc"}
+new Object(true) // {[[PrimitiveValue]]: true}
+new Object(10) //  {[[PrimitiveValue]]: 10}
+new Object('abc') // {0: "a", 1: "b", 2: "c", length: 3, [[PrimitiveValue]]: "abc"}
 ```
 
 `布尔值`、`数值`、`字符串`分别转成对应的包装对象，可以看到它们的原始值都在包装对象的内部属性`[[PrimitiveValue]]`
@@ -4606,7 +4606,7 @@ obj.method = function () {
 ```js
 Object.defineProperty(Object.prototype, '__proto__', {
   get() {
-    const _thisObj = Object(this)
+    const _thisObj = new Object(this)
     return Object.getPrototypeOf(_thisObj)
   },
   set(proto) {

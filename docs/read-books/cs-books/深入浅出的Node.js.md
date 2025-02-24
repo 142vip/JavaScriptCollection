@@ -379,7 +379,7 @@ web服务器的会话实现一般通过内存来存储，**当访问量大的时
 
 ```js
 // test函数 local局部变量
-const test = function () {
+function test() {
   const local = {}
 }
 ```
@@ -419,7 +419,7 @@ Tips：同样，在非全局作用域中，想要主动释放变量引用的对�
 主要是通过高阶函数的特性（函数可以作为参数或者返回值）完成的
 
 ```js
-const foo = function () {
+function foo() {
   const bar = function () {
     // 定义局部变量
     const local = '局部变量'
@@ -496,7 +496,7 @@ Node对内存泄露非常敏感，一旦线上项目应用拥有成千上万的�
 // 例如利用cache全局对象来常驻老生代内存中
 const cache = {}
 // 获取目标值
-const get = function (key) {
+function get(key) {
   if (cache[key]) {
     // 内存中存在，即返回
     return cache[key]
@@ -507,7 +507,7 @@ const get = function (key) {
 }
 
 // 设置key/value值
-const set = function (key, value) {
+function set(key, value) {
   // 设置
   cache[key] = value
 }

@@ -1,13 +1,12 @@
-import { hopeTheme, navbar, sidebar } from 'vuepress-theme-hope'
-import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
 import { OPEN_SOURCE_ADDRESS } from '@142vip/utils'
-import { soloAlgorithmSidebar } from './solo-algorithm/solo-algorithm.sidebar'
-import { FrontEndSidebar } from './front-end/front-end.sidebar'
+import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
+import { hopeTheme, navbar, sidebar } from 'vuepress-theme-hope'
+import { BattleInterviewSidebar } from './battle-interview/battle-interview.sidebar'
 import { DevelopSkillSidebar } from './develop-skill/develop-skill.sidebar'
-import { ReadBooksSidebar } from './read-books/read-books.sidebar'
+import { FrontEndSidebar } from './front-end/front-end.sidebar'
 import { JobChanceSidebar } from './job-chance/job-chance.sidebar'
 import { MicroserviceSidebar } from './microservice/microserviceSidebar'
-import { BattleInterviewSidebar } from './battle-interview/battle-interview.sidebar'
+import { ReadBooksSidebar } from './read-books/read-books.sidebar'
 import {
   BaseSidebar,
   DesignPatternsSidebar,
@@ -24,6 +23,7 @@ import {
   TypeormSidebar,
   TypescriptSidebar,
 } from './server-end'
+import { soloAlgorithmSidebar } from './solo-algorithm/solo-algorithm.sidebar'
 
 /**
  * 导航栏

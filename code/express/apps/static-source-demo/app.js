@@ -1,7 +1,7 @@
 const express = require('express')
 
 const app = express()
-// eslint-disable-next-line import/order
+
 const path = require('node:path')
 // 服务启动端口
 const port = 3000

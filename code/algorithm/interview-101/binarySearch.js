@@ -3,7 +3,7 @@
 /**
  *
  */
-const search = function (nums, target) {
+function search(nums, target) {
   // 投机
   // return nums.indexOf(target)
 

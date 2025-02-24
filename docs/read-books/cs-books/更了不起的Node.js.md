@@ -261,8 +261,8 @@ Node.js是基于CommonJS规范的实现，即每个文件都是一个模块，�
 ```js
 // 相关模块
 
-const http = require('node:http')
 const fs = require('node:fs')
+const http = require('node:http')
 
 // 实例化对象
 
@@ -717,7 +717,7 @@ Node.js对模块的定义非常简单，主要分为模块应用、模块定义�
 > 可以将关联代码封装到一个代码单元中，创建一个模块可以理解为全部有关联的函数放在一个文件中
 
 ```js
-const sayHelloEnglish = function () {
+function sayHelloEnglish() {
   return 'hello'
 }
 

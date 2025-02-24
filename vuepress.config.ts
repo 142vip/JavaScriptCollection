@@ -1,21 +1,21 @@
-import { defineUserConfig } from '@vuepress/cli'
-import { getDirname, path } from '@vuepress/utils'
-import { viteBundler } from '@vuepress/bundler-vite'
-import { hopeTheme } from 'vuepress-theme-hope'
 import {
-  JSCHeaders,
+  getDocSiteBase,
+  OPEN_SOURCE_ADDRESS,
+  OPEN_SOURCE_AUTHOR,
+} from '@142vip/utils'
+import {
   getCopyRightText,
   getFooterHtml,
   getThemeConfig,
   getViteBundler,
+  JSCHeaders,
 } from '@142vip/vuepress'
-import {
-  OPEN_SOURCE_ADDRESS,
-  OPEN_SOURCE_AUTHOR,
-  getDocSiteBase,
-} from '@142vip/utils'
-import pkg from './package.json'
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defineUserConfig } from '@vuepress/cli'
+import { getDirname, path } from '@vuepress/utils'
+import { hopeTheme } from 'vuepress-theme-hope'
 import { navbarConfig, sidebarConfig } from './docs/theme.config'
+import pkg from './package.json'
 
 export default defineUserConfig({
   base: getDocSiteBase(pkg.name),
