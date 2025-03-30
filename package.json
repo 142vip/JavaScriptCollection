@@ -23,7 +23,7 @@
     "lint:fix": "npx fa lint --fix",
     "dev": "npx vuepress dev docs",
     "build": "npx vuepress build docs --clean-temp --clean-cache",
-    "build:proxy": "NEED_PROXY=true vuepress build docs --clean-temp --clean-cache",
+    "build:proxy": "NEED_PROXY=true npx vuepress build docs --clean-temp --clean-cache",
     "release": "npx fa release --vip"
   },
   "devDependencies": {
@@ -31,10 +31,10 @@
     "@142vip/fairy-cli": "0.0.3-alpha.21",
     "@142vip/utils": "0.0.1-alpha.31",
     "@142vip/vuepress": "0.0.1-alpha.11",
-    "@vuepress/bundler-vite": "2.0.0-rc.19",
+    "@vuepress/bundler-vite": "2.0.0-rc.20",
     "only-allow": "1.2.1",
     "simple-git-hooks": "2.11.1",
-    "vuepress": "2.0.0-rc.19"
+    "vuepress": "2.0.0-rc.20"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint",
