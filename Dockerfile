@@ -30,6 +30,8 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store sh ./scripts/ci &&  \
        pnpm build:proxy; \
   fi;
 
+# 构建linux镜像
+#FROM --platform=linux/amd64 nginx:1.27.0-alpine
 FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.27.0-alpine
 
 # 自定义镜像的Label信息
