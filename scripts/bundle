@@ -25,7 +25,7 @@ import {
     const imageName = `${OPEN_SOURCE_ADDRESS.DOCKER_ALIYUNCS_VIP}/docs:${name}-${version}`
 
     // 最近一次提交信息
-    const gitHash = VipGit.getFirstCommitHash()
+    const gitShortHash = VipGit.getRecentCommitShortHash()
 
     // 构建镜像
     await VipDocker.buildImage({
@@ -39,7 +39,7 @@ import {
         ['AUTHOR', OPEN_SOURCE_AUTHOR.name],
         ['EMAIL', OPEN_SOURCE_AUTHOR.email],
         ['HOME_PAGE', OPEN_SOURCE_AUTHOR.homePage],
-        ['GIT_HASH', gitHash],
+        ['GIT_HASH', gitShortHash],
       ],
       memory: 20000,
       push: true,
