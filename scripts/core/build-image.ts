@@ -1,25 +1,11 @@
-#!/usr/bin/env node
-
+import { OPEN_SOURCE_ADDRESS, OPEN_SOURCE_AUTHOR, VipDocker, VipGit, VipNodeJS, VipPackageJSON } from '@142vip/utils'
 /**
  * 功能：构建Docker镜像
- * 使用：
- *  - ./scripts/bundle
- *  - ./scripts/bundle --proxy
  */
-
-import {
-  OPEN_SOURCE_ADDRESS,
-  OPEN_SOURCE_AUTHOR,
-  VipDocker,
-  VipGit,
-  VipNodeJS,
-  VipPackageJSON,
-} from '@142vip/utils'
-
-(async () => {
+async function buildImageMain(): Promise<void> {
   try {
     // 获取package.json文件
-    const { name, version, description } = VipPackageJSON.getPackageJSON()
+    const { name, version, description } = VipPackageJSON.getPackageJSON<{ description: string }>()
 
     // 镜像地址
     const imageName = `${OPEN_SOURCE_ADDRESS.DOCKER_ALIYUNCS_VIP}/docs:${name}-${version}`
@@ -50,4 +36,6 @@ import {
   catch (e) {
     console.log('异常信息:', e)
   }
-})()
+}
+
+void buildImageMain()
