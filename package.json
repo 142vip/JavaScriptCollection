@@ -18,26 +18,29 @@
     "preinstall": "npx only-allow pnpm && chmod +x ./scripts/*",
     "postinstall": "rm -rf .git/hooks && npx simple-git-hooks",
     "clean": "npx fa clean --dist --deps --vite --all --ignore-tips",
-    "clean:hooks": "rm -rf .git/hooks",
+    "clean:hooks": "npx fa clean --git-hooks --all --ignore-tips",
     "lint": "npx fa lint",
     "lint:fix": "npx fa lint --fix",
     "dev": "npx vuepress dev docs",
     "build": "npx vuepress build docs --clean-temp --clean-cache",
     "build:proxy": "NEED_PROXY=true npx vuepress build docs --clean-temp --clean-cache",
-    "release": "npx fa release --vip"
+    "release": "npx fa release --vip --check-branch next --check-branch main",
+    "check:commit": "npx node --loader ts-node/esm --no-warnings scripts/core/verify-commit.ts"
   },
   "devDependencies": {
-    "@142vip/eslint-config": "0.0.1-alpha.3",
-    "@142vip/fairy-cli": "0.0.3-alpha.21",
-    "@142vip/utils": "0.0.1-alpha.31",
-    "@142vip/vuepress": "0.0.1-alpha.11",
+    "@142vip/commit-linter": "0.0.1-alpha.1",
+    "@142vip/eslint-config": "0.0.1-alpha.4",
+    "@142vip/fairy-cli": "0.0.3-alpha.24",
+    "@142vip/utils": "0.0.1-alpha.36",
+    "@142vip/vuepress": "0.0.1-alpha.12",
     "@vuepress/bundler-vite": "2.0.0-rc.20",
     "only-allow": "1.2.1",
     "simple-git-hooks": "2.11.1",
+    "ts-node": "^10.9.2",
     "vuepress": "2.0.0-rc.20"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint",
-    "prepare-commit-msg": "pnpm build"
+    "pre-commit": "pnpm lint:fix",
+    "commit-msg": "pnpm check:commit"
   }
 }

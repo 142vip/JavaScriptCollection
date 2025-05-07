@@ -1,8 +1,4 @@
-import {
-  getDocSiteBase,
-  OPEN_SOURCE_ADDRESS,
-  OPEN_SOURCE_AUTHOR,
-} from '@142vip/utils'
+import { getDocSiteBase, GitGeneralBranch, OPEN_SOURCE_ADDRESS, OPEN_SOURCE_AUTHOR } from '@142vip/utils'
 import {
   getCopyRightText,
   getFooterHtml,
@@ -71,7 +67,7 @@ export default defineUserConfig({
 
       // 文档路径，开启编辑功能
       docsDir: 'docs',
-      docsBranch: 'next',
+      docsBranch: GitGeneralBranch.NEXT,
       // 主题布局选项
       docsRepo: OPEN_SOURCE_ADDRESS.GITHUB_REPO_JSC,
 
