@@ -21,11 +21,8 @@ importers:
         specifier: 0.0.1-alpha.36
         version: 0.0.1-alpha.36(@types/node@22.15.14)
       '@142vip/vuepress':
-        specifier: 0.0.1-alpha.12
-        version: 0.0.1-alpha.12(dg7enuvwinb4xviyjji7ux3mpi)
-      '@vuepress/bundler-vite':
-        specifier: 2.0.0-rc.20
-        version: 2.0.0-rc.20(@types/node@22.15.14)(jiti@2.4.2)(sass-embedded@1.80.4)(typescript@5.6.3)(yaml@2.7.1)
+        specifier: 0.0.1-alpha.14
+        version: 0.0.1-alpha.14(curdsjmnxwvpt7bre5g4lzdfd4)
       only-allow:
         specifier: 1.2.1
         version: 1.2.1
@@ -33,11 +30,8 @@ importers:
         specifier: 2.11.1
         version: 2.11.1
       ts-node:
-        specifier: ^10.9.2
+        specifier: 10.9.2
         version: 10.9.2(@types/node@22.15.14)(typescript@5.6.3)
-      vuepress:
-        specifier: 2.0.0-rc.20
-        version: 2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.15.14)(jiti@2.4.2)(sass-embedded@1.80.4)(typescript@5.6.3)(yaml@2.7.1))(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
 
   code/express/apps/apis-demo:
     dependencies:
@@ -145,26 +139,29 @@ packages:
   '@142vip/utils@0.0.1-alpha.36':
     resolution: {integrity: sha512-nHPaDzDVkeCojnMEgaejXjx4f9s6/srdJhZV189V+TYNV9E4ys+GQYqS2lhZBje4qvlNTeWpW4tahrDOsBWpZA==}
 
-  '@142vip/vuepress@0.0.1-alpha.12':
-    resolution: {integrity: sha512-dTn5q6vbhZrgues7QdTM6pNoDZWSPdhwvtKd0VCa7Jgw4F838nnEjjpmpYh7M+T1wmmttETDUe1Xaa3IpbNyKw==}
+  '@142vip/vuepress@0.0.1-alpha.14':
+    resolution: {integrity: sha512-FWvJAZVKXe6XUhJLWivNfUtLqxu6y1w86OxBajh/uBd+pnMQD1YeUcUQK9heIs4wgcEyJoQlf0MmFoCQ9toh+Q==}
     peerDependencies:
       '@vue/repl': 4.5.1
-      '@vuepress/bundler-vite': 2.0.0-rc.20
-      '@vuepress/plugin-markdown-image': 2.0.0-rc.92
-      '@vuepress/plugin-markdown-tab': 2.0.0-rc.92
-      '@vuepress/plugin-redirect': 2.0.0-rc.92
-      '@vuepress/plugin-slimsearch': 2.0.0-rc.92
+      '@vuepress/bundler-vite': 2.0.0-rc.23
+      '@vuepress/plugin-markdown-image': 2.0.0-rc.99
+      '@vuepress/plugin-markdown-tab': 2.0.0-rc.99
+      '@vuepress/plugin-redirect': 2.0.0-rc.99
+      '@vuepress/plugin-slimsearch': 2.0.0-rc.99
       '@vueuse/shared': 13.0.0
+      cli-spinners: 3.2.0
       dashjs: 4.7.4
       hls.js: 1.5.13
+      markdown-it: 14.1.0
+      markdown-it-emoji: 3.0.0
       mermaid: 11.6.0
       reveal.js: 5.2.1
-      sass-embedded: 1.86.0
+      sass-embedded: 1.87.0
       unicorn-magic: 0.3.0
       vidstack: 1.12.12
       vue: 3.5.13
-      vuepress: 2.0.0-rc.20
-      vuepress-theme-hope: 2.0.0-rc.77
+      vuepress: 2.0.0-rc.23
+      vuepress-theme-hope: 2.0.0-rc.87
 
   '@antfu/eslint-config@4.11.0':
     resolution: {integrity: sha512-KMLIrZflEFsOEF/N0Xl8iVaheLTdgT3gAwXVzdG5Ng8ieNhBsRsaThnqI7of10kh6psSBLJ6SkNK+ZF98fQIXQ==}
@@ -4874,7 +4871,7 @@ snapshots:
       - '@types/node'
       - magicast
 
-  '@142vip/vuepress@0.0.1-alpha.12(dg7enuvwinb4xviyjji7ux3mpi)':
+  '@142vip/vuepress@0.0.1-alpha.14(curdsjmnxwvpt7bre5g4lzdfd4)':
     dependencies:
       '@vue/repl': 4.4.2
       '@vuepress/bundler-vite': 2.0.0-rc.20(@types/node@22.15.14)(jiti@2.4.2)(sass-embedded@1.80.4)(typescript@5.6.3)(yaml@2.7.1)
@@ -4883,8 +4880,11 @@ snapshots:
       '@vuepress/plugin-redirect': 2.0.0-rc.56(typescript@5.6.3)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.15.14)(jiti@2.4.2)(sass-embedded@1.80.4)(typescript@5.6.3)(yaml@2.7.1))(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3)))
       '@vuepress/plugin-slimsearch': 2.0.0-rc.61(typescript@5.6.3)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.15.14)(jiti@2.4.2)(sass-embedded@1.80.4)(typescript@5.6.3)(yaml@2.7.1))(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3)))
       '@vueuse/shared': 11.3.0(vue@3.5.13(typescript@5.6.3))
+      cli-spinners: 2.9.2
       dashjs: 4.7.4
       hls.js: 1.5.17
+      markdown-it: 14.1.0
+      markdown-it-emoji: 3.0.0
       mermaid: 10.9.3
       reveal.js: 5.1.0
       sass-embedded: 1.80.4
@@ -8556,7 +8556,7 @@ snapshots:
   micromark@3.2.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.4.0
+      debug: 4.0.0
       decode-named-character-reference: 1.1.0
       micromark-core-commonmark: 1.1.0
       micromark-factory-space: 1.1.0
