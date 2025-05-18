@@ -1,4 +1,4 @@
-import { OPEN_SOURCE_ADDRESS } from '@142vip/utils'
+import { OPEN_SOURCE_ADDRESS } from '@142vip/open-source'
 import { defineVipNavbarConfig, defineVipSidebarConfig } from '@142vip/vuepress'
 import { BattleInterviewSidebar } from './battle-interview/battle-interview.sidebar'
 import { DevelopSkillSidebar } from './develop-skill/develop-skill.sidebar'
@@ -28,7 +28,7 @@ import { soloAlgorithmSidebar } from './solo-algorithm/solo-algorithm.sidebar'
  * 导航栏
  */
 export const navbarConfig = defineVipNavbarConfig([
-  { text: '🌐 首页', link: '/' },
+  { text: '🔥 首页', link: '/' },
   { text: '🧠 SOLO算法', children: soloAlgorithmSidebar },
   { text: '💡 Battle面试官', link: '/battle-interview/' },
   {
@@ -44,7 +44,7 @@ export const navbarConfig = defineVipNavbarConfig([
   {
     text: '👉 了解更多',
     children: [
-      { text: '📄 更新日志', link: '/changelog' },
+      { text: '📄 变更记录', link: '/changelog' },
       { text: '📣 网站动态', link: '/big-event-history' },
       {
         text: '外链',

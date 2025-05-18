@@ -1,7 +1,8 @@
 ---
 title: JavaScript相关
 permalink: /front-end/base-begin/javascript.html
-headerDepth: 2
+toc:
+  levels: 2
 ---
 
 # JavaScript

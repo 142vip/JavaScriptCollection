@@ -30,9 +30,10 @@
   "devDependencies": {
     "@142vip/commit-linter": "0.0.1-alpha.1",
     "@142vip/eslint-config": "0.0.1-alpha.4",
-    "@142vip/fairy-cli": "0.0.3-alpha.24",
-    "@142vip/utils": "0.0.1-alpha.36",
-    "@142vip/vuepress": "0.0.1-alpha.14",
+    "@142vip/fairy-cli": "0.0.3-alpha.25",
+    "@142vip/open-source": "0.0.1-alpha.3",
+    "@142vip/utils": "0.0.1-alpha.37",
+    "@142vip/vuepress": "0.0.1-alpha.17",
     "only-allow": "1.2.1",
     "simple-git-hooks": "2.11.1",
     "ts-node": "10.9.2"

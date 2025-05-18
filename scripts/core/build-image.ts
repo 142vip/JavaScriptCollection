@@ -1,4 +1,5 @@
-import { OPEN_SOURCE_ADDRESS, OPEN_SOURCE_AUTHOR, VipDocker, VipGit, VipNodeJS, VipPackageJSON } from '@142vip/utils'
+import { OPEN_SOURCE_ADDRESS, OPEN_SOURCE_AUTHOR } from '@142vip/open-source'
+import { VipDocker, VipGit, VipNodeJS, VipPackageJSON } from '@142vip/utils'
 /**
  * 功能：构建Docker镜像
  */
