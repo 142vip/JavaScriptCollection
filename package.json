@@ -28,7 +28,7 @@
     "check:commit": "npx node --loader ts-node/esm --no-warnings scripts/core/verify-commit.ts"
   },
   "devDependencies": {
-    "@142vip/commit-linter": "0.0.1-alpha.1",
+    "@142vip/commit-linter": "0.0.1-alpha.2",
     "@142vip/eslint-config": "0.0.1-alpha.4",
     "@142vip/fairy-cli": "0.0.3-alpha.25",
     "@142vip/open-source": "0.0.1-alpha.3",

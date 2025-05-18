@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@142vip/commit-linter':
-        specifier: 0.0.1-alpha.1
-        version: 0.0.1-alpha.1(@types/node@22.15.18)
+        specifier: 0.0.1-alpha.2
+        version: 0.0.1-alpha.2(@types/node@22.15.18)
       '@142vip/eslint-config':
         specifier: 0.0.1-alpha.4
         version: 0.0.1-alpha.4(@vue/compiler-sfc@3.5.14)(jiti@2.4.2)(typescript@5.8.3)
@@ -116,9 +116,6 @@ packages:
     resolution: {integrity: sha512-Nx9AqWj7gUcnGydG7P8D2oHEip9qDK6abvUaAXqAd5MgT2SfYBxb+l40qlPmvGf626xRIP6Z1ewEDfv7ThENmg==}
     engines: {node: '>=16.0.0'}
     hasBin: true
-
-  '@142vip/commit-linter@0.0.1-alpha.1':
-    resolution: {integrity: sha512-snzDEUQBr+7xpS5qgbF8MIQeRyrRA8h4FbRAZdvMtPj2Bp1CouG2oDIV2Mo1uopqiCzpTwrSIegPIpkmKq+sOA==}
 
   '@142vip/commit-linter@0.0.1-alpha.2':
     resolution: {integrity: sha512-Wyd/2d6SBdSnGA66rvAMPbtOw8mZimPQbsqSX3fjBJECY4EWxrkkQnF7370aEhKGZjDEUuYc4JdO41+x8gM04g==}
@@ -4872,13 +4869,6 @@ snapshots:
     dependencies:
       '@142vip/utils': 0.0.1-alpha.36(@types/node@22.15.18)
       ofetch: 1.3.4
-    transitivePeerDependencies:
-      - '@types/node'
-      - magicast
-
-  '@142vip/commit-linter@0.0.1-alpha.1(@types/node@22.15.18)':
-    dependencies:
-      '@142vip/utils': 0.0.1-alpha.33(@types/node@22.15.18)
     transitivePeerDependencies:
       - '@types/node'
       - magicast
