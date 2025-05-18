@@ -1,27 +1,12 @@
 ---
+title: 变更记录
 permalink: /changelog.html
-headerDepth: 1
+toc:
+  levels: 2
 sidebar: false
 ---
 
 # 变更记录
-
-::: tip
-
-
-> 有时间再梳理梳理吧....
-
-### 2020.5.30
-
-- 第一次Github提交，开源
-
-### 2020.5.1
-
-- 项目成立，取名`JavaScriptCollection`
-
-该文件包含 `JavaScriptCollection` 仓库和网站所有显着更改。
-
-:::
 
 <!-- @include: ../CHANGELOG.md#recent-alpha -->
 

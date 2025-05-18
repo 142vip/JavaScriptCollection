@@ -1,7 +1,8 @@
 ---
 title: ES6标准入门
 permalink: /read-books/cs-books/standard-es6.html
-headerDepth: 2
+toc:
+  levels: 2
 ---
 
 # ES6标准入门
