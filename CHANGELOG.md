@@ -1,8 +1,22 @@
-# Release history
+# Changelog
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <!-- #region recent-alpha -->
+
+## v0.0.2-alpha.26 (2025-05-18)
+
+### ✨ Features
+
+- 升级依赖，修复`Dockerfile`镜像构建异常 &nbsp;-&nbsp; by **chufan** [<samp>(09c35)</samp>](https://github.com/142vip/JavaScriptCollection/commit/09c3599)
+- 依赖升级，工程化定期改造 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/232 [<samp>(5d428)</samp>](https://github.com/142vip/JavaScriptCollection/commit/5d42823)
+- 基于`@142vip/vuepress`对站点升级，简化配置、优化整体结构 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/234 [<samp>(24657)</samp>](https://github.com/142vip/JavaScriptCollection/commit/2465705)
+
+### 🐛 Bug Fixes
+
+- 修复新版本`@142vip/vuepress`依赖导致的编译失败 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/JavaScriptCollection/issues/233 [<samp>(b7c79)</samp>](https://github.com/142vip/JavaScriptCollection/commit/b7c798d)
+
+**Release New Version v0.0.2-alpha.26 [👉 View Changes On GitHub](https://github.com/142vip/JavaScriptCollection/compare/v0.0.2-alpha.25...v0.0.2-alpha.26)**
 
 ## v0.0.2-alpha.25 (2025-02-24)
 

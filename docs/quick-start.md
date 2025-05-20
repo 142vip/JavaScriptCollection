@@ -1,7 +1,8 @@
 ---
 title: 快速开始
 permalink: /quick-start.html
-headerDepth: 1
+toc:
+  levels: 1
 sidebar: false
 ---
 

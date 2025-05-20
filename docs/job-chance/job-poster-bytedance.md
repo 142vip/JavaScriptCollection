@@ -1,7 +1,8 @@
 ---
 title: 字节跳动
 permalink: /job-chance/job-poster-bytedance.html
-headerDepth: 1
+toc:
+  levels: 1
 ---
 
 # 字节跳动内推

@@ -1,7 +1,8 @@
 ---
 title: Git的使用
 permalink: /develop-skill/code-manager/git.html
-headerDepth: 2
+toc:
+  levels: 2
 ---
 
 # Git的使用
