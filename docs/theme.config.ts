@@ -6,6 +6,8 @@ import { FrontEndSidebar } from './front-end/front-end.sidebar'
 import { JobChanceSidebar } from './job-chance/job-chance.sidebar'
 import { MicroserviceSidebar } from './microservice/microserviceSidebar'
 import { ReadBooksSidebar } from './read-books/read-books.sidebar'
+import { architectSidebar } from './ruankao/architect/architect.sidebar'
+import { softDesignSidebar } from './ruankao/soft-design/soft-design.sidebar'
 import {
   BaseSidebar,
   DesignPatternsSidebar,
@@ -40,7 +42,27 @@ export const navbarConfig = defineVipNavbarConfig([
       { text: '🕸️ 微服务架构', link: '/microservice/' },
     ],
   },
-  { text: '📖 读书整理', link: '/read-books/' },
+  {
+    text: '📖 能力提升',
+    children: [
+      { text: '® 软著', link: '/copyright/' },
+      {
+        text: '考试',
+        link: '/ruankao/',
+        children: [
+          { text: '👨🏻‍💻 软件设计师', link: '/ruankao/soft-design/' },
+          { text: '💫 系统架构设计师', link: '/ruankao/architect/' },
+        ],
+      },
+      {
+        text: '读书',
+        children: [
+          { text: '🕸️ 技术类', link: '/read-books/cs-books/' },
+          { text: '💫 文学类', link: '/read-books/not-cs-book/' },
+        ],
+      },
+    ],
+  },
   {
     text: '👉 了解更多',
     children: [
@@ -85,6 +107,10 @@ export const sidebarConfig = defineVipSidebarConfig({
   '/job-chance': JobChanceSidebar,
   '/microservice': MicroserviceSidebar,
   '/battle-interview': BattleInterviewSidebar,
+
+  // 软考
+  '/ruankao/soft-desigin': softDesignSidebar,
+  '/ruankao/architect': architectSidebar,
 })
 
 /**
