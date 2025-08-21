@@ -28,7 +28,7 @@ async function buildImageMain(): Promise<void> {
         ['HOME_PAGE', OPEN_SOURCE_AUTHOR.homePage],
         ['GIT_HASH', gitShortHash],
       ],
-      memory: 20000,
+      memory: 200000,
       push: true,
       delete: true,
       logger: true,

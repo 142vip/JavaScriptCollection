@@ -69,7 +69,7 @@ const copyrightHtmlStr = `
  * 站点配置
  */
 export default defineVipVuepressConfig({
-  base: vipDocSite.getBase(pkg.name),
+  base: vipDocSite.getBase(pkg.name, '11'),
   title: '凡是过往、皆为序章',
   description: pkg.description,
   port: 5000,
