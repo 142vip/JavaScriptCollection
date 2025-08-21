@@ -51,7 +51,7 @@ export const navbarConfig = defineVipNavbarConfig([
         link: '/ruankao/',
         children: [
           { text: '👨🏻‍💻 软件设计师', link: '/ruankao/soft-design/' },
-          { text: '💫 系统架构设计师', link: '/ruankao/architect/' },
+          { text: '💫 系统架构师', link: '/ruankao/architect/' },
         ],
       },
       {
