@@ -36,7 +36,13 @@ export const navbarConfig = defineVipNavbarConfig([
   {
     text: '💻 全栈开发',
     children: [
-      { text: '👩🏻‍💻 前端', link: '/front-end/' },
+      {
+        text: '前端',
+        link: '/front-end/',
+        children: [
+          { text: '👩🏻‍💻 三件套', link: '/front-end/' },
+        ],
+      },
       { text: '👨🏻‍💻 后端', link: '/server-end/' },
       { text: '💫 开发技巧', link: '/develop-skill/' },
       { text: '🕸️ 微服务架构', link: '/microservice/' },
