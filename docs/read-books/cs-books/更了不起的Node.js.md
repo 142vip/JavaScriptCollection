@@ -1283,6 +1283,7 @@ event.setMaxListeners(100)
 
 ```js
 const eventEmitter = require('node:events')
+
 const myEmitter = new EventEmitter()
 
 function testConnection(param) {

@@ -3095,9 +3095,9 @@ Array.of(3).length // 1
 弥补数组构造函数`Array()`的不足。因为参数个数的不同，会导致`Array()`的行为有差异。
 
 ```js
-new Array() // []
+[] // []
 Array.from({ length: 3 }) // [, , ,]
-new Array(3, 11, 8) // [3, 11, 8]
+;[3, 11, 8] // [3, 11, 8]
 ```
 
 `Array()`方法没有参数、一个参数、三个参数时，返回的结果都不一样。
@@ -4854,6 +4854,7 @@ Object.fromEntries(map)
 ```js
 // url模块中获取URLSearchParams
 const { URLSearchParams } = require('node:url')
+
 Object.fromEntries(new URLSearchParams('name=bob&age=24'))
 // { name: "bob", age: 24 }
 ```

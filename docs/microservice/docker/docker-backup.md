@@ -11,6 +11,7 @@
  *  - ./scripts/docker network   xxx    网络相关
  */
 const { execShell } = require('./.exec')
+
 const scriptName = process.argv[2]
 
 /**
