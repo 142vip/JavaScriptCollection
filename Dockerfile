@@ -6,11 +6,12 @@
 #   CONTAINER_BUILD: 采用容器构建
 #
 
-FROM registry.cn-hangzhou.aliyuncs.com/142vip/node:20.17.0-alpine AS build_base
+FROM registry.cn-hangzhou.aliyuncs.com/142vip-infra/node:20.18.0-alpine AS build_base
 
 # 是否配置代理
 ARG NEED_PROXY=false
 
+ENV NODE_OPTIONS --max-old-space-size=200000
 # 设置环境变量，支持容器构建时使用layer缓存，参考：https://pnpm.io/zh/docker
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
@@ -31,8 +32,7 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store sh ./scripts/ci &&  \
   fi;
 
 # 构建linux镜像
-#FROM --platform=linux/amd64 nginx:1.27.0-alpine
-FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.27.0-alpine
+FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.29.0-alpine
 
 # 自定义镜像的Label信息
 ARG APP_NAME
