@@ -9,9 +9,9 @@
 FROM registry.cn-hangzhou.aliyuncs.com/142vip-infra/node:20.18.0-alpine AS build_base
 
 # 是否配置代理
-ARG NEED_PROXY=false
+ARG NEED_PROXY_BUILD=false
 
-ENV NODE_OPTIONS --max-old-space-size=200000
+ENV NODE_OPTIONS="--max-old-space-size=200000"
 # 设置环境变量，支持容器构建时使用layer缓存，参考：https://pnpm.io/zh/docker
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
@@ -20,11 +20,12 @@ ENV PATH="$PNPM_HOME:$PATH"
 #ENV COREPACK_NPM_REGISTRY=https://mirrors.tencent.com/npm/
 
 WORKDIR /apps
+
 COPY . .
 
 # 基于容器自动构建
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store sh ./scripts/ci &&  \
-  if [ "$NEED_PROXY" = "false" ];  \
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store sh ./scripts/ci --ignore-scripts &&  \
+  if [ "$NEED_PROXY_BUILD" = "false" ];  \
     then \
        pnpm build; \
     else \

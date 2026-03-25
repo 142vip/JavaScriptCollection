@@ -21,8 +21,8 @@ importers:
         specifier: 0.0.1-alpha.3
         version: 0.0.1-alpha.3
       '@142vip/utils':
-        specifier: 0.0.1-alpha.47
-        version: 0.0.1-alpha.47(@types/node@22.15.18)(typescript@5.8.3)
+        specifier: 0.0.1-alpha.48
+        version: 0.0.1-alpha.48(@types/node@22.15.18)(typescript@5.8.3)
       '@142vip/vuepress':
         specifier: 0.0.1-alpha.17
         version: 0.0.1-alpha.17(x2rhdntzhhmbrspdstvidw2ila)
@@ -145,8 +145,8 @@ packages:
   '@142vip/utils@0.0.1-alpha.36':
     resolution: {integrity: sha512-nHPaDzDVkeCojnMEgaejXjx4f9s6/srdJhZV189V+TYNV9E4ys+GQYqS2lhZBje4qvlNTeWpW4tahrDOsBWpZA==}
 
-  '@142vip/utils@0.0.1-alpha.47':
-    resolution: {integrity: sha512-A4wHzPPX0VMyjaNTTO6lmR1tG/AZEMUWDADAnlYElcm5mMWt58/StP/PaKm3f/yA4MTtp4PtKivihldeKOQ1vg==}
+  '@142vip/utils@0.0.1-alpha.48':
+    resolution: {integrity: sha512-JVwwCm256CR0PvlAL5iRnprdbLbWMfmC6460JUVe87hBOj4uH48QXEO8EVYvsZqzV3e82IewzTfH3vvr8DU0Ng==}
 
   '@142vip/vuepress@0.0.1-alpha.17':
     resolution: {integrity: sha512-/+E6u3Cn/6cQlRXBeS5RzvllsCPlX4OqbBwb5j6bT3yQPI5jFVQjjbEOchBqa5uAbfUqjrUXuK+J4Pj/MVfHTA==}
@@ -5046,7 +5046,7 @@ snapshots:
       - '@types/node'
       - magicast
 
-  '@142vip/utils@0.0.1-alpha.47(@types/node@22.15.18)(typescript@5.8.3)':
+  '@142vip/utils@0.0.1-alpha.48(@types/node@22.15.18)(typescript@5.8.3)':
     dependencies:
       '@142vip/open-source': 0.0.1-alpha.3
       '@inquirer/prompts': 7.4.0(@types/node@22.15.18)
