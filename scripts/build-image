@@ -1,3 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env node
 
-npx node --loader ts-node/esm --no-warnings scripts/core/build-image.ts
+/**
+ * Usage:
+ * - ./scripts/dev oauth-login
+ */
+
+import {buildImageMain} from "./core/build-image.js";
+
+void buildImageMain()
+

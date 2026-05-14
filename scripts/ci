@@ -1,18 +1,27 @@
 #!/bin/bash
+##
+## 依赖安装脚本
+## 使用:
+##   ./scripts/ci
+##
 
-#
-# 依赖安装脚本
-# 使用:
-#   ./scripts/ci
-#
-
-NPM_REGISTRY="https://mirrors.tencent.com/npm/"
+#NPM_REGISTRY="https://mirrors.tencent.com/npm/"
+NPM_REGISTRY="https://registry.npmmirror.com"
 
 ## 获取所有参数
 echo "运行命令: export COREPACK_NPM_REGISTRY=$NPM_REGISTRY && corepack enable pnpm && pnpm i --registry $NPM_REGISTRY --frozen-lockfile $*"
 
-# 导出corepack环境变量，安装pnpm版本
-export COREPACK_NPM_REGISTRY=$NPM_REGISTRY COREPACK_INTEGRITY_KEYS=0 && corepack enable pnpm
 
-# 安装项目依赖
+# 检查是否已安装 corepack，如果没有则安装
+if ! command -v corepack &> /dev/null; then
+    echo "未检测到 corepack，正在安装..."
+    npm i corepack@latest -g
+else
+    echo "corepack 已安装，版本: $(corepack --version)"
+fi
+
+# 导出corepack环境变量，安装pnpm版本
+export COREPACK_NPM_REGISTRY=$NPM_REGISTRY &&  corepack enable pnpm
+
+# 安装项目依赖 -w -F @142vip/fairy-cli
 pnpm i  --registry $NPM_REGISTRY --frozen-lockfile "$@"

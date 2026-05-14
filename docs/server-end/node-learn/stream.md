@@ -50,6 +50,7 @@ permalink: /server-end/node-learn/stream.html
 ```typescript
 import fs, { read } from 'node:fs'
 import express from 'express'
+
 const app = express()
 
 app.post('/', (req, res) => { // node中req res本身也是流

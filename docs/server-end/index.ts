@@ -114,7 +114,7 @@ export const ServerEndSidebar = [
   },
   {
     text: '设计模式',
-    link: 'design-patterns/Readme.md',
+    link: 'design-patterns/README.md',
   },
   {
     text: 'Linux系统',

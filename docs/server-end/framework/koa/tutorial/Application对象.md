@@ -91,6 +91,7 @@ app2.proxy = true
 
 ```js
 const Koa = require('koa')
+
 const app = new Koa()
 // 监听3000端口
 app.listen(3000)
@@ -105,6 +106,7 @@ app.listen(3000)
 ```js
 const http = require('node:http')
 const Koa = require('koa')
+
 const app = new Koa()
 const server = http.createServer(app.callback())
 // 监听端口
@@ -115,11 +117,13 @@ server.listen(3000)
 
 ```js
 const http = require('node:http')
+
 const server = http.createServer(app.callback())
 // 监听端口
 server.listen(3000)
 
 const https = require('node:https')
+
 const httpsServer = https.createServer(app.callback())
 httpsServer.listen(6000)
 ```

@@ -1,6 +1,7 @@
 # #
 # 服务名： JavaScriptCollection
 # IP范围： 172.30.0.200
+# 镜像拉取慢，在阿里云服务器上，可以考虑走vpc网络：registry-vpc.cn-hangzhou.aliyuncs.com
 #
 version: '2'
 services:
