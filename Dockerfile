@@ -6,7 +6,7 @@
 #   CONTAINER_BUILD: 采用容器构建
 #
 
-FROM registry.cn-hangzhou.aliyuncs.com/142vip-infra/node:20.18.0-alpine AS build_base
+FROM registry.cn-hangzhou.aliyuncs.com/142vip-infra/node:25.9.0-base AS build_base
 
 # 是否配置代理
 ARG NEED_PROXY_BUILD=false
