@@ -11,6 +11,6 @@
     "dev": "node app.js"
   },
   "dependencies": {
-    "sequelize": "6.37.5"
+    "sequelize": "6.37.8"
   }
 }
