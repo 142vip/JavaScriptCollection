@@ -6,10 +6,10 @@
 #   CONTAINER_BUILD: 采用容器构建
 #
 
-FROM registry.cn-hangzhou.aliyuncs.com/142vip-infra/node:20.18.0-alpine AS build_base
+FROM registry.cn-hangzhou.aliyuncs.com/142vip-infra/node:25.9.0-base AS build_base
 
 # 是否配置代理
-ARG NEED_PROXY_BUILD=false
+ARG NEED_PROXY
 
 ENV NODE_OPTIONS="--max-old-space-size=200000"
 # 设置环境变量，支持容器构建时使用layer缓存，参考：https://pnpm.io/zh/docker
@@ -25,7 +25,7 @@ COPY . .
 
 # 基于容器自动构建
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store sh ./scripts/ci --ignore-scripts &&  \
-  if [ "$NEED_PROXY_BUILD" = "false" ];  \
+  if [ "$NEED_PROXY" = "false" ];  \
     then \
        pnpm build; \
     else \

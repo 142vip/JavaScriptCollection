@@ -25,7 +25,7 @@ export async function buildImageMain() {
     imageName: realImageName,
     buildArgs: [
       // 参数中是否包含 --proxy
-      ['NEED_PROXY_BUILD', VipNodeJS.getProcessArgv().includes('--proxy')],
+      ['NEED_PROXY', VipNodeJS.getProcessArgv().includes('--proxy')],
       ['APP_NAME', name],
       ['APP_VERSION', version],
       ['APP_DESCRIPTION', description],
