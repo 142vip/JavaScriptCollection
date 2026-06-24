@@ -1,7 +1,7 @@
 <div align="center">
   <img
     alt="JavaScriptCollection"
-    src="https://cdn.statically.io/gh/142vip/cdn_service@main/doc_book/jsc/jsc_logo.png"
+    src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/jsc/logo-jsc.png"
     style="text-align: center;border-radius: 5px"
   >
   <p style="font-size: 20px">
