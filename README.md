@@ -521,7 +521,11 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 ## 趋势
 
 <div style="text-align: center" align="center">
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=142vip/JavaScriptCollection,142vip/core-x,142vip/408CSFamily&type=Date" />
+    <img
+        src="https://api.star-history.com/svg?repos=142vip%2Fcore-x%2C142vip%2F408csfamily%2C142vip%2Fjavascriptcollection&type=Date&sealed_token=iaO-GLnvLpYHibmRk7lxdWHU5MRcN8yp072DbAkSuka6yVP87RCc245bDe_8qXluQuI-105rgdN5qw_G7omm8P05FDOB4ir6De_EdwCOyZUuxWCQE-LfbA"
+        alt="Star History"
+        style="border-radius: 5px"
+    >
 </div>
 
 ## 联系作者
