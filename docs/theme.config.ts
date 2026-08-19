@@ -6,6 +6,8 @@ import { FrontEndSidebar } from './front-end/front-end.sidebar'
 import { JobChanceSidebar } from './job-chance/job-chance.sidebar'
 import { MicroserviceSidebar } from './microservice/microserviceSidebar'
 import { ReadBooksSidebar } from './read-books/read-books.sidebar'
+import { architectSidebar } from './ruan-kao/architect/architect.sidebar'
+import { softDesignSidebar } from './ruan-kao/soft-design/soft-design.sidebar'
 import {
   BaseSidebar,
   DesignPatternsSidebar,
@@ -34,13 +36,39 @@ export const navbarConfig = defineVipNavbarConfig([
   {
     text: '💻 全栈开发',
     children: [
-      { text: '👩🏻‍💻 前端', link: '/front-end/' },
+      {
+        text: '前端',
+        link: '/front-end/',
+        children: [
+          { text: '👩🏻‍💻 三件套', link: '/front-end/' },
+        ],
+      },
       { text: '👨🏻‍💻 后端', link: '/server-end/' },
       { text: '💫 开发技巧', link: '/develop-skill/' },
       { text: '🕸️ 微服务架构', link: '/microservice/' },
     ],
   },
-  { text: '📖 读书整理', link: '/read-books/' },
+  {
+    text: '📖 能力提升',
+    children: [
+      { text: '® 软著', link: '/copyright/' },
+      {
+        text: '考试',
+        link: '/ruan-kao.html',
+        children: [
+          { text: '👨🏻‍💻 软件设计师', link: '/ruan-kao/soft-design.html' },
+          { text: '💫 系统架构师', link: '/ruan-kao/architect.html' },
+        ],
+      },
+      {
+        text: '读书',
+        children: [
+          { text: '🕸️ 技术类', link: '/read-books/cs-books/' },
+          { text: '💫 文学类', link: '/read-books/not-cs-book/' },
+        ],
+      },
+    ],
+  },
   {
     text: '👉 了解更多',
     children: [
@@ -85,6 +113,19 @@ export const sidebarConfig = defineVipSidebarConfig({
   '/job-chance': JobChanceSidebar,
   '/microservice': MicroserviceSidebar,
   '/battle-interview': BattleInterviewSidebar,
+
+  // 软考：考试总览（permalink /ruan-kao.html）
+  '/ruan-kao.html': [
+    { text: '👨🏻‍💻 软件设计师', link: '/ruan-kao/soft-design.html' },
+    { text: '💫 系统架构师', link: '/ruan-kao/architect.html' },
+  ],
+  '/ruan-kao/': [
+    { text: '👨🏻‍💻 软件设计师', link: '/ruan-kao/soft-design.html' },
+    { text: '💫 系统架构师', link: '/ruan-kao/architect.html' },
+  ],
+  // 软考（子页 permalink 为 .html；key 用目录前缀供主题匹配）
+  '/ruan-kao/soft-design': softDesignSidebar,
+  '/ruan-kao/architect': architectSidebar,
 })
 
 /**

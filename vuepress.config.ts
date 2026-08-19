@@ -70,6 +70,8 @@ const copyrightHtmlStr = `
  */
 export default defineVipVuepressConfig({
   base: vipDocSite.getBase(pkg.name),
+  /** 生成与站内链接统一为无尾斜杠 URL */
+  trailingSlash: false,
   title: '凡是过往、皆为序章',
   description: pkg.description,
   port: 5000,
