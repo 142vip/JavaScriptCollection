@@ -6,6 +6,8 @@ import { FrontEndSidebar } from '../../docs/front-end/front-end.sidebar'
 import { JobChanceSidebar } from '../../docs/job-chance/job-chance.sidebar'
 import { MicroserviceSidebar } from '../../docs/microservice/microserviceSidebar'
 import { ReadBooksSidebar } from '../../docs/read-books/read-books.sidebar'
+import { architectSidebar } from '../../docs/ruan-kao/architect/architect.sidebar'
+import { softDesignSidebar } from '../../docs/ruan-kao/soft-design/soft-design.sidebar'
 import {
   BaseSidebar,
   DesignPatternsSidebar,
@@ -39,19 +41,39 @@ export const navbarConfig = defineVipNavbarConfig([
       { text: '🕸️ 微服务架构', link: '/microservice/' },
     ],
   },
-  { text: '📖 读书整理', link: '/read-books/' },
+  {
+    text: '📖 能力提升',
+    children: [
+      { text: '® 软著', link: '/copyright/' },
+      {
+        text: '考试',
+        link: '/ruan-kao.html',
+        children: [
+          { text: '👨🏻‍💻 软件设计师', link: '/ruan-kao/soft-design.html' },
+          { text: '💫 系统架构师', link: '/ruan-kao/architect.html' },
+        ],
+      },
+      {
+        text: '读书',
+        children: [
+          { text: '🕸️ 技术类', link: '/read-books/cs-books/' },
+          { text: '💫 文学类', link: '/read-books/not-cs-book/' },
+        ],
+      },
+    ],
+  },
   {
     text: '👉 了解更多',
     children: [
-      { text: '📄 变更记录', link: '/changelog.md' },
-      { text: '📣 网站动态', link: '/big-event-history.md' },
+      { text: '📄 变更记录', link: '/changelog.html' },
+      { text: '📣 网站动态', link: '/big-event-history.html' },
       {
         text: '外链',
         children: [
           { text: '🎉 历史版本', link: `${OPEN_SOURCE_ADDRESS.GITHUB_REPO_JSC}/releases` },
           { text: '🎯 开发计划', link: 'https://142vip-cn.feishu.cn/share/base/view/shrcnuuRDWBoHLmYaknXWFuhR4d' },
           { text: '🔗 技术&平台', link: '/frequent-site-link.html' },
-          { text: '💥 公众号文章', link: '/wechat-list.md' },
+          { text: '💥 公众号文章', link: '/wechat-list.html' },
         ],
       },
     ],
@@ -85,4 +107,14 @@ export const sidebarConfig = defineVipSidebarConfig({
   '/job-chance': resolveSidebarPermalinks(JobChanceSidebar, 'job-chance'),
   '/microservice': resolveSidebarPermalinks(MicroserviceSidebar, 'microservice'),
   '/battle-interview': resolveSidebarPermalinks(BattleInterviewSidebar, 'battle-interview'),
+  '/copyright': [
+    { text: '软件著作权', link: '/copyright/' },
+  ],
+  '/ruan-kao/': [
+    { text: '👨🏻‍💻 软件设计师', link: '/ruan-kao/soft-design.html' },
+    { text: '💫 系统架构师', link: '/ruan-kao/architect.html' },
+  ],
+  // softDesignSidebar 已为 permalink；architect 含 `.md` 需解析
+  '/ruan-kao/soft-design': softDesignSidebar,
+  '/ruan-kao/architect': resolveSidebarPermalinks(architectSidebar, 'ruan-kao/architect'),
 })
