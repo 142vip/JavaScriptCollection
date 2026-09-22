@@ -1,5 +1,6 @@
 ---
 title: Node后端
+permalink: /server-end/
 ---
 
 # Node后端

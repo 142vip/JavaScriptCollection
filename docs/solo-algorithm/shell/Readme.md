@@ -1,3 +1,7 @@
+---
+title: SHELL篇
+permalink: /solo-algorithm/shell/
+---
 # SHELL篇
 
 > 结合shell相关教程使用

@@ -1,4 +1,6 @@
 ---
+title: 好的想法
+permalink: /good-idea.html
 sidebar: false
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: BM13 判断一个链表是否为回文结构
 permalink: /solo-algorithm/interview-101/isPail.html
 ---
 

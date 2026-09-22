@@ -1,4 +1,5 @@
 ---
+title: BM5 合并k个已排序的链表
 permalink: /solo-algorithm/interview-101/mergeList.html
 ---
 

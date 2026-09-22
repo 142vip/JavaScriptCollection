@@ -1,4 +1,5 @@
 ---
+title: BM14 链表的奇偶重排
 permalink: /solo-algorithm/interview-101/oddEventList.html
 ---
 

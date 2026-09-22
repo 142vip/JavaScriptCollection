@@ -1,4 +1,5 @@
 ---
+title: BM9 删除链表的倒数第n个节点
 permalink: /solo-algorithm/interview-101/removeNthFromEnd.html
 ---
 

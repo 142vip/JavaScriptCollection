@@ -1,3 +1,7 @@
+---
+title: SequelizeORM
+permalink: /server-end/orm/sequelize/
+---
 # SequelizeORM
 
 ![](images/sequelize-logo.png)

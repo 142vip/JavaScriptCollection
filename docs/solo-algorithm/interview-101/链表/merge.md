@@ -1,4 +1,5 @@
 ---
+title: BM4 合并两个排序的链表
 permalink: /solo-algorithm/interview-101/merge.html
 ---
 

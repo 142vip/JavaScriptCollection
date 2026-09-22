@@ -1,4 +1,5 @@
 ---
+title: BM7 链表中环的入口结点
 permalink: /solo-algorithm/interview-101/entryNodeOfLoop.html
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: BM6 判断链表中是否有环
 permalink: /solo-algorithm/interview-101/hasCycle.html
 ---
 

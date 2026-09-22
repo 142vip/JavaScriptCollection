@@ -1,5 +1,6 @@
 ---
 title: 面试必刷Top101
+permalink: /solo-algorithm/interview-101/
 ---
 
 # 面试必刷Top101
