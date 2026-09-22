@@ -57,7 +57,7 @@ jobs:
           # 缓存
           cache: pnpm
 
-      # 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
+      # 下载依赖并执行初始化脚本
       - name: Install Dependencies
         run: |
           ./scripts/ci
