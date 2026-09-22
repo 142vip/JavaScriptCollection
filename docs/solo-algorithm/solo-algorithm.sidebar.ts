@@ -3,7 +3,7 @@ export const soloAlgorithmSidebar = [
     text: '面试必刷',
     children: [
       { text: '❓ 面试必刷Top101', link: '/solo-algorithm/interview-101/' },
-      { text: '⚔️ 剑指Offer', link: '/solo-algorithm/sword-point/' },
+      { text: '⚔️ 剑指Offer', link: '/solo-algorithm/sword-point.html' },
       { text: '🌟 Shell篇', link: '/solo-algorithm/shell/' },
     ],
   },

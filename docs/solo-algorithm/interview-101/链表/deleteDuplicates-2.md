@@ -1,4 +1,5 @@
 ---
+title: BM16 删除有序链表中重复的元素-II
 permalink: /solo-algorithm/interview-101/deleteDuplicates-two.html
 ---
 

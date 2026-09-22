@@ -1,4 +1,5 @@
 ---
+title: BM1 反转链表
 permalink: /solo-algorithm/interview-101/reverseList.html
 ---
 

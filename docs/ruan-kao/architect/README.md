@@ -1,4 +1,5 @@
 ---
+title: 系统架构师
 permalink: /ruan-kao/architect.html
 ---
 

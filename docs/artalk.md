@@ -1,4 +1,6 @@
 ---
+title: 接入Artalk评论系统
+permalink: /artalk.html
 sidebar: false
 ---
 

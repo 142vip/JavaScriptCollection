@@ -7,11 +7,6 @@
     "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "node",
-    "paths": {
-      "@theme/*": [
-        ".vitepress/theme/*"
-      ]
-    },
     "resolveJsonModule": true,
     "typeRoots": [
       "./typings",

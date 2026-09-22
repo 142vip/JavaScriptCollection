@@ -1,3 +1,7 @@
+---
+title: ECMAScript
+permalink: /server-end/es-version/
+---
 # ECMAScript
 
 `JavaScript` 由 `Brendan Eich` 于 1995 年发明，并于 1997年成为 `ECMA` 标准。

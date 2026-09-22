@@ -1,5 +1,6 @@
 ---
-title: 读书
+title: 读书整理
+permalink: /read-books/
 ---
 
 # 读书整理

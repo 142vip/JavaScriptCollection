@@ -1,4 +1,6 @@
 ---
+title: deploy脚本备份
+permalink: /deploy-backup.html
 sidebar: false
 ---
 

@@ -1,3 +1,7 @@
+---
+title: ES6
+permalink: /server-end/es-version/readme-back.html
+---
 # ES6
 
 > 全称是：ECMAAScript，是由ECMA国际标准组织制定一项脚本语言的标准化规范

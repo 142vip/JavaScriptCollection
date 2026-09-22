@@ -1,3 +1,7 @@
+---
+title: Battle面试官
+permalink: /battle-interview/
+---
 # Battle面试官
 
 ```mindmap

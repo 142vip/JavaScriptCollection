@@ -1,6 +1,7 @@
 ---
 home: true
 title: 首页
+permalink: /
 heroAlt: 屈身守份 以待天时
 heroText: JavaScriptCollection
 tagline: 【理论+实战】保姆级成长笔记，持续更新...
@@ -88,11 +89,11 @@ pnpm -v
 # 或直接安装
 pnpm install
 
-# 执行dev指令，本地启动项目，打开http://localhost:5000即可访问文档
+# 执行dev指令，本地启动项目，打开http://localhost:5200即可访问文档
 pnpm dev
 ```
 
-查看项目启动日志并访问：[http://127.0.0.1:5000](http://localhost:5000)，开启学习之旅吧~
+查看项目启动日志并访问：[http://127.0.0.1:5200](http://localhost:5200)，开启学习之旅吧~
 
 ### 在线浏览
 

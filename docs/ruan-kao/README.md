@@ -1,5 +1,6 @@
 ---
 title: 考试
+permalink: /ruan-kao.html
 ---
 
 # 考试

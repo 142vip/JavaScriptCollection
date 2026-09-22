@@ -1,7 +1,7 @@
 <div align="center">
   <img
     alt="JavaScriptCollection"
-    src="https://cdn.statically.io/gh/142vip/cdn_service@main/doc_book/jsc/jsc_logo.png"
+    src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/jsc/logo-jsc.png"
     style="text-align: center;border-radius: 5px"
   >
   <p style="font-size: 20px">
@@ -521,7 +521,11 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 ## 趋势
 
 <div style="text-align: center" align="center">
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=142vip/JavaScriptCollection,142vip/core-x,142vip/408CSFamily&type=Date" />
+    <img
+        src="https://api.star-history.com/svg?repos=142vip%2Fcore-x%2C142vip%2F408csfamily%2C142vip%2Fjavascriptcollection&type=Date&sealed_token=iaO-GLnvLpYHibmRk7lxdWHU5MRcN8yp072DbAkSuka6yVP87RCc245bDe_8qXluQuI-105rgdN5qw_G7omm8P05FDOB4ir6De_EdwCOyZUuxWCQE-LfbA"
+        alt="Star History"
+        style="border-radius: 5px"
+    >
 </div>
 
 ## 联系作者
@@ -530,7 +534,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
 
 <div style="text-align: center;margin: 10px" id="we-media-container">
     <div align="center" >
-            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/main-code.png"
+            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/media/wechat/main-code.png"
                 width="auto"
                 style="margin:5px;border-radius: 5px"
                 title="关注微信公众号或添加好友联系储凡" alt="关注微信公众号或添加好友联系储凡"/>
@@ -542,7 +546,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
           target="_blank"
           title="点击跳转Github主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/github.svg" alt="CSDN" title="CSDN"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/media/svg/github.svg" alt="CSDN" title="CSDN"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -551,7 +555,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
           target="_blank"
           title="点击跳转码云主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg" alt="Gitee" title="Gitee"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/media/svg/gitee.svg" alt="Gitee" title="Gitee"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -560,7 +564,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
           target="_blank"
           title="点击跳转掘金主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg" alt="掘金"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/media/svg/juejin.svg" alt="掘金"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -570,7 +574,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
           title="点击跳转B站主页"
         >
           <img
-            src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
+            src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/media/svg/bilibili.svg"
             alt="Bilibili"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
@@ -581,7 +585,7 @@ Nuxt.js是在vue框架上进行封装的，主要是用来解决单体页面的�
           title="点击跳转CSDN博客主页"
         >
           <img
-            src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
+            src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/media/svg/csdn.svg"
             title="点击跳转CSDN博客主页" alt="CSDN"
             style="margin: 5px;width: 24px;height: 24px;"
           >
