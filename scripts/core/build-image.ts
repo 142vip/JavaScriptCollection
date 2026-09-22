@@ -3,9 +3,9 @@ import { VipDocker, VipGit, VipNodeJS, VipPackageJSON } from '@142vip/utils'
 /**
  * 功能：构建Docker镜像
  */
-export async function buildImageMain() {
+async function buildImageMain(): Promise<void> {
   // 获取package.json文件
-  const { name, version, description } = VipPackageJSON.getPackageJSON()
+  const { name, version, description } = VipPackageJSON.getPackageJSON<{ description: string }>()
 
   // 镜像地址
   const imageName = `${OPEN_SOURCE_ADDRESS.DOCKER_ALIYUNCS_VIP}/docs:${name}-${version}`
@@ -16,7 +16,7 @@ export async function buildImageMain() {
   let realImageName = imageName
 
   // 如果version是否为预发布，是预发布则用hash当镜像名
-  if (typeof version === 'string' && VipGit.isPrerelease(version)) {
+  if (VipGit.isPrerelease(version)) {
     realImageName = `${imageName.split(':')[0]}:${name}-${version}-${gitShortHash}`
   }
 
@@ -41,3 +41,5 @@ export async function buildImageMain() {
     progress: 'plain',
   })
 }
+
+void buildImageMain()
