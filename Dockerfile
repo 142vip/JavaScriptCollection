@@ -16,7 +16,7 @@ ENV NODE_OPTIONS="--max-old-space-size=200000"
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
-## corepack 环境变量，在CI脚本中直接设置
+# 构建阶段使用 infra 基础镜像（含 Node 25 + corepack），pnpm 版本由 package.json 的 packageManager 锁定
 #ENV COREPACK_NPM_REGISTRY=https://mirrors.tencent.com/npm/
 
 WORKDIR /apps
