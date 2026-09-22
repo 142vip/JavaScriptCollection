@@ -4,6 +4,39 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.2-alpha.27 (2026-09-22)
+
+### ✨ Features
+
+- 增加`pull`流水线，自动同步下游 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/mmdapl/JavaScriptCollection/issues/237 [<samp>(18b15)</samp>](https://github.com/mmdapl/JavaScriptCollection/commit/18b151a)
+
+### 🐛 Bug Fixes
+
+- 修复首页链接错误，图标显示异常 &nbsp;-&nbsp; by **chufan** [<samp>(46f68)</samp>](https://github.com/mmdapl/JavaScriptCollection/commit/46f684d)
+- 升级ci脚本依赖，修复构建、部署异常 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/mmdapl/JavaScriptCollection/issues/244 [<samp>(77b18)</samp>](https://github.com/mmdapl/JavaScriptCollection/commit/77b1817)
+- 修复镜像构建异常，简化构建步骤、处理逻辑 &nbsp;-&nbsp; by **chufan** [<samp>(e9c49)</samp>](https://github.com/mmdapl/JavaScriptCollection/commit/e9c4951)
+- 修复首页`git`仓库提交折线图显示异常 &nbsp;-&nbsp; by **chufan** [<samp>(93b8f)</samp>](https://github.com/mmdapl/JavaScriptCollection/commit/93b8f97)
+
+### 💅 Refactors
+
+- 将 VuePress 配置迁至仓库根并拆分站点模块 &nbsp;-&nbsp; by **chufan** [<samp>(0c0c5)</samp>](https://github.com/mmdapl/JavaScriptCollection/commit/0c0c596)
+
+### 📖 Documentation
+
+- 为文档补齐 `permalink` 并更新本地开发端口说明 &nbsp;-&nbsp; by **chufan** [<samp>(440c8)</samp>](https://github.com/mmdapl/JavaScriptCollection/commit/440c83c)
+
+### 📦 Build
+
+- 升级 `@142vip/vuepress` 至 `0.0.1-alpha.25` 并对齐包内用法 &nbsp;-&nbsp; by **chufan** [<samp>(362bc)</samp>](https://github.com/mmdapl/JavaScriptCollection/commit/362bcc2)
+- **Dockerfile**:
+  - 修改镜像源，提供`vpc`网络通道 &nbsp;-&nbsp; by **chufan** [<samp>(b1407)</samp>](https://github.com/mmdapl/JavaScriptCollection/commit/b14076b)
+- **scripts**:
+  - 支持`corepack`安装校验，优雅下载 &nbsp;-&nbsp; by **chufan** [<samp>(1b30f)</samp>](https://github.com/mmdapl/JavaScriptCollection/commit/1b30f31)
+  - 优化构建脚本，简化镜像打包流程，支持`--proxy`构建 &nbsp;-&nbsp; by **chufan** [<samp>(46744)</samp>](https://github.com/mmdapl/JavaScriptCollection/commit/4674452)
+  - 将 `build-image` 入口改为 TypeScript &nbsp;-&nbsp; by **chufan** [<samp>(1d01b)</samp>](https://github.com/mmdapl/JavaScriptCollection/commit/1d01bec)
+
+**Release New Version v0.0.2-alpha.27 [👉 View Changes On GitHub](https://github.com/mmdapl/JavaScriptCollection/compare/v0.0.2-alpha.26...v0.0.2-alpha.27)**
+
 ## v0.0.2-alpha.26 (2025-05-18)
 
 ### ✨ Features
