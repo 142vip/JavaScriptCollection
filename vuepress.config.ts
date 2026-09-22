@@ -11,11 +11,10 @@ import {
   siteLogo,
   siteOrigin,
   siteTitle,
-  viteBuildPlugin,
 } from '.vuepress/config'
 import { OPEN_SOURCE_ADDRESS, OPEN_SOURCE_AUTHOR } from '@142vip/open-source'
-import { GitGeneralBranch } from '@142vip/utils'
 import {
+  createVipViteBuildPlugin,
   defineVipVuepressConfig,
   getVipHopeTheme,
   handleImportCodePath,
@@ -24,12 +23,12 @@ import {
 /**
  * VuePress 站点配置
  *
- * 注意：
- * - 环境变量 `NEED_PROXY=true` 时，base 为 `/{pkg.name}/`，否则为 `/`
- * - `locales` / `lang` / `bundler` 等由 `defineVipVuepressConfig` 默认注入
- * - 导航、SEO、页脚等拆分见 `.vuepress/config/`
- * - 文档路由依赖各 md 的 frontmatter `permalink`（当前 docs 下均已声明，无需再做 docs/ 路径剥离）
- * - 侧边栏 `.md` 链接在 `sidebar.ts` 中通过 `resolveSidebarPermalinks` 对齐 permalink
+ * 对齐 `@142vip/vuepress`（见 core-x `packages/vuepress`）：
+ * - `locales` / `lang` / `bundler` 由 `defineVipVuepressConfig` 默认注入
+ * - `author` / `docsDir` / `docsBranch` / `contributors` 由 `getVipHopeTheme` 默认注入
+ * - 大文档站 chunk 告警用包内 `createVipViteBuildPlugin`
+ * - 文档路由依赖各 md 的 frontmatter `permalink`
+ * - 侧边栏 `.md` 链接经 `resolveSidebarPermalinks` 对齐 permalink
  */
 export default defineVipVuepressConfig({
   base: siteBase,
@@ -44,8 +43,7 @@ export default defineVipVuepressConfig({
   ],
   head: siteHead,
   plugins: [
-    // chunk 告警阈值：theme-hope 默认可被覆盖，须用插件 extendsBundlerOptions 合并
-    viteBuildPlugin(),
+    createVipViteBuildPlugin(),
   ],
   markdown: {
     importCode: {
@@ -59,11 +57,8 @@ export default defineVipVuepressConfig({
       level: [2, 3, 4],
     },
   },
-  // 主题配置
   theme: getVipHopeTheme({
-    // 导航栏
     navbar: navbarConfig,
-    // 侧边栏
     sidebar: sidebarConfig,
     navbarLayout: {
       start: ['Brand'],
@@ -78,17 +73,8 @@ export default defineVipVuepressConfig({
     copyright: copyrightHtmlStr,
     // 仓库 142vip/JavaScriptCollection
     repo: `${OPEN_SOURCE_ADDRESS.GITHUB_ORGANIZATION_NAME}/${pkg.name}`,
-    // 作者信息
-    author: OPEN_SOURCE_AUTHOR,
-    // 文档路径，开启编辑功能
-    docsDir: 'docs',
-    docsBranch: GitGeneralBranch.NEXT,
-    // 主题布局选项
     docsRepo: OPEN_SOURCE_ADDRESS.GITHUB_REPO_JSC,
-    contributors: true,
-    // 插件
     plugins: {
-      // 水印
       watermark: {
         enabled: true,
         watermarkOptions: {
@@ -98,6 +84,5 @@ export default defineVipVuepressConfig({
     },
   }),
 }, {
-  // 浏览器控制台打印版本与构建时间
   appBuildLog: { version: pkg.version },
 })
