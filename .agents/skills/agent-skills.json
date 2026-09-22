@@ -1,0 +1,10 @@
+{
+  "package": "@142vip/agent-skills",
+  "version": "0.0.1-alpha.6",
+  "skills": [
+    "workflow",
+    "code-dev",
+    "self-check",
+    "commit"
+  ]
+}
